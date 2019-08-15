@@ -1,11 +1,12 @@
 import axios from 'axios'
+import {url,oauth} from '../config'
 
-export default async function getSheetValues() {
+export default async function getSheetValues(col) {
 
-    const request = await axios.get('',
+    const request = await axios.get(`${url}${col}`,
         {
             headers: {
-                Authorization: ""
+                Authorization: `${oauth}`
             }
         })
 

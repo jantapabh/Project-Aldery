@@ -1,17 +1,11 @@
 import React from 'react'
-import Sheetapi from '../config/api'
+import Sheet from '../components/Sheet'
 
 class Main extends React.Component{
-   async componentDidMount(){
-    const list = await Sheetapi()
-
-    console.log("List",list);
-    
-    }
     render(){
         return(
             <div>
-                {/* <Sheet/> */}
+                <Sheet/>
             </div>
         )
     }
