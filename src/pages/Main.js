@@ -1,11 +1,23 @@
 import React from 'react'
-import Sheet from '../components/Sheet'
+import Sheetapi from '../config/api'
 
 class Main extends React.Component{
+
+    async componentDidMount(){
+        localStorage.setItem("myOauth",JSON.stringify(await Sheetapi.postSheetValues()) ) 
+    }
+
+    handleOauth = () => {
+        setTimeout(  function() {
+            window.location.href = "/Sheet";
+         },2000);
+    }
+
     render(){
         return(
             <div>
-                <Sheet/>
+                
+                <button onClick={this.handleOauth} />
             </div>
         )
     }

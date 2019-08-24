@@ -1,11 +1,12 @@
 import React from 'react'
 import Sheetapi from '../config/api'
-import Cookies from 'cookies-js'
 
 class Sheet extends React.Component {
 
     constructor(props) {
         super(props);
+       
+       
         this.state = {
             provinceList: [],
             manlist: [],
@@ -14,17 +15,23 @@ class Sheet extends React.Component {
         }
     }
 
+    
+
     async componentDidMount() {
+        let userOauth = JSON.parse(localStorage.getItem("myOauth"))
+        this.access_token = userOauth.data.access_token
+        
         await this.list('!B1:B')
         await this.list('!F1:F')
         await this.list('!G1:G')
         await this.list('!H1:H')
+
     }
 
     list = async (value) => {
 
         try {
-            let list = await Sheetapi(value)
+            let list = await Sheetapi.getSheetValues(this.access_token,value)
 
             if (value == '!B1:B')
                 this.setState({
@@ -50,19 +57,46 @@ class Sheet extends React.Component {
             console.log(err);
         }
 
+
     }
 
+
     render() {
-        console.log(this.state.provinceList);
-
-        if (this.state.provinceList < 1)
-            return null
-
         return (
             <div>
                 <h1>Hello</h1>
                 {
                     this.state.provinceList.map((item, index) => {
+                        return (
+                            <div key={index}>
+                                {item}
+                            </div>
+                        )
+                    })
+                }
+
+                {
+                    this.state.manlist.map((item, index) => {
+                        return (
+                            <div key={index}>
+                                {item}
+                            </div>
+                        )
+                    })
+                }
+
+                {
+                    this.state.womanlist.map((item, index) => {
+                        return (
+                            <div key={index}>
+                                {item}
+                            </div>
+                        )
+                    })
+                }
+
+                {
+                    this.state.totallist.map((item, index) => {
                         return (
                             <div key={index}>
                                 {item}

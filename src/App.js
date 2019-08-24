@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
 import './App.css';
 import Main from './pages/Main'
+import Sheet from './components/Sheet';
 
 class App extends React.Component {
   render() {
@@ -13,6 +14,13 @@ class App extends React.Component {
             exact
             path="/main"
             component={Main}
+          />
+
+          <Route 
+            exact
+            path="/sheet"
+            component={Sheet}
+        
           />
       
         </BrowserRouter>
