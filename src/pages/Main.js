@@ -9,8 +9,8 @@ class Main extends React.Component{
 
     handleOauth = () => {
         setTimeout(  function() {
-            window.location.href = "/Sheet";
-         },2000);
+            window.location.href = "/load";
+         },500);
     }
 
     render(){
