@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {url,oauth,urlpost} from '../config'
+import {url,oauth,urlpost} from '../pages/config'
 
  async function getSheetValues(token,col) {
 

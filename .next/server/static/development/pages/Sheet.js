@@ -93,23 +93,6 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./config.js":
-/*!*******************!*\
-  !*** ./config.js ***!
-  \*******************/
-/*! exports provided: url, urlpost */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlpost", function() { return urlpost; });
-const url = 'https://sheets.googleapis.com/v4/spreadsheets/1mPsLDG_yN00jPw7srBREF-sXf5WYSxxoaJV0_6CI31Q/values/';
-const urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=-giSWLQLlg-e-g4sITPpoO6f&grant_type=refresh_token&refresh_token=1%2FPEfDyutOZE5MJvBRkJoL4EOh9ZFKaA3tj7Xmsnv4aC4&client_id=492497205693-gous0v8uc9vkd68strl5m4i31oqusjfl.apps.googleusercontent.com';
-
-
-/***/ }),
-
 /***/ "./config/api.js":
 /*!***********************!*\
   !*** ./config/api.js ***!
@@ -121,12 +104,12 @@ const urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=-giSW
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config */ "./config.js");
+/* harmony import */ var _pages_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pages/config */ "./pages/config.js");
 
 
 
 async function getSheetValues(token, col) {
-  const request = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_config__WEBPACK_IMPORTED_MODULE_1__["url"]}${col}`, {
+  const request = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_pages_config__WEBPACK_IMPORTED_MODULE_1__["url"]}${col}`, {
     headers: {
       Authorization: `Bearer ${token}`
     }
@@ -135,7 +118,7 @@ async function getSheetValues(token, col) {
 }
 
 async function postSheetValues() {
-  const request = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_config__WEBPACK_IMPORTED_MODULE_1__["urlpost"]}`, {
+  const request = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_pages_config__WEBPACK_IMPORTED_MODULE_1__["urlpost"]}`, {
     headers: {
       Authorization: "Bearer 4/qQGd-JEj1hK6bmd0w0ESGCh7y-qrQNS4-pEwPb7nt-H3aPUhcUmA0FQx1cNs1GapRQ_wePGf4e6eXWGVTuhgY6E",
       Content_Type: "application/x-www-form-urlencoded",
@@ -274,6 +257,23 @@ class Sheet extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Sheet);
+
+/***/ }),
+
+/***/ "./pages/config.js":
+/*!*************************!*\
+  !*** ./pages/config.js ***!
+  \*************************/
+/*! exports provided: url, urlpost */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlpost", function() { return urlpost; });
+const url = 'https://sheets.googleapis.com/v4/spreadsheets/1mPsLDG_yN00jPw7srBREF-sXf5WYSxxoaJV0_6CI31Q/values/';
+const urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=-giSWLQLlg-e-g4sITPpoO6f&grant_type=refresh_token&refresh_token=1%2FPEfDyutOZE5MJvBRkJoL4EOh9ZFKaA3tj7Xmsnv4aC4&client_id=492497205693-gous0v8uc9vkd68strl5m4i31oqusjfl.apps.googleusercontent.com';
+
 
 /***/ }),
 
