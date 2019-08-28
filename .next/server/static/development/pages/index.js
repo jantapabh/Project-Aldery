@@ -105,8 +105,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _load__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./load */ "./components/layout/load.js");
+/* harmony import */ var _error__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./error */ "./components/layout/error.js");
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
 
 
 class CardCover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
@@ -114,10 +118,24 @@ class CardCover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     super(props);
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "handleOauth", () => {
-      setTimeout(function () {
-        window.location.href = "/Sheet";
-      }, 500);
+      if (this.userOauth.status == "200") {
+        setTimeout(function () {
+          window.location.href = "/Sheet";
+        }, 500);
+      } else if (this.userOauth.status == "404") {
+        return __jsx(_error__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          error: "404"
+        });
+      } else if (this.userOauth.status == "500") {
+        return __jsx(_error__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          error: "500"
+        });
+      }
     });
+  }
+
+  componentDidMount() {
+    this.userOauth = JSON.parse(localStorage.getItem("myOauth"));
   }
 
   render() {
@@ -147,6 +165,66 @@ Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODUL
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (CardCover);
+
+/***/ }),
+
+/***/ "./components/layout/error.js":
+/*!************************************!*\
+  !*** ./components/layout/error.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+class Error extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+  render() {
+    if (this.props.error == "404") {
+      return __jsx("div", null);
+    }
+
+    return __jsx("div", null);
+  }
+
+}
+
+Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(Error, "defaultProps", {
+  error: ""
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (Error);
+
+/***/ }),
+
+/***/ "./components/layout/load.js":
+/*!***********************************!*\
+  !*** ./components/layout/load.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+class Load extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return __jsx("div", null, "Loaddddddddddddddddd");
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Load);
 
 /***/ }),
 
