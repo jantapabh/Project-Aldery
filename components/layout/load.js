@@ -1,13 +1,13 @@
 import React from 'react'
-import Sheetapi from '../config/api'
 
-class Main extends React.Component{
+class Load extends React.Component{
     render(){
         return(
             <div>
-             
+                Loaddddddddddddddddd
+
             </div>
         )
     }
 }
-export default Main
+export default Load;

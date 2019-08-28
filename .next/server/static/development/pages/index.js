@@ -113,10 +113,10 @@ class CardCover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   constructor(props) {
     super(props);
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "onSummit", () => {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "handleOauth", () => {
       setTimeout(function () {
-        window.location.href = "/main";
-      }, 3000);
+        window.location.href = "/Sheet";
+      }, 500);
     });
   }
 
@@ -128,7 +128,7 @@ class CardCover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     }, __jsx("h1", null, this.props.text_head), __jsx("button", {
       type: "button",
       className: "btn",
-      onClick: this.onSummit
+      onClick: this.handleOauth
     }, __jsx("h6", null, this.props.text))), __jsx("div", {
       className: "cover"
     }, __jsx("img", {

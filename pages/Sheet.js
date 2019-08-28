@@ -1,11 +1,11 @@
 import React from 'react'
 import Sheetapi from '../config/api'
+import Load from '../components/layout/load';
 
 class Sheet extends React.Component {
 
     constructor(props) {
         super(props);
-       
        
         this.state = {
             provinceList: [],
@@ -14,8 +14,6 @@ class Sheet extends React.Component {
             totallist: []
         }
     }
-
-    
 
     async componentDidMount() {
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
@@ -62,6 +60,15 @@ class Sheet extends React.Component {
 
 
     render() {
+
+           if(this.state.totallist.length < 1 ) {
+               return(
+                   <div>
+                       <Load/>
+                   </div>
+               )
+           }
+        
         return (
             <div>
                 <h1>Hello</h1>

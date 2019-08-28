@@ -40,10 +40,10 @@ function (_React$Component) {
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(CardCover).call(this, props));
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "onSummit", function () {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "handleOauth", function () {
       setTimeout(function () {
-        window.location.href = "/main";
-      }, 3000);
+        window.location.href = "/Sheet";
+      }, 500);
     });
 
     return _this;
@@ -59,7 +59,7 @@ function (_React$Component) {
       }, __jsx("h1", null, this.props.text_head), __jsx("button", {
         type: "button",
         className: "btn",
-        onClick: this.onSummit
+        onClick: this.handleOauth
       }, __jsx("h6", null, this.props.text))), __jsx("div", {
         className: "cover"
       }, __jsx("img", {

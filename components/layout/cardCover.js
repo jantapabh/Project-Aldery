@@ -13,12 +13,11 @@ class CardCover extends React.Component{
         super(props);
       }
 
-      onSummit = () =>{
-        setTimeout(function(){ 
-            window.location.href = "/main"
-         }, 3000);
-
-      }
+      handleOauth = () => {
+        setTimeout(  function() {
+            window.location.href = "/Sheet";
+         },500);
+    }
 
     render(){
         return(
@@ -28,7 +27,7 @@ class CardCover extends React.Component{
                     <button 
                         type="button" 
                         className="btn"
-                        onClick = {this.onSummit}
+                        onClick = {this.handleOauth}
                     >
                         <h6>{this.props.text}</h6></button>
                 </div>
