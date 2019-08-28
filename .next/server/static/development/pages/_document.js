@@ -1092,7 +1092,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       charset: "utf-8"
     }), __jsx("link", {
       rel: "shortcut icon",
-      href: "/static/favicon.ico"
+      href: "/static/logo.png"
     }), __jsx("meta", {
       name: "viewport",
       content: "width=device-width, initial-scale=1"
@@ -1114,6 +1114,9 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       src: "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js",
       integrity: "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM",
       crossorigin: "anonymous"
+    }), __jsx("link", {
+      href: "https://fonts.googleapis.com/css?family=Kanit|Prompt&display=swap",
+      rel: "stylesheet"
     })), __jsx("body", null, __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], null), __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], null)));
   }
 

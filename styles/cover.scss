@@ -1,0 +1,48 @@
+.warp-cover{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .warp-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        position: absolute;
+        width: 100%;
+        margin: 1rem;
+        padding: 3rem;
+
+        button{
+            
+            margin: 1.5rem;
+            background-color:#ffe8fc;
+            border: 1px solid ;
+            padding: 1rem;
+            border-radius: 1rem;
+
+            .btn{
+                font-size: 1.5rem;
+            }
+           
+
+        }
+    }
+
+    .cover{
+        width: 100%;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+        flex-direction: row;
+        background-image: linear-gradient(to right top,#ffe8fc,#feeafd,#f6e9ff, #f5e9ff,#f1e6ff,  );
+
+        img{
+            width: 50rem;
+            margin-top: 10rem;
+
+
+        }
+    }
+}
