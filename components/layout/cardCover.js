@@ -32,7 +32,6 @@ class CardCover extends React.Component {
         else if(this.userOauth.status == "500") {
             return <Error error ="500"/>
         }
-
     }
 
     render() {

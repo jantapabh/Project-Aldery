@@ -1,0 +1,28 @@
+import React from 'react'
+import Nav from '../components/nav'
+import CardProfile from '../components/layout/cardCover'
+
+
+class Home extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+ 
+  render() {
+    return (
+      <div>
+        <Nav />
+        <CardProfile
+          avatar="/static/cover.png"
+          name="cover"
+          text_head="ฐานข้อมูลผู้สูงอายุ"
+          text="เข้าสู่หน้าหลัก"
+        />
+
+      </div>
+    )
+  }
+}
+export default Home

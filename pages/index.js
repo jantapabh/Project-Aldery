@@ -1,8 +1,8 @@
 import React from 'react'
 import Nav from '../components/nav'
-import CardProfile from '../components/layout/cardCover'
 import '../styles/base.scss'
 import Sheetapi from '../config/api'
+import Cover from '../components/layout/cover';
 
 class Home extends React.Component {
 
@@ -18,12 +18,8 @@ class Home extends React.Component {
     return (
       <div>
         <Nav />
-        <CardProfile
-          avatar="/static/cover.png"
-          name="cover"
-          text_head="ฐานข้อมูลผู้สูงอายุ"
-          text="เข้าสู่หน้าหลัก"
-        />
+        <Cover/>
+        
 
       </div>
     )

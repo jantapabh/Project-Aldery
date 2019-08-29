@@ -1,5 +1,6 @@
 @import './nav.scss';
 @import './cover.scss';
+@import './bg.scss';
 
 h1{
     color: black;
@@ -8,7 +9,8 @@ h1{
     margin-bottom:0;
     margin-block-start: 0;
     margin-block-end: 0;
-    font-family: 'Prompt', sans-serif
+    font-family: 'Prompt', sans-serif;
+    padding: 0.5rem;
 }
 
 h6{
@@ -17,4 +19,5 @@ h6{
     text-align: center;
     font-family: 'Prompt', sans-serif;
     margin-bottom: 0;
+    padding: 0.5rem;
 }
