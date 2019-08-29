@@ -88,15 +88,15 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/layout/cover.js":
-/*!************************************!*\
-  !*** ./components/layout/cover.js ***!
-  \************************************/
+/***/ "./components/layout/cardCover.js":
+/*!****************************************!*\
+  !*** ./components/layout/cardCover.js ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -105,88 +105,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _error__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./error */ "./components/layout/error.js");
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
-
-class Cover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
-  constructor(props) {
-    super(props);
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "handleOauth", () => {
-      if (this.userOauth.status == "200") {
-        setTimeout(function () {
-          window.location.href = "/sheet";
-        }, 500);
-      } else if (this.userOauth.status == "404") {
-        return __jsx(_error__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          error: "404"
-        });
-      } else if (this.userOauth.status == "500") {
-        return __jsx(_error__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          error: "500"
-        });
-      }
-    });
-  }
-
-  componentDidMount() {
-    this.userOauth = JSON.parse(localStorage.getItem("myOauth"));
-  }
-
+class CardCover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   render() {
     return __jsx("div", {
-      className: "warp-bg"
-    }, __jsx("div", {
-      className: "bg"
+      className: "warp-cover"
     }, __jsx("div", {
       className: "warp-text"
-    }, __jsx("h1", null, "\u0E10\u0E32\u0E19\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38"), __jsx("button", {
-      className: "btn active",
-      onClick: this.handleOauth
-    }, __jsx("h6", null, "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01")))));
+    }, __jsx("h1", null, this.props.text_head), __jsx("button", {
+      type: "button",
+      className: "btn"
+    }, __jsx("h6", null, this.props.text))), __jsx("div", {
+      className: "cover"
+    }, __jsx("img", {
+      src: this.props.avatar,
+      alt: this.props.cover
+    })));
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Cover);
-
-/***/ }),
-
-/***/ "./components/layout/error.js":
-/*!************************************!*\
-  !*** ./components/layout/error.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-
-class Error extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
-  render() {
-    if (this.props.error == "404") {
-      return __jsx("div", null);
-    }
-
-    return __jsx("div", null);
-  }
-
-}
-
-Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(Error, "defaultProps", {
-  error: ""
+Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(CardCover, "defaultProps", {
+  avatar: "",
+  name: "",
+  text_head: "",
+  text: ""
 });
 
-/* harmony default export */ __webpack_exports__["default"] = (Error);
+/* harmony default export */ __webpack_exports__["default"] = (CardCover);
 
 /***/ }),
 
@@ -255,61 +204,6 @@ Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODUL
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (Nav);
-
-/***/ }),
-
-/***/ "./config/api.js":
-/*!***********************!*\
-  !*** ./config/api.js ***!
-  \***********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _pages_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pages/config */ "./pages/config.js");
-
-
-
-async function getSheetValues(token, col) {
-  const request = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_pages_config__WEBPACK_IMPORTED_MODULE_1__["url"]}${col}`, {
-    headers: {
-      Authorization: `Bearer ${token}`
-    }
-  });
-  return request.data.values;
-}
-
-async function postSheetValues() {
-  const request = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_pages_config__WEBPACK_IMPORTED_MODULE_1__["urlpost"]}`, {
-    headers: {
-      Authorization: "Bearer 4/qQGd-JEj1hK6bmd0w0ESGCh7y-qrQNS4-pEwPb7nt-H3aPUhcUmA0FQx1cNs1GapRQ_wePGf4e6eXWGVTuhgY6E",
-      Content_Type: "application/x-www-form-urlencoded",
-      User_Agent: "google-oauth-playground",
-      Content_length: "208",
-      Host: "www.googleapis.com"
-    }
-  });
-  return request;
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  getSheetValues,
-  postSheetValues
-});
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/json/stringify */ "core-js/library/fn/json/stringify");
 
 /***/ }),
 
@@ -1008,67 +902,46 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/config.js":
-/*!*************************!*\
-  !*** ./pages/config.js ***!
-  \*************************/
-/*! exports provided: url, urlpost */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlpost", function() { return urlpost; });
-const url = 'https://sheets.googleapis.com/v4/spreadsheets/1mPsLDG_yN00jPw7srBREF-sXf5WYSxxoaJV0_6CI31Q/values/';
-const urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=-giSWLQLlg-e-g4sITPpoO6f&grant_type=refresh_token&refresh_token=1%2FPEfDyutOZE5MJvBRkJoL4EOh9ZFKaA3tj7Xmsnv4aC4&client_id=492497205693-gous0v8uc9vkd68strl5m4i31oqusjfl.apps.googleusercontent.com';
-
-
-/***/ }),
-
-/***/ "./pages/index.js":
+/***/ "./pages/about.js":
 /*!************************!*\
-  !*** ./pages/index.js ***!
+  !*** ./pages/about.js ***!
   \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/nav */ "./components/nav.js");
-/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/base.scss */ "./styles/base.scss");
-/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
-/* harmony import */ var _components_layout_cover__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/layout/cover */ "./components/layout/cover.js");
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/base.scss */ "./styles/base.scss");
+/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_layout_cardCover__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layout/cardCover */ "./components/layout/cardCover.js");
+/* harmony import */ var _components_nav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/nav */ "./components/nav.js");
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
 
-
-class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+class contact extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   constructor(props) {
     super(props);
   }
 
-  async componentDidMount() {
-    localStorage.setItem("myOauth", _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()((await _config_api__WEBPACK_IMPORTED_MODULE_4__["default"].postSheetValues())));
-  }
-
   render() {
-    return __jsx("div", null, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      name: "main"
-    }), __jsx(_components_layout_cover__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+    return __jsx("div", null, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      name: "about"
+    }), __jsx(_components_layout_cardCover__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      avatar: "/static/cover.png",
+      name: "cover",
+      text_head: "\u0E15\u0E34\u0E14\u0E15\u0E48\u0E2D\u0E40\u0E08\u0E49\u0E32\u0E2B\u0E19\u0E49\u0E32\u0E17\u0E35\u0E48",
+      text: "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01"
+    }));
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Home);
+/* harmony default export */ __webpack_exports__["default"] = (contact);
 
 /***/ }),
 
@@ -1083,37 +956,15 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!******************************!*\
-  !*** multi ./pages/index.js ***!
+  !*** multi ./pages/about.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Noeypatt\Documents\elderly-project-nextjs\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! C:\Users\Noeypatt\Documents\elderly-project-nextjs\pages\about.js */"./pages/about.js");
 
-
-/***/ }),
-
-/***/ "axios":
-/*!************************!*\
-  !*** external "axios" ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("axios");
-
-/***/ }),
-
-/***/ "core-js/library/fn/json/stringify":
-/*!****************************************************!*\
-  !*** external "core-js/library/fn/json/stringify" ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/json/stringify");
 
 /***/ }),
 
@@ -1250,4 +1101,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=about.js.map

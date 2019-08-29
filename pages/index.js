@@ -17,7 +17,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <Nav />
+        <Nav name = "main" />
         <Cover/>
         
 

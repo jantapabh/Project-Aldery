@@ -13,7 +13,7 @@ class Cover extends React.Component {
     handleOauth = () => {
         if (this.userOauth.status == "200") {
             setTimeout(function () {
-                window.location.href = "/Sheet";
+                window.location.href = "/sheet";
             }, 500);
         }
         else if(this.userOauth.status == "404") {

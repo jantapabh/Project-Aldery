@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\Sheet.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\sheet.js"],{
 
 /***/ "./components/layout/load.js":
 /*!***********************************!*\
@@ -5021,21 +5021,21 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FSheet&absolutePagePath=C%3A%5CUsers%5CNoeypatt%5CDocuments%5Celderly-project-nextjs%5Cpages%5CSheet.js!./":
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fsheet&absolutePagePath=C%3A%5CUsers%5CNoeypatt%5CDocuments%5Celderly-project-nextjs%5Cpages%5Csheet.js!./":
 /*!*************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FSheet&absolutePagePath=C%3A%5CUsers%5CNoeypatt%5CDocuments%5Celderly-project-nextjs%5Cpages%5CSheet.js ***!
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fsheet&absolutePagePath=C%3A%5CUsers%5CNoeypatt%5CDocuments%5Celderly-project-nextjs%5Cpages%5Csheet.js ***!
   \*************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/Sheet", function() {
-      var page = __webpack_require__(/*! ./pages/Sheet.js */ "./pages/Sheet.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/sheet", function() {
+      var page = __webpack_require__(/*! ./pages/sheet.js */ "./pages/sheet.js")
       if(true) {
-        module.hot.accept(/*! ./pages/Sheet.js */ "./pages/Sheet.js", function() {
-          if(!next.router.components["/Sheet"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/Sheet.js */ "./pages/Sheet.js")
-          next.router.update("/Sheet", updatedPage.default || updatedPage)
+        module.hot.accept(/*! ./pages/sheet.js */ "./pages/sheet.js", function() {
+          if(!next.router.components["/sheet"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/sheet.js */ "./pages/sheet.js")
+          next.router.update("/sheet", updatedPage.default || updatedPage)
         })
       }
       return { page: page.default || page }
@@ -5987,9 +5987,26 @@ try {
 
 /***/ }),
 
-/***/ "./pages/Sheet.js":
+/***/ "./pages/config.js":
+/*!*************************!*\
+  !*** ./pages/config.js ***!
+  \*************************/
+/*! exports provided: url, urlpost */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlpost", function() { return urlpost; });
+var url = 'https://sheets.googleapis.com/v4/spreadsheets/1mPsLDG_yN00jPw7srBREF-sXf5WYSxxoaJV0_6CI31Q/values/';
+var urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=-giSWLQLlg-e-g4sITPpoO6f&grant_type=refresh_token&refresh_token=1%2FPEfDyutOZE5MJvBRkJoL4EOh9ZFKaA3tj7Xmsnv4aC4&client_id=492497205693-gous0v8uc9vkd68strl5m4i31oqusjfl.apps.googleusercontent.com';
+
+
+/***/ }),
+
+/***/ "./pages/sheet.js":
 /*!************************!*\
-  !*** ./pages/Sheet.js ***!
+  !*** ./pages/sheet.js ***!
   \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -6168,31 +6185,14 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ "./pages/config.js":
-/*!*************************!*\
-  !*** ./pages/config.js ***!
-  \*************************/
-/*! exports provided: url, urlpost */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlpost", function() { return urlpost; });
-var url = 'https://sheets.googleapis.com/v4/spreadsheets/1mPsLDG_yN00jPw7srBREF-sXf5WYSxxoaJV0_6CI31Q/values/';
-var urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=-giSWLQLlg-e-g4sITPpoO6f&grant_type=refresh_token&refresh_token=1%2FPEfDyutOZE5MJvBRkJoL4EOh9ZFKaA3tj7Xmsnv4aC4&client_id=492497205693-gous0v8uc9vkd68strl5m4i31oqusjfl.apps.googleusercontent.com';
-
-
-/***/ }),
-
 /***/ 2:
 /*!*****************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2FSheet&absolutePagePath=C%3A%5CUsers%5CNoeypatt%5CDocuments%5Celderly-project-nextjs%5Cpages%5CSheet.js ***!
+  !*** multi next-client-pages-loader?page=%2Fsheet&absolutePagePath=C%3A%5CUsers%5CNoeypatt%5CDocuments%5Celderly-project-nextjs%5Cpages%5Csheet.js ***!
   \*****************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2FSheet&absolutePagePath=C%3A%5CUsers%5CNoeypatt%5CDocuments%5Celderly-project-nextjs%5Cpages%5CSheet.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FSheet&absolutePagePath=C%3A%5CUsers%5CNoeypatt%5CDocuments%5Celderly-project-nextjs%5Cpages%5CSheet.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fsheet&absolutePagePath=C%3A%5CUsers%5CNoeypatt%5CDocuments%5Celderly-project-nextjs%5Cpages%5Csheet.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fsheet&absolutePagePath=C%3A%5CUsers%5CNoeypatt%5CDocuments%5Celderly-project-nextjs%5Cpages%5Csheet.js!./");
 
 
 /***/ }),
@@ -6209,4 +6209,4 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 /***/ })
 
 },[[2,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=Sheet.js.map
+//# sourceMappingURL=sheet.js.map

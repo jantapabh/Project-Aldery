@@ -13,8 +13,7 @@ class contact extends React.Component {
     render() {
         return (
             <div>
-            
-                <Nav name="about" />
+                <Nav name="contace" />
                 <CardProfile
                     avatar="/static/cover.png"
                     name="cover"

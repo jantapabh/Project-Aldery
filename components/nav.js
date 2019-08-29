@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import '../styles/base.scss'
 
 const links = [
   { href: '/about', label: 'About' },
@@ -10,24 +11,52 @@ const links = [
   return link
 })
 
-const Nav = () => (
-  <nav>
-    {/* <img src="/static/logo.png" alt="logo" /> */}
-    <ul>
-      <div className="warp-manu">
-        {links.map(({ key, href, label }) => (
-          <li key={key}>
-            <Link href={href}>
-              <p>{label}</p>
-            </Link>
 
-          </li>
-        ))}
-      </div>
+class Nav extends React.Component {
 
-    </ul>
+  static defaultProps = {
+    name: "",
+  }
 
-  </nav>
-)
 
+  render() {
+
+    if (this.props.name != "main") {
+      return (
+        <nav>
+          {/* <img src="/static/logo.png" alt="logo" /> */}
+          <ul>
+            <div className="warp-back">
+                <li>
+                  <Link href="/">
+                    <p>ย้อนกลับ</p>
+                  </Link>
+                </li>
+            </div>
+          </ul>
+        </nav>
+      )
+    }
+
+    return (
+      <nav>
+        {/* <img src="/static/logo.png" alt="logo" /> */}
+        <ul>
+          <div className="warp-manu">
+            {links.map(({ key, href, label }) => (
+              <li key={key}>
+                <Link href={href}>
+                  <p>{label}</p>
+                </Link>
+
+              </li>
+            ))}
+          </div>
+
+        </ul>
+
+      </nav>
+    )
+  }
+}
 export default Nav

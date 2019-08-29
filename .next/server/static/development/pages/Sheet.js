@@ -203,9 +203,26 @@ function _defineProperty(obj, key, value) {
 
 /***/ }),
 
-/***/ "./pages/Sheet.js":
+/***/ "./pages/config.js":
+/*!*************************!*\
+  !*** ./pages/config.js ***!
+  \*************************/
+/*! exports provided: url, urlpost */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlpost", function() { return urlpost; });
+const url = 'https://sheets.googleapis.com/v4/spreadsheets/1mPsLDG_yN00jPw7srBREF-sXf5WYSxxoaJV0_6CI31Q/values/';
+const urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=-giSWLQLlg-e-g4sITPpoO6f&grant_type=refresh_token&refresh_token=1%2FPEfDyutOZE5MJvBRkJoL4EOh9ZFKaA3tj7Xmsnv4aC4&client_id=492497205693-gous0v8uc9vkd68strl5m4i31oqusjfl.apps.googleusercontent.com';
+
+
+/***/ }),
+
+/***/ "./pages/sheet.js":
 /*!************************!*\
-  !*** ./pages/Sheet.js ***!
+  !*** ./pages/sheet.js ***!
   \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -291,31 +308,14 @@ class Sheet extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 
 /***/ }),
 
-/***/ "./pages/config.js":
-/*!*************************!*\
-  !*** ./pages/config.js ***!
-  \*************************/
-/*! exports provided: url, urlpost */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlpost", function() { return urlpost; });
-const url = 'https://sheets.googleapis.com/v4/spreadsheets/1mPsLDG_yN00jPw7srBREF-sXf5WYSxxoaJV0_6CI31Q/values/';
-const urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=-giSWLQLlg-e-g4sITPpoO6f&grant_type=refresh_token&refresh_token=1%2FPEfDyutOZE5MJvBRkJoL4EOh9ZFKaA3tj7Xmsnv4aC4&client_id=492497205693-gous0v8uc9vkd68strl5m4i31oqusjfl.apps.googleusercontent.com';
-
-
-/***/ }),
-
 /***/ 4:
 /*!******************************!*\
-  !*** multi ./pages/Sheet.js ***!
+  !*** multi ./pages/sheet.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Noeypatt\Documents\elderly-project-nextjs\pages\Sheet.js */"./pages/Sheet.js");
+module.exports = __webpack_require__(/*! C:\Users\Noeypatt\Documents\elderly-project-nextjs\pages\sheet.js */"./pages/sheet.js");
 
 
 /***/ }),
@@ -354,4 +354,4 @@ module.exports = require("react");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=Sheet.js.map
+//# sourceMappingURL=sheet.js.map
