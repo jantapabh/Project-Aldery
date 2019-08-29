@@ -4,10 +4,11 @@
 
    .bg{
         width: 100%;
-        background: url("/static/bg.jpg"); 
+        background: url("/static/bg3.jpg"); 
         background-size: cover;
         background-position: center center;
         opacity: 0.85;
+    
 
         display: flex;
         flex-direction: row;
@@ -16,14 +17,12 @@
         .warp-text{
             width: 50%;
             margin: 10rem;
+            
             display: flex;
             flex-direction: column;
             align-items: center;
             
 
-            
-
-            
                 .btn{
                     background-color: #cde4f4 !important;
                     border: 1px solid #adb4bc;
@@ -34,6 +33,9 @@
                     -moz-box-shadow: 3px 4px 14px -6px rgba(0,0,0,0.75);
                     box-shadow: 3px 4px 14px -6px rgba(0,0,0,0.75);
                 }  
+                .btn:hover{
+                    box-shadow: 3px 4px 14px -10px;
+                }
         }
     }
 }
