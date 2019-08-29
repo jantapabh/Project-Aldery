@@ -93,10 +93,10 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/layout/cover.js":
-/*!************************************!*\
-  !*** ./components/layout/cover.js ***!
-  \************************************/
+/***/ "./components/layout/bg.js":
+/*!*********************************!*\
+  !*** ./components/layout/bg.js ***!
+  \*********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -146,7 +146,7 @@ class Cover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     }, __jsx("h1", null, "\u0E10\u0E32\u0E19\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38"), __jsx("button", {
       className: "btn active",
       onClick: this.handleOauth
-    }, __jsx("h6", null, "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01")))));
+    }, __jsx("h2", null, "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01")))));
   }
 
 }
@@ -228,11 +228,13 @@ const links = [{
 class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   render() {
     if (this.props.name != "main") {
-      return __jsx("nav", null, __jsx("ul", null, __jsx("div", {
+      return __jsx("nav", null, __jsx("div", {
         className: "warp-back"
+      }, __jsx("ul", null, __jsx("div", {
+        className: "back"
       }, __jsx("li", null, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
         href: "/"
-      }, __jsx("p", null, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A"))))));
+      }, __jsx("p", null, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A")))))));
     }
 
     return __jsx("nav", null, __jsx("ul", null, __jsx("div", {
@@ -1042,7 +1044,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/base.scss */ "./styles/base.scss");
 /* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
-/* harmony import */ var _components_layout_cover__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/layout/cover */ "./components/layout/cover.js");
+/* harmony import */ var _components_layout_bg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/layout/bg */ "./components/layout/bg.js");
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -1054,6 +1056,21 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      icon: [{
+        text: "หน่วยงานที่เกี่ยวข้อง",
+        pic: "/static/bank.svg"
+      }, {
+        text: "หน่วยงานดูแลผู้สูงอายุ",
+        pic: "/static/department.svg"
+      }, {
+        text: "เอกสารที่จำเป็น",
+        pic: "/static/contract.svg"
+      }, {
+        text: "กิจกรรม",
+        pic: "/static/active.svg"
+      }]
+    };
   }
 
   async componentDidMount() {
@@ -1061,9 +1078,29 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   }
 
   render() {
-    return __jsx("div", null, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    return __jsx("div", {
+      className: "warp"
+    }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
       name: "main"
-    }), __jsx(_components_layout_cover__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+    }), __jsx(_components_layout_bg__WEBPACK_IMPORTED_MODULE_5__["default"], null), __jsx("div", {
+      className: "warp-menu"
+    }, __jsx("div", {
+      className: "menu"
+    }, __jsx("div", {
+      className: "warp-icon"
+    }, this.state.icon.map((item, index) => {
+      return __jsx("div", {
+        className: "icon",
+        key: index
+      }, __jsx("img", {
+        src: item.pic,
+        alt: "icon"
+      }), __jsx("h6", null, item.text));
+    })))), __jsx("div", {
+      className: "warp-content"
+    }, __jsx("div", {
+      className: "content"
+    })));
   }
 
 }

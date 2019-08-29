@@ -3,7 +3,6 @@ import '../styles/base.scss'
 import CardProfile from '../components/layout/cardCover'
 import Nav from '../components/nav'
 
-
 class contact extends React.Component {
 
     constructor(props) {

@@ -1,6 +1,11 @@
 @import './nav.scss';
 @import './cover.scss';
 @import './bg.scss';
+@import './index.scss';
+
+.warp{
+    width: 100%;
+}
 
 h1{
     color: black;
@@ -13,11 +18,25 @@ h1{
     padding: 0.5rem;
 }
 
-h6{
+h2{
     color: black;
     font-size: 2rem !important;
     text-align: center;
     font-family: 'Prompt', sans-serif;
     margin-bottom: 0;
     padding: 0.5rem;
+}
+
+h6{
+    color: black;
+    font-size: 1rem !important;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+    margin-bottom: 0;
+    padding: 0 5rem;
+}
+
+p{
+    font-family: 'Prompt', sans-serif;
+
 }

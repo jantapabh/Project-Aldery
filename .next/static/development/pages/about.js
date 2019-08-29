@@ -130,11 +130,13 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       if (this.props.name != "main") {
-        return __jsx("nav", null, __jsx("ul", null, __jsx("div", {
+        return __jsx("nav", null, __jsx("div", {
           className: "warp-back"
+        }, __jsx("ul", null, __jsx("div", {
+          className: "back"
         }, __jsx("li", null, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
           href: "/"
-        }, __jsx("p", null, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A"))))));
+        }, __jsx("p", null, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A")))))));
       }
 
       return __jsx("nav", null, __jsx("ul", null, __jsx("div", {
@@ -10416,7 +10418,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!*****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=C%3A%5CUsers%5CNoeypatt%5CDocuments%5Celderly-project-nextjs%5Cpages%5Cabout.js ***!
   \*****************************************************************************************************************************************************/
@@ -10439,5 +10441,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js","styles"]]]);
+},[[2,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=about.js.map

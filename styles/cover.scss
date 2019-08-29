@@ -10,7 +10,7 @@
         
         position: absolute;
         width: 100%;
-        margin: 1rem;
+        
         padding: 3rem;
 
         button{
@@ -32,7 +32,8 @@
         border-radius: 1rem;
         display: flex;
         justify-content: center;
-        margin: 1rem;
+        margin: 1rem ;
+        margin-top: 0.3rem;
         flex-direction: row;
         background-image: linear-gradient(to right top,#ffe8fc,#feeafd,#f6e9ff, #f5e9ff,#f1e6ff,  );
 

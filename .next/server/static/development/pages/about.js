@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -177,11 +177,13 @@ const links = [{
 class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   render() {
     if (this.props.name != "main") {
-      return __jsx("nav", null, __jsx("ul", null, __jsx("div", {
+      return __jsx("nav", null, __jsx("div", {
         className: "warp-back"
+      }, __jsx("ul", null, __jsx("div", {
+        className: "back"
       }, __jsx("li", null, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
         href: "/"
-      }, __jsx("p", null, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A"))))));
+      }, __jsx("p", null, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A")))))));
     }
 
     return __jsx("nav", null, __jsx("ul", null, __jsx("div", {
@@ -956,7 +958,7 @@ class contact extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/about.js ***!
   \******************************/

@@ -24,16 +24,19 @@ class Nav extends React.Component {
     if (this.props.name != "main") {
       return (
         <nav>
-          {/* <img src="/static/logo.png" alt="logo" /> */}
-          <ul>
-            <div className="warp-back">
+          <div className="warp-back" >
+            {/* <img src="/static/logo.png" alt="logo" /> */}
+            <ul>
+              <div className="back">
                 <li>
                   <Link href="/">
                     <p>ย้อนกลับ</p>
                   </Link>
                 </li>
-            </div>
-          </ul>
+              </div>
+            </ul>
+          </div>
+
         </nav>
       )
     }
