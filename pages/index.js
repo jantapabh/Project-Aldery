@@ -51,9 +51,9 @@ class Home extends React.Component {
         <div className="warp-content" >
           <div className="content">
             
-              <img  src="/static/bg.jpg" />
+              {/* <img  src="/static/bg.jpg" />
               <img  src="/static/bg2.jpg" />
-              <img  src="/static/bg3.jpg" />
+              <img  src="/static/bg3.jpg" /> */}
            
           </div>
         </div>

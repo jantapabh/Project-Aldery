@@ -82,42 +82,53 @@ nav {
 .warp-bg {
   width: 100%;
   display: flex;
-  margin-bottom: 1rem; }
-  .warp-bg .bg {
+  margin-bottom: 52rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .warp-bg img {
     width: 100%;
-    background: url("/static/bg3.jpg");
-    background-size: cover;
-    background-position: center center;
-    opacity: 0.85;
-    animation: fading 10s infinite;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
+    height: 50rem;
+    position: absolute;
+    top: 3rem;
+    left: 0; }
+  .warp-bg img:nth-of-type(1) {
+    animation: fadeInOut 10 linear 6s infinite; }
+  .warp-bg img:nth-of-type(2) {
+    animation: fadeInOut 10s linear 4s infinite; }
+  .warp-bg img:nth-of-type(3) {
+    animation: fadeInOut 10s linear 2s infinite; }
+  .warp-bg img:nth-of-type(4) {
+    animation: fadeInOut 10s linear infinite; }
 
-@keyframes fading {
+@keyframes fadeInOut {
   0% {
     opacity: 0; }
-  50% {
+  17% {
+    opacity: 1; }
+  25% {
+    opacity: 0; }
+  92% {
     opacity: 1; }
   100% {
-    opacity: 0; } }
-    .warp-bg .bg .warp-text {
-      width: 50%;
-      margin: 10rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-      .warp-bg .bg .warp-text .btn {
-        background-color: #cde4f4 !important;
-        border: 1px solid #adb4bc;
-        border-radius: 1rem;
-        margin-top: 1rem;
-        box-shadow: 3px 4px 14px -6px;
-        -webkit-box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75);
-        box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75); }
-      .warp-bg .bg .warp-text .btn:hover {
-        box-shadow: 3px 4px 14px -10px; }
+    opacity: 1; } }
+  .warp-bg .warp-text {
+    width: 50%;
+    margin: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .warp-bg .warp-text .btn {
+      background-color: #cde4f4 !important;
+      border: 1px solid #adb4bc;
+      border-radius: 1rem;
+      margin-top: 1rem;
+      box-shadow: 3px 4px 14px -6px;
+      -webkit-box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75);
+      box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75); }
+    .warp-bg .warp-text .btn:hover {
+      box-shadow: 3px 4px 14px -10px; }
 
 .warp-menu {
   display: flex;

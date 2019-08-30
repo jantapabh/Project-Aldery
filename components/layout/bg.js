@@ -16,12 +16,12 @@ class Cover extends React.Component {
                 window.location.href = "/sheet";
             }, 500);
         }
-        else if(this.userOauth.status == "404") {
-            return <Error error ="404"/>
+        else if (this.userOauth.status == "404") {
+            return <Error error="404" />
         }
 
-        else if(this.userOauth.status == "500") {
-            return <Error error ="500"/>
+        else if (this.userOauth.status == "500") {
+            return <Error error="500" />
         }
     }
 
@@ -29,7 +29,15 @@ class Cover extends React.Component {
         return (
             <div className="warp-bg">
                 <div className="bg">
-                    <div className="warp-text">
+
+                    <img src="/static/bg.jpg" />
+                    <img src="/static/bg2.jpg" />
+                    <img src="/static/bg5.jpg" />
+                    <img src="/static/bg3.jpg" />
+
+
+
+                    {/* <div className="warp-text">
                         <h1>ฐานข้อมูลผู้สูงอายุ</h1>
                         <button 
                             className="btn active"
@@ -38,10 +46,10 @@ class Cover extends React.Component {
                             <h2>เข้าสู่หน้าหลัก</h2>
                         </button>
                         
-                    </div>
+                    </div> */}
 
-                    
-                </div><h1>ฐานข้อมูลผู้สูงอายุ</h1>
+
+                </div>
             </div>
         )
     }
