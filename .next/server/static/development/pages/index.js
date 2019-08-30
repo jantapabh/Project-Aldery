@@ -1100,7 +1100,9 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "warp-content"
     }, __jsx("div", {
       className: "content"
-    })));
+    }, __jsx("img", {
+      src: "static/bg.jpg"
+    }))));
   }
 
 }

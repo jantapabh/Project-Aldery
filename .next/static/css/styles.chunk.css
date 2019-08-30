@@ -130,8 +130,8 @@ nav {
         align-items: center;
         margin: 0 1rem; }
       .warp-menu .menu .warp-icon img {
-        width: 5rem;
-        height: 5rem;
+        width: 3.5rem;
+        height: 3.5rem;
         margin: 1rem; }
 
 .warp-content {
@@ -144,6 +144,16 @@ nav {
     border: 1px solid black;
     padding: 20rem;
     margin-bottom: 1rem; }
+    .warp-content .content img {
+      animation: fading 10s infinite; }
+
+@keyframes fading {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 
 .warp {
   width: 100%; }

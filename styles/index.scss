@@ -22,14 +22,12 @@
                     margin: 0 1rem;
                 }
                 img{
-                    width: 5rem;
-                    height: 5rem;
+                    width: 3.5rem;
+                    height: 3.5rem;
                     margin: 1rem;
                 }
             }
-            
-
-            
+  
         }
     }
 
@@ -45,6 +43,25 @@
             border: 1px solid black;
             padding: 20rem;  
             margin-bottom: 1rem;
+
+
+            img{
+                animation: fading 10s infinite;
+            }
+
+            @keyframes fading {
+                0%{
+                    opacity: 0;
+                }
+                50%{
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
         }
+
+
 
 }

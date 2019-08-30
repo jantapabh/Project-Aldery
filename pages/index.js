@@ -49,7 +49,11 @@ class Home extends React.Component {
         </div>
 
         <div className="warp-content" >
-          <div className="content"></div>
+          <div className="content">
+
+              <img src="static/bg.jpg"/>
+
+          </div>
         </div>
 
       </div>

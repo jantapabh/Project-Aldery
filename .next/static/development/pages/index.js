@@ -12718,7 +12718,9 @@ function (_React$Component) {
         className: "warp-content"
       }, __jsx("div", {
         className: "content"
-      })));
+      }, __jsx("img", {
+        src: "static/bg.jpg"
+      }))));
     }
   }]);
 
