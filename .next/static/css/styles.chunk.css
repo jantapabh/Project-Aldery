@@ -89,9 +89,18 @@ nav {
     background-size: cover;
     background-position: center center;
     opacity: 0.85;
+    animation: fading 10s infinite;
     display: flex;
     flex-direction: row;
     justify-content: center; }
+
+@keyframes fading {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
     .warp-bg .bg .warp-text {
       width: 50%;
       margin: 10rem;
@@ -145,15 +154,27 @@ nav {
     padding: 20rem;
     margin-bottom: 1rem; }
     .warp-content .content img {
-      animation: fading 10s infinite; }
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .warp-content .content img:nth-of-type(1) {
+      animation: fadeInOut 10s linear 4s infinite; }
+    .warp-content .content img:nth-of-type(2) {
+      animation: fadeInOut 10s linear 2s infinite; }
+    .warp-content .content img:nth-of-type(3) {
+      animation: fadeInOut 10s linear 0s infinite; }
 
-@keyframes fading {
+@keyframes fadeInOut {
   0% {
-    opacity: 0; }
-  50% {
     opacity: 1; }
+  17% {
+    opacity: 1; }
+  25% {
+    opacity: 0; }
+  92% {
+    opacity: 0; }
   100% {
-    opacity: 0; } }
+    opacity: 1; } }
 
 .warp {
   width: 100%; }

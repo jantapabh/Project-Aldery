@@ -36,11 +36,11 @@ class Home extends React.Component {
               {
                 this.state.icon.map((item, index) => {
                   return (
-                    
-                      <div className="icon" key={index}>
-                        <img src={item.pic} alt="icon" />
-                        <h6>{item.text}</h6>
-                      </div>
+
+                    <div className="icon" key={index}>
+                      <img src={item.pic} alt="icon" />
+                      <h6>{item.text}</h6>
+                    </div>
                   )
                 })
               }
@@ -50,9 +50,11 @@ class Home extends React.Component {
 
         <div className="warp-content" >
           <div className="content">
-
-              <img src="static/bg.jpg"/>
-
+            
+              <img  src="/static/bg.jpg" />
+              <img  src="/static/bg2.jpg" />
+              <img  src="/static/bg3.jpg" />
+           
           </div>
         </div>
 

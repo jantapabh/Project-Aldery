@@ -146,7 +146,7 @@ class Cover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     }, __jsx("h1", null, "\u0E10\u0E32\u0E19\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38"), __jsx("button", {
       className: "btn active",
       onClick: this.handleOauth
-    }, __jsx("h2", null, "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01")))));
+    }, __jsx("h2", null, "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01")))), __jsx("h1", null, "\u0E10\u0E32\u0E19\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38"));
   }
 
 }
@@ -1101,7 +1101,11 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     }, __jsx("div", {
       className: "content"
     }, __jsx("img", {
-      src: "static/bg.jpg"
+      src: "/static/bg.jpg"
+    }), __jsx("img", {
+      src: "/static/bg2.jpg"
+    }), __jsx("img", {
+      src: "/static/bg3.jpg"
     }))));
   }
 

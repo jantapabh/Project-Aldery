@@ -39,7 +39,9 @@ class Cover extends React.Component {
                         </button>
                         
                     </div>
-                </div>
+
+                    
+                </div><h1>ฐานข้อมูลผู้สูงอายุ</h1>
             </div>
         )
     }
