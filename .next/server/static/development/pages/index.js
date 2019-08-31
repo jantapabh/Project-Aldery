@@ -109,90 +109,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\bg.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-// import React, { Component } from 'react';
-// import {
-//   Carousel,
-//   CarouselItem,
-//   CarouselControl,
-//   CarouselIndicators,
-//   CarouselCaption
-// } from 'reactstrap';
-// const items = [
-//   {
-//     src: '/static/bg.jpg',
-//     altText: 'Slide 1',
-//     caption: 'Slide 1'
-//   },
-//   {
-//     src: '/static/bg.jpg',
-//     altText: 'Slide 2',
-//     caption: 'Slide 2'
-//   },
-//   {
-//     src: '/static/bg.jpg',
-//     altText: 'Slide 3',
-//     caption: 'Slide 3'
-//   }
-// ];
-// class Example extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = { activeIndex: 0 };
-//     this.next = this.next.bind(this);
-//     this.previous = this.previous.bind(this);
-//     this.goToIndex = this.goToIndex.bind(this);
-//     this.onExiting = this.onExiting.bind(this);
-//     this.onExited = this.onExited.bind(this);
-//   }
-//   onExiting() {
-//     this.animating = true;
-//   }
-//   onExited() {
-//     this.animating = false;
-//   }
-//   next() {
-//     if (this.animating) return;
-//     const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
-//     this.setState({ activeIndex: nextIndex });
-//   }
-//   previous() {
-//     if (this.animating) return;
-//     const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
-//     this.setState({ activeIndex: nextIndex });
-//   }
-//   goToIndex(newIndex) {
-//     if (this.animating) return;
-//     this.setState({ activeIndex: newIndex });
-//   }
-//   render() {
-//     const { activeIndex } = this.state;
-//     const slides = items.map((item) => {
-//       return (
-//         <CarouselItem
-//           onExiting={this.onExiting}
-//           onExited={this.onExited}
-//           key={item.src}
-//         >
-//           <img src={item.src} alt={item.altText} />
-//           <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
-//         </CarouselItem>
-//       );
-//     });
-//     return (
-//       <Carousel
-//         activeIndex={activeIndex}
-//         next={this.next}
-//         previous={this.previous}
-//       >
-//         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-//         {slides}
-//         <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-//         <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-//       </Carousel>
-//     );
-//   }
-// }
-// export default Example;
 
 
 
@@ -210,7 +126,7 @@ class Cover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
           error: "404",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 117
+            lineNumber: 20
           },
           __self: this
         });
@@ -219,7 +135,7 @@ class Cover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
           error: "500",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 121
+            lineNumber: 24
           },
           __self: this
         });
@@ -233,48 +149,82 @@ class Cover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 
   render() {
     return __jsx("div", {
+      className: "warp",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }, __jsx("div", {
       className: "warp-bg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127
+        lineNumber: 33
       },
       __self: this
     }, __jsx("div", {
       className: "bg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 128
+        lineNumber: 34
       },
       __self: this
     }, __jsx("img", {
       src: "/static/bg.jpg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 130
+        lineNumber: 36
       },
       __self: this
     }), __jsx("img", {
       src: "/static/bg2.jpg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 37
       },
       __self: this
     }), __jsx("img", {
       src: "/static/bg5.jpg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132
+        lineNumber: 38
       },
       __self: this
     }), __jsx("img", {
       src: "/static/bg3.jpg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 133
+        lineNumber: 39
       },
       __self: this
-    })));
+    }))), __jsx("div", {
+      className: "warp-text",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44
+      },
+      __self: this
+    }, __jsx("h1", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }, "\u0E10\u0E32\u0E19\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38"), __jsx("button", {
+      className: "btn active",
+      onClick: this.handleOauth,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    }, __jsx("h2", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: this
+    }, "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01"))));
   }
 
 }

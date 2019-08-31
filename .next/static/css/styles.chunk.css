@@ -79,27 +79,31 @@ nav {
       width: 50rem;
       margin-top: 10rem; }
 
-.warp-bg {
+.warp {
   width: 100%;
-  display: flex;
-  margin-bottom: 52rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-  .warp-bg img {
+  position: relative;
+  text-align: center; }
+  .warp .warp-bg {
     width: 100%;
-    height: 50rem;
-    position: absolute;
-    top: 3rem;
-    left: 0; }
-  .warp-bg img:nth-of-type(1) {
-    animation: fadeInOut 15s linear 7s infinite; }
-  .warp-bg img:nth-of-type(2) {
-    animation: fadeInOut 15s linear 5s infinite; }
-  .warp-bg img:nth-of-type(3) {
-    animation: fadeInOut 15s linear 3s infinite; }
-  .warp-bg img:nth-of-type(4) {
-    animation: fadeInOut 15s linear infinite; }
+    display: flex;
+    margin-bottom: 52rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .warp .warp-bg img {
+      width: 100%;
+      height: 50rem;
+      position: absolute;
+      top: 3rem;
+      left: 0; }
+    .warp .warp-bg img:nth-of-type(1) {
+      animation: fadeInOut 15s linear 7s infinite; }
+    .warp .warp-bg img:nth-of-type(2) {
+      animation: fadeInOut 15s linear 5s infinite; }
+    .warp .warp-bg img:nth-of-type(3) {
+      animation: fadeInOut 15s linear 3s infinite; }
+    .warp .warp-bg img:nth-of-type(4) {
+      animation: fadeInOut 15s linear infinite; }
 
 @keyframes fadeInOut {
   0% {
@@ -112,13 +116,19 @@ nav {
     opacity: 0; }
   100% {
     opacity: 1; } }
-  .warp-bg .warp-text {
+  .warp .warp-text {
+    position: absolute;
+    top: 10rem;
+    left: 50rem;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
     width: 50%;
-    margin: 10rem;
+    margin: 0;
+    margin-top: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center; }
-    .warp-bg .warp-text .btn {
+    .warp .warp-text .btn {
       background-color: #cde4f4 !important;
       border: 1px solid #adb4bc;
       border-radius: 1rem;
@@ -127,7 +137,7 @@ nav {
       -webkit-box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75);
       box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75); }
-    .warp-bg .warp-text .btn:hover {
+    .warp .warp-text .btn:hover {
       box-shadow: 3px 4px 14px -10px; }
 
 .warp-menu {
