@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -107,6 +107,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _error__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./error */ "./components/layout/error.js");
 
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\bg.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 // import React, { Component } from 'react';
 // import {
@@ -206,11 +207,21 @@ class Cover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         }, 500);
       } else if (this.userOauth.status == "404") {
         return __jsx(_error__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          error: "404"
+          error: "404",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 117
+          },
+          __self: this
         });
       } else if (this.userOauth.status == "500") {
         return __jsx(_error__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          error: "500"
+          error: "500",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 121
+          },
+          __self: this
         });
       }
     });
@@ -222,17 +233,47 @@ class Cover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 
   render() {
     return __jsx("div", {
-      className: "warp-bg"
+      className: "warp-bg",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 127
+      },
+      __self: this
     }, __jsx("div", {
-      className: "bg"
+      className: "bg",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 128
+      },
+      __self: this
     }, __jsx("img", {
-      src: "/static/bg.jpg"
+      src: "/static/bg.jpg",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 130
+      },
+      __self: this
     }), __jsx("img", {
-      src: "/static/bg2.jpg"
+      src: "/static/bg2.jpg",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 131
+      },
+      __self: this
     }), __jsx("img", {
-      src: "/static/bg5.jpg"
+      src: "/static/bg5.jpg",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 132
+      },
+      __self: this
     }), __jsx("img", {
-      src: "/static/bg3.jpg"
+      src: "/static/bg3.jpg",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 133
+      },
+      __self: this
     })));
   }
 
@@ -255,16 +296,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\error.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 class Error extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   render() {
     if (this.props.error == "404") {
-      return __jsx("div", null);
+      return __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        },
+        __self: this
+      });
     }
 
-    return __jsx("div", null);
+    return __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    });
   }
 
 }
@@ -294,6 +348,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/base.scss */ "./styles/base.scss");
 /* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_3__);
 
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\nav.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -315,26 +370,98 @@ const links = [{
 class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   render() {
     if (this.props.name != "main") {
-      return __jsx("nav", null, __jsx("div", {
-        className: "warp-back"
-      }, __jsx("ul", null, __jsx("div", {
-        className: "back"
-      }, __jsx("li", null, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-        href: "/"
-      }, __jsx("p", null, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A")))))));
+      return __jsx("nav", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "warp-back",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
+      }, __jsx("ul", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "back",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      }, __jsx("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31
+        },
+        __self: this
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+        href: "/",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
+        },
+        __self: this
+      }, __jsx("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
+        },
+        __self: this
+      }, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A")))))));
     }
 
-    return __jsx("nav", null, __jsx("ul", null, __jsx("div", {
-      className: "warp-manu"
+    return __jsx("nav", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }, __jsx("ul", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "warp-manu",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
     }, links.map(({
       key,
       href,
       label
     }) => __jsx("li", {
-      key: key
+      key: key,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: href
-    }, __jsx("p", null, label)))))));
+      href: href,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: this
+    }, __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    }, label)))))));
   }
 
 }
@@ -1133,6 +1260,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
 /* harmony import */ var _components_layout_bg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/layout/bg */ "./components/layout/bg.js");
 
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -1170,27 +1298,84 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 
   render() {
     return __jsx("div", {
-      className: "warp"
+      className: "warp",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
     }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      name: "main"
-    }), __jsx(_components_layout_bg__WEBPACK_IMPORTED_MODULE_5__["default"], null), __jsx("div", {
-      className: "warp-menu"
+      name: "main",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }), __jsx(_components_layout_bg__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }), __jsx("div", {
+      className: "warp-menu",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: this
     }, __jsx("div", {
-      className: "menu"
+      className: "menu",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: this
     }, __jsx("div", {
-      className: "warp-icon"
+      className: "warp-icon",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40
+      },
+      __self: this
     }, this.state.icon.map((item, index) => {
       return __jsx("div", {
         className: "icon",
-        key: index
+        key: index,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45
+        },
+        __self: this
       }, __jsx("img", {
         src: item.pic,
-        alt: "icon"
-      }), __jsx("h6", null, item.text));
+        alt: "icon",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        },
+        __self: this
+      }), __jsx("h6", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47
+        },
+        __self: this
+      }, item.text));
     })))), __jsx("div", {
-      className: "warp-content"
+      className: "warp-content",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: this
     }, __jsx("div", {
-      className: "content"
+      className: "content",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      },
+      __self: this
     })));
   }
 
@@ -1211,14 +1396,14 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Noeypatt\Documents\elderly-project-nextjs\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! C:\Users\Noeypatt\Documents\elderly-nextjs\pages\index.js */"./pages/index.js");
 
 
 /***/ }),
