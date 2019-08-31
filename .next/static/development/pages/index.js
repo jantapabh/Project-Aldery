@@ -53,7 +53,7 @@ function (_React$Component) {
           error: "404",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20
+            lineNumber: 27
           },
           __self: this
         });
@@ -62,13 +62,28 @@ function (_React$Component) {
           error: "500",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24
+            lineNumber: 31
           },
           __self: this
         });
       }
     });
 
+    _this.state = {
+      texts: [{
+        text: "ฐานข้อมูลผู้สูงอายุ",
+        style: "animated infinite bounce delay-2s"
+      }, {
+        text: "ฐานข้อมูลผู้สูงอายุ2",
+        style: "animated infinite bounce delay-2s"
+      }, {
+        text: "ฐานข้อมูลผู้สูงอายุ3",
+        style: "animated infinite bounce delay-2s"
+      }, {
+        text: "ฐานข้อมูลผู้สูงอายุ4",
+        style: "animated infinite bounce delay-2s"
+      }]
+    };
     return _this;
   }
 
@@ -84,79 +99,82 @@ function (_React$Component) {
         className: "warp",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 37
         },
         __self: this
       }, __jsx("div", {
         className: "warp-bg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
-        },
-        __self: this
-      }, __jsx("div", {
-        className: "bg",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 38
         },
         __self: this
       }, __jsx("img", {
         src: "/static/bg.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 40
         },
         __self: this
       }), __jsx("img", {
         src: "/static/bg2.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 41
         },
         __self: this
       }), __jsx("img", {
         src: "/static/bg5.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 42
         },
         __self: this
       }), __jsx("img", {
         src: "/static/bg3.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 43
         },
         __self: this
-      }))), __jsx("div", {
+      })), __jsx("div", {
         className: "warp-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 47
         },
         __self: this
-      }, __jsx("h1", {
+      }, __jsx("div", {
+        className: "text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 48
         },
         __self: this
-      }, "\u0E10\u0E32\u0E19\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38"), __jsx("button", {
+      }, this.state.texts.map(function (item, index) {
+        return __jsx("h1", {
+          className: "animated infinite bounce delay-5s",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 52
+          },
+          __self: this
+        });
+      }), __jsx("button", {
         className: "btn active",
         onClick: this.handleOauth,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 57
         },
         __self: this
       }, __jsx("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 61
         },
         __self: this
-      }, "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01"))));
+      }, "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01")))));
     }
   }]);
 
@@ -236,6 +254,62 @@ Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODUL
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (Error);
+
+/***/ }),
+
+/***/ "./components/layout/load.js":
+/*!***********************************!*\
+  !*** ./components/layout/load.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\load.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
+
+
+var Load =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Load, _React$Component);
+
+  function Load() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Load);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Load).apply(this, arguments));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Load, [{
+    key: "render",
+    value: function render() {
+      return __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 6
+        },
+        __self: this
+      }, "Loaddddddddddddddddd");
+    }
+  }]);
+
+  return Load;
+}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Load);
 
 /***/ }),
 
@@ -407,6 +481,23 @@ Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODUL
 
 /***/ }),
 
+/***/ "./config.js":
+/*!*******************!*\
+  !*** ./config.js ***!
+  \*******************/
+/*! exports provided: url, urlpost */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlpost", function() { return urlpost; });
+var url = 'https://sheets.googleapis.com/v4/spreadsheets/1mPsLDG_yN00jPw7srBREF-sXf5WYSxxoaJV0_6CI31Q/values/';
+var urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=-giSWLQLlg-e-g4sITPpoO6f&grant_type=refresh_token&refresh_token=1%2FPEfDyutOZE5MJvBRkJoL4EOh9ZFKaA3tj7Xmsnv4aC4&client_id=492497205693-gous0v8uc9vkd68strl5m4i31oqusjfl.apps.googleusercontent.com';
+
+
+/***/ }),
+
 /***/ "./config/api.js":
 /*!***********************!*\
   !*** ./config/api.js ***!
@@ -421,7 +512,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _pages_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/config */ "./pages/config.js");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../config */ "./config.js");
 
 
 
@@ -441,7 +532,7 @@ function _getSheetValues() {
         switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("".concat(_pages_config__WEBPACK_IMPORTED_MODULE_3__["url"]).concat(col), {
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["url"]).concat(col), {
               headers: {
                 Authorization: "Bearer ".concat(token)
               }
@@ -475,7 +566,7 @@ function _postSheetValues() {
         switch (_context2.prev = _context2.next) {
           case 0:
             _context2.next = 2;
-            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("".concat(_pages_config__WEBPACK_IMPORTED_MODULE_3__["urlpost"]), {
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["urlpost"]), {
               headers: {
                 Authorization: "Bearer 4/qQGd-JEj1hK6bmd0w0ESGCh7y-qrQNS4-pEwPb7nt-H3aPUhcUmA0FQx1cNs1GapRQ_wePGf4e6eXWGVTuhgY6E",
                 Content_Type: "application/x-www-form-urlencoded",
@@ -12735,23 +12826,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/config.js":
-/*!*************************!*\
-  !*** ./pages/config.js ***!
-  \*************************/
-/*! exports provided: url, urlpost */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlpost", function() { return urlpost; });
-var url = 'https://sheets.googleapis.com/v4/spreadsheets/1mPsLDG_yN00jPw7srBREF-sXf5WYSxxoaJV0_6CI31Q/values/';
-var urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=-giSWLQLlg-e-g4sITPpoO6f&grant_type=refresh_token&refresh_token=1%2FPEfDyutOZE5MJvBRkJoL4EOh9ZFKaA3tj7Xmsnv4aC4&client_id=492497205693-gous0v8uc9vkd68strl5m4i31oqusjfl.apps.googleusercontent.com';
-
-
-/***/ }),
-
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -12778,6 +12852,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
 /* harmony import */ var _components_layout_bg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/layout/bg */ "./components/layout/bg.js");
+/* harmony import */ var _components_layout_load__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/layout/load */ "./components/layout/load.js");
 
 
 
@@ -12788,6 +12863,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
+
 
 
 
@@ -12806,29 +12882,29 @@ function (_React$Component) {
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(Home).call(this, props));
     _this.state = {
+      activeImg: false,
       icon: [{
         text: "หน่วยงานที่เกี่ยวข้อง",
-        pic: "/static/bank.svg"
+        pic: "/static/bank.svg",
+        href: "/"
       }, {
         text: "หน่วยงานดูแลผู้สูงอายุ",
-        pic: "/static/department.svg"
+        pic: "/static/department.svg",
+        href: "/department"
       }, {
         text: "เอกสารที่จำเป็น",
-        pic: "/static/contract.svg"
+        pic: "/static/contract.svg",
+        href: "/document"
       }, {
         text: "กิจกรรม",
-        pic: "/static/active.svg"
+        pic: "/static/active.svg",
+        href: "/active"
       }]
     };
     return _this;
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(Home, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.userOauth = JSON.parse(localStorage.getItem("myOauth"));
-    }
-  }, {
     key: "componentDidMount",
     value: function () {
       var _componentDidMount = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
@@ -12838,23 +12914,24 @@ function (_React$Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
+                this.userOauth = JSON.parse(localStorage.getItem("myOauth"));
                 _context.t0 = localStorage;
                 _context.t1 = _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default.a;
-                _context.next = 4;
+                _context.next = 5;
                 return _config_api__WEBPACK_IMPORTED_MODULE_11__["default"].postSheetValues();
 
-              case 4:
+              case 5:
                 _context.t2 = _context.sent;
                 _context.t3 = (0, _context.t1)(_context.t2);
 
                 _context.t0.setItem.call(_context.t0, "myOauth", _context.t3);
 
-              case 7:
+              case 8:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee);
+        }, _callee, this);
       }));
 
       function componentDidMount() {
@@ -12908,7 +12985,14 @@ function (_React$Component) {
         },
         __self: this
       }, this.state.icon.map(function (item, index) {
-        return __jsx("div", {
+        return __jsx("a", {
+          href: item.href,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 44
+          },
+          __self: this
+        }, __jsx("div", {
           className: "icon",
           key: index,
           __source: {
@@ -12916,33 +13000,40 @@ function (_React$Component) {
             lineNumber: 45
           },
           __self: this
-        }, __jsx("img", {
-          src: item.pic,
-          alt: "icon",
+        }, __jsx("div", {
+          className: "icon-img",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 46
           },
           __self: this
-        }), __jsx("h6", {
+        }, __jsx("img", {
+          src: item.pic,
+          alt: "icon",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 47
           },
           __self: this
-        }, item.text));
+        })), __jsx("h6", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 50
+          },
+          __self: this
+        }, item.text)));
       })))), __jsx("div", {
         className: "warp-content",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 61
         },
         __self: this
       }, __jsx("div", {
         className: "content",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 62
         },
         __self: this
       })));

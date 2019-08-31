@@ -3,6 +3,7 @@ import Nav from '../components/nav'
 import '../styles/base.scss'
 import Sheetapi from '../config/api'
 import BG from '../components/layout/bg';
+import Load from '../components/layout/load'
 
 
 class Home extends React.Component {
@@ -11,22 +12,21 @@ class Home extends React.Component {
     super(props);
 
     this.state = {
+      activeImg: false,
       icon: [
-        { text: "หน่วยงานที่เกี่ยวข้อง", pic: "/static/bank.svg" },
-        { text: "หน่วยงานดูแลผู้สูงอายุ", pic: "/static/department.svg" },
-        { text: "เอกสารที่จำเป็น", pic: "/static/contract.svg" },
-        { text: "กิจกรรม", pic: "/static/active.svg" }
+        { text: "หน่วยงานที่เกี่ยวข้อง", pic: "/static/bank.svg",href:"/" },
+        { text: "หน่วยงานดูแลผู้สูงอายุ", pic: "/static/department.svg",href:"/department"  },
+        { text: "เอกสารที่จำเป็น", pic: "/static/contract.svg",href:"/document"  },
+        { text: "กิจกรรม", pic: "/static/active.svg",href:"/active"  }
 
       ]
     }
   }
 
-  componentDidMount() {
-    this.userOauth = JSON.parse(localStorage.getItem("myOauth"))
-}
-
   async componentDidMount() {
+    this.userOauth = JSON.parse(localStorage.getItem("myOauth"))
     localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
+
   }
 
   render() {
@@ -41,11 +41,16 @@ class Home extends React.Component {
               {
                 this.state.icon.map((item, index) => {
                   return (
+                    <a href={item.href}>
+                      <div className="icon" key={index}>
+                      <div className="icon-img">
+                        <img  src={item.pic} alt="icon" />
+                      </div>
 
-                    <div className="icon" key={index}>
-                      <img src={item.pic} alt="icon" />
                       <h6>{item.text}</h6>
                     </div>
+                    </a>
+                    
                   )
                 })
               }
@@ -55,11 +60,6 @@ class Home extends React.Component {
 
         <div className="warp-content" >
           <div className="content">
-            
-              {/* <img  src="/static/bg.jpg" />
-              <img  src="/static/bg2.jpg" />
-              <img  src="/static/bg3.jpg" /> */}
-           
           </div>
         </div>
 

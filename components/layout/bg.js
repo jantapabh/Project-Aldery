@@ -4,6 +4,13 @@ import Error from './error';
 class Cover extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            texts : [{text:"ฐานข้อมูลผู้สูงอายุ",style:"animated infinite bounce delay-2s"},
+            {text:"ฐานข้อมูลผู้สูงอายุ2",style:"animated infinite bounce delay-2s"},
+            {text:"ฐานข้อมูลผู้สูงอายุ3",style:"animated infinite bounce delay-2s"},
+            {text:"ฐานข้อมูลผู้สูงอายุ4",style:"animated infinite bounce delay-2s"},]
+        }
     }
 
     componentDidMount() {
@@ -28,28 +35,32 @@ class Cover extends React.Component {
     render() {
         return (
             <div className="warp">
-
-
                 <div className="warp-bg">
-                    <div className="bg">
 
-                        <img src="/static/bg.jpg" />
-                        <img src="/static/bg2.jpg" />
-                        <img src="/static/bg5.jpg" />
-                        <img src="/static/bg3.jpg" />
+                    <img src="/static/bg.jpg" />
+                    <img src="/static/bg2.jpg" />
+                    <img src="/static/bg5.jpg" />
+                    <img src="/static/bg3.jpg" />
 
-                    </div>
                 </div>
 
                 <div className="warp-text">
-                    <h1>ฐานข้อมูลผู้สูงอายุ</h1>
-                    <button
-                        className="btn active"
-                        onClick={this.handleOauth}
-                    >
-                        <h2>เข้าสู่หน้าหลัก</h2>
-                    </button>
+                    <div className="text">
+                        {
+                            this.state.texts.map((item,index)=>{
+                                return(
+                                    <h1 className="animated infinite bounce delay-5s" >{}</h1>
+                                )
+                            })
+                        }
 
+                        <button
+                            className="btn active"
+                            onClick={this.handleOauth}
+                        >
+                            <h2>เข้าสู่หน้าหลัก</h2>
+                        </button>
+                    </div>
                 </div>
             </div>
         )

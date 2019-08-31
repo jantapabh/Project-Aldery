@@ -34,9 +34,18 @@ h6{
     font-family: 'Prompt', sans-serif;
     margin-bottom: 0;
     padding: 0 5rem;
+    
 }
 
 p{
     font-family: 'Prompt', sans-serif;
 
 }
+
+a{
+    color: black;
+}
+
+a:hover {
+        text-decoration-line: none !important;
+    }

@@ -126,7 +126,7 @@ class Cover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
           error: "404",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20
+            lineNumber: 27
           },
           __self: this
         });
@@ -135,12 +135,28 @@ class Cover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
           error: "500",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24
+            lineNumber: 31
           },
           __self: this
         });
       }
     });
+
+    this.state = {
+      texts: [{
+        text: "ฐานข้อมูลผู้สูงอายุ",
+        style: "animated infinite bounce delay-2s"
+      }, {
+        text: "ฐานข้อมูลผู้สูงอายุ2",
+        style: "animated infinite bounce delay-2s"
+      }, {
+        text: "ฐานข้อมูลผู้สูงอายุ3",
+        style: "animated infinite bounce delay-2s"
+      }, {
+        text: "ฐานข้อมูลผู้สูงอายุ4",
+        style: "animated infinite bounce delay-2s"
+      }]
+    };
   }
 
   componentDidMount() {
@@ -152,79 +168,82 @@ class Cover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "warp",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 37
       },
       __self: this
     }, __jsx("div", {
       className: "warp-bg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "bg",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 38
       },
       __self: this
     }, __jsx("img", {
       src: "/static/bg.jpg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 40
       },
       __self: this
     }), __jsx("img", {
       src: "/static/bg2.jpg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 41
       },
       __self: this
     }), __jsx("img", {
       src: "/static/bg5.jpg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 42
       },
       __self: this
     }), __jsx("img", {
       src: "/static/bg3.jpg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 43
       },
       __self: this
-    }))), __jsx("div", {
+    })), __jsx("div", {
       className: "warp-text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 47
       },
       __self: this
-    }, __jsx("h1", {
+    }, __jsx("div", {
+      className: "text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 48
       },
       __self: this
-    }, "\u0E10\u0E32\u0E19\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38"), __jsx("button", {
+    }, this.state.texts.map((item, index) => {
+      return __jsx("h1", {
+        className: "animated infinite bounce delay-5s",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
+        },
+        __self: this
+      });
+    }), __jsx("button", {
       className: "btn active",
       onClick: this.handleOauth,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 57
       },
       __self: this
     }, __jsx("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 61
       },
       __self: this
-    }, "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01"))));
+    }, "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01")))));
   }
 
 }
@@ -278,6 +297,38 @@ Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODUL
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (Error);
+
+/***/ }),
+
+/***/ "./components/layout/load.js":
+/*!***********************************!*\
+  !*** ./components/layout/load.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\load.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+class Load extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 6
+      },
+      __self: this
+    }, "Loaddddddddddddddddd");
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Load);
 
 /***/ }),
 
@@ -424,6 +475,23 @@ Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODUL
 
 /***/ }),
 
+/***/ "./config.js":
+/*!*******************!*\
+  !*** ./config.js ***!
+  \*******************/
+/*! exports provided: url, urlpost */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlpost", function() { return urlpost; });
+const url = 'https://sheets.googleapis.com/v4/spreadsheets/1mPsLDG_yN00jPw7srBREF-sXf5WYSxxoaJV0_6CI31Q/values/';
+const urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=-giSWLQLlg-e-g4sITPpoO6f&grant_type=refresh_token&refresh_token=1%2FPEfDyutOZE5MJvBRkJoL4EOh9ZFKaA3tj7Xmsnv4aC4&client_id=492497205693-gous0v8uc9vkd68strl5m4i31oqusjfl.apps.googleusercontent.com';
+
+
+/***/ }),
+
 /***/ "./config/api.js":
 /*!***********************!*\
   !*** ./config/api.js ***!
@@ -435,12 +503,12 @@ Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODUL
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _pages_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pages/config */ "./pages/config.js");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config */ "./config.js");
 
 
 
 async function getSheetValues(token, col) {
-  const request = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_pages_config__WEBPACK_IMPORTED_MODULE_1__["url"]}${col}`, {
+  const request = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_config__WEBPACK_IMPORTED_MODULE_1__["url"]}${col}`, {
     headers: {
       Authorization: `Bearer ${token}`
     }
@@ -449,7 +517,7 @@ async function getSheetValues(token, col) {
 }
 
 async function postSheetValues() {
-  const request = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_pages_config__WEBPACK_IMPORTED_MODULE_1__["urlpost"]}`, {
+  const request = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_config__WEBPACK_IMPORTED_MODULE_1__["urlpost"]}`, {
     headers: {
       Authorization: "Bearer 4/qQGd-JEj1hK6bmd0w0ESGCh7y-qrQNS4-pEwPb7nt-H3aPUhcUmA0FQx1cNs1GapRQ_wePGf4e6eXWGVTuhgY6E",
       Content_Type: "application/x-www-form-urlencoded",
@@ -1174,23 +1242,6 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/config.js":
-/*!*************************!*\
-  !*** ./pages/config.js ***!
-  \*************************/
-/*! exports provided: url, urlpost */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlpost", function() { return urlpost; });
-const url = 'https://sheets.googleapis.com/v4/spreadsheets/1mPsLDG_yN00jPw7srBREF-sXf5WYSxxoaJV0_6CI31Q/values/';
-const urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=-giSWLQLlg-e-g4sITPpoO6f&grant_type=refresh_token&refresh_token=1%2FPEfDyutOZE5MJvBRkJoL4EOh9ZFKaA3tj7Xmsnv4aC4&client_id=492497205693-gous0v8uc9vkd68strl5m4i31oqusjfl.apps.googleusercontent.com';
-
-
-/***/ }),
-
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -1209,9 +1260,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
 /* harmony import */ var _components_layout_bg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/layout/bg */ "./components/layout/bg.js");
+/* harmony import */ var _components_layout_load__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/layout/load */ "./components/layout/load.js");
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -1222,27 +1275,29 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   constructor(props) {
     super(props);
     this.state = {
+      activeImg: false,
       icon: [{
         text: "หน่วยงานที่เกี่ยวข้อง",
-        pic: "/static/bank.svg"
+        pic: "/static/bank.svg",
+        href: "/"
       }, {
         text: "หน่วยงานดูแลผู้สูงอายุ",
-        pic: "/static/department.svg"
+        pic: "/static/department.svg",
+        href: "/department"
       }, {
         text: "เอกสารที่จำเป็น",
-        pic: "/static/contract.svg"
+        pic: "/static/contract.svg",
+        href: "/document"
       }, {
         text: "กิจกรรม",
-        pic: "/static/active.svg"
+        pic: "/static/active.svg",
+        href: "/active"
       }]
     };
   }
 
-  componentDidMount() {
-    this.userOauth = JSON.parse(localStorage.getItem("myOauth"));
-  }
-
   async componentDidMount() {
+    this.userOauth = JSON.parse(localStorage.getItem("myOauth"));
     localStorage.setItem("myOauth", _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()((await _config_api__WEBPACK_IMPORTED_MODULE_4__["default"].postSheetValues())));
   }
 
@@ -1289,7 +1344,14 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __self: this
     }, this.state.icon.map((item, index) => {
-      return __jsx("div", {
+      return __jsx("a", {
+        href: item.href,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44
+        },
+        __self: this
+      }, __jsx("div", {
         className: "icon",
         key: index,
         __source: {
@@ -1297,33 +1359,40 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
           lineNumber: 45
         },
         __self: this
-      }, __jsx("img", {
-        src: item.pic,
-        alt: "icon",
+      }, __jsx("div", {
+        className: "icon-img",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 46
         },
         __self: this
-      }), __jsx("h6", {
+      }, __jsx("img", {
+        src: item.pic,
+        alt: "icon",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 47
         },
         __self: this
-      }, item.text));
+      })), __jsx("h6", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        },
+        __self: this
+      }, item.text)));
     })))), __jsx("div", {
       className: "warp-content",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 61
       },
       __self: this
     }, __jsx("div", {
       className: "content",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 62
       },
       __self: this
     })));
