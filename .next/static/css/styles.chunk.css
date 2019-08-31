@@ -93,23 +93,23 @@ nav {
     top: 3rem;
     left: 0; }
   .warp-bg img:nth-of-type(1) {
-    animation: fadeInOut 10 linear 6s infinite; }
+    animation: fadeInOut 15s linear 7s infinite; }
   .warp-bg img:nth-of-type(2) {
-    animation: fadeInOut 10s linear 4s infinite; }
+    animation: fadeInOut 15s linear 5s infinite; }
   .warp-bg img:nth-of-type(3) {
-    animation: fadeInOut 10s linear 2s infinite; }
+    animation: fadeInOut 15s linear 3s infinite; }
   .warp-bg img:nth-of-type(4) {
-    animation: fadeInOut 10s linear infinite; }
+    animation: fadeInOut 15s linear infinite; }
 
 @keyframes fadeInOut {
   0% {
-    opacity: 0; }
+    opacity: 1; }
   17% {
     opacity: 1; }
   25% {
     opacity: 0; }
   92% {
-    opacity: 1; }
+    opacity: 0; }
   100% {
     opacity: 1; } }
   .warp-bg .warp-text {

@@ -27,6 +27,90 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
+// import React, { Component } from 'react';
+// import {
+//   Carousel,
+//   CarouselItem,
+//   CarouselControl,
+//   CarouselIndicators,
+//   CarouselCaption
+// } from 'reactstrap';
+// const items = [
+//   {
+//     src: '/static/bg.jpg',
+//     altText: 'Slide 1',
+//     caption: 'Slide 1'
+//   },
+//   {
+//     src: '/static/bg.jpg',
+//     altText: 'Slide 2',
+//     caption: 'Slide 2'
+//   },
+//   {
+//     src: '/static/bg.jpg',
+//     altText: 'Slide 3',
+//     caption: 'Slide 3'
+//   }
+// ];
+// class Example extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = { activeIndex: 0 };
+//     this.next = this.next.bind(this);
+//     this.previous = this.previous.bind(this);
+//     this.goToIndex = this.goToIndex.bind(this);
+//     this.onExiting = this.onExiting.bind(this);
+//     this.onExited = this.onExited.bind(this);
+//   }
+//   onExiting() {
+//     this.animating = true;
+//   }
+//   onExited() {
+//     this.animating = false;
+//   }
+//   next() {
+//     if (this.animating) return;
+//     const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
+//     this.setState({ activeIndex: nextIndex });
+//   }
+//   previous() {
+//     if (this.animating) return;
+//     const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
+//     this.setState({ activeIndex: nextIndex });
+//   }
+//   goToIndex(newIndex) {
+//     if (this.animating) return;
+//     this.setState({ activeIndex: newIndex });
+//   }
+//   render() {
+//     const { activeIndex } = this.state;
+//     const slides = items.map((item) => {
+//       return (
+//         <CarouselItem
+//           onExiting={this.onExiting}
+//           onExited={this.onExited}
+//           key={item.src}
+//         >
+//           <img src={item.src} alt={item.altText} />
+//           <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+//         </CarouselItem>
+//       );
+//     });
+//     return (
+//       <Carousel
+//         activeIndex={activeIndex}
+//         next={this.next}
+//         previous={this.previous}
+//       >
+//         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+//         {slides}
+//         <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+//         <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+//       </Carousel>
+//     );
+//   }
+// }
+// export default Example;
 
 
 
@@ -12663,6 +12747,11 @@ function (_React$Component) {
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(Home, [{
     key: "componentDidMount",
+    value: function componentDidMount() {
+      this.userOauth = JSON.parse(localStorage.getItem("myOauth"));
+    }
+  }, {
+    key: "componentDidMount",
     value: function () {
       var _componentDidMount = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
       /*#__PURE__*/
@@ -12732,7 +12821,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CNoeypatt%5CDocuments%5Celderly-project-nextjs%5Cpages%5Cindex.js ***!
   \************************************************************************************************************************************************/
@@ -12755,5 +12844,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
+},[[1,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

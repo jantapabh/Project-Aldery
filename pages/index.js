@@ -4,6 +4,7 @@ import '../styles/base.scss'
 import Sheetapi from '../config/api'
 import BG from '../components/layout/bg';
 
+
 class Home extends React.Component {
 
   constructor(props) {
@@ -19,6 +20,10 @@ class Home extends React.Component {
       ]
     }
   }
+
+  componentDidMount() {
+    this.userOauth = JSON.parse(localStorage.getItem("myOauth"))
+}
 
   async componentDidMount() {
     localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))

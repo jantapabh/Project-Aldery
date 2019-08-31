@@ -1117,6 +1117,11 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
     }), __jsx("link", {
       href: "https://fonts.googleapis.com/css?family=Kanit|Prompt&display=swap",
       rel: "stylesheet"
+    }), __jsx("link", {
+      rel: "stylesheet",
+      href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
+      integrity: "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T",
+      crossorigin: "anonymous"
     })), __jsx("body", null, __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], null), __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], null)));
   }
 
