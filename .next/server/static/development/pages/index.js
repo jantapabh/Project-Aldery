@@ -323,14 +323,20 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 const links = [{
+  href: '/home',
+  label: 'Home'
+}, {
   href: '/about',
   label: 'About'
 }, {
+  href: '/services',
+  label: 'Services'
+}, {
+  href: '/news',
+  label: 'News'
+}, {
   href: '/contact',
   label: 'Contact'
-}, {
-  href: '/login',
-  label: 'Login'
 }].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`;
   return link;
@@ -342,46 +348,46 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       return __jsx("nav", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 27
         },
         __self: this
       }, __jsx("div", {
         className: "warp-back",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 28
         },
         __self: this
       }, __jsx("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 30
         },
         __self: this
       }, __jsx("div", {
         className: "back",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 31
         },
         __self: this
       }, __jsx("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 32
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 33
         },
         __self: this
       }, __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 34
         },
         __self: this
       }, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A")))))));
@@ -390,20 +396,20 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     return __jsx("nav", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 46
       },
       __self: this
     }, __jsx("ul", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 48
       },
       __self: this
     }, __jsx("div", {
       className: "warp-manu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 49
       },
       __self: this
     }, links.map(({
@@ -414,23 +420,43 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       key: key,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 51
       },
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: href,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 52
       },
       __self: this
     }, __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 53
       },
       __self: this
-    }, label)))))));
+    }, label))))), __jsx("li", {
+      className: "manu-login",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 62
+      },
+      __self: this
+    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      href: "/login",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 63
+      },
+      __self: this
+    }, __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 64
+      },
+      __self: this
+    }, "Login")))));
   }
 
 }

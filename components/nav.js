@@ -3,9 +3,11 @@ import Link from 'next/link'
 import '../styles/base.scss'
 
 const links = [
+  { href: '/home', label: 'Home' },
   { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
+  { href: '/news', label: 'News' },
   { href: '/contact', label: 'Contact' },
-  { href: '/login', label: 'Login' }
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
@@ -17,7 +19,6 @@ class Nav extends React.Component {
   static defaultProps = {
     name: "",
   }
-
 
   render() {
 
@@ -54,10 +55,17 @@ class Nav extends React.Component {
 
               </li>
             ))}
+
+
+
           </div>
-
+          <li className="manu-login">
+            <Link href="/login">
+              <p>Login</p>
+            </Link>
+          </li>
+          
         </ul>
-
       </nav>
     )
   }

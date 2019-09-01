@@ -19,18 +19,45 @@ nav {
         .warp-manu{
             display: flex;
             flex-direction: row;
+            margin-top: 0.5rem;
+
             li{
                 display: flex;
                 padding: 3px 10px;
-               p{
+
+                
+
+                p{
                     color: black;
-                    margin: 0.5rem 0.5rem;
-                } 
-                p:hover{
-                    color: red;
+                    padding: 0.5rem;
                     margin: 0.5rem 0.5rem;
                 }
+
+               
+                p:hover{
+                    color: #bedadc ;
+                    padding: 0.5rem;
+                    margin: 0.5rem 0.5rem;
+                }
+                
             }
+        }
+
+        .manu-login{
+            display: flex;
+            flex-direction: row;
+            border: 0.5px solid gray;
+            background-color: #bedadc;
+            border-radius: 0.5rem ;
+            margin: 0.5rem;
+            p{
+                color: black;
+                padding: 0.5rem;
+                margin: 0.5rem 0.5rem;
+            }
+            p:hover{
+               color: white;
+            } 
         }
     }
 
@@ -57,7 +84,7 @@ nav {
                         margin: 0.5rem 0.5rem;
                     } 
                     p:hover{
-                        color: red;
+                        color: #bedadc;
                         margin: 0.5rem 0.5rem;
                     }
                 }
@@ -65,10 +92,6 @@ nav {
         }
 
     }
-
-    
-
-
   }
 
 
