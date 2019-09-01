@@ -3,7 +3,6 @@ import Nav from '../components/nav'
 import '../styles/base.scss'
 import Sheetapi from '../config/api'
 import BG from '../components/layout/bg';
-import Load from '../components/layout/load'
 
 
 class Home extends React.Component {
@@ -14,12 +13,13 @@ class Home extends React.Component {
     this.state = {
       activeImg: false,
       icon: [
-        { text: "หน่วยงานที่เกี่ยวข้อง", pic: "/static/bank.svg",href:"/" },
-        { text: "หน่วยงานดูแลผู้สูงอายุ", pic: "/static/department.svg",href:"/department"  },
-        { text: "เอกสารที่จำเป็น", pic: "/static/contract.svg",href:"/document"  },
-        { text: "กิจกรรม", pic: "/static/active.svg",href:"/active"  }
+        { text: "หน่วยงานที่เกี่ยวข้อง", pic: "/static/bank.svg",href:"/",name:"icon1",pichover:"/static/bankhover.svg" },
+        { text: "หน่วยงานดูแลผู้สูงอายุ", pic: "/static/department.svg",href:"/department",name:"icon2",pichover:"/static/departmenthover.svg"   },
+        { text: "เอกสารที่จำเป็น", pic: "/static/contract.svg",href:"/document",name:"icon3",pichover:"/static/docmenthover.svg"   },
+        { text: "กิจกรรม", pic: "/static/active.svg",href:"/active",name:"icon4",pichover:"/static/activehover.svg"   }
 
       ]
+     
     }
   }
 
@@ -44,7 +44,8 @@ class Home extends React.Component {
                     <a href={item.href}>
                       <div className="icon" key={index}>
                       <div className="icon-img">
-                        <img  src={item.pic} alt="icon" />
+                        <img key={index}  src={item.pic} alt={item.name} />
+                              <img   className="hover" src={item.pichover} alt={item.name} />
                       </div>
 
                       <h6>{item.text}</h6>

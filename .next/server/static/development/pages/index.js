@@ -300,38 +300,6 @@ Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODUL
 
 /***/ }),
 
-/***/ "./components/layout/load.js":
-/*!***********************************!*\
-  !*** ./components/layout/load.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\load.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-class Load extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  render() {
-    return __jsx("div", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 6
-      },
-      __self: this
-    }, "Loaddddddddddddddddd");
-  }
-
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Load);
-
-/***/ }),
-
 /***/ "./components/nav.js":
 /*!***************************!*\
   !*** ./components/nav.js ***!
@@ -1260,11 +1228,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
 /* harmony import */ var _components_layout_bg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/layout/bg */ "./components/layout/bg.js");
-/* harmony import */ var _components_layout_load__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/layout/load */ "./components/layout/load.js");
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
 
 
 
@@ -1279,19 +1245,27 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       icon: [{
         text: "หน่วยงานที่เกี่ยวข้อง",
         pic: "/static/bank.svg",
-        href: "/"
+        href: "/",
+        name: "icon1",
+        pichover: "/static/bankhover.svg"
       }, {
         text: "หน่วยงานดูแลผู้สูงอายุ",
         pic: "/static/department.svg",
-        href: "/department"
+        href: "/department",
+        name: "icon2",
+        pichover: "/static/departmenthover.svg"
       }, {
         text: "เอกสารที่จำเป็น",
         pic: "/static/contract.svg",
-        href: "/document"
+        href: "/document",
+        name: "icon3",
+        pichover: "/static/docmenthover.svg"
       }, {
         text: "กิจกรรม",
         pic: "/static/active.svg",
-        href: "/active"
+        href: "/active",
+        name: "icon4",
+        pichover: "/static/activehover.svg"
       }]
     };
   }
@@ -1367,17 +1341,27 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         },
         __self: this
       }, __jsx("img", {
+        key: index,
         src: item.pic,
-        alt: "icon",
+        alt: item.name,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 47
         },
         __self: this
+      }), __jsx("img", {
+        className: "hover",
+        src: item.pichover,
+        alt: item.name,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        },
+        __self: this
       })), __jsx("h6", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 51
         },
         __self: this
       }, item.text)));
@@ -1385,14 +1369,14 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "warp-content",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 62
       },
       __self: this
     }, __jsx("div", {
       className: "content",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 63
       },
       __self: this
     })));

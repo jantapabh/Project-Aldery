@@ -158,14 +158,19 @@ nav {
         flex-direction: column;
         align-items: center;
         margin: 0 1rem; }
-      .warp-menu .menu .warp-icon .icon-img img {
-        width: 3rem;
-        height: 3rem;
-        margin: 1rem; }
-      .warp-menu .menu .warp-icon .icon-img:hover {
-        background-color: #bedadc;
-        border-radius: 50%;
-        box-shadow: 6px 6px 18px -4px #CCC; }
+        .warp-menu .menu .warp-icon .icon .icon-img img {
+          width: 3rem;
+          height: 3rem;
+          margin: 1rem; }
+        .warp-menu .menu .warp-icon .icon .icon-img img.hover {
+          display: none; }
+        .warp-menu .menu .warp-icon .icon .icon-img:hover {
+          background-color: #bedadc;
+          border-radius: 50%; }
+          .warp-menu .menu .warp-icon .icon .icon-img:hover img.hover {
+            display: inherit !important; }
+          .warp-menu .menu .warp-icon .icon .icon-img:hover img {
+            display: none !important; }
 
 .warp-content {
   display: flex;
