@@ -189,30 +189,21 @@ nav {
     width: 50%;
     border-radius: 2rem;
     border: 1px solid black;
-    padding: 20rem;
-    margin-bottom: 1rem; }
-    .warp-content .content img {
-      position: absolute;
-      top: 0;
-      left: 0; }
-    .warp-content .content img:nth-of-type(1) {
-      animation: fadeInOut 10s linear 4s infinite; }
-    .warp-content .content img:nth-of-type(2) {
-      animation: fadeInOut 10s linear 2s infinite; }
-    .warp-content .content img:nth-of-type(3) {
-      animation: fadeInOut 10s linear 0s infinite; }
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .warp-content .content-main {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2rem; }
 
-@keyframes fadeInOut {
-  0% {
-    opacity: 1; }
-  17% {
-    opacity: 1; }
-  25% {
-    opacity: 0; }
-  92% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
+.warp-chart {
+  margin-bottom: 3rem !important; }
 
 .warp {
   width: 100%; }

@@ -3,6 +3,9 @@ import Nav from '../components/nav'
 import '../styles/base.scss'
 import Sheetapi from '../config/api'
 import BG from '../components/layout/bg';
+import Chart from '../components/chart/chart';
+import Barchart from '../components/chart/barchart';
+import Radialchart from '../components/chart/radialchart';
 
 
 class Home extends React.Component {
@@ -13,13 +16,13 @@ class Home extends React.Component {
     this.state = {
       activeImg: false,
       icon: [
-        { text: "หน่วยงานที่เกี่ยวข้อง", pic: "/static/bank.svg",href:"/",name:"icon1",pichover:"/static/bankhover.svg" },
-        { text: "หน่วยงานดูแลผู้สูงอายุ", pic: "/static/department.svg",href:"/department",name:"icon2",pichover:"/static/departmenthover.svg"   },
-        { text: "เอกสารที่จำเป็น", pic: "/static/contract.svg",href:"/document",name:"icon3",pichover:"/static/docmenthover.svg"   },
-        { text: "กิจกรรม", pic: "/static/active.svg",href:"/active",name:"icon4",pichover:"/static/activehover.svg"   }
+        { text: "หน่วยงานที่เกี่ยวข้อง", pic: "/static/bank.svg", href: "/", name: "icon1", pichover: "/static/bankhover.svg" },
+        { text: "หน่วยงานดูแลผู้สูงอายุ", pic: "/static/department.svg", href: "/department", name: "icon2", pichover: "/static/departmenthover.svg" },
+        { text: "เอกสารที่จำเป็น", pic: "/static/contract.svg", href: "/document", name: "icon3", pichover: "/static/docmenthover.svg" },
+        { text: "กิจกรรม", pic: "/static/active.svg", href: "/active", name: "icon4", pichover: "/static/activehover.svg" }
 
       ]
-     
+
     }
   }
 
@@ -43,15 +46,15 @@ class Home extends React.Component {
                   return (
                     <a href={item.href}>
                       <div className="icon" key={index}>
-                      <div className="icon-img">
-                        <img key={index}  src={item.pic} alt={item.name} />
-                              <img   className="hover" src={item.pichover} alt={item.name} />
-                      </div>
+                        <div className="icon-img">
+                          <img key={index} src={item.pic} alt={item.name} />
+                          <img className="hover" src={item.pichover} alt={item.name} />
+                        </div>
 
-                      <h6>{item.text}</h6>
-                    </div>
+                        <h6>{item.text}</h6>
+                      </div>
                     </a>
-                    
+
                   )
                 })
               }
@@ -61,7 +64,12 @@ class Home extends React.Component {
 
         <div className="warp-content" >
           <div className="content">
-          {/* <h5 class="animated infinite bounce delay-2s">Example</h5> */}
+            <Chart />
+            <Barchart />
+          </div>
+
+          <div className="content-main">
+            <Radialchart/>
           </div>
         </div>
 

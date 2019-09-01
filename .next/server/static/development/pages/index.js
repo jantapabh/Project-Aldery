@@ -93,6 +93,396 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/chart/barchart.js":
+/*!**************************************!*\
+  !*** ./components/chart/barchart.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! recharts */ "recharts");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(recharts__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\chart\\barchart.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const data = [{
+  name: 'Page A',
+  uv: 4000,
+  pv: 2400,
+  amt: 2400
+}, {
+  name: 'Page B',
+  uv: 3000,
+  pv: 1398,
+  amt: 2210
+}, {
+  name: 'Page C',
+  uv: 2000,
+  pv: 9800,
+  amt: 2290
+}, {
+  name: 'Page D',
+  uv: 2780,
+  pv: 3908,
+  amt: 2000
+}, {
+  name: 'Page E',
+  uv: 1890,
+  pv: 4800,
+  amt: 2181
+}, {
+  name: 'Page F',
+  uv: 2390,
+  pv: 3800,
+  amt: 2500
+}, {
+  name: 'Page G',
+  uv: 3490,
+  pv: 4300,
+  amt: 2100
+}];
+
+class Barchart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return __jsx("div", {
+      className: "warp-chart",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["BarChart"], {
+      width: 500,
+      height: 300,
+      data: data,
+      margin: {
+        top: 5,
+        right: 30,
+        left: 20,
+        bottom: 5
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["CartesianGrid"], {
+      strokeDasharray: "3 3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["XAxis"], {
+      dataKey: "name",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["YAxis"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Tooltip"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Legend"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Bar"], {
+      dataKey: "pv",
+      fill: "#8884d8",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Bar"], {
+      dataKey: "uv",
+      fill: "#82ca9d",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: this
+    })));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Barchart);
+
+/***/ }),
+
+/***/ "./components/chart/chart.js":
+/*!***********************************!*\
+  !*** ./components/chart/chart.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! recharts */ "recharts");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(recharts__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\chart\\chart.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const data = [{
+  name: 'Page A',
+  uv: 4000,
+  pv: 2400,
+  amt: 2400
+}, {
+  name: 'Page B',
+  uv: 3000,
+  pv: 1398,
+  amt: 2210
+}, {
+  name: 'Page C',
+  uv: 2000,
+  pv: 9800,
+  amt: 2290
+}, {
+  name: 'Page D',
+  uv: 2780,
+  pv: 3908,
+  amt: 2000
+}, {
+  name: 'Page E',
+  uv: 1890,
+  pv: 4800,
+  amt: 2181
+}, {
+  name: 'Page F',
+  uv: 2390,
+  pv: 3800,
+  amt: 2500
+}, {
+  name: 'Page G',
+  uv: 3490,
+  pv: 4300,
+  amt: 2100
+}];
+
+class Chart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return __jsx("div", {
+      className: "warp-chart",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["LineChart"], {
+      width: 500,
+      height: 300,
+      data: data,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["CartesianGrid"], {
+      strokeDasharray: "3 3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["XAxis"], {
+      dataKey: "name",
+      padding: {
+        left: 30,
+        right: 30
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["YAxis"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Tooltip"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Legend"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Line"], {
+      type: "monotone",
+      dataKey: "pv",
+      stroke: "#8884d8",
+      activeDot: {
+        r: 8
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Line"], {
+      type: "monotone",
+      dataKey: "uv",
+      stroke: "#82ca9d",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    })));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Chart);
+
+/***/ }),
+
+/***/ "./components/chart/radialchart.js":
+/*!*****************************************!*\
+  !*** ./components/chart/radialchart.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! recharts */ "recharts");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(recharts__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\chart\\radialchart.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const data = [{
+  name: '18-24',
+  uv: 31.47,
+  pv: 2400,
+  fill: '#8884d8'
+}, {
+  name: '25-29',
+  uv: 26.69,
+  pv: 4567,
+  fill: '#83a6ed'
+}, {
+  name: '30-34',
+  uv: 15.69,
+  pv: 1398,
+  fill: '#8dd1e1'
+}, {
+  name: '35-39',
+  uv: 8.22,
+  pv: 9800,
+  fill: '#82ca9d'
+}, {
+  name: '40-49',
+  uv: 8.63,
+  pv: 3908,
+  fill: '#a4de6c'
+}, {
+  name: '50+',
+  uv: 2.63,
+  pv: 4800,
+  fill: '#d0ed57'
+}, {
+  name: 'unknow',
+  uv: 6.67,
+  pv: 4800,
+  fill: '#ffc658'
+}];
+const style = {
+  top: 0,
+  left: 350,
+  lineHeight: '24px'
+};
+
+class Radialchart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return __jsx("div", {
+      className: "warp-chart",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40
+      },
+      __self: this
+    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["RadialBarChart"], {
+      width: 500,
+      height: 300,
+      cx: 150,
+      cy: 150,
+      innerRadius: 20,
+      outerRadius: 140,
+      barSize: 10,
+      data: data,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["RadialBar"], {
+      minAngle: 15,
+      label: {
+        position: 'insideStart',
+        fill: '#fff'
+      },
+      background: true,
+      clockWise: true,
+      dataKey: "uv",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Legend"], {
+      iconSize: 10,
+      width: 120,
+      height: 140,
+      layout: "vertical",
+      verticalAlign: "middle",
+      wrapperStyle: style,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    })));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Radialchart);
+
+/***/ }),
+
 /***/ "./components/layout/bg.js":
 /*!*********************************!*\
   !*** ./components/layout/bg.js ***!
@@ -1234,9 +1624,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
 /* harmony import */ var _components_layout_bg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/layout/bg */ "./components/layout/bg.js");
+/* harmony import */ var _components_chart_chart__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/chart/chart */ "./components/chart/chart.js");
+/* harmony import */ var _components_chart_barchart__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/chart/barchart */ "./components/chart/barchart.js");
+/* harmony import */ var _components_chart_radialchart__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/chart/radialchart */ "./components/chart/radialchart.js");
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+
 
 
 
@@ -1286,41 +1682,41 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "warp",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 37
       },
       __self: this
     }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
       name: "main",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 38
       },
       __self: this
     }), __jsx(_components_layout_bg__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 39
       },
       __self: this
     }), __jsx("div", {
       className: "warp-menu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 41
       },
       __self: this
     }, __jsx("div", {
       className: "menu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 42
       },
       __self: this
     }, __jsx("div", {
       className: "warp-icon",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 43
       },
       __self: this
     }, this.state.icon.map((item, index) => {
@@ -1328,7 +1724,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         href: item.href,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 47
         },
         __self: this
       }, __jsx("div", {
@@ -1336,14 +1732,14 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         key: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 48
         },
         __self: this
       }, __jsx("div", {
         className: "icon-img",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 49
         },
         __self: this
       }, __jsx("img", {
@@ -1352,7 +1748,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         alt: item.name,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 50
         },
         __self: this
       }), __jsx("img", {
@@ -1361,13 +1757,13 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         alt: item.name,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 51
         },
         __self: this
       })), __jsx("h6", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 54
         },
         __self: this
       }, item.text)));
@@ -1375,17 +1771,42 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "warp-content",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 65
       },
       __self: this
     }, __jsx("div", {
       className: "content",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 66
       },
       __self: this
-    })));
+    }, __jsx(_components_chart_chart__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 67
+      },
+      __self: this
+    }), __jsx(_components_chart_barchart__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 68
+      },
+      __self: this
+    })), __jsx("div", {
+      className: "content-main",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 71
+      },
+      __self: this
+    }, __jsx(_components_chart_radialchart__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
+      },
+      __self: this
+    }))));
   }
 
 }
@@ -1557,6 +1978,17 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "recharts":
+/*!***************************!*\
+  !*** external "recharts" ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("recharts");
 
 /***/ }),
 

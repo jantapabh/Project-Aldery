@@ -1207,22 +1207,38 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
         lineNumber: 34
       },
       __self: this
-    })), __jsx("body", {
+    }), __jsx("link", {
+      rel: "stylesheet",
+      href: "https://unpkg.com/react-vis/dist/style.css",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }), __jsx("script", {
+      type: "text/javascript",
+      src: "https://unpkg.com/react-vis/dist/dist.min.js",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 37
       },
       __self: this
+    })), __jsx("body", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40
+      },
+      __self: this
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 41
       },
       __self: this
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 42
       },
       __self: this
     })));

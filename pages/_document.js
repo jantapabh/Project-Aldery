@@ -30,17 +30,20 @@ class MyDocument extends Document {
                     />
 
 
-                    <link rel="stylesheet" href="css/animate.min.css"/>
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+                    <link rel="stylesheet" href="css/animate.min.css" />
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+
+                    <link rel="stylesheet" href="https://unpkg.com/react-vis/dist/style.css"/>
+                        <script type="text/javascript" src="https://unpkg.com/react-vis/dist/dist.min.js"></script>
                
                 </Head>
-                <body>
-                    <Main />
-                    <NextScript />
-                </body>
+                    <body>
+                        <Main />
+                        <NextScript />
+                    </body>
             </Html>
-        )
-    }
-}
-
+                )
+            }
+        }
+        
 export default MyDocument
