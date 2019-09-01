@@ -106,13 +106,13 @@ nav {
       top: 0.5rem;
       left: 0; }
     .warp .warp-bg img:nth-of-type(1) {
-      animation: fadeInOut 15s linear 7s infinite; }
+      animation: fadeInOut 8s linear 6s infinite; }
     .warp .warp-bg img:nth-of-type(2) {
-      animation: fadeInOut 15s linear 5s infinite; }
+      animation: fadeInOut 8s linear 4s infinite; }
     .warp .warp-bg img:nth-of-type(3) {
-      animation: fadeInOut 15s linear 3s infinite; }
+      animation: fadeInOut 8s linear 2s infinite; }
     .warp .warp-bg img:nth-of-type(4) {
-      animation: fadeInOut 15s linear infinite; }
+      animation: fadeInOut 8s linear 0s infinite; }
 
 @keyframes fadeInOut {
   0% {
@@ -125,22 +125,27 @@ nav {
     opacity: 0; }
   100% {
     opacity: 1; } }
-  .warp .warp-text {
-    width: 100%; }
-    .warp .warp-text .text {
+    .warp .warp-bg .warp-text {
       width: 100%;
-      display: flex; }
-      .warp .warp-text .text .btn {
-        background-color: #cde4f4 !important;
-        border: 1px solid #adb4bc;
-        border-radius: 1rem;
-        margin-top: 1rem;
-        box-shadow: 3px 4px 14px -6px;
-        -webkit-box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75);
-        box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75); }
-      .warp .warp-text .text .btn:hover {
-        box-shadow: 3px 4px 14px -10px; }
+      display: flex;
+      position: absolute;
+      margin: 20rem 0; }
+      .warp .warp-bg .warp-text .text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .warp .warp-bg .warp-text .text .btn {
+          background-color: #cde4f4 !important;
+          border: 1px solid #adb4bc;
+          border-radius: 1rem;
+          margin-top: 1.5rem;
+          box-shadow: 3px 4px 14px -6px;
+          -webkit-box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75);
+          box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75); }
+        .warp .warp-bg .warp-text .text .btn:hover {
+          box-shadow: 3px 4px 14px -10px; }
 
 .warp-menu {
   display: flex;
@@ -229,6 +234,14 @@ h2 {
   font-family: 'Prompt', sans-serif;
   margin-bottom: 0;
   padding: 0.5rem; }
+
+h5 {
+  color: black;
+  font-size: 1.5rem !important;
+  text-align: center;
+  font-family: 'Prompt', sans-serif;
+  margin-bottom: 0;
+  padding: 0 5rem; }
 
 h6 {
   color: black;

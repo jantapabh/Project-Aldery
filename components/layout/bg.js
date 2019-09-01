@@ -38,10 +38,10 @@ class Cover extends React.Component {
                     <img src="/static/bg3.jpg" />
 
 
-
-                </div>
                 <div className="warp-text">
                     <div className="text">
+                        <h1>สังคมผู้สูงอายุ สู่มาตรการดูเเลในระดับชุมชน</h1>
+                        <h5>ความรักของผู้สูงอายุจะมุ่งไปด้านเติมเต็มพลังชีวิตให้เเก่กัน เเละกัน</h5>
                         <button
                             className="btn active"
                             onClick={this.handleOauth}
@@ -50,6 +50,9 @@ class Cover extends React.Component {
                         </button>
                     </div>
                 </div>
+
+                </div>
+                
 
             </div>
         )
