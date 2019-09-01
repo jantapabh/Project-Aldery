@@ -61,6 +61,7 @@ class Home extends React.Component {
 
         <div className="warp-content" >
           <div className="content">
+          {/* <h5 class="animated infinite bounce delay-2s">Example</h5> */}
           </div>
         </div>
 

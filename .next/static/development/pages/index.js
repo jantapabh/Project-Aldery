@@ -53,7 +53,7 @@ function (_React$Component) {
           error: "404",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27
+            lineNumber: 22
           },
           __self: this
         });
@@ -62,28 +62,13 @@ function (_React$Component) {
           error: "500",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 31
+            lineNumber: 26
           },
           __self: this
         });
       }
     });
 
-    _this.state = {
-      texts: [{
-        text: "ฐานข้อมูลผู้สูงอายุ",
-        style: "animated infinite bounce delay-2s"
-      }, {
-        text: "ฐานข้อมูลผู้สูงอายุ2",
-        style: "animated infinite bounce delay-2s"
-      }, {
-        text: "ฐานข้อมูลผู้สูงอายุ3",
-        style: "animated infinite bounce delay-2s"
-      }, {
-        text: "ฐานข้อมูลผู้สูงอายุ4",
-        style: "animated infinite bounce delay-2s"
-      }]
-    };
     return _this;
   }
 
@@ -99,79 +84,70 @@ function (_React$Component) {
         className: "warp",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 32
         },
         __self: this
       }, __jsx("div", {
         className: "warp-bg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 33
         },
         __self: this
       }, __jsx("img", {
         src: "/static/bg.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 35
         },
         __self: this
       }), __jsx("img", {
         src: "/static/bg2.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 36
         },
         __self: this
       }), __jsx("img", {
         src: "/static/bg5.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 37
         },
         __self: this
       }), __jsx("img", {
         src: "/static/bg3.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 38
         },
         __self: this
       })), __jsx("div", {
         className: "warp-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 43
         },
         __self: this
       }, __jsx("div", {
         className: "text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 44
         },
         __self: this
-      }, this.state.texts.map(function (item, index) {
-        return __jsx("h1", {
-          className: "animated infinite bounce delay-5s",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 52
-          },
-          __self: this
-        });
-      }), __jsx("button", {
+      }, __jsx("button", {
         className: "btn active",
         onClick: this.handleOauth,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 45
         },
         __self: this
       }, __jsx("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 49
         },
         __self: this
       }, "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01")))));
@@ -416,24 +392,17 @@ function (_React$Component) {
           },
           __self: this
         }, label)));
-      })), __jsx("li", {
-        className: "manu-login",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 62
-        },
-        __self: this
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+      }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
         href: "/login",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 60
         },
         __self: this
       }, __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 61
         },
         __self: this
       }, "Login")))));

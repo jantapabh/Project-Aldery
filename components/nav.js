@@ -54,17 +54,16 @@ class Nav extends React.Component {
                 </Link>
 
               </li>
+
             ))}
 
-
-
-          </div>
-          <li className="manu-login">
             <Link href="/login">
               <p>Login</p>
             </Link>
-          </li>
-          
+
+          </div>
+
+
         </ul>
       </nav>
     )

@@ -31,6 +31,7 @@ class MyDocument extends Document {
 
 
                     <link rel="stylesheet" href="css/animate.min.css"/>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
                
                 </Head>
                 <body>

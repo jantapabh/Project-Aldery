@@ -5,12 +5,7 @@ class Cover extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            texts : [{text:"ฐานข้อมูลผู้สูงอายุ",style:"animated infinite bounce delay-2s"},
-            {text:"ฐานข้อมูลผู้สูงอายุ2",style:"animated infinite bounce delay-2s"},
-            {text:"ฐานข้อมูลผู้สูงอายุ3",style:"animated infinite bounce delay-2s"},
-            {text:"ฐานข้อมูลผู้สูงอายุ4",style:"animated infinite bounce delay-2s"},]
-        }
+
     }
 
     componentDidMount() {
@@ -42,18 +37,11 @@ class Cover extends React.Component {
                     <img src="/static/bg5.jpg" />
                     <img src="/static/bg3.jpg" />
 
-                </div>
 
+
+                </div>
                 <div className="warp-text">
                     <div className="text">
-                        {
-                            this.state.texts.map((item,index)=>{
-                                return(
-                                    <h1 className="animated infinite bounce delay-5s" >{}</h1>
-                                )
-                            })
-                        }
-
                         <button
                             className="btn active"
                             onClick={this.handleOauth}
@@ -62,6 +50,7 @@ class Cover extends React.Component {
                         </button>
                     </div>
                 </div>
+
             </div>
         )
     }
