@@ -27,7 +27,6 @@ nav {
                 padding: 3px 10px;
 
                 p{
-                    
                     color: black;
                     padding: 0.5rem;
                     margin: 0.5rem 0.5rem;
@@ -44,6 +43,7 @@ nav {
         }
 
         p{
+            cursor: pointer;
             color:#03a9f4;
             padding-top: 1.1rem;
             padding: 0.5rem;
@@ -68,6 +68,7 @@ nav {
                 display: flex;
                 flex-direction: row;
                 li{
+                    cursor: pointer;
                     display: flex;
                     padding: 3px 10px;
                    p{

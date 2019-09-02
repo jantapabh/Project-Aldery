@@ -41,7 +41,7 @@ class Cover extends React.Component {
                 <div className="warp-text">
                     <div className="text">
                         <h1>สังคมผู้สูงอายุ สู่มาตรการดูเเลในระดับชุมชน</h1>
-                        <h5>ความรักของผู้สูงอายุจะมุ่งไปด้านเติมเต็มพลังชีวิตให้เเก่กัน เเละกัน</h5>
+                        <h5>ความรักของผู้สูงอายุจะมุ่งไปด้านเติมเต็มพลังชีวิตให้เเก่กันเเละกัน</h5>
                         <button
                             className="btn active"
                             onClick={this.handleOauth}

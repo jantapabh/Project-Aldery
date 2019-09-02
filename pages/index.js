@@ -21,7 +21,7 @@ class Home extends React.Component {
         { text: "เอกสารที่จำเป็น", pic: "/static/contract.svg", href: "/document", name: "icon3", pichover: "/static/docmenthover.svg" },
         { text: "กิจกรรม", pic: "/static/active.svg", href: "/active", name: "icon4", pichover: "/static/activehover.svg" }
 
-      ]
+      ],
 
     }
   }
@@ -32,11 +32,23 @@ class Home extends React.Component {
 
   }
 
+
   render() {
+
     return (
       <div className="warp">
         <Nav name="main" />
         <BG />
+
+        <div className="warp-content" >
+          <div className="content">
+            <h1 >ยินดีต้อนรับเข้าสู่</h1>
+            <h2 >เว็บฐานข้อมูล ผู้สูงอายุภายในจังหวัดภูเก็ต</h2>
+            <text>จากการคาดการณ์ โดยสำนักงานสถิติจะพบว่า </text>
+            <text>เเนวโน้มของจำนวนผู้สูงอายุที่เพิ่มสูงขึ้นเรื่อยๆ จะส่งผลให้ประเทศเข้าสู่สภาวะ "สังคมผู้สูงอายุ" อย่างสมบูรณ์</text>
+          </div>
+        </div>
+
 
         <div className="warp-menu" >
           <div className="menu">
@@ -62,14 +74,14 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className="warp-content" >
-          <div className="content">
+        <div className="warp-chart" >
+          <div className="chart">
             <Chart />
             <Barchart />
           </div>
 
-          <div className="content-main">
-            <Radialchart/>
+          <div className="chart-main">
+            <Radialchart />
           </div>
         </div>
 

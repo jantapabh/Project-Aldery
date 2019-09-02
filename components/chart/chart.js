@@ -6,25 +6,25 @@ import {
 
 const data = [
     {
-        name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
+        name: '2550', uv: 4000, pv: 2400, amt: 50,
     },
     {
-        name: 'Page B', uv: 3000, pv: 1398, amt: 2210,
+        name: '2551', เพศชาย: 120, เพศหญิง: 1398, amt: 100,
     },
     {
-        name: 'Page C', uv: 2000, pv: 9800, amt: 2290,
+        name: '2552', เพศชาย: 2000, เพศหญิง: 9800, amt: 2290,
     },
     {
-        name: 'Page D', uv: 2780, pv: 3908, amt: 2000,
+        name: '2553', เพศชาย: 2780, เพศหญิง: 3908, amt: 2000,
     },
     {
-        name: 'Page E', uv: 1890, pv: 4800, amt: 2181,
+        name: '2554', เพศชาย: 1890, เพศหญิง: 4800, amt: 2181,
     },
     {
-        name: 'Page F', uv: 2390, pv: 3800, amt: 2500,
+        name: '2555', เพศชาย: 2390, เพศหญิง: 3800, amt: 2500,
     },
     {
-        name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
+        name: '2556', เพศชาย: 3490, เพศหญิง: 4300, amt: 2100,
     },
 ];
 
@@ -39,8 +39,8 @@ class Chart extends React.Component {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-                    <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                    <Line type="monotone" dataKey="เพศชาย" stroke="#8884d8" activeDot={{ r: 8 }} />
+                    <Line type="monotone" dataKey="เพศหญิง" stroke="#82ca9d" />
                 </LineChart>
             </div>
         )

@@ -246,39 +246,39 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const data = [{
-  name: 'Page A',
+  name: '2550',
   uv: 4000,
   pv: 2400,
-  amt: 2400
+  amt: 50
 }, {
-  name: 'Page B',
-  uv: 3000,
-  pv: 1398,
-  amt: 2210
+  name: '2551',
+  เพศชาย: 120,
+  เพศหญิง: 1398,
+  amt: 100
 }, {
-  name: 'Page C',
-  uv: 2000,
-  pv: 9800,
+  name: '2552',
+  เพศชาย: 2000,
+  เพศหญิง: 9800,
   amt: 2290
 }, {
-  name: 'Page D',
-  uv: 2780,
-  pv: 3908,
+  name: '2553',
+  เพศชาย: 2780,
+  เพศหญิง: 3908,
   amt: 2000
 }, {
-  name: 'Page E',
-  uv: 1890,
-  pv: 4800,
+  name: '2554',
+  เพศชาย: 1890,
+  เพศหญิง: 4800,
   amt: 2181
 }, {
-  name: 'Page F',
-  uv: 2390,
-  pv: 3800,
+  name: '2555',
+  เพศชาย: 2390,
+  เพศหญิง: 3800,
   amt: 2500
 }, {
-  name: 'Page G',
-  uv: 3490,
-  pv: 4300,
+  name: '2556',
+  เพศชาย: 3490,
+  เพศหญิง: 4300,
   amt: 2100
 }];
 
@@ -338,7 +338,7 @@ class Chart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Line"], {
       type: "monotone",
-      dataKey: "pv",
+      dataKey: "\u0E40\u0E1E\u0E28\u0E0A\u0E32\u0E22",
       stroke: "#8884d8",
       activeDot: {
         r: 8
@@ -350,7 +350,7 @@ class Chart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Line"], {
       type: "monotone",
-      dataKey: "uv",
+      dataKey: "\u0E40\u0E1E\u0E28\u0E2B\u0E0D\u0E34\u0E07",
       stroke: "#82ca9d",
       __source: {
         fileName: _jsxFileName,
@@ -606,7 +606,7 @@ class Cover extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         lineNumber: 44
       },
       __self: this
-    }, "\u0E04\u0E27\u0E32\u0E21\u0E23\u0E31\u0E01\u0E02\u0E2D\u0E07\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38\u0E08\u0E30\u0E21\u0E38\u0E48\u0E07\u0E44\u0E1B\u0E14\u0E49\u0E32\u0E19\u0E40\u0E15\u0E34\u0E21\u0E40\u0E15\u0E47\u0E21\u0E1E\u0E25\u0E31\u0E07\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E43\u0E2B\u0E49\u0E40\u0E40\u0E01\u0E48\u0E01\u0E31\u0E19 \u0E40\u0E40\u0E25\u0E30\u0E01\u0E31\u0E19"), __jsx("button", {
+    }, "\u0E04\u0E27\u0E32\u0E21\u0E23\u0E31\u0E01\u0E02\u0E2D\u0E07\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38\u0E08\u0E30\u0E21\u0E38\u0E48\u0E07\u0E44\u0E1B\u0E14\u0E49\u0E32\u0E19\u0E40\u0E15\u0E34\u0E21\u0E40\u0E15\u0E47\u0E21\u0E1E\u0E25\u0E31\u0E07\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E43\u0E2B\u0E49\u0E40\u0E40\u0E01\u0E48\u0E01\u0E31\u0E19\u0E40\u0E40\u0E25\u0E30\u0E01\u0E31\u0E19"), __jsx("button", {
       className: "btn active",
       onClick: this.handleOauth,
       __source: {
@@ -1682,41 +1682,79 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "warp",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 39
       },
       __self: this
     }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
       name: "main",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 40
       },
       __self: this
     }), __jsx(_components_layout_bg__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 41
       },
       __self: this
     }), __jsx("div", {
+      className: "warp-content",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "content",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44
+      },
+      __self: this
+    }, __jsx("h1", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }, "\u0E22\u0E34\u0E19\u0E14\u0E35\u0E15\u0E49\u0E2D\u0E19\u0E23\u0E31\u0E1A\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48"), __jsx("h2", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    }, "\u0E40\u0E27\u0E47\u0E1A\u0E10\u0E32\u0E19\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25 \u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38\u0E20\u0E32\u0E22\u0E43\u0E19\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14\u0E20\u0E39\u0E40\u0E01\u0E47\u0E15"), __jsx("text", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
+      },
+      __self: this
+    }, "\u0E08\u0E32\u0E01\u0E01\u0E32\u0E23\u0E04\u0E32\u0E14\u0E01\u0E32\u0E23\u0E13\u0E4C \u0E42\u0E14\u0E22\u0E2A\u0E33\u0E19\u0E31\u0E01\u0E07\u0E32\u0E19\u0E2A\u0E16\u0E34\u0E15\u0E34\u0E08\u0E30\u0E1E\u0E1A\u0E27\u0E48\u0E32 "), __jsx("text", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
+    }, "\u0E40\u0E40\u0E19\u0E27\u0E42\u0E19\u0E49\u0E21\u0E02\u0E2D\u0E07\u0E08\u0E33\u0E19\u0E27\u0E19\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38\u0E17\u0E35\u0E48\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E2A\u0E39\u0E07\u0E02\u0E36\u0E49\u0E19\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E22\u0E46 \u0E08\u0E30\u0E2A\u0E48\u0E07\u0E1C\u0E25\u0E43\u0E2B\u0E49\u0E1B\u0E23\u0E30\u0E40\u0E17\u0E28\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2A\u0E20\u0E32\u0E27\u0E30 \"\u0E2A\u0E31\u0E07\u0E04\u0E21\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38\" \u0E2D\u0E22\u0E48\u0E32\u0E07\u0E2A\u0E21\u0E1A\u0E39\u0E23\u0E13\u0E4C"))), __jsx("div", {
       className: "warp-menu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 53
       },
       __self: this
     }, __jsx("div", {
       className: "menu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 54
       },
       __self: this
     }, __jsx("div", {
       className: "warp-icon",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 55
       },
       __self: this
     }, this.state.icon.map((item, index) => {
@@ -1724,7 +1762,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         href: item.href,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 59
         },
         __self: this
       }, __jsx("div", {
@@ -1732,14 +1770,14 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         key: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 60
         },
         __self: this
       }, __jsx("div", {
         className: "icon-img",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 61
         },
         __self: this
       }, __jsx("img", {
@@ -1748,7 +1786,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         alt: item.name,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 62
         },
         __self: this
       }), __jsx("img", {
@@ -1757,53 +1795,53 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         alt: item.name,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 63
         },
         __self: this
       })), __jsx("h6", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 66
         },
         __self: this
       }, item.text)));
     })))), __jsx("div", {
-      className: "warp-content",
+      className: "warp-chart",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65
+        lineNumber: 77
       },
       __self: this
     }, __jsx("div", {
-      className: "content",
+      className: "chart",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66
+        lineNumber: 78
       },
       __self: this
     }, __jsx(_components_chart_chart__WEBPACK_IMPORTED_MODULE_6__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67
+        lineNumber: 79
       },
       __self: this
     }), __jsx(_components_chart_barchart__WEBPACK_IMPORTED_MODULE_7__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 80
       },
       __self: this
     })), __jsx("div", {
-      className: "content-main",
+      className: "chart-main",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 83
       },
       __self: this
     }, __jsx(_components_chart_radialchart__WEBPACK_IMPORTED_MODULE_8__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72
+        lineNumber: 84
       },
       __self: this
     }))));

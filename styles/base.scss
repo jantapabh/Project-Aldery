@@ -4,7 +4,6 @@
 @import './index.scss';
 @import './chart.scss';
 
-
 .warp{
     width: 100%;
 }
@@ -18,6 +17,10 @@ h1{
     margin-block-end: 0;
     font-family: 'Prompt', sans-serif;
     padding: 0.5rem;
+
+    @media (max-width: 1199.98px) {
+        font-size: 3rem !important;
+    }
 }
 
 h2{
@@ -34,7 +37,7 @@ h5{
     font-size: 1.5rem !important;
     text-align: center;
     font-family: 'Prompt', sans-serif;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
     padding: 0 5rem;
     
 }
@@ -46,12 +49,23 @@ h6{
     font-family: 'Prompt', sans-serif;
     margin-bottom: 0;
     padding: 0 5rem;
+
+    @media (max-width: 1199.98px) {
+           padding: 0;             
+    }
     
 }
 
 p{
     font-family: 'Prompt', sans-serif;
 
+}
+
+text{
+    font-family: 'Prompt', sans-serif;
+    color: gray;
+    margin: 1rem 0 !important;
+    font-size: 1.2rem;
 }
 
 a{

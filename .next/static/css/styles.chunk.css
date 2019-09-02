@@ -29,6 +29,7 @@ nav {
           padding: 0.5rem;
           margin: 0.5rem 0.5rem; }
     nav ul p {
+      cursor: pointer;
       color: #03a9f4;
       padding-top: 1.1rem;
       padding: 0.5rem;
@@ -47,6 +48,7 @@ nav {
         display: flex;
         flex-direction: row; }
         nav .warp-back ul .back li {
+          cursor: pointer;
           display: flex;
           padding: 3px 10px; }
           nav .warp-back ul .back li p {
@@ -147,6 +149,20 @@ nav {
         .warp .warp-bg .warp-text .text .btn:hover {
           box-shadow: 3px 4px 14px -10px; }
 
+.warp-content {
+  display: flex;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-right: 2rem; }
+  .warp-content .content {
+    width: 100%;
+    margin-top: 2rem; }
+    .warp-content .content text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center; }
+
 .warp-menu {
   display: flex;
   margin-left: 2rem;
@@ -156,9 +172,12 @@ nav {
     border-radius: 2rem;
     display: flex;
     justify-content: center;
-    border: 1px solid black;
+    border: 1px solid #03a9f4;
     padding: 0;
     margin: 1.5rem 0; }
+    @media (max-width: 991.98px) {
+      .warp-menu .menu {
+        padding: 1rem !important; } }
     .warp-menu .menu .warp-icon {
       display: flex; }
       .warp-menu .menu .warp-icon .icon {
@@ -167,6 +186,13 @@ nav {
         align-items: center;
         margin: 0 1rem;
         padding: 1rem; }
+        @media (max-width: 991.98px) {
+          .warp-menu .menu .warp-icon .icon {
+            padding: 0 !important;
+            margin: 0 1.5rem !important; } }
+        @media (max-width: 1199.98px) {
+          .warp-menu .menu .warp-icon .icon {
+            margin: 0 2rem; } }
         .warp-menu .menu .warp-icon .icon .icon-img img {
           width: 3rem;
           height: 3rem;
@@ -181,11 +207,11 @@ nav {
           .warp-menu .menu .warp-icon .icon .icon-img:hover img {
             display: none !important; }
 
-.warp-content {
+.warp-chart {
   display: flex;
   margin-left: 2rem;
   margin-right: 2rem; }
-  .warp-content .content {
+  .warp-chart .chart {
     width: 50%;
     border-radius: 2rem;
     border: 1px solid black;
@@ -195,7 +221,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center; }
-  .warp-content .content-main {
+  .warp-chart .chart-main {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -217,6 +243,9 @@ h1 {
   margin-block-end: 0;
   font-family: 'Prompt', sans-serif;
   padding: 0.5rem; }
+  @media (max-width: 1199.98px) {
+    h1 {
+      font-size: 3rem !important; } }
 
 h2 {
   color: black;
@@ -231,7 +260,7 @@ h5 {
   font-size: 1.5rem !important;
   text-align: center;
   font-family: 'Prompt', sans-serif;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
   padding: 0 5rem; }
 
 h6 {
@@ -241,9 +270,18 @@ h6 {
   font-family: 'Prompt', sans-serif;
   margin-bottom: 0;
   padding: 0 5rem; }
+  @media (max-width: 1199.98px) {
+    h6 {
+      padding: 0; } }
 
 p {
   font-family: 'Prompt', sans-serif; }
+
+text {
+  font-family: 'Prompt', sans-serif;
+  color: gray;
+  margin: 1rem 0 !important;
+  font-size: 1.2rem; }
 
 a {
   color: black; }

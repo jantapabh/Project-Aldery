@@ -1,3 +1,23 @@
+.warp-content{
+    display: flex;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    
+    .content{
+        width: 100%;
+        margin-top: 2rem ;
+
+        text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+    }
+}
+
 .warp-menu{
     
     display: flex;
@@ -9,9 +29,15 @@
             border-radius: 2rem;
             display: flex;
             justify-content: center;
-            border: 1px solid black;
+             border: 1px solid #03a9f4;
+            // background-image: linear-gradient(to right top,#8ed1fc, #b3e5fc,#b3d2e5,#e9f6ff );
             padding: 0;
             margin: 1.5rem 0;
+
+            
+            @media (max-width: 991.98px) { 
+                padding: 1rem !important;
+            }
 
             .warp-icon{
                 display: flex;
@@ -21,6 +47,15 @@
                     align-items: center;
                     margin: 0 1rem;
                     padding: 1rem;
+
+                    @media (max-width: 991.98px) { 
+                        padding: 0 !important;
+                        margin:  0 1.5rem !important;
+                    }
+
+                    @media (max-width: 1199.98px) {
+                        margin:  0 2rem;
+                     }
                
                     .icon-img{
                         img{
@@ -51,13 +86,13 @@
         }
     }
 
-    .warp-content{
+    .warp-chart{
         display: flex;
         margin-left: 2rem;
         margin-right: 2rem;
         
 
-        .content{
+        .chart{
             width: 50%;
             border-radius: 2rem;
             border: 1px solid black;
@@ -70,7 +105,7 @@
             align-items: center;
 
         }
-        .content-main{
+        .chart-main{
             width: 50%;
             display: flex;
             flex-direction: column;
