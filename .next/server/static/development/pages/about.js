@@ -1141,25 +1141,20 @@ class About extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       const visible = prevScrollpos > currentScrollPos;
       this.setState({
         prevScrollpos: currentScrollPos,
-        visible,
-        index: this.state.index + 1
+        visible
       });
     });
 
     this.state = {
       prevScrollpos: global.pageYOffset,
-      visible: true,
-      index: 0
+      visible: true
     };
   }
 
   componentDidMount() {
+    this.index = 1;
     window.addEventListener("scroll", this.handleScroll);
-  } //Remove the event listener when the component is unmount.
-
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
+    console.log("componentDidMount");
   } // Hide or show the menu.
 
 
@@ -1167,62 +1162,67 @@ class About extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 45
       },
       __self: this
     }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_4__["default"], {
       name: "about",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 47
       },
       __self: this
     }), __jsx("div", {
       className: "warp-about",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 48
       },
       __self: this
     }, __jsx(_components_layout_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 49
-      },
-      __self: this
-    })), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 51
       },
       __self: this
-    }), this.state.prevScrollpos > 95 ? __jsx("h1", {
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    }), " ", __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    })), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }), this.state.prevScrollpos > 22 && this.index == 1 ? __jsx("h1", {
       className: "animated fadeInDown delay-1s",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 58
       },
       __self: this
-    }, "hello") : __jsx("h1", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 57
-      },
-      __self: this
-    }, "hello"), __jsx("div", {
-      className: "warp-about",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 59
-      },
-      __self: this
-    }, __jsx(_components_layout_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 62
-      },
-      __self: this
-    })));
+    }, "hello") : null);
   }
 
 }

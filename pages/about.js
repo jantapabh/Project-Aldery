@@ -10,18 +10,19 @@ class About extends React.Component {
         this.state = {
             prevScrollpos: global.pageYOffset,
             visible: true,
-            index: 0
         };
     }
 
     componentDidMount() {
+        this.index =1;
         window.addEventListener("scroll", this.handleScroll);
+        console.log("componentDidMount");
+        
+        
     }
 
-    //Remove the event listener when the component is unmount.
-    componentWillUnmount() {
-        window.removeEventListener("scroll", this.handleScroll);
-    }
+    
+
 
     // Hide or show the menu.
     handleScroll = () => {
@@ -33,13 +34,14 @@ class About extends React.Component {
         this.setState({
             prevScrollpos: currentScrollPos,
             visible,
-            index: this.state.index+1
+         
         });
+
     };
 
     render() {
+       
         return (
-
             <div>
 
                 <Nav name="about" />
@@ -47,20 +49,17 @@ class About extends React.Component {
 
 
                     <Carousel />
+                    <br/><br/> <br/><br/>
                 </div>
                 <br />
 
                 {
-                    this.state.prevScrollpos > 95  ?
+                    this.state.prevScrollpos > 22 && this.index ==1 ?
                         <h1 className="animated fadeInDown delay-1s">hello</h1>
                         :
-                        <h1>hello</h1>
+                        null
                 }
-                <div className="warp-about">
-
-
-                    <Carousel />
-                </div>
+               
 
             </div>
         )
