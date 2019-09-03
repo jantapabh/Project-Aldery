@@ -6,7 +6,7 @@ import BG from '../components/layout/bg';
 import Chart from '../components/chart/chart';
 import Barchart from '../components/chart/barchart';
 import Radialchart from '../components/chart/radialchart';
-
+import CardProfile from '../components/layout/cardCover'
 
 class Home extends React.Component {
 
@@ -83,6 +83,15 @@ class Home extends React.Component {
           <div className="chart-main">
             <Radialchart />
           </div>
+        </div>
+
+        <div className>
+          <CardProfile
+            avatar="/static/cover.png"
+            name="cover"
+            text_head="ติดต่อเจ้าหน้าที่"
+            text="เข้าสู่หน้าหลัก"
+          />
         </div>
 
       </div>

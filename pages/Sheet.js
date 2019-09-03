@@ -19,10 +19,10 @@ class Sheet extends React.Component {
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
         
-        await this.list('!B1:B')
-        await this.list('!F1:F')
-        await this.list('!G1:G')
-        await this.list('!H1:H')
+        await this.list('!B2:B')
+        await this.list('!F2:F')
+        await this.list('!G2:G')
+        await this.list('!H2:H')
 
     }
 
@@ -71,6 +71,8 @@ class Sheet extends React.Component {
                 <h1>Hello</h1>
                 {
                     this.state.provinceList.map((item, index) => {
+                    
+                        
                         return (
                             <div key={index}>
                                 {item}
