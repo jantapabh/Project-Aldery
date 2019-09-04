@@ -153,7 +153,7 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       className: "warp-chart",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 38
       },
       __self: this
     }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["BarChart"], {
@@ -168,39 +168,39 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 39
       },
       __self: this
     }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["CartesianGrid"], {
       strokeDasharray: "3 3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 47
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["XAxis"], {
       dataKey: "name",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 48
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["YAxis"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 49
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Tooltip"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 50
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Legend"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 51
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Bar"], {
@@ -208,7 +208,7 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       fill: "#8884d8",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 52
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_1__["Bar"], {
@@ -216,7 +216,7 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       fill: "#82ca9d",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 53
       },
       __self: this
     })));
@@ -237,29 +237,36 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../config/api */ "./config/api.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! recharts */ "recharts");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(recharts__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/api */ "./config/api.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! recharts */ "recharts");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(recharts__WEBPACK_IMPORTED_MODULE_4__);
+
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\chart\\chart.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
 const data = [{}];
 
-class Chart extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+class Chart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
   constructor(props) {
     super(props);
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "list", async value => {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "list", async value => {
       try {
-        this.setState({
-          data: await _config_api__WEBPACK_IMPORTED_MODULE_2__["default"].getSheetValues(this.access_token, value)
-        });
+        this.list = await _config_api__WEBPACK_IMPORTED_MODULE_3__["default"].getSheetValues(this.access_token, value);
+
+        for (let i = 0; i < this.list.length; i++) {
+          this.setState({
+            data: _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default()({}, this.list[i])
+          });
+        }
       } catch (err) {
         console.log(err);
       }
@@ -267,7 +274,7 @@ class Chart extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 
     this.state = {
       data: [],
-      list: {}
+      ar: []
     };
   }
 
@@ -278,70 +285,70 @@ class Chart extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   }
 
   render() {
-    console.log(this.state.list);
+    console.log(this.state.data);
     return __jsx("div", {
       className: "warp-chart",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 57
       },
       __self: this
-    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_3__["LineChart"], {
+    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["LineChart"], {
       width: 500,
       height: 300,
-      data: data,
+      data: this.state.data,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 58
       },
       __self: this
-    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_3__["CartesianGrid"], {
+    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["CartesianGrid"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 59
       },
       __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_3__["XAxis"], {
-      dataKey: "\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14",
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["XAxis"], {
+      dataKey: "0",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 62
       },
       __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_3__["YAxis"], {
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["YAxis"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 64
       },
       __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_3__["Tooltip"], {
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Tooltip"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 65
       },
       __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_3__["Legend"], {
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Legend"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 66
       },
       __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_3__["Line"], {
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Line"], {
       type: "monotone",
       dataKey: "\u0E0A\u0E32\u0E2260\u0E1B\u0E35\u0E02\u0E36\u0E49\u0E19\u0E44\u0E1B",
       stroke: "#8884d8",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 67
       },
       __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_3__["Line"], {
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Line"], {
       type: "monotone",
       dataKey: "\u0E2B\u0E0D\u0E34\u0E0760\u0E1B\u0E35\u0E02\u0E36\u0E49\u0E19\u0E44\u0E1B",
       stroke: "#82ca9d",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 68
       },
       __self: this
     })));
@@ -780,9 +787,6 @@ const links = [{
   href: '/services',
   label: 'Services'
 }, {
-  href: '/news',
-  label: 'News'
-}, {
   href: '/contact',
   label: 'Contact'
 }].map(link => {
@@ -796,46 +800,46 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       return __jsx("nav", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 26
         },
         __self: this
       }, __jsx("div", {
         className: "warp-back",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 27
         },
         __self: this
       }, __jsx("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 29
         },
         __self: this
       }, __jsx("div", {
         className: "back",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 30
         },
         __self: this
       }, __jsx("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 31
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 32
         },
         __self: this
       }, __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 33
         },
         __self: this
       }, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A")))))));
@@ -844,20 +848,20 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     return __jsx("nav", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 45
       },
       __self: this
     }, __jsx("ul", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 47
       },
       __self: this
     }, __jsx("div", {
       className: "warp-manu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 48
       },
       __self: this
     }, links.map(({
@@ -868,33 +872,33 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       key: key,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 50
       },
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: href,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 51
       },
       __self: this
     }, __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 52
       },
       __self: this
     }, label)))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/login",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 59
       },
       __self: this
     }, __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 60
       },
       __self: this
     }, "Login")))));
@@ -1755,79 +1759,79 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "warp",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 38
       },
       __self: this
     }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
       name: "main",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 39
       },
       __self: this
     }), __jsx(_components_layout_bg__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 40
       },
       __self: this
     }), __jsx("div", {
       className: "warp-content",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 42
       },
       __self: this
     }, __jsx("div", {
       className: "content",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 43
       },
       __self: this
     }, __jsx("h1", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 44
       },
       __self: this
     }, "\u0E22\u0E34\u0E19\u0E14\u0E35\u0E15\u0E49\u0E2D\u0E19\u0E23\u0E31\u0E1A\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48"), __jsx("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 45
       },
       __self: this
     }, "\u0E40\u0E27\u0E47\u0E1A\u0E10\u0E32\u0E19\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25 \u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38\u0E20\u0E32\u0E22\u0E43\u0E19\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14\u0E20\u0E39\u0E40\u0E01\u0E47\u0E15"), __jsx("text", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 46
       },
       __self: this
     }, "\u0E08\u0E32\u0E01\u0E01\u0E32\u0E23\u0E04\u0E32\u0E14\u0E01\u0E32\u0E23\u0E13\u0E4C \u0E42\u0E14\u0E22\u0E2A\u0E33\u0E19\u0E31\u0E01\u0E07\u0E32\u0E19\u0E2A\u0E16\u0E34\u0E15\u0E34\u0E08\u0E30\u0E1E\u0E1A\u0E27\u0E48\u0E32 "), __jsx("text", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 47
       },
       __self: this
     }, "\u0E40\u0E40\u0E19\u0E27\u0E42\u0E19\u0E49\u0E21\u0E02\u0E2D\u0E07\u0E08\u0E33\u0E19\u0E27\u0E19\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38\u0E17\u0E35\u0E48\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E2A\u0E39\u0E07\u0E02\u0E36\u0E49\u0E19\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E22\u0E46 \u0E08\u0E30\u0E2A\u0E48\u0E07\u0E1C\u0E25\u0E43\u0E2B\u0E49\u0E1B\u0E23\u0E30\u0E40\u0E17\u0E28\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2A\u0E20\u0E32\u0E27\u0E30 \"\u0E2A\u0E31\u0E07\u0E04\u0E21\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38\" \u0E2D\u0E22\u0E48\u0E32\u0E07\u0E2A\u0E21\u0E1A\u0E39\u0E23\u0E13\u0E4C"))), __jsx("div", {
       className: "warp-menu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 52
       },
       __self: this
     }, __jsx("div", {
       className: "menu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 53
       },
       __self: this
     }, __jsx("div", {
       className: "warp-icon",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 54
       },
       __self: this
     }, this.state.icon.map((item, index) => {
@@ -1835,7 +1839,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         href: item.href,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 58
         },
         __self: this
       }, __jsx("div", {
@@ -1843,14 +1847,14 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         key: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 59
         },
         __self: this
       }, __jsx("div", {
         className: "icon-img",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 60
         },
         __self: this
       }, __jsx("img", {
@@ -1859,7 +1863,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         alt: item.name,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 61
         },
         __self: this
       }), __jsx("img", {
@@ -1868,13 +1872,13 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         alt: item.name,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 62
         },
         __self: this
       })), __jsx("h6", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 65
         },
         __self: this
       }, item.text)));
@@ -1882,46 +1886,46 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "warp-chart",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77
+        lineNumber: 76
       },
       __self: this
     }, __jsx("div", {
       className: "chart",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
+        lineNumber: 77
       },
       __self: this
     }, __jsx(_components_chart_chart__WEBPACK_IMPORTED_MODULE_6__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
+        lineNumber: 78
       },
       __self: this
     }), __jsx(_components_chart_barchart__WEBPACK_IMPORTED_MODULE_7__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 80
+        lineNumber: 79
       },
       __self: this
     })), __jsx("div", {
       className: "chart-main",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83
+        lineNumber: 82
       },
       __self: this
     }, __jsx(_components_chart_radialchart__WEBPACK_IMPORTED_MODULE_8__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84
+        lineNumber: 83
       },
       __self: this
     }))), __jsx("div", {
       className: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88
+        lineNumber: 87
       },
       __self: this
     }, __jsx(_components_layout_cardCover__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -1931,7 +1935,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       text: "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 89
+        lineNumber: 88
       },
       __self: this
     })));

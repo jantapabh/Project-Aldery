@@ -14,15 +14,12 @@ class About extends React.Component {
     }
 
     componentDidMount() {
-        this.index =1;
+        this.index = 1;
         window.addEventListener("scroll", this.handleScroll);
         console.log("componentDidMount");
-        
-        
+
+
     }
-
-    
-
 
     // Hide or show the menu.
     handleScroll = () => {
@@ -34,32 +31,53 @@ class About extends React.Component {
         this.setState({
             prevScrollpos: currentScrollPos,
             visible,
-         
+
         });
 
     };
 
     render() {
-       
+
         return (
             <div>
 
                 <Nav name="about" />
                 <div className="warp-about">
-
-
                     <Carousel />
-                    <br/><br/> <br/><br/>
                 </div>
-                <br />
+                <div className="content-about">
+                    <div className="content">
 
-                {
-                    this.state.prevScrollpos > 22 && this.index ==1 ?
-                        <h1 className="animated fadeInDown delay-1s">hello</h1>
-                        :
-                        null
-                }
-               
+                        {/* {
+                            this.state.prevScrollpos > 22 && this.index == 1 ?
+                                <React.Fragment>
+                                    <h3 className="animated fadeInDown delay-1s">ประเทศไทยกับสังคมผู้สูงอายุ</h3>
+                                    <p className="animated fadeInDown delay-2s">สังคมผู้สูงอายุ คือ สังคมที่มีประชากรอายุ 60 ปีขึ้นไป
+                                    ในอัตราเท่ากับ หรือมากกว่าร้อยละ
+                                    10 ของประชากรในพื้นที่นั้น
+                                    </p>
+                                </React.Fragment>
+
+                                :
+                                null
+                        } */}
+                        <h3>ประเทศไทยกับสังคมผู้สูงอายุ</h3>
+                        <p>สังคมผู้สูงอายุ คือ สังคมที่มีประชากรอายุ 60 ปีขึ้นไป
+                        ในอัตราเท่ากับ หรือมากกว่าร้อยละ
+                        10 ของประชากรในพื้นที่นั้น
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div className="about-chart">
+                    <div className="chart">
+
+                    </div>
+                </div>
+
 
             </div>
         )

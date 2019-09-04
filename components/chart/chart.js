@@ -11,7 +11,7 @@ class Chart extends React.Component {
 
         this.state = {
             data: [],
-            list: {}
+            ar:[]
         }
     }
 
@@ -28,10 +28,21 @@ class Chart extends React.Component {
 
         try {
 
-            this.setState({
-                data: await Sheetapi.getSheetValues(this.access_token, value),
-            
-            })
+            this.list = await Sheetapi.getSheetValues(this.access_token, value)
+
+        
+
+
+            for(let i= 0 ; i<this.list.length ; i++){
+                this.setState({
+                    data: Object.assign({},this.list[i])  ,
+                })
+
+            }
+
+
+
+
 
         } catch (err) {
             console.log(err);
@@ -40,14 +51,16 @@ class Chart extends React.Component {
     }
 
     render() {
-        console.log(this.state.list);
+console.log(this.state.data);
 
         return (
             <div className="warp-chart">
-                <LineChart width={500} height={300} data={data}>
+                <LineChart width={500} height={300} data={this.state.data}>
                     <CartesianGrid />
 
-                    <XAxis dataKey="จังหวัด" />
+
+                    <XAxis dataKey="0" />
+
                     <YAxis />
                     <Tooltip />
                     <Legend />

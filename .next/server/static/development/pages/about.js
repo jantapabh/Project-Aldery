@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -280,9 +280,6 @@ const links = [{
   href: '/services',
   label: 'Services'
 }, {
-  href: '/news',
-  label: 'News'
-}, {
   href: '/contact',
   label: 'Contact'
 }].map(link => {
@@ -296,46 +293,46 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       return __jsx("nav", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 26
         },
         __self: this
       }, __jsx("div", {
         className: "warp-back",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 27
         },
         __self: this
       }, __jsx("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 29
         },
         __self: this
       }, __jsx("div", {
         className: "back",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 30
         },
         __self: this
       }, __jsx("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 31
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 32
         },
         __self: this
       }, __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 33
         },
         __self: this
       }, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A")))))));
@@ -344,20 +341,20 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     return __jsx("nav", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 45
       },
       __self: this
     }, __jsx("ul", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 47
       },
       __self: this
     }, __jsx("div", {
       className: "warp-manu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 48
       },
       __self: this
     }, links.map(({
@@ -368,33 +365,33 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       key: key,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 50
       },
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: href,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 51
       },
       __self: this
     }, __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 52
       },
       __self: this
     }, label)))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/login",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 59
       },
       __self: this
     }, __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 60
       },
       __self: this
     }, "Login")))));
@@ -1162,67 +1159,70 @@ class About extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 42
       },
       __self: this
     }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_4__["default"], {
       name: "about",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 44
       },
       __self: this
     }), __jsx("div", {
       className: "warp-about",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 45
       },
       __self: this
     }, __jsx(_components_layout_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 46
       },
       __self: this
-    }), __jsx("br", {
+    })), __jsx("div", {
+      className: "content-about",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 48
       },
       __self: this
-    }), __jsx("br", {
+    }, __jsx("div", {
+      className: "content",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 49
       },
       __self: this
-    }), " ", __jsx("br", {
+    }, __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 64
       },
       __self: this
-    }), __jsx("br", {
+    }, "\u0E1B\u0E23\u0E30\u0E40\u0E17\u0E28\u0E44\u0E17\u0E22\u0E01\u0E31\u0E1A\u0E2A\u0E31\u0E07\u0E04\u0E21\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38"), __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 65
       },
       __self: this
-    })), __jsx("br", {
+    }, "\u0E2A\u0E31\u0E07\u0E04\u0E21\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38 \u0E04\u0E37\u0E2D \u0E2A\u0E31\u0E07\u0E04\u0E21\u0E17\u0E35\u0E48\u0E21\u0E35\u0E1B\u0E23\u0E30\u0E0A\u0E32\u0E01\u0E23\u0E2D\u0E32\u0E22\u0E38 60 \u0E1B\u0E35\u0E02\u0E36\u0E49\u0E19\u0E44\u0E1B \u0E43\u0E19\u0E2D\u0E31\u0E15\u0E23\u0E32\u0E40\u0E17\u0E48\u0E32\u0E01\u0E31\u0E1A \u0E2B\u0E23\u0E37\u0E2D\u0E21\u0E32\u0E01\u0E01\u0E27\u0E48\u0E32\u0E23\u0E49\u0E2D\u0E22\u0E25\u0E30 10 \u0E02\u0E2D\u0E07\u0E1B\u0E23\u0E30\u0E0A\u0E32\u0E01\u0E23\u0E43\u0E19\u0E1E\u0E37\u0E49\u0E19\u0E17\u0E35\u0E48\u0E19\u0E31\u0E49\u0E19"))), __jsx("div", {
+      className: "about-chart",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 75
       },
       __self: this
-    }), this.state.prevScrollpos > 22 && this.index == 1 ? __jsx("h1", {
-      className: "animated fadeInDown delay-1s",
+    }, __jsx("div", {
+      className: "chart",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 76
       },
       __self: this
-    }, "hello") : null);
+    })));
   }
 
 }
@@ -1242,7 +1242,7 @@ class About extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/about.js ***!
   \******************************/

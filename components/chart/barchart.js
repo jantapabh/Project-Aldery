@@ -30,7 +30,10 @@ const data = [
 
 
 class Barchart extends React.Component {
-    render() {
+   
+    
+    render() { 
+    
         return (
             <div className="warp-chart"> 
                 <BarChart

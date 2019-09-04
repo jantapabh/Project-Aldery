@@ -6,7 +6,6 @@ const links = [
   { href: '/home', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
-  { href: '/news', label: 'News' },
   { href: '/contact', label: 'Contact' },
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`

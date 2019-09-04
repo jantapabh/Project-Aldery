@@ -81,7 +81,7 @@ function (_React$Component) {
         className: "warp-chart",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 38
         },
         __self: this
       }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_6__["BarChart"], {
@@ -96,39 +96,39 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 39
         },
         __self: this
       }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_6__["CartesianGrid"], {
         strokeDasharray: "3 3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 47
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_6__["XAxis"], {
         dataKey: "name",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 48
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_6__["YAxis"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 49
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_6__["Tooltip"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 50
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_6__["Legend"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 51
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_6__["Bar"], {
@@ -136,7 +136,7 @@ function (_React$Component) {
         fill: "#8884d8",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 52
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_6__["Bar"], {
@@ -144,7 +144,7 @@ function (_React$Component) {
         fill: "#82ca9d",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 53
         },
         __self: this
       })));
@@ -169,18 +169,21 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../config/api */ "./config/api.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/index.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../config/api */ "./config/api.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/index.js");
+
 
 
 
@@ -191,7 +194,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\chart\\chart.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement;
 
 
 
@@ -200,52 +203,53 @@ var data = [{}];
 var Chart =
 /*#__PURE__*/
 function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__["default"])(Chart, _React$Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_8__["default"])(Chart, _React$Component);
 
   function Chart(props) {
     var _this;
 
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Chart);
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Chart);
 
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Chart).call(this, props));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(Chart).call(this, props));
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "list",
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_9__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this), "list",
     /*#__PURE__*/
     function () {
-      var _ref = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+      var _ref = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
       /*#__PURE__*/
       _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(value) {
+        var i;
         return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.prev = 0;
-                _context.t0 = _this;
-                _context.next = 4;
-                return _config_api__WEBPACK_IMPORTED_MODULE_10__["default"].getSheetValues(_this.access_token, value);
+                _context.next = 3;
+                return _config_api__WEBPACK_IMPORTED_MODULE_11__["default"].getSheetValues(_this.access_token, value);
 
-              case 4:
-                _context.t1 = _context.sent;
-                _context.t2 = {
-                  data: _context.t1
-                };
+              case 3:
+                _this.list = _context.sent;
 
-                _context.t0.setState.call(_context.t0, _context.t2);
+                for (i = 0; i < _this.list.length; i++) {
+                  _this.setState({
+                    data: _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_1___default()({}, _this.list[i])
+                  });
+                }
 
-                _context.next = 12;
+                _context.next = 10;
                 break;
 
-              case 9:
-                _context.prev = 9;
-                _context.t3 = _context["catch"](0);
-                console.log(_context.t3);
+              case 7:
+                _context.prev = 7;
+                _context.t0 = _context["catch"](0);
+                console.log(_context.t0);
 
-              case 12:
+              case 10:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[0, 9]]);
+        }, _callee, null, [[0, 7]]);
       }));
 
       return function (_x) {
@@ -255,15 +259,15 @@ function (_React$Component) {
 
     _this.state = {
       data: [],
-      list: {}
+      ar: []
     };
     return _this;
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(Chart, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(Chart, [{
     key: "componentDidMount",
     value: function () {
-      var _componentDidMount = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+      var _componentDidMount = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
       /*#__PURE__*/
       _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         var userOauth;
@@ -293,70 +297,70 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.state.list);
+      console.log(this.state.data);
       return __jsx("div", {
         className: "warp-chart",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 57
         },
         __self: this
-      }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_11__["LineChart"], {
+      }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_12__["LineChart"], {
         width: 500,
         height: 300,
-        data: data,
+        data: this.state.data,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 58
         },
         __self: this
-      }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_11__["CartesianGrid"], {
+      }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_12__["CartesianGrid"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 59
         },
         __self: this
-      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_11__["XAxis"], {
-        dataKey: "\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14",
+      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_12__["XAxis"], {
+        dataKey: "0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 62
         },
         __self: this
-      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_11__["YAxis"], {
+      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_12__["YAxis"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 64
         },
         __self: this
-      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_11__["Tooltip"], {
+      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_12__["Tooltip"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 65
         },
         __self: this
-      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_11__["Legend"], {
+      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_12__["Legend"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 66
         },
         __self: this
-      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_11__["Line"], {
+      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_12__["Line"], {
         type: "monotone",
         dataKey: "\u0E0A\u0E32\u0E2260\u0E1B\u0E35\u0E02\u0E36\u0E49\u0E19\u0E44\u0E1B",
         stroke: "#8884d8",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 67
         },
         __self: this
-      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_11__["Line"], {
+      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_12__["Line"], {
         type: "monotone",
         dataKey: "\u0E2B\u0E0D\u0E34\u0E0760\u0E1B\u0E35\u0E02\u0E36\u0E49\u0E19\u0E44\u0E1B",
         stroke: "#82ca9d",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 68
         },
         __self: this
       })));
@@ -364,7 +368,7 @@ function (_React$Component) {
   }]);
 
   return Chart;
-}(react__WEBPACK_IMPORTED_MODULE_9___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_10___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Chart);
 
@@ -905,9 +909,6 @@ var links = [{
   href: '/services',
   label: 'Services'
 }, {
-  href: '/news',
-  label: 'News'
-}, {
   href: '/contact',
   label: 'Contact'
 }].map(function (link) {
@@ -933,46 +934,46 @@ function (_React$Component) {
         return __jsx("nav", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27
+            lineNumber: 26
           },
           __self: this
         }, __jsx("div", {
           className: "warp-back",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28
+            lineNumber: 27
           },
           __self: this
         }, __jsx("ul", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 30
+            lineNumber: 29
           },
           __self: this
         }, __jsx("div", {
           className: "back",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 31
+            lineNumber: 30
           },
           __self: this
         }, __jsx("li", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 31
           },
           __self: this
         }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
           href: "/",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33
+            lineNumber: 32
           },
           __self: this
         }, __jsx("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 34
+            lineNumber: 33
           },
           __self: this
         }, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A")))))));
@@ -981,20 +982,20 @@ function (_React$Component) {
       return __jsx("nav", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 45
         },
         __self: this
       }, __jsx("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 47
         },
         __self: this
       }, __jsx("div", {
         className: "warp-manu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 48
         },
         __self: this
       }, links.map(function (_ref) {
@@ -1005,20 +1006,20 @@ function (_React$Component) {
           key: key,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 51
+            lineNumber: 50
           },
           __self: this
         }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
           href: href,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 52
+            lineNumber: 51
           },
           __self: this
         }, __jsx("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 53
+            lineNumber: 52
           },
           __self: this
         }, label)));
@@ -1026,13 +1027,13 @@ function (_React$Component) {
         href: "/login",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 59
         },
         __self: this
       }, __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 60
         },
         __self: this
       }, "Login")))));
@@ -63337,79 +63338,79 @@ function (_React$Component) {
         className: "warp",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 38
         },
         __self: this
       }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_9__["default"], {
         name: "main",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 39
         },
         __self: this
       }), __jsx(_components_layout_bg__WEBPACK_IMPORTED_MODULE_12__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 40
         },
         __self: this
       }), __jsx("div", {
         className: "warp-content",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 42
         },
         __self: this
       }, __jsx("div", {
         className: "content",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 43
         },
         __self: this
       }, __jsx("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 44
         },
         __self: this
       }, "\u0E22\u0E34\u0E19\u0E14\u0E35\u0E15\u0E49\u0E2D\u0E19\u0E23\u0E31\u0E1A\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48"), __jsx("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 45
         },
         __self: this
       }, "\u0E40\u0E27\u0E47\u0E1A\u0E10\u0E32\u0E19\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25 \u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38\u0E20\u0E32\u0E22\u0E43\u0E19\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14\u0E20\u0E39\u0E40\u0E01\u0E47\u0E15"), __jsx("text", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 46
         },
         __self: this
       }, "\u0E08\u0E32\u0E01\u0E01\u0E32\u0E23\u0E04\u0E32\u0E14\u0E01\u0E32\u0E23\u0E13\u0E4C \u0E42\u0E14\u0E22\u0E2A\u0E33\u0E19\u0E31\u0E01\u0E07\u0E32\u0E19\u0E2A\u0E16\u0E34\u0E15\u0E34\u0E08\u0E30\u0E1E\u0E1A\u0E27\u0E48\u0E32 "), __jsx("text", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 47
         },
         __self: this
       }, "\u0E40\u0E40\u0E19\u0E27\u0E42\u0E19\u0E49\u0E21\u0E02\u0E2D\u0E07\u0E08\u0E33\u0E19\u0E27\u0E19\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38\u0E17\u0E35\u0E48\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E2A\u0E39\u0E07\u0E02\u0E36\u0E49\u0E19\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E22\u0E46 \u0E08\u0E30\u0E2A\u0E48\u0E07\u0E1C\u0E25\u0E43\u0E2B\u0E49\u0E1B\u0E23\u0E30\u0E40\u0E17\u0E28\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2A\u0E20\u0E32\u0E27\u0E30 \"\u0E2A\u0E31\u0E07\u0E04\u0E21\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38\" \u0E2D\u0E22\u0E48\u0E32\u0E07\u0E2A\u0E21\u0E1A\u0E39\u0E23\u0E13\u0E4C"))), __jsx("div", {
         className: "warp-menu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 52
         },
         __self: this
       }, __jsx("div", {
         className: "menu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 53
         },
         __self: this
       }, __jsx("div", {
         className: "warp-icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 54
         },
         __self: this
       }, this.state.icon.map(function (item, index) {
@@ -63417,7 +63418,7 @@ function (_React$Component) {
           href: item.href,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 59
+            lineNumber: 58
           },
           __self: this
         }, __jsx("div", {
@@ -63425,14 +63426,14 @@ function (_React$Component) {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 60
+            lineNumber: 59
           },
           __self: this
         }, __jsx("div", {
           className: "icon-img",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 61
+            lineNumber: 60
           },
           __self: this
         }, __jsx("img", {
@@ -63441,7 +63442,7 @@ function (_React$Component) {
           alt: item.name,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 62
+            lineNumber: 61
           },
           __self: this
         }), __jsx("img", {
@@ -63450,13 +63451,13 @@ function (_React$Component) {
           alt: item.name,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 63
+            lineNumber: 62
           },
           __self: this
         })), __jsx("h6", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 66
+            lineNumber: 65
           },
           __self: this
         }, item.text)));
@@ -63464,46 +63465,46 @@ function (_React$Component) {
         className: "warp-chart",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 76
         },
         __self: this
       }, __jsx("div", {
         className: "chart",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 77
         },
         __self: this
       }, __jsx(_components_chart_chart__WEBPACK_IMPORTED_MODULE_13__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 78
         },
         __self: this
       }), __jsx(_components_chart_barchart__WEBPACK_IMPORTED_MODULE_14__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 79
         },
         __self: this
       })), __jsx("div", {
         className: "chart-main",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 82
         },
         __self: this
       }, __jsx(_components_chart_radialchart__WEBPACK_IMPORTED_MODULE_15__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 83
         },
         __self: this
       }))), __jsx("div", {
         className: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 87
         },
         __self: this
       }, __jsx(_components_layout_cardCover__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -63513,7 +63514,7 @@ function (_React$Component) {
         text: "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 88
         },
         __self: this
       })));
