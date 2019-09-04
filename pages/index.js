@@ -27,7 +27,6 @@ class Home extends React.Component {
   }
 
   async componentDidMount() {
-    this.userOauth = JSON.parse(localStorage.getItem("myOauth"))
     localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
 
   }
@@ -73,16 +72,12 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className="warp-chart" >
-          <div className="chart">
-            <Chart />
+       <Chart/>
+          
             <Barchart />
-          </div>
-
-          <div className="chart-main">
-            <Radialchart />
-          </div>
-        </div>
+    
+     
+          
 
         <div className>
           <CardProfile

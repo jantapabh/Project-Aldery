@@ -208,28 +208,13 @@ nav {
             display: none !important; }
 
 .warp-chart {
-  display: flex;
-  margin-left: 2rem;
-  margin-right: 2rem; }
-  .warp-chart .chart {
-    width: 50%;
-    border-radius: 2rem;
-    border: 1px solid black;
-    margin-bottom: 1rem;
-    margin-right: 2rem;
-    padding: 5rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-  .warp-chart .chart-main {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 2rem; }
-
-.warp-chart {
-  margin-bottom: 3rem !important; }
+  display: flex !important;
+  justify-content: center !important;
+  margin: 2rem !important; }
+  .warp-chart .recharts-wrapper {
+    width: 100% !important; }
+    .warp-chart .recharts-wrapper .recharts-surface {
+      width: 100% !important; }
 
 .warp-about .carousel {
   height: 40rem !important; }
@@ -274,6 +259,12 @@ nav {
     flex-direction: column;
     align-items: center; }
 
+.warp-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem; }
+
 .warp {
   width: 100%; }
 
@@ -284,7 +275,7 @@ h1 {
   margin-bottom: 0;
   margin-block-start: 0;
   margin-block-end: 0;
-  font-family: 'Prompt', sans-serif;
+  font-family: "Prompt", sans-serif;
   padding: 0.5rem; }
   @media (max-width: 1199.98px) {
     h1 {
@@ -294,7 +285,7 @@ h2 {
   color: black;
   font-size: 2rem !important;
   text-align: center;
-  font-family: 'Prompt', sans-serif;
+  font-family: "Prompt", sans-serif;
   margin-bottom: 0;
   padding: 0.5rem; }
 
@@ -302,14 +293,14 @@ h3 {
   color: black;
   font-size: 2.5rem;
   text-align: center;
-  font-family: 'Prompt', sans-serif;
+  font-family: "Prompt", sans-serif;
   margin: 0.5rem; }
 
 h5 {
   color: black;
   font-size: 1.5rem !important;
   text-align: center;
-  font-family: 'Prompt', sans-serif;
+  font-family: "Prompt", sans-serif;
   margin-bottom: 0.5rem;
   padding: 0 5rem; }
 
@@ -317,7 +308,7 @@ h6 {
   color: black;
   font-size: 1rem !important;
   text-align: center;
-  font-family: 'Prompt', sans-serif;
+  font-family: "Prompt", sans-serif;
   margin-bottom: 0;
   padding: 0 5rem; }
   @media (max-width: 1199.98px) {
@@ -325,10 +316,10 @@ h6 {
       padding: 0; } }
 
 p {
-  font-family: 'Prompt', sans-serif; }
+  font-family: "Prompt", sans-serif; }
 
 text {
-  font-family: 'Prompt', sans-serif;
+  font-family: "Prompt", sans-serif;
   color: gray;
   margin: 1rem 0 !important;
   font-size: 1.2rem; }
@@ -338,6 +329,12 @@ a {
 
 a:hover {
   text-decoration-line: none !important; }
+
+tspan {
+  font-family: "Prompt", sans-serif !important; }
+
+span {
+  font-family: "Prompt", sans-serif !important; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

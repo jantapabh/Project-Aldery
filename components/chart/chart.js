@@ -28,7 +28,7 @@ class Chart extends React.Component {
             this.list = await Sheetapi.getSheetValues(this.access_token, value)
 
             for (let i = 0; i < this.list.length; i++) {
-                let value = await { name: this.list[i][0], ชาย60ปีขึ้นไป: parseInt(this.list[i][1].replace(",", "")) , หญิง60ปีขึ้นไป: parseInt(this.list[i][2].replace(",", "")) }
+                let value = await { name: this.list[i][0], ชาย60ปีขึ้นไป: parseInt(this.list[i][1].replace(",", "")), หญิง60ปีขึ้นไป: parseInt(this.list[i][2].replace(",", "")) }
                 this.setState(prevState => ({
                     data: [...prevState.data, value]
                 }))
@@ -40,38 +40,28 @@ class Chart extends React.Component {
     }
 
     render() {
-        
-        const { data, isLoad } = this.state
+
+        const { data } = this.state
         return (
             <div>
                 {
                     data ?
 
                         <div className="warp-chart">
-                            {/* <LineChart width={1000} height={500} data={data}>
-                                <CartesianGrid strokeDasharray="3 3"/>
-                                <XAxis dataKey="name" padding={{ left: 5, right: 5 }} />
-                                <YAxis  dataKey="ชาย60ปีขึ้นไป" />
-                                <Tooltip />
-                                <Legend />
-                                <Line type="monotone" dataKey="ชาย60ปีขึ้นไป" stroke="#8884d8" activeDot={{ r: 8 }}/>
-                                <Line type="monotone" dataKey="หญิง60ปีขึ้นไป" stroke="#82ca9d" />
-                            </LineChart> */}
-
-                            <LineChart width={500} height={300} data={data}>
+                            <LineChart width={1250} height={500} data={data}>
                                 <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey="name" padding={{ left: 30, right: 30 }} />
+                                <XAxis dataKey="name" padding={{ left: 10, right: 10 }} />
                                 <YAxis />
                                 <Tooltip />
                                 <Legend />
+                                {/* <ReferenceLine x="นครศรีธรรมราช" stroke="red" label="Max PV PAGE" />
+                                <ReferenceLine y={145939} label="Max" stroke="red" /> */}
                                 <Line type="monotone" dataKey="ชาย60ปีขึ้นไป" stroke="#8884d8" activeDot={{ r: 8 }} />
                                 <Line type="monotone" dataKey="หญิง60ปีขึ้นไป" stroke="#82ca9d" />
                             </LineChart>
                         </div>
                         : null
                 }
-
-                
 
             </div>
         )

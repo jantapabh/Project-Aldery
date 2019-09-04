@@ -1,3 +1,14 @@
 .warp-chart{
-    margin-bottom: 3rem !important;
-}
+    display: flex !important;
+    justify-content: center !important;
+    margin: 2rem !important;
+
+    .recharts-wrapper{
+        width: 100% !important;
+        .recharts-surface{
+                width: 100% !important;
+            }
+    }
+ 
+    }
+   

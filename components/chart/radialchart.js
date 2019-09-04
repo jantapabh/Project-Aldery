@@ -1,50 +1,63 @@
 import React from 'react'
 import { RadialBarChart, RadialBar, Legend } from 'recharts';
 
-const data = [
-  {
-    name: '18-24', uv: 31.47, pv: 2400, fill: '#8884d8',
-  },
-  {
-    name: '25-29', uv: 26.69, pv: 4567, fill: '#83a6ed',
-  },
-  {
-    name: '30-34', uv: 15.69, pv: 1398, fill: '#8dd1e1',
-  },
-  {
-    name: '35-39', uv: 8.22, pv: 9800, fill: '#82ca9d',
-  },
-  {
-    name: '40-49', uv: 8.63, pv: 3908, fill: '#a4de6c',
-  },
-  {
-    name: '50+', uv: 2.63, pv: 4800, fill: '#d0ed57',
-  },
-  {
-    name: 'unknow', uv: 6.67, pv: 4800, fill: '#ffc658',
-  },
-];
-
 const style = {
-    top: 0,
-    left: 350,
-    lineHeight: '24px',
-  };
- 
+  top: 0,
+  left: 350,
+  lineHeight: '24px',
+};
+
 
 
 class Radialchart extends React.Component {
 
-    render() {
-        return (
-            <div className="warp-chart">
-                <RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={20} outerRadius={140} barSize={10} data={data}>
-                    <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise dataKey="uv" />
-                    <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
-                </RadialBarChart>
-            </div>
-        )
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: [],
+      ar: [],
     }
+  }
+
+  async componentDidMount() {
+
+    let userOauth = JSON.parse(localStorage.getItem("myOauth"))
+    this.access_token = userOauth.data.access_token
+    await this.list('!B2:D')
+  }
+
+  list = async (value) => {
+
+    try {
+
+      this.list = await Sheetapi.getSheetValues(this.access_token, value)
+
+      for (let i = 0; i < this.list.length; i++) {
+        let value = await { name: this.list[i][0], ชาย60ปีขึ้นไป: parseInt(this.list[i][1].replace(",", "")), หญิง60ปีขึ้นไป: parseInt(this.list[i][2].replace(",", "")) }
+        this.setState(prevState => ({
+          data: [...prevState.data, value]
+        }))
+      }
+    } catch (err) {
+      console.log(err);
+    }
+
+  }
+
+  render() {
+
+    const { data } = this.state
+
+    return (
+      <div className="warp-chart">
+        <RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={20} outerRadius={140} barSize={10} data={data}>
+          <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise dataKey="ชาย60ปีขึ้นไป" />
+          <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
+        </RadialBarChart>
+      </div>
+    )
+  }
 }
 
 export default Radialchart;
