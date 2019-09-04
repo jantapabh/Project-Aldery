@@ -25103,7 +25103,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!*********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=C%3A%5CUsers%5CNoeypatt%5CDocuments%5Celderly-nextjs%5Cpages%5Cabout.js ***!
   \*********************************************************************************************************************************************/
@@ -25126,5 +25126,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js","styles"]]]);
+},[[3,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=about.js.map

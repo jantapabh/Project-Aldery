@@ -237,8 +237,8 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
@@ -252,7 +252,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
-const data = [{}];
 
 class Chart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
   constructor(props) {
@@ -263,9 +262,14 @@ class Chart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
         this.list = await _config_api__WEBPACK_IMPORTED_MODULE_3__["default"].getSheetValues(this.access_token, value);
 
         for (let i = 0; i < this.list.length; i++) {
-          this.setState({
-            data: _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default()({}, this.list[i])
-          });
+          let value = await {
+            name: this.list[i][0],
+            ชาย60ปีขึ้นไป: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][1].replace(",", "")),
+            หญิง60ปีขึ้นไป: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][2].replace(",", ""))
+          };
+          this.setState(prevState => ({
+            data: [...prevState.data, value]
+          }));
         }
       } catch (err) {
         console.log(err);
@@ -281,38 +285,52 @@ class Chart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
   async componentDidMount() {
     let userOauth = JSON.parse(localStorage.getItem("myOauth"));
     this.access_token = userOauth.data.access_token;
-    await this.list('!B1:D');
+    await this.list('!B2:D');
   }
 
   render() {
-    console.log(this.state.data);
+    const {
+      data,
+      isLoad
+    } = this.state;
     return __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    }, data ? __jsx("div", {
       className: "warp-chart",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 50
       },
       __self: this
     }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["LineChart"], {
       width: 500,
       height: 300,
-      data: this.state.data,
+      data: data,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 61
       },
       __self: this
     }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["CartesianGrid"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 59
-      },
-      __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["XAxis"], {
-      dataKey: "0",
+      strokeDasharray: "3 3",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 62
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["XAxis"], {
+      dataKey: "name",
+      padding: {
+        left: 30,
+        right: 30
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 63
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["YAxis"], {
@@ -337,6 +355,9 @@ class Chart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       type: "monotone",
       dataKey: "\u0E0A\u0E32\u0E2260\u0E1B\u0E35\u0E02\u0E36\u0E49\u0E19\u0E44\u0E1B",
       stroke: "#8884d8",
+      activeDot: {
+        r: 8
+      },
       __source: {
         fileName: _jsxFileName,
         lineNumber: 67
@@ -351,7 +372,7 @@ class Chart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
         lineNumber: 68
       },
       __self: this
-    })));
+    }))) : null);
   }
 
 }
@@ -1027,6 +1048,17 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "core-js/library/fn/object/get-own-property-descriptor");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/parse-int.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/parse-int */ "core-js/library/fn/parse-int");
 
 /***/ }),
 
@@ -2033,6 +2065,17 @@ module.exports = require("core-js/library/fn/object/define-property");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/object/get-own-property-descriptor");
+
+/***/ }),
+
+/***/ "core-js/library/fn/parse-int":
+/*!***********************************************!*\
+  !*** external "core-js/library/fn/parse-int" ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/parse-int");
 
 /***/ }),
 
