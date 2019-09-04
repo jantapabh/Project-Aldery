@@ -164,7 +164,7 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       },
       __self: this
     }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["BarChart"], {
-      width: 1250,
+      width: 1290,
       height: 400,
       data: data,
       __source: {
@@ -307,7 +307,7 @@ class Chart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       },
       __self: this
     }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["LineChart"], {
-      width: 1250,
+      width: 1290,
       height: 500,
       data: data,
       __source: {

@@ -189,7 +189,7 @@ function (_React$Component) {
         },
         __self: this
       }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["BarChart"], {
-        width: 1250,
+        width: 1290,
         height: 400,
         data: data,
         __source: {
@@ -452,7 +452,7 @@ function (_React$Component) {
         },
         __self: this
       }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["LineChart"], {
-        width: 1250,
+        width: 1290,
         height: 500,
         data: data,
         __source: {

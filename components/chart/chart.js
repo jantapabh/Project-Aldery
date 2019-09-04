@@ -48,7 +48,7 @@ class Chart extends React.Component {
                     data ?
 
                         <div className="warp-chart">
-                            <LineChart width={1250} height={500} data={data}>
+                            <LineChart width={1290} height={500} data={data}>
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis dataKey="name" padding={{ left: 10, right: 10 }} />
                                 <YAxis />
