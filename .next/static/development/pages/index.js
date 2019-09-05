@@ -552,7 +552,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/index.js");
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../config/api */ "./config/api.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/index.js");
 
 
 
@@ -566,6 +567,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\chart\\radialchart.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement;
+
 
 
 var style = {
@@ -600,7 +602,7 @@ function (_React$Component) {
               case 0:
                 _context2.prev = 0;
                 _context2.next = 3;
-                return Sheetapi.getSheetValues(_this.access_token, value);
+                return _config_api__WEBPACK_IMPORTED_MODULE_12__["default"].getSheetValues(_this.access_token, value);
 
               case 3:
                 _this.list = _context2.sent;
@@ -616,7 +618,8 @@ function (_React$Component) {
                           return {
                             name: _this.list[i][0],
                             ชาย60ปีขึ้นไป: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][1].replace(",", "")),
-                            หญิง60ปีขึ้นไป: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][2].replace(",", ""))
+                            หญิง60ปีขึ้นไป: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][2].replace(",", "")),
+                            fill: '#ffc658'
                           };
 
                         case 2:
@@ -717,10 +720,10 @@ function (_React$Component) {
         className: "warp-chart",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 54
         },
         __self: this
-      }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_12__["RadialBarChart"], {
+      }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["RadialBarChart"], {
         width: 500,
         height: 300,
         cx: 150,
@@ -731,10 +734,10 @@ function (_React$Component) {
         data: data,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 55
         },
         __self: this
-      }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_12__["RadialBar"], {
+      }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["RadialBar"], {
         minAngle: 15,
         label: {
           position: 'insideStart',
@@ -745,10 +748,10 @@ function (_React$Component) {
         dataKey: "\u0E0A\u0E32\u0E2260\u0E1B\u0E35\u0E02\u0E36\u0E49\u0E19\u0E44\u0E1B",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 56
         },
         __self: this
-      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_12__["Legend"], {
+      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["Legend"], {
         iconSize: 10,
         width: 120,
         height: 140,
@@ -757,7 +760,7 @@ function (_React$Component) {
         wrapperStyle: style,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 57
         },
         __self: this
       })));
@@ -63957,23 +63960,11 @@ function (_React$Component) {
           },
           __self: this
         }, item.text)));
-      })))), __jsx(_components_chart_chart__WEBPACK_IMPORTED_MODULE_13__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 75
-        },
-        __self: this
-      }), __jsx(_components_chart_barchart__WEBPACK_IMPORTED_MODULE_14__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 77
-        },
-        __self: this
-      }), __jsx("div", {
+      })))), __jsx("div", {
         className: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 75
         },
         __self: this
       }, __jsx(_components_layout_cardCover__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -63983,7 +63974,7 @@ function (_React$Component) {
         text: "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 76
         },
         __self: this
       })));

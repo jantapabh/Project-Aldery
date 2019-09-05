@@ -1,4 +1,5 @@
 import React from 'react'
+import Sheetapi from '../../config/api'
 import { RadialBarChart, RadialBar, Legend } from 'recharts';
 
 const style = {
@@ -34,7 +35,7 @@ class Radialchart extends React.Component {
       this.list = await Sheetapi.getSheetValues(this.access_token, value)
 
       for (let i = 0; i < this.list.length; i++) {
-        let value = await { name: this.list[i][0], ชาย60ปีขึ้นไป: parseInt(this.list[i][1].replace(",", "")), หญิง60ปีขึ้นไป: parseInt(this.list[i][2].replace(",", "")) }
+        let value = await { name: this.list[i][0], ชาย60ปีขึ้นไป: parseInt(this.list[i][1].replace(",", "")), หญิง60ปีขึ้นไป: parseInt(this.list[i][2].replace(",", "")),fill: '#ffc658' }
         this.setState(prevState => ({
           data: [...prevState.data, value]
         }))

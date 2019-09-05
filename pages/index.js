@@ -72,13 +72,6 @@ class Home extends React.Component {
           </div>
         </div>
 
-       <Chart/>
-          
-            <Barchart />
-    
-     
-          
-
         <div className>
           <CardProfile
             avatar="/static/cover.png"

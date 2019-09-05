@@ -14,7 +14,7 @@ class Main extends React.Component {
 
                 <Chart />
                 <Barchart />
-                <Radialchart/>
+                {/* <Radialchart/> */}
 
 
             </div>

@@ -395,12 +395,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! recharts */ "recharts");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(recharts__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/api */ "./config/api.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! recharts */ "recharts");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(recharts__WEBPACK_IMPORTED_MODULE_4__);
 
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\chart\\radialchart.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
 
 
 const style = {
@@ -415,13 +417,14 @@ class Radialchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "list", async value => {
       try {
-        this.list = await Sheetapi.getSheetValues(this.access_token, value);
+        this.list = await _config_api__WEBPACK_IMPORTED_MODULE_3__["default"].getSheetValues(this.access_token, value);
 
         for (let i = 0; i < this.list.length; i++) {
           let value = await {
             name: this.list[i][0],
             ชาย60ปีขึ้นไป: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][1].replace(",", "")),
-            หญิง60ปีขึ้นไป: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][2].replace(",", ""))
+            หญิง60ปีขึ้นไป: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][2].replace(",", "")),
+            fill: '#ffc658'
           };
           this.setState(prevState => ({
             data: [...prevState.data, value]
@@ -452,10 +455,10 @@ class Radialchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component
       className: "warp-chart",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 54
       },
       __self: this
-    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_3__["RadialBarChart"], {
+    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["RadialBarChart"], {
       width: 500,
       height: 300,
       cx: 150,
@@ -466,10 +469,10 @@ class Radialchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component
       data: data,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 55
       },
       __self: this
-    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_3__["RadialBar"], {
+    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["RadialBar"], {
       minAngle: 15,
       label: {
         position: 'insideStart',
@@ -480,10 +483,10 @@ class Radialchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component
       dataKey: "\u0E0A\u0E32\u0E2260\u0E1B\u0E35\u0E02\u0E36\u0E49\u0E19\u0E44\u0E1B",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 56
       },
       __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_3__["Legend"], {
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Legend"], {
       iconSize: 10,
       width: 120,
       height: 140,
@@ -492,7 +495,7 @@ class Radialchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component
       wrapperStyle: style,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 57
       },
       __self: this
     })));
@@ -1845,23 +1848,11 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         },
         __self: this
       }, item.text)));
-    })))), __jsx(_components_chart_chart__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 75
-      },
-      __self: this
-    }), __jsx(_components_chart_barchart__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 77
-      },
-      __self: this
-    }), __jsx("div", {
+    })))), __jsx("div", {
       className: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82
+        lineNumber: 75
       },
       __self: this
     }, __jsx(_components_layout_cardCover__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -1871,7 +1862,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       text: "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83
+        lineNumber: 76
       },
       __self: this
     })));
