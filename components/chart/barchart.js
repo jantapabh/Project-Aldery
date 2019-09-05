@@ -17,17 +17,17 @@ class Barchart extends React.Component {
 
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.list('!B2:D')
+        await this.list('!C2:H')
     }
 
     list = async (value) => {
 
         try {
 
-            this.list = await Sheetapi.getSheetValues(this.access_token, value)
+            this.list = await Sheetapi.getSheet2(this.access_token, value)
 
             for (let i = 0; i < this.list.length; i++) {
-                let value = await { name: this.list[i][0], ชาย60ปีขึ้นไป: parseInt(this.list[i][1].replace(",", "")), หญิง60ปีขึ้นไป: parseInt(this.list[i][2].replace(",", "")) }
+                let value = await { name: this.list[i][0], อายุ60ถึง69ปี: parseInt(this.list[i][2].replace(",", "")), อายุ70ถึง79ปี: parseInt(this.list[i][3].replace(",", "")),อายุ80ถึง89ปี:parseInt(this.list[i][4].replace(",", "")),อายุมากกว่าหรือเท่ากับ90ปี:parseInt(this.list[i][5].replace(",", "")) }
                 this.setState(prevState => ({
                     data: [...prevState.data, value]
                 }))
@@ -54,8 +54,10 @@ class Barchart extends React.Component {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey="ชาย60ปีขึ้นไป" fill="#8884d8" />
-                    <Bar dataKey="หญิง60ปีขึ้นไป" fill="#82ca9d" />
+                    <Bar dataKey="อายุ60ถึง69ปี" fill="#0288d1" />
+                    <Bar dataKey="อายุ70ถึง79ปี" fill="#03a9f4" />
+                    <Bar dataKey="อายุ80ถึง89ปี" fill="#4fc3f7" />
+                    <Bar dataKey="อายุมากกว่าหรือเท่ากับ90ปี" fill="#b3e5fc" />
                 </BarChart>
             </div>
         )

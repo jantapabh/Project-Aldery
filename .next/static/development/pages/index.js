@@ -13,231 +13,96 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-
-
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
 
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\bg.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 
 var Cover =
 /*#__PURE__*/
 function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Cover, _React$Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Cover, _React$Component);
 
   function Cover(props) {
-    var _this;
-
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Cover);
 
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Cover).call(this, props));
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "handleOauth", function () {
-      window.location.href = "/main";
-    });
-
-    return _this;
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Cover).call(this, props));
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Cover, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {}
-  }, {
     key: "render",
     value: function render() {
       return __jsx("div", {
         className: "warp",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 12
         },
         __self: this
       }, __jsx("div", {
         className: "warp-bg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 13
         },
         __self: this
       }, __jsx("img", {
         src: "/static/bg.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 15
         },
         __self: this
       }), __jsx("img", {
         src: "/static/bg2.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 16
         },
         __self: this
       }), __jsx("img", {
         src: "/static/bg5.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 17
         },
         __self: this
       }), __jsx("img", {
         src: "/static/bg3.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 18
         },
         __self: this
       }), __jsx("div", {
         className: "warp-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 21
         },
         __self: this
       }, __jsx("div", {
         className: "text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 22
         },
         __self: this
-      }, __jsx("h1", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29
-        },
-        __self: this
-      }, "\u0E2A\u0E31\u0E07\u0E04\u0E21\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38 \u0E2A\u0E39\u0E48\u0E21\u0E32\u0E15\u0E23\u0E01\u0E32\u0E23\u0E14\u0E39\u0E40\u0E40\u0E25\u0E43\u0E19\u0E23\u0E30\u0E14\u0E31\u0E1A\u0E0A\u0E38\u0E21\u0E0A\u0E19"), __jsx("h5", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30
-        },
-        __self: this
-      }, "\u0E04\u0E27\u0E32\u0E21\u0E23\u0E31\u0E01\u0E02\u0E2D\u0E07\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38\u0E08\u0E30\u0E21\u0E38\u0E48\u0E07\u0E44\u0E1B\u0E14\u0E49\u0E32\u0E19\u0E40\u0E15\u0E34\u0E21\u0E40\u0E15\u0E47\u0E21\u0E1E\u0E25\u0E31\u0E07\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E43\u0E2B\u0E49\u0E40\u0E40\u0E01\u0E48\u0E01\u0E31\u0E19\u0E40\u0E40\u0E25\u0E30\u0E01\u0E31\u0E19"), __jsx("button", {
-        className: "btn active",
-        onClick: this.handleOauth,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31
-        },
-        __self: this
-      }, __jsx("h2", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35
-        },
-        __self: this
-      }, "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01"))))));
+      }))));
     }
   }]);
 
   return Cover;
-}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Cover);
-
-/***/ }),
-
-/***/ "./components/layout/cardCover.js":
-/*!****************************************!*\
-  !*** ./components/layout/cardCover.js ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-
-
-
-
-
-
-var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\cardCover.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
-
-
-var CardCover =
-/*#__PURE__*/
-function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(CardCover, _React$Component);
-
-  function CardCover() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, CardCover);
-
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(CardCover).apply(this, arguments));
-  }
-
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(CardCover, [{
-    key: "render",
-    value: function render() {
-      return __jsx("div", {
-        className: "warp-cover",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        },
-        __self: this
-      }, __jsx("div", {
-        className: "warp-text",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 15
-        },
-        __self: this
-      }, __jsx("h1", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16
-        },
-        __self: this
-      }, this.props.text_head)), __jsx("div", {
-        className: "cover",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        },
-        __self: this
-      }, __jsx("img", {
-        src: this.props.avatar,
-        alt: this.props.cover,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24
-        },
-        __self: this
-      })));
-    }
-  }]);
-
-  return CardCover;
-}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
-
-Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(CardCover, "defaultProps", {
-  avatar: "",
-  name: "",
-  text_head: "",
-  text: ""
-});
-
-/* harmony default export */ __webpack_exports__["default"] = (CardCover);
 
 /***/ }),
 
@@ -274,7 +139,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 
 var links = [{
-  href: '/home',
+  href: '/',
   label: 'Home'
 }, {
   href: '/about',
@@ -429,14 +294,16 @@ Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODUL
 /*!*******************!*\
   !*** ./config.js ***!
   \*******************/
-/*! exports provided: url, urlpost */
+/*! exports provided: urlSheet1, urlSheet2, urlpost */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlSheet1", function() { return urlSheet1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlSheet2", function() { return urlSheet2; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlpost", function() { return urlpost; });
-var url = 'https://sheets.googleapis.com/v4/spreadsheets/1mPsLDG_yN00jPw7srBREF-sXf5WYSxxoaJV0_6CI31Q/values/';
+var urlSheet1 = 'https://sheets.googleapis.com/v4/spreadsheets/1mPsLDG_yN00jPw7srBREF-sXf5WYSxxoaJV0_6CI31Q/values/';
+var urlSheet2 = 'https://sheets.googleapis.com/v4/spreadsheets/1lTvlri1R_Jjt6_YnhvwnDxYCnNXJHHXaJxEOqETOwi0/values/';
 var urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=-giSWLQLlg-e-g4sITPpoO6f&grant_type=refresh_token&refresh_token=1%2FPEfDyutOZE5MJvBRkJoL4EOh9ZFKaA3tj7Xmsnv4aC4&client_id=492497205693-gous0v8uc9vkd68strl5m4i31oqusjfl.apps.googleusercontent.com';
 
 
@@ -462,12 +329,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function getSheetValues(_x, _x2) {
-  return _getSheetValues.apply(this, arguments);
+function getSheet1(_x, _x2) {
+  return _getSheet.apply(this, arguments);
 }
 
-function _getSheetValues() {
-  _getSheetValues = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+function _getSheet() {
+  _getSheet = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
   /*#__PURE__*/
   _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(token, col) {
     var request;
@@ -476,7 +343,7 @@ function _getSheetValues() {
         switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["url"]).concat(col), {
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["urlSheet1"]).concat(col), {
               headers: {
                 Authorization: "Bearer ".concat(token)
               }
@@ -493,7 +360,41 @@ function _getSheetValues() {
       }
     }, _callee);
   }));
-  return _getSheetValues.apply(this, arguments);
+  return _getSheet.apply(this, arguments);
+}
+
+function getSheet2(_x3, _x4) {
+  return _getSheet2.apply(this, arguments);
+}
+
+function _getSheet2() {
+  _getSheet2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  /*#__PURE__*/
+  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(token, col) {
+    var request;
+    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["urlSheet2"]).concat(col), {
+              headers: {
+                Authorization: "Bearer ".concat(token)
+              }
+            });
+
+          case 2:
+            request = _context2.sent;
+            return _context2.abrupt("return", request.data.values);
+
+          case 4:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+  return _getSheet2.apply(this, arguments);
 }
 
 function postSheetValues() {
@@ -503,13 +404,13 @@ function postSheetValues() {
 function _postSheetValues() {
   _postSheetValues = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
   /*#__PURE__*/
-  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
     var request;
-    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
       while (1) {
-        switch (_context2.prev = _context2.next) {
+        switch (_context3.prev = _context3.next) {
           case 0:
-            _context2.next = 2;
+            _context3.next = 2;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["urlpost"]), {
               headers: {
                 Authorization: "Bearer 4/qQGd-JEj1hK6bmd0w0ESGCh7y-qrQNS4-pEwPb7nt-H3aPUhcUmA0FQx1cNs1GapRQ_wePGf4e6eXWGVTuhgY6E",
@@ -521,21 +422,22 @@ function _postSheetValues() {
             });
 
           case 2:
-            request = _context2.sent;
-            return _context2.abrupt("return", request);
+            request = _context3.sent;
+            return _context3.abrupt("return", request);
 
           case 4:
           case "end":
-            return _context2.stop();
+            return _context3.stop();
         }
       }
-    }, _callee2);
+    }, _callee3);
   }));
   return _postSheetValues.apply(this, arguments);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  getSheetValues: getSheetValues,
+  getSheet1: getSheet1,
+  getSheet2: getSheet2,
   postSheetValues: postSheetValues
 });
 
@@ -12798,7 +12700,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
 /* harmony import */ var _components_layout_bg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/layout/bg */ "./components/layout/bg.js");
-/* harmony import */ var _components_layout_cardCover__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/layout/cardCover */ "./components/layout/cardCover.js");
 
 
 
@@ -12811,7 +12712,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement;
-
 
 
 
@@ -12868,7 +12768,7 @@ function (_React$Component) {
         name: "icon4",
         pichover: "/static/activehover.svg"
       }],
-      animationFont: "animated bounceInUp delay-1s",
+      // animationFont: "animated bounceInUp delay-1s",
       prevScrollpos: global.pageYOffset,
       visible: true
     };
@@ -12922,86 +12822,44 @@ function (_React$Component) {
     value: function render() {
       console.log(this.state.prevScrollpos);
       return __jsx("div", {
-        className: "warp",
+        className: "warp-index",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 57
         },
         __self: this
       }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_11__["default"], {
         name: "main",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 58
         },
         __self: this
       }), __jsx(_components_layout_bg__WEBPACK_IMPORTED_MODULE_14__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 59
         },
         __self: this
       }), __jsx("div", {
-        className: "warp-content",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 62
-        },
-        __self: this
-      }, this.state.prevScrollpos > 80 ? __jsx("div", {
-        className: "content",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 67
-        },
-        __self: this
-      }, __jsx("h1", {
-        className: this.state.animationFont,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 68
-        },
-        __self: this
-      }, "\u0E22\u0E34\u0E19\u0E14\u0E35\u0E15\u0E49\u0E2D\u0E19\u0E23\u0E31\u0E1A\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48"), __jsx("h2", {
-        className: this.state.animationFont,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 69
-        },
-        __self: this
-      }, "\u0E40\u0E27\u0E47\u0E1A\u0E10\u0E32\u0E19\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25 \u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38\u0E20\u0E32\u0E22\u0E43\u0E19\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14\u0E20\u0E39\u0E40\u0E01\u0E47\u0E15"), __jsx("text", {
-        className: this.state.animationFont,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 70
-        },
-        __self: this
-      }, "\u0E08\u0E32\u0E01\u0E01\u0E32\u0E23\u0E04\u0E32\u0E14\u0E01\u0E32\u0E23\u0E13\u0E4C \u0E42\u0E14\u0E22\u0E2A\u0E33\u0E19\u0E31\u0E01\u0E07\u0E32\u0E19\u0E2A\u0E16\u0E34\u0E15\u0E34\u0E08\u0E30\u0E1E\u0E1A\u0E27\u0E48\u0E32 "), __jsx("text", {
-        className: this.state.animationFont,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 71
-        },
-        __self: this
-      }, "\u0E40\u0E40\u0E19\u0E27\u0E42\u0E19\u0E49\u0E21\u0E02\u0E2D\u0E07\u0E08\u0E33\u0E19\u0E27\u0E19\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38\u0E17\u0E35\u0E48\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E2A\u0E39\u0E07\u0E02\u0E36\u0E49\u0E19\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E22\u0E46 \u0E08\u0E30\u0E2A\u0E48\u0E07\u0E1C\u0E25\u0E43\u0E2B\u0E49\u0E1B\u0E23\u0E30\u0E40\u0E17\u0E28\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E2A\u0E20\u0E32\u0E27\u0E30 \"\u0E2A\u0E31\u0E07\u0E04\u0E21\u0E1C\u0E39\u0E49\u0E2A\u0E39\u0E07\u0E2D\u0E32\u0E22\u0E38\" \u0E2D\u0E22\u0E48\u0E32\u0E07\u0E2A\u0E21\u0E1A\u0E39\u0E23\u0E13\u0E4C")) : null), __jsx("div", {
         className: "warp-menu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 71
         },
         __self: this
       }, __jsx("div", {
         className: "menu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 72
         },
         __self: this
       }, __jsx("div", {
         className: "warp-icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 73
         },
         __self: this
       }, this.state.icon.map(function (item, index) {
@@ -13009,22 +12867,22 @@ function (_React$Component) {
           href: item.href,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 87
+            lineNumber: 78
           },
           __self: this
         }, __jsx("div", {
-          className: "icon",
+          className: "icon animated bounceInUp delay-1s",
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 88
+            lineNumber: 79
           },
           __self: this
         }, __jsx("div", {
           className: "icon-img",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 89
+            lineNumber: 80
           },
           __self: this
         }, __jsx("img", {
@@ -13033,7 +12891,7 @@ function (_React$Component) {
           alt: item.name,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 90
+            lineNumber: 81
           },
           __self: this
         }), __jsx("img", {
@@ -13042,13 +12900,13 @@ function (_React$Component) {
           alt: item.name,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 91
+            lineNumber: 82
           },
           __self: this
         })), __jsx("h6", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 94
+            lineNumber: 85
           },
           __self: this
         }, item.text)));

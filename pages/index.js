@@ -3,7 +3,6 @@ import Nav from '../components/nav'
 import '../styles/base.scss'
 import Sheetapi from '../config/api'
 import BG from '../components/layout/bg';
-import CardProfile from '../components/layout/cardCover'
 
 class Home extends React.Component {
 
@@ -19,7 +18,7 @@ class Home extends React.Component {
         { text: "กิจกรรม", pic: "/static/active.svg", href: "/active", name: "icon4", pichover: "/static/activehover.svg" }
 
       ],
-      animationFont: "animated bounceInUp delay-1s",
+      // animationFont: "animated bounceInUp delay-1s",
       prevScrollpos: global.pageYOffset,
       visible: true,
 
@@ -55,27 +54,18 @@ class Home extends React.Component {
 
 
     return (
-      <div className="warp">
+      <div className="warp-index">
         <Nav name="main" />
         <BG />
 
-        <div className="warp-content" >
-
-          {
-            this.state.prevScrollpos > 80 ?
-
-              <div className="content">
-                <h1 className={this.state.animationFont} >ยินดีต้อนรับเข้าสู่</h1>
-                <h2 className={this.state.animationFont}>เว็บฐานข้อมูล ผู้สูงอายุภายในจังหวัดภูเก็ต</h2>
-                <text className={this.state.animationFont}>จากการคาดการณ์ โดยสำนักงานสถิติจะพบว่า </text>
-                <text className={this.state.animationFont}>เเนวโน้มของจำนวนผู้สูงอายุที่เพิ่มสูงขึ้นเรื่อยๆ จะส่งผลให้ประเทศเข้าสู่สภาวะ "สังคมผู้สูงอายุ" อย่างสมบูรณ์</text>
-              </div>
-              :
-              null
-
-          }
-
-        </div>
+        {/* <div className="warp-content" >
+          <div className="content">
+            <h1  >ยินดีต้อนรับเข้าสู่</h1>
+            <h2 >เว็บฐานข้อมูล ผู้สูงอายุภายในจังหวัดภูเก็ต</h2>
+            <text >จากการคาดการณ์ โดยสำนักงานสถิติจะพบว่า </text>
+            <text >เเนวโน้มของจำนวนผู้สูงอายุที่เพิ่มสูงขึ้นเรื่อยๆ จะส่งผลให้ประเทศเข้าสู่สภาวะ "สังคมผู้สูงอายุ" อย่างสมบูรณ์</text>
+          </div>
+        </div> */}
 
 
         <div className="warp-menu" >
@@ -84,8 +74,9 @@ class Home extends React.Component {
               {
                 this.state.icon.map((item, index) => {
                   return (
+
                     <a href={item.href}>
-                      <div className="icon" key={index}>
+                      <div className="icon animated bounceInUp delay-1s" key={index}>
                         <div className="icon-img">
                           <img key={index} src={item.pic} alt={item.name} />
                           <img className="hover" src={item.pichover} alt={item.name} />
@@ -95,12 +86,15 @@ class Home extends React.Component {
                       </div>
                     </a>
 
+
                   )
                 })
               }
             </div>
           </div>
         </div>
+
+
 
 
       </div>

@@ -18,19 +18,20 @@
     }
 }
 
+
 .warp-menu{
     
     display: flex;
     margin-left: 2rem;
     margin-right: 2rem;
+    
+    justify-content: center;
 
         .menu{
             width: 100%;
-            border-radius: 2rem;
             display: flex;
+            position: absolute;
             justify-content: center;
-             border: 1px solid #03a9f4;
-            // background-image: linear-gradient(to right top,#8ed1fc, #b3e5fc,#b3d2e5,#e9f6ff );
             padding: 0;
             margin: 1.5rem 0;
 
@@ -40,13 +41,20 @@
             }
 
             .warp-icon{
+                width: 100%;
                 display: flex;
+                justify-content: center;
+                 border: 1px solid #03a9f4;
+                 border-radius: 0.5rem;
+                 margin: 0 1rem;
+                background-color: white;
+                padding: 0.5rem 0;
                 .icon{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    margin: 0 1rem;
-                    padding: 1rem;
+                    margin: 0 5rem;
+                   
 
                     @media (max-width: 991.98px) { 
                         padding: 0 !important;
@@ -70,6 +78,10 @@
                     
                     .icon-img:hover{
                         background-color: #bedadc;
+                        box-shadow:  4px 4px 22px -5px rgba(0,0,0,0.75);
+                        -webkit-box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
+                        -moz-box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
+                        box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
                         border-radius: 50%;
                         img.hover{
                             display: inherit !important;

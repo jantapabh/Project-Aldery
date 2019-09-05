@@ -25,7 +25,7 @@ class Chart extends React.Component {
 
         try {
 
-            this.list = await Sheetapi.getSheetValues(this.access_token, value)
+            this.list = await Sheetapi.getSheet1(this.access_token, value)
 
             for (let i = 0; i < this.list.length; i++) {
                 let value = await { name: this.list[i][0], ชาย60ปีขึ้นไป: parseInt(this.list[i][1].replace(",", "")), หญิง60ปีขึ้นไป: parseInt(this.list[i][2].replace(",", "")) }

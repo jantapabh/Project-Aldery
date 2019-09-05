@@ -97,13 +97,14 @@ nav {
   .warp .warp-bg {
     width: 100%;
     display: flex;
-    margin-bottom: 50rem;
+    margin-top: -1rem;
+    margin-bottom: 27rem;
     display: flex;
     flex-direction: row;
     justify-content: center; }
     .warp .warp-bg img {
       width: 100%;
-      height: 50rem;
+      height: 32rem;
       position: absolute;
       top: 0.5rem;
       left: 0; }
@@ -128,26 +129,19 @@ nav {
   100% {
     opacity: 1; } }
     .warp .warp-bg .warp-text {
-      width: 100%;
+      width: 80%;
       display: flex;
+      justify-content: center;
       position: absolute;
-      margin: 20rem 0; }
+      background-color: white;
+      border-radius: 1rem;
+      opacity: 0.7;
+      margin: 10rem 0; }
       .warp .warp-bg .warp-text .text {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center; }
-        .warp .warp-bg .warp-text .text .btn {
-          background-color: #cde4f4 !important;
-          border: 1px solid #adb4bc;
-          border-radius: 1rem;
-          margin-top: 1.5rem;
-          box-shadow: 3px 4px 14px -6px;
-          -webkit-box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75);
-          -moz-box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75);
-          box-shadow: 3px 4px 14px -6px rgba(0, 0, 0, 0.75); }
-        .warp .warp-bg .warp-text .text .btn:hover {
-          box-shadow: 3px 4px 14px -10px; }
 
 .warp-content {
   display: flex;
@@ -166,26 +160,32 @@ nav {
 .warp-menu {
   display: flex;
   margin-left: 2rem;
-  margin-right: 2rem; }
+  margin-right: 2rem;
+  justify-content: center; }
   .warp-menu .menu {
     width: 100%;
-    border-radius: 2rem;
     display: flex;
+    position: absolute;
     justify-content: center;
-    border: 1px solid #03a9f4;
     padding: 0;
     margin: 1.5rem 0; }
     @media (max-width: 991.98px) {
       .warp-menu .menu {
         padding: 1rem !important; } }
     .warp-menu .menu .warp-icon {
-      display: flex; }
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      border: 1px solid #03a9f4;
+      border-radius: 0.5rem;
+      margin: 0 1rem;
+      background-color: white;
+      padding: 0.5rem 0; }
       .warp-menu .menu .warp-icon .icon {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0 1rem;
-        padding: 1rem; }
+        margin: 0 5rem; }
         @media (max-width: 991.98px) {
           .warp-menu .menu .warp-icon .icon {
             padding: 0 !important;
@@ -201,6 +201,10 @@ nav {
           display: none; }
         .warp-menu .menu .warp-icon .icon .icon-img:hover {
           background-color: #bedadc;
+          box-shadow: 4px 4px 22px -5px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 4px 4px 22px -5px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 4px 4px 22px -5px rgba(0, 0, 0, 0.75);
+          box-shadow: 4px 4px 22px -5px rgba(0, 0, 0, 0.75);
           border-radius: 50%; }
           .warp-menu .menu .warp-icon .icon .icon-img:hover img.hover {
             display: inherit !important; }
@@ -216,44 +220,21 @@ nav {
     .warp-chart .recharts-wrapper .recharts-surface {
       width: 100% !important; }
 
-.warp-about .carousel {
-  height: 40rem !important; }
-  .warp-about .carousel .carousel-indicators {
-    margin-bottom: 1rem; }
-  .warp-about .carousel .carousel-inner {
-    height: 40rem; }
-    .warp-about .carousel .carousel-inner .carousel-item {
-      height: 40rem !important; }
-      .warp-about .carousel .carousel-inner .carousel-item img {
-        width: 100%;
-        height: 50rem; }
-    .warp-about .carousel .carousel-inner .carousel-item.active {
-      height: 40rem !important; }
-      .warp-about .carousel .carousel-inner .carousel-item.active img {
-        width: 100%;
-        height: 50rem; }
-      .warp-about .carousel .carousel-inner .carousel-item.active .carousel-caption {
-        margin: 15rem 0;
-        padding: 3rem 0;
-        background-color: gray;
-        opacity: 0.8;
-        border-radius: 1rem; }
-
-.content-about {
+.warp-about .content-about {
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 2rem 1rem; }
-  .content-about .content {
+  .warp-about .content-about .content {
     display: flex;
     flex-direction: column;
     align-items: center; }
 
-.about-chart {
+.warp-about .about-chart {
   width: 100%;
   display: flex;
   flex-direction: column; }
-  .about-chart .chart {
+  .warp-about .about-chart .chart {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -272,7 +253,7 @@ h1 {
   color: black;
   font-size: 4rem !important;
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 1rem !important;
   margin-block-start: 0;
   margin-block-end: 0;
   font-family: "Prompt", sans-serif;
@@ -310,7 +291,7 @@ h6 {
   text-align: center;
   font-family: "Prompt", sans-serif;
   margin-bottom: 0;
-  padding: 0 5rem; }
+  padding: 0 2rem; }
   @media (max-width: 1199.98px) {
     h6 {
       padding: 0; } }

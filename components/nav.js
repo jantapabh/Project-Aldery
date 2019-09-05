@@ -3,7 +3,7 @@ import Link from 'next/link'
 import '../styles/base.scss'
 
 const links = [
-  { href: '/home', label: 'Home' },
+  { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/service', label: 'Service' },
   { href: '/contact', label: 'Contact' },
