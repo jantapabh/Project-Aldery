@@ -3,9 +3,6 @@ import Nav from '../components/nav'
 import '../styles/base.scss'
 import Sheetapi from '../config/api'
 import BG from '../components/layout/bg';
-import Chart from '../components/chart/chart';
-import Barchart from '../components/chart/barchart';
-import Radialchart from '../components/chart/radialchart';
 import CardProfile from '../components/layout/cardCover'
 
 class Home extends React.Component {
@@ -22,16 +19,40 @@ class Home extends React.Component {
         { text: "กิจกรรม", pic: "/static/active.svg", href: "/active", name: "icon4", pichover: "/static/activehover.svg" }
 
       ],
+      animationFont: "animated bounceInUp delay-1s",
+      prevScrollpos: global.pageYOffset,
+      visible: true,
 
     }
   }
 
   async componentDidMount() {
     localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll = () => {
+    const { prevScrollpos } = this.state;
+
+    const currentScrollPos = window.pageYOffset;
+    const visible = prevScrollpos > currentScrollPos;
+
+    this.setState({
+      prevScrollpos: currentScrollPos,
+      visible,
+
+    })
 
   }
 
   render() {
+
+    console.log(this.state.prevScrollpos);
+
 
     return (
       <div className="warp">
@@ -39,12 +60,21 @@ class Home extends React.Component {
         <BG />
 
         <div className="warp-content" >
-          <div className="content">
-            <h1 >ยินดีต้อนรับเข้าสู่</h1>
-            <h2 >เว็บฐานข้อมูล ผู้สูงอายุภายในจังหวัดภูเก็ต</h2>
-            <text>จากการคาดการณ์ โดยสำนักงานสถิติจะพบว่า </text>
-            <text>เเนวโน้มของจำนวนผู้สูงอายุที่เพิ่มสูงขึ้นเรื่อยๆ จะส่งผลให้ประเทศเข้าสู่สภาวะ "สังคมผู้สูงอายุ" อย่างสมบูรณ์</text>
-          </div>
+
+          {
+            this.state.prevScrollpos > 80 ?
+
+              <div className="content">
+                <h1 className={this.state.animationFont} >ยินดีต้อนรับเข้าสู่</h1>
+                <h2 className={this.state.animationFont}>เว็บฐานข้อมูล ผู้สูงอายุภายในจังหวัดภูเก็ต</h2>
+                <text className={this.state.animationFont}>จากการคาดการณ์ โดยสำนักงานสถิติจะพบว่า </text>
+                <text className={this.state.animationFont}>เเนวโน้มของจำนวนผู้สูงอายุที่เพิ่มสูงขึ้นเรื่อยๆ จะส่งผลให้ประเทศเข้าสู่สภาวะ "สังคมผู้สูงอายุ" อย่างสมบูรณ์</text>
+              </div>
+              :
+              null
+
+          }
+
         </div>
 
 
@@ -72,14 +102,6 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className>
-          <CardProfile
-            avatar="/static/cover.png"
-            name="cover"
-            text_head="ติดต่อเจ้าหน้าที่"
-            text="เข้าสู่หน้าหลัก"
-          />
-        </div>
 
       </div>
     )

@@ -14,11 +14,11 @@ class CardCover extends React.Component {
             <div className="warp-cover">
                 <div className="warp-text">
                     <h1>{this.props.text_head}</h1>
-                    <button
+                    {/* <button
                         type="button"
                         className="btn"
                     >
-                        <h6>{this.props.text}</h6></button>
+                        <h6>{this.props.text}</h6></button> */}
                 </div>
                 <div className="cover">
                     <img src={this.props.avatar} alt={this.props.cover} />

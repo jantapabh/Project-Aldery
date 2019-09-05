@@ -16,7 +16,6 @@ class About extends React.Component {
     componentDidMount() {
         this.index = 1;
         window.addEventListener("scroll", this.handleScroll);
-        console.log("componentDidMount");
 
 
     }

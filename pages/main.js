@@ -3,11 +3,13 @@ import Barchart from '../components/chart/barchart';
 import '../styles/base.scss'
 import Chart from '../components/chart/chart';
 import Radialchart from '../components/chart/radialchart';
+import Nav from '../components/nav';
 
 class Main extends React.Component {
     render() {
         return (
             <div>
+                <Nav name="about"/>
                 <div className="warp-main">
                     <h2>จำนวนประชากรผู้สูงอายุของ 14 จังหวัดภาคใต้</h2>
                 </div>
