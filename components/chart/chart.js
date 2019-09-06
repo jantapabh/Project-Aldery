@@ -10,7 +10,6 @@ class Chart extends React.Component {
 
         this.state = {
             data: [],
-            ar: [],
         }
     }
 
@@ -54,8 +53,6 @@ class Chart extends React.Component {
                                 <YAxis />
                                 <Tooltip />
                                 <Legend />
-                                {/* <ReferenceLine x="นครศรีธรรมราช" stroke="red" label="Max PV PAGE" />
-                                <ReferenceLine y={145939} label="Max" stroke="red" /> */}
                                 <Line type="monotone" dataKey="ชาย60ปีขึ้นไป" stroke="#8884d8" activeDot={{ r: 8 }} />
                                 <Line type="monotone" dataKey="หญิง60ปีขึ้นไป" stroke="#82ca9d" />
                             </LineChart>

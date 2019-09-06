@@ -3,6 +3,7 @@ import Nav from '../components/nav'
 import '../styles/base.scss'
 import Sheetapi from '../config/api'
 import BG from '../components/layout/bg';
+import Barchart from '../components/chart/barchart';
 
 class Home extends React.Component {
 
@@ -93,6 +94,9 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
+        <br/><br/><br/><br/>
+
+        <Barchart/>
 
 
 

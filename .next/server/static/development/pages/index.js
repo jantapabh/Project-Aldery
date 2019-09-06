@@ -93,6 +93,160 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/chart/barchart.js":
+/*!**************************************!*\
+  !*** ./components/chart/barchart.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/api */ "./config/api.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! recharts */ "recharts");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(recharts__WEBPACK_IMPORTED_MODULE_4__);
+
+
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\chart\\barchart.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+
+
+
+class Barchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
+  constructor(props) {
+    super(props);
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "list", async value => {
+      try {
+        this.list = await _config_api__WEBPACK_IMPORTED_MODULE_3__["default"].getSheet2(this.access_token, value);
+
+        for (let i = 0; i < this.list.length; i++) {
+          let value = await {
+            name: this.list[i][0],
+            อายุ60ถึง69ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][2].replace(",", "")),
+            อายุ70ถึง79ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][3].replace(",", "")),
+            อายุ80ถึง89ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][4].replace(",", "")),
+            อายุมากกว่าหรือเท่ากับ90ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][5].replace(",", ""))
+          };
+          this.setState(prevState => ({
+            data: [...prevState.data, value]
+          }));
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    });
+
+    this.state = {
+      data: []
+    };
+  }
+
+  async componentDidMount() {
+    let userOauth = JSON.parse(localStorage.getItem("myOauth"));
+    this.access_token = userOauth.data.access_token;
+    await this.list('!C2:H');
+  }
+
+  render() {
+    const {
+      data
+    } = this.state;
+    return __jsx("div", {
+      className: "warp-chart",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["BarChart"], {
+      width: 700,
+      height: 300,
+      data: data,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["CartesianGrid"], {
+      strokeDasharray: "3 3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["XAxis"], {
+      dataKey: "name",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["YAxis"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Tooltip"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Legend"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
+      dataKey: "\u0E2D\u0E32\u0E22\u0E3860\u0E16\u0E36\u0E0769\u0E1B\u0E35",
+      fill: "#0288d1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
+      dataKey: "\u0E2D\u0E32\u0E22\u0E3870\u0E16\u0E36\u0E0779\u0E1B\u0E35",
+      fill: "#03a9f4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
+      dataKey: "\u0E2D\u0E32\u0E22\u0E3880\u0E16\u0E36\u0E0789\u0E1B\u0E35",
+      fill: "#4fc3f7",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 59
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
+      dataKey: "\u0E2D\u0E32\u0E22\u0E38\u0E21\u0E32\u0E01\u0E01\u0E27\u0E48\u0E32\u0E2B\u0E23\u0E37\u0E2D\u0E40\u0E17\u0E48\u0E32\u0E01\u0E31\u0E1A90\u0E1B\u0E35",
+      fill: "#b3e5fc",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
+      },
+      __self: this
+    })));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Barchart);
+
+/***/ }),
+
 /***/ "./components/layout/bg.js":
 /*!*********************************!*\
   !*** ./components/layout/bg.js ***!
@@ -463,6 +617,17 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "core-js/library/fn/object/get-own-property-descriptor");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/parse-int.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/parse-int */ "core-js/library/fn/parse-int");
 
 /***/ }),
 
@@ -1136,10 +1301,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
 /* harmony import */ var _components_layout_bg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/layout/bg */ "./components/layout/bg.js");
+/* harmony import */ var _components_chart_barchart__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/chart/barchart */ "./components/chart/barchart.js");
 
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
 
 
 
@@ -1210,41 +1377,41 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       className: "warp-index",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 58
       },
       __self: this
     }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_3__["default"], {
       name: "main",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 59
       },
       __self: this
     }), __jsx(_components_layout_bg__WEBPACK_IMPORTED_MODULE_6__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 60
       },
       __self: this
     }), __jsx("div", {
       className: "warp-menu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 72
       },
       __self: this
     }, __jsx("div", {
       className: "menu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72
+        lineNumber: 73
       },
       __self: this
     }, __jsx("div", {
       className: "warp-icon",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73
+        lineNumber: 74
       },
       __self: this
     }, this.state.icon.map((item, index) => {
@@ -1252,7 +1419,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
         href: item.href,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 79
         },
         __self: this
       }, __jsx("div", {
@@ -1260,14 +1427,14 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
         key: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 80
         },
         __self: this
       }, __jsx("div", {
         className: "icon-img",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 81
         },
         __self: this
       }, __jsx("img", {
@@ -1276,7 +1443,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
         alt: item.name,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 82
         },
         __self: this
       }), __jsx("img", {
@@ -1285,17 +1452,47 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
         alt: item.name,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 83
         },
         __self: this
       })), __jsx("h6", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 86
         },
         __self: this
       }, item.text)));
-    })))));
+    })))), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 97
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 97
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 97
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 97
+      },
+      __self: this
+    }), __jsx(_components_chart_barchart__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 99
+      },
+      __self: this
+    }));
   }
 
 }
@@ -1393,6 +1590,17 @@ module.exports = require("core-js/library/fn/object/get-own-property-descriptor"
 
 /***/ }),
 
+/***/ "core-js/library/fn/parse-int":
+/*!***********************************************!*\
+  !*** external "core-js/library/fn/parse-int" ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/parse-int");
+
+/***/ }),
+
 /***/ "next-server/dist/lib/router-context":
 /*!******************************************************!*\
   !*** external "next-server/dist/lib/router-context" ***!
@@ -1467,6 +1675,17 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "recharts":
+/*!***************************!*\
+  !*** external "recharts" ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("recharts");
 
 /***/ }),
 

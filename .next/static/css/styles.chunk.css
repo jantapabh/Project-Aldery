@@ -215,10 +215,6 @@ nav {
   display: flex !important;
   justify-content: center !important;
   margin: 2rem !important; }
-  .warp-chart .recharts-wrapper {
-    width: 100% !important; }
-    .warp-chart .recharts-wrapper .recharts-surface {
-      width: 100% !important; }
 
 .warp-about .content-about {
   width: 100%;
