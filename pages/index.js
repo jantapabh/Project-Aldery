@@ -2,8 +2,8 @@ import React from 'react'
 import Nav from '../components/nav'
 import '../styles/base.scss'
 import Sheetapi from '../config/api'
-import BG from '../components/layout/bg';
 import Barchart from '../components/chart/barchart';
+import Card from '../components/layout/card';
 
 class Home extends React.Component {
 
@@ -19,34 +19,13 @@ class Home extends React.Component {
         { text: "กิจกรรม", pic: "/static/active.svg", href: "/active", name: "icon4", pichover: "/static/activehover.svg" }
 
       ],
-      // animationFont: "animated bounceInUp delay-1s",
-      prevScrollpos: global.pageYOffset,
-      visible: true,
+      avatar:[{name:"card1",img:"/static/active.svg"},{name:"card2",img:"/static/active.svg"},{name:"card3",img:"/static/active.svg"}]
 
     }
   }
 
   async componentDidMount() {
     localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
-  handleScroll = () => {
-    const { prevScrollpos } = this.state;
-
-    const currentScrollPos = window.pageYOffset;
-    const visible = prevScrollpos > currentScrollPos;
-
-    this.setState({
-      prevScrollpos: currentScrollPos,
-      visible,
-
-    })
-
   }
 
   render() {
@@ -57,7 +36,7 @@ class Home extends React.Component {
     return (
       <div className="warp-index">
         <Nav name="main" />
-        <BG />
+        
 
         {/* <div className="warp-content" >
           <div className="content">
@@ -69,34 +48,11 @@ class Home extends React.Component {
         </div> */}
 
 
-        <div className="warp-menu" >
-          <div className="menu">
-            <div className="warp-icon">
-              {
-                this.state.icon.map((item, index) => {
-                  return (
+        {/* <Barchart/> */}
 
-                    <a href={item.href}>
-                      <div className="icon animated bounceInUp delay-1s" key={index}>
-                        <div className="icon-img">
-                          <img key={index} src={item.pic} alt={item.name} />
-                          <img className="hover" src={item.pichover} alt={item.name} />
-                        </div>
-
-                        <h6>{item.text}</h6>
-                      </div>
-                    </a>
-
-
-                  )
-                })
-              }
-            </div>
-          </div>
-        </div>
-        <br/><br/><br/><br/>
-
-        <Barchart/>
+        <Card
+          avatar={this.state.avatar}
+        />
 
 
 

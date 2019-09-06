@@ -14,87 +14,8 @@
             align-items: center;
             text-align: center;
         }
-
     }
 }
 
 
-.warp-menu{
-    
-    display: flex;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    
-    justify-content: center;
-
-        .menu{
-            width: 100%;
-            display: flex;
-            position: absolute;
-            justify-content: center;
-            padding: 0;
-            margin: 1.5rem 0;
-
-            
-            @media (max-width: 991.98px) { 
-                padding: 1rem !important;
-            }
-
-            .warp-icon{
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                 border: 1px solid #03a9f4;
-                 border-radius: 0.5rem;
-                 margin: 0 1rem;
-                background-color: white;
-                padding: 0.5rem 0;
-                .icon{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    margin: 0 5rem;
-                   
-
-                    @media (max-width: 991.98px) { 
-                        padding: 0 !important;
-                        margin:  0 1.5rem !important;
-                    }
-
-                    @media (max-width: 1199.98px) {
-                        margin:  0 2rem;
-                     }
-               
-                    .icon-img{
-                        img{
-                            width: 3rem;
-                            height: 3rem;
-                            margin: 1rem;
-                        }
-                        img.hover{
-                            display: none;
-                        }
-                    }
-                    
-                    .icon-img:hover{
-                        background-color: #bedadc;
-                        box-shadow:  4px 4px 22px -5px rgba(0,0,0,0.75);
-                        -webkit-box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
-                        -moz-box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
-                        box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
-                        border-radius: 50%;
-                        img.hover{
-                            display: inherit !important;
-                        }
-                        img{
-                            display: none !important;
-                        }
-                    }
-
-                }
-                
-            }
-  
-        }
-    }
 

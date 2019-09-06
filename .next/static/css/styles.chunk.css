@@ -157,6 +157,37 @@ nav {
       align-items: center;
       text-align: center; }
 
+.warp-chart {
+  display: flex !important;
+  justify-content: center !important;
+  margin: 2rem !important; }
+
+.warp-about .content-about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 1rem; }
+  .warp-about .content-about .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+.warp-about .about-chart {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .warp-about .about-chart .chart {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+.warp-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem; }
+
 .warp-menu {
   display: flex;
   margin-left: 2rem;
@@ -211,36 +242,14 @@ nav {
           .warp-menu .menu .warp-icon .icon .icon-img:hover img {
             display: none !important; }
 
-.warp-chart {
-  display: flex !important;
-  justify-content: center !important;
-  margin: 2rem !important; }
-
-.warp-about .content-about {
+.warp-card {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 2rem 1rem; }
-  .warp-about .content-about .content {
+  margin: 1rem; }
+  .warp-card .card {
     display: flex;
-    flex-direction: column;
-    align-items: center; }
-
-.warp-about .about-chart {
-  width: 100%;
-  display: flex;
-  flex-direction: column; }
-  .warp-about .about-chart .chart {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-
-.warp-main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 2rem; }
+    flex-direction: row !important; }
 
 .warp {
   width: 100%; }

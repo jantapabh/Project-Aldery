@@ -247,89 +247,79 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
 
 /***/ }),
 
-/***/ "./components/layout/bg.js":
-/*!*********************************!*\
-  !*** ./components/layout/bg.js ***!
-  \*********************************/
+/***/ "./components/layout/card.js":
+/*!***********************************!*\
+  !*** ./components/layout/card.js ***!
+  \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\bg.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\card.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
-class Cover extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  constructor(props) {
-    super(props);
-  }
-
+class Card extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   render() {
     return __jsx("div", {
-      className: "warp",
+      className: "warp-card",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 12
       },
       __self: this
     }, __jsx("div", {
-      className: "warp-bg",
+      className: "card",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 13
       },
       __self: this
-    }, __jsx("img", {
-      src: "/static/bg.jpg",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15
-      },
-      __self: this
-    }), __jsx("img", {
-      src: "/static/bg2.jpg",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 16
-      },
-      __self: this
-    }), __jsx("img", {
-      src: "/static/bg5.jpg",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 17
-      },
-      __self: this
-    }), __jsx("img", {
-      src: "/static/bg3.jpg",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 18
-      },
-      __self: this
-    }), __jsx("div", {
-      className: "warp-text",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 21
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "text",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 22
-      },
-      __self: this
-    }))));
+    }, this.props.avatar.map((item, index) => {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "card-img",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        },
+        __self: this
+      }, __jsx("img", {
+        src: item.img,
+        alt: item.name,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      })), __jsx("div", {
+        className: "card-text",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }));
+    })));
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Cover);
+Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(Card, "defaultProps", {
+  avatar: []
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (Card);
 
 /***/ }),
 
@@ -1293,19 +1283,17 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_nav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/nav */ "./components/nav.js");
-/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/base.scss */ "./styles/base.scss");
-/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
-/* harmony import */ var _components_layout_bg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/layout/bg */ "./components/layout/bg.js");
-/* harmony import */ var _components_chart_barchart__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/chart/barchart */ "./components/chart/barchart.js");
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/nav */ "./components/nav.js");
+/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/base.scss */ "./styles/base.scss");
+/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
+/* harmony import */ var _components_chart_barchart__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/chart/barchart */ "./components/chart/barchart.js");
+/* harmony import */ var _components_layout_card__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/layout/card */ "./components/layout/card.js");
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\pages\\index.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
@@ -1313,22 +1301,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
-class Home extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
+class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   constructor(props) {
     super(props);
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "handleScroll", () => {
-      const {
-        prevScrollpos
-      } = this.state;
-      const currentScrollPos = window.pageYOffset;
-      const visible = prevScrollpos > currentScrollPos;
-      this.setState({
-        prevScrollpos: currentScrollPos,
-        visible
-      });
-    });
-
     this.state = {
       activeImg: false,
       icon: [{
@@ -1356,19 +1331,21 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
         name: "icon4",
         pichover: "/static/activehover.svg"
       }],
-      // animationFont: "animated bounceInUp delay-1s",
-      prevScrollpos: global.pageYOffset,
-      visible: true
+      avatar: [{
+        name: "card1",
+        img: "/static/active.svg"
+      }, {
+        name: "card2",
+        img: "/static/active.svg"
+      }, {
+        name: "card3",
+        img: "/static/active.svg"
+      }]
     };
   }
 
   async componentDidMount() {
-    localStorage.setItem("myOauth", _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()((await _config_api__WEBPACK_IMPORTED_MODULE_5__["default"].postSheetValues())));
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
+    localStorage.setItem("myOauth", _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()((await _config_api__WEBPACK_IMPORTED_MODULE_4__["default"].postSheetValues())));
   }
 
   render() {
@@ -1377,119 +1354,21 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       className: "warp-index",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 37
       },
       __self: this
-    }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
       name: "main",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 38
       },
       __self: this
-    }), __jsx(_components_layout_bg__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    }), __jsx(_components_layout_card__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      avatar: this.state.avatar,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
-      },
-      __self: this
-    }), __jsx("div", {
-      className: "warp-menu",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 72
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "menu",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 73
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "warp-icon",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 74
-      },
-      __self: this
-    }, this.state.icon.map((item, index) => {
-      return __jsx("a", {
-        href: item.href,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 79
-        },
-        __self: this
-      }, __jsx("div", {
-        className: "icon animated bounceInUp delay-1s",
-        key: index,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 80
-        },
-        __self: this
-      }, __jsx("div", {
-        className: "icon-img",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 81
-        },
-        __self: this
-      }, __jsx("img", {
-        key: index,
-        src: item.pic,
-        alt: item.name,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 82
-        },
-        __self: this
-      }), __jsx("img", {
-        className: "hover",
-        src: item.pichover,
-        alt: item.name,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 83
-        },
-        __self: this
-      })), __jsx("h6", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 86
-        },
-        __self: this
-      }, item.text)));
-    })))), __jsx("br", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 97
-      },
-      __self: this
-    }), __jsx("br", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 97
-      },
-      __self: this
-    }), __jsx("br", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 97
-      },
-      __self: this
-    }), __jsx("br", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 97
-      },
-      __self: this
-    }), __jsx(_components_chart_barchart__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 99
+        lineNumber: 53
       },
       __self: this
     }));
