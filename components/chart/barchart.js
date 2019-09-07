@@ -53,38 +53,46 @@ class Barchart extends React.Component {
 
         return (
             <div className="warp-chart">
-                <BarChart
-                    width={400}
-                    height={250}
-                    data={data}
 
-                >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Bar dataKey="ชาย" fill="#0288d1" />
-                    <Bar dataKey="หญิง" fill="#03a9f4" />
-                   
-                </BarChart>
+                <div className="chart">
+                    <BarChart
+                        width={400}
+                        height={250}
+                        data={data}
 
-                <BarChart
-                    width={400}
-                    height={250}
-                    data={data}
+                    >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Bar dataKey="ชาย" fill="#0288d1" />
+                        <Bar dataKey="หญิง" fill="#03a9f4" />
 
-                >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Bar dataKey="อายุ60ถึง69ปี" fill="#0288d1" />
-                    <Bar dataKey="อายุ70ถึง79ปี" fill="#03a9f4" />
-                    <Bar dataKey="อายุ80ถึง89ปี" fill="#4fc3f7" />
-                    <Bar dataKey="อายุมากกว่าหรือเท่ากับ90ปี" fill="#b3e5fc" />
-                </BarChart>
+                    </BarChart>
+                </div>
+                <div className="chart">
+                    <BarChart
+                        width={400}
+                        height={250}
+                        data={data}
+
+                    >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Bar dataKey="อายุ60ถึง69ปี" fill="#0288d1" />
+                        <Bar dataKey="อายุ70ถึง79ปี" fill="#03a9f4" />
+                        <Bar dataKey="อายุ80ถึง89ปี" fill="#4fc3f7" />
+                        <Bar dataKey="อายุมากกว่าหรือเท่ากับ90ปี" fill="#b3e5fc" />
+                    </BarChart>
+                </div>
+
+
+
+
             </div>
         )
     }
