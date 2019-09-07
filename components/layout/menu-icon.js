@@ -2,6 +2,10 @@ import React from 'react'
 
 
 class Menu_icon extends React.Component {
+
+    static defaultProps ={
+        icon:[]
+    }
     render() {
         return (
             
@@ -9,7 +13,7 @@ class Menu_icon extends React.Component {
                     <div className="menu">
                         <div className="warp-icon">
                             {
-                                this.state.icon.map((item, index) => {
+                                this.props.icon.map((item, index) => {
                                     return (
 
                                         <a href={item.href}>

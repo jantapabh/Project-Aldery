@@ -247,6 +247,53 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
 
 /***/ }),
 
+/***/ "./components/chart/chart.js":
+/*!***********************************!*\
+  !*** ./components/chart/chart.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\chart\\chart.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+class Chart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return __jsx("div", {
+      className: "warp-card",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "card",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "card-chart",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    })));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Chart);
+
+/***/ }),
+
 /***/ "./components/layout/card.js":
 /*!***********************************!*\
   !*** ./components/layout/card.js ***!
@@ -1291,9 +1338,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
 /* harmony import */ var _components_chart_barchart__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/chart/barchart */ "./components/chart/barchart.js");
 /* harmony import */ var _components_layout_card__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/layout/card */ "./components/layout/card.js");
+/* harmony import */ var _components_chart_chart__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/chart/chart */ "./components/chart/chart.js");
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -1352,26 +1401,31 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   }
 
   render() {
-    console.log(this.state.prevScrollpos);
     return __jsx("div", {
       className: "warp-index",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 35
       },
       __self: this
     }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
       name: "main",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 36
       },
       __self: this
     }), __jsx(_components_layout_card__WEBPACK_IMPORTED_MODULE_6__["default"], {
       card: this.state.card,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 51
+      },
+      __self: this
+    }), __jsx(_components_chart_chart__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
       },
       __self: this
     }));

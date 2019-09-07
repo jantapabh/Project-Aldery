@@ -4,6 +4,7 @@ import '../styles/base.scss'
 import Sheetapi from '../config/api'
 import Barchart from '../components/chart/barchart';
 import Card from '../components/layout/card';
+import Chart from '../components/chart/chart';
 
 class Home extends React.Component {
 
@@ -30,9 +31,6 @@ class Home extends React.Component {
 
   render() {
 
-    console.log(this.state.prevScrollpos);
-
-
     return (
       <div className="warp-index">
         <Nav name="main" />
@@ -53,6 +51,8 @@ class Home extends React.Component {
         <Card
           card={this.state.card}
         />
+
+        <Chart/>
 
 
 
