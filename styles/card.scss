@@ -8,46 +8,48 @@
     .card{
         width: 90%;
         margin: 0.5rem;
-        padding: 1rem 0 5rem;
+        padding: 1rem 0 1rem;
         display: flex;
         flex-direction: row !important;
         border-radius: 0.5rem;
         
-      
         .card-img{
             display: flex;
             justify-content: center;
-            width:10rem;
+            width: 12rem;
             padding: 0.5rem;
             position: relative;
-            top: -3rem;
-            background-color: bisque;
+            top: -5rem;
             left: 0.5rem;
+            border-radius: 50%;
+            background-color: yellow;
 
             img{
                 width: 5rem;
             }
         }
 
-        .card-text{
+        .card-conten{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+           .card-text{
             width: 100%;
             display: flex;
             justify-content: flex-end;
             margin: 0 0.5rem;
-          
+
+           
         }
 
+        }
         
         }
     }
+
     .card-chart{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .chart{
-            width: 50%;
-            display: flex;
-            justify-content: center;
-        }
-}
+        justify-content: center;
+    }

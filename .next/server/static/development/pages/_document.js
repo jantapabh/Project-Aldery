@@ -1193,26 +1193,10 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       __self: this
     }), __jsx("link", {
       rel: "stylesheet",
-      href: "css/animate.min.css",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 33
-      },
-      __self: this
-    }), __jsx("link", {
-      rel: "stylesheet",
-      href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 34
-      },
-      __self: this
-    }), __jsx("link", {
-      rel: "stylesheet",
       href: "https://unpkg.com/react-vis/dist/style.css",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 33
       },
       __self: this
     }), __jsx("script", {
@@ -1220,25 +1204,25 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       src: "https://unpkg.com/react-vis/dist/dist.min.js",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 34
       },
       __self: this
     })), __jsx("body", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 37
       },
       __self: this
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 38
       },
       __self: this
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 39
       },
       __self: this
     })));

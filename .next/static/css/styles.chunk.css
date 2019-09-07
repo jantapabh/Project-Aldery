@@ -250,35 +250,36 @@ nav {
   .warp-card .card {
     width: 90%;
     margin: 0.5rem;
-    padding: 1rem 0 5rem;
+    padding: 1rem 0 1rem;
     display: flex;
     flex-direction: row !important;
     border-radius: 0.5rem; }
     .warp-card .card .card-img {
       display: flex;
       justify-content: center;
-      width: 10rem;
+      width: 12rem;
       padding: 0.5rem;
       position: relative;
-      top: -3rem;
-      background-color: bisque;
-      left: 0.5rem; }
+      top: -5rem;
+      left: 0.5rem;
+      border-radius: 50%;
+      background-color: yellow; }
       .warp-card .card .card-img img {
         width: 5rem; }
-    .warp-card .card .card-text {
+    .warp-card .card .card-conten {
       width: 100%;
       display: flex;
-      justify-content: flex-end;
-      margin: 0 0.5rem; }
+      flex-direction: column;
+      align-items: flex-end; }
+      .warp-card .card .card-conten .card-text {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 0.5rem; }
 
 .card-chart {
   display: flex;
-  flex-direction: column;
-  align-items: center; }
-  .card-chart .chart {
-    width: 50%;
-    display: flex;
-    justify-content: center; }
+  justify-content: center; }
 
 .warp {
   width: 100%; }
@@ -295,6 +296,9 @@ h1 {
   @media (max-width: 1199.98px) {
     h1 {
       font-size: 3rem !important; } }
+  @media (max-width: 780px) {
+    h1 {
+      font-size: 1.8rem !important; } }
 
 h2 {
   color: black;

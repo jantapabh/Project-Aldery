@@ -44,8 +44,8 @@ class Barchart extends React.Component {
         return (
             <div className="warp-chart">
                 <BarChart
-                    width={700}
-                    height={300}
+                    width={400}
+                    height={250}
                     data={data}
 
                 >
