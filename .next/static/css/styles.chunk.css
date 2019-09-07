@@ -336,7 +336,8 @@ h6 {
       padding: 0; } }
 
 p {
-  font-family: "Prompt", sans-serif; }
+  font-family: "Prompt", sans-serif;
+  user-select: none; }
 
 text {
   font-family: "Prompt", sans-serif;
@@ -355,6 +356,9 @@ tspan {
 
 span {
   font-family: "Prompt", sans-serif !important; }
+
+img {
+  user-select: none; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
