@@ -1,6 +1,9 @@
 nav {
   display: flex;
-  width: 100%; }
+  width: 100%;
+  background-color: white;
+  padding: 0.5rem 0;
+  box-shadow: 0 0 2rem 0 rgba(53, 64, 82, 0.1); }
   nav img {
     width: 4rem;
     height: 3rem;
@@ -14,26 +17,18 @@ nav {
     padding-inline-start: 10px; }
     nav ul .warp-manu {
       display: flex;
-      flex-direction: row;
-      margin-top: 0.5rem; }
+      flex-direction: row; }
       nav ul .warp-manu li {
         cursor: pointer;
-        display: flex;
-        padding: 3px 10px; }
+        display: flex; }
         nav ul .warp-manu li p {
-          color: black;
-          padding: 0.5rem;
-          margin: 0.5rem 0.5rem; }
+          color: black; }
         nav ul .warp-manu li p:hover {
-          color: #bedadc;
-          padding: 0.5rem;
-          margin: 0.5rem 0.5rem; }
+          color: #bedadc; }
     nav ul p {
       cursor: pointer;
       color: #03a9f4;
-      padding-top: 1.1rem;
-      padding: 0.5rem;
-      margin: 0.6rem 0.5rem; }
+      margin: 0.5rem 0.5rem; }
   nav .warp-back {
     display: flex;
     width: 100%; }
@@ -157,12 +152,30 @@ nav {
       align-items: center;
       text-align: center; }
 
+.warp-index {
+  height: 100vh;
+  background-color: #F5F9FC; }
+  .warp-index .content-index {
+    width: 100%;
+    margin-top: 4rem; }
+
 .warp-chart {
   display: flex !important;
   justify-content: center !important;
   margin: 2rem !important; }
+  @media (max-width: 991.98px) {
+    .warp-chart {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important; } }
   .warp-chart .chart {
-    margin: 0 2rem; }
+    margin: 0 2rem;
+    user-select: none; }
+    @media (max-width: 780px) {
+      .warp-chart .chart {
+        margin: 2rem; } }
+    .warp-chart .chart .recharts-wrapper {
+      cursor: pointer !important; }
 
 .warp-about .content-about {
   width: 100%;
@@ -245,29 +258,36 @@ nav {
             display: none !important; }
 
 .warp-card {
-  width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 4rem; }
+  margin-top: 4rem !important;
+  margin: 0 1rem; }
   .warp-card .card {
     width: 90%;
-    margin: 0.5rem;
+    margin: 0 1rem;
     padding: 1rem 0 1rem;
     display: flex;
     flex-direction: row !important;
-    border-radius: 0.5rem; }
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.875rem 0 rgba(53, 64, 82, 0.05); }
     .warp-card .card .card-img {
       display: flex;
       justify-content: center;
-      width: 12rem;
+      width: 10rem;
       padding: 0.5rem;
       position: relative;
-      top: -5rem;
+      top: -4rem;
       left: 0.5rem;
       border-radius: 50%;
-      background-color: yellow; }
+      background-color: yellow;
+      cursor: pointer; }
       .warp-card .card .card-img img {
-        width: 5rem; }
+        width: 4rem; }
+      @media (max-width: 991.98px) {
+        .warp-card .card .card-img {
+          border-radius: 50%; }
+          .warp-card .card .card-img img {
+            width: 3rem; } }
     .warp-card .card .card-conten {
       width: 100%;
       display: flex;
@@ -288,9 +308,8 @@ nav {
 
 h1 {
   color: black;
-  font-size: 4rem !important;
+  font-size: 3rem !important;
   text-align: center;
-  margin-bottom: 1rem !important;
   margin-block-start: 0;
   margin-block-end: 0;
   font-family: "Prompt", sans-serif;
@@ -298,6 +317,9 @@ h1 {
   @media (max-width: 1199.98px) {
     h1 {
       font-size: 3rem !important; } }
+  @media (max-width: 991.98px) {
+    h1 {
+      font-size: 2rem !important; } }
   @media (max-width: 780px) {
     h1 {
       font-size: 1.8rem !important; } }

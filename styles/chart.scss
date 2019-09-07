@@ -3,10 +3,26 @@
     justify-content: center !important;
     margin: 2rem !important;
 
+    @media (max-width: 991.98px) {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
     
     .chart{
         margin: 0 2rem;
+        user-select: none;
+
+        @media (max-width: 780px) {
+            margin: 2rem ;
+        }
+        
+
+        .recharts-wrapper{
+            cursor: pointer !important;
+        }
     }
 
-    }
+}
    

@@ -1024,20 +1024,26 @@ function (_React$Component) {
           lineNumber: 52
         },
         __self: this
+      }, !!this.props.card ? __jsx(react__WEBPACK_IMPORTED_MODULE_11___default.a.Fragment, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        },
+        __self: this
       }, this.props.card.map(function (item, index) {
         return __jsx("div", {
           key: index,
           className: "card",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 60
           },
           __self: this
         }, __jsx("div", {
           className: "card-img",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 59
+            lineNumber: 62
           },
           __self: this
         }, __jsx("img", {
@@ -1045,40 +1051,40 @@ function (_React$Component) {
           alt: item.name,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 60
+            lineNumber: 63
           },
           __self: this
         })), __jsx("div", {
           className: "card-conten",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 62
+            lineNumber: 65
           },
           __self: this
         }, __jsx("div", {
           className: "card-text",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 63
+            lineNumber: 66
           },
           __self: this
         }, __jsx("h5", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 64
+            lineNumber: 67
           },
           __self: this
         }, item.text)), __jsx("div", {
           className: "card-data",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 66
+            lineNumber: 69
           },
           __self: this
         }, index == 0 ? __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 69
+            lineNumber: 72
           },
           __self: this
         }, _this2.state.data.map(function (item1, index1) {
@@ -1086,14 +1092,14 @@ function (_React$Component) {
             key: index1,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 73
+              lineNumber: 76
             },
             __self: this
           }, item1.ชาย, " \u0E04\u0E19");
         })) : index == 1 ? __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 80
+            lineNumber: 83
           },
           __self: this
         }, _this2.state.data.map(function (item2, index2) {
@@ -1101,14 +1107,14 @@ function (_React$Component) {
             key: index2,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 84
+              lineNumber: 87
             },
             __self: this
           }, item2.หญิง, " \u0E04\u0E19");
         })) : index == 2 ? __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 91
+            lineNumber: 94
           },
           __self: this
         }, _this2.state.data.map(function (item3, index3) {
@@ -1116,19 +1122,19 @@ function (_React$Component) {
             key: index3,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 95
+              lineNumber: 98
             },
             __self: this
           }, __jsx(react_countup__WEBPACK_IMPORTED_MODULE_13___default.a, {
             end: item3.รวม,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 95
+              lineNumber: 98
             },
             __self: this
           }), " \u0E04\u0E19");
         })) : null)));
-      }));
+      })) : null);
     }
   }]);
 
@@ -64679,30 +64685,37 @@ function (_React$Component) {
         className: "warp-index",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 37
         },
         __self: this
       }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_9__["default"], {
         name: "main",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 38
         },
         __self: this
-      }), __jsx(_components_layout_card__WEBPACK_IMPORTED_MODULE_12__["default"], {
-        card: this.state.card,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50
-        },
-        __self: this
-      }), __jsx(_components_chart_chart__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      }), __jsx("div", {
+        className: "content-index",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 54
         },
         __self: this
-      }));
+      }, __jsx(_components_layout_card__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        card: this.state.card,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }), __jsx(_components_chart_chart__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        },
+        __self: this
+      })));
     }
   }]);
 

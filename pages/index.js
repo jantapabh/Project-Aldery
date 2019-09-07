@@ -19,7 +19,10 @@ class Home extends React.Component {
         { text: "กิจกรรม", pic: "/static/active.svg", href: "/active", name: "icon4", pichover: "/static/activehover.svg" }
 
       ],
-      card:[{name:"card1",img:"/static/grandfather.svg",text:"เพศชาย"},{name:"card2",img:"/static/old-woman.svg",text:"เพศหญิง"},{name:"card3",img:"/static/couple.svg",text:"รวม"}]
+      card: [
+        { name: "card1", img: "/static/grandfather.svg", text: "เพศชาย" },
+        { name: "card2", img: "/static/old-woman.svg", text: "เพศหญิง" },
+        { name: "card3", img: "/static/couple.svg", text: "รวม" }]
 
     }
   }
@@ -33,7 +36,7 @@ class Home extends React.Component {
     return (
       <div className="warp-index">
         <Nav name="main" />
-        
+
 
         {/* <div className="warp-content" >
           <div className="content">
@@ -47,11 +50,15 @@ class Home extends React.Component {
 
         {/* <Barchart/> */}
 
-        <Card
-          card={this.state.card}
-        />
 
-        <Chart/>
+        <div className="content-index">
+          <Card
+            card={this.state.card}
+          />
+
+          <Chart />
+        </div>
+
 
 
 

@@ -52,59 +52,67 @@ class Card extends React.Component {
             <div className="warp-card">
 
                 {
-                    this.props.card.map((item, index) => {
-                        return (
-                            <div key={index} className="card">
+                    !!this.props.card ?
+                        <React.Fragment>
+                            {
+                                this.props.card.map((item, index) => {
+                                    return (
+                                        <div key={index} className="card">
 
-                                <div className="card-img">
-                                    <img src={item.img} alt={item.name} />
-                                </div>
-                                <div className="card-conten">
-                                    <div className="card-text">
-                                        <h5>{item.text}</h5>
-                                    </div>
-                                    <div className="card-data">
-                                        {
-                                            index == 0 ?
-                                                <div>
+                                            <div className="card-img">
+                                                <img src={item.img} alt={item.name} />
+                                            </div>
+                                            <div className="card-conten">
+                                                <div className="card-text">
+                                                    <h5>{item.text}</h5>
+                                                </div>
+                                                <div className="card-data">
                                                     {
-                                                        this.state.data.map((item1, index1) => {
-                                                            return (
-                                                                <h1 key={index1}>{item1.ชาย} คน</h1>
-                                                            )
-                                                        })
+                                                        index == 0 ?
+                                                            <div>
+                                                                {
+                                                                    this.state.data.map((item1, index1) => {
+                                                                        return (
+                                                                            <h1 key={index1}>{item1.ชาย} คน</h1>
+                                                                        )
+                                                                    })
+                                                                }
+                                                            </div>
+                                                            :
+                                                            index == 1 ?
+                                                                <div>
+                                                                    {
+                                                                        this.state.data.map((item2, index2) => {
+                                                                            return (
+                                                                                <h1 key={index2}>{item2.หญิง} คน</h1>
+                                                                            )
+                                                                        })
+                                                                    }
+                                                                </div>
+                                                                :
+                                                                index == 2 ?
+                                                                    <div>
+                                                                        {
+                                                                            this.state.data.map((item3, index3) => {
+                                                                                return (
+                                                                                    <h1 key={index3}><CountUp end={item3.รวม} /> คน</h1>
+                                                                                )
+                                                                            })
+                                                                        }
+                                                                    </div>
+                                                                    :
+                                                                    null
                                                     }
                                                 </div>
-                                                :
-                                                index == 1 ?
-                                                    <div>
-                                                        {
-                                                            this.state.data.map((item2, index2) => {
-                                                                return (
-                                                                    <h1 key={index2}>{item2.หญิง} คน</h1>
-                                                                )
-                                                            })
-                                                        }
-                                                    </div>
-                                                    :
-                                                    index == 2 ?
-                                                        <div>
-                                                            {
-                                                                this.state.data.map((item3, index3) => {
-                                                                    return (
-                                                                        <h1 key={index3}><CountUp end={item3.รวม} /> คน</h1>
-                                                                    )
-                                                                })
-                                                            }
-                                                        </div>
-                                                        :
-                                                        null
-                                        }
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    })
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </React.Fragment>
+                        :
+                        null
+                   
                 }
 
             </div>
