@@ -246,10 +246,39 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 1rem; }
+  margin-top: 4rem; }
   .warp-card .card {
+    width: 90%;
+    margin: 0.5rem;
+    padding: 1rem 0 5rem;
     display: flex;
-    flex-direction: row !important; }
+    flex-direction: row !important;
+    border-radius: 0.5rem; }
+    .warp-card .card .card-img {
+      display: flex;
+      justify-content: center;
+      width: 10rem;
+      padding: 0.5rem;
+      position: relative;
+      top: -3rem;
+      background-color: bisque;
+      left: 0.5rem; }
+      .warp-card .card .card-img img {
+        width: 5rem; }
+    .warp-card .card .card-text {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 0.5rem; }
+
+.card-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .card-chart .chart {
+    width: 50%;
+    display: flex;
+    justify-content: center; }
 
 .warp {
   width: 100%; }
@@ -287,8 +316,7 @@ h5 {
   font-size: 1.5rem !important;
   text-align: center;
   font-family: "Prompt", sans-serif;
-  margin-bottom: 0.5rem;
-  padding: 0 5rem; }
+  margin-bottom: 0; }
 
 h6 {
   color: black;

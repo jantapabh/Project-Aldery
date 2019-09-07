@@ -19,7 +19,7 @@ class Home extends React.Component {
         { text: "กิจกรรม", pic: "/static/active.svg", href: "/active", name: "icon4", pichover: "/static/activehover.svg" }
 
       ],
-      avatar:[{name:"card1",img:"/static/active.svg"},{name:"card2",img:"/static/active.svg"},{name:"card3",img:"/static/active.svg"}]
+      card:[{name:"card1",img:"/static/active.svg",text:"เพศชาย"},{name:"card2",img:"/static/active.svg",text:"เพศหญิง"},{name:"card3",img:"/static/active.svg",text:"รวม"}]
 
     }
   }
@@ -51,7 +51,7 @@ class Home extends React.Component {
         {/* <Barchart/> */}
 
         <Card
-          avatar={this.state.avatar}
+          card={this.state.card}
         />
 
 

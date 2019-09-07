@@ -3,34 +3,33 @@ import React from 'react'
 class Card extends React.Component {
 
     static defaultProps = {
-        avatar: [],
+        card: [],
     }
 
 
     render() {
         return (
             <div className="warp-card">
-                <div className="card">
-                    {
-                        this.props.avatar.map((item, index) => {
-                            return (
-                                <React.Fragment>
-                                    <div className="card-img">
-                                        <img src={item.img} alt={item.name} />
-                                    </div>
-                                    <div className="card-text">
 
-                                    </div>
-                                </React.Fragment>
+                {
+                    this.props.card.map((item, index) => {
+                        return (
+                            <div className="card">
 
-
-                            )
-                        })
-                    }
-
-                </div>
+                                <div className="card-img">
+                                    <img src={item.img} alt={item.name} />
+                                </div>
+                                <div className="card-text">
+                                    <h5>{item.text}</h5>
+                                </div>
 
 
+                            </div>
+
+
+                        )
+                    })
+                }
 
             </div>
         )

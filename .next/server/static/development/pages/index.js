@@ -273,15 +273,9 @@ class Card extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         lineNumber: 12
       },
       __self: this
-    }, __jsx("div", {
-      className: "card",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13
-      },
-      __self: this
-    }, this.props.avatar.map((item, index) => {
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
+    }, this.props.card.map((item, index) => {
+      return __jsx("div", {
+        className: "card",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 17
@@ -291,7 +285,7 @@ class Card extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         className: "card-img",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 19
         },
         __self: this
       }, __jsx("img", {
@@ -299,24 +293,30 @@ class Card extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         alt: item.name,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 20
         },
         __self: this
       })), __jsx("div", {
         className: "card-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 22
         },
         __self: this
-      }));
-    })));
+      }, __jsx("h5", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
+        },
+        __self: this
+      }, item.text)));
+    }));
   }
 
 }
 
 Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(Card, "defaultProps", {
-  avatar: []
+  card: []
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (Card);
@@ -1331,15 +1331,18 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         name: "icon4",
         pichover: "/static/activehover.svg"
       }],
-      avatar: [{
+      card: [{
         name: "card1",
-        img: "/static/active.svg"
+        img: "/static/active.svg",
+        text: "เพศชาย"
       }, {
         name: "card2",
-        img: "/static/active.svg"
+        img: "/static/active.svg",
+        text: "เพศหญิง"
       }, {
         name: "card3",
-        img: "/static/active.svg"
+        img: "/static/active.svg",
+        text: "รวม"
       }]
     };
   }
@@ -1365,7 +1368,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __self: this
     }), __jsx(_components_layout_card__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      avatar: this.state.avatar,
+      card: this.state.card,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 53
