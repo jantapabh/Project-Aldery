@@ -129,10 +129,10 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
         for (let i = 0; i < this.list.length; i++) {
           let value = await {
             name: this.list[i][0],
-            อายุ60ถึง69ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][2].replace(",", "")),
-            อายุ70ถึง79ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][3].replace(",", "")),
-            อายุ80ถึง89ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][4].replace(",", "")),
-            อายุมากกว่าหรือเท่ากับ90ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][5].replace(",", "")),
+            อายุ60ถึง69ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][1].replace(",", "")),
+            อายุ70ถึง79ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][2].replace(",", "")),
+            อายุ80ถึง89ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][3].replace(",", "")),
+            อายุมากกว่าหรือเท่ากับ90ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][4].replace(",", "")),
             รวม: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][5].replace(",", "")),
             ชาย: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][6].replace(",", "")),
             หญิง: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][7].replace(",", "")),

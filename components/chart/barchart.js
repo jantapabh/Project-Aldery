@@ -29,10 +29,10 @@ class Barchart extends React.Component {
             for (let i = 0; i < this.list.length; i++) {
                 let value = await {
                     name: this.list[i][0],
-                    อายุ60ถึง69ปี: parseInt(this.list[i][2].replace(",", "")),
-                    อายุ70ถึง79ปี: parseInt(this.list[i][3].replace(",", "")),
-                    อายุ80ถึง89ปี: parseInt(this.list[i][4].replace(",", "")),
-                    อายุมากกว่าหรือเท่ากับ90ปี: parseInt(this.list[i][5].replace(",", "")),
+                    อายุ60ถึง69ปี: parseInt(this.list[i][1].replace(",", "")),
+                    อายุ70ถึง79ปี: parseInt(this.list[i][2].replace(",", "")),
+                    อายุ80ถึง89ปี: parseInt(this.list[i][3].replace(",", "")),
+                    อายุมากกว่าหรือเท่ากับ90ปี: parseInt(this.list[i][4].replace(",", "")),
                     รวม: parseInt(this.list[i][5].replace(",", "")),
                     ชาย: parseInt(this.list[i][6].replace(",", "")),
                     หญิง: parseInt(this.list[i][7].replace(",", "")),
