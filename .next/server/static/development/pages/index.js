@@ -584,10 +584,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/api */ "./config/api.js");
+/* harmony import */ var react_countup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-countup */ "react-countup");
+/* harmony import */ var react_countup__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_countup__WEBPACK_IMPORTED_MODULE_4__);
 
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\card.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
 
 
 
@@ -630,7 +633,7 @@ class Card extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       className: "warp-card",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 52
       },
       __self: this
     }, this.props.card.map((item, index) => {
@@ -639,14 +642,14 @@ class Card extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
         className: "card",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 57
         },
         __self: this
       }, __jsx("div", {
         className: "card-img",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 59
         },
         __self: this
       }, __jsx("img", {
@@ -654,40 +657,40 @@ class Card extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
         alt: item.name,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 60
         },
         __self: this
       })), __jsx("div", {
         className: "card-conten",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 62
         },
         __self: this
       }, __jsx("div", {
         className: "card-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 63
         },
         __self: this
       }, __jsx("h5", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 64
         },
         __self: this
       }, item.text)), __jsx("div", {
         className: "card-data",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 66
         },
         __self: this
       }, index == 0 ? __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 69
         },
         __self: this
       }, this.state.data.map((item1, index1) => {
@@ -695,14 +698,14 @@ class Card extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
           key: index1,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 72
+            lineNumber: 73
           },
           __self: this
         }, item1.ชาย, " \u0E04\u0E19");
       })) : index == 1 ? __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 80
         },
         __self: this
       }, this.state.data.map((item2, index2) => {
@@ -710,14 +713,14 @@ class Card extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
           key: index2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 83
+            lineNumber: 84
           },
           __self: this
         }, item2.หญิง, " \u0E04\u0E19");
       })) : index == 2 ? __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 91
         },
         __self: this
       }, this.state.data.map((item3, index3) => {
@@ -725,10 +728,17 @@ class Card extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
           key: index3,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 94
+            lineNumber: 95
           },
           __self: this
-        }, item3.รวม, " \u0E04\u0E19");
+        }, __jsx(react_countup__WEBPACK_IMPORTED_MODULE_4___default.a, {
+          end: item3.รวม,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 95
+          },
+          __self: this
+        }), " \u0E04\u0E19");
       })) : null)));
     }));
   }
@@ -1982,6 +1992,17 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-countup":
+/*!********************************!*\
+  !*** external "react-countup" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-countup");
 
 /***/ }),
 

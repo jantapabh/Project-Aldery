@@ -1,5 +1,6 @@
 import React from 'react'
 import Sheetapi from '../../config/api'
+import CountUp from 'react-countup';
 
 class Card extends React.Component {
 
@@ -91,7 +92,7 @@ class Card extends React.Component {
                                                             {
                                                                 this.state.data.map((item3, index3) => {
                                                                     return (
-                                                                        <h1 key={index3}>{item3.รวม} คน</h1>
+                                                                        <h1 key={index3}><CountUp end={item3.รวม} /> คน</h1>
                                                                     )
                                                                 })
                                                             }
