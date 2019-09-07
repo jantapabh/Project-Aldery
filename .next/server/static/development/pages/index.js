@@ -132,7 +132,11 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
             อายุ60ถึง69ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][2].replace(",", "")),
             อายุ70ถึง79ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][3].replace(",", "")),
             อายุ80ถึง89ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][4].replace(",", "")),
-            อายุมากกว่าหรือเท่ากับ90ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][5].replace(",", ""))
+            อายุมากกว่าหรือเท่ากับ90ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][5].replace(",", "")),
+            รวม: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][5].replace(",", "")),
+            ชาย: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][6].replace(",", "")),
+            หญิง: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][7].replace(",", "")),
+            รวม: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][8].replace(",", ""))
           };
           this.setState(prevState => ({
             data: [...prevState.data, value]
@@ -151,7 +155,7 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
   async componentDidMount() {
     let userOauth = JSON.parse(localStorage.getItem("myOauth"));
     this.access_token = userOauth.data.access_token;
-    await this.list('!C2:H');
+    await this.list('!D2:L');
   }
 
   render() {
@@ -162,7 +166,7 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       className: "warp-chart",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 55
       },
       __self: this
     }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["BarChart"], {
@@ -171,39 +175,96 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       data: data,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 56
       },
       __self: this
     }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["CartesianGrid"], {
       strokeDasharray: "3 3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 62
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["XAxis"], {
       dataKey: "name",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 63
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["YAxis"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 64
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Tooltip"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 65
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Legend"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 66
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
+      dataKey: "\u0E0A\u0E32\u0E22",
+      fill: "#0288d1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 67
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
+      dataKey: "\u0E2B\u0E0D\u0E34\u0E07",
+      fill: "#03a9f4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 68
+      },
+      __self: this
+    })), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["BarChart"], {
+      width: 400,
+      height: 250,
+      data: data,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
+      },
+      __self: this
+    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["CartesianGrid"], {
+      strokeDasharray: "3 3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 78
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["XAxis"], {
+      dataKey: "name",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 79
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["YAxis"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 80
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Tooltip"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 81
+      },
+      __self: this
+    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Legend"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 82
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
@@ -211,7 +272,7 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       fill: "#0288d1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 83
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
@@ -219,7 +280,7 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       fill: "#03a9f4",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 84
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
@@ -227,7 +288,7 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       fill: "#4fc3f7",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 85
       },
       __self: this
     }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
@@ -235,7 +296,7 @@ class Barchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       fill: "#b3e5fc",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 86
       },
       __self: this
     })));
@@ -322,16 +383,10 @@ class Chart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
         lineNumber: 55
       },
       __self: this
-    }, __jsx(_linechart__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    }, __jsx(_barchart__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 56
-      },
-      __self: this
-    }), __jsx(_barchart__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 57
       },
       __self: this
     }));

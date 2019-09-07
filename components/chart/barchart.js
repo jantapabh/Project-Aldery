@@ -17,7 +17,7 @@ class Barchart extends React.Component {
 
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.list('!C2:H')
+        await this.list('!D2:L')
     }
 
     list = async (value) => {
@@ -27,7 +27,17 @@ class Barchart extends React.Component {
             this.list = await Sheetapi.getSheet2(this.access_token, value)
 
             for (let i = 0; i < this.list.length; i++) {
-                let value = await { name: this.list[i][0], อายุ60ถึง69ปี: parseInt(this.list[i][2].replace(",", "")), อายุ70ถึง79ปี: parseInt(this.list[i][3].replace(",", "")),อายุ80ถึง89ปี:parseInt(this.list[i][4].replace(",", "")),อายุมากกว่าหรือเท่ากับ90ปี:parseInt(this.list[i][5].replace(",", "")) }
+                let value = await {
+                    name: this.list[i][0],
+                    อายุ60ถึง69ปี: parseInt(this.list[i][2].replace(",", "")),
+                    อายุ70ถึง79ปี: parseInt(this.list[i][3].replace(",", "")),
+                    อายุ80ถึง89ปี: parseInt(this.list[i][4].replace(",", "")),
+                    อายุมากกว่าหรือเท่ากับ90ปี: parseInt(this.list[i][5].replace(",", "")),
+                    รวม: parseInt(this.list[i][5].replace(",", "")),
+                    ชาย: parseInt(this.list[i][6].replace(",", "")),
+                    หญิง: parseInt(this.list[i][7].replace(",", "")),
+                    รวม: parseInt(this.list[i][8].replace(",", "")),
+                }
                 this.setState(prevState => ({
                     data: [...prevState.data, value]
                 }))
@@ -43,6 +53,22 @@ class Barchart extends React.Component {
 
         return (
             <div className="warp-chart">
+                <BarChart
+                    width={400}
+                    height={250}
+                    data={data}
+
+                >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Bar dataKey="ชาย" fill="#0288d1" />
+                    <Bar dataKey="หญิง" fill="#03a9f4" />
+                   
+                </BarChart>
+
                 <BarChart
                     width={400}
                     height={250}

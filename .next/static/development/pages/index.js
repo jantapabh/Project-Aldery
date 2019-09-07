@@ -82,13 +82,16 @@ function (_React$Component) {
                       switch (_context.prev = _context.next) {
                         case 0:
                           _context.next = 2;
-                          return {
+                          return Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_10__["default"])({
                             name: _this.list[i][0],
                             อายุ60ถึง69ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][2].replace(",", "")),
                             อายุ70ถึง79ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][3].replace(",", "")),
                             อายุ80ถึง89ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][4].replace(",", "")),
-                            อายุมากกว่าหรือเท่ากับ90ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][5].replace(",", ""))
-                          };
+                            อายุมากกว่าหรือเท่ากับ90ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][5].replace(",", "")),
+                            รวม: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][5].replace(",", "")),
+                            ชาย: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][6].replace(",", "")),
+                            หญิง: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][7].replace(",", ""))
+                          }, "\u0E23\u0E27\u0E21", _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][8].replace(",", "")));
 
                         case 2:
                           value = _context.sent;
@@ -163,7 +166,7 @@ function (_React$Component) {
                 userOauth = JSON.parse(localStorage.getItem("myOauth"));
                 this.access_token = userOauth.data.access_token;
                 _context3.next = 4;
-                return this.list('!C2:H');
+                return this.list('!D2:L');
 
               case 4:
               case "end":
@@ -187,7 +190,7 @@ function (_React$Component) {
         className: "warp-chart",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 55
         },
         __self: this
       }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["BarChart"], {
@@ -196,39 +199,96 @@ function (_React$Component) {
         data: data,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 56
         },
         __self: this
       }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["CartesianGrid"], {
         strokeDasharray: "3 3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 62
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["XAxis"], {
         dataKey: "name",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 63
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["YAxis"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 64
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["Tooltip"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 65
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["Legend"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 66
+        },
+        __self: this
+      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["Bar"], {
+        dataKey: "\u0E0A\u0E32\u0E22",
+        fill: "#0288d1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
+        },
+        __self: this
+      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["Bar"], {
+        dataKey: "\u0E2B\u0E0D\u0E34\u0E07",
+        fill: "#03a9f4",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      })), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["BarChart"], {
+        width: 400,
+        height: 250,
+        data: data,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 72
+        },
+        __self: this
+      }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["CartesianGrid"], {
+        strokeDasharray: "3 3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78
+        },
+        __self: this
+      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["XAxis"], {
+        dataKey: "name",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 79
+        },
+        __self: this
+      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["YAxis"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80
+        },
+        __self: this
+      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["Tooltip"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
+        },
+        __self: this
+      }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["Legend"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 82
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["Bar"], {
@@ -236,7 +296,7 @@ function (_React$Component) {
         fill: "#0288d1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 83
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["Bar"], {
@@ -244,7 +304,7 @@ function (_React$Component) {
         fill: "#03a9f4",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 84
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["Bar"], {
@@ -252,7 +312,7 @@ function (_React$Component) {
         fill: "#4fc3f7",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 85
         },
         __self: this
       }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_13__["Bar"], {
@@ -260,7 +320,7 @@ function (_React$Component) {
         fill: "#b3e5fc",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 86
         },
         __self: this
       })));
@@ -467,16 +527,10 @@ function (_React$Component) {
           lineNumber: 55
         },
         __self: this
-      }, __jsx(_linechart__WEBPACK_IMPORTED_MODULE_15__["default"], {
+      }, __jsx(_barchart__WEBPACK_IMPORTED_MODULE_14__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 56
-        },
-        __self: this
-      }), __jsx(_barchart__WEBPACK_IMPORTED_MODULE_14__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 57
         },
         __self: this
       }));

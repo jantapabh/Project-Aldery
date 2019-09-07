@@ -53,7 +53,6 @@ render() {
     return (
           
                 <div className="card-chart">
-                    <Linechart/>
                    <Barchart/>
                 </div>
             
