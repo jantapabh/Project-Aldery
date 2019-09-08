@@ -286,15 +286,17 @@ nav {
         margin-top: 1rem !important; } }
     .warp-card .card .card-img {
       width: 50%;
-      margin-left: 0.5rem;
+      margin: 0.5rem;
       display: flex;
       justify-content: center;
       cursor: pointer; }
       .warp-card .card .card-img img {
-        width: 5rem; }
+        width: 5rem;
+        height: 5rem; }
         @media (max-width: 1199.98px) {
           .warp-card .card .card-img img {
-            width: 4rem !important; } }
+            width: 4rem !important;
+            height: 4rem !important; } }
     .warp-card .card .card-conten {
       width: 100%;
       display: flex;
