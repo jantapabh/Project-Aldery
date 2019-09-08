@@ -22,7 +22,7 @@ class Home extends React.Component {
       card: [
         { name: "card1", img: "/static/grandfather.svg", text: "เพศชาย" },
         { name: "card2", img: "/static/old-woman.svg", text: "เพศหญิง" },
-        { name: "card3", img: "/static/couple.svg", text: "รวม" }]
+        { name: "card3", img: "/static/couple.svg", text: "รวม" },]
 
     }
   }
