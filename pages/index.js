@@ -2,8 +2,9 @@ import React from 'react'
 import Nav from '../components/nav'
 import '../styles/base.scss'
 import Sheetapi from '../config/api'
-import Card from '../components/layout/card';
-import Chart from '../components/chart/chart';
+import Cover from '../components/layout/cover';
+import Menu_icon from '../components/layout/menu-icon';
+import Carousel from '../components/layout/carousel'
 
 class Home extends React.Component {
 
@@ -11,19 +12,14 @@ class Home extends React.Component {
     super(props);
 
     this.state = {
-      activeImg: false,
+     
       icon: [
         { text: "หน่วยงานที่เกี่ยวข้อง", pic: "/static/bank.svg", href: "/", name: "icon1", pichover: "/static/bankhover.svg" },
         { text: "หน่วยงานดูแลผู้สูงอายุ", pic: "/static/department.svg", href: "/department", name: "icon2", pichover: "/static/departmenthover.svg" },
         { text: "เอกสารที่จำเป็น", pic: "/static/contract.svg", href: "/document", name: "icon3", pichover: "/static/docmenthover.svg" },
         { text: "กิจกรรม", pic: "/static/active.svg", href: "/active", name: "icon4", pichover: "/static/activehover.svg" }
 
-      ],
-      card: [
-        { name: "card1", img: "/static/grandfather.svg", text: "เพศชาย" },
-        { name: "card2", img: "/static/old-woman.svg", text: "เพศหญิง" },
-        { name: "card3", img: "/static/couple.svg", text: "รวม" },]
-
+      ]
     }
   }
 
@@ -37,6 +33,7 @@ class Home extends React.Component {
       <div className="warp-index">
         <Nav name="main" />
 
+<Carousel/>
 
         {/* <div className="warp-content" >
           <div className="content">
@@ -47,21 +44,12 @@ class Home extends React.Component {
           </div>
         </div> */}
 
-
-        {/* <Barchart/> */}
-
-
-        <div className="content-index">
-          <Card
-            card={this.state.card}
-          />
-
-          <Chart />
-        </div>
+        <Menu_icon
+          icon= {this.state.icon}
+        />
 
 
-
-
+      {/* <Cover/> */}
 
       </div>
     )

@@ -1,22 +1,34 @@
 import React from 'react'
-import Barchart from '../components/chart/barchart';
-import '../styles/base.scss'
-import Chart from '../components/chart/chart';
-import Radialchart from '../components/chart/radialchart';
+import '../styles/main.scss'
 import Nav from '../components/nav';
+import Card from '../components/layout/card';
+import Chart from '../components/chart/chart';
 
 class Main extends React.Component {
+
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+          card: [
+            { name: "card1", img: "/static/grandfather.svg", text: "เพศชาย" },
+            { name: "card2", img: "/static/old-woman.svg", text: "เพศหญิง" },
+            { name: "card3", img: "/static/couple.svg", text: "รวม" },]
+    
+        }
+      }
+
     render() {
         return (
-            <div>
-                <Nav name="about"/>
-                <div className="warp-main">
-                    <h2>จำนวนประชากรผู้สูงอายุของ 14 จังหวัดภาคใต้</h2>
-                </div>
+            <div className="warp-main">
+              <Nav/>
+                <div className="content-main">
+                    <Card
+                        card={this.state.card}
+                    />
 
-                <Chart />
-                <Barchart />
-                {/* <Radialchart/> */}
+                    <Chart />
+                </div>
 
 
             </div>

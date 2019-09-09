@@ -93,314 +93,136 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/chart/barchart.js":
-/*!**************************************!*\
-  !*** ./components/chart/barchart.js ***!
-  \**************************************/
+/***/ "./components/layout/carousel.js":
+/*!***************************************!*\
+  !*** ./components/layout/carousel.js ***!
+  \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/api */ "./config/api.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! recharts */ "recharts");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(recharts__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "reactstrap");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\carousel.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\chart\\barchart.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+const items = [{
+  src: '/static/bg.jpg',
+  altText: 'ประเทศไทยกับสังคมผู้สูงอายุ'
+}, {
+  src: '/static/carousel2.jpg',
+  altText: 'สังคมผู้สูงอายุกับการลงทุน'
+}, {
+  src: '/static/carousel3.jpg',
+  altText: 'สุขภาพแข็งเเรง สู่คุณภาพชีวิตที่ดี'
+}];
 
-
-
-
-class Barchart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
+class Carouselcade extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "list", async value => {
-      try {
-        this.list = await _config_api__WEBPACK_IMPORTED_MODULE_3__["default"].getSheet2(this.access_token, value);
-
-        for (let i = 0; i < this.list.length; i++) {
-          let value = await {
-            name: this.list[i][0],
-            อายุ60ถึง69ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][1].replace(",", "")),
-            อายุ70ถึง79ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][2].replace(",", "")),
-            อายุ80ถึง89ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][3].replace(",", "")),
-            อายุมากกว่าหรือเท่ากับ90ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][4].replace(",", "")),
-            รวม: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][5].replace(",", "")),
-            ชาย: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][6].replace(",", "")),
-            หญิง: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][7].replace(",", "")),
-            รวม: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][8].replace(",", ""))
-          };
-          this.setState(prevState => ({
-            data: [...prevState.data, value]
-          }));
-        }
-      } catch (err) {
-        console.log(err);
-      }
-    });
-
     this.state = {
-      data: []
+      activeIndex: 0
     };
+    this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
+    this.goToIndex = this.goToIndex.bind(this);
+    this.onExiting = this.onExiting.bind(this);
+    this.onExited = this.onExited.bind(this);
   }
 
-  async componentDidMount() {
-    let userOauth = JSON.parse(localStorage.getItem("myOauth"));
-    this.access_token = userOauth.data.access_token;
-    await this.list('!D2:L');
+  onExiting() {
+    this.animating = true;
+  }
+
+  onExited() {
+    this.animating = false;
+  }
+
+  next() {
+    if (this.animating) return;
+    const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
+    this.setState({
+      activeIndex: nextIndex
+    });
+  }
+
+  previous() {
+    if (this.animating) return;
+    const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
+    this.setState({
+      activeIndex: nextIndex
+    });
+  }
+
+  goToIndex(newIndex) {
+    if (this.animating) return;
+    this.setState({
+      activeIndex: newIndex
+    });
   }
 
   render() {
     const {
-      data
+      activeIndex
     } = this.state;
-    return __jsx("div", {
-      className: "warp-chart",
+    const slides = items.map(item => {
+      return __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["CarouselItem"], {
+        onExiting: this.onExiting,
+        onExited: this.onExited,
+        key: item.src,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        },
+        __self: this
+      }, __jsx("img", {
+        src: item.src,
+        alt: item.altText,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 74
+        },
+        __self: this
+      }));
+    });
+    return __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Carousel"], {
+      activeIndex: activeIndex,
+      next: this.next,
+      previous: this.previous,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 80
       },
       __self: this
-    }, __jsx("div", {
-      className: "chart",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 57
-      },
-      __self: this
-    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["BarChart"], {
-      width: 400,
-      height: 250,
-      data: data,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 58
-      },
-      __self: this
-    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["CartesianGrid"], {
-      strokeDasharray: "3 3",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 64
-      },
-      __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["XAxis"], {
-      dataKey: "name",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 65
-      },
-      __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["YAxis"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 66
-      },
-      __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Tooltip"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 67
-      },
-      __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Legend"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 68
-      },
-      __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
-      dataKey: "\u0E0A\u0E32\u0E22",
-      fill: "#0288d1",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 69
-      },
-      __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
-      dataKey: "\u0E2B\u0E0D\u0E34\u0E07",
-      fill: "#03a9f4",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 70
-      },
-      __self: this
-    }))), __jsx("div", {
-      className: "chart",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 74
-      },
-      __self: this
-    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["BarChart"], {
-      width: 400,
-      height: 250,
-      data: data,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 75
-      },
-      __self: this
-    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["CartesianGrid"], {
-      strokeDasharray: "3 3",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 81
-      },
-      __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["XAxis"], {
-      dataKey: "name",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 82
-      },
-      __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["YAxis"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 83
-      },
-      __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Tooltip"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 84
-      },
-      __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Legend"], {
+    }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["CarouselIndicators"], {
+      items: items,
+      activeIndex: activeIndex,
+      onClickHandler: this.goToIndex,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 85
       },
       __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
-      dataKey: "\u0E2D\u0E32\u0E22\u0E3860\u0E16\u0E36\u0E0769\u0E1B\u0E35",
-      fill: "#0288d1",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 86
-      },
-      __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
-      dataKey: "\u0E2D\u0E32\u0E22\u0E3870\u0E16\u0E36\u0E0779\u0E1B\u0E35",
-      fill: "#03a9f4",
+    }), slides, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["CarouselControl"], {
+      direction: "prev",
+      directionText: "Previous",
+      onClickHandler: this.previous,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 87
       },
       __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
-      dataKey: "\u0E2D\u0E32\u0E22\u0E3880\u0E16\u0E36\u0E0789\u0E1B\u0E35",
-      fill: "#4fc3f7",
+    }), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["CarouselControl"], {
+      direction: "next",
+      directionText: "Next",
+      onClickHandler: this.next,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 88
-      },
-      __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Bar"], {
-      dataKey: "\u0E2D\u0E32\u0E22\u0E38\u0E21\u0E32\u0E01\u0E01\u0E27\u0E48\u0E32\u0E2B\u0E23\u0E37\u0E2D\u0E40\u0E17\u0E48\u0E32\u0E01\u0E31\u0E1A90\u0E1B\u0E35",
-      fill: "#b3e5fc",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 89
-      },
-      __self: this
-    }))));
-  }
-
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Barchart);
-
-/***/ }),
-
-/***/ "./components/chart/chart.js":
-/*!***********************************!*\
-  !*** ./components/chart/chart.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/api */ "./config/api.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! recharts */ "recharts");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(recharts__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _barchart__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./barchart */ "./components/chart/barchart.js");
-/* harmony import */ var _linechart__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./linechart */ "./components/chart/linechart.js");
-
-
-var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\chart\\chart.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
-
-
-
-
-
-class Chart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
-  constructor(props) {
-    super(props);
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "list", async value => {
-      try {
-        this.list = await _config_api__WEBPACK_IMPORTED_MODULE_3__["default"].getSheet2(this.access_token, value);
-
-        for (let i = 0; i < this.list.length; i++) {
-          let value = await {
-            ชาย: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][6].replace(",", "")),
-            หญิง: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][7].replace(",", "")),
-            รวม: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][8].replace(",", ""))
-          };
-          this.setState(prevState => ({
-            dataGender: [...prevState.data, value]
-          }));
-        }
-      } catch (err) {
-        console.log(err);
-      }
-    });
-
-    this.state = {
-      dataAge: [],
-      dataGender: []
-    };
-  }
-
-  async componentDidMount() {
-    let userOauth = JSON.parse(localStorage.getItem("myOauth"));
-    this.access_token = userOauth.data.access_token; //  await this.list('!D2:L')
-  }
-
-  render() {
-    const {
-      dataAge,
-      dataGender
-    } = this.state;
-    return __jsx("div", {
-      className: "card-chart",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 55
-      },
-      __self: this
-    }, __jsx(_barchart__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 56
       },
       __self: this
     }));
@@ -408,354 +230,194 @@ class Chart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Chart);
+/* harmony default export */ __webpack_exports__["default"] = (Carouselcade);
 
 /***/ }),
 
-/***/ "./components/chart/linechart.js":
-/*!***************************************!*\
-  !*** ./components/chart/linechart.js ***!
-  \***************************************/
+/***/ "./components/layout/cover.js":
+/*!************************************!*\
+  !*** ./components/layout/cover.js ***!
+  \************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/api */ "./config/api.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! recharts */ "recharts");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(recharts__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\cover.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\chart\\linechart.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
-
-
-
-class Linechart extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
+class Cover extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   constructor(props) {
     super(props);
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "list", async value => {
-      try {
-        this.list = await _config_api__WEBPACK_IMPORTED_MODULE_3__["default"].getSheet2(this.access_token, value);
-
-        for (let i = 0; i < this.list.length; i++) {
-          let value = await {
-            name: this.list[i][0],
-            อายุ60ถึง69ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][1].replace(",", "")),
-            อายุ70ถึง79ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][2].replace(",", "")),
-            อายุ80ถึง89ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][3].replace(",", "")),
-            อายุมากกว่าหรือเท่ากับ90ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][4].replace(",", "")),
-            รวม: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][5].replace(",", "")),
-            ชาย: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][6].replace(",", "")),
-            หญิง: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][7].replace(",", "")),
-            รวม: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][8].replace(",", ""))
-          };
-          this.setState(prevState => ({
-            data: [...prevState.data, value]
-          }));
-        }
-      } catch (err) {
-        console.log(err);
-      }
-    });
-
-    this.state = {
-      data: []
-    };
-  }
-
-  async componentWillMount() {
-    let userOauth = JSON.parse(localStorage.getItem("myOauth"));
-    this.access_token = userOauth.data.access_token;
-    await this.list('!D2:L');
   }
 
   render() {
-    const {
-      data
-    } = this.state;
     return __jsx("div", {
+      className: "warp",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 12
       },
       __self: this
-    }, data ? __jsx("div", {
-      className: "warp-chart",
+    }, __jsx("div", {
+      className: "warp-bg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 13
       },
       __self: this
-    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["LineChart"], {
-      width: 500,
-      height: 200,
-      data: data,
+    }, __jsx("img", {
+      src: "/static/bg.jpg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 15
       },
       __self: this
-    }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["CartesianGrid"], {
-      strokeDasharray: "3 3",
+    }), __jsx("img", {
+      src: "/static/bg2.jpg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 16
       },
       __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["XAxis"], {
-      dataKey: "name",
-      padding: {
-        left: 10,
-        right: 10
-      },
+    }), __jsx("img", {
+      src: "/static/bg3.jpg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 17
       },
       __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["YAxis"], {
+    }), __jsx("img", {
+      src: "/static/bg4.jpg",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 18
       },
       __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Tooltip"], {
+    }), __jsx("div", {
+      className: "warp-text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 21
       },
       __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Legend"], {
+    }, __jsx("div", {
+      className: "text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 22
       },
       __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Line"], {
-      type: "monotone",
-      dataKey: "\u0E0A\u0E32\u0E22",
-      stroke: "#8884d8",
-      activeDot: {
-        r: 8
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 65
-      },
-      __self: this
-    }), __jsx(recharts__WEBPACK_IMPORTED_MODULE_4__["Line"], {
-      type: "monotone",
-      dataKey: "\u0E2B\u0E0D\u0E34\u0E07",
-      stroke: "#8884d8",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 66
-      },
-      __self: this
-    }))) : null);
+    }))));
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Linechart);
+/* harmony default export */ __webpack_exports__["default"] = (Cover);
 
 /***/ }),
 
-/***/ "./components/layout/card.js":
-/*!***********************************!*\
-  !*** ./components/layout/card.js ***!
-  \***********************************/
+/***/ "./components/layout/menu-icon.js":
+/*!****************************************!*\
+  !*** ./components/layout/menu-icon.js ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/api */ "./config/api.js");
-/* harmony import */ var react_countup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-countup */ "react-countup");
-/* harmony import */ var react_countup__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_countup__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\menu-icon.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
-var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\card.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
-
-
-
-class Card extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
-  constructor(props) {
-    super(props);
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "list", async value => {
-      try {
-        this.list = await _config_api__WEBPACK_IMPORTED_MODULE_3__["default"].getSheet2(this.access_token, value);
-
-        for (let i = 0; i < this.list.length; i++) {
-          let value = await {
-            ชาย: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][0].replace(",", "")),
-            หญิง: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][1].replace(",", "")),
-            รวม: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.list[i][2].replace(",", ""))
-          };
-          this.setState(prevState => ({
-            data: [...prevState.data, value]
-          }));
-        }
-      } catch (err) {
-        console.log(err);
-      }
-    });
-
-    this.state = {
-      data: []
-    };
-  }
-
-  async componentWillMount() {
-    let userOauth = JSON.parse(localStorage.getItem("myOauth"));
-    this.access_token = userOauth.data.access_token;
-    await this.list('!J2:L2');
-  }
-
+class Menu_icon extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   render() {
     return __jsx("div", {
-      className: "warp-card",
+      className: "warp-menu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 12
       },
       __self: this
-    }, !!this.props.card ? __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, {
+    }, __jsx("div", {
+      className: "menu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 13
       },
       __self: this
-    }, this.props.card.map((item, index) => {
-      return __jsx("div", {
-        key: index,
-        className: "card",
+    }, __jsx("div", {
+      className: "warp-icon",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, this.props.icon.map((item, index) => {
+      return __jsx("a", {
+        href: item.href,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 19
         },
         __self: this
       }, __jsx("div", {
-        className: "card-img",
+        className: "icon animated bounceInUp delay-1s",
+        key: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 20
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "icon-img",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
         },
         __self: this
       }, __jsx("img", {
-        src: item.img,
+        key: index,
+        src: item.pic,
         alt: item.name,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 22
         },
         __self: this
-      })), __jsx("div", {
-        className: "card-conten",
+      }), __jsx("img", {
+        className: "hover",
+        src: item.pichover,
+        alt: item.name,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 23
         },
         __self: this
-      }, __jsx("div", {
-        className: "card-text",
+      })), __jsx("h6", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 26
         },
         __self: this
-      }, __jsx("h5", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 67
-        },
-        __self: this
-      }, item.text)), __jsx("div", {
-        className: "card-data",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 69
-        },
-        __self: this
-      }, index == 0 ? __jsx("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 72
-        },
-        __self: this
-      }, this.state.data.map((item1, index1) => {
-        return __jsx("h1", {
-          key: index1,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 76
-          },
-          __self: this
-        }, item1.ชาย, " \u0E04\u0E19");
-      })) : index == 1 ? __jsx("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 83
-        },
-        __self: this
-      }, this.state.data.map((item2, index2) => {
-        return __jsx("h1", {
-          key: index2,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 87
-          },
-          __self: this
-        }, item2.หญิง, " \u0E04\u0E19");
-      })) : index == 2 ? __jsx("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 94
-        },
-        __self: this
-      }, this.state.data.map((item3, index3) => {
-        return __jsx("h1", {
-          key: index3,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 98
-          },
-          __self: this
-        }, __jsx(react_countup__WEBPACK_IMPORTED_MODULE_4___default.a, {
-          end: item3.รวม,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 98
-          },
-          __self: this
-        }), " \u0E04\u0E19");
-      })) : null)));
-    })) : null);
+      }, item.text)));
+    }))));
   }
 
 }
 
-Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(Card, "defaultProps", {
-  card: []
+Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(Menu_icon, "defaultProps", {
+  icon: []
 });
 
-/* harmony default export */ __webpack_exports__["default"] = (Card);
+/* harmony default export */ __webpack_exports__["default"] = (Menu_icon);
 
 /***/ }),
 
@@ -782,8 +444,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 const links = [{
-  href: '/',
-  label: 'Home'
+  href: '/main',
+  label: 'Main'
 }, {
   href: '/about',
   label: 'About'
@@ -892,20 +554,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         lineNumber: 52
       },
       __self: this
-    }, label)))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/login",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 59
-      },
-      __self: this
-    }, __jsx("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 60
-      },
-      __self: this
-    }, "Login")))));
+    }, label)))))));
   }
 
 }
@@ -1043,17 +692,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "core-js/library/fn/object/get-own-property-descriptor");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/parse-int.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/parse-int */ "core-js/library/fn/parse-int");
 
 /***/ }),
 
@@ -1725,11 +1363,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/base.scss */ "./styles/base.scss");
 /* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
-/* harmony import */ var _components_layout_card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/layout/card */ "./components/layout/card.js");
-/* harmony import */ var _components_chart_chart__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/chart/chart */ "./components/chart/chart.js");
+/* harmony import */ var _components_layout_cover__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/layout/cover */ "./components/layout/cover.js");
+/* harmony import */ var _components_layout_menu_icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/layout/menu-icon */ "./components/layout/menu-icon.js");
+/* harmony import */ var _components_layout_carousel__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/layout/carousel */ "./components/layout/carousel.js");
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -1741,7 +1381,6 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeImg: false,
       icon: [{
         text: "หน่วยงานที่เกี่ยวข้อง",
         pic: "/static/bank.svg",
@@ -1766,19 +1405,6 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         href: "/active",
         name: "icon4",
         pichover: "/static/activehover.svg"
-      }],
-      card: [{
-        name: "card1",
-        img: "/static/grandfather.svg",
-        text: "เพศชาย"
-      }, {
-        name: "card2",
-        img: "/static/old-woman.svg",
-        text: "เพศหญิง"
-      }, {
-        name: "card3",
-        img: "/static/couple.svg",
-        text: "รวม"
       }]
     };
   }
@@ -1792,37 +1418,30 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "warp-index",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 33
       },
       __self: this
     }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
       name: "main",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 34
       },
       __self: this
-    }), __jsx("div", {
-      className: "content-index",
+    }), __jsx(_components_layout_carousel__WEBPACK_IMPORTED_MODULE_7__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 36
       },
       __self: this
-    }, __jsx(_components_layout_card__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      card: this.state.card,
+    }), __jsx(_components_layout_menu_icon__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      icon: this.state.icon,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 47
       },
       __self: this
-    }), __jsx(_components_chart_chart__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 59
-      },
-      __self: this
-    })));
+    }));
   }
 
 }
@@ -1920,17 +1539,6 @@ module.exports = require("core-js/library/fn/object/get-own-property-descriptor"
 
 /***/ }),
 
-/***/ "core-js/library/fn/parse-int":
-/*!***********************************************!*\
-  !*** external "core-js/library/fn/parse-int" ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/parse-int");
-
-/***/ }),
-
 /***/ "next-server/dist/lib/router-context":
 /*!******************************************************!*\
   !*** external "next-server/dist/lib/router-context" ***!
@@ -2008,25 +1616,14 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ "react-countup":
-/*!********************************!*\
-  !*** external "react-countup" ***!
-  \********************************/
+/***/ "reactstrap":
+/*!*****************************!*\
+  !*** external "reactstrap" ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("react-countup");
-
-/***/ }),
-
-/***/ "recharts":
-/*!***************************!*\
-  !*** external "recharts" ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("recharts");
+module.exports = require("reactstrap");
 
 /***/ }),
 

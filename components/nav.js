@@ -3,7 +3,7 @@ import Link from 'next/link'
 import '../styles/base.scss'
 
 const links = [
-  { href: '/', label: 'Home' },
+  { href: '/main', label: 'Main' },
   { href: '/about', label: 'About' },
   { href: '/service', label: 'Service' },
   { href: '/contact', label: 'Contact' },
@@ -56,9 +56,9 @@ class Nav extends React.Component {
 
             ))}
 
-            <Link href="/login">
+            {/* <Link href="/login">
               <p>Login</p>
-            </Link>
+            </Link> */}
 
           </div>
 

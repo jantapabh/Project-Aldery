@@ -1,7 +1,15 @@
 .warp-main{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 2rem;
- 
+    height: 100vh ;
+    background-color: #F5F9FC;
+
+    .content-main{
+        width: 100%;
+        margin-top: 4rem;
+
+        @media (max-width: 575.98px) { 
+            margin-top: 1rem !important;
+            
+        }
+
+    }
 }

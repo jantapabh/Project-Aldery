@@ -14,8 +14,8 @@ class Cover extends React.Component {
 
                     <img src="/static/bg.jpg" />
                     <img src="/static/bg2.jpg" />
-                    <img src="/static/bg5.jpg" />
                     <img src="/static/bg3.jpg" />
+                    <img src="/static/bg4.jpg" />
 
 
                     <div className="warp-text">

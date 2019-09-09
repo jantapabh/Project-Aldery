@@ -11,20 +11,17 @@ const items = [
   {
     src: '/static/bg.jpg',
     altText: 'ประเทศไทยกับสังคมผู้สูงอายุ',
-    caption: '',
-    captionH: 'ประเทศไทยกับสังคมผู้สูงอายุ'
+ 
   },
   {
     src: '/static/carousel2.jpg',
     altText: 'สังคมผู้สูงอายุกับการลงทุน',
-    caption: '',
-    captionH: 'สังคมผู้สูงอายุกับการลงทุน'
+  
   },
   {
     src: '/static/carousel3.jpg',
     altText: 'สุขภาพแข็งเเรง สู่คุณภาพชีวิตที่ดี',
-    caption: '',
-    captionH: 'สุขภาพแข็งเเรง สู่คุณภาพชีวิตที่ดี',
+ 
   }
 ];
 
@@ -75,7 +72,6 @@ class  Carouselcade extends Component {
           key={item.src}
         >
           <img src={item.src} alt={item.altText} />
-          <CarouselCaption captionText={item.caption} captionHeader={item.captionH} />
         </CarouselItem>
       );
     });
