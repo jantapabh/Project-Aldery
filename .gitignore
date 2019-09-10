@@ -24,3 +24,4 @@ yarn-error.log*
 
 /out
 .next
+package-lock.json
