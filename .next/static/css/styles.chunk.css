@@ -128,20 +128,29 @@ nav {
       align-items: center;
       text-align: center; }
 
-@media (max-width: 767.98px) {
-  .carousel {
-    display: none; } }
-
-.carousel .carousel-inner {
-  height: 65vh; }
-  @media (max-width: 767.98px) {
-    .carousel .carousel-inner {
-      height: 0; } }
-  .carousel .carousel-inner .carousel-item img {
-    width: 100%; }
-  .carousel .carousel-inner .carousel-caption {
-    position: fixed;
-    top: 50vh; }
+.warp-index {
+  height: 100vh; }
+  .warp-index .slide {
+    height: 65vh !important; }
+    @media (max-width: 1199.98px) {
+      .warp-index .slide {
+        height: 40vh !important; } }
+    .warp-index .slide .carousel-indicators {
+      height: 5vh; }
+      @media (max-width: 1199.98px) {
+        .warp-index .slide .carousel-indicators {
+          height: 4vh !important; } }
+    .warp-index .slide .carousel-inner {
+      height: 65vh; }
+      @media (max-width: 767.98px) {
+        .warp-index .slide .carousel-inner {
+          height: 0; } }
+      @media (max-width: 1199.98px) {
+        .warp-index .slide .carousel-inner {
+          height: 40vh !important; } }
+      .warp-index .slide .carousel-inner .carousel-item img {
+        width: 100%;
+        height: 65vh; }
 
 .warp-chart {
   display: flex !important;
@@ -249,6 +258,7 @@ nav {
       flex-direction: column !important;
       align-items: center !important; } }
   .warp-card .card {
+    cursor: pointer;
     width: 100%;
     display: flex;
     flex-direction: row !important;

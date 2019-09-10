@@ -14,6 +14,7 @@
 
     
     .card{
+        cursor: pointer;
         width: 100%;
         display: flex;
         flex-direction: row !important;
@@ -57,14 +58,10 @@
             align-items: flex-end;
           
 
-           .card-text{
-
-           
-            }
-
         }
         
         }
+
     }
 
     .card-chart{

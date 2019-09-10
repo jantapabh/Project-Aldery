@@ -13,7 +13,7 @@ class Home extends React.Component {
     super(props);
 
     this.state = {
-     
+
       icon: [
         { text: "หน่วยงานที่เกี่ยวข้อง", pic: "/static/bank.svg", href: "/", name: "icon1", pichover: "/static/bankhover.svg" },
         { text: "หน่วยงานดูแลผู้สูงอายุ", pic: "/static/department.svg", href: "/department", name: "icon2", pichover: "/static/departmenthover.svg" },
@@ -32,10 +32,9 @@ class Home extends React.Component {
 
     return (
       <div className="warp-index">
-        <Nav name="/" />
-  
+        <Nav />
 
- <Carousel/>
+        <Carousel />
 
         {/* <div className="warp-content" >
           <div className="content">
@@ -47,11 +46,11 @@ class Home extends React.Component {
         </div> */}
 
         <Menu_icon
-          icon= {this.state.icon}
+          icon={this.state.icon}
         />
 
 
-      {/* <Cover/> */}
+        {/* <Cover/> */}
 
       </div>
     )

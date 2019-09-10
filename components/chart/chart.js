@@ -49,7 +49,6 @@ class Chart extends React.Component {
 
 
 render() {
-    const { dataAge, dataGender } = this.state
     return (
           
                 <div className="card-chart">
