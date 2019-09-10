@@ -565,10 +565,7 @@ var links = [{
 }, {
   href: '/contact',
   label: 'Contact'
-}].map(function (link) {
-  link.key = "nav-link-".concat(link.href, "-").concat(link.label);
-  return link;
-});
+}];
 
 var Nav =
 /*#__PURE__*/
@@ -588,46 +585,46 @@ function (_React$Component) {
         return __jsx("nav", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26
+            lineNumber: 22
           },
           __self: this
         }, __jsx("div", {
           className: "warp-back",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27
+            lineNumber: 23
           },
           __self: this
         }, __jsx("ul", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29
+            lineNumber: 25
           },
           __self: this
         }, __jsx("div", {
           className: "back",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 30
+            lineNumber: 26
           },
           __self: this
         }, __jsx("li", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 31
+            lineNumber: 27
           },
           __self: this
         }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
           href: "/",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 28
           },
           __self: this
         }, __jsx("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33
+            lineNumber: 29
           },
           __self: this
         }, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A")))))));
@@ -636,47 +633,44 @@ function (_React$Component) {
       return __jsx("nav", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 41
         },
         __self: this
       }, __jsx("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 43
         },
         __self: this
       }, __jsx("div", {
         className: "warp-manu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 44
         },
         __self: this
-      }, links.map(function (_ref) {
-        var key = _ref.key,
-            href = _ref.href,
-            label = _ref.label;
+      }, links.map(function (item, index) {
         return __jsx("li", {
-          key: key,
+          key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 50
+            lineNumber: 47
           },
           __self: this
         }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
-          href: href,
+          href: item.href,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 51
+            lineNumber: 48
           },
           __self: this
         }, __jsx("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 52
+            lineNumber: 49
           },
           __self: this
-        }, label)));
+        }, item.label)));
       }))));
     }
   }]);

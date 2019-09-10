@@ -7,11 +7,7 @@ const links = [
   { href: '/about', label: 'About' },
   { href: '/service', label: 'Service' },
   { href: '/contact', label: 'Contact' },
-].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
-  return link
-})
-
+]
 
 class Nav extends React.Component {
 
@@ -46,15 +42,19 @@ class Nav extends React.Component {
         {/* <img src="/static/logo.png" alt="logo" /> */}
         <ul>
           <div className="warp-manu">
-            {links.map(({ key, href, label }) => (
-              <li key={key}>
-                <Link href={href}>
-                  <p>{label}</p>
-                </Link>
+            {links.map((item, index) => {
+              return (
+                <li key={index}>
+                  <Link href={item.href}>
+                    <p>{item.label}</p>
+                  </Link>
 
-              </li>
+                </li>
+              )
+            }
 
-            ))}
+
+            )}
 
             {/* <Link href="/login">
               <p>Login</p>
