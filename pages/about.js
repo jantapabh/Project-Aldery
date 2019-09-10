@@ -1,6 +1,8 @@
 import React from 'react'
 import '../styles/base.scss'
 import Nav from '../components/nav'
+import Linechart from '../components/chart/linechart';
+import Chart from '../components/chart/chart';
 
 
 
@@ -14,36 +16,30 @@ class About extends React.Component {
     render() {
 
         return (
-            <div>
+            <div className="warp-bar">
                 <Nav name="about" />
-                <div className="warp-about">
                
-                    {/* <div className="content-about">
-                        <div className="content">
-
-                            <h3>ประเทศไทยกับสังคมผู้สูงอายุ</h3>
-                            <p>สังคมผู้สูงอายุ คือ สังคมที่มีประชากรอายุ 60 ปีขึ้นไป
-                            ในอัตราเท่ากับ หรือมากกว่าร้อยละ
-                            10 ของประชากรในพื้นที่นั้น
-                        </p>
-
-                        </div>
-
-                    </div> */}
-
-
-                    <div className="about-chart">
-                        <div className="chart">
-
+                    <div className="warp-content" >
+                        <div className="text-content">
+                            <h2 >สังคมผู้สูงอายุ</h2>
+                            <h6>คือ สังคมที่มีประชากรอายุ 60 ปีขึ้นไป ในอัตราเท่ากับ หรือมากกว่าร้อยละ 10 ของประชากรในพื้นที่นั้น</h6>
                         </div>
                     </div>
 
+                    <div className="line-chart">
+                        <Linechart/>
+                    </div>
+               
+                         
+                 
 
-                </div>
+                           
+                            
+                   
 
+            
 
-
-            </div>
+            </div >
         )
     }
 }

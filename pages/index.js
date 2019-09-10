@@ -30,29 +30,14 @@ class Home extends React.Component {
 
     return (
       <div className="warp-index">
-        <Nav />
+        <Nav name="/"/>
 
         <Carousel />
-
-        {/* <div className="warp-content" >
-          <div className="content"></div>
-          <div className="content">
-            <h2 >เว็บฐานข้อมูลผู้สูงอายุภายในจังหวัดภูเก็ต</h2>
-           
-
-          </div>
-
-        </div> */}
-
-
-
 
         <Menu_icon
           icon={this.state.icon}
         />
 
-
-        {/* <Cover/> */}
 
       </div>
     )

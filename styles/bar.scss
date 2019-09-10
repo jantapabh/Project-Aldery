@@ -1,30 +1,37 @@
-.warp-about{
-    .content-about{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin: 2rem 1rem;
+.warp-bar{
+    width: 100%;
+    height: 100vh;
+}
 
-        .content{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            
-        }
-    }
-        
-        
-    .about-chart{
-        width: 100%;
+.warp-content{
+    display: flex;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    
+    .text-content{
         display: flex;
         flex-direction: column;
-        .chart{
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+        align-items: center;
+        margin-top: 2rem ;
     }
 }
 
+.service-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+
+    .content{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 2rem;
+        h6{
+            text-align: start;
+            margin: 1rem;
+        }
+
+    }
+}

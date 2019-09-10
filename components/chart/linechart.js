@@ -16,26 +16,19 @@ class Linechart extends React.Component {
     async componentWillMount() {
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.list('!D2:L')
+        await this.list('!B2:D15')
     }
     list = async (value) => {
 
         try {
 
-            this.list = await Sheetapi.getSheet2(this.access_token, value)
+            this.list = await Sheetapi.getSheet1(this.access_token, value)
 
             for (let i = 0; i < this.list.length; i++) {
                 let value = await {
                     name: this.list[i][0],
-                    อายุ60ถึง69ปี: parseInt(this.list[i][1].replace(",", "")),
-                    อายุ70ถึง79ปี: parseInt(this.list[i][2].replace(",", "")),
-                    อายุ80ถึง89ปี: parseInt(this.list[i][3].replace(",", "")),
-                    อายุมากกว่าหรือเท่ากับ90ปี: parseInt(this.list[i][4].replace(",", "")),
-                    รวม: parseInt(this.list[i][5].replace(",", "")),
-                    ชาย: parseInt(this.list[i][6].replace(",", "")),
-                    หญิง: parseInt(this.list[i][7].replace(",", "")),
-                    รวม: parseInt(this.list[i][8].replace(",", "")),
-
+                    ชาย60ปีขึ้นไป: parseInt(this.list[i][1].replace(",", "")),
+                    หญิง60ปีขึ้นไป: parseInt(this.list[i][2].replace(",", "")),
                 }
                 this.setState(prevState => ({
                     data: [...prevState.data, value]
@@ -48,28 +41,20 @@ class Linechart extends React.Component {
     }
 
     render() {
-
         const { data } = this.state
         return (
-            <div>
-                {
-                    data ?
+                <div className="warp-chart">
+                    <LineChart width={1000} height={500} data={data}>
+                        <CartesianGrid strokeDasharray="3 3"/>
+                        <XAxis dataKey="name"  padding={{ left: 30, right: 30 }} />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Line type="monotone" dataKey="ชาย60ปีขึ้นไป" stroke="#8884d8" activeDot={{ r: 8 }} />
+                        <Line type="monotone" dataKey="หญิง60ปีขึ้นไป" stroke="#82ca9d" />
+                    </LineChart>
+                </div>
 
-                        <div className="warp-chart">
-                            <LineChart width={500} height={200} data={data}>
-                                <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey="name" padding={{ left: 10, right: 10 }} />
-                                <YAxis />
-                                <Tooltip />
-                                <Legend />
-                                <Line type="monotone" dataKey="ชาย" stroke="#8884d8" activeDot={{ r: 8 }} />
-                                <Line type="monotone" dataKey="หญิง" stroke="#8884d8" />
-                            </LineChart>
-                        </div>
-                        : null
-                }
-
-            </div>
         )
     }
 }

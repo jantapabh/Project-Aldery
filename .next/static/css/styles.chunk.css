@@ -39,19 +39,20 @@ nav {
       margin-block-start: 0;
       margin-block-end: 0;
       padding-inline-start: 10px; }
-      nav .warp-back ul .back {
+      nav .warp-back ul .warp-manu {
         display: flex;
         flex-direction: row; }
-        nav .warp-back ul .back li {
+        nav .warp-back ul .warp-manu li {
           cursor: pointer;
-          display: flex;
-          padding: 3px 10px; }
-          nav .warp-back ul .back li p {
-            color: black;
-            margin: 0.5rem 0.5rem; }
-          nav .warp-back ul .back li p:hover {
-            color: #bedadc;
-            margin: 0.5rem 0.5rem; }
+          display: flex; }
+          nav .warp-back ul .warp-manu li p {
+            color: black; }
+          nav .warp-back ul .warp-manu li p:hover {
+            color: #bedadc; }
+      nav .warp-back ul p {
+        cursor: pointer;
+        color: #03a9f4;
+        margin: 0.5rem 0.5rem; }
 
 .warp {
   width: 100%;
@@ -166,25 +167,37 @@ nav {
     .warp-chart .chart .recharts-wrapper {
       cursor: pointer !important; }
 
-.warp-about .content-about {
+.line-chart .recharts-wrapper .recharts-surface {
+  width: 1013px !important; }
+
+.warp-bar {
+  width: 100%;
+  height: 100vh; }
+
+.warp-content {
+  display: flex;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-right: 2rem; }
+  .warp-content .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem; }
+
+.service-content {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 2rem 1rem; }
-  .warp-about .content-about .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-
-.warp-about .about-chart {
-  width: 100%;
-  display: flex;
-  flex-direction: column; }
-  .warp-about .about-chart .chart {
+  margin: 5rem 0; }
+  .service-content .content {
     width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    margin: 0 2rem; }
+    .service-content .content h6 {
+      text-align: start;
+      margin: 1rem; }
 
 .warp-menu {
   display: flex;

@@ -59,7 +59,6 @@ class Barchart extends React.Component {
                         width={400}
                         height={250}
                         data={data}
-
                     >
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="name" />
@@ -89,10 +88,6 @@ class Barchart extends React.Component {
                         <Bar dataKey="อายุมากกว่าหรือเท่ากับ90ปี" fill="#b3e5fc" />
                     </BarChart>
                 </div>
-
-
-
-
             </div>
         )
     }
