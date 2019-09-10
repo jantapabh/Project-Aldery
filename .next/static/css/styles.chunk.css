@@ -1,3 +1,13 @@
+.warp-main {
+  height: 100vh;
+  background-color: #F5F9FC; }
+  .warp-main .content-main {
+    width: 100%;
+    margin-top: 4rem; }
+    @media (max-width: 575.98px) {
+      .warp-main .content-main {
+        margin-top: 1rem !important; } }
+
 nav {
   display: flex;
   width: 100%;
