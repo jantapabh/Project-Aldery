@@ -6,7 +6,7 @@
 @import './menu-icon.scss';
 @import './card.scss';
 @import './main.scss';
-@import './sild.scss';
+
 
 $font : 'Prompt', sans-serif ;
 
@@ -89,7 +89,7 @@ p{
 text{
     font-family: $font;
     color: gray;
-    margin: 1rem 0 !important;
+    margin: 0.5rem 0 !important;
     font-size: 1.2rem;
 }
 

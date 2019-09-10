@@ -2,10 +2,8 @@ import React from 'react'
 import Nav from '../components/nav'
 import '../styles/base.scss'
 import Sheetapi from '../config/api'
-import Cover from '../components/layout/cover';
 import Menu_icon from '../components/layout/menu-icon';
 import Carousel from '../components/layout/carousel'
-import Sild from '../components/layout/slid';
 
 class Home extends React.Component {
 
@@ -37,13 +35,17 @@ class Home extends React.Component {
         <Carousel />
 
         {/* <div className="warp-content" >
+          <div className="content"></div>
           <div className="content">
-            <h1  >ยินดีต้อนรับเข้าสู่</h1>
-            <h2 >เว็บฐานข้อมูล ผู้สูงอายุภายในจังหวัดภูเก็ต</h2>
-            <text >จากการคาดการณ์ โดยสำนักงานสถิติจะพบว่า </text>
-            <text >เเนวโน้มของจำนวนผู้สูงอายุที่เพิ่มสูงขึ้นเรื่อยๆ จะส่งผลให้ประเทศเข้าสู่สภาวะ "สังคมผู้สูงอายุ" อย่างสมบูรณ์</text>
+            <h2 >เว็บฐานข้อมูลผู้สูงอายุภายในจังหวัดภูเก็ต</h2>
+           
+
           </div>
+
         </div> */}
+
+
+
 
         <Menu_icon
           icon={this.state.icon}
