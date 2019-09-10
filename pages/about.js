@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/base.scss'
 import Nav from '../components/nav'
-import BG from '../components/layout/fadePicter';
+
 
 
 class About extends React.Component {
@@ -17,7 +17,7 @@ class About extends React.Component {
             <div>
                 <Nav name="about" />
                 <div className="warp-about">
-                    <BG />
+               
                     {/* <div className="content-about">
                         <div className="content">
 
