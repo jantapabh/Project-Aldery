@@ -5,6 +5,7 @@ import Sheetapi from '../config/api'
 import Cover from '../components/layout/cover';
 import Menu_icon from '../components/layout/menu-icon';
 import Carousel from '../components/layout/carousel'
+import Sild from '../components/layout/slid';
 
 class Home extends React.Component {
 
@@ -32,8 +33,9 @@ class Home extends React.Component {
     return (
       <div className="warp-index">
         <Nav name="main" />
+   
 
-<Carousel/>
+ <Carousel/>
 
         {/* <div className="warp-content" >
           <div className="content">

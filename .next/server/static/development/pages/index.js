@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -418,6 +418,102 @@ Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODUL
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (Menu_icon);
+
+/***/ }),
+
+/***/ "./components/layout/slid.js":
+/*!***********************************!*\
+  !*** ./components/layout/slid.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_animated_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-animated-slider */ "react-animated-slider");
+/* harmony import */ var react_animated_slider__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_animated_slider__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\slid.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const content = [{
+  title: 'Vulputate Mollis Ultricies Fermentum Parturient',
+  description: 'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.',
+  button: 'Read More',
+  image: '/static/bg.jpg'
+}, {
+  title: 'Tortor Dapibus Commodo Aenean Quam',
+  description: 'Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.',
+  button: 'Discover',
+  image: '/static/bg2.jpg'
+}, {
+  title: 'Phasellus volutpat metus',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.',
+  button: 'Buy now',
+  image: '/static/bg3.jpg'
+}];
+
+class Sild extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, __jsx(react_animated_slider__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      className: "slider-wrapper",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, content.map((item, index) => {
+      return __jsx("div", {
+        key: index,
+        className: "slider-content",
+        style: {
+          background: `url('${item.image}') no-repeat center center`
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "inner",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44
+        },
+        __self: this
+      }, __jsx("h1", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45
+        },
+        __self: this
+      }, item.title), __jsx("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        },
+        __self: this
+      }, item.description), __jsx("button", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47
+        },
+        __self: this
+      }, item.button)));
+    })));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Sild);
 
 /***/ }),
 
@@ -1366,9 +1462,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout_cover__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/layout/cover */ "./components/layout/cover.js");
 /* harmony import */ var _components_layout_menu_icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/layout/menu-icon */ "./components/layout/menu-icon.js");
 /* harmony import */ var _components_layout_carousel__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/layout/carousel */ "./components/layout/carousel.js");
+/* harmony import */ var _components_layout_slid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/layout/slid */ "./components/layout/slid.js");
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -1418,27 +1516,27 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "warp-index",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 34
       },
       __self: this
     }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
       name: "main",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 35
       },
       __self: this
     }), __jsx(_components_layout_carousel__WEBPACK_IMPORTED_MODULE_7__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 38
       },
       __self: this
     }), __jsx(_components_layout_menu_icon__WEBPACK_IMPORTED_MODULE_6__["default"], {
       icon: this.state.icon,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 49
       },
       __self: this
     }));
@@ -1461,7 +1559,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -1613,6 +1711,17 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-animated-slider":
+/*!****************************************!*\
+  !*** external "react-animated-slider" ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-animated-slider");
 
 /***/ }),
 
