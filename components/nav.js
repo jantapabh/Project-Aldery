@@ -4,9 +4,7 @@ import '../styles/base.scss'
 
 const links = [
   { href: '/main', label: 'Main' },
-  { href: '/about', label: 'About' },
-  { href: '/service', label: 'Service' },
-  { href: '/contact', label: 'Contact' },
+  
 ]
 
 class Nav extends React.Component {
