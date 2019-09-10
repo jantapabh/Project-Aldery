@@ -1,3 +1,13 @@
+.warp-main {
+  height: 100vh;
+  background-color: #F5F9FC; }
+  .warp-main .content-main {
+    width: 100%;
+    margin-top: 4rem; }
+    @media (max-width: 575.98px) {
+      .warp-main .content-main {
+        margin-top: 1rem !important; } }
+
 nav {
   display: flex;
   width: 100%;
@@ -172,7 +182,8 @@ nav {
 
 .warp-bar {
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  background-color: #F5F9FC; }
 
 .warp-content {
   display: flex;
@@ -188,16 +199,25 @@ nav {
 .service-content {
   width: 100%;
   display: flex;
-  justify-content: center;
-  margin: 5rem 0; }
-  .service-content .content {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 2rem; }
-    .service-content .content h6 {
-      text-align: start;
-      margin: 1rem; }
+  margin: 5rem 1rem; }
+  .service-content .card {
+    width: 25rem;
+    border-radius: 1rem;
+    margin: 0 0.5rem; }
+    .service-content .card .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .service-content .card .content img {
+        margin: 1.5rem;
+        width: 10rem;
+        height: 10rem; }
+      .service-content .card .content .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .service-content .card .content .card-body a h6 {
+          color: white !important; }
 
 .warp-menu {
   display: flex;
