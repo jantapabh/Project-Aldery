@@ -555,41 +555,35 @@ const links = [{
 
 class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   render() {
-    if (this.props.name != "/") {
-      return __jsx("nav", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        },
-        __self: this
-      }, __jsx("div", {
-        className: "warp-back",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        },
-        __self: this
-      }, __jsx("ul", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25
-        },
-        __self: this
-      }, __jsx("div", {
-        className: "back",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26
-        },
-        __self: this
-      }, __jsx("li", {
+    return __jsx("nav", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }, __jsx("ul", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "warp-manu",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      },
+      __self: this
+    }, links.map((item, index) => {
+      return __jsx("li", {
+        key: index,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 27
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-        href: "/",
+        href: item.href,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 28
@@ -599,49 +593,6 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 29
-        },
-        __self: this
-      }, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A")))))));
-    }
-
-    return __jsx("nav", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 41
-      },
-      __self: this
-    }, __jsx("ul", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 43
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "warp-manu",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 44
-      },
-      __self: this
-    }, links.map((item, index) => {
-      return __jsx("li", {
-        key: index,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 47
-        },
-        __self: this
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-        href: item.href,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 48
-        },
-        __self: this
-      }, __jsx("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 49
         },
         __self: this
       }, item.label)));

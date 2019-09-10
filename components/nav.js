@@ -17,26 +17,6 @@ class Nav extends React.Component {
 
   render() {
 
-    if (this.props.name != "/") {
-      return (
-        <nav>
-          <div className="warp-back" >
-            {/* <img src="/static/logo.png" alt="logo" /> */}
-            <ul>
-              <div className="back">
-                <li>
-                  <Link href="/">
-                    <p>ย้อนกลับ</p>
-                  </Link>
-                </li>
-              </div>
-            </ul>
-          </div>
-
-        </nav>
-      )
-    }
-
     return (
       <nav>
         {/* <img src="/static/logo.png" alt="logo" /> */}
@@ -53,12 +33,7 @@ class Nav extends React.Component {
               )
             }
 
-
             )}
-
-            {/* <Link href="/login">
-              <p>Login</p>
-            </Link> */}
 
           </div>
 
