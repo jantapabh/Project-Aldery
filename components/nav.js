@@ -21,7 +21,7 @@ class Nav extends React.Component {
 
   render() {
 
-    if (this.props.name != "main") {
+    if (this.props.name != "/") {
       return (
         <nav>
           <div className="warp-back" >

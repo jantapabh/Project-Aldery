@@ -558,7 +558,7 @@ const links = [{
 
 class Nav extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   render() {
-    if (this.props.name != "main") {
+    if (this.props.name != "/") {
       return __jsx("nav", {
         __source: {
           fileName: _jsxFileName,
@@ -1520,7 +1520,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __self: this
     }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      name: "main",
+      name: "/",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 35

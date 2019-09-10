@@ -32,7 +32,7 @@ class Home extends React.Component {
 
     return (
       <div className="warp-index">
-        <Nav name="main" />
+        <Nav name="/" />
   
 
  <Carousel/>

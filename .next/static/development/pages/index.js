@@ -584,7 +584,7 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Nav, [{
     key: "render",
     value: function render() {
-      if (this.props.name != "main") {
+      if (this.props.name != "/") {
         return __jsx("nav", {
           __source: {
             fileName: _jsxFileName,
@@ -27630,7 +27630,7 @@ function (_React$Component) {
         },
         __self: this
       }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        name: "main",
+        name: "/",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 35
