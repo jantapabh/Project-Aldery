@@ -1,6 +1,7 @@
 import React from 'react'
+import Link from 'next/link'
 
-class cardService extends React.Component {
+class CardService extends React.Component {
 
     static defaultProps = {
         card: []
@@ -13,14 +14,31 @@ class cardService extends React.Component {
                 {
                     this.props.card.map((item, index) => {
                         return (
-                            <div key={index} className="card">
-                                <div className="content">
-                                    <img src={item.img} alt={item.name} />
-                                    <div className="card-body">
-                                        <h5 className="card-title">{item.name}</h5>
-                                        <p className="card-text">{item.text}</p>
-                                        <a href={item.link} className="btn btn-primary" ><h6>{item.name}</h6></a>
-                                    </div>
+                            // <div class="card" >
+                            //     <div class="card-header">
+                            //         <h6>{item.featured}</h6>
+                            //     </div>
+                            //     <ul class="list-group list-group-flush">
+                            //         <Link href="/">
+                            //             <li class="list-group-item"><p>{item.head}</p></li>
+                            //         </Link>
+                            //         {
+                            //             !!item.head2 ?
+                            //                 <Link href="/">
+                            //                     <li class="list-group-item"><p>{item.head2}</p></li>
+                            //                 </Link>
+                            //                 :
+                            //                 null
+                            //         }
+
+
+                            //     </ul>
+                            // </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">{item.title}</h5>
+                                    <p class="card-text">{item.text}</p>
+                                    <a href={item.link} class="btn btn-primary"><h6>Go somewhere</h6></a>
                                 </div>
                             </div>
                         )
@@ -31,4 +49,4 @@ class cardService extends React.Component {
         )
     }
 }
-export default cardService;
+export default CardService;

@@ -1,8 +1,7 @@
 import React from 'react'
 import '../styles/base.scss'
 import Nav from '../components/nav';
-import cardService from '../components/layout/cardService';
-
+import CardService from '../components/layout/cardService';
 
 class Service extends React.Component {
 
@@ -10,16 +9,20 @@ class Service extends React.Component {
         super(props);
 
         this.state = {
-            list: [
-                { name: "กรมกิจการผู้สูงอายุ", img: "/static/logo-about.png", text: "มีภารกิจเกี่ยวกับการส่งเสริมและพัฒนาศักยภาพ การจัดสวัสดิการ และการคุ้มครองพิทักษ์สิทธิผู้สูงอายุ", link: "http://www.dop.go.th/th" },
-                { name: "กองทุนผู้สูงอายุ", img: "/static/logo-about2.jpg", text: " เพื่อเป็นทุนใช้จ่ายเกี่ยวกับการคุ้มครอง การส่งเสริม และการสนับสนุน ผู้สูงอายุ ให้มีศักยภาพ ความมั่นคง และมีคุณภาพชีวิตที่ดี", link: "http://www.olderfund.dop.go.th/" },
-                { name: "คนใจดี", img: "/static/logo-about3.png", text: "เป็นศูนย์ส่งเสริมการให้และการอาสาช่วยเหลือสังคม ", link: "http://www.konjaidee.org/" },
-            ]
+            // list: [
+            //   {featured:"หน่วยงานที่เกี่ยวข้อง",head:"หน่วยงานภาครัฐ",head2:"หน่วยงานเอกชน"},
+            //   {featured:"กองทุน",head:"รัฐบาล",head2:"เอกชน"},
+            //   {featured:"สถานพยาบาล",head:"รัฐบาล",head2:"เอกชน"},
+            // ]
+
+            list: [{ title: "หน่วยงานที่เกี่ยวข้อง", text: "ทั้งภาครัฐ เเละเอกชน", link: "" },
+            { title: "กองทุน", text: "ทั้งภาครัฐ เเละเอกชน", link: "" },
+            { title: "สถานพยาบาล", text: "โรงพยาบาลใกล้เคียง เเละสถานดูเเลผู้สูงอายุ", link: "" }]
         }
     }
 
     render() {
-        
+
         return (
             <div>
                 <Nav name="service" />
@@ -32,7 +35,7 @@ class Service extends React.Component {
                     </div>
 
                     <div className="service-content">
-                        <cardService
+                        <CardService
                             card={this.state.list}
                         />
                     </div>
