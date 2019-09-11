@@ -49,6 +49,10 @@ class Card extends React.Component {
 
     render() {
 
+        if(this.state.data == null){
+            window.location.href="/"
+        }
+
         return (
             <div className="warp-card">
 
