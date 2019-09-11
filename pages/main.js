@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/main.scss'
 import Nav from '../components/nav';
-import Card from '../components/layout/card';
+import Card from '../components/layout/card-data';
 import Chart from '../components/chart/chart';
 
 class Main extends React.Component {

@@ -1,5 +1,4 @@
-
-
+//Main
 .warp-card{
     height: 15vh;
     display: flex;
@@ -100,9 +99,6 @@
             }
         }
     }
-    
-    
-
     }
 
     .card-chart{
@@ -111,3 +107,42 @@
         justify-content: center;
      
     }
+
+//Service
+.service-content{
+    width: 100%;
+    display: flex;
+ 
+    margin: 5rem 1rem;
+
+        .card{
+            width: 25rem;
+            border-radius: 1rem;
+            margin: 0 0.5rem;
+
+            .content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              img{
+              margin: 1.5rem;
+                width: 10rem;
+                height: 10rem;
+            } 
+            
+            .card-body{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                a{
+                    h6{
+                        color: white !important;
+                    }
+                }
+            }
+            }
+            
+            
+        }
+}

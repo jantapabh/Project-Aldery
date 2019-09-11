@@ -1,10 +1,11 @@
 import React from 'react'
 
-class card extends React.Component {
+class cardService extends React.Component {
 
     static defaultProps = {
         card: []
     }
+
 
     render() {
         return (
@@ -12,7 +13,7 @@ class card extends React.Component {
                 {
                     this.props.card.map((item, index) => {
                         return (
-                            <div className="card">
+                            <div key={index} className="card">
                                 <div className="content">
                                     <img src={item.img} alt={item.name} />
                                     <div className="card-body">
@@ -30,4 +31,4 @@ class card extends React.Component {
         )
     }
 }
-export default card;
+export default cardService;
