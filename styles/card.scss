@@ -1,19 +1,24 @@
 
 
 .warp-card{
-  
     display: flex;
     justify-content: center;
     margin: 0 1.5rem;
+    margin-bottom: 2rem;
     @media (max-width: 575.98px) { 
         display: flex;
         flex-direction: column !important;
         align-items: center !important;
         
     }
+   
 
-    
-    .card{
+
+
+    .hover-card{
+        width: 100%;
+        margin: 1.5rem;
+        .card{
         cursor: pointer;
         width: 100%;
         display: flex;
@@ -61,10 +66,38 @@
         }
         
         }
+    }
+
+    .hover-card.one:hover {
+        @media (min-width: 1199.98px) {
+            .card{
+                padding: 1.5rem;
+            }
+        }
+    }
+
+    .hover-card.two:hover {
+        @media (min-width: 1199.98px) {
+            .card{
+                padding: 1.5rem;
+            }
+        }
+    }
+
+    .hover-card.three:hover {
+        @media (min-width: 1199.98px) {
+            .card{
+                padding: 1.5rem;
+            }
+        }
+    }
+    
+    
 
     }
 
     .card-chart{
+      
         display: flex;
         justify-content: center;
      
