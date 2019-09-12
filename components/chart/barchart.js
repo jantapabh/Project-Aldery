@@ -17,7 +17,7 @@ class Barchart extends React.Component {
 
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.list('!D2:L')
+        await this.list('sheets!D2:L')
     }
 
     list = async (value) => {
@@ -25,6 +25,7 @@ class Barchart extends React.Component {
         try {
 
             this.list = await Sheetapi.getSheet2(this.access_token, value)
+            
 
             for (let i = 0; i < this.list.length; i++) {
                 let value = await {

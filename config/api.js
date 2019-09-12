@@ -21,6 +21,7 @@ async function getSheet2(token,col) {
         {
             headers: {
                 Authorization: `Bearer ${token}`,
+                
             }
 
         })

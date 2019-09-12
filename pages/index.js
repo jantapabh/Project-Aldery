@@ -4,6 +4,7 @@ import '../styles/base.scss'
 import Sheetapi from '../config/api'
 import Menu_icon from '../components/layout/menu-icon';
 import Carousel from '../components/layout/carousel'
+import Cover from '../components/layout/Cover';
 
 class Home extends React.Component {
 
@@ -31,12 +32,8 @@ class Home extends React.Component {
     return (
       <div className="warp-index">
         <Nav name="/"/>
-
-        <Carousel />
-
-        <Menu_icon
-          icon={this.state.icon}
-        />
+        <Cover/>
+        
 
 
       </div>
@@ -44,3 +41,8 @@ class Home extends React.Component {
   }
 }
 export default Home
+{/* <Carousel /> */}
+
+        {/* <Menu_icon
+          icon={this.state.icon}
+        /> */}

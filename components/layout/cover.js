@@ -1,32 +1,37 @@
 import React from 'react'
+import IconData from './icon-data';
+import Sheetapi from '../../config/api'
+
 
 class Cover extends React.Component {
+
     constructor(props) {
         super(props);
-
+        this.state = {
+            icon: [
+                { label: "อายุ60ถึง69ปี", color: "#f44336" },
+                { label: "อายุ70ถึง79ปี", color: "#ffc107" },
+                { label: "อายุ80ถึง89ปี", color: "#00d084" },
+                { label: "อายุมากกว่าหรือเท่ากับ90ปี", color: "#0693e3" }
+            ]
+        }
     }
-
 
     render() {
         return (
-            <div className="warp">
-                <div className="warp-bg">
-
-                    <img src="/static/bg.jpg" />
-                    <img src="/static/bg2.jpg" />
-                    <img src="/static/bg3.jpg" />
-                    <img src="/static/bg4.jpg" />
-
-
-                    <div className="warp-text">
-                        <div className="text">
-                            {/* <h1>สังคมผู้สูงอายุ<br/>สู่มาตรการดูเเลในระดับชุมชน</h1> */}
-                            {/* <h5>ความรักของผู้สูงอายุจะมุ่งไปด้านเติมเต็มพลังชีวิตให้เเก่<br/>กันเเละกัน</h5> */}
+            <div className="warp-cover">
+                <img src="/static/bg.jpg" />
+                <div className="vertical-center">
+                    <div className="box">
+                        <h1>Elderly Database</h1>
+                        <h2>hello world</h2>
+                        <div className="box-icon">
+                            <IconData
+                                icon={this.state.icon}
+                            />
                         </div>
                     </div>
                 </div>
-
-
             </div>
         )
     }
