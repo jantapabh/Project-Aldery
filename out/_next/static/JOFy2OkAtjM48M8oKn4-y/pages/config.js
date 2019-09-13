@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{CvGF:function(n,w,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/config",function(){var n=o("IeYr");return{page:n.default||n}}])}},[["CvGF",1,0]]]);
