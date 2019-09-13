@@ -19,7 +19,7 @@ class CardData extends React.Component {
     async componentWillMount() {
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.list('!J2:L2')
+        await this.list('!N2:P2')
     }
     list = async (value) => {
 

@@ -1,13 +1,13 @@
 .warp-chart{
     display: flex !important;
     justify-content: center !important;
-    margin: 4rem !important;
+    margin: 3rem !important;
 
     @media (max-width: 991.98px) {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        margin: 2rem !important;
+        margin: 4rem !important;
     }
 
     
@@ -16,7 +16,7 @@
         user-select: none;
 
         @media (max-width: 780px) {
-            margin: 2rem ;
+            margin: 3rem  !important;
         }
 
         @media (max-width: 575.98px) { 

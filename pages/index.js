@@ -30,19 +30,20 @@ class Home extends React.Component {
   render() {
 
     return (
-      <div className="warp-index">
-        <Nav name="/"/>
-        <Cover/>
-        
+      <div >
+        <Nav name="/" />
+        {/* <Cover/> */}
 
+          
+       
 
       </div>
     )
   }
 }
 export default Home
-{/* <Carousel /> */}
+{/* <Carousel /> */ }
 
-        {/* <Menu_icon
+{/* <Menu_icon
           icon={this.state.icon}
         /> */}
