@@ -2,7 +2,7 @@ import React from 'react'
 import Nav from '../components/nav'
 import '../styles/base.scss'
 import Sheetapi from '../config/api'
-import Cover from '../components/layout/Cover'
+import Cover from '../components/layout/Cover';
 
 class Home extends React.Component {
 
@@ -30,7 +30,7 @@ class Home extends React.Component {
     return (
       <div >
         <Nav name="/" />
-        <Cover/>
+<Cover/>
 
           
        
@@ -40,8 +40,3 @@ class Home extends React.Component {
   }
 }
 export default Home
-{/* <Carousel /> */ }
-
-{/* <Menu_icon
-          icon={this.state.icon}
-        /> */}

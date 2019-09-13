@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 class IconData extends React.Component {
 
     static defaultProps = {
