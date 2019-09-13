@@ -32,7 +32,7 @@ class Home extends React.Component {
     return (
       <div >
         <Nav name="/" />
-        {/* <Cover/> */}
+        <Cover/>
 
           
        

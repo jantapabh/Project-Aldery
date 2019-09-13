@@ -4,26 +4,27 @@
     width: 100%;
 
     img{
+        background-size: cover;
         position: absolute;
-        height: 60vh;
         width: 100%;
+        background-color: gray;
     }
 
     .vertical-center{
-        position: relative;
-        margin: 0 auto;
-        padding: 10rem;
+        position: fixed;
+        padding: 11rem;
         display: flex;
         align-items: center;
-        min-height: 100%;
+        width: 100%;
+        background-color:rgb(252, 252, 252);
+        opacity: 0.8;
     .box{
         width: 100%;
         text-align: center;
-        background-color: aqua;
         display: flex;
         flex-direction: column;
         align-items: center;
-
+    
         .box-icon{
             display: flex;
             flex-direction: row;
@@ -33,8 +34,5 @@
     }
   
 }
-circle {
-    transition: stroke-dashoffset 0.35s;
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
-  }
+
+

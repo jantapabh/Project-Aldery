@@ -2,9 +2,6 @@ import React from 'react'
 import '../styles/base.scss'
 import Nav from '../components/nav'
 import Linechart from '../components/chart/linechart';
-import Chart from '../components/chart/chart';
-
-
 
 class About extends React.Component {
 
