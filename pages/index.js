@@ -2,9 +2,7 @@ import React from 'react'
 import Nav from '../components/nav'
 import '../styles/base.scss'
 import Sheetapi from '../config/api'
-import Menu_icon from '../components/layout/menu-icon';
-import Carousel from '../components/layout/carousel'
-import Cover from '../components/layout/Cover';
+import Cover from '../components/layout/Cover'
 
 class Home extends React.Component {
 
