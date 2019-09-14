@@ -4,14 +4,14 @@
     
 
     .vertical-center{
-        background-image: url("/static/bg.jpg");
+        background-image: url("/static/bg-test4.jpg");
         background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
         display: flex;
         align-items: center;
-        opacity: 0.8;
+        opacity: 0.7;
 
         @media only screen and (max-width: 767px) {
 
