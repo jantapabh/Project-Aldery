@@ -22,7 +22,7 @@ class Home extends React.Component {
   }
 
   async componentDidMount() {
-    localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
+   await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
   }
 
   render() {

@@ -10,6 +10,10 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
+                    <head>
+                        <link rel="stylesheet" href="animate.min.css" />
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+                    </head>
                     <title>Eldery DB</title>
                     <meta charset="utf-8" />
                     <link rel="shortcut icon" href="/static/logo.png" />
@@ -30,17 +34,17 @@ class MyDocument extends Document {
                     />
 
 
-                    <link rel="stylesheet" href="https://unpkg.com/react-vis/dist/style.css"/>
-                        <script type="text/javascript" src="https://unpkg.com/react-vis/dist/dist.min.js"></script>
-               
+                    <link rel="stylesheet" href="https://unpkg.com/react-vis/dist/style.css" />
+                    <script type="text/javascript" src="https://unpkg.com/react-vis/dist/dist.min.js"></script>
+
                 </Head>
-                    <body>
-                        <Main />
-                        <NextScript />
-                    </body>
+                <body>
+                    <Main />
+                    <NextScript />
+                </body>
             </Html>
-                )
-            }
-        }
-        
+        )
+    }
+}
+
 export default MyDocument

@@ -14,15 +14,18 @@ class Cover extends React.Component {
                 { label: "อายุ80ถึง89ปี", color: "#00d084" },
                 { label: "อายุมากกว่าหรือเท่ากับ90ปี", color: "#0693e3" }
             ],
-            data:[]
+            data: []
         }
     }
 
     async componentDidMount() {
+        await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
+        let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
 
-        let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
         await this.list('sheets!D2:L2')
+
+
     }
 
     list = async (value) => {
@@ -46,7 +49,7 @@ class Cover extends React.Component {
                     อายุมากกว่าหรือเท่ากับ90ปีร้อยละ: parseFloat(this.list[i][8].replace(",", "")),
                 }
                 this.setState(prevState => ({
-                    data: [...prevState.data, value.อายุ60ถึง69ปีร้อยละ,value.อายุ70ถึง79ปีร้อยละ,value.อายุ80ถึง89ปีร้อยละ,value. อายุมากกว่าหรือเท่ากับ90ปีร้อยละ],
+                    data: [...prevState.data, value.อายุ60ถึง69ปีร้อยละ, value.อายุ70ถึง79ปีร้อยละ, value.อายุ80ถึง89ปีร้อยละ, value.อายุมากกว่าหรือเท่ากับ90ปีร้อยละ],
                 }))
             }
         } catch (err) {
@@ -58,7 +61,7 @@ class Cover extends React.Component {
     render() {
 
         console.log(this.state.data);
-        
+
         return (
             <div className="warp-cover">
 
@@ -66,8 +69,8 @@ class Cover extends React.Component {
                 <div className="vertical-center">
                     <div className="box">
                         <div className="box-content">
-                            <h1>Elderly Database</h1>
-                            <h2>present</h2>
+                            <h1 className="animated fadeInDown ">Elderly Database</h1>
+                            <h2 className="animated fadeInDown ">present</h2>
                             <div className="box-icon">
                                 <IconData
                                     icon={this.state.icon}

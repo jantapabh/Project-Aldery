@@ -37,6 +37,7 @@ nav {
                     color: #bedadc ;
                     
                 }
+
             }
         }
 
@@ -46,7 +47,12 @@ nav {
            
             // padding: 0.5rem;
              margin: 0.5rem 0.5rem;
+             
+             @media (max-width: 575.98px) {
+                margin: 0.3rem 0.5rem !important;            
+            }
         }
+        
     }
     
 

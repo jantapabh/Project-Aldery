@@ -3,20 +3,19 @@ import React from 'react'
 class IconData extends React.Component {
 
     static defaultProps = {
-        icon: [],
-        data: []
+        icon: [{label: "อายุ", color: "#fff"},{label: "อายุ", color: "#fff"},{label: "อายุ", color: "#fff"},{label: "อายุ", color: "#fff"}],
+        data: [0,0,0,0]
     }
 
 
     render() {
-
 
         return (
             <div className="icon-data" >
                 {
                     this.props.icon.map((item, index) => {
                         return (
-                            <div className="icon-data">
+                            <div className="icon-data animated fadeInDown" >
                                 <div className="icon-content">
                                     <svg
                                         className="progress-ring"
