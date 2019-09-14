@@ -20,11 +20,7 @@ class Home extends React.Component {
       ]
     }
   }
-
-  async componentDidMount() {
-   await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
-  }
-
+  
   render() {
 
     return (

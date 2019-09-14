@@ -31,6 +31,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: 0.5rem;
 
             h1{
                 text-transform: uppercase;
@@ -44,7 +45,7 @@
                         display: flex;
 
                         .icon-data{
-                            margin: 0 1.5rem;
+                            margin: 0rem 1.5rem;
                             display: flex;
                             flex-direction: column;
 

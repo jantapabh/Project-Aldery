@@ -69,8 +69,8 @@ class Cover extends React.Component {
                 <div className="vertical-center">
                     <div className="box">
                         <div className="box-content">
-                            <h1 className="animated fadeInDown ">Elderly Database</h1>
-                            <h2 className="animated fadeInDown ">present</h2>
+                            <h1 className="animated fadeInDown delay-1s ">Elderly Database</h1>
+                            <h2 className="animated fadeInDown delay-1s ">present</h2>
                             <div className="box-icon">
                                 <IconData
                                     icon={this.state.icon}

@@ -15,7 +15,7 @@ class IconData extends React.Component {
                 {
                     this.props.icon.map((item, index) => {
                         return (
-                            <div className="icon-data animated fadeInDown" >
+                            <div className="icon-data animated fadeInDown " >
                                 <div className="icon-content">
                                     <svg
                                         className="progress-ring"
