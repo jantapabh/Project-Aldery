@@ -72,8 +72,8 @@ class Cover extends React.Component {
                     <div className="box">
                         <div className="box-content">
                             <div className="box-text">
-                                <h1 className="animated fadeInDown ">Elderly Database</h1>
-                                <h2 className="animated fadeInDown ">present</h2>
+                                <h1 className="animated fadeInDown delay-1s ">Elderly Database</h1>
+                                <h2 className="animated fadeInDown delay-1s ">present</h2>
                             </div>
 
                             <div className="box-icon">
