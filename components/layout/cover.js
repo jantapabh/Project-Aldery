@@ -86,11 +86,8 @@ class Cover extends React.Component {
                     </div>
 
                     <div className="footer-cover">
-                        <button className="btn btn-primary">View analytics</button>
-
+                        <a class="btn btn-primary" href="/main" role="button">View analytics</a>
                     </div>
-
-
 
                 </div>
             </div>

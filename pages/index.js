@@ -4,6 +4,8 @@ import '../styles/base.scss'
 import Sheetapi from '../config/api'
 import Cover from '../components/layout/cover';
 import Load from '../components/layout/load';
+import Menu_icon from '../components/layout/menu-icon';
+import CardDepartment from '../components/layout/coverDepartment';
 
 class Home extends React.Component {
 
@@ -25,9 +27,19 @@ class Home extends React.Component {
   render() {
 
     return (
-      <div >
+      <div className="warp-index">
         <Nav name="/" />
-        <Cover />
+
+        <div className="box-index">
+          <Cover />
+          <Menu_icon
+            icon={this.state.icon}
+          />
+          <CardDepartment />
+
+
+        </div>
+
       </div>
     )
   }

@@ -1,16 +1,14 @@
 
 .warp-menu{
-    
     display: flex;
-    margin-left: 2rem;
-    margin-right: 2rem;
+  
+    margin: 0 2rem 3rem 2rem;
     
     justify-content: center;
 
         .menu{
             width: 100%;
             display: flex;
-            position: absolute;
             justify-content: center;
             padding: 0;
             margin: 1.5rem 0;
@@ -57,7 +55,7 @@
                     }
                     
                     .icon-img:hover{
-                        background-color: #bedadc;
+                        background-color: #F5F9FC;
                         box-shadow:  4px 4px 22px -5px rgba(0,0,0,0.75);
                         -webkit-box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
                         -moz-box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);

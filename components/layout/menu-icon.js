@@ -17,7 +17,7 @@ class Menu_icon extends React.Component {
                                     return (
 
                                         <a href={item.href}>
-                                            <div className="icon animated bounceInUp delay-1s" key={index}>
+                                            <div className="icon animated fadeInDown delay-1s" key={index}>
                                                 <div className="icon-img">
                                                     <img key={index} src={item.pic} alt={item.name} />
                                                     <img className="hover" src={item.pichover} alt={item.name} />
