@@ -1,22 +1,26 @@
 import React from 'react'
+import Load from './load'
 
 class IconData extends React.Component {
 
     static defaultProps = {
-        icon: [{label: "อายุ", color: "#fff"},{label: "อายุ", color: "#fff"},{label: "อายุ", color: "#fff"},{label: "อายุ", color: "#fff"}],
-        data: [0,0,0,0]
+        icon: [],
+        data: []
     }
 
-
     render() {
-
+        if (this.props.data == []) {
+            return (
+                <Load />
+            )
+        }
         return (
             <div className="icon-data" >
                 {
                     this.props.icon.map((item, index) => {
                         return (
-                            <div className="icon-data animated fadeInDown " >
-                                <div className="icon-content">
+                            <React.Fragment >
+                                <div className="icon-content ">
                                     <svg
                                         className="progress-ring"
                                         height="120"
@@ -90,7 +94,7 @@ class IconData extends React.Component {
                                     <p>{item.label}</p>
 
                                 </div>
-                            </div>
+                            </React.Fragment>
                         )
                     })
                 }

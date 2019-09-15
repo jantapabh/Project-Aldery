@@ -12,7 +12,7 @@ class Cover extends React.Component {
                 { label: "อายุ60ถึง69ปี", color: "#f44336" },
                 { label: "อายุ70ถึง79ปี", color: "#ffc107" },
                 { label: "อายุ80ถึง89ปี", color: "#00d084" },
-                { label: "อายุมากกว่าหรือเท่ากับ90ปี", color: "#0693e3" }
+                { label: "อายุ >= 90ปี", color: "#0693e3" }
             ],
             data: []
         }
@@ -67,20 +67,31 @@ class Cover extends React.Component {
 
 
                 <div className="vertical-center">
+
+
                     <div className="box">
                         <div className="box-content">
-                            <h1 className="animated fadeInDown delay-1s ">Elderly Database</h1>
-                            <h2 className="animated fadeInDown delay-1s ">present</h2>
+                            <div className="box-text">
+                                <h1 className="animated fadeInDown ">Elderly Database</h1>
+                                <h2 className="animated fadeInDown ">present</h2>
+                            </div>
+
                             <div className="box-icon">
                                 <IconData
                                     icon={this.state.icon}
                                     data={this.state.data}
                                 />
                             </div>
-
                         </div>
+                    </div>
+
+                    <div className="footer-cover">
+                        <button className="btn btn-primary">View analytics</button>
 
                     </div>
+
+
+
                 </div>
             </div>
         )
