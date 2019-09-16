@@ -1,6 +1,12 @@
 .warp-department{
     min-width: 100%;
     width: auto;
+    @media (max-width: 767.98px) { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+     }
 
     .card-department{
         width: 100%;
@@ -10,14 +16,52 @@
         .card-img{
             display: flex;
             justify-content: center;
+            @media (max-width: 767.98px) { 
+                flex-direction: column;
+                align-items: center;
+               
+             }
 
             img{
                 cursor: pointer;
                 width: 10rem;
                 height: 10rem;
-                margin: 2rem 5rem;;
+                margin: 2rem 5rem;
+
+                @media (max-width: 1199.98px) { 
+                    margin: 2rem ;
+                 }
+
+                 @media (max-width: 991.98px) { 
+                    margin: 0.5rem ;
+                 }
+
             }
-            
+
+        }
+        @media (max-width: 767.98px) { 
+            .animated.delay-1s {
+                animation-delay: 0;
+            }
+            .animated {
+                animation-duration: 0;
+                animation-fill-mode: 0;
+            }
+            .fadeInDown {
+                animation-name: none;
+            }
+        }
+    }
+    @media (max-width: 767.98px) { 
+        .animated.delay-1s {
+            animation-delay: 0;
+        }
+        .animated {
+            animation-duration: 0;
+            animation-fill-mode: 0;
+        }
+        .fadeInDown {
+            animation-name: none;
         }
     }
 

@@ -18,9 +18,9 @@ class CardDepartment extends React.Component {
     render() {
         return (
             <div className="warp-department">
-                <h1>หน่วยงานที่เกี่ยวข้อง</h1>
+                <h1 className="icon animated fadeInDown delay-1s">หน่วยงานที่เกี่ยวข้อง</h1>
                 <div className="card-department">
-                    <div className="card-img">
+                    <div className="card-img icon animated fadeInDown delay-1s">
                         {
                             this.state.img.map((item, index) => {
                                 return (
