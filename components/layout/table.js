@@ -1,6 +1,9 @@
 import React from 'react'
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
+
+let order = 'desc';
+
 class Table extends React.Component {
 
     static defaultProps = {
@@ -20,13 +23,13 @@ class Table extends React.Component {
 
     handleBtnClick = () => {
         if (order === 'desc') {
-          this.refs.table.handleSort('asc', 'name');
-          order = 'asc';
+            this.refs.table.handleSort('asc', 'name');
+            order = 'asc';
         } else {
-          this.refs.table.handleSort('desc', 'name');
-          order = 'desc';
+            this.refs.table.handleSort('desc', 'name');
+            order = 'desc';
         }
-      }
+    }
 
 
 
@@ -38,7 +41,7 @@ class Table extends React.Component {
                     <BootstrapTable
                         ref='table'
                         data={data}
-                        dataSort={ true }
+                        
                         pagination={true}
                         search={true}
                     >

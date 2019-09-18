@@ -3,6 +3,10 @@ module.exports = {
     '/': {page: '/'},
     '/main' : {page:'/main'},
     '/about' : {page:'/about'},
+    '/service' : {page:'/service'},
+    '/mantable' : {page:'/mantable'},
+    '/womantable' : {page:'/womantable'},
+    '/totaltable' : {page:'/totaltable'},
     
   })
 }

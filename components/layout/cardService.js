@@ -4,47 +4,28 @@ import Link from 'next/link'
 class CardService extends React.Component {
 
     static defaultProps = {
-        card: []
+        list: []
     }
 
 
     render() {
+        console.log(this.props.list);
+        
         return (
-            <React.Fragment>
+            <div className="card-service">
                 {
-                    this.props.card.map((item, index) => {
+                    this.props.list.map((item, index) => {
                         return (
-                            // <div class="card" >
-                            //     <div class="card-header">
-                            //         <h6>{item.featured}</h6>
-                            //     </div>
-                            //     <ul class="list-group list-group-flush">
-                            //         <Link href="/">
-                            //             <li class="list-group-item"><p>{item.head}</p></li>
-                            //         </Link>
-                            //         {
-                            //             !!item.head2 ?
-                            //                 <Link href="/">
-                            //                     <li class="list-group-item"><p>{item.head2}</p></li>
-                            //                 </Link>
-                            //                 :
-                            //                 null
-                            //         }
-
-
-                            //     </ul>
-                            // </div>
-                            <div className="card">
-                                <div className="card-body">
-                                    <h5 className="card-title">{item.title}</h5>
-                                    <p className="card-text">{item.text}</p>
-                                    <a href={item.link} className="btn btn-primary"><h6>Go somewhere</h6></a>
-                                </div>
-                            </div>
+                            <React.Fragment>
+                                <h5>{item.ชื่อ}</h5>
+                                <h6>{item.ที่อยู่}</h6>
+                                <p>{item.เบอร์ติดต่อ}</p>
+                            </React.Fragment>
                         )
                     })
                 }
-            </React.Fragment>
+
+            </div>
 
         )
     }

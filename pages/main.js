@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/main.scss'
 import Nav from '../components/nav';
 import Card from '../components/layout/card-data';
-import Chart from '../components/chart/chart';
+import Barchart from '../components/chart/barchart';
 
 class Main extends React.Component {
 
@@ -27,7 +27,7 @@ class Main extends React.Component {
                         card={this.state.card}
                     />
 
-                    <Chart />
+                    <Barchart/>
                 </div>
 
 
