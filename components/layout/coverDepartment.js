@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link';
 
 
 class CardDepartment extends React.Component {
@@ -8,10 +7,10 @@ class CardDepartment extends React.Component {
         super(props);
         this.state = {
             img: [
-                { pic: "/static/logo-about.png", name: "logo",link:"http://www.dop.go.th/" },
-                { pic: "/static/logo-about.png", name: "logo",link:""  },
-                { pic: "/static/logo-about.png", name: "logo",link:""  },
-                { pic: "/static/logo-about.png", name: "logo",link:""  }
+                { pic: "/static/logo-about.png", name: "ผส.",link:"http://www.dop.go.th/" },
+                { pic: "/static/logo-about4.png", name: "หลักประกันสุขภาพแห่งชาติ",link:"https://www.nhso.go.th/"  },
+                { pic: "/static/logo small.jpg", name: "กองทุนผู้สูงอายุ",link:"http://www.olderfund.dop.go.th/"  },
+                { pic: "/static/logo-about2.png", name: "มูลนิธิสถาบันวิจัยและพัฒนาผู้สูงอายุไทย",link:"http://thaitgri.org/"  },
             ]
         }
     }
@@ -24,8 +23,8 @@ class CardDepartment extends React.Component {
                         {
                             this.state.img.map((item, index) => {
                                 return (
-                                    <a href={item.link} target="_blank">
-                                        <img src={item.pic} alt={item.name} />
+                                    <a key={index} href={item.link} target="_blank"  title={item.name}>
+                                        <img className={`img-${index}`} src={item.pic} alt={item.name} />
                                     </a>
 
                                 )

@@ -33,8 +33,6 @@ class Cover extends React.Component {
         try {
 
             this.list = await Sheetapi.getSheet2(this.access_token, value)
-            console.log("LIst:", this.list);
-
 
             for (let i = 0; i < this.list.length; i++) {
                 let value = await {
@@ -60,15 +58,9 @@ class Cover extends React.Component {
 
     render() {
 
-        console.log(this.state.data);
-
         return (
             <div className="warp-cover">
-
-
                 <div className="vertical-center">
-
-
                     <div className="box">
                         <div className="box-content">
                             <div className="box-text">

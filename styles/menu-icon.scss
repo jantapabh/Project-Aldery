@@ -1,8 +1,10 @@
 
 .warp-menu{
     display: flex;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   
-    margin: 0 2rem 3rem 2rem;
+    
     
     justify-content: center;
 
@@ -11,7 +13,6 @@
             display: flex;
             justify-content: center;
             padding: 0;
-            margin: 1.5rem 0;
 
             
             @media (max-width: 991.98px) { 
@@ -27,6 +28,13 @@
                  margin: 0 1rem;
                 background-color: white;
                 padding: 0.5rem 0;
+
+                @media (max-width: 767.98px) { 
+                    flex-direction: column;
+                    align-items: center;
+                   
+                 }
+                 
                 .icon{
                     display: flex;
                     flex-direction: column;
@@ -55,12 +63,12 @@
                     }
                     
                     .icon-img:hover{
-                        background-color: #F5F9FC;
-                        box-shadow:  4px 4px 22px -5px rgba(0,0,0,0.75);
-                        -webkit-box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
-                        -moz-box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
-                        box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
-                        border-radius: 50%;
+                        // background-color: #F5F9FC;
+                        // box-shadow:  4px 4px 22px -5px rgba(0,0,0,0.75);
+                        // -webkit-box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
+                        // -moz-box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
+                        // box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
+                        // border-radius: 50%;
                         img.hover{
                             display: inherit !important;
                         }

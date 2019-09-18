@@ -2,14 +2,15 @@ import React from 'react'
 
 class Load extends React.Component {
 
+    constructor(props){
+        super(props);
+        this.state={
+            isLoad: true
+        }
+    }
+
     componentDidMount() {
-        setTimeout(
-            function () {
-                window.location.href="/"
-            }
-                .bind(this),
-            3000
-        );
+       
     }
 
     render() {

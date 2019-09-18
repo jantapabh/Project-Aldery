@@ -9,6 +9,11 @@ import CardDepartment from '../components/layout/coverDepartment';
 
 class Home extends React.Component {
 
+
+  static defaultProps = {
+    isLoad: false
+}
+
   constructor(props) {
     super(props);
 
@@ -17,12 +22,13 @@ class Home extends React.Component {
       icon: [
         { text: "หน่วยงานที่เกี่ยวข้อง", pic: "/static/bank.svg", href: "/", name: "icon1", pichover: "/static/bankhover.svg" },
         { text: "หน่วยงานดูแลผู้สูงอายุ", pic: "/static/department.svg", href: "/department", name: "icon2", pichover: "/static/departmenthover.svg" },
-        { text: "เอกสารที่จำเป็น", pic: "/static/contract.svg", href: "/document", name: "icon3", pichover: "/static/docmenthover.svg" },
+        { text: "เบี้ยยังชีพ", pic: "/static/contract.svg", href: "/document", name: "icon3", pichover: "/static/docmenthover.svg" },
         { text: "กิจกรรม", pic: "/static/active.svg", href: "/active", name: "icon4", pichover: "/static/activehover.svg" }
 
-      ]
+      ],
     }
   }
+
 
   render() {
 

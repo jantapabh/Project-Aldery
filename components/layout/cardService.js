@@ -34,11 +34,11 @@ class CardService extends React.Component {
 
                             //     </ul>
                             // </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">{item.title}</h5>
-                                    <p class="card-text">{item.text}</p>
-                                    <a href={item.link} class="btn btn-primary"><h6>Go somewhere</h6></a>
+                            <div className="card">
+                                <div className="card-body">
+                                    <h5 className="card-title">{item.title}</h5>
+                                    <p className="card-text">{item.text}</p>
+                                    <a href={item.link} className="btn btn-primary"><h6>Go somewhere</h6></a>
                                 </div>
                             </div>
                         )

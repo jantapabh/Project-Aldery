@@ -16,11 +16,12 @@ class Menu_icon extends React.Component {
                                 this.props.icon.map((item, index) => {
                                     return (
 
-                                        <a href={item.href}>
+                                        <a key={index} href={item.href}>
                                             <div className="icon animated fadeInDown delay-1s" key={index}>
                                                 <div className="icon-img">
-                                                    <img key={index} src={item.pic} alt={item.name} />
+                                                    <img src={item.pic} alt={item.name} />
                                                     <img className="hover" src={item.pichover} alt={item.name} />
+                                            
                                                 </div>
 
                                                 <h6>{item.text}</h6>

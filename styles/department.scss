@@ -9,11 +9,11 @@
      }
 
     .card-department{
-        width: 100%;
         margin: 1rem;
         display: flex;
 
         .card-img{
+            width: 100%;
             display: flex;
             justify-content: center;
             @media (max-width: 767.98px) { 
@@ -24,18 +24,42 @@
 
             img{
                 cursor: pointer;
-                width: 10rem;
-                height: 10rem;
-                margin: 2rem 5rem;
+                width: 8rem;
+                height: 8rem;
+                margin: 2rem 4rem;
 
                 @media (max-width: 1199.98px) { 
                     margin: 2rem ;
                  }
 
                  @media (max-width: 991.98px) { 
-                    margin: 0.5rem ;
+                    width: 7rem;
+                    height: 7rem;
+                    margin: 0.5rem; 
+                 
+                 }
+            } 
+
+            .img-2{
+                    width: 6rem;
+                    height: 8rem;
+
+                    @media (max-width: 991.98px) { 
+                        width: 6rem;
+                        height: 7rem;
+                     
+                     }
                  }
 
+            .img-3{
+                width: 12rem;
+                height: 8rem;
+
+                @media (max-width: 991.98px) { 
+                    width: 10rem;
+                    height: 7rem;
+                     
+                }
             }
 
         }
