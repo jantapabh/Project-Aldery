@@ -14,3 +14,48 @@
 
     }
 }
+
+
+//Table
+.warp-table{
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 575.98px) { 
+        display: none;
+    }
+
+    .table{
+        .react-bs-table-container{
+            
+            .react-bs-table{
+                background-color: white;
+            }
+
+            .react-bs-table-bordered{
+                border-radius: 0.2rem 0.2rem 0 0;
+                .react-bs-container-header{
+                    background-color: #cccccc;
+                    border-radius: 0.2rem 0.2rem 0 0;
+
+                    
+
+                    table{
+                        thead{
+
+                            tr{
+                                th{
+                                    text-align: center !important;
+                                }
+                            }
+
+                            
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

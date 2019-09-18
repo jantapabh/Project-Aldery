@@ -43,6 +43,24 @@ class Nav extends React.Component {
               </ul>
             </React.Fragment>
             :
+            this.props.name == "man" || this.props.name == "woman" || this.props.name == "total"  ?
+            <React.Fragment>
+              <div className="warp-back">
+            <ul>
+              <div className="warp-manu">
+                <li >
+                  <Link href="/main">
+                    <p>ย้อนกลับ</p>
+                  </Link>
+
+                </li>
+
+              </div>
+
+            </ul>
+          </div>
+            </React.Fragment>
+            :
           <div className="warp-back">
             <ul>
               <div className="warp-manu">
