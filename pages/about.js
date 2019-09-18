@@ -1,5 +1,4 @@
 import React from 'react'
-import '../styles/base.scss'
 import Nav from '../components/nav'
 import Linechart from '../components/chart/linechart';
 

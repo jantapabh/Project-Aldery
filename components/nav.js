@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import '../styles/base.scss'
 
 const links = [
   { href: '/main', label: 'Main' },

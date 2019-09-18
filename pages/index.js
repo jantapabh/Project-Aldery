@@ -1,6 +1,5 @@
 import React from 'react'
 import Nav from '../components/nav'
-import '../styles/base.scss'
 import Sheetapi from '../config/api'
 import Cover from '../components/layout/cover';
 import Load from '../components/layout/load';
