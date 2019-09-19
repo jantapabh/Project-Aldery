@@ -81,7 +81,7 @@ class CardData extends React.Component {
                                                                         {
                                                                             this.state.data.map((item1, index1) => {
                                                                                 return (
-                                                                                    <h1 key={index1}>{item1.ชาย} คน</h1>
+                                                                                    <h4 key={index1}>{item1.ชาย} คน</h4>
                                                                                 )
                                                                             })
                                                                         }
@@ -92,7 +92,7 @@ class CardData extends React.Component {
                                                                             {
                                                                                 this.state.data.map((item2, index2) => {
                                                                                     return (
-                                                                                        <h1 key={index2}>{item2.หญิง} คน</h1>
+                                                                                        <h4 key={index2}>{item2.หญิง} คน</h4>
                                                                                     )
                                                                                 })
                                                                             }
@@ -103,7 +103,7 @@ class CardData extends React.Component {
                                                                                 {
                                                                                     this.state.data.map((item3, index3) => {
                                                                                         return (
-                                                                                            <h1 key={index3}><CountUp end={item3.รวม} /> คน</h1>
+                                                                                            <h4 key={index3}><CountUp end={item3.รวม} /> คน</h4>
                                                                                         )
                                                                                     })
                                                                                 }

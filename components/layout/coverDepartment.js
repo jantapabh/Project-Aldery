@@ -10,9 +10,8 @@ class CardDepartment extends React.Component {
     render() {
         return (
             <div className="warp-department">
-                <h1 className="icon animated fadeInDown delay-1s">หน่วยงานที่เกี่ยวข้อง</h1>
                 <div className="card-department">
-                    <div className="card-img icon animated fadeInDown delay-1s">
+                    <div className="card-img icon">
                         {
                             this.props.card.map((item, index) => {
                                 return (

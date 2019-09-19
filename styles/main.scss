@@ -1,18 +1,32 @@
 .warp-main{
+    width: 100%;
     min-height: 100vh;
     height: auto ;
     background-color: #F5F9FC;
 
-    .content-main{
+    .main{
+        position: fixed;
+        height: 100vh;
         width: 100%;
-        margin-top: 4rem;
+        margin-block-start:0;
+       
+            .card-content{
+                width: 70%;
+            }
 
-        @media (max-width: 575.98px) { 
-            margin-top: 1rem !important;
+        .tab-main{
+            height: 100vh;
+            width: 30%;
+            background-color: white;
+            position: fixed;
+            right: 0;
+            margin-block-start:0;
             
-        }
-
+            
+        }  
     }
+
+    
 }
 
 
