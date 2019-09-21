@@ -4,6 +4,8 @@ import {
     LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
 
+
+
 class Linechart extends React.Component {
     constructor(props) {
         super(props);
@@ -25,13 +27,13 @@ class Linechart extends React.Component {
             this.list = await Sheetapi.getSheet1(this.access_token, value)
 
             for (let i = 0; i < this.list.length; i++) {
-                let value = await {
+                let data = await {
                     name: this.list[i][0],
                     ชาย60ปีขึ้นไป: parseInt(this.list[i][1].replace(",", "")),
                     หญิง60ปีขึ้นไป: parseInt(this.list[i][2].replace(",", "")),
                 }
                 this.setState(prevState => ({
-                    data: [...prevState.data, value]
+                    data: [...prevState.data,data]
                 }))
             }
         } catch (err) {
@@ -44,7 +46,7 @@ class Linechart extends React.Component {
         const { data } = this.state
         return (
                 <div className="warp-chart">
-                    <LineChart width={1000} height={500} data={data}>
+                    <LineChart width={900} height={500} data={data}>
                         <CartesianGrid strokeDasharray="3 3"/>
                         <XAxis dataKey="name"  padding={{ left: 30, right: 30 }} />
                         <YAxis />
@@ -53,6 +55,7 @@ class Linechart extends React.Component {
                         <Line type="monotone" dataKey="ชาย60ปีขึ้นไป" stroke="#8884d8" activeDot={{ r: 8 }} />
                         <Line type="monotone" dataKey="หญิง60ปีขึ้นไป" stroke="#82ca9d" />
                     </LineChart>
+
                 </div>
 
         )

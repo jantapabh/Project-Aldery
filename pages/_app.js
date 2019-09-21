@@ -2,9 +2,17 @@ import React from 'react'
 import App from 'next/app'
 import '../styles/base.scss'
 
+import Sheetapi from '../config/api'
+
+
+
 
 
 class MyApp extends App {
+
+  async componentDidMount() {
+    await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
+}
   // Only uncomment this method if you have blocking data requirements for
   // every single page in your application. This disables the ability to
   // perform automatic static optimization, causing every page in your app to

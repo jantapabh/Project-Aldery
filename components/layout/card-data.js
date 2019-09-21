@@ -48,23 +48,18 @@ class CardData extends React.Component {
 
 
     render() {
-
-        if(this.state.data == null){
-            window.location.href="/"
-        }
-
         return (
             <div className="warp-card">
 
                 {
                     !!this.props.card ?
-                        <React.Fragment>
+                        <div className="card-main">
                             {
                                 this.props.card.map((item, index) => {
                                     return (
 
                                         <Link key={index} href={item.url}>
-                                            <div className={`hover-card ${item.hover}`}>
+                                           
                                                 <div className="card">
 
                                                     <div className="card-img">
@@ -114,13 +109,13 @@ class CardData extends React.Component {
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                          
                                         </Link>
 
                                     )
                                 })
                             }
-                        </React.Fragment>
+                        </div>
                         :
                         null
 

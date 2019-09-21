@@ -41,6 +41,9 @@ class MyDocument extends Document {
                     <link rel="stylesheet" href="https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table-all.min.css">
                     </link>
 
+                    <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
+                    <script src="https://unpkg.com/react-chartkick@0.3.2"></script>
+
                 </Head>
                 <body>
                     <Main />

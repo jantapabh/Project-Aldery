@@ -93,6 +93,114 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./config.js":
+/*!*******************!*\
+  !*** ./config.js ***!
+  \*******************/
+/*! exports provided: urlSheet1, urlSheet2, urlSheet3, urlSheet4, urlpost */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlSheet1", function() { return urlSheet1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlSheet2", function() { return urlSheet2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlSheet3", function() { return urlSheet3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlSheet4", function() { return urlSheet4; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlpost", function() { return urlpost; });
+const urlSheet1 = 'https://sheets.googleapis.com/v4/spreadsheets/1mPsLDG_yN00jPw7srBREF-sXf5WYSxxoaJV0_6CI31Q/values/';
+const urlSheet2 = 'https://sheets.googleapis.com/v4/spreadsheets/1lTvlri1R_Jjt6_YnhvwnDxYCnNXJHHXaJxEOqETOwi0/values/';
+const urlSheet3 = 'https://sheets.googleapis.com/v4/spreadsheets/1EMLOUvKUe8BQwcsrgy_61kHv4JqWIYECWp1bfG9AXJA/values/';
+const urlSheet4 = 'https://sheets.googleapis.com/v4/spreadsheets/17fo0gEVzD0p7jZz0fBIygPFqWO9LN2DugFFOojBYJXU/values/';
+const urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=-giSWLQLlg-e-g4sITPpoO6f&grant_type=refresh_token&refresh_token=1%2FPEfDyutOZE5MJvBRkJoL4EOh9ZFKaA3tj7Xmsnv4aC4&client_id=492497205693-gous0v8uc9vkd68strl5m4i31oqusjfl.apps.googleusercontent.com';
+
+
+/***/ }),
+
+/***/ "./config/api.js":
+/*!***********************!*\
+  !*** ./config/api.js ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config */ "./config.js");
+
+
+
+async function getSheet1(token, col) {
+  const request = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_config__WEBPACK_IMPORTED_MODULE_1__["urlSheet1"]}${col}`, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+  return request.data.values;
+}
+
+async function getSheet2(token, col) {
+  const request = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_config__WEBPACK_IMPORTED_MODULE_1__["urlSheet2"]}${col}`, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+  return request.data.values;
+}
+
+async function getSheet3(token, col) {
+  const request = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_config__WEBPACK_IMPORTED_MODULE_1__["urlSheet3"]}${col}`, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+  return request.data.values;
+}
+
+async function getSheet4(token, col) {
+  const request = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_config__WEBPACK_IMPORTED_MODULE_1__["urlSheet4"]}${col}`, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+  return request.data.values;
+}
+
+async function postSheetValues() {
+  const request = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_config__WEBPACK_IMPORTED_MODULE_1__["urlpost"]}`, {
+    headers: {
+      Authorization: "Bearer 4/qQGd-JEj1hK6bmd0w0ESGCh7y-qrQNS4-pEwPb7nt-H3aPUhcUmA0FQx1cNs1GapRQ_wePGf4e6eXWGVTuhgY6E",
+      Content_Type: "application/x-www-form-urlencoded",
+      User_Agent: "google-oauth-playground",
+      Content_length: "208",
+      Host: "www.googleapis.com"
+    }
+  });
+  return request;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  getSheet1,
+  getSheet2,
+  getSheet3,
+  getSheet4,
+  postSheetValues
+});
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/json/stringify */ "core-js/library/fn/json/stringify");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/object/assign.js ***!
@@ -706,21 +814,28 @@ function createUrl(router) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
-/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/base.scss */ "./styles/base.scss");
-/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
+/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/base.scss */ "./styles/base.scss");
+/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
+
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\pages\\_app.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
 
-class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
-  // Only uncomment this method if you have blocking data requirements for
+
+class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_3___default.a {
+  async componentDidMount() {
+    await localStorage.setItem("myOauth", _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()((await _config_api__WEBPACK_IMPORTED_MODULE_5__["default"].postSheetValues())));
+  } // Only uncomment this method if you have blocking data requirements for
   // every single page in your application. This disables the ability to
   // perform automatic static optimization, causing every page in your app to
   // be server-side rendered.
@@ -731,6 +846,8 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
   //
   //   return { ...appProps }
   // }
+
+
   render() {
     const {
       Component,
@@ -739,7 +856,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
     return __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 30
       },
       __self: this
     }));
@@ -771,6 +888,28 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
 
 module.exports = __webpack_require__(/*! private-next-pages/_app.js */"./pages/_app.js");
 
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
+
+/***/ }),
+
+/***/ "core-js/library/fn/json/stringify":
+/*!****************************************************!*\
+  !*** external "core-js/library/fn/json/stringify" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/json/stringify");
 
 /***/ }),
 

@@ -1,12 +1,9 @@
 import React from 'react'
 import Sheetapi from '../../config/api'
-import { RadialBarChart, RadialBar, Legend } from 'recharts';
+import { VictoryPie } from "victory";
 
-const style = {
-  top: 0,
-  left: 350,
-  lineHeight: '24px',
-};
+import { LineChart, PieChart } from 'react-chartkick'
+import 'chart.js'
 
 
 
@@ -35,7 +32,11 @@ class Radialchart extends React.Component {
       this.list = await Sheetapi.getSheet1(this.access_token, value)
 
       for (let i = 0; i < this.list.length; i++) {
-        let value = await { name: this.list[i][0], ชาย60ปีขึ้นไป: parseInt(this.list[i][1].replace(",", "")), หญิง60ปีขึ้นไป: parseInt(this.list[i][2].replace(",", "")),fill: '#ffc658' }
+        let value = await {
+          name: this.list[i][0],
+          ชาย60ปีขึ้นไป: parseInt(this.list[i][1].replace(",", "")),
+          หญิง60ปีขึ้นไป: parseInt(this.list[i][2].replace(",", "")), fill: '#ffc658'
+        }
         this.setState(prevState => ({
           data: [...prevState.data, value]
         }))
@@ -52,10 +53,10 @@ class Radialchart extends React.Component {
 
     return (
       <div className="warp-chart">
-        <RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={20} outerRadius={140} barSize={10} data={data}>
-          <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise dataKey="ชาย60ปีขึ้นไป" />
-          <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
-        </RadialBarChart>
+        
+
+{/* <LineChart data={{"2017-05-13": 2, "2017-05-14": 5,}} /> */}
+<PieChart data={[["Blueberry", 44], ["Strawberry", 23]]} />
       </div>
     )
   }

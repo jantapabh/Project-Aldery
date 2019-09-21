@@ -1,13 +1,32 @@
 .warp-chart{
     display: flex !important;
-    justify-content: center !important;
-    margin: 3rem !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 1rem !important;
 
-    @media (max-width: 991.98px) {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        margin: 4rem !important;
+    
+    .VictoryContainer{
+        display: flex;
+        justify-content: center;
+        svg{
+            width: 10rem !important;
+            height: auto !important;
+
+            @media (max-width: 992pxpx) {
+                width: 5rem !important;
+                height: auto!important;
+            }
+
+            text{
+                tspan{
+                    font-size: 2rem !important;
+                }
+                
+            }
+        }
+        
+        
+
     }
 
     

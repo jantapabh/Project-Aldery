@@ -39,6 +39,11 @@ class Home extends React.Component {
     this.timer = setTimeout(this.Load, 6000);
   }
 
+  async componentDidMount() {
+    await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
+
+}
+
    Load = () => {
     this.setState({
       isLoad: true

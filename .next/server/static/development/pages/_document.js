@@ -1244,22 +1244,36 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
         lineNumber: 41
       },
       __self: this
-    })), __jsx("body", {
+    }), __jsx("script", {
+      src: "https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44
+      },
+      __self: this
+    }), __jsx("script", {
+      src: "https://unpkg.com/react-chartkick@0.3.2",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 45
       },
       __self: this
+    })), __jsx("body", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 49
       },
       __self: this
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 50
       },
       __self: this
     })));
