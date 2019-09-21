@@ -1,6 +1,7 @@
 import React from 'react'
 import Circle from 'react-circle';
 import sheetList from '../../config/Sheets'
+import Sheetapi from '../../config/api'
 
 const textColor = "#000000";
 const font = 'Prompt, sans-serif';
@@ -22,14 +23,38 @@ class IconData extends React.Component {
 
     async componentDidMount() {
 
-        const access_token = await sheetList.Sheet()
-        const list = await sheetList.List2(access_token,'sheets!D2:P2')
-        console.log(list);
-        
-        this.setState(prevState => ({
-            data: [...prevState.data, list]
-        }))
- 
+        let userOauth = JSON.parse(localStorage.getItem("myOauth"))
+        this.access_token = userOauth.data.access_token
+        await this.list('sheets!D2:L2')
+    }
+
+    list = async (value) => {
+
+        try {
+
+            this.list = await Sheetapi.getSheet2(this.access_token, value)
+
+
+            for (let i = 0; i < this.list.length; i++) {
+                let value = await {
+                    name: this.list[i][0],
+                    อายุ60ถึง69ปี: parseInt(this.list[i][1].replace(",", "")),
+                    อายุ60ถึง69ปีร้อยละ: parseFloat(this.list[i][2].replace(",", "")),
+                    อายุ70ถึง79ปี: parseInt(this.list[i][3].replace(",", "")),
+                    อายุ70ถึง79ปีร้อยละ: parseFloat(this.list[i][4].replace(",", "")),
+                    อายุ80ถึง89ปี: parseInt(this.list[i][5].replace(",", "")),
+                    อายุ80ถึง89ปีร้อยละ: parseFloat(this.list[i][6].replace(",", "")),
+                    อายุมากกว่าหรือเท่ากับ90ปี: parseInt(this.list[i][7].replace(",", "")),
+                    อายุมากกว่าหรือเท่ากับ90ปีร้อยละ: parseFloat(this.list[i][8].replace(",", "")),
+                }
+                this.setState(prevState => ({
+                    data: [...prevState.data, value.อายุ60ถึง69ปีร้อยละ,value.อายุ70ถึง79ปีร้อยละ,value.อายุ80ถึง89ปีร้อยละ,value. อายุมากกว่าหรือเท่ากับ90ปีร้อยละ],
+                }))
+            }
+        } catch (err) {
+            console.log(err);
+        }
+
     }
     
 
@@ -57,7 +82,7 @@ class IconData extends React.Component {
                                                         animationDuration="1s" // String: Length of animation
                                                         size="100" // String: Defines the size of the circle.
                                                         lineWidth="25" // String: Defines the thickness of the circle's stroke.
-                                                        progress={items.อายุ60ถึง69ปีร้อยละ} // String: Update to change the progress and percentage.
+                                                        progress={items} // String: Update to change the progress and percentage.
                                                         progressColor={item.color} // String: Color of "progress" portion of circle.
                                                         bgColor={bgColor} // String: Color of "empty" portion of circle.
                                                         textColor={textColor} // String: Color of percentage text color.
@@ -77,7 +102,7 @@ class IconData extends React.Component {
                                                             animationDuration="1s"
                                                             size="100"
                                                             lineWidth="25"
-                                                            progress={items.อายุ70ถึง79ปีร้อยละ}
+                                                            progress={items}
                                                             progressColor={item.color}
                                                             bgColor={bgColor}
                                                             textColor={textColor}
@@ -97,7 +122,7 @@ class IconData extends React.Component {
                                                                 animationDuration="1s"
                                                                 size="100"
                                                                 lineWidth="25"
-                                                                progress={items.อายุ80ถึง89ปีร้อยละ}
+                                                                progress={items}
                                                                 progressColor={item.color}
                                                                 bgColor={bgColor}
                                                                 textColor={textColor}
@@ -117,7 +142,7 @@ class IconData extends React.Component {
                                                                     animationDuration="1s"
                                                                     size="100"
                                                                     lineWidth="25"
-                                                                    progress={items.อายุมากกว่าหรือเท่ากับ90ปีร้อยละ}
+                                                                    progress={items}
                                                                     progressColor={item.color}
                                                                     bgColor={bgColor}
                                                                     textColor={textColor}
