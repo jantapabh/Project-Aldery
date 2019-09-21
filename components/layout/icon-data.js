@@ -1,7 +1,5 @@
 import React from 'react'
 import Circle from 'react-circle';
-import sheetList from '../../config/Sheets'
-import Sheetapi from '../../config/api'
 
 const textColor = "#000000";
 const font = 'Prompt, sans-serif';
@@ -11,58 +9,10 @@ class IconData extends React.Component {
 
     static defaultProps = {
         icon: [],
+        data: []
     }
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            data: [],
-        }
-    }
-
-    async componentDidMount() {
-
-        let userOauth = JSON.parse(localStorage.getItem("myOauth"))
-        this.access_token = userOauth.data.access_token
-        await this.list('sheets!D2:L2')
-    }
-
-    list = async (value) => {
-
-        try {
-
-            this.list = await Sheetapi.getSheet2(this.access_token, value)
-
-
-            for (let i = 0; i < this.list.length; i++) {
-                let value = await {
-                    name: this.list[i][0],
-                    อายุ60ถึง69ปี: parseInt(this.list[i][1].replace(",", "")),
-                    อายุ60ถึง69ปีร้อยละ: parseFloat(this.list[i][2].replace(",", "")),
-                    อายุ70ถึง79ปี: parseInt(this.list[i][3].replace(",", "")),
-                    อายุ70ถึง79ปีร้อยละ: parseFloat(this.list[i][4].replace(",", "")),
-                    อายุ80ถึง89ปี: parseInt(this.list[i][5].replace(",", "")),
-                    อายุ80ถึง89ปีร้อยละ: parseFloat(this.list[i][6].replace(",", "")),
-                    อายุมากกว่าหรือเท่ากับ90ปี: parseInt(this.list[i][7].replace(",", "")),
-                    อายุมากกว่าหรือเท่ากับ90ปีร้อยละ: parseFloat(this.list[i][8].replace(",", "")),
-                }
-                this.setState(prevState => ({
-                    data: [...prevState.data, value.อายุ60ถึง69ปีร้อยละ,value.อายุ70ถึง79ปีร้อยละ,value.อายุ80ถึง89ปีร้อยละ,value. อายุมากกว่าหรือเท่ากับ90ปีร้อยละ],
-                }))
-            }
-        } catch (err) {
-            console.log(err);
-        }
-
-    }
-    
-
 
     render() {
-
-        console.log(this.state.data);
-        
         return (
             <div className="icon-data" >
                 {
@@ -73,13 +23,14 @@ class IconData extends React.Component {
 
 
                                     {
-                                        this.state.data.map((items, indexs) => {
+                                        this.props.data.map((items, indexs) => {
 
                                             return (
                                                 index == 0 && indexs == 0 ?
                                                     <Circle
                                                         animate={true} // Boolean: Animated/Static progress
                                                         animationDuration="1s" // String: Length of animation
+                                                        responsive={false} // Boolean: Make SVG adapt to parent size
                                                         size="100" // String: Defines the size of the circle.
                                                         lineWidth="25" // String: Defines the thickness of the circle's stroke.
                                                         progress={items} // String: Update to change the progress and percentage.
@@ -96,10 +47,11 @@ class IconData extends React.Component {
                                                         showPercentageSymbol={true} // Boolean: Show/hide only the "%" symbol.
                                                     />
                                                     :
-                                                    index == 1 && indexs == 0 ?
+                                                    index == 1 && indexs == 1 ?
                                                         <Circle
                                                             animate={true}
                                                             animationDuration="1s"
+                                                            responsive={false}
                                                             size="100"
                                                             lineWidth="25"
                                                             progress={items}
@@ -116,10 +68,11 @@ class IconData extends React.Component {
                                                             showPercentageSymbol={true}
                                                         />
                                                         :
-                                                        index == 2 && indexs == 0 ?
+                                                        index == 2 && indexs == 2 ?
                                                             <Circle
                                                                 animate={true}
                                                                 animationDuration="1s"
+                                                                responsive={false}
                                                                 size="100"
                                                                 lineWidth="25"
                                                                 progress={items}
@@ -136,10 +89,11 @@ class IconData extends React.Component {
                                                                 showPercentageSymbol={true}
                                                             />
                                                             :
-                                                            index == 3 && indexs == 0 ?
+                                                            index == 3 && indexs == 3 ?
                                                                 <Circle
                                                                     animate={true}
                                                                     animationDuration="1s"
+                                                                    responsive={false}
                                                                     size="100"
                                                                     lineWidth="25"
                                                                     progress={items}
@@ -159,9 +113,14 @@ class IconData extends React.Component {
                                                                 null
                                             )
                                         })
+
                                     }
-                                    <p className="animated fadeInDown delay-2s" >{item.label}</p>
+
+
+                                    <p>{item.label}</p>
+
                                 </div>
+
                             </React.Fragment>
                         )
                     })

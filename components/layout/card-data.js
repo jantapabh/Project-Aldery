@@ -1,5 +1,5 @@
 import React from 'react'
-import sheetList from '../../config/Sheets'
+import Sheetapi from '../../config/api'
 import CountUp from 'react-countup';
 import Link from 'next/link';
 
@@ -16,19 +16,42 @@ class CardData extends React.Component {
         }
     }
 
+    async componentWillMount() {
+        let userOauth = JSON.parse(localStorage.getItem("myOauth"))
+        this.access_token = userOauth.data.access_token
+        await this.list('!N2:P2')
+    }
+    list = async (value) => {
 
-    async componentDidMount() {
+        try {
 
-        const access_token = await sheetList.Sheet()
-        const list = await sheetList.List2(access_token,'!N2:P2')
+            this.list = await Sheetapi.getSheet2(this.access_token, value)
 
-        this.setState(prevState => ({
-            data: [...prevState.data, list]
-        }))
+
+            for (let i = 0; i < this.list.length; i++) {
+                let value = await {
+                    ชาย: parseInt(this.list[i][0].replace(",", "")),
+                    หญิง: parseInt(this.list[i][1].replace(",", "")),
+                    รวม: parseInt(this.list[i][2].replace(",", "")),
+
+                }
+                this.setState(prevState => ({
+                    data: [...prevState.data, value],
+
+                }))
+            }
+        } catch (err) {
+            console.log(err);
+        }
 
     }
 
+
     render() {
+
+        if(this.state.data == null){
+            window.location.href="/"
+        }
 
         return (
             <div className="warp-card">

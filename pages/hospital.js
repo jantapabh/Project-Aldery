@@ -49,9 +49,7 @@ class Hospital extends React.Component {
             <div className="warp-service">
                 <Nav name="hospital" />
                 <div className="content-service">
-                    <CardService
-                        list={this.state.dataList}
-                    />
+                  
 
                 </div>
             </div>
