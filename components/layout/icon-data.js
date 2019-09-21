@@ -9,7 +9,8 @@ class IconData extends React.Component {
 
     static defaultProps = {
         icon: [],
-        data: []
+        data: [],
+ 
     }
 
     render() {
@@ -30,7 +31,6 @@ class IconData extends React.Component {
                                                     <Circle
                                                         animate={true} // Boolean: Animated/Static progress
                                                         animationDuration="1s" // String: Length of animation
-                                                        responsive={false} // Boolean: Make SVG adapt to parent size
                                                         size="100" // String: Defines the size of the circle.
                                                         lineWidth="25" // String: Defines the thickness of the circle's stroke.
                                                         progress={items} // String: Update to change the progress and percentage.
@@ -51,7 +51,6 @@ class IconData extends React.Component {
                                                         <Circle
                                                             animate={true}
                                                             animationDuration="1s"
-                                                            responsive={false}
                                                             size="100"
                                                             lineWidth="25"
                                                             progress={items}
@@ -72,7 +71,6 @@ class IconData extends React.Component {
                                                             <Circle
                                                                 animate={true}
                                                                 animationDuration="1s"
-                                                                responsive={false}
                                                                 size="100"
                                                                 lineWidth="25"
                                                                 progress={items}
@@ -93,7 +91,6 @@ class IconData extends React.Component {
                                                                 <Circle
                                                                     animate={true}
                                                                     animationDuration="1s"
-                                                                    responsive={false}
                                                                     size="100"
                                                                     lineWidth="25"
                                                                     progress={items}
@@ -113,14 +110,9 @@ class IconData extends React.Component {
                                                                 null
                                             )
                                         })
-
                                     }
-
-
-                                    <p>{item.label}</p>
-
+                                    <p className="animated fadeInDown delay-2s" >{item.label}</p>
                                 </div>
-
                             </React.Fragment>
                         )
                     })

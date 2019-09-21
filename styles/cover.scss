@@ -80,26 +80,18 @@
                                     margin-bottom: 2rem;
                                 }
 
-                                .circle-bg {
-                                    fill: none;
-                                    stroke: #eee;
-                                    stroke-width: 5px;
-                                   
+                                svg{
+                                    circle{
+                                        // animation:change 1s linear !important ;
+                                        transition: stroke-dashoffset 1s linear 5s !important;
+                                    }
                                 }
 
-                                .progress-ring__circle{
-                                    fill:none;
-                                    transform: rotate(-90,60,60);
-                                    stroke-width: 4px;
-                  
-                                animation:change 1s linear  ;
-                            }
-                        
                             
-                            @keyframes change {
-                                from{stroke-dasharray: 90,250;} /*0%*/
-                                to{stroke-dasharray: 250,250;} /*100%*/
-                              }
+                             @keyframes stroke-dashoffset {
+                                 from{stroke-dasharray: 175;} /*0%*/
+                                 to{stroke-dasharray: 175;} /*100%*/
+                               }
 
 
                               p{
