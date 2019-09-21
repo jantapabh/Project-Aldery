@@ -1,33 +1,35 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\index.js"],{
 
-/***/ "./components/layout/Cover.js":
+/***/ "./components/layout/cover.js":
 /*!************************************!*\
-  !*** ./components/layout/Cover.js ***!
+  !*** ./components/layout/cover.js ***!
   \************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-float */ "./node_modules/@babel/runtime-corejs2/core-js/parse-float.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _icon_data__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./icon-data */ "./components/layout/icon-data.js");
-/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../config/api */ "./config/api.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-float */ "./node_modules/@babel/runtime-corejs2/core-js/parse-float.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _icon_data__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./icon-data */ "./components/layout/icon-data.js");
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../config/api */ "./config/api.js");
 
 
 
@@ -40,8 +42,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\Cover.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement;
+
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\cover.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement;
 
 
 
@@ -49,53 +52,52 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement;
 var Cover =
 /*#__PURE__*/
 function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_10__["default"])(Cover, _React$Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_11__["default"])(Cover, _React$Component);
 
   function Cover(props) {
     var _this;
 
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, Cover);
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_6__["default"])(this, Cover);
 
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8__["default"])(Cover).call(this, props));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_8__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_9__["default"])(Cover).call(this, props));
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_11__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_9__["default"])(_this), "list",
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_10__["default"])(_this), "list",
     /*#__PURE__*/
     function () {
-      var _ref = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])(
+      var _ref = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])(
       /*#__PURE__*/
-      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(value) {
+      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee(value) {
         var _loop, i;
 
-        return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context2) {
+        return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.prev = 0;
                 _context2.next = 3;
-                return _config_api__WEBPACK_IMPORTED_MODULE_14__["default"].getSheet2(_this.access_token, value);
+                return _config_api__WEBPACK_IMPORTED_MODULE_15__["default"].getSheet2(_this.access_token, value);
 
               case 3:
                 _this.list = _context2.sent;
-                console.log("LIst:", _this.list);
                 _loop =
                 /*#__PURE__*/
-                _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _loop(i) {
+                _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _loop(i) {
                   var value;
-                  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _loop$(_context) {
+                  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _loop$(_context) {
                     while (1) {
                       switch (_context.prev = _context.next) {
                         case 0:
                           _context.next = 2;
                           return {
                             name: _this.list[i][0],
-                            อายุ60ถึง69ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_3___default()(_this.list[i][1].replace(",", "")),
-                            อายุ60ถึง69ปีร้อยละ: _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][2].replace(",", "")),
-                            อายุ70ถึง79ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_3___default()(_this.list[i][3].replace(",", "")),
-                            อายุ70ถึง79ปีร้อยละ: _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][4].replace(",", "")),
-                            อายุ80ถึง89ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_3___default()(_this.list[i][5].replace(",", "")),
-                            อายุ80ถึง89ปีร้อยละ: _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][6].replace(",", "")),
-                            อายุมากกว่าหรือเท่ากับ90ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_3___default()(_this.list[i][7].replace(",", "")),
-                            อายุมากกว่าหรือเท่ากับ90ปีร้อยละ: _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_2___default()(_this.list[i][8].replace(",", ""))
+                            อายุ60ถึง69ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_4___default()(_this.list[i][1].replace(",", "")),
+                            อายุ60ถึง69ปีร้อยละ: _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_3___default()(_this.list[i][2].replace(",", "")),
+                            อายุ70ถึง79ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_4___default()(_this.list[i][3].replace(",", "")),
+                            อายุ70ถึง79ปีร้อยละ: _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_3___default()(_this.list[i][4].replace(",", "")),
+                            อายุ80ถึง89ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_4___default()(_this.list[i][5].replace(",", "")),
+                            อายุ80ถึง89ปีร้อยละ: _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_3___default()(_this.list[i][6].replace(",", "")),
+                            อายุมากกว่าหรือเท่ากับ90ปี: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_4___default()(_this.list[i][7].replace(",", "")),
+                            อายุมากกว่าหรือเท่ากับ90ปีร้อยละ: _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_3___default()(_this.list[i][8].replace(",", ""))
                           };
 
                         case 2:
@@ -103,7 +105,7 @@ function (_React$Component) {
 
                           _this.setState(function (prevState) {
                             return {
-                              data: [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(prevState.data), [value.อายุ60ถึง69ปีร้อยละ, value.อายุ70ถึง79ปีร้อยละ, value.อายุ80ถึง89ปีร้อยละ, value.อายุมากกว่าหรือเท่ากับ90ปีร้อยละ])
+                              data: [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevState.data), [value.อายุ60ถึง69ปีร้อยละ, value.อายุ70ถึง79ปีร้อยละ, value.อายุ80ถึง89ปีร้อยละ, value.อายุมากกว่าหรือเท่ากับ90ปีร้อยละ])
                             };
                           });
 
@@ -116,34 +118,34 @@ function (_React$Component) {
                 });
                 i = 0;
 
-              case 7:
+              case 6:
                 if (!(i < _this.list.length)) {
-                  _context2.next = 12;
+                  _context2.next = 11;
                   break;
                 }
 
-                return _context2.delegateYield(_loop(i), "t0", 9);
+                return _context2.delegateYield(_loop(i), "t0", 8);
 
-              case 9:
+              case 8:
                 i++;
-                _context2.next = 7;
+                _context2.next = 6;
                 break;
 
-              case 12:
-                _context2.next = 17;
+              case 11:
+                _context2.next = 16;
                 break;
 
-              case 14:
-                _context2.prev = 14;
+              case 13:
+                _context2.prev = 13;
                 _context2.t1 = _context2["catch"](0);
                 console.log(_context2.t1);
 
-              case 17:
+              case 16:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee, null, [[0, 14]]);
+        }, _callee, null, [[0, 13]]);
       }));
 
       return function (_x) {
@@ -154,39 +156,59 @@ function (_React$Component) {
     _this.state = {
       icon: [{
         label: "อายุ60ถึง69ปี",
-        color: "#f44336"
+        color: "#f44336",
+        bgColor: "#fad0c3"
       }, {
         label: "อายุ70ถึง79ปี",
-        color: "#ffc107"
+        color: "#ffc107",
+        bgColor: "#fef3bd"
       }, {
         label: "อายุ80ถึง89ปี",
-        color: "#00d084"
+        color: "#00d084",
+        bgColor: "#c1e1c5"
       }, {
-        label: "อายุมากกว่าหรือเท่ากับ90ปี",
-        color: "#0693e3"
+        label: "อายุ >= 90ปี",
+        color: "#0693e3",
+        bgColor: "#c4def6"
       }],
       data: []
     };
     return _this;
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_6__["default"])(Cover, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_7__["default"])(Cover, [{
     key: "componentDidMount",
     value: function () {
-      var _componentDidMount = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])(
+      var _componentDidMount = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])(
       /*#__PURE__*/
-      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
         var userOauth;
-        return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context3) {
+        return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                userOauth = JSON.parse(localStorage.getItem("myOauth"));
-                this.access_token = userOauth.data.access_token;
+                _context3.t0 = localStorage;
+                _context3.t1 = _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default.a;
                 _context3.next = 4;
-                return this.list('sheets!D2:L2');
+                return _config_api__WEBPACK_IMPORTED_MODULE_15__["default"].postSheetValues();
 
               case 4:
+                _context3.t2 = _context3.sent;
+                _context3.t3 = (0, _context3.t1)(_context3.t2);
+                _context3.next = 8;
+                return _context3.t0.setItem.call(_context3.t0, "myOauth", _context3.t3);
+
+              case 8:
+                _context3.next = 10;
+                return JSON.parse(localStorage.getItem("myOauth"));
+
+              case 10:
+                userOauth = _context3.sent;
+                this.access_token = userOauth.data.access_token;
+                _context3.next = 14;
+                return this.list('sheets!D2:L2');
+
+              case 14:
               case "end":
                 return _context3.stop();
             }
@@ -203,55 +225,63 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.state.data);
       return __jsx("div", {
         className: "warp-cover",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 62
         },
         __self: this
       }, __jsx("div", {
         className: "vertical-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 63
         },
         __self: this
       }, __jsx("div", {
         className: "box",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 64
         },
         __self: this
       }, __jsx("div", {
         className: "box-content",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 65
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "box-text",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
         },
         __self: this
       }, __jsx("h1", {
+        className: "animated fadeInDown delay-1s ",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 67
         },
         __self: this
       }, "Elderly Database"), __jsx("h2", {
+        className: "animated fadeInDown delay-1s ",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 68
         },
         __self: this
-      }, "present"), __jsx("div", {
+      }, "present")), __jsx("div", {
         className: "box-icon",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 71
         },
         __self: this
-      }, __jsx(_icon_data__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      }, __jsx(_icon_data__WEBPACK_IMPORTED_MODULE_14__["default"], {
         icon: this.state.icon,
         data: this.state.data,
         __source: {
@@ -264,9 +294,107 @@ function (_React$Component) {
   }]);
 
   return Cover;
-}(react__WEBPACK_IMPORTED_MODULE_12___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_13___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Cover);
+
+/***/ }),
+
+/***/ "./components/layout/coverDepartment.js":
+/*!**********************************************!*\
+  !*** ./components/layout/coverDepartment.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\coverDepartment.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
+
+
+var CardDepartment =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(CardDepartment, _React$Component);
+
+  function CardDepartment() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, CardDepartment);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(CardDepartment).apply(this, arguments));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(CardDepartment, [{
+    key: "render",
+    value: function render() {
+      return __jsx("div", {
+        className: "warp-department",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "card-department",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "card-img icon",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      }, this.props.card.map(function (item, index) {
+        return __jsx("a", {
+          key: index,
+          href: item.link,
+          target: "_blank",
+          title: item.name,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 18
+          },
+          __self: this
+        }, __jsx("img", {
+          className: "img-".concat(index),
+          src: item.pic,
+          alt: item.name,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19
+          },
+          __self: this
+        }));
+      }))));
+    }
+  }]);
+
+  return CardDepartment;
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+
+Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(CardDepartment, "defaultProps", {
+  card: []
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (CardDepartment);
 
 /***/ }),
 
@@ -287,6 +415,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_circle__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-circle */ "./node_modules/react-circle/dist/index.js");
+/* harmony import */ var react_circle__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_circle__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -296,6 +426,10 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\icon-data.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
+
+var textColor = "#000000";
+var font = 'Prompt, sans-serif';
+var bgColor = "#d9d9d9";
 
 var IconData =
 /*#__PURE__*/
@@ -317,96 +451,144 @@ function (_React$Component) {
         className: "icon-data",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 17
         },
         __self: this
       }, this.props.icon.map(function (item, index) {
-        return __jsx("div", {
-          className: "icon-data",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 19
-          },
-          __self: this
-        }, __jsx("div", {
-          className: "icon-content",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 20
-          },
-          __self: this
-        }, __jsx("svg", {
-          className: "progress-ring",
-          height: "120",
-          width: "120",
+        return __jsx(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, {
+          key: index,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 21
           },
           __self: this
-        }, __jsx("circle", {
-          className: "progress-ring__circle",
-          stroke: item.color,
-          "stroke-width": "6",
-          fill: "transparent",
-          r: "50",
-          cx: "60",
-          cy: "60",
+        }, __jsx("div", {
+          className: "icon-content ",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26
+            lineNumber: 22
           },
           __self: this
-        }), _this.props.data.map(function (items, indexs) {
-          return index == 0 && indexs == 0 ? __jsx("text", {
-            key: index,
-            x: "60",
-            y: "70",
-            "text-anchor": "middle",
-            "stroke-width": "1px",
+        }, _this.props.data.map(function (items, indexs) {
+          return index == 0 && indexs == 0 ? __jsx(react_circle__WEBPACK_IMPORTED_MODULE_7___default.a, {
+            animate: true // Boolean: Animated/Static progress
+            ,
+            animationDuration: "1s" // String: Length of animation
+            ,
+            responsive: false // Boolean: Make SVG adapt to parent size
+            ,
+            size: "100" // String: Defines the size of the circle.
+            ,
+            lineWidth: "25" // String: Defines the thickness of the circle's stroke.
+            ,
+            progress: items // String: Update to change the progress and percentage.
+            ,
+            progressColor: item.color // String: Color of "progress" portion of circle.
+            ,
+            bgColor: bgColor // String: Color of "empty" portion of circle.
+            ,
+            textColor: textColor // String: Color of percentage text color.
+            ,
+            textStyle: {
+              font: {
+                font: font
+              },
+              fontSize: "5rem" // CSSProperties: Custom styling for percentage.
+
+            },
+            percentSpacing: 0 // Number: Adjust spacing of "%" symbol and number.
+            ,
+            roundedStroke: true // Boolean: Rounded/Flat line ends
+            ,
+            showPercentage: true // Boolean: Show/hide percentage.
+            ,
+            showPercentageSymbol: true // Boolean: Show/hide only the "%" symbol.
+            ,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 41
+              lineNumber: 30
             },
             __self: this
-          }, items) : index == 1 && indexs == 1 ? __jsx("text", {
-            key: index,
-            x: "60",
-            y: "70",
-            "text-anchor": "middle",
-            "stroke-width": "1px",
+          }) : index == 1 && indexs == 1 ? __jsx(react_circle__WEBPACK_IMPORTED_MODULE_7___default.a, {
+            animate: true,
+            animationDuration: "1s",
+            responsive: false,
+            size: "100",
+            lineWidth: "25",
+            progress: items,
+            progressColor: item.color,
+            bgColor: bgColor,
+            textColor: textColor,
+            textStyle: {
+              font: {
+                font: font
+              },
+              fontSize: "5rem"
+            },
+            percentSpacing: 0,
+            roundedStroke: true,
+            showPercentage: true,
+            showPercentageSymbol: true,
             __source: {
               fileName: _jsxFileName,
               lineNumber: 51
             },
             __self: this
-          }, items) : index == 2 && indexs == 2 ? __jsx("text", {
-            key: index,
-            x: "60",
-            y: "70",
-            "text-anchor": "middle",
-            "stroke-width": "1px",
+          }) : index == 2 && indexs == 2 ? __jsx(react_circle__WEBPACK_IMPORTED_MODULE_7___default.a, {
+            animate: true,
+            animationDuration: "1s",
+            responsive: false,
+            size: "100",
+            lineWidth: "25",
+            progress: items,
+            progressColor: item.color,
+            bgColor: bgColor,
+            textColor: textColor,
+            textStyle: {
+              font: {
+                font: font
+              },
+              fontSize: "5rem"
+            },
+            percentSpacing: 0,
+            roundedStroke: true,
+            showPercentage: true,
+            showPercentageSymbol: true,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 61
+              lineNumber: 72
             },
             __self: this
-          }, items) : index == 3 && indexs == 3 ? __jsx("text", {
-            key: index,
-            x: "60",
-            y: "70",
-            "text-anchor": "middle",
-            "stroke-width": "1px",
+          }) : index == 3 && indexs == 3 ? __jsx(react_circle__WEBPACK_IMPORTED_MODULE_7___default.a, {
+            animate: true,
+            animationDuration: "1s",
+            responsive: false,
+            size: "100",
+            lineWidth: "25",
+            progress: items,
+            progressColor: item.color,
+            bgColor: bgColor,
+            textColor: textColor,
+            textStyle: {
+              font: {
+                font: font
+              },
+              fontSize: "5rem"
+            },
+            percentSpacing: 0,
+            roundedStroke: true,
+            showPercentage: true,
+            showPercentageSymbol: true,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 71
+              lineNumber: 93
             },
             __self: this
-          }, items) : null;
-        }), "})"), __jsx("p", {
+          }) : null;
+        }), __jsx("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 91
+            lineNumber: 120
           },
           __self: this
         }, item.label)));
@@ -423,6 +605,217 @@ Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODUL
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (IconData);
+
+/***/ }),
+
+/***/ "./components/layout/load.js":
+/*!***********************************!*\
+  !*** ./components/layout/load.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\load.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
+
+
+var Load =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Load, _React$Component);
+
+  function Load() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Load);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Load).apply(this, arguments));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Load, [{
+    key: "render",
+    value: function render() {
+      var name = this.props.name;
+      console.log(name);
+      return __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      }, name == 'index' ? __jsx("div", {
+        className: "warp-load",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "load",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        },
+        __self: this
+      }, __jsx("img", {
+        src: "/static/load4.gif",
+        alt: name,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }))) : null);
+    }
+  }]);
+
+  return Load;
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+
+Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(Load, "defaultProps", {
+  name: []
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (Load);
+
+/***/ }),
+
+/***/ "./components/layout/menu-icon.js":
+/*!****************************************!*\
+  !*** ./components/layout/menu-icon.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\layout\\menu-icon.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
+
+
+var Menu_icon =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Menu_icon, _React$Component);
+
+  function Menu_icon() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Menu_icon);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Menu_icon).apply(this, arguments));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Menu_icon, [{
+    key: "render",
+    value: function render() {
+      return __jsx("div", {
+        className: "warp-menu",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "menu",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "warp-icon",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      }, this.props.icon.map(function (item, index) {
+        return __jsx("a", {
+          key: index,
+          href: item.href,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19
+          },
+          __self: this
+        }, __jsx("div", {
+          className: "icon animated fadeInDown delay-1s",
+          key: index,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20
+          },
+          __self: this
+        }, __jsx("div", {
+          className: "icon-img",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 21
+          },
+          __self: this
+        }, __jsx("img", {
+          src: item.pic,
+          alt: item.name,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 22
+          },
+          __self: this
+        }), __jsx("img", {
+          className: "hover",
+          src: item.pichover,
+          alt: item.name,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23
+          },
+          __self: this
+        })), __jsx("h6", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27
+          },
+          __self: this
+        }, item.text)));
+      }))));
+    }
+  }]);
+
+  return Menu_icon;
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+
+Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(Menu_icon, "defaultProps", {
+  icon: []
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (Menu_icon);
 
 /***/ }),
 
@@ -445,8 +838,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/base.scss */ "./styles/base.scss");
-/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
@@ -455,7 +846,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\components\\nav.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
-
 
 
 var links = [{
@@ -486,26 +876,26 @@ function (_React$Component) {
       return __jsx("nav", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 21
         },
         __self: this
       }, this.props.name == "/" ? __jsx(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 25
         },
         __self: this
       }, __jsx("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 26
         },
         __self: this
       }, __jsx("div", {
         className: "warp-manu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 27
         },
         __self: this
       }, links.map(function (item, index) {
@@ -513,60 +903,105 @@ function (_React$Component) {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 31
+            lineNumber: 30
           },
           __self: this
         }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
           href: item.href,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 31
           },
           __self: this
         }, __jsx("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33
+            lineNumber: 32
           },
           __self: this
         }, item.label)));
-      })))) : __jsx("div", {
-        className: "warp-back",
+      })))) : this.props.name == "man" || this.props.name == "woman" || this.props.name == "total" ? __jsx(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 47
         },
         __self: this
-      }, __jsx("ul", {
+      }, __jsx("div", {
+        className: "warp-back",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 48
+        },
+        __self: this
+      }, __jsx("ul", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
         },
         __self: this
       }, __jsx("div", {
         className: "warp-manu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 50
         },
         __self: this
       }, __jsx("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 51
+        },
+        __self: this
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        href: "/main",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
+        },
+        __self: this
+      }, __jsx("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        },
+        __self: this
+      }, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A"))))))) : __jsx("div", {
+        className: "warp-back",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        },
+        __self: this
+      }, __jsx("ul", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "warp-manu",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        },
+        __self: this
+      }, __jsx("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 68
         },
         __self: this
       }, __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 69
         },
         __self: this
       }, "\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A")))))));
@@ -588,16 +1023,20 @@ Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODUL
 /*!*******************!*\
   !*** ./config.js ***!
   \*******************/
-/*! exports provided: urlSheet1, urlSheet2, urlpost */
+/*! exports provided: urlSheet1, urlSheet2, urlSheet3, urlSheet4, urlpost */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlSheet1", function() { return urlSheet1; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlSheet2", function() { return urlSheet2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlSheet3", function() { return urlSheet3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlSheet4", function() { return urlSheet4; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlpost", function() { return urlpost; });
 var urlSheet1 = 'https://sheets.googleapis.com/v4/spreadsheets/1mPsLDG_yN00jPw7srBREF-sXf5WYSxxoaJV0_6CI31Q/values/';
 var urlSheet2 = 'https://sheets.googleapis.com/v4/spreadsheets/1lTvlri1R_Jjt6_YnhvwnDxYCnNXJHHXaJxEOqETOwi0/values/';
+var urlSheet3 = 'https://sheets.googleapis.com/v4/spreadsheets/1EMLOUvKUe8BQwcsrgy_61kHv4JqWIYECWp1bfG9AXJA/values/';
+var urlSheet4 = 'https://sheets.googleapis.com/v4/spreadsheets/17fo0gEVzD0p7jZz0fBIygPFqWO9LN2DugFFOojBYJXU/values/';
 var urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=-giSWLQLlg-e-g4sITPpoO6f&grant_type=refresh_token&refresh_token=1%2FPEfDyutOZE5MJvBRkJoL4EOh9ZFKaA3tj7Xmsnv4aC4&client_id=492497205693-gous0v8uc9vkd68strl5m4i31oqusjfl.apps.googleusercontent.com';
 
 
@@ -691,6 +1130,74 @@ function _getSheet2() {
   return _getSheet2.apply(this, arguments);
 }
 
+function getSheet3(_x5, _x6) {
+  return _getSheet3.apply(this, arguments);
+}
+
+function _getSheet3() {
+  _getSheet3 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  /*#__PURE__*/
+  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(token, col) {
+    var request;
+    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            _context3.next = 2;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["urlSheet3"]).concat(col), {
+              headers: {
+                Authorization: "Bearer ".concat(token)
+              }
+            });
+
+          case 2:
+            request = _context3.sent;
+            return _context3.abrupt("return", request.data.values);
+
+          case 4:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3);
+  }));
+  return _getSheet3.apply(this, arguments);
+}
+
+function getSheet4(_x7, _x8) {
+  return _getSheet4.apply(this, arguments);
+}
+
+function _getSheet4() {
+  _getSheet4 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  /*#__PURE__*/
+  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4(token, col) {
+    var request;
+    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            _context4.next = 2;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["urlSheet4"]).concat(col), {
+              headers: {
+                Authorization: "Bearer ".concat(token)
+              }
+            });
+
+          case 2:
+            request = _context4.sent;
+            return _context4.abrupt("return", request.data.values);
+
+          case 4:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4);
+  }));
+  return _getSheet4.apply(this, arguments);
+}
+
 function postSheetValues() {
   return _postSheetValues.apply(this, arguments);
 }
@@ -698,13 +1205,13 @@ function postSheetValues() {
 function _postSheetValues() {
   _postSheetValues = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
   /*#__PURE__*/
-  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
+  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5() {
     var request;
-    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee5$(_context5) {
       while (1) {
-        switch (_context3.prev = _context3.next) {
+        switch (_context5.prev = _context5.next) {
           case 0:
-            _context3.next = 2;
+            _context5.next = 2;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["urlpost"]), {
               headers: {
                 Authorization: "Bearer 4/qQGd-JEj1hK6bmd0w0ESGCh7y-qrQNS4-pEwPb7nt-H3aPUhcUmA0FQx1cNs1GapRQ_wePGf4e6eXWGVTuhgY6E",
@@ -716,15 +1223,15 @@ function _postSheetValues() {
             });
 
           case 2:
-            request = _context3.sent;
-            return _context3.abrupt("return", request);
+            request = _context5.sent;
+            return _context5.abrupt("return", request);
 
           case 4:
           case "end":
-            return _context3.stop();
+            return _context5.stop();
         }
       }
-    }, _callee3);
+    }, _callee5);
   }));
   return _postSheetValues.apply(this, arguments);
 }
@@ -732,6 +1239,8 @@ function _postSheetValues() {
 /* harmony default export */ __webpack_exports__["default"] = ({
   getSheet1: getSheet1,
   getSheet2: getSheet2,
+  getSheet3: getSheet3,
+  getSheet4: getSheet4,
   postSheetValues: postSheetValues
 });
 
@@ -11542,6 +12051,104 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ }),
 
+/***/ "./node_modules/react-circle/dist/circle.js":
+/*!**************************************************!*\
+  !*** ./node_modules/react-circle/dist/circle.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var radius = 175;
+var diameter = Math.round(Math.PI * radius * 2);
+var getOffset = function (val) {
+    if (val === void 0) { val = 0; }
+    return Math.round((100 - val) / 100 * diameter);
+};
+var Circle = (function (_super) {
+    __extends(Circle, _super);
+    function Circle() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(Circle.prototype, "text", {
+        get: function () {
+            var _a = this.props, progress = _a.progress, showPercentage = _a.showPercentage, textColor = _a.textColor, textStyle = _a.textStyle, percentSpacing = _a.percentSpacing, showPercentageSymbol = _a.showPercentageSymbol;
+            if (!showPercentage)
+                return;
+            return (React.createElement("text", { style: textStyle, fill: textColor, x: "50%", y: "50%", dx: "-25", textAnchor: "middle" },
+                progress,
+                showPercentageSymbol && React.createElement("tspan", { dx: percentSpacing }, "%")));
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Circle.prototype.render = function () {
+        var text = this.text;
+        var _a = this.props, progress = _a.progress, size = _a.size, bgColor = _a.bgColor, progressColor = _a.progressColor, lineWidth = _a.lineWidth, animate = _a.animate, animationDuration = _a.animationDuration, roundedStroke = _a.roundedStroke, responsive = _a.responsive, onAnimationEnd = _a.onAnimationEnd;
+        var strokeDashoffset = getOffset(progress);
+        var transition = animate ? "stroke-dashoffset " + animationDuration + " ease-out" : null;
+        var strokeLinecap = roundedStroke ? 'round' : 'butt';
+        var svgSize = responsive ? '100%' : size;
+        return (React.createElement("svg", { width: svgSize, height: svgSize, viewBox: "-25 -25 400 400" },
+            React.createElement("circle", { stroke: bgColor, cx: "175", cy: "175", r: "175", strokeWidth: lineWidth, fill: "none" }),
+            React.createElement("circle", { stroke: progressColor, transform: "rotate(-90 175 175)", cx: "175", cy: "175", r: "175", strokeDasharray: "1100", strokeWidth: lineWidth, strokeDashoffset: "1100", strokeLinecap: strokeLinecap, fill: "none", style: { strokeDashoffset: strokeDashoffset, transition: transition }, onTransitionEnd: onAnimationEnd }),
+            text));
+    };
+    Circle.defaultProps = {
+        progress: 0,
+        animate: true,
+        animationDuration: '1s',
+        showPercentage: true,
+        showPercentageSymbol: true,
+        progressColor: 'rgb(76, 154, 255)',
+        bgColor: '#ecedf0',
+        textColor: '#6b778c',
+        size: '100',
+        lineWidth: '25',
+        percentSpacing: 10,
+        textStyle: { font: 'bold 4rem Helvetica, Arial, sans-serif' }
+    };
+    return Circle;
+}(react_1.Component));
+exports.Circle = Circle;
+
+
+/***/ }),
+
+/***/ "./node_modules/react-circle/dist/index.js":
+/*!*************************************************!*\
+  !*** ./node_modules/react-circle/dist/index.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+var circle_1 = __webpack_require__(/*! ./circle */ "./node_modules/react-circle/dist/circle.js");
+exports.default = circle_1.Circle;
+__export(__webpack_require__(/*! ./circle */ "./node_modules/react-circle/dist/circle.js"));
+
+
+/***/ }),
+
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -13400,14 +14007,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _components_nav__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/nav */ "./components/nav.js");
-/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../styles/base.scss */ "./styles/base.scss");
-/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
-/* harmony import */ var _components_layout_Cover__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/layout/Cover */ "./components/layout/Cover.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _components_nav__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/nav */ "./components/nav.js");
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../config/api */ "./config/api.js");
+/* harmony import */ var _components_layout_cover__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/layout/cover */ "./components/layout/cover.js");
+/* harmony import */ var _components_layout_load__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/layout/load */ "./components/layout/load.js");
+/* harmony import */ var _components_layout_menu_icon__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/layout/menu-icon */ "./components/layout/menu-icon.js");
+/* harmony import */ var _components_layout_coverDepartment__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/layout/coverDepartment */ "./components/layout/coverDepartment.js");
+
+
 
 
 
@@ -13417,7 +14029,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "C:\\Users\\Noeypatt\\Documents\\elderly-nextjs\\pages\\index.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement;
+
+
 
 
 
@@ -13427,7 +14041,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
 var Home =
 /*#__PURE__*/
 function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__["default"])(Home, _React$Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_8__["default"])(Home, _React$Component);
 
   function Home(props) {
     var _this;
@@ -13435,33 +14049,84 @@ function (_React$Component) {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Home);
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(Home).call(this, props));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_9__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this), "Load", function () {
+      _this.setState({
+        isLoad: true
+      });
+    });
+
     _this.state = {
-      icon: [{
-        text: "หน่วยงานที่เกี่ยวข้อง",
-        pic: "/static/bank.svg",
-        href: "/",
-        name: "icon1",
-        pichover: "/static/bankhover.svg"
-      }, {
+      iconset1: [{
         text: "หน่วยงานดูแลผู้สูงอายุ",
         pic: "/static/department.svg",
-        href: "/department",
+        href: "/",
         name: "icon2",
         pichover: "/static/departmenthover.svg"
       }, {
-        text: "เอกสารที่จำเป็น",
+        text: "เบี้ยยังชีพ",
         pic: "/static/contract.svg",
-        href: "/document",
+        href: "/",
         name: "icon3",
         pichover: "/static/docmenthover.svg"
       }, {
+        text: "ติดต่อ",
+        pic: "/static/phone.svg",
+        href: "/",
+        name: "icon4",
+        pichover: "/static/phonehover.svg"
+      }, {
         text: "กิจกรรม",
         pic: "/static/active.svg",
-        href: "/active",
+        href: "/",
         name: "icon4",
         pichover: "/static/activehover.svg"
-      }]
+      }],
+      iconset2: [{
+        text: "บริการดูแลผู้สูงอายุ",
+        pic: "/static/wheelchair.svg",
+        href: "/care",
+        name: "icon1",
+        pichover: "/static/wheelchairhover.svg"
+      }, {
+        text: "การตรวจสุขภาพ",
+        pic: "/static/stethoscope.svg",
+        href: "/checkup",
+        name: "icon2",
+        pichover: "/static/stethoscopehover.svg"
+      }, {
+        text: "โรงพยาบาลใกล้บ้าน",
+        pic: "/static/hopital.svg",
+        href: "/hospital",
+        name: "icon3",
+        pichover: "/static/hopitalhover.svg"
+      }, {
+        text: "สายด่วน",
+        pic: "/static/ambulance.svg",
+        href: "/emergencyNumber",
+        name: "icon4",
+        pichover: "/static/ambulancehover.svg"
+      }],
+      card: [{
+        pic: "/static/logo-department1.png",
+        name: "ผส.",
+        link: "http://www.dop.go.th/"
+      }, {
+        pic: "/static/logo-department2.png",
+        name: "หลักประกันสุขภาพแห่งชาติ",
+        link: "https://www.nhso.go.th/"
+      }, {
+        pic: "/static/logo-department3.jpg",
+        name: "กองทุนผู้สูงอายุ",
+        link: "http://www.olderfund.dop.go.th/"
+      }, {
+        pic: "/static/logo-department4.png",
+        name: "มูลนิธิสถาบันวิจัยและพัฒนาผู้สูงอายุไทย",
+        link: "http://thaitgri.org/"
+      }],
+      isLoad: false
     };
+    _this.timer = setTimeout(_this.Load, 6000);
     return _this;
   }
 
@@ -13478,15 +14143,15 @@ function (_React$Component) {
                 _context.t0 = localStorage;
                 _context.t1 = _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default.a;
                 _context.next = 4;
-                return _config_api__WEBPACK_IMPORTED_MODULE_11__["default"].postSheetValues();
+                return _config_api__WEBPACK_IMPORTED_MODULE_12__["default"].postSheetValues();
 
               case 4:
                 _context.t2 = _context.sent;
                 _context.t3 = (0, _context.t1)(_context.t2);
+                _context.next = 8;
+                return _context.t0.setItem.call(_context.t0, "myOauth", _context.t3);
 
-                _context.t0.setItem.call(_context.t0, "myOauth", _context.t3);
-
-              case 7:
+              case 8:
               case "end":
                 return _context.stop();
             }
@@ -13503,37 +14168,70 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      if (!this.state.isLoad) {
+        return __jsx(_components_layout_load__WEBPACK_IMPORTED_MODULE_14__["default"], {
+          name: "index",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 57
+          },
+          __self: this
+        });
+      }
+
       return __jsx("div", {
+        className: "warp-index",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 61
         },
         __self: this
-      }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }, __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_11__["default"], {
         name: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 62
         },
         __self: this
-      }), __jsx(_components_layout_Cover__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }), __jsx("div", {
+        className: "box-index",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 64
         },
         __self: this
-      }));
+      }, __jsx(_components_layout_cover__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65
+        },
+        __self: this
+      }), __jsx(_components_layout_menu_icon__WEBPACK_IMPORTED_MODULE_15__["default"], {
+        icon: this.state.iconset1,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        },
+        __self: this
+      }), __jsx(_components_layout_menu_icon__WEBPACK_IMPORTED_MODULE_15__["default"], {
+        icon: this.state.iconset2,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        },
+        __self: this
+      })));
     }
   }]);
 
   return Home;
-}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_10___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CNoeypatt%5CDocuments%5Celderly-nextjs%5Cpages%5Cindex.js ***!
   \****************************************************************************************************************************************/
@@ -13556,5 +14254,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

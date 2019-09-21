@@ -4,7 +4,7 @@ import Nav from '../components/nav';
 import Card from '../components/layout/card-data';
 import Barchart from '../components/chart/barchart';
 import StackedBarChart from '../components/chart/StackedBarChart';
-import Radialchart from '../components/chart/RadialChart';
+import Radialchart from '../components/chart/radialchart';
 import Linechart from '../components/chart/linechart';
 import GeoChart from '../components/chart/Geo'
 
