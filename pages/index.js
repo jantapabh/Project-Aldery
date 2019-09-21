@@ -8,11 +8,6 @@ import CardDepartment from '../components/layout/coverDepartment';
 
 class Home extends React.Component {
 
-
-  static defaultProps = {
-    isLoad: false
-  }
-
   constructor(props) {
     super(props);
 
@@ -38,11 +33,24 @@ class Home extends React.Component {
         { pic: "/static/logo-department3.jpg", name: "กองทุนผู้สูงอายุ", link: "http://www.olderfund.dop.go.th/" },
         { pic: "/static/logo-department4.png", name: "มูลนิธิสถาบันวิจัยและพัฒนาผู้สูงอายุไทย", link: "http://thaitgri.org/" },
 
-      ]
+      ],
+      isLoad: false
     }
+   // this.timer = setTimeout(this.Load, 6000);
   }
 
+   Load = () => {
+    this.setState({
+      isLoad: true
+    });
+  }
+
+
   render() {
+
+    if (!this.state.isLoad) {
+      return <Load name="index"/>
+    }
 
     return (
       <div className="warp-index">
@@ -56,9 +64,9 @@ class Home extends React.Component {
           <Menu_icon
             icon={this.state.iconset2}
           />
-          <CardDepartment
+          {/* <CardDepartment
               card={this.state.card}
-          />
+          /> */}
 
 
         </div>

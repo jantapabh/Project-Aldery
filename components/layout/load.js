@@ -2,21 +2,29 @@ import React from 'react'
 
 class Load extends React.Component {
 
-    constructor(props){
-        super(props);
-        this.state={
-            isLoad: true
-        }
+    static defaultProps = {
+        name: [],
     }
 
-    componentDidMount() {
-       
-    }
 
     render() {
+        const { name } = this.props
+        console.log(name);
+
         return (
             <div>
-                Loaddddddddddddddddd
+                {
+                    name == 'index' ?
+
+                        <div className="warp-load">
+                            <div className="load">
+                                <img src="/static/load4.gif" alt={name}/>
+                            </div>
+                        </div>
+
+                        :
+                        null
+                }
 
             </div>
         )
