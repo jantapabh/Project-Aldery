@@ -36,7 +36,7 @@ class Home extends React.Component {
       ],
       isLoad: false
     }
-   // this.timer = setTimeout(this.Load, 6000);
+    this.timer = setTimeout(this.Load, 6000);
   }
 
    Load = () => {
