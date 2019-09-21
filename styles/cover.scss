@@ -6,8 +6,8 @@
     .vertical-center{
         background-image: url("/static/bg-cover.jpg");
         background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+        // background-repeat: no-repeat;
+        // background-attachment: fixed;
         background-size: cover;
         display: flex;
         flex-direction: column;
@@ -15,18 +15,21 @@
         opacity: 0.7;
 
         @media only screen and (max-width: 767px) {
-
            background-image: none;
-           background-color: #F5F9FC;
         }
 
         
     .box{
-        margin: 2rem 0;
+        margin:4rem 0;
+
         width: 100%;
         text-align: center;
         display: flex;
         justify-content: center;
+
+        @media (max-width: 575.98px) { 
+            margin:0;
+         }
 
         .box-content{
             
@@ -83,16 +86,12 @@
                                 svg{
                                     circle{
                                         // animation:change 1s linear !important ;
-                                        transition: stroke-dashoffset 1s linear 5s !important;
+                                        // transition: stroke-dashoffset 1s linear 5s !important;
+  
                                     }
                                 }
 
                             
-                             @keyframes stroke-dashoffset {
-                                 from{stroke-dasharray: 175;} /*0%*/
-                                 to{stroke-dasharray: 175;} /*100%*/
-                               }
-
 
                               p{
                                 

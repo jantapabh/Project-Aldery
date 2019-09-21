@@ -1,5 +1,6 @@
 import React from 'react'
 import Circle from 'react-circle';
+import sheetList from '../../config/Sheets'
 
 const textColor = "#000000";
 const font = 'Prompt, sans-serif';
@@ -9,11 +10,34 @@ class IconData extends React.Component {
 
     static defaultProps = {
         icon: [],
-        data: [],
- 
     }
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            data: [],
+        }
+    }
+
+    async componentDidMount() {
+
+        const access_token = await sheetList.Sheet()
+        const list = await sheetList.List2(access_token,'sheets!D2:P2')
+        console.log(list);
+        
+        this.setState(prevState => ({
+            data: [...prevState.data, list]
+        }))
+ 
+    }
+    
+
+
     render() {
+
+        console.log(this.state.data);
+        
         return (
             <div className="icon-data" >
                 {
@@ -24,7 +48,7 @@ class IconData extends React.Component {
 
 
                                     {
-                                        this.props.data.map((items, indexs) => {
+                                        this.state.data.map((items, indexs) => {
 
                                             return (
                                                 index == 0 && indexs == 0 ?
@@ -33,7 +57,7 @@ class IconData extends React.Component {
                                                         animationDuration="1s" // String: Length of animation
                                                         size="100" // String: Defines the size of the circle.
                                                         lineWidth="25" // String: Defines the thickness of the circle's stroke.
-                                                        progress={items} // String: Update to change the progress and percentage.
+                                                        progress={items.อายุ60ถึง69ปีร้อยละ} // String: Update to change the progress and percentage.
                                                         progressColor={item.color} // String: Color of "progress" portion of circle.
                                                         bgColor={bgColor} // String: Color of "empty" portion of circle.
                                                         textColor={textColor} // String: Color of percentage text color.
@@ -47,13 +71,13 @@ class IconData extends React.Component {
                                                         showPercentageSymbol={true} // Boolean: Show/hide only the "%" symbol.
                                                     />
                                                     :
-                                                    index == 1 && indexs == 1 ?
+                                                    index == 1 && indexs == 0 ?
                                                         <Circle
                                                             animate={true}
                                                             animationDuration="1s"
                                                             size="100"
                                                             lineWidth="25"
-                                                            progress={items}
+                                                            progress={items.อายุ70ถึง79ปีร้อยละ}
                                                             progressColor={item.color}
                                                             bgColor={bgColor}
                                                             textColor={textColor}
@@ -67,13 +91,13 @@ class IconData extends React.Component {
                                                             showPercentageSymbol={true}
                                                         />
                                                         :
-                                                        index == 2 && indexs == 2 ?
+                                                        index == 2 && indexs == 0 ?
                                                             <Circle
                                                                 animate={true}
                                                                 animationDuration="1s"
                                                                 size="100"
                                                                 lineWidth="25"
-                                                                progress={items}
+                                                                progress={items.อายุ80ถึง89ปีร้อยละ}
                                                                 progressColor={item.color}
                                                                 bgColor={bgColor}
                                                                 textColor={textColor}
@@ -87,13 +111,13 @@ class IconData extends React.Component {
                                                                 showPercentageSymbol={true}
                                                             />
                                                             :
-                                                            index == 3 && indexs == 3 ?
+                                                            index == 3 && indexs == 0 ?
                                                                 <Circle
                                                                     animate={true}
                                                                     animationDuration="1s"
                                                                     size="100"
                                                                     lineWidth="25"
-                                                                    progress={items}
+                                                                    progress={items.อายุมากกว่าหรือเท่ากับ90ปีร้อยละ}
                                                                     progressColor={item.color}
                                                                     bgColor={bgColor}
                                                                     textColor={textColor}

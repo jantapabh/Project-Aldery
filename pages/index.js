@@ -1,10 +1,9 @@
 import React from 'react'
 import Nav from '../components/nav'
-import Sheetapi from '../config/api'
 import Cover from '../components/layout/cover';
-import Load from '../components/layout/load';
 import Menu_icon from '../components/layout/menu-icon';
 import CardDepartment from '../components/layout/coverDepartment';
+import Barchart from '../components/chart/barchart';
 
 class Home extends React.Component {
 
@@ -58,6 +57,7 @@ class Home extends React.Component {
           <Menu_icon
             icon={this.state.iconset2}
           />
+
           <CardDepartment
             card={this.state.card}
           />

@@ -34,6 +34,9 @@ class Table extends React.Component {
 
 
     render() {
+
+        console.log(this.props.data);
+        
         const { data } = this.props
         return (
             <div className="warp-table">
