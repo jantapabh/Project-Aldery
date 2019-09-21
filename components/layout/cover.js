@@ -9,10 +9,10 @@ class Cover extends React.Component {
         super(props);
         this.state = {
             icon: [
-                { label: "อายุ60ถึง69ปี", color: "#f44336" },
-                { label: "อายุ70ถึง79ปี", color: "#ffc107" },
-                { label: "อายุ80ถึง89ปี", color: "#00d084" },
-                { label: "อายุ >= 90ปี", color: "#0693e3" }
+                { label: "อายุ60ถึง69ปี", color: "#f44336", bgColor:"#fad0c3" },
+                { label: "อายุ70ถึง79ปี", color: "#ffc107", bgColor:"#fef3bd" },
+                { label: "อายุ80ถึง89ปี", color: "#00d084", bgColor:"#c1e1c5" },
+                { label: "อายุ >= 90ปี", color: "#0693e3", bgColor:"#c4def6" }
             ],
             data: []
         }
