@@ -48,15 +48,12 @@
                     display: none;
                  }
 
-
             }
-
-           
                 .box-icon{
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
-                    margin: 2rem 0 1rem 0;
+                    margin: 3rem 0 2rem 0;
 
 
                         .icon-data{
@@ -85,8 +82,8 @@
 
                                 svg{
                                     circle{
-                                        // animation:change 1s linear !important ;
-                                        // transition: stroke-dashoffset 1s linear 5s !important;
+                                        animation:change 1s linear !important ;
+                                        transition: stroke-dashoffset 1s linear 5s !important;
   
                                     }
                                 }
