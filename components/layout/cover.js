@@ -5,57 +5,6 @@ import Sheetapi from '../../config/api'
 
 class Cover extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            icon: [
-                { label: "อายุ60ถึง69ปี", color: "#f44336", bgColor:"#fad0c3" },
-                { label: "อายุ70ถึง79ปี", color: "#ffc107", bgColor:"#fef3bd" },
-                { label: "อายุ80ถึง89ปี", color: "#00d084", bgColor:"#c1e1c5" },
-                { label: "อายุ >= 90ปี", color: "#0693e3", bgColor:"#c4def6" }
-            ],
-            data: []
-        }
-    }
-
-    async componentDidMount() {
-        await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
-        let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-
-        this.access_token = userOauth.data.access_token
-        await this.list('sheets!D2:L2')
-
-
-    }
-
-    list = async (value) => {
-
-        try {
-
-            this.list = await Sheetapi.getSheet2(this.access_token, value)
-
-            for (let i = 0; i < this.list.length; i++) {
-                let value = await {
-                    name: this.list[i][0],
-                    อายุ60ถึง69ปี: parseInt(this.list[i][1].replace(",", "")),
-                    อายุ60ถึง69ปีร้อยละ: parseFloat(this.list[i][2].replace(",", "")),
-                    อายุ70ถึง79ปี: parseInt(this.list[i][3].replace(",", "")),
-                    อายุ70ถึง79ปีร้อยละ: parseFloat(this.list[i][4].replace(",", "")),
-                    อายุ80ถึง89ปี: parseInt(this.list[i][5].replace(",", "")),
-                    อายุ80ถึง89ปีร้อยละ: parseFloat(this.list[i][6].replace(",", "")),
-                    อายุมากกว่าหรือเท่ากับ90ปี: parseInt(this.list[i][7].replace(",", "")),
-                    อายุมากกว่าหรือเท่ากับ90ปีร้อยละ: parseFloat(this.list[i][8].replace(",", "")),
-                }
-                this.setState(prevState => ({
-                    data: [...prevState.data, value.อายุ60ถึง69ปีร้อยละ, value.อายุ70ถึง79ปีร้อยละ, value.อายุ80ถึง89ปีร้อยละ, value.อายุมากกว่าหรือเท่ากับ90ปีร้อยละ],
-                }))
-            }
-        } catch (err) {
-            console.log(err);
-        }
-
-    }
-
     render() {
 
         return (
@@ -69,10 +18,10 @@ class Cover extends React.Component {
                             </div>
 
                             <div className="box-icon">
-                                <IconData
-                                    icon={this.state.icon}
-                                    data={this.state.data}
-                                />
+                                <IconData />
+                            </div>
+                            <div className="box-text">
+                                <p className="animated fadeInDown delay-1s ">ที่มา: รายงานสรุปยอดผู้ได้รับเบี้ยเเยกตามประเภท อปท. เทศบาลเมืองกะทู้ อ.กะทู้ จังหวัดภูเก็ต</p>
                             </div>
                         </div>
                     </div>
