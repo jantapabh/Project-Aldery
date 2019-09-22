@@ -43,6 +43,7 @@ class MyDocument extends Document {
 
                     <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
                     <script src="https://unpkg.com/react-chartkick@0.3.2"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
                 </Head>
                 <body>

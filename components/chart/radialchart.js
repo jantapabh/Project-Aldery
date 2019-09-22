@@ -1,26 +1,18 @@
 import React from 'react'
 import Sheetapi from '../../config/api'
-import { VictoryChart, VictoryArea } from "victory";
+import { Doughnut } from 'react-chartjs-2';
 
-import { LineChart, PieChart } from 'react-chartkick'
-import 'chart.js'
-
-let sampleData = [
-  {
-    value: 50,
-    label: 'Marketing',
-    color: 'red',
-  }, {
-    value: 40,
-    label: 'Sales',
-    color: 'blue'
-  }, {
-    value: 25,
-    label: 'Support',
-    color: 'green'
+const legend = {
+  "display": true,
+  "position": "right",
+  "fullWidth": true,
+  "reverse": true,
+  "labels": {
+    // "fontColor": "rgb(255, 99, 132)",
+    "fontFamily": "Prompt, sans-serif"
   }
+}
 
-]
 
 class Radialchart extends React.Component {
 
@@ -28,8 +20,16 @@ class Radialchart extends React.Component {
     super(props);
 
     this.state = {
-      data: [],
-      ar: [],
+      data: {
+        labels: [
+          'อายุ60ถึง69ปี',
+          'อายุ70ถึง79ปี',
+          'อายุ80ถึง89ปี',
+          'อายุมากกว่าหรือเท่ากับ90ปี',
+        ],
+
+
+      },
     }
   }
 
@@ -47,7 +47,7 @@ class Radialchart extends React.Component {
       this.list = await Sheetapi.getSheet2(this.access_token, value)
 
       for (let i = 0; i < this.list.length; i++) {
-        this.value = await {
+        const value = await {
           name: this.list[i][0],
           อายุ60ถึง69ปี: parseInt(this.list[i][1].replace(",", "")),
           อายุ60ถึง69ปีร้อยละ: parseFloat(this.list[i][2].replace(",", "")),
@@ -58,8 +58,18 @@ class Radialchart extends React.Component {
           อายุมากกว่าหรือเท่ากับ90ปี: parseInt(this.list[i][7].replace(",", "")),
           อายุมากกว่าหรือเท่ากับ90ปีร้อยละ: parseFloat(this.list[i][8].replace(",", "")),
         }
+
+        const datasets = await [{
+          data: [value.อายุ60ถึง69ปี, value.อายุ70ถึง79ปี, value.อายุ80ถึง89ปี, value.อายุมากกว่าหรือเท่ากับ90ปี],
+          borderColor: ["#0693e3", "#ff6384", "#ffc107", "#ba68c8"],
+          backgroundColor: ["#0693e3", "#ff6384", "#ffc107", "#ba68c8"],
+
+        }]
+
+
         this.setState(prevState => ({
-          data: [...prevState.data, [{ value }]],
+          data: { ...prevState.data, datasets }
+
         }))
       }
     } catch (err) {
@@ -69,16 +79,20 @@ class Radialchart extends React.Component {
 
   render() {
 
+
     const { data } = this.state
+    console.log("DATA", data);
 
     return (
       <div className="warp-chart">
-        {/* <VictoryChart
-        >
-          <VictoryArea
+        <div className="chart-content">
+          <Doughnut
             data={data}
+            legend={legend}
+            options={{ maintainAspectRatio: false }}
           />
-        </VictoryChart> */}
+        </div>
+
       </div>
     )
   }

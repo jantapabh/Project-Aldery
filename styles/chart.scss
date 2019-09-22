@@ -4,29 +4,13 @@
     align-items: center !important;
     margin: 1rem !important;
 
-    
-    .VictoryContainer{
-        display: flex;
-        justify-content: center;
-        svg{
-            width: 10rem !important;
-            height: auto !important;
-
-            @media (max-width: 992pxpx) {
-                width: 5rem !important;
-                height: auto!important;
-            }
-
-            text{
-                tspan{
-                    font-size: 2rem !important;
-                }
-                
-            }
-        }
-        
-        
-
+    .chart-content{
+        width: 40%;
+        position: absolute;
+        left: 0;
+      canvas{
+    }
+      
     }
 
     

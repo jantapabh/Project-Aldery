@@ -1258,22 +1258,29 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
         lineNumber: 45
       },
       __self: this
-    })), __jsx("body", {
+    }), __jsx("script", {
+      src: "https://cdn.jsdelivr.net/npm/chart.js@2.8.0",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 46
       },
       __self: this
-    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
+    })), __jsx("body", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 49
       },
       __self: this
-    }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], {
+    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 50
+      },
+      __self: this
+    }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
       },
       __self: this
     })));

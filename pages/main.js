@@ -27,12 +27,13 @@ class Main extends React.Component {
                 <Nav />
                 <div className="main">
                     <div className="tab-main">
-                        <Radialchart/>
                     </div>
                         <div className="card-content">
                             <Card
                                 card={this.state.card}
                             />
+
+                            <Radialchart/>
         
                         </div>
 
