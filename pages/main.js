@@ -1,12 +1,9 @@
 import React from 'react'
 import '../styles/main.scss'
 import Nav from '../components/nav';
-import Card from '../components/layout/card-data';
-import Barchart from '../components/chart/barchart';
-import StackedBarChart from '../components/chart/StackedBarChart';
-import Radialchart from '../components/chart/radialchart';
-import Linechart from '../components/chart/linechart';
-import GeoChart from '../components/chart/Geo'
+import CardMain from '../components/layout/card-data';
+import Radialchart from '../components/chart/RadialChart';
+
 
 class Main extends React.Component {
 
@@ -27,25 +24,20 @@ class Main extends React.Component {
                 <Nav />
                 <div className="main">
                     <div className="tab-main">
-                        <Card
-                            card={this.state.card}
-                        />
+
                     </div>
                     <div className="chart-content">
 
-                        <Radialchart />
-
                     </div>
-
-
-
-
-
                 </div>
-
-
             </div>
         )
     }
 }
 export default Main
+
+//     < CardMain
+// card = { this.state.card }
+//     />
+
+{/* <Radialchart /> */ }

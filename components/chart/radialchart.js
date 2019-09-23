@@ -81,7 +81,6 @@ class Radialchart extends React.Component {
 
 
     const { data } = this.state
-    console.log("DATA", data);
 
     return (
         <div className="chart-main">

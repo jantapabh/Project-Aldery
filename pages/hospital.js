@@ -32,7 +32,7 @@ class Hospital extends React.Component {
                     ที่อยู่: this.list[i][2],
                     เบอร์ติดต่อ: this.list[i][3],
                     ฉุกเฉิน: this.list[i][4],
-                    
+
                 }
                 this.setState(prevState => ({
                     dataList: [...prevState.dataList, value]
@@ -45,11 +45,26 @@ class Hospital extends React.Component {
     }
 
     render() {
+
+        const { dataList } = this.state
+
         return (
             <div className="warp-service">
                 <Nav name="hospital" />
                 <div className="content-service">
-                  
+
+                    {dataList.map((item, index) => {
+                        return (
+                            <div key={index}>
+                                <h5>{item.ชื่อ}</h5>
+                                <h6>{item.ที่อยู่}</h6>
+                                <h6>{item.เบอร์ติดต่อ}</h6>
+                                <p>{item.ฉุกเฉิน}</p>
+                            </div>
+                        )
+                    }
+                    )}
+
 
                 </div>
             </div>

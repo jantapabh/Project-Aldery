@@ -1,7 +1,6 @@
 import React from 'react'
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
-
 let order = 'desc';
 
 class Table extends React.Component {

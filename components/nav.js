@@ -21,68 +21,72 @@ class Nav extends React.Component {
       <nav>
 
         {
-          this.props.name == "/" ?
+          this.props.name == "man" || this.props.name == "woman" || this.props.name == "total" ?
             <React.Fragment>
-              <ul>
-                <div className="warp-manu">
-                  {links.map((item, index) => {
-                    return (
-                      <li key={index}>
-                        <Link href={item.href}>
-                          <p>{item.label}</p>
+              <div className="warp-back">
+                <ul>
+                  <div className="warp-manu">
+                    <li >
+                      <Link href="/main">
+                        <p>ย้อนกลับ</p>
+                      </Link>
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </React.Fragment>
+            :
+            this.props.name == "/" ?
+              <React.Fragment>
+                <ul>
+                  <div className="warp-manu">
+                    {links.map((item, index) => {
+                      return (
+                        <li key={index}>
+                          <Link href={item.href}>
+                            <p>{item.label}</p>
+                          </Link>
+                        </li>
+                      )
+                    }
+                    )}
+
+                  </div>
+                </ul>
+              </React.Fragment>
+              :
+              <React.Fragment>
+                <div className="warp-back">
+                  <ul>
+                    <div className="warp-manu">
+                      <li >
+                        <Link href="/">
+                          <p>ย้อนกลับ</p>
                         </Link>
 
                       </li>
-                    )
-                  }
-
-                  )}
-
+                    </div>
+                  </ul>
                 </div>
-
-              </ul>
-            </React.Fragment>
-            :
-            this.props.name == "man" || this.props.name == "woman" || this.props.name == "total"  ?
-            <React.Fragment>
-              <div className="warp-back">
-            <ul>
-              <div className="warp-manu">
-                <li >
-                  <Link href="/main">
-                    <p>ย้อนกลับ</p>
-                  </Link>
-
-                </li>
-
-              </div>
-
-            </ul>
-          </div>
-            </React.Fragment>
-            :
-          <div className="warp-back">
-            <ul>
-              <div className="warp-manu">
-                <li >
-                  <Link href="/">
-                    <p>ย้อนกลับ</p>
-                  </Link>
-
-                </li>
-
-              </div>
-
-            </ul>
-          </div>
-            
+                <ul>
+                  <div className="warp-manu">
+                    {links.map((item, index) => {
+                      return (
+                        <li key={index}>
+                          <Link href={item.href}>
+                            <p>{item.label}</p>
+                          </Link>
+                        </li>
+                      )
+                    }
+                    )}
+                  </div>
+                </ul>
+              </React.Fragment>
         }
-        {/* <img src="/static/logo.png" alt="logo" /> */}
-
-
-
       </nav>
     )
   }
 }
 export default Nav
+ {/* <img src="/static/logo.png" alt="logo" /> */}

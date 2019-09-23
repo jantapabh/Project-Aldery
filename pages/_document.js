@@ -10,10 +10,7 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <head>
-                        <link rel="stylesheet" href="animate.min.css" />
-                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
-                    </head>
+                  
                     <title>Eldery DB</title>
                     <meta charset="utf-8" />
                     <link rel="shortcut icon" href="/static/logo.png" />
@@ -32,19 +29,6 @@ class MyDocument extends Document {
                         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
                         crossorigin="anonymous"
                     />
-
-
-                    <link rel="stylesheet" href="https://unpkg.com/react-vis/dist/style.css" />
-                    <script type="text/javascript" src="https://unpkg.com/react-vis/dist/dist.min.js"></script>
-
-                    <script src="https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table.min.js" />
-                    <link rel="stylesheet" href="https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table-all.min.css">
-                    </link>
-
-                    <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
-                    <script src="https://unpkg.com/react-chartkick@0.3.2"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
                 </Head>
                 <body>
                     <Main />

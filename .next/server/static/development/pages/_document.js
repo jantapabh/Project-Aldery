@@ -1101,39 +1101,17 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
         lineNumber: 12
       },
       __self: this
-    }, __jsx("head", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13
-      },
-      __self: this
-    }, __jsx("link", {
-      rel: "stylesheet",
-      href: "animate.min.css",
+    }, __jsx("title", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 14
-      },
-      __self: this
-    }), __jsx("link", {
-      rel: "stylesheet",
-      href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15
-      },
-      __self: this
-    })), __jsx("title", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 17
       },
       __self: this
     }, "Eldery DB"), __jsx("meta", {
       charset: "utf-8",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 15
       },
       __self: this
     }), __jsx("link", {
@@ -1141,7 +1119,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       href: "/static/logo.png",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 16
       },
       __self: this
     }), __jsx("meta", {
@@ -1149,7 +1127,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       content: "width=device-width, initial-scale=1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 17
       },
       __self: this
     }), __jsx("meta", {
@@ -1157,7 +1135,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       content: "#000000",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 18
       },
       __self: this
     }), __jsx("meta", {
@@ -1165,7 +1143,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       content: "Web site created using create-react-app",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 19
       },
       __self: this
     }), __jsx("link", {
@@ -1173,7 +1151,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       href: "logo192.png",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 20
       },
       __self: this
     }), __jsx("link", {
@@ -1183,7 +1161,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       crossorigin: "anonymous",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 22
       },
       __self: this
     }), __jsx("script", {
@@ -1192,7 +1170,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       crossorigin: "anonymous",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 23
       },
       __self: this
     }), __jsx("link", {
@@ -1200,7 +1178,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       rel: "stylesheet",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 24
       },
       __self: this
     }), __jsx("link", {
@@ -1210,77 +1188,25 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       crossorigin: "anonymous",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
-      },
-      __self: this
-    }), __jsx("link", {
-      rel: "stylesheet",
-      href: "https://unpkg.com/react-vis/dist/style.css",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 37
-      },
-      __self: this
-    }), __jsx("script", {
-      type: "text/javascript",
-      src: "https://unpkg.com/react-vis/dist/dist.min.js",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 38
-      },
-      __self: this
-    }), __jsx("script", {
-      src: "https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table.min.js",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 40
-      },
-      __self: this
-    }), __jsx("link", {
-      rel: "stylesheet",
-      href: "https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table-all.min.css",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 41
-      },
-      __self: this
-    }), __jsx("script", {
-      src: "https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 44
-      },
-      __self: this
-    }), __jsx("script", {
-      src: "https://unpkg.com/react-chartkick@0.3.2",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 45
-      },
-      __self: this
-    }), __jsx("script", {
-      src: "https://cdn.jsdelivr.net/npm/chart.js@2.8.0",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 26
       },
       __self: this
     })), __jsx("body", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 33
       },
       __self: this
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 34
       },
       __self: this
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 35
       },
       __self: this
     })));
