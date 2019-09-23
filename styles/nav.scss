@@ -1,10 +1,12 @@
 nav {
+    min-width: 100%;
+    width: auto;
+    min-height: 2vh;
+    height: auto;
     display: flex;
-    width: 100%;
     background-color: white;
     box-shadow: 0 0 4px rgba(0,0,0,.25);
     z-index: 99;
-    
 
     ul{
         width: 100%;
@@ -18,41 +20,31 @@ nav {
             display: flex;
             flex-direction: row;
            
-
             li{
                 cursor: pointer;
                 display: flex;
 
                 p{
                     color: black;
-                    
                 }
 
                 p:hover{
-                   
                     color: #bedadc ;
-                    
                 }
-
             }
         }
 
         p{
             cursor: pointer;
             color:#03a9f4;
-           
-            // padding: 0.5rem;
             margin: 0.5rem;
- 
         }
         
     }
     
-
     .warp-back{
         display: flex;
         width: 100%;
-
         ul{
             width: 100%;
             display: flex;
@@ -60,9 +52,7 @@ nav {
             margin-block-start: 0;
             margin-block-end: 0;
             padding-inline-start: 10px;
-    
         }
-
     }
   }
 
