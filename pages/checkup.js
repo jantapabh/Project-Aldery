@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from '../components/nav'
-import Chart from '../components/chart/chart'
+// import Chart from '../components/chart/chart'
 
 class emergencyNumber extends React.Component{
 
@@ -27,7 +27,7 @@ class emergencyNumber extends React.Component{
                         card={this.state.card}
                     />
 
-                    <Chart/>
+                    {/* <Chart/> */}
 
                   </div>
                   
