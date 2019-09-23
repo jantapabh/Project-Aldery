@@ -1,12 +1,14 @@
 .warp-service{
-    width: 100%;
+    min-width: 100%;
+    width: auto;
     min-height: 100vh;
-    height: auto;
+    height: auto ;
     background-color: #F5F9FC;
 
     .content-service{
-        width: 100%;
-        margin-top: 4rem;
+        min-width: 100%;
+        position: absolute;
+        margin-top: 5rem ;
 
         @media (max-width: 575.98px) { 
             margin-top: 1rem !important;
