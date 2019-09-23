@@ -1,7 +1,6 @@
 import React from 'react'
 import Nav from '../components/nav'
 import Chart from '../components/chart/chart'
-import Card from '../components/layout/card-data';
 
 class emergencyNumber extends React.Component{
 
