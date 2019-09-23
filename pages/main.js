@@ -1,8 +1,6 @@
 import React from 'react'
 import '../styles/main.scss'
 import Nav from '../components/nav';
-import CardMain from '../components/layout/cardmain';
-import Radialchart from '../components/chart/radialChart';
 import SideBar from '../components/layout/sidebar';
 
 

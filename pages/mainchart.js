@@ -1,9 +1,8 @@
 import React from 'react'
 import Nav from '../components/nav';
-import Radialchart from '../components/chart/radialChart';
+import Radialchart from '../components/chart/radialchart';
 import SideBar from '../components/layout/sidebar';
-import Linechart from '../components/chart/lineChart';
-import Barchart from '../components/chart/barChart';
+import Barchart from '../components/chart/barchart';
 
 
 class Main extends React.Component {
