@@ -84,16 +84,13 @@ class Radialchart extends React.Component {
     console.log("DATA", data);
 
     return (
-      <div className="warp-chart">
-        <div className="chart-content">
+        <div className="chart-main">
           <Doughnut
             data={data}
             legend={legend}
             options={{ maintainAspectRatio: false }}
           />
         </div>
-
-      </div>
     )
   }
 }

@@ -36,7 +36,7 @@ class Home extends React.Component {
       ],
       isLoad: false
     }
-    this.timer = setTimeout(this.Load, 5500);
+    // this.timer = setTimeout(this.Load, 5500);
   }
 
   async componentDidMount() {
@@ -53,9 +53,9 @@ class Home extends React.Component {
 
   render() {
 
-    if (!this.state.isLoad) {
-      return <Load name="index"/>
-    }
+    // if (!this.state.isLoad) {
+    //   return <Load name="index"/>
+    // }
 
     return (
       <div className="warp-index">

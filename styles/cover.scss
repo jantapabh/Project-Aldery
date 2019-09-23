@@ -1,32 +1,42 @@
+.box-index{
+    @media only screen and (max-width: 575.98px) {
+        min-height: 100vh;
+        height: auto;
+
+        background-color: #F5F9FC;
+    }
+}
+
+
 .warp-cover{
     width: 100%;
+    background-image: url("/static/bg-cover.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.7;
+    @media only screen and (max-width: 575.98px) {
 
-    
+        background-image: none;
+    }
+
 
     .vertical-center{
-        background-image: url("/static/bg-cover.jpg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        opacity: 0.7;
-
-        @media only screen and (max-width: 767px) {
-
-           background-image: none;
-           background-color: #F5F9FC;
-        }
-
         
     .box{
-        margin: 2rem 0;
+        margin: 2rem 0 ;
         width: 100%;
         text-align: center;
         display: flex;
         justify-content: center;
+
+        @media only screen and (max-width: 575.98px) {
+            margin:0 ;
+        }
 
         .box-content{
             
@@ -44,7 +54,7 @@
                     color: black;
                 }
 
-                @media only screen and (max-width: 767px) {
+                @media only screen and (max-width: 575.98px) {
 
                     display: none;
                  }
@@ -55,7 +65,7 @@
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
-                    margin: 2rem 0 1rem 0;
+                    margin: 2rem  0;
 
 
                         .icon-data{
@@ -63,7 +73,7 @@
                             display: flex;
                             justify-content: center;
                           
-                            @media (max-width: 767px) {
+                            @media (max-width: 575.98px) {
 
                                 flex-direction: column;
                                 align-items: center;

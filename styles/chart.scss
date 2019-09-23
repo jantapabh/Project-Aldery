@@ -4,15 +4,6 @@
     align-items: center !important;
     margin: 1rem !important;
 
-    .chart-content{
-        width: 40%;
-        position: absolute;
-        left: 0;
-      canvas{
-    }
-      
-    }
-
     
     .chart{
         margin: 0 2rem;
@@ -33,6 +24,18 @@
         }
     }
 
+}
+
+
+.chart-main{
+    width: 50%;
+    margin: 1rem;
+
+    .chartjs-size-monitor{
+        canvas{
+     
+        }
+    }
 }
 
 

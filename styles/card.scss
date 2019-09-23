@@ -1,61 +1,44 @@
 //Main
 .warp-card{
-    display: flex;
-    justify-content: center;
     margin: 1.5rem;
-    @media (max-width: 575.98px) { 
-        display: flex;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-   
-
+  
     .card-main{
         width: 100%;
         display: flex;
-        justify-content: center;
-
-        @media (max-width: 576px) { 
-            flex-direction: column !important;
-            align-items: center;
-         }
-
+        flex-direction: column;
+        align-items: center;
     }
 
         .card{
+
         cursor: pointer;
-        margin: 0 1rem;
         width: 100%;
         display: flex;
         flex-direction: row !important;
         padding: 0.5rem;
         border-radius: 0.5rem;
+        margin-bottom: 1rem;
         //box-shadow: 0 0 0.875rem 0 rgba(53, 64, 82, 0.05);
         box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 
-        @media (max-width: 576px) { 
-           margin-bottom: 1rem !important;
-         }
-
         
         .card-img{
-            width: 50%;
+            width: 30%;
             margin: 0.5rem;
-           
             display: flex;
             justify-content: center;
+            align-items: center;
             cursor: pointer;
-            
-            
-            img{
-                width: 5rem;
-                height: 5rem;
 
-                @media (max-width: 1199.98px) {
-                    width: 3rem !important;
-                    height: 3rem !important;
-                }
+            @media (max-width: 1300px) { 
+                  
+                margin: 0 0.5rem;
+            }
+
+            img{
+                width: 4rem;
+                height: 4rem;
+
             }
  
         }
@@ -64,12 +47,23 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            margin-left: 1.5rem;
+
+            @media (max-width: 1300px) { 
+                  
+            
+            }
+
 
             .card-text{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
                 h5{
-                    @media (max-width: 1200px) { 
+                    @media (max-width: 1300px) { 
                   
-                        font-size: 0.75rem ;
+                        font-size: 1rem !important;
                     }
 
                     @media (max-width: 768px) { 
@@ -80,14 +74,17 @@
             }
 
             .card-data{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
                 
                 h4{
                     margin-top: 0.5rem;
                     margin: 0.5rem 0;
 
-                    @media (max-width: 1200px) { 
+                    @media (max-width: 1300px) { 
                   
-                        font-size: 1rem ;
+                        font-size: 1.3rem !important;
                     }
 
                     @media (max-width: 768px) { 
@@ -95,11 +92,7 @@
                     }
                 }
 
-               
-                
             }
-          
-
         }
         
         }

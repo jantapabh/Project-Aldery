@@ -19,21 +19,25 @@
             left: 0;
             margin-block-start:0;
 
-            @media (max-width: 576px) { 
+            @media (max-width: 768px) { 
                 display: none;
               }
             
         } 
        
-            .card-content{
+            .chart-content{
                 position: fixed;
-                margin-block-start:0;
                 right: 0;
+                margin-block-start: 0;
+            
                 width: 80%;
+                min-height: 100%;
+                height: auto;;
 
-                @media (max-width: 576px) { 
+                @media (max-width: 768px) { 
                     width: 100%;
                   }
+
                 
             }
 

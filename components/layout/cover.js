@@ -21,7 +21,7 @@ class Cover extends React.Component {
                                 <IconData />
                             </div>
                             <div className="box-text">
-                                <p className="animated fadeInDown delay-1s ">ที่มา: รายงานสรุปยอดผู้ได้รับเบี้ยเเยกตามประเภท อปท. เทศบาลเมืองกะทู้ อ.กะทู้ จังหวัดภูเก็ต</p>
+                                <p className="animated fadeInDown delay-2s ">ที่มา: รายงานสรุปยอดผู้ได้รับเบี้ยเเยกตามประเภท อปท. เทศบาลเมืองกะทู้ อ.กะทู้ จังหวัดภูเก็ต</p>
                             </div>
                         </div>
                     </div>
