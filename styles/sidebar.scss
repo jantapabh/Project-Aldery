@@ -1,0 +1,15 @@
+.warp-sidebar{
+    min-width: 100%;
+    width: auto;
+    min-height: 100vh;
+    height: auto;
+
+    .sidebar{
+        background-color: antiquewhite;
+        min-height: 100vh;
+        height: auto;
+        min-width: 15rem;
+        max-width: 15rem;
+        width: auto;
+    }
+}

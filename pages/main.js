@@ -3,6 +3,7 @@ import '../styles/main.scss'
 import Nav from '../components/nav';
 import CardMain from '../components/layout/card-data';
 import Radialchart from '../components/chart/RadialChart';
+import SideBar from '../components/layout/sidebar';
 
 
 class Main extends React.Component {
@@ -22,14 +23,7 @@ class Main extends React.Component {
         return (
             <div className="warp-main">
                 <Nav />
-                <div className="main">
-                    <div className="tab-main">
-
-                    </div>
-                    <div className="chart-content">
-
-                    </div>
-                </div>
+            <SideBar/>
             </div>
         )
     }
