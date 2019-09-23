@@ -5,11 +5,33 @@
     height: auto;
 
     .sidebar{
-        background-color: antiquewhite;
+        background-color: white;
         min-height: 100vh;
         height: auto;
-        min-width: 15rem;
-        max-width: 15rem;
+        min-width: 12rem;
+        max-width: 12rem;
         width: auto;
+
+        .sidebar-list{
+            position: absolute;
+            margin: 4rem 1rem 0 1rem;
+
+            a{
+                display: block;
+                color: black;
+                padding: 1rem;
+                text-decoration: none;
+                user-select: none;
+            }
+
+            a:hover{
+                color: #03a9f4;
+            }
+        }
+
+        @media (max-width: 575.98px) { 
+            display: none;
+        }
+        
     }
 }

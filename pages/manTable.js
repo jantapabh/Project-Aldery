@@ -51,11 +51,10 @@ class Man extends React.Component {
         return (
             <div className="warp-main">
                 <Nav name="man" />
-                <div className="content-main">
-                    <Table
-                        data={this.state.data}
-                    />
-                </div>
+
+                <Table
+                    data={this.state.data}
+                />
 
             </div>
         )

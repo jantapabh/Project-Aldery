@@ -36,7 +36,7 @@ class Table extends React.Component {
         const { data } = this.props
         return (
             <div className="warp-table">
-                <div className="table">
+                <div className="table-main">
                     <BootstrapTable
                         ref='table'
                         data={data}

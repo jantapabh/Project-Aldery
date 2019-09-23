@@ -10,7 +10,7 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                  
+
                     <title>Eldery DB</title>
                     <meta charset="utf-8" />
                     <link rel="shortcut icon" href="/static/logo.png" />
@@ -29,6 +29,10 @@ class MyDocument extends Document {
                         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
                         crossorigin="anonymous"
                     />
+
+                    <script src="https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table.min.js" />
+                    <link rel="stylesheet" href="https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table-all.min.css">
+</link>
                 </Head>
                 <body>
                     <Main />

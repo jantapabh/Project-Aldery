@@ -1191,22 +1191,37 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
         lineNumber: 26
       },
       __self: this
-    })), __jsx("body", {
+    }), __jsx("script", {
+      src: "https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table.min.js",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 33
       },
       __self: this
-    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
+    }), __jsx("link", {
+      rel: "stylesheet",
+      href: "https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table-all.min.css",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 34
       },
       __self: this
+    })), __jsx("body", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: this
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 39
       },
       __self: this
     })));
