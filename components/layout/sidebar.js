@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 class SideBar extends React.Component {
@@ -7,8 +8,9 @@ class SideBar extends React.Component {
         super(props);
         this.state = {
             list: [
-                { name: "ข้อมูลทางสถิติ", href: "#ข้อมูลทางสถิติ" },
-                { name: "เบี้ยยังชีพผู้สูงอายุ", href: "#เบี้ยยังชีพผู้สูงอายุ" }
+                { name: "หน้าหลัก", href: "/main" },
+                { name: "ข้อมูลทางสถิติ", href: "/mainchart" },
+                { name: "เบี้ยยังชีพผู้สูงอายุ", href: "/maincard" }
             ]
         }
     }
@@ -16,13 +18,14 @@ class SideBar extends React.Component {
 
     render() {
         return (
-            <div className="warp-sidebar">
                 <div className="sidebar">
                     <div className="sidebar-list">
                         {
                             this.state.list.map((item, index) => {
                                 return (
-                                    <a href={item.href} key={index}>{item.name}</a>
+                                    <Link href={item.href} >
+                                        <h6 key={index}>{item.name}</h6>
+                                    </Link>
                                 )
                             })
                         }
@@ -31,7 +34,7 @@ class SideBar extends React.Component {
 
 
                 </div>
-            </div>
+         
         )
     }
 }

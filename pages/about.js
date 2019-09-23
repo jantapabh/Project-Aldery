@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from '../components/nav'
-import Linechart from '../components/chart/linechart';
+import Linechart from '../components/chart/lineChart';
 
 class About extends React.Component {
 

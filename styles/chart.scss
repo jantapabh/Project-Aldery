@@ -20,6 +20,7 @@
         
         .recharts-wrapper{
             cursor: pointer !important;
+        
         }
     }
 
@@ -27,7 +28,8 @@
 
 
 .chart-main{
-    width: 50%;
+    min-width: 20rem;
+    max-width: 20rem;
     margin: 1rem;
 }
 

@@ -5,6 +5,39 @@
     height: auto ;
     background-color: #F5F9FC;
 
+    .main{
+        display: flex;
+        
+
+        .content {
+            min-width: 85%;
+            width: auto;
+            position: relative;
+            margin-top: 5rem ;
+           
+        }
+
+        .content-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            // min-width: 85%;
+            // width: auto;
+            position: relative;
+            margin-top: 5rem ;
+           
+        }
+
+        .content-text {
+            min-width: 85%;
+            width: auto;
+            position: relative;
+            margin-top: 5rem ;
+            
+           
+        }
+    }
+    
     
 }
 

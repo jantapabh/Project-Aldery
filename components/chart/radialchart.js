@@ -4,7 +4,7 @@ import { Doughnut } from 'react-chartjs-2';
 
 const legend = {
   "display": true,
-  "position": "right",
+  "position": "left",
   "fullWidth": true,
   "reverse": true,
   "labels": {

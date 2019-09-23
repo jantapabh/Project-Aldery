@@ -27,8 +27,10 @@ class Main extends React.Component {
                 <Nav />
                 <div className="main">
                     <SideBar />
-                    <div class="content-text">
-                           <h1>สังคมผู้สูงอายุ</h1>
+                    <div class="content">
+                            <CardMain
+                                card = { this.state.card }
+                            />
                     </div>
 
                 </div>
@@ -41,5 +43,4 @@ class Main extends React.Component {
     }
 }
 export default Main
-
 
