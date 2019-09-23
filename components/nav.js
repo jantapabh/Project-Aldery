@@ -89,4 +89,4 @@ class Nav extends React.Component {
   }
 }
 export default Nav
- {/* <img src="/static/logo.png" alt="logo" /> */}
+{/* <img src="/static/logo.png" alt="logo" /> */ }
