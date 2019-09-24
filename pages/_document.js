@@ -11,6 +11,10 @@ class MyDocument extends Document {
             <Html>
                 <Head>
 
+                    <head>
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+                    </head>
+
                     <title>Eldery DB</title>
                     <meta charset="utf-8" />
                     <link rel="shortcut icon" href="/static/logo.png" />
@@ -32,7 +36,7 @@ class MyDocument extends Document {
 
                     <script src="https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table.min.js" />
                     <link rel="stylesheet" href="https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table-all.min.css">
-</link>
+                    </link>
                 </Head>
                 <body>
                     <Main />

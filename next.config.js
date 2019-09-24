@@ -6,7 +6,6 @@ module.exports = {
     '/service' : {page:'/service'},
     '/mantable' : {page:'/mantable'},
     '/womantable' : {page:'/womantable'},
-    '/totaltable' : {page:'/totaltable'},
     
   })
 }

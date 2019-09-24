@@ -16,7 +16,7 @@ class Hospital extends React.Component {
 
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.list('โรงพยาบาลใกล้เคียง!A4:E')
+        await this.list('โรงพยาบาลใกล้เคียง!A4:E12')
     }
 
     list = async (value) => {
@@ -55,16 +55,33 @@ class Hospital extends React.Component {
 
                     {dataList.map((item, index) => {
                         return (
-                            <div key={index}>
-                                <h5>{item.ชื่อ}</h5>
-                                <h6>{item.ที่อยู่}</h6>
-                                <h6>{item.เบอร์ติดต่อ}</h6>
-                                <p>{item.ฉุกเฉิน}</p>
-                            </div>
+                            index <= index / 2 ?
+                                <div className="service-list" key={index}>
+                                    <h5>{item.ชื่อ}</h5>
+                                    <h6>{item.ที่อยู่}</h6>
+                                    <h6>{item.เบอร์ติดต่อ}</h6>
+                                    <p>{item.ฉุกเฉิน}</p>
+                                </div>
+                                :
+                                null
                         )
                     }
                     )}
 
+                    {dataList.map((item, index) => {
+                        return (
+                            index >= index / 2 ?
+                                <div className="service-list" key={index}>
+                                    <h5>{item.ชื่อ}</h5>
+                                    <h6>{item.ที่อยู่}</h6>
+                                    <h6>{item.เบอร์ติดต่อ}</h6>
+                                    <p>{item.ฉุกเฉิน}</p>
+                                </div>
+                                :
+                                null
+                        )
+                    }
+                    )}
 
                 </div>
             </div>
