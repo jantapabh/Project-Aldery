@@ -3,6 +3,7 @@ import Nav from '../components/nav';
 import Radialchart from '../components/chart/radialchart';
 import SideBar from '../components/layout/sidebar';
 import Barchart from '../components/chart/barchart';
+import Sheetapi from '../config/api'
 
 
 class Main extends React.Component {
@@ -12,6 +13,11 @@ class Main extends React.Component {
         this.state = {
 
         }
+    }
+
+    async componentDidMount() {
+        await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
+    
     }
 
     render() {

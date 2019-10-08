@@ -5,6 +5,7 @@ import Cover from '../components/layout/cover';
 import Load from '../components/layout/load';
 import Menu_icon from '../components/layout/menu-icon';
 import CardDepartment from '../components/layout/coverDepartment';
+import Radialchart from '../components/chart/radialchart';
 
 class Home extends React.Component {
 
@@ -73,6 +74,7 @@ class Home extends React.Component {
               card={this.state.card}
           /> */}
 
+<Radialchart/>
 
         </div>
 
