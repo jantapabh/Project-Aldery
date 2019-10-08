@@ -74,7 +74,6 @@ class Home extends React.Component {
               card={this.state.card}
           /> */}
 
-<Radialchart/>
 
         </div>
 

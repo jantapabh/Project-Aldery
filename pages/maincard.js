@@ -1,7 +1,6 @@
 import React from 'react'
-import Nav from '../components/nav';
+import Sheetapi from '../config/api'
 import CardMain from '../components/layout/cardmain';
-import SideBar from '../components/layout/sidebar';
 
 
 class Main extends React.Component {
@@ -15,26 +14,66 @@ class Main extends React.Component {
                 { name: "card2", img: "/static/old-woman.svg", text: "เพศหญิง", url: "/womantable", hover: "two" },
                 { name: "card3", img: "/static/couple.svg", text: "รวม", url: "/totaltable", hover: "three" },],
 
+            status: true
+
+        }
+    }
+
+    async componentDidMount() {
+        await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
+
+    }
+
+
+    toggle = async () => {
+        if (!this.state.status) {
+            await this.setState({
+                status: true
+            })
+        }
+        else {
+            await this.setState({
+                status: false
+            })
         }
     }
 
     render() {
 
         return (
+
             <div className="warp-main">
-                <Nav />
-                <div className="main">
-                    <SideBar />
-                    <div class="content">
-                            <CardMain
-                                card = { this.state.card }
-                            />
+                <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
+                    <div className="sidebar-wrapper">
+                        <ul className="sidebar-nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="/mainchart">ข้อมูลทางสถิติ</a></li>
+                            <li><a href="/maincard">เบี้ยยังชีพผู้สูงอายุ</a></li>
+                        </ul>
+                    </div>
+                    <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
+                        <nav>
+                            <ul>
+                                <div className="warp-manu">
+                                    <li>
+                                        <a href="#" className="menu-toggle" onClick={this.toggle}>
+                                            <span className="btn">ppp</span>
+                                        </a>
+                                    </li>
+
+                                </div>
+                            </ul>
+                        </nav>
                     </div>
 
+                    <div className="page-content-wrapper">
+                        <div className="container-fluid">
+                            <CardMain
+                                card={this.state.card}
+                            />
+                        </div>
+                    </div>
                 </div>
-
-
-
 
             </div>
         )
