@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-class Mainsildbar extends React.Component {
+class Main extends React.Component {
 
     constructor(props) {
         super(props);
@@ -64,4 +64,4 @@ class Mainsildbar extends React.Component {
         )
     }
 }
-export default Mainsildbar;
+export default Main;
