@@ -56,9 +56,13 @@ class Main extends React.Component {
                             <ul>
                                 <div className="warp-manu">
                                     <li>
-                                        <a href="#" className="menu-toggle" onClick={this.toggle}>
-                                            <span className="btn">ppp</span>
-                                        </a>
+                                        <div className="box-hamberger">
+                                            <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.toggle} >
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </a>
+                                        </div>
                                     </li>
 
                                 </div>
