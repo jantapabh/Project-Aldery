@@ -43,6 +43,7 @@ class Table extends React.Component {
                         
                         pagination={true}
                         search={true}
+                        searchPlaceholder={"ค้นหา"}
                     >
                         <TableHeaderColumn dataField="ลำดับที่" isKey={true}>ลำดับที่</TableHeaderColumn>
                         <TableHeaderColumn dataField="คำนำหน้า">คำนำหน้า</TableHeaderColumn>
