@@ -31,7 +31,7 @@ class Main extends React.Component {
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                     <div className="sidebar-wrapper">
                         <ul className="sidebar-nav">
-                            <li><a href="#">Home</a></li>
+                            <li><a href="/">หน้าหลัก</a></li>
                             <li><a href="/mainchart">ข้อมูลทางสถิติ</a></li>
                             <li><a href="/maincard">เบี้ยยังชีพผู้สูงอายุ</a></li>
                         </ul>
@@ -41,9 +41,19 @@ class Main extends React.Component {
                             <ul>
                                 <div className="warp-manu">
                                     <li>
-                                        <a href="#" className="menu-toggle" onClick={this.toggle}>
+                                        {/* <a className="menu-toggle" onClick={this.toggle} >
                                             <span className="btn">ppp</span>
-                                        </a>
+                                        </a> */}
+                                        <div className="box-hamberger">
+                                            <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.toggle} >
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </a>
+
+                                        </div>
+
+
                                     </li>
 
                                 </div>
