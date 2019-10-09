@@ -144,10 +144,17 @@
   .sidebar-nav li a {
     display:block;
     text-decoration:none;
-    color:#ddd;
+    // color:#ddd;
+    color: black !important;
   }
   
   .sidebar-nav li:hover{
-    background:#846bab;
+    background:#b3cbe5;
+    
   }
+
+//   .sidebar-nav li a:hover {
+//     color: black !important;
+    
+//   }
   
