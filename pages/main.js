@@ -58,8 +58,8 @@ class Main extends React.Component {
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
                             <h1 className="text-center">สังคมผู้สูงอายุ</h1>
-                            <h2 className="small text-center">Second Header</h2>
-                            <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium perferendis maiores velit ad id delectus nisi eligendi doloremque officia necessitatibus, repellendus alias omnis, natus nam voluptates dolor vel minus ab?</p>
+                            <h2 className="small text-center"></h2>
+                            <p className="text-center"></p>
                         </div>
                     </div>
                 </div>
