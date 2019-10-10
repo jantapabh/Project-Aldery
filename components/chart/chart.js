@@ -1,8 +1,5 @@
 import React from 'react';
 import Sheetapi from '../../config/api'
-import {
-    BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-} from 'recharts';
 
 class Chart extends React.Component {
     constructor(props) {
@@ -16,26 +13,28 @@ class Chart extends React.Component {
 
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.list('โรคที่พบบ่อย!A4:E')
+        await this.list('ข้อมูลทั่วไป!A8:AF')
     }
 
     list = async (value) => {
 
         try {
 
-            this.list = await Sheetapi.getSheet3(this.access_token, value)
+            this.list = await Sheetapi.getSheet(this.access_token, value)
+            console.log("LIST",this.list);
+            
 
-            for (let i = 0; i < this.list.length; i++) {
-                let value = await {
-                    โรค: this.list[i][1],
-                    เพศชาย: this.list[i][2],
-                    เพศหญิง: this.list[i][3],
+            // for (let i = 0; i < this.list.length; i++) {
+            //     let value = await {
+            //         โรค: this.list[i][1],
+            //         เพศชาย: this.list[i][2],
+            //         เพศหญิง: this.list[i][3],
                     
-                }
-                this.setState(prevState => ({
-                    data: [...prevState.data, value]
-                }))
-            }
+            //     }
+            //     this.setState(prevState => ({
+            //         data: [...prevState.data, value]
+            //     }))
+            // }
         } catch (err) {
             console.log(err);
         }
@@ -48,7 +47,7 @@ render() {
         <div className="warp-chart">
 
         <div className="chart">
-            <BarChart
+            {/* <BarChart
                 width={500}
                 height={250}
                 data={data}
@@ -61,7 +60,7 @@ render() {
                 <Bar dataKey="เพศชาย" fill="#0288d1" />
                 <Bar dataKey="เพศหญิง" fill="#03a9f4" />
 
-            </BarChart>
+            </BarChart> */}
         </div>
       
     </div>

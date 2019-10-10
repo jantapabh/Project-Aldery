@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {urlSheet1,urlSheet2,urlSheet3,urlSheet4,urlpost} from '../config'
+import {urlSheet1,urlSheet2,urlSheet3,urlSheet4,urlpost,urlSheetMain} from '../config'
 
  async function getSheet1(token,col) {
 
@@ -77,11 +77,27 @@ async function postSheetValues() {
 
 }
 
+async function getSheet(token,col) {
+
+    const request = await axios.get(`${urlSheetMain}${col}`,
+        {
+            headers: {
+                Authorization: `Bearer ${token}`,
+                
+            }
+
+        })
+
+    return request.data.values
+
+}
+
 export default{
     getSheet1,
     getSheet2,
     getSheet3,
     getSheet4,
-    postSheetValues
+    postSheetValues,
+    getSheet
 
 }

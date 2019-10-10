@@ -54,9 +54,6 @@ class Home extends React.Component {
 
   render() {
 
-    // if (!this.state.isLoad) {
-    //   return <Load name="index"/>
-    // }
 
     return (
       <div className="warp-index">
@@ -64,16 +61,12 @@ class Home extends React.Component {
 
         <div className="box-index">
           <Cover />
-          <Menu_icon
+          {/* <Menu_icon
             icon={this.state.iconset1}
           />
           <Menu_icon
             icon={this.state.iconset2}
-          />
-          {/* <CardDepartment
-              card={this.state.card}
           /> */}
-
 
         </div>
 

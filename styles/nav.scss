@@ -9,6 +9,23 @@ nav {
     z-index: 99;
     position: absolute;
 
+    .nav-bar-main{
+        padding-inline-end: 10px; 
+        list-style:none; 
+        ul{
+            display: flex;
+            justify-content: flex-end !important;
+
+            p{
+                margin: 1rem;
+                color:  black;
+            }
+            p:hover{
+                color:#bedadc;
+            }
+        }
+    }
+
     ul{
         width: 100%;
         display: flex;
@@ -38,7 +55,7 @@ nav {
         p{
             cursor: pointer;
             color:#03a9f4;
-            margin: 0.5rem;
+            margin: 1rem;
         }
         
     }
@@ -56,19 +73,3 @@ nav {
         }
     }
   }
-
-
-    
-.sildbar{
-    nav{
-       
-        min-height: 5vh;
-        height: auto;
-        display: flex;
-        background-color: white;
-        box-shadow: 0 0 4px rgba(0,0,0,.25);
-        z-index: 99;
-        position: absolute;
-        margin-left: 200px;
-    }
-}

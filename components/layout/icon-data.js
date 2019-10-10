@@ -74,7 +74,6 @@ class IconData extends React.Component {
                             <React.Fragment key={index} >
                                 <div className="icon-content animated fadeInDown delay-1s ">
 
-
                                     {
                                         this.state.data.map((items, indexs) => {
 

@@ -22,10 +22,6 @@ class emergencyNumber extends React.Component{
                   <div className="content-service">
                     <h1>การตรวจสุขภาพ</h1>
 
-                  
-
-                    {/* <Chart/> */}
-
                   </div>
                   
             </div>

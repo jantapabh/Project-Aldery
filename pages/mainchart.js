@@ -1,6 +1,6 @@
 import React from 'react'
 import Radialchart from '../components/chart/radialchart';
-import Barchart from '../components/chart/barchart';
+import Chart from '../components/chart/chart';
 import Sheetapi from '../config/api'
 
 
@@ -39,9 +39,24 @@ class Main extends React.Component {
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                     <div className="sidebar-wrapper">
                         <ul className="sidebar-nav">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="/mainchart">ข้อมูลทางสถิติ</a></li>
-                            <li><a href="/maincard">เบี้ยยังชีพผู้สูงอายุ</a></li>
+                            <li><img src="/static/home.svg" /><a href="/">หน้าหลัก</a></li>
+                            <li><img src="/static/chart.svg" /><a href="/mainchart">ข้อมูลทางสถิติ</a></li>
+                            <li><img src="/static/document.svg" /><a href="/maincard">เบี้ยยังชีพผู้สูงอายุ</a></li>
+                        </ul>
+                        <ul className="non-sidebar-nav">
+                            <div className="icon-sidebar">
+                                <li><img src="/static/home.svg" /></li>
+                                <p>HOME</p>
+                            </div>
+                            <div className="icon-sidebar">
+                                <li><img src="/static/chart.svg" /></li>
+                                <p>CHART</p>
+                            </div>
+                            <div className="icon-sidebar">
+                                <li><img src="/static/document.svg" /></li>
+                                <p>DOC</p>
+                            </div>
+
                         </ul>
                     </div>
                     <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
@@ -50,13 +65,10 @@ class Main extends React.Component {
                                 <div className="warp-manu">
                                     <li>
                                         <div className="box-hamberger">
-                                            <a className={`btn hamberger${this.state.status ? " active" : " not-active"}`} onClick={this.toggle} >
-                                                <div className="span-hamberger">
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
-
+                                            <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.toggle} >
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
                                             </a>
                                         </div>
                                     </li>
@@ -68,7 +80,11 @@ class Main extends React.Component {
 
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
-                            <Radialchart />
+                            <div className="text-center">
+                                <Radialchart />
+                                <Chart/>
+                            </div>
+
                         </div>
                     </div>
                 </div>

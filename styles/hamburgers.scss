@@ -1,11 +1,10 @@
 .box-hamberger {
-  width: 5rem;
-  height: 4rem;
-  padding: 0.5rem;
+  width: 3.5rem;
+  height: 3rem;
 
   a.hamberger{
       position: relative;
-    left: 1rem;
+    left: 1.5rem;
     top: 1.5rem;
     }
 
@@ -30,7 +29,7 @@
 
 
   span + span {
-    margin-top: 10px ;
+    margin-top: 6px ;
   }
 
   .active span:nth-child(1) {
@@ -63,22 +62,22 @@
       transform: rotate(0);
     }
     50% {
-      top: 12px;
+      top: 8px;
       transform: rotate(0);
     }
     100% {
-      top: 12px;
+      top: 8px;
       transform: rotate(45deg);
     }
   }
 
   @keyframes top-2 {
     0% {
-      top: 12px;
+      top: 8px;
       transform: rotate(45deg);
     }
     50% {
-      top: 12px;
+      top: 8px;
       transform: rotate(0deg);
     }
     100% {
@@ -93,22 +92,22 @@
       transform: rotate(0);
     }
     50% {
-      bottom: 12px;
+      bottom: 8px;
       transform: rotate(0);
     }
     100% {
-      bottom: 12px;
+      bottom: 8px;
       transform: rotate(135deg);
     }
   }
 
   @keyframes bottom-2 {
     0% {
-      bottom: 12px;
+      bottom: 8px;
       transform: rotate(135deg);
     }
     50% {
-      bottom: 12px;
+      bottom: 8px;
       transform: rotate(0);
     }
     100% {
