@@ -19,24 +19,22 @@ class CardData extends React.Component {
     async componentWillMount() {
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.list('!N2:P2')
+        await this.list('ข้อมูลทั่วไป!AN9:AP9')
     }
     list = async (value) => {
 
         try {
 
-            this.list = await Sheetapi.getSheet2(this.access_token, value)
-        console.log("List",this.list);
-        
-
+            this.list = await Sheetapi.getSheet(this.access_token, value)
 
             for (let i = 0; i < this.list.length; i++) {
                 let value = await {
-                    ชาย: parseInt(this.list[i][0].replace(",", "")),
-                    หญิง: parseInt(this.list[i][1].replace(",", "")),
-                    รวม: parseInt(this.list[i][2].replace(",", "")),
+                    ชาย: parseInt(this.list[i][0]),
+                    หญิง: parseInt(this.list[i][1]),
+                    รวม: parseInt(this.list[i][2]),
 
                 }
+
                 this.setState(prevState => ({
                     data: [...prevState.data, value],
 
@@ -52,66 +50,62 @@ class CardData extends React.Component {
     render() {
         return (
             <div className="warp-card">
-
                 {
                     !!this.props.card ?
                         <div className="card-main">
                             {
                                 this.props.card.map((item, index) => {
                                     return (
-
                                         <Link key={index} href={item.url}>
-                                           
-                                                <div className="card">
-
-                                                    <div className="card-img">
-                                                        <img src={item.img} alt={item.name} />
+                                            <div className="card">
+                                                <div className="card-img">
+                                                    <img src={item.img} alt={item.name} />
+                                                </div>
+                                                <div className="card-conten">
+                                                    <div className="card-text">
+                                                        <h5>{item.text}</h5>
                                                     </div>
-                                                    <div className="card-conten">
-                                                        <div className="card-text">
-                                                            <h5>{item.text}</h5>
-                                                        </div>
-                                                        <div className="card-data">
-                                                            {
-                                                                index == 0 ?
+                                                    <div className="card-data">
+                                                        {
+                                                            index == 0 ?
+                                                                <div>
+                                                                    {
+                                                                        this.state.data.map((item1, index1) => {
+                                                                            return (
+                                                                                <h4 key={index1}>{item1.ชาย} คน</h4>
+                                                                            )
+                                                                        })
+                                                                    }
+                                                                </div>
+                                                                :
+                                                                index == 1 ?
                                                                     <div>
                                                                         {
-                                                                            this.state.data.map((item1, index1) => {
+                                                                            this.state.data.map((item2, index2) => {
                                                                                 return (
-                                                                                    <h4 key={index1}>{item1.ชาย} คน</h4>
+                                                                                    <h4 key={index2}>{item2.หญิง} คน</h4>
                                                                                 )
                                                                             })
                                                                         }
                                                                     </div>
                                                                     :
-                                                                    index == 1 ?
+                                                                    index == 2 ?
                                                                         <div>
                                                                             {
-                                                                                this.state.data.map((item2, index2) => {
+                                                                                this.state.data.map((item3, index3) => {
                                                                                     return (
-                                                                                        <h4 key={index2}>{item2.หญิง} คน</h4>
+                                                                                        <h4 key={index3}><CountUp end={item3.รวม} /> คน</h4>
                                                                                     )
                                                                                 })
                                                                             }
                                                                         </div>
                                                                         :
-                                                                        index == 2 ?
-                                                                            <div>
-                                                                                {
-                                                                                    this.state.data.map((item3, index3) => {
-                                                                                        return (
-                                                                                            <h4 key={index3}><CountUp end={item3.รวม} /> คน</h4>
-                                                                                        )
-                                                                                    })
-                                                                                }
-                                                                            </div>
-                                                                            :
-                                                                            null
-                                                            }
-                                                        </div>
+                                                                        null
+                                                        }
                                                     </div>
                                                 </div>
-                                          
+                                            </div>
+
                                         </Link>
 
                                     )

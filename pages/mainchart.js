@@ -2,11 +2,8 @@ import React from 'react'
 import Radialchart from '../components/chart/radialchart';
 import Chart from '../components/chart/chart';
 import Sheetapi from '../config/api'
-import Areachart from '../components/chart/area';
-import Linechart from '../components/chart/linechart';
 import CardData from '../components/layout/cardmain';
 import Sidebar from '../components/layout/sidebar';
-import IconData from '../components/layout/icon-data';
 
 
 class Main extends React.Component {

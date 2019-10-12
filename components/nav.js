@@ -29,7 +29,7 @@ class Nav extends React.Component {
                       <ul>
                         <div className="warp-manu">
                           <li >
-                            <Link href="/main">
+                            <Link href="/mainchart">
                               <p>ย้อนกลับ</p>
                             </Link>
                           </li>
