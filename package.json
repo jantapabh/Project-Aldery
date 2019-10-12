@@ -25,6 +25,7 @@
     "react-circle": "^1.1.1",
     "react-countup": "^4.2.2",
     "react-dom": "^16.9.0",
+    "react-google-charts": "^3.0.15",
     "reactstrap": "^8.0.1",
     "recharts": "^1.7.1",
     "victory": "^33.0.6"

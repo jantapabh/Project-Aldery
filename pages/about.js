@@ -1,6 +1,5 @@
 import React from 'react'
 import Nav from '../components/nav'
-import Linechart from '../components/chart/linechart';
 
 class About extends React.Component {
 
@@ -22,7 +21,7 @@ class About extends React.Component {
                     </div>
 
                     <div className="line-chart">
-                        <Linechart/>
+                     
                     </div>
                
                          

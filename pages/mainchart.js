@@ -1,9 +1,13 @@
 import React from 'react'
 import Radialchart from '../components/chart/radialchart';
 import Chart from '../components/chart/chart';
+import Linechart from '../components/chart/linechart';
 import Sheetapi from '../config/api'
 import CardData from '../components/layout/cardmain';
 import Sidebar from '../components/layout/sidebar';
+import ThreePieChar from '../components/chart/3dpiechart';
+import Diffbar from '../components/chart/diffbar';
+import Geochart from '../components/chart/geochart';
 
 
 class Main extends React.Component {
@@ -70,15 +74,24 @@ class Main extends React.Component {
                                 card={this.state.card}
                             />
 
+
                             <div className="text-center">
+                                <Chart />
+                                <ThreePieChar/>
+                                <Diffbar/>
+                                <Geochart/>
+                                {/* <Linechart /> */}
+
+
 
                                 <div className="card">
+
                                     <Radialchart />
                                 </div>
 
-                                <div className="card">
+                                {/* <div className="card">
                                     <Chart />
-                                </div>
+                                </div> */}
 
 
                             </div>

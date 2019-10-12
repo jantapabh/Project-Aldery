@@ -33,27 +33,10 @@
     margin: 1rem;
 }
 
-
-.line-chart{
-    .recharts-wrapper{
-        .recharts-surface{
-             width: 1013px !important;
-        }
+.recharts-wrapper{
+    tspan{
+        font-size: 1rem;
     }
-
-    @media (min-width: 1200px) {
-        .recharts-wrapper{
-            // width: 900px !important;
-            // height: 450px !important; 
-            .recharts-surface{
-                // width: 913px !important;
-            }
-        }
-    }
-
-    @media (max-width: 991.87px) { 
-        display: none;
-    }
-
 }
+
    

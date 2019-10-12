@@ -2,7 +2,7 @@
     min-width: 100%;
     width: auto;
     min-height: 100vh;
-    height: auto ;
+    max-height: 100vh;
     background-color: #F5F9FC;
 
         display: flex;
@@ -150,6 +150,7 @@
 
         .container-fluid{
             padding-left: 5rem;
+            background-color: #F5F9FC;
 
         }
 
@@ -223,6 +224,7 @@
 
     .container-fluid{
         padding-left: 1rem;
+        background-color: #F5F9FC;
 
     }
   }
@@ -267,6 +269,7 @@
 
   .text-center{
       .card{
+          padding: 1rem;
           max-width: 50%;
           width: auto;
           height: auto;
