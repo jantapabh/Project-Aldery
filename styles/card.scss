@@ -106,14 +106,16 @@
 
             }
 
-            
- 
         }
 
     }
 
     .card:hover{
         box-shadow: 0 0 0.875rem 0 rgba(53, 64, 82, 0.05);
+    }
+
+    .card:nth-child(3):hover{
+        box-shadow: none !important;
     }
 
     

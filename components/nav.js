@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 const links = [
-  { href: '/main', label: 'Main' },
+  { href: '/main', label: 'Dashboard' },
   { href: '/about', label: 'About' },
   { href: '/service', label: 'Service' },
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import IconData from '../components/layout/icon-data';
+import Sidebar from '../components/layout/sidebar';
 
 
 class Main extends React.Component {
@@ -30,28 +31,7 @@ class Main extends React.Component {
         return (
             <div className="warp-main">
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                    <div className="sidebar-wrapper">
-                        <ul className="sidebar-nav">
-                            <li><img src="/static/home.svg" /><a href="/">หน้าหลัก</a></li>
-                            <li><img src="/static/chart.svg" /><a href="/mainchart">ข้อมูลทางสถิติ</a></li>
-                            <li><img src="/static/document.svg" /><a href="/maindoc">เบี้ยยังชีพผู้สูงอายุ</a></li>
-                        </ul>
-                        <ul className="non-sidebar-nav">
-                            <div className="icon-sidebar">
-                                <li><img src="/static/home.svg" /></li>
-                                <p>HOME</p>
-                            </div>
-                            <div className="icon-sidebar">
-                                <li><img src="/static/chart.svg" /></li>
-                                <p>CHART</p>
-                            </div>
-                            <div className="icon-sidebar">
-                                <li><img src="/static/document.svg" /></li>
-                                <p>DOC</p>
-                            </div>
-
-                        </ul>
-                    </div>
+                    <Sidebar/>
                     <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                         <nav>
                             <ul>
