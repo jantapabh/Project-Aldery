@@ -147,6 +147,11 @@
         padding:15px;
         transition:all .5s;
 
+        .container-fluid{
+            padding-left: 5rem;
+
+        }
+
         .warp-icon-data{
             display: flex;
             justify-content: center;
@@ -214,6 +219,11 @@
   
   .wrapper.menuDisplayed .page-content-wrapper{
     padding-left:250px;
+
+    .container-fluid{
+        padding-left: 1rem;
+
+    }
   }
 
   
@@ -251,4 +261,15 @@
   
   .sidebar-nav li:hover{
     background:#b3cbe5;
+  }
+
+
+  .text-center{
+      .card{
+          max-width: 50%;
+          width: auto;
+          height: auto;
+          margin: 1rem 0;
+          border-radius: 0.7rem;
+      }
   }

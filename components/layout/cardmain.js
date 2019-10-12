@@ -26,6 +26,8 @@ class CardData extends React.Component {
         try {
 
             this.list = await Sheetapi.getSheet2(this.access_token, value)
+        console.log("List",this.list);
+        
 
 
             for (let i = 0; i < this.list.length; i++) {

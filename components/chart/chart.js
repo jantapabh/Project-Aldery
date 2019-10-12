@@ -1,5 +1,8 @@
 import React from 'react';
 import Sheetapi from '../../config/api'
+import {
+    BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+} from 'recharts';
 
 class Chart extends React.Component {
     constructor(props) {
@@ -13,7 +16,7 @@ class Chart extends React.Component {
 
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.list('ข้อมูลทั่วไป!A8:AF')
+        await this.list('ข้อมูลทั่วไป!AN9:AO9')
     }
 
     list = async (value) => {
@@ -21,52 +24,51 @@ class Chart extends React.Component {
         try {
 
             this.list = await Sheetapi.getSheet(this.access_token, value)
-            console.log("LIST",this.list);
-            
 
-            // for (let i = 0; i < this.list.length; i++) {
-            //     let value = await {
-            //         โรค: this.list[i][1],
-            //         เพศชาย: this.list[i][2],
-            //         เพศหญิง: this.list[i][3],
-                    
-            //     }
-            //     this.setState(prevState => ({
-            //         data: [...prevState.data, value]
-            //     }))
-            // }
+            for (let i = 0; i < this.list.length; i++) {
+                let value = await {
+                    อำเภอ:"กะทู้",
+                    เพศชาย: this.list[i][0],
+                    เพศหญิง: this.list[i][1],
+
+                }
+                this.setState(prevState => ({
+                    data: [...prevState.data, value]
+                }))
+            }
         } catch (err) {
             console.log(err);
         }
 
     }
 
-render() {
-    const { data } = this.state
-    return (
-        <div className="warp-chart">
+    render() {
+        const { data } = this.state
 
-        <div className="chart">
-            {/* <BarChart
-                width={500}
-                height={250}
-                data={data}
-            >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="โรค" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="เพศชาย" fill="#0288d1" />
-                <Bar dataKey="เพศหญิง" fill="#03a9f4" />
+        return (
+            <div className="chart-main">
 
-            </BarChart> */}
-        </div>
-      
-    </div>
+               
+
+                    <BarChart
+                        width={300}
+                        height={250}
+                        data={data}
+                    >
+                        <CartesianGrid strokeDasharray="1 1" />
+                        <XAxis dataKey="อำเภอ" />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Bar dataKey="เพศชาย" fill="#0288d1" />
+                        <Bar dataKey="เพศหญิง" fill="#03a9f4" />
+
+                    </BarChart>
+
+            </div>
 
 
-    )
-}
+        )
+    }
 }
 export default Chart;

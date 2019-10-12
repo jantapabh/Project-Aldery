@@ -34,7 +34,7 @@ class Main extends React.Component {
                         <ul className="sidebar-nav">
                             <li><img src="/static/home.svg" /><a href="/">หน้าหลัก</a></li>
                             <li><img src="/static/chart.svg" /><a href="/mainchart">ข้อมูลทางสถิติ</a></li>
-                            <li><img src="/static/document.svg" /><a href="/maincard">เบี้ยยังชีพผู้สูงอายุ</a></li>
+                            <li><img src="/static/document.svg" /><a href="/maindoc">เบี้ยยังชีพผู้สูงอายุ</a></li>
                         </ul>
                         <ul className="non-sidebar-nav">
                             <div className="icon-sidebar">

@@ -2,6 +2,9 @@ import React from 'react'
 import Radialchart from '../components/chart/radialchart';
 import Chart from '../components/chart/chart';
 import Sheetapi from '../config/api'
+import Areachart from '../components/chart/area';
+import Linechart from '../components/chart/linechart';
+import CardData from '../components/layout/cardmain';
 
 
 class Main extends React.Component {
@@ -10,6 +13,10 @@ class Main extends React.Component {
         super(props);
 
         this.state = {
+            card: [
+                { name: "card1", img: "/static/grandfather.svg", text: "เพศชาย", url: "/mantable", hover: "one" },
+                { name: "card2", img: "/static/old-woman.svg", text: "เพศหญิง", url: "/womantable", hover: "two" },
+                { name: "card3", img: "/static/couple.svg", text: "รวม", url: "", hover: "three" },],
             status: true
         }
     }
@@ -41,7 +48,7 @@ class Main extends React.Component {
                         <ul className="sidebar-nav">
                             <li><img src="/static/home.svg" /><a href="/">หน้าหลัก</a></li>
                             <li><img src="/static/chart.svg" /><a href="/mainchart">ข้อมูลทางสถิติ</a></li>
-                            <li><img src="/static/document.svg" /><a href="/maincard">เบี้ยยังชีพผู้สูงอายุ</a></li>
+                            <li><img src="/static/document.svg" /><a href="/maindoc">เบี้ยยังชีพผู้สูงอายุ</a></li>
                         </ul>
                         <ul className="non-sidebar-nav">
                             <div className="icon-sidebar">
@@ -80,9 +87,22 @@ class Main extends React.Component {
 
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
+
+                            <CardData
+                                card={this.state.card}
+                            />
+
                             <div className="text-center">
-                                <Radialchart />
-                                <Chart/>
+                              
+                                <div className="card">
+                                    <Radialchart />
+                                </div>
+
+                                <div className="card">
+                                    <Chart />
+                                </div>
+
+
                             </div>
 
                         </div>
