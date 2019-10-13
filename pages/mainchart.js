@@ -2,8 +2,8 @@ import React from 'react'
 import Sheetapi from '../config/api'
 import CardData from '../components/layout/cardmain';
 import Sidebar from '../components/layout/sidebar';
-import Bar from '../components/chart/barchart';
-
+import dynamic from 'next/dynamic'
+const DynamicComponent = dynamic(() => import('../components/chart/barchart'))
 
 
 class Main extends React.Component {
@@ -71,7 +71,7 @@ class Main extends React.Component {
 
                             <div className="text-center">
                           
-                            <Bar/>
+                            <DynamicComponent />
                             </div>
 
                         </div>
