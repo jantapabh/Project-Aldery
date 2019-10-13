@@ -4,10 +4,10 @@ import CardData from '../components/layout/cardmain';
 import Sidebar from '../components/layout/sidebar';
 import dynamic from 'next/dynamic'
 
-const DynamicComponentWithNoSSR = dynamic(
-    () => import('../components/chart/barchart'),
+const Areachart = dynamic(
+    () => import('../components/chart/area'),
     { ssr: false }
-  )
+)
 
 
 class Main extends React.Component {
@@ -16,10 +16,7 @@ class Main extends React.Component {
         super(props);
 
         this.state = {
-            card: [
-                { name: "card1", img: "/static/grandfather.svg", text: "เพศชาย", url: "/mantable", hover: "one" },
-                { name: "card2", img: "/static/old-woman.svg", text: "เพศหญิง", url: "/womantable", hover: "two" },
-                { name: "card3", img: "/static/couple.svg", text: "รวม", url: "", hover: "three" },],
+            list: ["Main","Dashboard","Service","Hospital","Help"],
             status: true
         }
     }
@@ -64,19 +61,33 @@ class Main extends React.Component {
 
                                 </div>
                             </ul>
+                            <div className="nav-bar-main">
+                                <ul>
+                                    <div className="nav-bar-main">
+                                       {
+                                           this.state.list.map((item,index) => {
+                                               return(
+                                                   <li>
+                                                      <p>{item}</p> 
+                                                   </li>
+                                               )
+                                           })
+                                       }
+                                    </div>
+
+                                </ul>
+                            </div>
                         </nav>
                     </div>
 
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
-                            <CardData
-                                card={this.state.card}
-                            />
+                            <h1 className="text-center">ข้อมูลทางสถิติ</h1>
+                            <h2 className="small text-center"></h2>
 
-                            <div className="text-center">
-                          
-                            <DynamicComponentWithNoSSR />
-                            </div>
+                            <CardData />
+
+                            <Areachart />
 
                         </div>
                     </div>

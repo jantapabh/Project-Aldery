@@ -1,42 +1,7 @@
 .warp-chart{
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    margin: 1rem !important;
-
-    
-    .chart{
-        margin: 0 2rem;
-        user-select: none;
-
-        @media (max-width: 780px) {
-            margin: 3rem  !important;
-        }
-
-        @media (max-width: 575.98px) { 
-            display: none;
-            
-        }
-        
-        .recharts-wrapper{
-            cursor: pointer !important;
-        
-        }
-    }
-
+   margin: 4rem 0;
+  
 }
 
-
-.chart-main{
-    min-width: 20rem;
-    max-width: 20rem;
-    margin: 1rem;
-}
-
-.recharts-wrapper{
-    tspan{
-        font-size: 1rem;
-    }
-}
 
    

@@ -10,6 +10,7 @@ class Main extends React.Component {
         super(props);
 
         this.state = {
+            list: ["Main","Chart","Service","Hospital","Help"],
             status: false
         }
     }
@@ -52,9 +53,15 @@ class Main extends React.Component {
                             <div className="nav-bar-main">
                                 <ul>
                                     <div className="nav-bar-main">
-                                        <li>
-                                            <p>Main</p>
-                                        </li>
+                                       {
+                                           this.state.list.map((item,index) => {
+                                               return(
+                                                   <li>
+                                                      <p>{item}</p> 
+                                                   </li>
+                                               )
+                                           })
+                                       }
                                     </div>
 
                                 </ul>

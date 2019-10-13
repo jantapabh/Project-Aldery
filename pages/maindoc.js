@@ -10,8 +10,7 @@ class Main extends React.Component {
         super(props);
 
         this.state = {
-           
-
+            list: ["Main", "Dashboard", "Chart", "Service", "Hospital", "Help"],
             status: true
 
         }
@@ -41,7 +40,7 @@ class Main extends React.Component {
 
             <div className="warp-main">
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                   <Sidebar/>
+                    <Sidebar />
                     <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                         <nav>
                             <ul>
@@ -58,13 +57,31 @@ class Main extends React.Component {
 
                                 </div>
                             </ul>
+                            <div className="nav-bar-main">
+                                <ul>
+                                    <div className="nav-bar-main">
+                                        {
+                                            this.state.list.map((item, index) => {
+                                                return (
+                                                    <li>
+                                                        <p>{item}</p>
+                                                    </li>
+                                                )
+                                            })
+                                        }
+                                    </div>
+
+                                </ul>
+                            </div>
                         </nav>
                     </div>
 
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
-                           
-                             
+                            <h1 className="text-center">ข้อมูล</h1>
+                            <h2 className="small text-center"></h2>
+
+
                         </div>
                     </div>
                 </div>

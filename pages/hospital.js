@@ -1,89 +1,93 @@
 import React from 'react'
-import Nav from '../components/nav'
-import CardService from '../components/layout/cardService'
 import Sheetapi from '../config/api'
+import Sidebar from '../components/layout/sidebar';
+import dynamic from 'next/dynamic'
+
+const Barchart = dynamic(
+    () => import('../components/chart/barchart'),
+    { ssr: false }
+)
 
 class Hospital extends React.Component {
 
     constructor(props) {
         super(props);
+
         this.state = {
-            dataList: []
+            list: ["Main", "Dashboard", "Chart", "Service", "Hospital", "Help"],
+            status: true
+        }
+    }
+
+    toggle = async () => {
+        if (!this.state.status) {
+            await this.setState({
+                status: true
+            })
+        }
+        else {
+            await this.setState({
+                status: false
+            })
         }
     }
 
     async componentDidMount() {
-
-        let userOauth = JSON.parse(localStorage.getItem("myOauth"))
-        this.access_token = userOauth.data.access_token
-        await this.list('โรงพยาบาลใกล้เคียง!A4:E12')
-    }
-
-    list = async (value) => {
-
-        try {
-
-            this.list = await Sheetapi.getSheet3(this.access_token, value)
-
-            for (let i = 0; i < this.list.length; i++) {
-                let value = await {
-                    ลำดับที่: this.list[i][0],
-                    ชื่อ: this.list[i][1],
-                    ที่อยู่: this.list[i][2],
-                    เบอร์ติดต่อ: this.list[i][3],
-                    ฉุกเฉิน: this.list[i][4],
-
-                }
-                this.setState(prevState => ({
-                    dataList: [...prevState.dataList, value]
-                }))
-            }
-        } catch (err) {
-            console.log(err);
-        }
+        await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
 
     }
 
     render() {
 
-        const { dataList } = this.state
-
         return (
-            <div className="warp-service">
-                <Nav name="hospital" />
-                <div className="content-service">
+            <div className="warp-main">
+                <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
+                    <Sidebar />
+                    <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
+                        <nav>
+                            <ul>
+                                <div className="warp-manu">
+                                    <li>
+                                        <div className="box-hamberger">
+                                            <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.toggle} >
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </a>
+                                        </div>
+                                    </li>
 
-                    {dataList.map((item, index) => {
-                        return (
-                            index <= index / 2 ?
-                                <div className="service-list" key={index}>
-                                    <h5>{item.ชื่อ}</h5>
-                                    <h6>{item.ที่อยู่}</h6>
-                                    <h6>{item.เบอร์ติดต่อ}</h6>
-                                    <p>{item.ฉุกเฉิน}</p>
                                 </div>
-                                :
-                                null
-                        )
-                    }
-                    )}
+                            </ul>
+                            <div className="nav-bar-main">
+                                <ul>
+                                    <div className="nav-bar-main">
+                                        {
+                                            this.state.list.map((item, index) => {
+                                                return (
+                                                    <li>
+                                                        <p>{item}</p>
+                                                    </li>
+                                                )
+                                            })
+                                        }
+                                    </div>
 
-                    {dataList.map((item, index) => {
-                        return (
-                            index >= index / 2 ?
-                                <div className="service-list" key={index}>
-                                    <h5>{item.ชื่อ}</h5>
-                                    <h6>{item.ที่อยู่}</h6>
-                                    <h6>{item.เบอร์ติดต่อ}</h6>
-                                    <p>{item.ฉุกเฉิน}</p>
-                                </div>
-                                :
-                                null
-                        )
-                    }
-                    )}
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
 
+                    <div className="page-content-wrapper">
+                        <div className="container-fluid">
+                            <h1 className="text-center">โรงพยาบาลเเละการดูแลรักษา</h1>
+                            <h2 className="small text-center"></h2>
+                            <Barchart />
+
+                        </div>
+                    </div>
                 </div>
+
             </div>
         )
     }

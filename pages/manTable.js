@@ -15,7 +15,7 @@ class Mantable extends React.Component {
         await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.list('เพศชาย!D8:F')
+        await this.list('เพศชาย!A8:E')
     }
 
     list = async (value) => {
@@ -26,9 +26,10 @@ class Mantable extends React.Component {
 
             for (let i = 0; i < this.list.length; i++) {
                 let value = await {
-                    คำนำหน้า: this.list[i][0],
-                    ชื่อ: this.list[i][1],
-                    นามสกุล: this.list[i][2],
+                    ลำดับที่: this.list[i][0],
+                    คำนำหน้า: this.list[i][2],
+                    ชื่อ: this.list[i][3],
+                    นามสกุล: this.list[i][4],
           
                 }
                 this.setState(prevState => ({

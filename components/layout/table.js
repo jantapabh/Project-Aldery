@@ -44,7 +44,8 @@ class Table extends React.Component {
                         search={true}
                         searchPlaceholder={"ค้นหา"}
                     >
-                        <TableHeaderColumn dataField="คำนำหน้า"  isKey={true}>คำนำหน้า</TableHeaderColumn>
+                        <TableHeaderColumn dataField="ลำดับที่"  isKey={true}>ลำดับที่</TableHeaderColumn>
+                        <TableHeaderColumn dataField="คำนำหน้า" >คำนำหน้าชื่อ</TableHeaderColumn>
                         <TableHeaderColumn dataField="ชื่อ">ชื่อ</TableHeaderColumn>
                         <TableHeaderColumn dataField="นามสกุล">นามสกุล</TableHeaderColumn>
                     </BootstrapTable>

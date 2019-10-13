@@ -1,6 +1,13 @@
 import React from 'react'
-import Nav from '../components/nav';
-import CardService from '../components/layout/cardService';
+import Sheetapi from '../config/api'
+import Sidebar from '../components/layout/sidebar';
+import dynamic from 'next/dynamic'
+
+const Barchart = dynamic(
+    () => import('../components/chart/barchart'),
+    { ssr: false }
+)
+
 
 class Service extends React.Component {
 
@@ -8,25 +15,78 @@ class Service extends React.Component {
         super(props);
 
         this.state = {
-            // list: [
-            //   {featured:"หน่วยงานที่เกี่ยวข้อง",head:"หน่วยงานภาครัฐ",head2:"หน่วยงานเอกชน"},
-            //   {featured:"กองทุน",head:"รัฐบาล",head2:"เอกชน"},
-            //   {featured:"สถานพยาบาล",head:"รัฐบาล",head2:"เอกชน"},
-            // ]
-
-            list: [{ title: "หน่วยงานที่เกี่ยวข้อง", text: "ทั้งภาครัฐ เเละเอกชน", link: "" },
-            { title: "กองทุน", text: "ทั้งภาครัฐ เเละเอกชน", link: "" },
-            { title: "สถานพยาบาล", text: "โรงพยาบาลใกล้เคียง เเละสถานดูเเลผู้สูงอายุ", link: "" }]
+            list: ["Main", "Dashboard", "Chart", "Hospital", "Help"],
+            status: true
         }
+    }
+
+    toggle = async () => {
+        if (!this.state.status) {
+            await this.setState({
+                status: true
+            })
+        }
+        else {
+            await this.setState({
+                status: false
+            })
+        }
+    }
+
+    async componentDidMount() {
+        await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
+
     }
 
     render() {
 
         return (
-            <div>
-                <Nav name="service" />
-                <div className="warp-service">
-                    
+            <div className="warp-main">
+                <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
+                    <Sidebar />
+                    <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
+                        <nav>
+                            <ul>
+                                <div className="warp-manu">
+                                    <li>
+                                        <div className="box-hamberger">
+                                            <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.toggle} >
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                </div>
+                            </ul>
+                            <div className="nav-bar-main">
+                                <ul>
+                                    <div className="nav-bar-main">
+                                        {
+                                            this.state.list.map((item, index) => {
+                                                return (
+                                                    <li>
+                                                        <p>{item}</p>
+                                                    </li>
+                                                )
+                                            })
+                                        }
+                                    </div>
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div className="page-content-wrapper">
+                        <div className="container-fluid">
+                            <h1 className="text-center">หน่วยงานเเละการบริการ</h1>
+                            <h2 className="small text-center"></h2>
+
+
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -34,6 +94,3 @@ class Service extends React.Component {
     }
 }
 export default Service
-
-
-{/* */ }

@@ -15,8 +15,6 @@ class MyDocument extends Document {
                         <link href="dist/hamburgers.css" rel="stylesheet" />
                     </head>
 
-                    <title></title>
-
                     <title>Eldery DB</title>
                     <meta charset="utf-8" />
                     <link rel="shortcut icon" href="/static/logo.png" />
@@ -39,9 +37,6 @@ class MyDocument extends Document {
                     <script src="https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table.min.js" />
                     <link rel="stylesheet" href="https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table-all.min.css">
                     </link>
-                    <link href="dist/hamburgers.css" rel="stylesheet"></link>
-
-
 
                 </Head>
                 <body>

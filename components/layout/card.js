@@ -1,33 +1,52 @@
 import React from 'react'
 
-class card extends React.Component {
-
-    static defaultProps = {
-        card: []
-    }
+class Card extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
-                {
-                    this.props.card.map((item, index) => {
-                        return (
-                            <div className="card">
-                                <div className="content">
-                                    <img src={item.img} alt={item.name} />
-                                    <div className="card-body">
-                                        <h5 className="card-title">{item.name}</h5>
-                                        <p className="card-text">{item.text}</p>
-                                        <a href={item.link} className="btn btn-primary" ><h6>{item.name}</h6></a>
-                                    </div>
-                                </div>
+            <div className="warp-card">
+                <div className="card-group">
+                    <div className="card">
+                        <div className="card-data">
+                            <img src="/static/old-man.svg" />
+                            <div className="card-text">
+                                <h4>Some text</h4>
+                                <h5>1000</h5>
                             </div>
-                        )
-                    })
-                }
-            </React.Fragment>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div className="card-group">
+                    <div className="card">
+                        <div className="card-data">
+                            <img src="/static/old-man.svg" />
+                            <div className="card-text">
+                                <h4>Some text</h4>
+                                <h5>1000</h5>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div className="card-group">
+                    <div className="card">
+                        <div className="card-data">
+                            <img src="/static/old-man.svg" />
+                            <div className="card-text">
+                                <h4>Some text</h4>
+                                <h5>1000</h5>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
         )
     }
 }
-export default card;
+export default Card;

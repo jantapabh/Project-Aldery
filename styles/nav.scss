@@ -10,20 +10,10 @@ nav {
     position: absolute;
 
     .nav-bar-main{
+        display: flex;
         padding-inline-end: 10px; 
         list-style:none; 
-        ul{
-            display: flex;
-            justify-content: flex-end !important;
-
-            p{
-                margin: 1rem;
-                color:  black;
-            }
-            p:hover{
-                color:#bedadc;
-            }
-        }
+        
     }
 
     ul{
@@ -54,8 +44,11 @@ nav {
 
         p{
             cursor: pointer;
-            color:#03a9f4;
+            color:black;
             margin: 1rem;
+        }
+        p:hover{
+            color: #bedadc ;
         }
         
     }

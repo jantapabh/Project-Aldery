@@ -5,10 +5,6 @@ import Link from 'next/link';
 
 class CardData extends React.Component {
 
-    static defaultProps = {
-        card: [],
-    }
-
     constructor(props) {
         super(props);
         this.state = {
@@ -46,78 +42,66 @@ class CardData extends React.Component {
 
     }
 
-
     render() {
         return (
             <div className="warp-card">
-                {
-                    !!this.props.card ?
-                        <div className="card-main">
-                            {
-                                this.props.card.map((item, index) => {
-                                    return (
-                                        <Link key={index} href={item.url}>
-                                            <div className="card">
-                                                <div className="card-img">
-                                                    <img src={item.img} alt={item.name} />
-                                                </div>
-                                                <div className="card-conten">
-                                                    <div className="card-text">
-                                                        <h5>{item.text}</h5>
-                                                    </div>
-                                                    <div className="card-data">
-                                                        {
-                                                            index == 0 ?
-                                                                <div>
-                                                                    {
-                                                                        this.state.data.map((item1, index1) => {
-                                                                            return (
-                                                                                <h4 key={index1}>{item1.ชาย} คน</h4>
-                                                                            )
-                                                                        })
-                                                                    }
-                                                                </div>
-                                                                :
-                                                                index == 1 ?
-                                                                    <div>
-                                                                        {
-                                                                            this.state.data.map((item2, index2) => {
-                                                                                return (
-                                                                                    <h4 key={index2}>{item2.หญิง} คน</h4>
-                                                                                )
-                                                                            })
-                                                                        }
-                                                                    </div>
-                                                                    :
-                                                                    index == 2 ?
-                                                                        <div>
-                                                                            {
-                                                                                this.state.data.map((item3, index3) => {
-                                                                                    return (
-                                                                                        <h4 key={index3}><CountUp end={item3.รวม} /> คน</h4>
-                                                                                    )
-                                                                                })
-                                                                            }
-                                                                        </div>
-                                                                        :
-                                                                        null
-                                                        }
-                                                    </div>
-                                                </div>
-                                            </div>
 
-                                        </Link>
-
-                                    )
-                                })
-                            }
+                <div className="card-group">
+                    <Link href="/mantable">
+                        <div className="card">
+                            <div className="card-data">
+                                <img src="/static/old-man.svg" />
+                                <div className="card-text">
+                                    <h5>เพศชาย</h5>
+                                    {this.state.data.map((item, index) => {
+                                        return (
+                                            <h4 key={index}>{item.ชาย} คน</h4>
+                                        )
+                                    })}
+                                </div>
+                            </div>
                         </div>
-                        :
-                        null
+                    </Link>
+                </div>
 
-                }
+                <div className="card-group">
+                    <Link href="/womantable">
+                        <div className="card">
+                            <div className="card-data">
+                                <img src="/static/old-woman.svg" />
+                                <div className="card-text">
+                                    <h5>เพศหญิง</h5>
+                                    {this.state.data.map((item, index) => {
+                                        return (
+                                            <h4 key={index}>{item.หญิง} คน</h4>
+                                        )
+                                    })}
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+
+                <div className="card-group">
+                    <Link href="/totaltable">
+                        <div className="card">
+                            <div className="card-data">
+                                <img src="/static/couple.svg" />
+                                <div className="card-text">
+                                    <h5>รวม</h5>
+                                    {this.state.data.map((item, index) => {
+                                        return (
+                                            <h4 key={index}><CountUp end={item.รวม} /> คน</h4>
+                                        )
+                                    })}
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
 
             </div>
+
         )
     }
 }

@@ -8,20 +8,22 @@ class Bar extends Component {
 
     this.state = {
       options: {
+        plotOptions: {
+          bar: {
+            horizontal: true,
+          }
+        },
         dataLabels: {
           enabled: false
         },
-        plotOptions: {
-          bar: {
-            horizontal: true
-          }
-        },
         xaxis: {
-          categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+          categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan',
+            'United States', 'China', 'Germany'
+          ],
         }
       },
       series: [{
-        data: [30, 40, 25, 50, 49, 21, 70, 51]
+        data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
       }],
     }
   }
@@ -29,8 +31,8 @@ class Bar extends Component {
   render() {
 
     return (
-      <div >
-        <Chart options={this.state.options} series={this.state.series} type="bar" width="500" />
+      <div className="warp-chart">
+        <Chart options={this.state.options} series={this.state.series} type="bar" width="700"  height="350" />
       </div>
     );
   }

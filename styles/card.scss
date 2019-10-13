@@ -1,125 +1,3 @@
-//Main
-.warp-card{
-   
-    margin: 0 1rem 2rem 1rem;
-  
-    .card-main{
-        display: flex;
-        justify-content: center;
-    }
-
-        .card{
-
-        cursor: pointer;
-        width: 100%;
-        display: flex;
-        flex-direction: row !important;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-        margin: 0 1rem;
-        //box-shadow: 0 0 0.875rem 0 rgba(53, 64, 82, 0.05);
-        box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-
-        
-        .card-img{
-            width: 30%;
-            margin: 0.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-
-            @media (max-width: 1300px) { 
-                  
-                margin: 0 0.5rem;
-            }
-
-            img{
-                width: 4rem;
-                height: 4rem;
-
-            }
- 
-        }
-
-        .card-conten{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            margin-left: 5rem;
-
-            // @media (max-width: 1133px) { 
-            //     margin-left: 4rem;
-            // }
-
-            @media (max-width: 1133px) { 
-                margin-left: 1.7rem !important;
-            }
-
-
-            .card-text{
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-
-                h5{
-                    @media (max-width: 1300px) { 
-                  
-                        font-size: 1rem !important;
-                    }
-
-                    @media (max-width: 768px) { 
-                        font-size: 0.5rem !important;
-                    }
-
-                }
-            }
-
-            .card-data{
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                
-                h4{
-                    margin-top: 0.5rem;
-                    margin: 0.5rem 0;
-
-                    @media (max-width: 1300px) { 
-                  
-                        font-size: 1.2rem !important;
-                    }
-
-                    @media (max-width: 768px) { 
-                        font-size: 0.7rem !important;
-                    }
-                }
-
-            }
-        }
-        
-        }
-        .card:nth-child(3){
-            cursor: default;
-            .card-img{
-               
-               cursor: default !important;
-
-            }
-
-        }
-
-    }
-
-    .card:hover{
-        box-shadow: 0 0 0.875rem 0 rgba(53, 64, 82, 0.05);
-    }
-
-    .card:nth-child(3):hover{
-        box-shadow: none !important;
-    }
-
-    
-
     .card-chart{
       
         display: flex;
@@ -127,47 +5,89 @@
      
     }
 
-//Service
-.service-content{
-    
+//Card
+.warp-card{
+    margin: 1rem;
     display: flex;
     justify-content: center;
-    margin: 4rem 1rem;
-    @media (max-width: 767.98px) { 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 1rem;
+
+    
+
+    .card-group{
+        width: 50%;
+        padding: 0 1rem;
+        margin: 0 1rem;
+
+
+        @media screen and (max-width: 600px) {
+            .card-group {
+              width: 100%;
+              display: block;
+              margin-bottom: 20px;
+            }
+          }
+
+        .card {
+            display: flex;
+            justify-content: center;
+            border-radius: 1rem;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            text-align: center;
+            background-color: white;
+            cursor: pointer;
+
+            img{
+                margin: 0.5rem;
+                width: 5rem;
+                height: 5rem;
+                cursor: pointer;
+            }
+
+            .card-data{
+                display: flex;
+
+                @media (max-width: 1199.98px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                img{
+                    margin: 0.5rem;
+                    width: 5rem;
+                    height: 5rem;
+                    cursor: pointer;
+                }
+                .card-text{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    margin: 0.5rem;
+
+                    @media (max-width: 1199.98px) {
+                        align-items: center;
+                    }
+
+                }
+               
+            }
+          }
+
+            .card:hover{
+                box-shadow: 0 0 0.875rem 0 rgba(53, 64, 82, 0.05);
+            }
     }
 
-
-
-        .card{
-            width: 18rem;
-            margin: 0 2rem;
-            border-radius: 0.5rem;
-
-            @media (max-width: 1025px) { 
-                margin: 0 1rem;
-            }
-
-            
-
-            
-            .card-body{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                a{
-                 
-                        h6{
-                            color: white !important;
-                        }
-                    
-                }
-            }
-            
-            
-        }
+    
 }
+
+.warp-card:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  
+
