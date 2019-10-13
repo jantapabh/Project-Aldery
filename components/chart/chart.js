@@ -1,8 +1,5 @@
 import React from 'react';
 import Sheetapi from '../../config/api'
-import {
-    BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-} from 'recharts';
 
 import Chart from 'react-google-charts';
 
@@ -74,21 +71,6 @@ class Charts extends React.Component {
             <div className="chart-main">
 
                
-
-                    {/* <BarChart
-                        width={300}
-                        height={250}
-                        data={data}
-                    >
-                        <CartesianGrid strokeDasharray="1 1" />
-                        <XAxis dataKey="อำเภอ" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend />
-                        <Bar dataKey="เพศชาย" fill="#0288d1" />
-                        <Bar dataKey="เพศหญิง" fill="#03a9f4" />
-
-                    </BarChart> */}
 
                     <Chart
                         width={'700px'}

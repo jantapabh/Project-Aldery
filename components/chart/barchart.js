@@ -1,100 +1,39 @@
-import React from 'react'
-import Sheetapi from '../../config/api'
-import {
-    BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-} from 'recharts';
+import React, { Component } from 'react';
+import Chart from 'react-apexcharts'
 
-class Barchart extends React.Component {
-    constructor(props) {
-        super(props);
+class Bar extends Component {
 
-        this.state = {
-            data: [],
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      options: {
+        dataLabels: {
+          enabled: false
+        },
+        plotOptions: {
+          bar: {
+            horizontal: true
+          }
+        },
+        xaxis: {
+          categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
         }
+      },
+      series: [{
+        data: [30, 40, 25, 50, 49, 21, 70, 51]
+      }],
     }
+  }
 
-    async componentDidMount() {
+  render() {
 
-        let userOauth = JSON.parse(localStorage.getItem("myOauth"))
-        this.access_token = userOauth.data.access_token
-        await this.list('sheets!D2:P2')
-    }
-
-    list = async (value) => {
-
-        try {
-
-            this.list = await Sheetapi.getSheet2(this.access_token, value)
-            
-
-            for (let i = 0; i < this.list.length; i++) {
-                let value = await {
-                    name: this.list[i][0],
-                    อายุ60ถึง69ปี: parseInt(this.list[i][1].replace(",", "")),
-                    อายุ60ถึง69ปีร้อยละ: parseFloat(this.list[i][2].replace(",", "")),
-                    อายุ70ถึง79ปี: parseInt(this.list[i][3].replace(",", "")),
-                    อายุ70ถึง79ปีร้อยละ: parseFloat(this.list[i][4].replace(",", "")),
-                    อายุ80ถึง89ปี: parseInt(this.list[i][5].replace(",", "")),
-                    อายุ80ถึง89ปีร้อยละ: parseFloat(this.list[i][6].replace(",", "")),
-                    อายุมากกว่าหรือเท่ากับ90ปี: parseInt(this.list[i][7].replace(",", "")),
-                    อายุมากกว่าหรือเท่ากับ90ปีร้อยละ: parseFloat(this.list[i][8].replace(",", "")),
-                    รวม: parseInt(this.list[i][9].replace(",", "")),
-                    ชาย: parseInt(this.list[i][10].replace(",", "")),
-                    หญิง: parseInt(this.list[i][11].replace(",", "")),
-                    รวมชญ: parseInt(this.list[i][12].replace(",", "")),
-                }
-                this.setState(prevState => ({
-                    data: [...prevState.data, value]
-                }))
-            }
-        } catch (err) {
-            console.log(err);
-        }
-
-    }
-
-    render() {
-        const { data } = this.state
-        return (
-            <div className="warp-chart">
-
-                <div className="chart">
-                    <BarChart
-                        width={400}
-                        height={250}
-                        data={data}
-                    >
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend />
-                        <Bar dataKey="ชาย" fill="#0288d1" />
-                        <Bar dataKey="หญิง" fill="#03a9f4" />
-
-                    </BarChart>
-                </div>
-                <div className="chart">
-                    <BarChart
-                        width={400}
-                        height={250}
-                        data={data}
-
-                    >
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend />
-                        <Bar dataKey="อายุ60ถึง69ปี" fill="#0288d1" />
-                        <Bar dataKey="อายุ70ถึง79ปี" fill="#03a9f4" />
-                        <Bar dataKey="อายุ80ถึง89ปี" fill="#4fc3f7" />
-                        <Bar dataKey="อายุมากกว่าหรือเท่ากับ90ปี" fill="#b3e5fc" />
-                    </BarChart>
-                </div>
-            </div>
-        )
-    }
+    return (
+      <div >
+        <Chart options={this.state.options} series={this.state.series} type="bar" width="500" />
+      </div>
+    );
+  }
 }
 
-export default Barchart;
+export default Bar;

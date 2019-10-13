@@ -4,6 +4,7 @@ import {
     ComposedChart, Line, Area, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
     Legend,
   } from 'recharts';
+  import Chart from 'react-google-charts';
 
 class Linechart extends React.Component {
     constructor(props) {

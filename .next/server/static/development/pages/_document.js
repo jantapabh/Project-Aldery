@@ -1104,7 +1104,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
     }, __jsx("head", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 13
       },
       __self: this
     }, __jsx("link", {
@@ -1112,7 +1112,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 14
       },
       __self: this
     }), __jsx("link", {
@@ -1120,20 +1120,26 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       rel: "stylesheet",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 15
       },
       __self: this
     })), __jsx("title", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 18
+      },
+      __self: this
+    }), __jsx("title", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
       },
       __self: this
     }, "Eldery DB"), __jsx("meta", {
       charset: "utf-8",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 21
       },
       __self: this
     }), __jsx("link", {
@@ -1141,7 +1147,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       href: "/static/logo.png",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 22
       },
       __self: this
     }), __jsx("meta", {
@@ -1149,7 +1155,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       content: "width=device-width, initial-scale=1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 23
       },
       __self: this
     }), __jsx("meta", {
@@ -1157,7 +1163,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       content: "#000000",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 24
       },
       __self: this
     }), __jsx("meta", {
@@ -1165,7 +1171,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       content: "Web site created using create-react-app",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 25
       },
       __self: this
     }), __jsx("link", {
@@ -1173,7 +1179,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       href: "logo192.png",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 26
       },
       __self: this
     }), __jsx("link", {
@@ -1183,7 +1189,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       crossorigin: "anonymous",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 28
       },
       __self: this
     }), __jsx("script", {
@@ -1192,7 +1198,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       crossorigin: "anonymous",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 29
       },
       __self: this
     }), __jsx("link", {
@@ -1200,7 +1206,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       rel: "stylesheet",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 30
       },
       __self: this
     }), __jsx("link", {
@@ -1210,14 +1216,14 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       crossorigin: "anonymous",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 32
       },
       __self: this
     }), __jsx("script", {
       src: "https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table.min.js",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 39
       },
       __self: this
     }), __jsx("link", {
@@ -1225,7 +1231,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       href: "https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table-all.min.css",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 40
       },
       __self: this
     }), __jsx("link", {
@@ -1233,25 +1239,25 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
       rel: "stylesheet",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 42
       },
       __self: this
     })), __jsx("body", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 47
       },
       __self: this
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 48
       },
       __self: this
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 49
       },
       __self: this
     })));

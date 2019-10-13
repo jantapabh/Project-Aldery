@@ -1,69 +1,44 @@
 import React from 'react'
-import Sheetapi from '../../config/api'
-import { Doughnut } from 'react-chartjs-2';
+import Chart from "react-apexcharts";
 
-const legend = {
-  "display": true,
-  "position": "left",
-  "fullWidth": true,
-  "reverse": true,
-  "labels": {
-    // "fontColor": "rgb(255, 99, 132)",
-    "fontFamily": "Prompt, sans-serif"
-  }
-}
-
-
-class Radialchart extends React.Component {
+class Areachart extends React.Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
-      data: {
-        labels: [
-          'อายุมากกว่าหรือเท่ากับ90ปี',
-          'อายุ80ถึง89ปี',
-          'อายุ70ถึง79ปี',
-          'อายุ60ถึง69ปี',
-          'อายุน้อยกว่า60ปี',
-        ],
+      options: {
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'smooth'
+        },
 
 
+        xaxis: {
+          type: 'datetime',
+          categories: ["2018-09-19T00:00:00", "2018-09-19T01:30:00", "2018-09-19T02:30:00",
+            "2018-09-19T03:30:00", "2018-09-19T04:30:00", "2018-09-19T05:30:00",
+            "2018-09-19T06:30:00"
+          ],
+        },
+        tooltip: {
+          x: {
+            format: 'dd/MM/yy HH:mm'
+          },
+        }
       },
+      series: [{
+        name: 'series1',
+        data: [31, 40, 28, 51, 42, 109, 100]
+      }, {
+        name: 'series2',
+        data: [11, 32, 45, 32, 34, 52, 41]
+      }],
     }
   }
 
-  async componentDidMount() {
-
-    let userOauth = JSON.parse(localStorage.getItem("myOauth"))
-    this.access_token = userOauth.data.access_token
-    await this.list('ข้อมูลทั่วไป!AO12:AO16')
-  }
-
-  list = async (value) => {
-
-    try {
-
-      this.list = await Sheetapi.getSheet(this.access_token, value)
-
-      for (let i = 0; i < this.list.length; i++) {
-        const datasets = await [{
-          data: [this.list[i][0], this.list[i][0], this.list[i][0], this.list[i][0], this.list[i][0]],
-          borderColor: ["#0693e3", "#ff6384", "#ffc107", "#ba68c8", "#00d084"],
-          backgroundColor: ["#0693e3", "#ff6384", "#ffc107", "#ba68c8", "#00d084"],
-
-        }]
-
-        this.setState(prevState => ({
-          data: { ...prevState.data, datasets }
-
-        }))
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  }
 
   render() {
 
@@ -71,14 +46,12 @@ class Radialchart extends React.Component {
     const { data } = this.state
     return (
         <div className="chart-main">
-          <Doughnut
-            data={data}
-            legend={legend}
-            options={{ maintainAspectRatio: false }}
+          <Chart
+           options={this.state.options} series={this.state.series} type="area" height="350"
           />
         </div>
     )
   }
 }
 
-export default Radialchart;
+export default Areachart;

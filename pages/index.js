@@ -6,6 +6,7 @@ import Load from '../components/layout/load';
 import Menu_icon from '../components/layout/menu-icon';
 import CardDepartment from '../components/layout/coverDepartment';
 import Radialchart from '../components/chart/radialchart';
+import Geochart from '../components/chart/geochart';
 
 class Home extends React.Component {
 

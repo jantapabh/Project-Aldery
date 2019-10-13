@@ -10,11 +10,12 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-
                     <head>
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
-                        <link href="dist/hamburgers.css" rel="stylesheet"/>
+                        <link href="dist/hamburgers.css" rel="stylesheet" />
                     </head>
+
+                    <title></title>
 
                     <title>Eldery DB</title>
                     <meta charset="utf-8" />
@@ -39,7 +40,9 @@ class MyDocument extends Document {
                     <link rel="stylesheet" href="https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table-all.min.css">
                     </link>
                     <link href="dist/hamburgers.css" rel="stylesheet"></link>
-                    
+
+
+
                 </Head>
                 <body>
                     <Main />

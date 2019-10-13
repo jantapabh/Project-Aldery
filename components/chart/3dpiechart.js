@@ -1,6 +1,5 @@
 import React from 'react'
-import Chart from 'react-google-charts';
-
+import Chart   from 'react-google-charts';
 class ThreePieChar extends React.Component {
     render() {
         return (

@@ -1,6 +1,7 @@
 import React from 'react'
 import IconData from '../components/layout/icon-data';
 import Sidebar from '../components/layout/sidebar';
+import Geochart from '../components/chart/geochart';
 
 
 class Main extends React.Component {
@@ -71,6 +72,7 @@ class Main extends React.Component {
                                 <IconData />
                             </div>
                             <p className="text-center animated fadeInDown delay-2s ">ที่มา: รายงานสรุปยอดผู้ได้รับเบี้ยเเยกตามประเภท อปท. เทศบาลเมืองกะทู้ อ.กะทู้ จังหวัดภูเก็ต</p>
+                            <Geochart/>
 
                         </div>
                     </div>
