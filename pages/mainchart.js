@@ -3,7 +3,11 @@ import Sheetapi from '../config/api'
 import CardData from '../components/layout/cardmain';
 import Sidebar from '../components/layout/sidebar';
 import dynamic from 'next/dynamic'
-const DynamicComponent = dynamic(() => import('../components/chart/barchart'))
+
+const DynamicComponentWithNoSSR = dynamic(
+    () => import('../components/chart/barchart'),
+    { ssr: false }
+  )
 
 
 class Main extends React.Component {
@@ -71,7 +75,7 @@ class Main extends React.Component {
 
                             <div className="text-center">
                           
-                            <DynamicComponent />
+                            <DynamicComponentWithNoSSR />
                             </div>
 
                         </div>
