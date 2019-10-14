@@ -15,7 +15,7 @@ class CardData extends React.Component {
     async componentWillMount() {
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.list('ข้อมูลทั่วไป!AN9:AP9')
+        await this.list('ข้อมูลการวิเคราะห์ทางสถิติ!B10:D10')
     }
     list = async (value) => {
 
@@ -23,11 +23,12 @@ class CardData extends React.Component {
 
             this.list = await Sheetapi.getSheet(this.access_token, value)
 
+
             for (let i = 0; i < this.list.length; i++) {
                 let value = await {
-                    ชาย: parseInt(this.list[i][0]),
-                    หญิง: parseInt(this.list[i][1]),
-                    รวม: parseInt(this.list[i][2]),
+                    ชาย: this.list[i][0],
+                    หญิง: this.list[i][1],
+                    รวม: this.list[i][2],
 
                 }
 
@@ -47,7 +48,7 @@ class CardData extends React.Component {
             <div className="warp-card">
 
                 <div className="card-group">
-                    <Link href="/mantable">
+                    <Link as={`/maindoc/man`} href={{ pathname: '/mantable' }}>
                         <div className="card">
                             <div className="card-data">
                                 <img src="/static/old-man.svg" />
@@ -65,7 +66,7 @@ class CardData extends React.Component {
                 </div>
 
                 <div className="card-group">
-                    <Link href="/womantable">
+                    <Link as={`/maindoc/woman`} href={{ pathname: '/womantable' }}>
                         <div className="card">
                             <div className="card-data">
                                 <img src="/static/old-woman.svg" />
@@ -83,7 +84,7 @@ class CardData extends React.Component {
                 </div>
 
                 <div className="card-group">
-                    <Link href="/totaltable">
+                    <Link as={`/maindoc/total`} href={{ pathname: '/totaltable' }}>
                         <div className="card">
                             <div className="card-data">
                                 <img src="/static/couple.svg" />

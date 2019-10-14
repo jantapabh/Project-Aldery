@@ -56,7 +56,7 @@ class Main extends React.Component {
                                        {
                                            this.state.list.map((item,index) => {
                                                return(
-                                                   <li>
+                                                   <li key={index}>
                                                       <p>{item}</p> 
                                                    </li>
                                                )

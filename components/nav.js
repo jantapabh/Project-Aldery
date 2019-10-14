@@ -50,7 +50,7 @@ class Nav extends React.Component {
                   <ul>
                     <div className="warp-manu">
                       <li >
-                        <Link href="/mainchart">
+                        <Link href="/maindoc">
                           <p>ย้อนกลับ</p>
                         </Link>
                       </li>

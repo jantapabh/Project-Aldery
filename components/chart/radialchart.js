@@ -38,7 +38,7 @@ class Radialchart extends React.Component {
 
     let userOauth = JSON.parse(localStorage.getItem("myOauth"))
     this.access_token = userOauth.data.access_token
-    await this.list('ข้อมูลทั่วไป!AO12:AO16')
+    await this.list('ข้อมูลการวิเคราะห์ทางสถิติ!C14:C18')
   }
 
   list = async (value) => {
@@ -67,16 +67,18 @@ class Radialchart extends React.Component {
 
   render() {
 
-    
+
     const { data } = this.state
     return (
-        <div className="chart-main">
-          <Doughnut
-            data={data}
-            legend={legend}
-            options={{ maintainAspectRatio: false }}
-          />
-        </div>
+      <div>
+        <Doughnut
+          data={data}
+          legend={legend}
+          width={400}
+          height={150}
+          options={{ maintainAspectRatio: false,responsive:false  }}
+        />
+      </div>
     )
   }
 }

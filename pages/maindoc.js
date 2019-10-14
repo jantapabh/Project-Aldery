@@ -6,7 +6,7 @@ import CardData from '../components/layout/cardmain';
 import Link from 'next/link';
 
 
-class Main extends React.Component {
+class Maindoc extends React.Component {
 
     constructor(props) {
         super(props);
@@ -65,7 +65,7 @@ class Main extends React.Component {
                                         {
                                             this.state.list.map((item, index) => {
                                                 return (
-                                                    <li>
+                                                    <li key={index}>
                                                         <p>{item}</p>
                                                     </li>
                                                 )
@@ -101,5 +101,5 @@ class Main extends React.Component {
         )
     }
 }
-export default Main
+export default Maindoc
 

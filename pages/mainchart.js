@@ -1,8 +1,8 @@
 import React from 'react'
 import Sheetapi from '../config/api'
-import CardData from '../components/layout/cardmain';
 import Sidebar from '../components/layout/sidebar';
 import dynamic from 'next/dynamic'
+import Radialchart from '../components/chart/radialchart';
 
 const Areachart = dynamic(
     () => import('../components/chart/area'),
@@ -10,7 +10,7 @@ const Areachart = dynamic(
 )
 
 
-class Main extends React.Component {
+class Mainchart extends React.Component {
 
     constructor(props) {
         super(props);
@@ -67,7 +67,7 @@ class Main extends React.Component {
                                        {
                                            this.state.list.map((item,index) => {
                                                return(
-                                                   <li>
+                                                   <li key={index}>
                                                       <p>{item}</p> 
                                                    </li>
                                                )
@@ -84,10 +84,10 @@ class Main extends React.Component {
                         <div className="container-fluid">
                             <h1 className="text-center">ข้อมูลทางสถิติ</h1>
                             <h2 className="small text-center"></h2>
-
-                            <CardData />
-
+                            <Radialchart/>
                             <Areachart />
+
+                            
 
                         </div>
                     </div>
@@ -97,4 +97,4 @@ class Main extends React.Component {
         )
     }
 }
-export default Main
+export default Mainchart

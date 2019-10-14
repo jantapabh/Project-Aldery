@@ -47,7 +47,7 @@ class Areachart extends React.Component {
     return (
         <div className="warp-chart">
           <Chart
-           options={this.state.options} series={this.state.series} type="area" height="350"/>
+           options={this.state.options} series={this.state.series} type="area" width="700"  height="300"/>
         </div>
     )
   }
