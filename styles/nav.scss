@@ -48,6 +48,10 @@
             display: flex;
             padding-inline-end: 10px; 
             list-style:none; 
+
+             @media (max-width: 767.98px) {
+                display: none !important;
+            }
             
         }
 

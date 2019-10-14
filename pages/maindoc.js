@@ -2,6 +2,8 @@ import React from 'react'
 import Sheetapi from '../config/api'
 import CardMain from '../components/layout/cardmain';
 import Sidebar from '../components/layout/sidebar';
+import CardData from '../components/layout/cardmain';
+import Link from 'next/link';
 
 
 class Main extends React.Component {
@@ -78,10 +80,19 @@ class Main extends React.Component {
 
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
-                            <h1 className="text-center">ข้อมูล</h1>
-                            <h2 className="small text-center"></h2>
+                            <h1 className="text-center">สวัสดิการจากรัฐ</h1>
 
+                            <CardData />
+                            <div className="data-source" >
+                                <Link href="/">
+                                    <img src="/static/logo-google-sheets.svg" />
+                                </Link>
+                                <div className="text-source">
+                                    <h6 >ที่มา: แบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ ผู้พิการเเละผู้ป่วยในชุมชน</h6>
+                                    <h6>เทศบาลเมืองกะทู้ จังหวัดภูเก็ต</h6>
+                                </div>
 
+                            </div>
                         </div>
                     </div>
                 </div>
