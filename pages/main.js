@@ -35,9 +35,9 @@ class Main extends React.Component {
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                     <Sidebar/>
                     <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                        <nav>
+                        <nav className="main">
                             <ul>
-                                <div className="warp-manu">
+                                <div className="warp-nav-sidebar">
                                     <li>
                                         <div className="box-hamberger">
                                             <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.toggle} >

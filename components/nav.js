@@ -3,10 +3,10 @@ import Link from 'next/link'
 
 const links = [
   { href: '/main', label: 'Dashboard' },
-  { href: '/mainchart', label: 'Chart' },
-  { href: '/service', label: 'Service' },
-  { href: '/hospital', label: 'Hospital' },
-  { href: '/help', label: 'Help' },
+  { href: '/mainchart', label: 'ข้อมูลทางสถิติ' },
+  { href: '/service', label: 'การบริการ' },
+  { href: '/hospital', label: 'การรักษา' },
+  { href: '/help', label: 'ช่วยเหลือ' },
 
 ]
 
@@ -16,80 +16,121 @@ class Nav extends React.Component {
     name: "",
   }
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      status: false
+    }
+  }
+
+
+  collapsible = async () => {
+    if (!this.state.status) {
+      await this.setState({
+        status: true
+      })
+    }
+    else {
+      await this.setState({
+        status: false
+      })
+    }
+  }
+
   render() {
 
     return (
       <React.Fragment>
-      
-            <nav>
 
-              {
-                this.props.name == "man" || this.props.name == "woman" || this.props.name == "total" ?
-                  <React.Fragment>
-                    <div className="warp-back">
-                      <ul>
-                        <div className="warp-manu">
-                          <li >
-                            <Link href="/mainchart">
-                              <p>ย้อนกลับ</p>
+        <nav>
+          {
+            this.props.name == "man" || this.props.name == "woman" || this.props.name == "total" ?
+              <React.Fragment>
+                <div className="warp-back">
+                  <ul>
+                    <div className="warp-manu">
+                      <li >
+                        <Link href="/mainchart">
+                          <p>ย้อนกลับ</p>
+                        </Link>
+                      </li>
+                    </div>
+                  </ul>
+                </div>
+              </React.Fragment>
+              :
+              this.props.name == "/" ?
+                <React.Fragment>
+                  <ul>
+                    <div className="warp-manu">
+                      {links.map((item, index) => {
+                        return (
+                          <li key={index}>
+                            <Link href={item.href}>
+                              <p>{item.label}</p>
                             </Link>
                           </li>
-                        </div>
-                      </ul>
+                        )
+                      }
+                      )}
+
                     </div>
-                  </React.Fragment>
-                  :
-                  this.props.name == "/" ?
-                    <React.Fragment>
-                      <ul>
-                        <div className="warp-manu">
-                          {links.map((item, index) => {
-                            return (
-                              <li key={index}>
-                                <Link href={item.href}>
-                                  <p>{item.label}</p>
-                                </Link>
-                              </li>
-                            )
-                          }
-                          )}
+                  </ul>
 
-                        </div>
-                      </ul>
-                    </React.Fragment>
-                    :
-                    <React.Fragment>
-                      <div className="warp-back">
-                        <ul>
-                          <div className="warp-manu">
-                            <li >
-                              <Link href="/">
-                                <p>ย้อนกลับ</p>
-                              </Link>
+                </React.Fragment>
+                :
+                <React.Fragment>
+                  <div className="warp-back">
+                    <ul>
+                      <div className="warp-manu">
+                        <li >
+                          <Link href="/">
+                            <p>ย้อนกลับ</p>
+                          </Link>
 
-                            </li>
-                          </div>
-                        </ul>
+                        </li>
                       </div>
-                      <ul>
-                        <div className="warp-manu">
-                          {links.map((item, index) => {
-                            return (
-                              <li key={index}>
-                                <Link href={item.href}>
-                                  <p>{item.label}</p>
-                                </Link>
-                              </li>
-                            )
-                          }
-                          )}
-                        </div>
-                      </ul>
-                    </React.Fragment>
-              }
-            </nav>
+                    </ul>
+                  </div>
+                  <ul>
+                    <div className="warp-manu">
+                      {links.map((item, index) => {
+                        return (
+                          <li key={index}>
+                            <Link href={item.href}>
+                              <p>{item.label}</p>
+                            </Link>
+                          </li>
+                        )
+                      }
+                      )}
+                    </div>
+                  </ul>
+                </React.Fragment>
+          }
+        </nav>
 
-        
+        <div class="collapsible-menu">
+          <label onClick={this.collapsible}>Menu</label>
+          <div className={`menu-content${this.state.status ? " show" : ""}`}>
+            <ul>
+            
+              {links.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <Link href={item.href}>
+                      <p>{item.label}</p>
+                    </Link>
+                  </li>
+                )
+              }
+              )}
+            </ul>
+          </div>
+        </div>
+
+
+
       </React.Fragment>
 
 

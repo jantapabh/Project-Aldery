@@ -1,19 +1,17 @@
-nav {
+  nav{
+    background-color: white;
     min-width: 100%;
-    width: auto;
+    max-width: 100%;
     min-height: 3vh;
     height: auto;
     display: flex;
-    background-color: white;
     box-shadow: 0 0 4px rgba(0,0,0,.25);
     z-index: 99;
     position: absolute;
 
-    .nav-bar-main{
-        display: flex;
-        padding-inline-end: 10px; 
-        list-style:none; 
-        
+    
+    @media (max-width: 767.98px) {
+        display: none;
     }
 
     ul{
@@ -25,6 +23,35 @@ nav {
         padding-inline-start: 10px;
 
         .warp-manu{
+            display: flex;
+            flex-direction: row;
+
+           
+            li{
+                cursor: pointer;
+                display: flex;
+
+                p{
+                    color: black;
+                }
+
+                p:hover{
+                    color: #bedadc ;
+                }
+            }
+
+            
+        }
+
+
+        .nav-bar-main{
+            display: flex;
+            padding-inline-end: 10px; 
+            list-style:none; 
+            
+        }
+
+        .warp-nav-sidebar{
             display: flex;
             flex-direction: row;
            
@@ -40,6 +67,7 @@ nav {
                     color: #bedadc ;
                 }
             }
+
         }
 
         p{
@@ -52,17 +80,109 @@ nav {
         }
         
     }
-    
-    .warp-back{
-        display: flex;
+
+  }
+
+  nav.main{
+
+    background-color: white;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 3vh;
+    height: auto;
+    display: flex;
+    box-shadow: 0 0 4px rgba(0,0,0,.25);
+    z-index: 99;
+    position: absolute;
+
+
+    ul{
         width: 100%;
-        ul{
-            width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 10px;
+
+        .nav-bar-main{
             display: flex;
-            justify-content: flex-start;
-            margin-block-start: 0;
-            margin-block-end: 0;
-            padding-inline-start: 10px;
+            padding-inline-end: 10px; 
+            list-style:none; 
+            
+        }
+
+        .warp-nav-sidebar{
+            display: flex;
+            flex-direction: row;
+           
+            li{
+                cursor: pointer;
+                display: flex;
+
+                p{
+                    cursor: pointer;
+                    color:black;
+                    margin: 1rem;
+                }
+                p:hover{
+                    color: #bedadc ;
+                }
+            }
         }
     }
   }
+
+ 
+.collapsible-menu {
+    @media (min-width: 767.98px) {
+        display: none;
+    }
+
+    background-color: rgb(255, 255, 255);
+    padding: 0 1rem ;
+    border-bottom: 3px solid #CDE700;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+
+    
+    label{
+        text-align: center;
+        font-family: 'Sedgwick Ave Display', cursive;
+        font-size: 1.5rem;
+        display: block;
+        cursor: pointer;
+        // background: url(menu.png) no-repeat left center;
+        padding: 1rem;
+        margin-bottom: 0 !important;
+    }
+
+    label:hover{
+        color: salmon;
+        
+    }
+
+    .menu-content {
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+
+        ul{
+            list-style: none;
+            padding: 0;
+
+            li{
+                p{
+                    display:block;
+                    padding: 10px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .menu-content.show{
+        max-height: 100%;
+    }
+
+}
+
+
+  

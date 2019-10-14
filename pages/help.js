@@ -42,7 +42,7 @@ class Help extends React.Component {
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                     <Sidebar />
                     <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                        <nav>
+                        <nav className="main">
                             <ul>
                                 <div className="warp-manu">
                                     <li>
