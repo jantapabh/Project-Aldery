@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Sheetapi from '../config/api'
 import Sidebar from '../components/layout/sidebar';
 import dynamic from 'next/dynamic'
@@ -14,7 +15,12 @@ class Hospital extends React.Component {
         super(props);
 
         this.state = {
-            list: ["Main", "Dashboard", "Chart", "Service", "Hospital", "Help"],
+            list: [{ name: "Main", link: "/main" },
+            { name: "Dashboard", link: "/mainchart" },
+            { name: "Service", link: "/service" },
+            { name: "Hospital", link: "/hospital" },
+            { name: "Help", link: "/help" },
+            ],
             status: true
         }
     }
@@ -65,9 +71,11 @@ class Hospital extends React.Component {
                                         {
                                             this.state.list.map((item, index) => {
                                                 return (
-                                                    <li key={index}>
-                                                        <p>{item}</p>
-                                                    </li>
+                                                    <Link href={item.link}>
+                                                        <li key={index}>
+                                                            <p>{item.name}</p>
+                                                        </li>
+                                                    </Link>
                                                 )
                                             })
                                         }
@@ -82,7 +90,15 @@ class Hospital extends React.Component {
                         <div className="container-fluid">
                             <h1 className="text-center">โรงพยาบาลเเละการดูแลรักษา</h1>
                             <h2 className="small text-center"></h2>
-                            <Barchart />
+
+                            <div className="warp-chart">
+                                <div className="chart-contents">
+                                    <Barchart />
+                                </div>
+                                {/* <div className="chart-contents">
+                                  
+                                </div> */}
+                            </div>
 
                         </div>
                     </div>

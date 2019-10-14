@@ -14,7 +14,7 @@ const legend = {
 }
 
 
-class Radialchart extends React.Component {
+class Doughnutchart extends React.Component {
 
   constructor(props) {
     super(props);
@@ -70,7 +70,7 @@ class Radialchart extends React.Component {
 
     const { data } = this.state
     return (
-      <div>
+      <React.Fragment>
         <Doughnut
           data={data}
           legend={legend}
@@ -78,9 +78,9 @@ class Radialchart extends React.Component {
           height={150}
           options={{ maintainAspectRatio: false,responsive:false  }}
         />
-      </div>
+      </React.Fragment>
     )
   }
 }
 
-export default Radialchart;
+export default Doughnutchart;

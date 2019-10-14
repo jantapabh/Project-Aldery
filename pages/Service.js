@@ -2,9 +2,15 @@ import React from 'react'
 import Sheetapi from '../config/api'
 import Sidebar from '../components/layout/sidebar';
 import dynamic from 'next/dynamic'
+import Link from 'next/link'
 
-const Barchart = dynamic(
-    () => import('../components/chart/barchart'),
+const Linechart = dynamic(
+    () => import('../components/chart/linechart'),
+    { ssr: false }
+)
+
+const Picchart = dynamic(
+    () => import('../components/chart/picchart2'),
     { ssr: false }
 )
 
@@ -15,7 +21,12 @@ class Service extends React.Component {
         super(props);
 
         this.state = {
-            list: ["Main", "Dashboard", "Chart", "Hospital", "Help"],
+            list: [{ name: "Main", link: "/main" },
+            { name: "Dashboard", link: "/mainchart" },
+            { name: "Service", link: "/service" },
+            { name: "Hospital", link: "/hospital" },
+            { name: "Help", link: "/help" },
+            ],
             status: true
         }
     }
@@ -66,9 +77,11 @@ class Service extends React.Component {
                                         {
                                             this.state.list.map((item, index) => {
                                                 return (
-                                                    <li key={index}>
-                                                        <p>{item}</p>
-                                                    </li>
+                                                    <Link href={item.link}>
+                                                        <li key={index}>
+                                                            <p>{item.name}</p>
+                                                        </li>
+                                                    </Link>
                                                 )
                                             })
                                         }
@@ -84,6 +97,18 @@ class Service extends React.Component {
                             <h1 className="text-center">หน่วยงานเเละการบริการ</h1>
                             <h2 className="small text-center"></h2>
 
+                            <div className="warp-chart">
+                                <div className="chart-contents">
+                                    <Linechart />
+                                </div>
+
+                                <div className="chart-contents">
+                                    <Picchart />
+                                </div>
+
+
+
+                            </div>
 
                         </div>
                     </div>

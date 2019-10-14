@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import IconData from '../components/layout/icon-data';
 import Sidebar from '../components/layout/sidebar';
 import Geochart from '../components/chart/geochart';
@@ -10,8 +11,13 @@ class Main extends React.Component {
         super(props);
 
         this.state = {
-            list: ["Main","Chart","Service","Hospital","Help"],
-            status: false
+            list: [{ name: "Main", link: "/main" },
+            { name: "Dashboard", link: "/mainchart" },
+            { name: "Service", link: "/service" },
+            { name: "Hospital", link: "/hospital" },
+            { name: "Help", link: "/help" },
+            ],
+            status: true
         }
     }
 
@@ -33,7 +39,7 @@ class Main extends React.Component {
         return (
             <div className="warp-main">
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                    <Sidebar/>
+                    <Sidebar />
                     <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                         <nav className="main">
                             <ul>
@@ -53,15 +59,17 @@ class Main extends React.Component {
                             <div className="nav-bar-main">
                                 <ul>
                                     <div className="nav-bar-main">
-                                       {
-                                           this.state.list.map((item,index) => {
-                                               return(
-                                                   <li key={index}>
-                                                      <p>{item}</p> 
-                                                   </li>
-                                               )
-                                           })
-                                       }
+                                        {
+                                            this.state.list.map((item, index) => {
+                                                return (
+                                                    <Link href={item.link}>
+                                                        <li key={index}>
+                                                            <p>{item.name}</p>
+                                                        </li>
+                                                    </Link>
+                                                )
+                                            })
+                                        }
                                     </div>
 
                                 </ul>
@@ -79,7 +87,7 @@ class Main extends React.Component {
                                 <IconData />
                             </div>
                             <p className="text-center animated fadeInDown delay-2s ">ที่มา: รายงานสรุปยอดผู้ได้รับเบี้ยเเยกตามประเภท อปท. เทศบาลเมืองกะทู้ อ.กะทู้ จังหวัดภูเก็ต</p>
-                            <Geochart/>
+                            <Geochart />
 
                         </div>
                     </div>

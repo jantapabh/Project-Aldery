@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Sheetapi from '../config/api'
 import CardMain from '../components/layout/cardmain';
 import Sidebar from '../components/layout/sidebar';
@@ -10,9 +11,13 @@ class Help extends React.Component {
         super(props);
 
         this.state = {
-            list: ["Main", "Dashboard", "Chart", "Service", "Hospital", "Help"],
+            list: [{ name: "Main", link: "/main" },
+            { name: "Dashboard", link: "/mainchart" },
+            { name: "Service", link: "/service" },
+            { name: "Hospital", link: "/hospital" },
+            { name: "Help", link: "/help" },
+            ],
             status: true
-
         }
     }
 
@@ -63,9 +68,11 @@ class Help extends React.Component {
                                         {
                                             this.state.list.map((item, index) => {
                                                 return (
-                                                    <li key={index}>
-                                                        <p>{item}</p>
-                                                    </li>
+                                                    <Link href={item.link}>
+                                                        <li key={index}>
+                                                            <p>{item.name}</p>
+                                                        </li>
+                                                    </Link>
                                                 )
                                             })
                                         }

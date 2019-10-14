@@ -1,14 +1,32 @@
 import React from 'react'
 import Sheetapi from '../config/api'
 import Sidebar from '../components/layout/sidebar';
+import Link from 'next/link'
+
 import dynamic from 'next/dynamic'
-import Radialchart from '../components/chart/radialchart';
+
+import Doughnutchart from '../components/chart/doughnutchart';
+import Geochart from '../components/chart/geochart';
 
 const Areachart = dynamic(
     () => import('../components/chart/area'),
     { ssr: false }
 )
 
+const Radachart = dynamic(
+    () => import('../components/chart/radachart'),
+    { ssr: false }
+)
+
+const Barchart = dynamic(
+    () => import('../components/chart/barchart2'),
+    { ssr: false }
+)
+
+const Picchart = dynamic(
+    () => import('../components/chart/piechart'),
+    { ssr: false }
+)
 
 class Mainchart extends React.Component {
 
@@ -16,7 +34,12 @@ class Mainchart extends React.Component {
         super(props);
 
         this.state = {
-            list: ["Main","Dashboard","Service","Hospital","Help"],
+            list: [{name:"Main",link:"/main"},
+            {name:"Dashboard",link:"/mainchart"},
+            {name:"Service",link:"/service"},
+            {name:"Hospital",link:"/hospital"},
+            {name:"Help",link:"/help"},
+            ],
             status: true
         }
     }
@@ -64,15 +87,18 @@ class Mainchart extends React.Component {
                             <div className="nav-bar-main">
                                 <ul>
                                     <div className="nav-bar-main">
-                                       {
-                                           this.state.list.map((item,index) => {
-                                               return(
-                                                   <li key={index}>
-                                                      <p>{item}</p> 
-                                                   </li>
-                                               )
-                                           })
-                                       }
+                                        {
+                                            this.state.list.map((item, index) => {
+                                                return (
+                                                    <Link href={item.link}>
+                                                        <li key={index}>
+                                                            <p>{item.name}</p>
+                                                        </li>
+                                                    </Link>
+
+                                                )
+                                            })
+                                        }
                                     </div>
 
                                 </ul>
@@ -84,10 +110,23 @@ class Mainchart extends React.Component {
                         <div className="container-fluid">
                             <h1 className="text-center">ข้อมูลทางสถิติ</h1>
                             <h2 className="small text-center"></h2>
-                            <Radialchart/>
-                            <Areachart />
+                            <div className="warp-chart">
+                                <div className="chart-contents">
+                                    <Radachart />
+                                </div>
+                                <div className="chart-contents">
+                                    <Areachart />
+                                </div>
+                            </div>
 
-                            
+                            <div className="warp-chart">
+                                <div className="chart-contents">
+                                    <Barchart />
+                                </div>
+                                <div className="chart-contents">
+                                    <Picchart />
+                                </div>
+                            </div>
 
                         </div>
                     </div>

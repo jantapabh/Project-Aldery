@@ -32,7 +32,13 @@ class Bar extends Component {
 
     return (
       <div className="warp-chart">
-        <Chart options={this.state.options} series={this.state.series} type="bar" width="700"  height="350" />
+        <Chart
+         options={this.state.options} 
+         series={this.state.series} 
+         type="bar" width="700"  
+         height="350" 
+         width="700"
+         />
       </div>
     );
   }

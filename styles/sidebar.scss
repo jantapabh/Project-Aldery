@@ -6,7 +6,7 @@
             justify-content: flex-start;
         }
     .toggle{
-         padding-left:250px;
+         padding-left:230px;
         }
     }
 }
@@ -55,7 +55,7 @@
   }
 
   .sidebar-wrapper:hover{
-    width:250px;
+    width:230px;
 
     .sidebar-nav{
         position: absolute;
@@ -77,7 +77,7 @@
 }
 /* Change the width of the sidebar to display it*/
 .wrapper.menuDisplayed .sidebar-wrapper{
-    width:250px;
+    width:230px;
 
     @media (max-width: 575.98px) { 
         width: 100% !important;

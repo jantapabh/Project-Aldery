@@ -8,7 +8,7 @@ class RadarChart extends React.Component {
         this.state = {
             options: {
                 chart: {
-                    toolbar:{
+                    toolbar: {
                         show: false
                     },
                     dropShadow: {
@@ -48,14 +48,15 @@ class RadarChart extends React.Component {
 
     render() {
         return (
-            <div>
-                <div className="chart-main">
+            <React.Fragment>
 
-                    <Chart
-                        options={this.state.options} series={this.state.series} type="radar" height="350"
-                    />
-                </div>
-            </div>
+                <Chart
+                    options={this.state.options} 
+                    series={this.state.series} 
+                    type="radar" 
+                    height="350"
+                />
+            </React.Fragment>
         )
     }
 }

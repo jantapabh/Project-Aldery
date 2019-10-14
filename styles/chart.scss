@@ -1,6 +1,25 @@
 .warp-chart{
-   margin: 2rem 0;
-  
+   display: flex;
+   justify-content: center;
+   margin: 1rem 0;
+
+   @media (max-width: 1199.98px) {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .chart-contents{
+      display: flex;
+      background-color: white;
+      border-radius: 0.5rem;
+      margin: 0.5rem 1rem;
+      padding: 1rem;
+
+   }
+}
+
+.chart-center{
+   margin:  5rem 0;
 }
 
 
