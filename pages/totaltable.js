@@ -2,7 +2,7 @@ import React from 'react'
 import Table from '../components/layout/table'
 import Nav from '../components/nav'
 import Sheetapi from '../config/api'
-class Womantable extends React.Component {
+class Totaltable extends React.Component {
 
     constructor(props) {
         super(props);
@@ -56,4 +56,4 @@ class Womantable extends React.Component {
         )
     }
 }
-export default Womantable
+export default Totaltable
