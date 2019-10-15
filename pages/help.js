@@ -11,11 +11,12 @@ class Help extends React.Component {
         super(props);
 
         this.state = {
-            list: [{ name: "Main", link: "/main" },
-            { name: "Dashboard", link: "/mainchart" },
-            { name: "Service", link: "/service" },
-            { name: "Hospital", link: "/hospital" },
-            { name: "Help", link: "/help" },
+            list: [{ name: "หน้าหลัก", link: "/" },
+            { name: "ความคืบหน้า", link: "/main" },
+            { name: "ข้อมูลทางสถิติ", link: "/mainchart" },
+            { name: "สวัสดิการจากรัฐ", link: "/maindoc" },
+            { name: "การบริการ", link: "/service" },
+            { name: "โรงพยาบาล", link: "/hospital" },
             ],
             status: true
         }
@@ -64,20 +65,17 @@ class Help extends React.Component {
                             </ul>
                             <div className="nav-bar-main">
                                 <ul>
-                                    <div className="nav-bar-main">
-                                        {
-                                            this.state.list.map((item, index) => {
-                                                return (
-                                                    <Link href={item.link}>
-                                                        <li key={index}>
-                                                            <p>{item.name}</p>
-                                                        </li>
-                                                    </Link>
-                                                )
-                                            })
-                                        }
-                                    </div>
-
+                                    {
+                                        this.state.list.map((item, index) => {
+                                            return (
+                                                <Link href={item.link}>
+                                                    <li key={index}>
+                                                        <p>{item.name}</p>
+                                                    </li>
+                                                </Link>
+                                            )
+                                        })
+                                    }
                                 </ul>
                             </div>
                         </nav>

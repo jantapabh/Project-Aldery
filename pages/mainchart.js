@@ -5,9 +5,6 @@ import Link from 'next/link'
 
 import dynamic from 'next/dynamic'
 
-import Doughnutchart from '../components/chart/doughnutchart';
-import Geochart from '../components/chart/geochart';
-
 const Areachart = dynamic(
     () => import('../components/chart/area'),
     { ssr: false }
@@ -34,11 +31,12 @@ class Mainchart extends React.Component {
         super(props);
 
         this.state = {
-            list: [{name:"Main",link:"/main"},
-            {name:"Dashboard",link:"/mainchart"},
-            {name:"Service",link:"/service"},
-            {name:"Hospital",link:"/hospital"},
-            {name:"Help",link:"/help"},
+            list: [{ name: "หน้าหลัก", link: "/" },
+            { name: "ความคืบหน้า", link: "/main" },
+            { name: "สวัสดิการจากรัฐ", link: "/maindoc" },
+            { name: "การบริการ", link: "/service" },
+            { name: "โรงพยาบาล", link: "/hospital" },
+            { name: "ช่วยเหลือ", link: "/help" },
             ],
             status: true
         }
@@ -86,20 +84,17 @@ class Mainchart extends React.Component {
                             </ul>
                             <div className="nav-bar-main">
                                 <ul>
-                                    <div className="nav-bar-main">
-                                        {
-                                            this.state.list.map((item, index) => {
-                                                return (
-                                                    <Link href={item.link}>
-                                                        <li key={index}>
-                                                            <p>{item.name}</p>
-                                                        </li>
-                                                    </Link>
-
-                                                )
-                                            })
-                                        }
-                                    </div>
+                                    {
+                                        this.state.list.map((item, index) => {
+                                            return (
+                                                <Link href={item.link}>
+                                                    <li key={index}>
+                                                        <p>{item.name}</p>
+                                                    </li>
+                                                </Link>
+                                            )
+                                        })
+                                    }
 
                                 </ul>
                             </div>

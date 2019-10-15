@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import IconData from '../components/layout/icon-data';
+// import IconData from '../components/layout/icon-data';
 import Sidebar from '../components/layout/sidebar';
 import Geochart from '../components/chart/geochart';
 
@@ -11,11 +11,12 @@ class Main extends React.Component {
         super(props);
 
         this.state = {
-            list: [{ name: "Main", link: "/main" },
-            { name: "Dashboard", link: "/mainchart" },
-            { name: "Service", link: "/service" },
-            { name: "Hospital", link: "/hospital" },
-            { name: "Help", link: "/help" },
+            list: [{ name: "หน้าหลัก", link: "/" },
+            { name: "ข้อมูลทางสถิติ", link: "/mainchart" },
+            { name: "สวัสดิการจากรัฐ", link: "/maindoc" },
+            { name: "การบริการ", link: "/service" },
+            { name: "โรงพยาบาล", link: "/hospital" },
+            { name: "ช่วยเหลือ", link: "/help" },
             ],
             status: true
         }
@@ -58,19 +59,17 @@ class Main extends React.Component {
                             </ul>
                             <div className="nav-bar-main">
                                 <ul>
-                                    <div className="nav-bar-main">
-                                        {
-                                            this.state.list.map((item, index) => {
-                                                return (
-                                                    <Link href={item.link}>
-                                                        <li key={index}>
-                                                            <p>{item.name}</p>
-                                                        </li>
-                                                    </Link>
-                                                )
-                                            })
-                                        }
-                                    </div>
+                                    {
+                                        this.state.list.map((item, index) => {
+                                            return (
+                                                <Link href={item.link}>
+                                                    <li key={index}>
+                                                        <p>{item.name}</p>
+                                                    </li>
+                                                </Link>
+                                            )
+                                        })
+                                    }
 
                                 </ul>
                             </div>
@@ -83,11 +82,16 @@ class Main extends React.Component {
                             <h1 className="text-center">สังคมผู้สูงอายุ</h1>
                             <h2 className="small text-center"></h2>
 
-                            <div className="warp-icon-data">
+                            {/* <div className="warp-icon-data">
                                 <IconData />
                             </div>
                             <p className="text-center animated fadeInDown delay-2s ">ที่มา: รายงานสรุปยอดผู้ได้รับเบี้ยเเยกตามประเภท อปท. เทศบาลเมืองกะทู้ อ.กะทู้ จังหวัดภูเก็ต</p>
-                            <Geochart />
+                           */}
+                            <div className="warp-chart">
+
+                                <Geochart />
+                            </div>
+
 
                         </div>
                     </div>
