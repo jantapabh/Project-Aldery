@@ -13,7 +13,7 @@
 
 .sidebar-wrapper{
     z-index:1;
-    position: absolute;
+    position: fixed;
     width:0;
     height:100vh;
     overflow-y:hidden;
@@ -21,7 +21,8 @@
     opacity:0.9;
     transition:all .5s;
     width:4rem;
-    
+
+  
 
       .sidebar-nav{
           display: none;
