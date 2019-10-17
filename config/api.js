@@ -1,53 +1,9 @@
 import axios from 'axios'
-import {urlSheet1,urlSheet2,urlSheet3,urlSheet4,urlpost,urlSheetMain} from '../config'
-
- async function getSheet1(token,col) {
-
-    const request = await axios.get(`${urlSheet1}${col}`,
-        {
-            headers: {
-                Authorization: `Bearer ${token}`,
-            }
-
-        })
-
-    return request.data.values
-
-}
+import {urlpost,urlSheet2,urlSheetMain} from '../config'
 
 async function getSheet2(token,col) {
 
     const request = await axios.get(`${urlSheet2}${col}`,
-        {
-            headers: {
-                Authorization: `Bearer ${token}`,
-                
-            }
-
-        })
-
-    return request.data.values
-
-}
-
-async function getSheet3(token,col) {
-
-    const request = await axios.get(`${urlSheet3}${col}`,
-        {
-            headers: {
-                Authorization: `Bearer ${token}`,
-                
-            }
-
-        })
-
-    return request.data.values
-
-}
-
-async function getSheet4(token,col) {
-
-    const request = await axios.get(`${urlSheet4}${col}`,
         {
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -95,11 +51,7 @@ async function getSheet(token,col) {
 }
 
 export default{
-    getSheet1,
-    getSheet2,
-    getSheet3,
-    getSheet4,
     postSheetValues,
+    getSheet2,
     getSheet
-
 }

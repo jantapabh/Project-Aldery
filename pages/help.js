@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Sheetapi from '../config/api'
 import CardMain from '../components/layout/cardmain';
 import Sidebar from '../components/layout/sidebar';
+import Card from '../components/layout/card';
 
 
 class Help extends React.Component {
@@ -86,7 +87,11 @@ class Help extends React.Component {
                             <h1 className="text-center">การช่วยเหลือ</h1>
                             <h2 className="small text-center"></h2>
 
-
+                            <Card 
+                                title = "texttttt"
+                                subtitle = "subbbb"
+                                img = "/static/activehover.svg"
+                            />
                         </div>
                     </div>
                 </div>

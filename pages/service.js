@@ -3,6 +3,7 @@ import Sheetapi from '../config/api'
 import Sidebar from '../components/layout/sidebar';
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
+import Card from '../components/layout/card'
 
 const Linechart = dynamic(
     () => import('../components/chart/linechart'),
@@ -101,8 +102,23 @@ class Service extends React.Component {
                                     <Linechart />
                                 </div>
 
-                                <div className="chart-contents">
+                                {/* <div className="chart-contents">
                                     <Picchart />
+                                </div> */}
+
+                                <div className="card-contents-col">
+                                    <Card
+                                        title="texttttt"
+                                        subtitle="subbbb"
+                                        img="/static/activehover.svg"
+                                    />
+
+                                    <Card
+                                        title="texttttt"
+                                        subtitle="subbbb"
+                                        img="/static/activehover.svg"
+                                    />
+
                                 </div>
 
 
