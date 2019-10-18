@@ -110,11 +110,11 @@ class Nav extends React.Component {
           }
         </nav>
 
-        <div class="collapsible-menu">
+        {/* <div class="collapsible-menu">
           <label onClick={this.collapsible}>Menu</label>
           <div className={`menu-content${this.state.status ? " show" : ""}`}>
             <ul>
-            
+
               {links.map((item, index) => {
                 return (
                   <li key={index}>
@@ -127,7 +127,34 @@ class Nav extends React.Component {
               )}
             </ul>
           </div>
+        </div> */}
+        <div class="collapsible-menu">
+        <div className="warp-nav-sidebar">
+            <div className="box-hamberger">
+              <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+            </div>
         </div>
+        <div className={`menu-content${this.state.status ? " show" : ""}`}>
+          <ul>
+
+            {links.map((item, index) => {
+              return (
+                <li key={index}>
+                  <Link href={item.href}>
+                    <p>{item.label}</p>
+                  </Link>
+                </li>
+              )
+            }
+            )}
+          </ul>
+        </div>
+        </div>
+
 
 
 

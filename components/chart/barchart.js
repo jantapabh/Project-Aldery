@@ -8,21 +8,7 @@ class Bar extends Component {
     super(props);
 
     this.state = {
-      options: {
-        // plotOptions: {
-        //   bar: {
-        //     horizontal: true,
-        //   }
-        // },
-        // dataLabels: {
-        //   enabled: false
-        // },
-        // xaxis: {
-        //   categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan',
-        //     'United States', 'China', 'Germany'
-        //   ],
-        // }
-      },
+      options: {},
       series: [],
       categories: [],
       data: [],
