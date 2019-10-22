@@ -45,6 +45,15 @@ h2{
     text-align: center;
     margin-bottom: 0;
     padding: 0.5rem;
+
+    @media (max-width: 1199.98px) {
+        font-size: 1.5rem !important;
+    }
+
+    @media (max-width: 991.98px) {
+        font-size: 1rem !important;
+    }
+
 }
 
 h3{
@@ -54,6 +63,13 @@ h3{
     text-align: center;
     margin: 0.5rem;
    
+    @media (max-width: 1199.98px) {
+        font-size: 1.5rem !important;
+    }
+
+    @media (max-width: 991.98px) {
+        font-size: 1rem !important;
+    }
 }
 
 h4{
@@ -94,7 +110,7 @@ p{
 
 text{
     color: gray;
-    margin: 0.5rem 0 !important;
+    margin: 0.7rem 0 !important;
     font-size: 1.2rem;
 }
 

@@ -29,6 +29,22 @@
     position: relative;
     .container-fluid{
         margin-top: 2rem;
+        
+        h2{
+             margin-top: 1.5rem ;   
+             margin-bottom: 2rem;
+        }
+        .textarea-center{
+            margin: 1rem 2rem;
+            text-align: center;
+
+            text{
+                font-size: 1rem !important;
+                margin: 0.7rem 0;
+                color: black !important;
+            }
+
+        }
     }
 
 }
