@@ -43,6 +43,7 @@ class Nav extends React.Component {
       <React.Fragment>
 
         <nav>
+
           {
             this.props.name == "man" || this.props.name == "woman" || this.props.name == "total" ?
               <React.Fragment>
@@ -61,18 +62,34 @@ class Nav extends React.Component {
               :
               this.props.name == "/" ?
                 <React.Fragment>
+
                   <ul>
+                    <div className="nav-logo">
+                      <Link href="/">
+                        <li>
+                          <img src="/static/cover-img5.png"></img>
+                          <p>Eldery DB</p>
+                        </li>
+                        {/* <li>
+                        <p>Eldery DB</p>
+                      </li> */}
+                      </Link>
+                    </div>
+
                     <div className="warp-manu">
-                      {links.map((item, index) => {
-                        return (
-                          <li key={index}>
-                            <Link href={item.href}>
-                              <p>{item.label}</p>
-                            </Link>
-                          </li>
-                        )
-                      }
-                      )}
+                      <ul>
+                        {
+                          links.map((item, index) => {
+                            return (
+                              <Link href={item.href}>
+                                <li key={index}>
+                                  <p>{item.label}</p>
+                                </li>
+                              </Link>
+                            )
+                          })
+                        }
+                      </ul>
 
                     </div>
                   </ul>
@@ -110,7 +127,7 @@ class Nav extends React.Component {
           }
         </nav>
         <div class="collapsible-menu">
-        <div className="warp-nav-sidebar">
+          <div className="warp-nav-sidebar">
             <div className="box-hamberger">
               <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
                 <span></span>
@@ -118,22 +135,22 @@ class Nav extends React.Component {
                 <span></span>
               </a>
             </div>
-        </div>
-        <div className={`menu-content${this.state.status ? " show" : ""}`}>
-          <ul>
+          </div>
+          <div className={`menu-content${this.state.status ? " show" : ""}`}>
+            <ul>
 
-            {links.map((item, index) => {
-              return (
-                <li key={index}>
-                  <Link href={item.href}>
-                    <p>{item.label}</p>
-                  </Link>
-                </li>
-              )
-            }
-            )}
-          </ul>
-        </div>
+              {links.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <Link href={item.href}>
+                      <p>{item.label}</p>
+                    </Link>
+                  </li>
+                )
+              }
+              )}
+            </ul>
+          </div>
         </div>
 
       </React.Fragment>

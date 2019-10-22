@@ -63,22 +63,23 @@ class Help extends React.Component {
                                     </li>
 
                                 </div>
+                                <div className="nav-bar-main">
+                                    <ul>
+                                        {
+                                            this.state.list.map((item, index) => {
+                                                return (
+                                                    <Link href={item.link}>
+                                                        <li key={index}>
+                                                            <p>{item.name}</p>
+                                                        </li>
+                                                    </Link>
+                                                )
+                                            })
+                                        }
+                                    </ul>
+                                </div>
                             </ul>
-                            <div className="nav-bar-main">
-                                <ul>
-                                    {
-                                        this.state.list.map((item, index) => {
-                                            return (
-                                                <Link href={item.link}>
-                                                    <li key={index}>
-                                                        <p>{item.name}</p>
-                                                    </li>
-                                                </Link>
-                                            )
-                                        })
-                                    }
-                                </ul>
-                            </div>
+
                         </nav>
                     </div>
 
@@ -87,10 +88,10 @@ class Help extends React.Component {
                             <h1 className="text-center">การช่วยเหลือ</h1>
                             <h2 className="small text-center"></h2>
 
-                            <Card 
-                                title = "texttttt"
-                                subtitle = "subbbb"
-                                img = "/static/activehover.svg"
+                            <Card
+                                title="texttttt"
+                                subtitle="subbbb"
+                                img="/static/activehover.svg"
                             />
                         </div>
                     </div>

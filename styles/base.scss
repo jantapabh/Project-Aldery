@@ -87,7 +87,7 @@ h6{
 
 p{
     user-select: none;
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
     color: gray;
 
 }
@@ -109,4 +109,10 @@ a:hover {
 
 img{
     user-select: none;
+}
+
+ul{
+    margin-block-end:0;
+    padding-inline-start: 0.5rem !important;
+    padding-inline-end: 0.5rem !important;
 }

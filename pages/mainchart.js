@@ -81,23 +81,24 @@ class Mainchart extends React.Component {
                                     </li>
 
                                 </div>
-                            </ul>
-                            <div className="nav-bar-main">
-                                <ul>
-                                    {
-                                        this.state.list.map((item, index) => {
-                                            return (
-                                                <Link href={item.link}>
-                                                    <li key={index}>
-                                                        <p>{item.name}</p>
-                                                    </li>
-                                                </Link>
-                                            )
-                                        })
-                                    }
+                                <div className="nav-bar-main">
+                                    <ul>
+                                        {
+                                            this.state.list.map((item, index) => {
+                                                return (
+                                                    <Link href={item.link}>
+                                                        <li key={index}>
+                                                            <p>{item.name}</p>
+                                                        </li>
+                                                    </Link>
+                                                )
+                                            })
+                                        }
 
-                                </ul>
-                            </div>
+                                    </ul>
+                                </div>
+                            </ul>
+
                         </nav>
                     </div>
 

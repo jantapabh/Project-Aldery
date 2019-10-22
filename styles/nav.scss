@@ -3,11 +3,12 @@
     min-width: 100%;
     max-width: 100%;
     min-height: 5vh;
+    line-height: 5vh;
     height: auto;
     display: flex;
-    // box-shadow: 0 0 4px rgba(0,0,0,.25);
+    box-shadow: 0 0 4px rgba(0,0,0,.25);
     z-index: 99;
-    position: absolute;
+    position: fixed;
 
     
     @media (max-width: 768px) {
@@ -17,59 +18,61 @@
     ul{
         width: 100%;
         display: flex;
-        justify-content: flex-end;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        padding-inline-end:1rem;
 
-        .warp-manu{
+        .nav-logo{
+            min-width: 20%;
+            list-style:none; 
             display: flex;
-            flex-direction: row;
-
-           
             li{
                 cursor: pointer;
                 display: flex;
 
+                img{
+                    margin-top: 1rem;
+                    width: 6rem;
+                    height: 3rem;
+                }
                 p{
                     font-size: 1.1rem !important;
                     cursor: pointer;
                     color:black;
-                    margin: 0.5em;
+                    margin: 1rem 1.5rem;
                     margin-top: 1.1rem;
                 }
-                p:hover{
-                    color: #bedadc ;
-                }
-            }
 
+
+            }
             
         }
 
-        .warp-nav-sidebar{
-            display: flex;
-            flex-direction: row;
-           
-            li{
-                cursor: pointer;
-                display: flex;
-
-                p{
-                    color: black;
-                }
-
-                p:hover{
-                    color: #bedadc ;
-                }
-            }
-
-        }
-
-        
-        
     }
 
+     .warp-manu{
+           width: 100%;
+            ul{
+                display: flex;
+                justify-content: flex-end;
+                list-style:none;
+                li{
+                     cursor: pointer;
+                   
+                    p{
+                        font-size: 1.1rem !important;
+                        cursor: pointer;
+                        color:black;
+                        margin: 1rem 1.5rem;
+                        margin-top: 1.1rem;
+                    }
+                    p:hover{
+                        color: #bedadc ;
+                    }
+                }
+            }
+        }
+
   }
+
+
 
   nav.main{
 
@@ -87,7 +90,6 @@
     ul{
         width: 100%;
         display: flex;
-        justify-content: flex-end;
         padding-inline-start: 0.5rem;
         padding-inline-end: 0.5rem;
 
@@ -121,8 +123,7 @@
                 p{
                     cursor: pointer;
                     color:black;
-                    margin: 1rem 0.5rem 0.5rem 0.5rem;
-
+                    margin: 1rem 1.5rem ;
                 }
             }   
         }
@@ -137,17 +138,19 @@
 
  
 .collapsible-menu {
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
         display: none;
     }
 
     background-color: rgb(255, 255, 255);
     padding: 0 1rem ;
     box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+    // position: fixed;
+    // top: 0;
+    // width: 100%;
     
     label{
         text-align: center;
-        font-family: 'Sedgwick Ave Display', cursive;
         font-size: 1.5rem;
         display: block;
         cursor: pointer;

@@ -60,22 +60,23 @@ class Maindoc extends React.Component {
                                     </li>
 
                                 </div>
+                                <div className="nav-bar-main">
+                                    <ul>
+                                        {
+                                            this.state.list.map((item, index) => {
+                                                return (
+                                                    <Link href={item.link}>
+                                                        <li key={index}>
+                                                            <p>{item.name}</p>
+                                                        </li>
+                                                    </Link>
+                                                )
+                                            })
+                                        }
+                                    </ul>
+                                </div>
                             </ul>
-                            <div className="nav-bar-main">
-                                <ul>
-                                    {
-                                        this.state.list.map((item, index) => {
-                                            return (
-                                                <Link href={item.link}>
-                                                    <li key={index}>
-                                                        <p>{item.name}</p>
-                                                    </li>
-                                                </Link>
-                                            )
-                                        })
-                                    }
-                                </ul>
-                            </div>
+
                         </nav>
                     </div>
 
@@ -86,7 +87,7 @@ class Maindoc extends React.Component {
                             <CardData />
                             <div className="data-source" >
                                 {/* <Link href="/"> */}
-                                    <img src="/static/logo-google-sheets.svg" />
+                                <img src="/static/logo-google-sheets.svg" />
                                 {/* </Link> */}
                                 <div className="text-source">
                                     <h6 >ที่มา: แบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ ผู้พิการเเละผู้ป่วยในชุมชน</h6>

@@ -56,24 +56,24 @@ class Main extends React.Component {
                                     </li>
 
                                 </div>
+                                <div className="nav-bar-main">
+                                    <ul>
+                                        {
+                                            this.state.list.map((item, index) => {
+                                                return (
+                                                    <Link href={item.link}>
+                                                        <li key={index}>
+                                                            <p>{item.name}</p>
+                                                        </li>
+                                                    </Link>
+                                                )
+                                            })
+                                        }
+
+                                    </ul>
+                                </div>
+
                             </ul>
-                            <div className="nav-bar-main">
-                                <ul>
-                                    {
-                                        this.state.list.map((item, index) => {
-                                            return (
-                                                <Link href={item.link}>
-                                                    <li key={index}>
-                                                        <p>{item.name}</p>
-                                                    </li>
-                                                </Link>
-                                            )
-                                        })
-                                    }
-
-                                </ul>
-                            </div>
-
                         </nav>
                     </div>
 

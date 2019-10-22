@@ -1,6 +1,8 @@
 import React from 'react'
 import Nav from '../components/nav'
 import Sheetapi from '../config/api'
+import Header from '../components/layout/header';
+import Footer from '../components/layout/footer';
 
 class Home extends React.Component {
 
@@ -32,10 +34,12 @@ class Home extends React.Component {
     return (
       <div className="warp-index">
         <Nav name="/" />
+        <main>
+          <Header />
+          <Footer />
+        </main>
 
-        <div className="warp-cover">
-          <img src="/static/cover.png" />
-        </div>
+
 
       </div>
     )
