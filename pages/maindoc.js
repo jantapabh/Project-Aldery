@@ -85,9 +85,9 @@ class Maindoc extends React.Component {
 
                             <CardData />
                             <div className="data-source" >
-                                <Link href="/">
+                                {/* <Link href="/"> */}
                                     <img src="/static/logo-google-sheets.svg" />
-                                </Link>
+                                {/* </Link> */}
                                 <div className="text-source">
                                     <h6 >ที่มา: แบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ ผู้พิการเเละผู้ป่วยในชุมชน</h6>
                                     <h6>เทศบาลเมืองกะทู้ จังหวัดภูเก็ต</h6>

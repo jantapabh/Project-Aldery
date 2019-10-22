@@ -17,6 +17,8 @@ class MyDocument extends Document {
 
                     <title>Eldery DB</title>
                     <meta charset="utf-8" />
+                    <meta name="theme-color" content="#fff"/>
+                    <link rel="manifest" href="../static/manifest.json" />
                     <link rel="shortcut icon" href="/static/logo.png" />
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <meta name="theme-color" content="#000000" />

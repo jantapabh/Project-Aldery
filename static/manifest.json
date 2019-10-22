@@ -1,0 +1,11 @@
+{
+    "description":"Elderys",
+    "display": "fullscreen",
+    "icons": [
+        {
+            "src":"/static/couple.svg",
+            "sizes": "192x192",
+            "type":"image/svg"
+        }
+    ]
+}
