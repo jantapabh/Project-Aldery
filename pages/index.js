@@ -36,6 +36,11 @@ class Home extends React.Component {
         <Nav name="/" />
         <main>
           <Header />
+          <div className="page-content">
+            <div className="container-fluid">
+              <h1>Eldery DB</h1>
+            </div>
+          </div>
           <Footer />
         </main>
 

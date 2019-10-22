@@ -21,6 +21,18 @@
 
 }
 
+.page-content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;	
+    min-height: 100vh;
+    position: relative;
+    .container-fluid{
+        margin-top: 2rem;
+    }
+
+}
+
 .warp-content{
     position: relative;
 }
