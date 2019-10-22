@@ -70,9 +70,6 @@ class Nav extends React.Component {
                           <img src="/static/cover-img5.png"></img>
                           <p>Eldery DB</p>
                         </li>
-                        {/* <li>
-                        <p>Eldery DB</p>
-                      </li> */}
                       </Link>
                     </div>
 
@@ -127,7 +124,16 @@ class Nav extends React.Component {
           }
         </nav>
         <div class="collapsible-menu">
+
           <div className="warp-nav-sidebar">
+            <div className="nav-logo">
+              <Link href="/">
+                <li>
+                  <img src="/static/cover-img5.png"></img>
+                  <p>Eldery DB</p>
+                </li>
+              </Link>
+            </div>
             <div className="box-hamberger">
               <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
                 <span></span>
