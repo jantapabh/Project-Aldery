@@ -1,7 +1,6 @@
 import React from 'react'
 import Nav from '../components/nav'
 import Sheetapi from '../config/api'
-import Cover from '../components/layout/cover';
 
 class Home extends React.Component {
 
@@ -18,9 +17,9 @@ class Home extends React.Component {
   async componentDidMount() {
     await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
 
-}
+  }
 
-   Load = () => {
+  Load = () => {
     this.setState({
       isLoad: true
     });
@@ -34,9 +33,8 @@ class Home extends React.Component {
       <div className="warp-index">
         <Nav name="/" />
 
-        <div className="box-index">
-          <Cover />
-         
+        <div className="warp-cover">
+          <img src="/static/cover.png" />
         </div>
 
       </div>

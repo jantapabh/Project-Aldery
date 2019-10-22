@@ -109,25 +109,6 @@ class Nav extends React.Component {
                 </React.Fragment>
           }
         </nav>
-
-        {/* <div class="collapsible-menu">
-          <label onClick={this.collapsible}>Menu</label>
-          <div className={`menu-content${this.state.status ? " show" : ""}`}>
-            <ul>
-
-              {links.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <Link href={item.href}>
-                      <p>{item.label}</p>
-                    </Link>
-                  </li>
-                )
-              }
-              )}
-            </ul>
-          </div>
-        </div> */}
         <div class="collapsible-menu">
         <div className="warp-nav-sidebar">
             <div className="box-hamberger">
@@ -155,14 +136,8 @@ class Nav extends React.Component {
         </div>
         </div>
 
-
-
-
       </React.Fragment>
-
-
     )
   }
 }
 export default Nav
-{/* <img src="/static/logo.png" alt="logo" /> */ }
