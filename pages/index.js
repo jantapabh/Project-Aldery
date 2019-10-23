@@ -46,7 +46,7 @@ class Home extends React.Component {
                   นอกจากนี้ยังมีการให้ข้อมูล เกี่ยวกับสิทธิที่พึ่งได้ของผู้สูงอายุ
                 </text>
               </div> 
-              <button className="btn"/>
+              <button className="btn-outline-center">outline</button>
             </div>
           </div>
           <Footer />

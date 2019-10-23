@@ -23,11 +23,11 @@
 
 .page-content{
     display: flex;
-    flex-direction: row;
     width: 100%;	
     min-height: 100vh;
     position: relative;
     .container-fluid{
+        text-align:center;
         margin-top: 2rem;
         
         h2{
@@ -45,6 +45,7 @@
             }
 
         }
+
     }
 
 }
@@ -53,21 +54,19 @@
     position: relative;
 }
 
+
 .warp-footer{
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
+    background: linear-gradient(to right, rgb(28, 146, 210), rgb(242, 252, 254));
    
     img{
         position: relative;
-        left: 70%;
+        left: 75%;
         width: 15rem;
         height: 15rem;
     }
    
 }
-
-  
-  
-  
