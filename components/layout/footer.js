@@ -7,7 +7,10 @@ class Footer extends React.Component {
 
         return (
             <div className="warp-footer">
-                <img src="/static/cover-img.png" alt="footer"/>
+                <div className="container-fluid">
+                    <h6>© 2019</h6>
+                </div>
+                {/* <img src="/static/cover-img.png" alt="footer"/> */}
             </div>
         )
     }

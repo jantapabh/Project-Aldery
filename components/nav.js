@@ -2,11 +2,18 @@ import React from 'react'
 import Link from 'next/link'
 
 const links = [
-  { href: '/main', label: 'Dashboard' },
-  { href: '/mainchart', label: 'ข้อมูลทางสถิติ' },
-  { href: '/service', label: 'การบริการ' },
-  { href: '/hospital', label: 'การรักษา' },
-  { href: '/help', label: 'ช่วยเหลือ' },
+  // { href: '/main', label: 'Dashboard' },
+  // { href: '/mainchart', label: 'ข้อมูลทางสถิติ' },
+  // { href: '/service', label: 'การบริการ' },
+  // { href: '/hospital', label: 'การรักษา' },
+  // { href: '/help', label: 'ช่วยเหลือ' },
+
+
+  { href: '/', label: 'หน้าหลัก' },
+  { href: '/', label: 'XXXXX' },
+  { href: '/', label: 'XXXXX' },
+  { href: '/contact', label: 'การติดต่อ' },
+
 
 ]
 
@@ -59,39 +66,6 @@ class Nav extends React.Component {
                   </ul>
                 </div>
               </React.Fragment>
-              :
-              this.props.name == "/" ?
-                <React.Fragment>
-
-                  <ul>
-                    <div className="nav-logo">
-                      <Link href="/">
-                        <li>
-                          <img src="/static/cover-img5.png"></img>
-                          <p>Eldery DB</p>
-                        </li>
-                      </Link>
-                    </div>
-
-                    <div className="warp-manu">
-                      <ul>
-                        {
-                          links.map((item, index) => {
-                            return (
-                              <Link href={item.href}>
-                                <li key={index}>
-                                  <p>{item.label}</p>
-                                </li>
-                              </Link>
-                            )
-                          })
-                        }
-                      </ul>
-
-                    </div>
-                  </ul>
-
-                </React.Fragment>
                 :
                 <React.Fragment>
                   <div className="warp-back">

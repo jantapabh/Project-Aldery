@@ -24,11 +24,13 @@
 .page-content{
     display: flex;
     width: 100%;	
-    min-height: 100vh;
+    min-height: 50vh;
     position: relative;
     .container-fluid{
         text-align:center;
         margin-top: 2rem;
+        padding-right: 10px;
+        padding-left: 10px;
         
         h2{
              margin-top: 1.5rem ;   
@@ -42,13 +44,40 @@
                 font-size: 1rem !important;
                 margin: 0.7rem 0;
                 color: black !important;
-            }
 
+                @media (max-width: 991.98px) {
+                    font-size: 0.7rem !important;
+                }
+            }
         }
+
+        
 
     }
 
 }
+
+.page-content-map{
+    display: flex;
+    flex-direction: column;
+    width: 100%;	
+    min-height: 100vh;
+    position: relative;
+    .container-fluid{
+        display: flex;
+        justify-content: center;
+        text-align:center;
+        margin-top: 2rem;
+        padding-right: 10px;
+        padding-left: 10px;
+
+        .map{
+            width: 90% !important;
+            height: 50% !important;
+        }
+    }
+}
+
 
 .warp-content{
     position: relative;
@@ -56,17 +85,14 @@
 
 
 .warp-footer{
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: linear-gradient(to right, rgb(28, 146, 210), rgb(242, 252, 254));
-   
-    img{
-        position: relative;
-        left: 75%;
-        width: 15rem;
-        height: 15rem;
-    }
+  //  background: linear-gradient(to right, rgb(28, 146, 210), rgb(242, 252, 254));
+  .container-fluid{
+      h6{
+        color: gray !important  
+      }
+      ;
+  }
+
+    
    
 }
