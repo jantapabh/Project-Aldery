@@ -4,6 +4,7 @@ import Sheetapi from '../config/api'
 import CardMain from '../components/layout/cardmain';
 import Sidebar from '../components/layout/sidebar';
 import Card from '../components/layout/card';
+import Navbar from '../components/navbar_main';
 
 
 class Help extends React.Component {
@@ -51,7 +52,7 @@ class Help extends React.Component {
                     <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                         <nav className="main">
                             <ul>
-                                <div className="warp-manu">
+                                <div className="warp-nav-sidebar">
                                     <li>
                                         <div className="box-hamberger">
                                             <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.toggle} >
@@ -63,23 +64,8 @@ class Help extends React.Component {
                                     </li>
 
                                 </div>
-                                <div className="nav-bar-main">
-                                    <ul>
-                                        {
-                                            this.state.list.map((item, index) => {
-                                                return (
-                                                    <Link href={item.link}>
-                                                        <li key={index}>
-                                                            <p>{item.name}</p>
-                                                        </li>
-                                                    </Link>
-                                                )
-                                            })
-                                        }
-                                    </ul>
-                                </div>
+                                <Navbar />
                             </ul>
-
                         </nav>
                     </div>
 

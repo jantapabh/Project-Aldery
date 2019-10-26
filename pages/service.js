@@ -4,6 +4,7 @@ import Sidebar from '../components/layout/sidebar';
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Card from '../components/layout/card'
+import Navbar from '../components/navbar_main';
 
 const Linechart = dynamic(
     () => import('../components/chart/linechart'),
@@ -60,7 +61,7 @@ class Service extends React.Component {
                     <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                         <nav className="main">
                             <ul>
-                                <div className="warp-manu">
+                                <div className="warp-nav-sidebar">
                                     <li>
                                         <div className="box-hamberger">
                                             <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.toggle} >
@@ -72,23 +73,9 @@ class Service extends React.Component {
                                     </li>
 
                                 </div>
-                                <div className="nav-bar-main">
-                                    <ul>
-                                        {
-                                            this.state.list.map((item, index) => {
-                                                return (
-                                                    <Link href={item.link}>
-                                                        <li key={index}>
-                                                            <p>{item.name}</p>
-                                                        </li>
-                                                    </Link>
-                                                )
-                                            })
-                                        }
-                                    </ul>
-                                </div>
-                            </ul>
+                                <Navbar />
 
+                            </ul>
                         </nav>
                     </div>
 

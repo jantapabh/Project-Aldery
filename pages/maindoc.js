@@ -3,6 +3,7 @@ import Sidebar from '../components/layout/sidebar';
 import CardData from '../components/layout/cardmain';
 import Link from 'next/link';
 import dynamic from 'next/dynamic'
+import Navbar from '../components/navbar_main';
 
 class Maindoc extends React.Component {
 
@@ -48,7 +49,7 @@ class Maindoc extends React.Component {
                     <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                         <nav className="main">
                             <ul>
-                                <div className="warp-manu">
+                                <div className="warp-nav-sidebar">
                                     <li>
                                         <div className="box-hamberger">
                                             <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.toggle} >
@@ -60,23 +61,9 @@ class Maindoc extends React.Component {
                                     </li>
 
                                 </div>
-                                <div className="nav-bar-main">
-                                    <ul>
-                                        {
-                                            this.state.list.map((item, index) => {
-                                                return (
-                                                    <Link href={item.link}>
-                                                        <li key={index}>
-                                                            <p>{item.name}</p>
-                                                        </li>
-                                                    </Link>
-                                                )
-                                            })
-                                        }
-                                    </ul>
-                                </div>
-                            </ul>
+                                <Navbar/>
 
+                            </ul>
                         </nav>
                     </div>
 

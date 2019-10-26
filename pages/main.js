@@ -3,6 +3,7 @@ import Link from 'next/link'
 // import IconData from '../components/layout/icon-data';
 import Sidebar from '../components/layout/sidebar';
 import Geochart from '../components/chart/geochart';
+import Navbar from '../components/navbar_main';
 
 
 class Main extends React.Component {
@@ -56,22 +57,7 @@ class Main extends React.Component {
                                     </li>
 
                                 </div>
-                                <div className="nav-bar-main">
-                                    <ul>
-                                        {
-                                            this.state.list.map((item, index) => {
-                                                return (
-                                                    <Link href={item.link}>
-                                                        <li key={index}>
-                                                            <p>{item.name}</p>
-                                                        </li>
-                                                    </Link>
-                                                )
-                                            })
-                                        }
-
-                                    </ul>
-                                </div>
+                                <Navbar />
 
                             </ul>
                         </nav>

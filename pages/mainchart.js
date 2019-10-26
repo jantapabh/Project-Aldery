@@ -4,6 +4,7 @@ import Sidebar from '../components/layout/sidebar';
 import Link from 'next/link'
 
 import dynamic from 'next/dynamic'
+import Navbar from '../components/navbar_main';
 
 const Areachart = dynamic(
     () => import('../components/chart/area'),
@@ -31,13 +32,7 @@ class Mainchart extends React.Component {
         super(props);
 
         this.state = {
-            list: [{ name: "หน้าหลัก", link: "/" },
-            { name: "ความคืบหน้า", link: "/main" },
-            { name: "สวัสดิการจากรัฐ", link: "/maindoc" },
-            { name: "การบริการ", link: "/service" },
-            { name: "โรงพยาบาล", link: "/hospital" },
-            { name: "ช่วยเหลือ", link: "/help" },
-            ],
+
             status: true
         }
     }
@@ -69,7 +64,7 @@ class Mainchart extends React.Component {
                     <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                         <nav className="main">
                             <ul>
-                                <div className="warp-manu">
+                                <div className="warp-nav-sidebar">
                                     <li>
                                         <div className="box-hamberger">
                                             <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.toggle} >
@@ -81,24 +76,9 @@ class Mainchart extends React.Component {
                                     </li>
 
                                 </div>
-                                <div className="nav-bar-main">
-                                    <ul>
-                                        {
-                                            this.state.list.map((item, index) => {
-                                                return (
-                                                    <Link href={item.link}>
-                                                        <li key={index}>
-                                                            <p>{item.name}</p>
-                                                        </li>
-                                                    </Link>
-                                                )
-                                            })
-                                        }
+                                <Navbar />
 
-                                    </ul>
-                                </div>
                             </ul>
-
                         </nav>
                     </div>
 

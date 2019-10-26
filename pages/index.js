@@ -103,7 +103,10 @@ class Home extends React.Component {
           <div className={`menu-content${this.state.status ? " show" : ""}`}>
             <ul>
               <li >
-                <p></p>
+                <p><AnchorLink href='#about'>About</AnchorLink></p>
+                <p><AnchorLink href='#project'>Project</AnchorLink></p>
+                <p><AnchorLink href='#services'>Services</AnchorLink></p>
+                <p><AnchorLink href='#contact'>Contact</AnchorLink></p>
               </li>
             </ul>
           </div>
@@ -122,7 +125,26 @@ class Home extends React.Component {
                     นอกจากนี้ยังมีการให้ข้อมูล เกี่ยวกับสิทธิที่พึ่งได้ของผู้สูงอายุ
                 </text>
                 </div>
-                <button className="btn-outline-center">outline</button>
+                <Link href="/main">
+                  <button className="btn-outline-center" >หน้าหลัก</button>
+                </Link>
+
+              </div>
+            </div>
+          </section>
+
+          <section id='project'>
+            <div className="page-content-map">
+              <div className="container-fluid">
+                <h1>Project</h1>
+              </div>
+            </div>
+          </section>
+
+          <section id='services'>
+            <div className="page-content-map">
+              <div className="container-fluid">
+                <h1>Services</h1>
               </div>
             </div>
           </section>
@@ -130,7 +152,11 @@ class Home extends React.Component {
           <section id='contact'>
             <div className="page-content-map">
               <div className="container-fluid">
-                <h1>Contact</h1>
+                <div className="container-text">
+                  <h1>Contact</h1>
+                <h6>สำนักงานเทศบาลเมืองกะทู้ 12 หมู่ 2 ถนนวิชิตสงคราม ตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต 83120<br/> โทรศัพท์ 076-321500 โทรสาร 076-322129 , 076-322126.</h6>
+                </div>
+                
               </div>
               <div className="container-fluid">
                 <Map
