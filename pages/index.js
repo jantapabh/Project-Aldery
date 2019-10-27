@@ -6,10 +6,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Link from 'next/link'
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
-// const LoadingContainer = (props) => (
-//   <div>Fancy loading container!</div>
-// )
-
+const center = { lat: 7.9082054, lng: 98.3349746 };
 const mapStyles = {
   width: '100%',
   height: '100%',
@@ -21,21 +18,15 @@ class Home extends React.Component {
     super(props);
 
     this.state = {
-
-      isLoad: false
-    }
-    // this.timer = setTimeout(this.Load, 5500);
+      showingInfoWindow: false,
+      activeMarker: {},
+      selectedPlace: {},
+    };
   }
 
   async componentDidMount() {
     await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
 
-  }
-
-  Load = () => {
-    this.setState({
-      isLoad: true
-    });
   }
 
   collapsible = async () => {
@@ -51,9 +42,29 @@ class Home extends React.Component {
     }
   }
 
+  onMarkerClick = (props, marker, e) => {
+    if (this.state.showingInfoWindow) {
+      this.setState({
+        selectedPlace: props,
+        activeMarker: null,
+        showingInfoWindow: false
+      });
+    }
+
+    else{
+      this.setState({
+        selectedPlace: props,
+        activeMarker: marker,
+        showingInfoWindow: true
+      });
+    }
+  }
+
+
+
+
 
   render() {
-
 
     return (
       <div className="warp-index">
@@ -154,46 +165,47 @@ class Home extends React.Component {
               <div className="container-fluid">
                 <div className="container-text">
                   <h1>Contact</h1>
-                <h6>สำนักงานเทศบาลเมืองกะทู้ 12 หมู่ 2 ถนนวิชิตสงคราม ตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต 83120<br/> โทรศัพท์ 076-321500 โทรสาร 076-322129 , 076-322126.</h6>
+                  <h6>สำนักงานเทศบาลเมืองกะทู้ 12 หมู่ 2 ถนนวิชิตสงคราม ตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต 83120<br /> โทรศัพท์ 076-321500 โทรสาร 076-322129 , 076-322126.</h6>
                 </div>
-                
+
               </div>
               <div className="container-fluid">
+
                 <Map
                   className={'map'}
                   google={this.props.google}
                   zoom={12}
                   style={mapStyles}
-                  initialCenter={{ lat: 7.9082054, lng: 98.3349746 }}
-
+                  initialCenter={center}
                 >
                   <Marker
-                    title={'สำนักงานเทศบาลเมืองกะทู้ ตำบล กะทู้ อำเภอกะทู้ ภูเก็ต'}
+                    onClick={this.onMarkerClick}
                     name={'สำนักงานเทศบาลเมืองกะทู้ ตำบล กะทู้ อำเภอกะทู้ ภูเก็ต'}
                     position={{ lat: 7.9111378, lng: 98.3452833 }}
                   />
+
+                  <InfoWindow
+                    marker={this.state.activeMarker}
+                    visible={this.state.showingInfoWindow}
+                  >
+                    <div>
+                      <a href="https://www.google.co.th/maps/place/%E0%B8%AA%E0%B8%B3%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%B0%E0%B8%97%E0%B8%B9%E0%B9%89/@7.9111431,98.3452833,17z/data=!3m1!4b1!4m5!3m4!1s0x3050305d21d9042d:0x24ca59f8b15d6fde!8m2!3d7.9111378!4d98.347472?hl=th">
+                        <h6 >{this.state.selectedPlace.name}</h6>
+                      </a>
+
+                    </div>
+                  </InfoWindow>
                 </Map>
 
-
               </div>
-
-
-
-
             </div>
           </section>
-
-
           <Footer />
         </main>
-
-
-
       </div>
     )
   }
 }
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyBSfx44Vbst39S5gSLKqbo4kbqpgDo0rdE',
-  // LoadingContainer: LoadingContainer
 })(Home)

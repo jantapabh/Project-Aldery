@@ -85,6 +85,7 @@
             width: 90% !important;
             height: 50% !important;
         }
+        
     }
 }
 
@@ -102,7 +103,18 @@
       }
       ;
   }
+}
 
+
+.gm-style-iw-d{
+    a{
+        h6{
+            font-family: 'Prompt', sans-serif ;
+            margin: 0.2rem 0!important;
+        }
+        h6:hover{
+            color: red;
+        }  
+    }
     
-   
 }
