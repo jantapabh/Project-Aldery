@@ -1,7 +1,6 @@
 import React from 'react'
 import Sheetapi from '../config/api'
 import Sidebar from '../components/layout/sidebar';
-import Link from 'next/link'
 
 import dynamic from 'next/dynamic'
 import Navbar from '../components/navbar_main';

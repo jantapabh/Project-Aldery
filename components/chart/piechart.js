@@ -20,7 +20,7 @@ class Picchart extends Component {
                     }
                 }]
             },
-            series: [44, 55, 41, 17, 15]
+            series: [44, 55, 41, 17, 15],
         }
     }
 
