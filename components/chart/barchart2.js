@@ -32,11 +32,8 @@ class Barchart_2 extends Component {
           datalist: [...prevState.datalist, this.list[i][0]],
         }))
       }
-      console.log("datalist",this.state.datalist);
-      
 
       this.setState({
-
         options: {
           plotOptions: {
             bar: {
@@ -50,7 +47,6 @@ class Barchart_2 extends Component {
             enabled: true,
             offsetX: -6,
             style: {
-              fontSize: '1px',
               colors: ['#fff']
             }
           },
@@ -92,17 +88,6 @@ class Barchart_2 extends Component {
       this.setState({
         series: [{ name:"เพศชาย", data: this.state.dataMan },{ name:"เพศหญิง", data: this.state.dataWoman }],
       })
-
-    } catch (err) {
-      console.log(err);
-    }
-
-  }
-
-  listWoman = async (value) => {
-    try {
-      this.list = await Sheetapi.getSheet(this.access_token, value)
-      console.log(this.list);
 
     } catch (err) {
       console.log(err);

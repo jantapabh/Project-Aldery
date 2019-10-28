@@ -13,25 +13,52 @@
       background-color: white;
       border-radius: 0.5rem;
       margin: 0.5rem 1rem;
-      padding: 1rem;
+      padding: 0.5rem;
 
    }
 }
 
 .chart-center{
-   margin:  5rem 0;
+   margin: 0;
 }
 
 
 //Apexcharts
 
-.apexcharts-yaxis-label {
-   font-family: 'Prompt', sans-serif !important ;
-   font-size: 1rem !important;
-}
-.apexcharts-legend-text{
-   font-family: 'Prompt', sans-serif !important ;
-   font-size: 1rem !important;
+.apexcharts-legend.center.position-right{
+   top: 90px !important;
+   
+   
 }
 
+.apexcharts-legend-text{
+   font-family: 'Prompt', sans-serif !important ;
+}
    
+
+
+.apexcharts-yaxis-label {
+    font-family: 'Prompt', sans-serif !important ;
+   font-size: 0.9rem !important;
+}
+// .apexcharts-legend-text{
+//    // font-family: 'Prompt', sans-serif !important ;
+//    font-size: 1rem !important;
+// }
+
+.apexcharts-xaxis-texts-g{
+   text{
+      font-size: 1rem;
+   }
+}
+
+path{
+  .apexcharts-bar-area{
+      font-size: 5;
+  }
+}
+
+text{
+  font-family: 'Prompt', sans-serif !important ;
+}
+

@@ -5,15 +5,15 @@ import Sidebar from '../components/layout/sidebar';
 import dynamic from 'next/dynamic'
 import Navbar from '../components/navbar_main';
 
-const Areachart = dynamic(
-    () => import('../components/chart/area'),
-    { ssr: false }
-)
+// const Areachart = dynamic(
+//     () => import('../components/chart/area'),
+//     { ssr: false }
+// )
 
-const Radachart = dynamic(
-    () => import('../components/chart/radachart'),
-    { ssr: false }
-)
+// const Radachart = dynamic(
+//     () => import('../components/chart/radachart'),
+//     { ssr: false }
+// )
 
 const Barchart = dynamic(
     () => import('../components/chart/barchart2'),
@@ -22,6 +22,11 @@ const Barchart = dynamic(
 
 const Picchart = dynamic(
     () => import('../components/chart/piechart'),
+    { ssr: false }
+)
+
+const Picchart2 = dynamic(
+    () => import('../components/chart/piechart2'),
     { ssr: false }
 )
 
@@ -86,21 +91,27 @@ class Mainchart extends React.Component {
                             <h1 className="text-center">ข้อมูลทางสถิติ</h1>
                             <h2 className="small text-center"></h2>
                             <div className="warp-chart">
-                                <div className="chart-contents">
+                                {/* <div className="chart-contents">
                                     <Radachart />
+                                </div> */}
+                                <div className="chart-contents">
+                                    <Picchart />
                                 </div>
                                 <div className="chart-contents">
-                                    <Areachart />
+                                    <Picchart2/>
                                 </div>
+                                {/* <div className="chart-contents">
+                                    <Areachart />
+                                </div> */}
                             </div>
 
                             <div className="warp-chart">
                                 <div className="chart-contents">
                                     <Barchart />
                                 </div>
-                                <div className="chart-contents">
+                                {/* <div className="chart-contents">
                                     <Picchart />
-                                </div>
+                                </div> */}
                             </div>
 
                         </div>

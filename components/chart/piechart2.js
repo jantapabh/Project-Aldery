@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 
-class Picchart extends Component {
+class Picchart2 extends Component {
 
     constructor(props) {
         super(props);
@@ -31,11 +31,13 @@ class Picchart extends Component {
                 }))
             }
 
+            console.log(this.state.datalist);
+            
             this.setState({
                 options: {
                     labels: this.state.datalist,
                     title: {
-                        text: "เพศชาย"
+                        text: "เพศหญิง"
                       },
                     responsive: [{
                         breakpoint: 480,
@@ -49,7 +51,6 @@ class Picchart extends Component {
                         }
                     }]
                 }
-
             })
 
         } catch (err) {
@@ -60,13 +61,12 @@ class Picchart extends Component {
     listData = async () => {
         try {
 
-            this.man = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!C14:C18')
             this.woman = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!D14:D18')
 
-            for (let i = 0; i < this.man.length; i++) {
+            for (let i = 0; i < this.woman.length; i++) {
 
                 this.setState(prevState => ({
-                    series: [...prevState.series, parseInt(this.man[i][0])],
+                    series: [...prevState.series, parseInt(this.woman[i][0])],
                 }))
             }
 
@@ -90,4 +90,4 @@ class Picchart extends Component {
     }
 }
 
-export default Picchart;
+export default Picchart2;
