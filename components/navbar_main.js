@@ -21,20 +21,19 @@ class Navbar extends React.Component {
     render() {
 
         return (
-            <div className="nav-bar-main">
+            <div className="warp-manu">
                 <ul>
-                    {
-                        this.state.list.map((item, index) => {
-                            return (
-                                <Link href={item.link}>
-                                    <li key={index}>
-                                        <p>{item.name}</p>
-                                    </li>
-                                </Link>
-                            )
-                        })
-                    }
-
+                    <li>
+                        {
+                            this.state.listMain.map((item, index) => {
+                                return (
+                                    <Link href={item.href}>
+                                        <p key={index}>{item.name}</p>
+                                    </Link>
+                                )
+                            })
+                        }
+                    </li>
                 </ul>
             </div>
         )

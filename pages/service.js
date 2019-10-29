@@ -2,9 +2,9 @@ import React from 'react'
 import Sheetapi from '../config/api'
 import Sidebar from '../components/layout/sidebar';
 import dynamic from 'next/dynamic'
-import Link from 'next/link'
 import Card from '../components/layout/card'
-import Navbar from '../components/navbar_main';
+import Nav from '../components/nav';
+import Nav_logo from '../components/layout/nav_logo';
 
 const Linechart = dynamic(
     () => import('../components/chart/linechart'),
@@ -57,9 +57,8 @@ class Service extends React.Component {
         return (
             <div className="warp-main">
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                    <Sidebar />
-                    <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                        <nav className="main">
+                <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
+                        <nav className="nav-other">
                             <ul>
                                 <div className="warp-nav-sidebar">
                                     <li>
@@ -71,13 +70,24 @@ class Service extends React.Component {
                                             </a>
                                         </div>
                                     </li>
-
                                 </div>
-                                <Navbar />
-
+                                <Nav name="main" />
                             </ul>
                         </nav>
+                        <div class="collapsible-menu">
+                            <div className="warp-nav-sidebar">
+                                <Nav_logo />
+                                <div className="box-hamberger">
+                                    <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <Sidebar />
 
                     <div className="page-content-wrapper">
                         <div className="container-fluid">

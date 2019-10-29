@@ -2,7 +2,7 @@ import React from 'react'
 import Sidebar from '../components/layout/sidebar';
 import Geochart from '../components/chart/geochart';
 import Nav from '../components/nav';
-
+import Nav_logo from '../components/layout/nav_logo';
 
 class Main extends React.Component {
 
@@ -11,6 +11,19 @@ class Main extends React.Component {
 
         this.state = {
             status: true
+        }
+    }
+
+    collapsible = async () => {
+        if (!this.state.status) {
+            await this.setState({
+                status: true
+            })
+        }
+        else {
+            await this.setState({
+                status: false
+            })
         }
     }
 
@@ -32,7 +45,7 @@ class Main extends React.Component {
         return (
             <div className="warp-main">
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
+                    <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                         <nav className="nav-other">
                             <ul>
                                 <div className="warp-nav-sidebar">
@@ -49,6 +62,19 @@ class Main extends React.Component {
                                 <Nav name="main" />
                             </ul>
                         </nav>
+
+                        <div class="collapsible-menu">
+                            <div className="warp-nav-sidebar">
+                                <Nav_logo/>
+                                <div className="box-hamberger">
+                                    <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <Sidebar />
                     <div className="page-content-wrapper">

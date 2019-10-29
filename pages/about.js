@@ -11,7 +11,7 @@ class About extends React.Component {
 
         return (
             <div className="warp-bar">
-                <Nav name="about" />
+                <Nav />
 
                 <div className="warp-content" >
                     <div className="text-content">

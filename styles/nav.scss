@@ -9,12 +9,10 @@
     box-shadow: 0 0 4px rgba(0,0,0,.25);
     z-index: 99;
     // position: fixed;
-
-    
-    @media (max-width: 799px) {
+     @media (max-width: 799px) {
         display: none;
     }
-
+   
     ul{
         width: 100%;
         display: flex;
