@@ -2,7 +2,6 @@ import React from 'react'
 import Sheetapi from '../config/api'
 import Header from '../components/layout/header';
 import Footer from '../components/layout/footer';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Link from 'next/link'
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import Nav from '../components/nav';

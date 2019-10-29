@@ -55,14 +55,7 @@ class Main extends React.Component {
                         <div className="container-fluid">
                             <h1 className="text-center">สังคมผู้สูงอายุ</h1>
                             <h2 className="small text-center"></h2>
-
-                            {/* <div className="warp-icon-data">
-                                <IconData />
-                            </div>
-                            <p className="text-center animated fadeInDown delay-2s ">ที่มา: รายงานสรุปยอดผู้ได้รับเบี้ยเเยกตามประเภท อปท. เทศบาลเมืองกะทู้ อ.กะทู้ จังหวัดภูเก็ต</p>
-                           */}
                             <div className="warp-chart">
-
                                 <Geochart />
                             </div>
 
