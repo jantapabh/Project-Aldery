@@ -22,8 +22,6 @@
     transition:all .5s;
     width:4rem;
 
-  
-
       .sidebar-nav{
           display: none;
       }
@@ -64,7 +62,7 @@
 
     .sidebar-nav{
         position: absolute;
-        top: 1rem;
+        top: 3rem;
         display: flex;
         flex-direction: column;
 
@@ -96,7 +94,7 @@
   }
   .sidebar-nav{
       position: absolute;
-      top: 1rem;
+      top: 3rem;
       display: flex;
       flex-direction: column;
 
