@@ -2,7 +2,6 @@ import React from 'react'
 import Sidebar from '../components/layout/sidebar';
 import Geochart from '../components/chart/geochart';
 import Nav from '../components/nav';
-import Link from 'next/link'
 import Nav_logo from '../components/layout/nav_logo';
 
 class Main extends React.Component {
