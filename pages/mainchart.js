@@ -15,6 +15,11 @@ import Nav_logo from '../components/layout/nav_logo';
 //     { ssr: false }
 // )
 
+const Barchart3 = dynamic(
+    () => import('../components/chart/barchart3'),
+    { ssr: false }
+)
+
 const Barchart = dynamic(
     () => import('../components/chart/barchart2'),
     { ssr: false }
@@ -101,27 +106,26 @@ class Mainchart extends React.Component {
                             <h1 className="text-center">ข้อมูลทางสถิติ</h1>
                             <h2 className="small text-center"></h2>
                             <div className="warp-chart">
-                                {/* <div className="chart-contents">
-                                    <Radachart />
-                                </div> */}
                                 <div className="chart-contents">
                                     <Picchart />
                                 </div>
                                 <div className="chart-contents">
                                     <Picchart2 />
                                 </div>
-                                {/* <div className="chart-contents">
-                                    <Areachart />
-                                </div> */}
                             </div>
 
                             <div className="warp-chart">
                                 <div className="chart-contents">
                                     <Barchart />
                                 </div>
-                                {/* <div className="chart-contents">
-                                    <Picchart />
-                                </div> */}
+                             
+                            </div>
+
+                            <div className="warp-chart">
+                           
+                                <div className="chart-contents">
+                                   <Barchart3/>
+                                </div>
                             </div>
 
                         </div>
