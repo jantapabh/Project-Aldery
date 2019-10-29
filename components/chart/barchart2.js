@@ -102,7 +102,7 @@ class Barchart_2 extends Component {
         <Chart options={this.state.options}
           series={this.state.series}
           type="bar"
-          height="350"
+          height="300"
           width="600" />
       </div>
     );

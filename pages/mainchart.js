@@ -115,17 +115,13 @@ class Mainchart extends React.Component {
                             </div>
 
                             <div className="warp-chart">
-                                <div className="chart-contents">
-                                    <Barchart />
-                                </div>
-                             
-                            </div>
-
-                            <div className="warp-chart">
-                           
-                                <div className="chart-contents">
+                            <div className="chart-contents">
                                    <Barchart3/>
                                 </div>
+                                {/* <div className="chart-contents">
+                                    <Barchart />
+                                </div> */}
+                             
                             </div>
 
                         </div>

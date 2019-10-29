@@ -20,7 +20,7 @@ class Barchart3 extends React.Component {
     async componentDidMount() {
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.listName('ข้อมูลการวิเคราะห์ทางสถิติ!N11:N19')
+        await this.listName('ข้อมูลการวิเคราะห์ทางสถิติ!H11:H16')
         await this.listData()
     }
 
@@ -82,8 +82,8 @@ class Barchart3 extends React.Component {
     listData = async () => {
         try {
     
-          this.man = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!P11:P19')
-          this.woman = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!Q11:Q19')
+          this.man = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!J11:J16')
+          this.woman = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!K11:K16')
     
           for (let i = 0; i < this.man.length; i++) {
     
