@@ -21,7 +21,7 @@ class Barchart3 extends React.Component {
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
         await this.listName('ข้อมูลการวิเคราะห์ทางสถิติ!N11:N19')
-        // await this.listData()
+        await this.listData()
     }
 
     listName = async (value) => {
@@ -37,65 +37,41 @@ class Barchart3 extends React.Component {
             this.setState({
                 options: {
                     chart: {
-                        stacked: true
-                    },
-                    colors: ['#008FFB', '#FF4560'],
-                    plotOptions: {
+                        stacked: true,
+                        toolbar: {
+                          show: true
+                        },
+                        zoom: {
+                          enabled: true
+                        }
+                      },
+                      responsive: [{
+                        breakpoint: 480,
+                        options: {
+                          legend: {
+                            position: 'bottom',
+                            offsetX: -10,
+                            offsetY: 0
+                          }
+                        }
+                      }],
+                      plotOptions: {
                         bar: {
-                            horizontal: true,
-                            barHeight: '80%',
-
+                          horizontal: false,
                         },
-                    },
-                    dataLabels: {
-                        enabled: false
-                    },
-                    stroke: {
-                        width: 1,
-                        colors: ["#fff"]
-                    },
-
-                    grid: {
-                        xaxis: {
-                            showLines: false
-                        }
-                    },
-                    yaxis: {
-                        min: -5,
-                        max: 5,
-                        title: {
-                            // text: 'Age',
-                        },
-                    },
-                    tooltip: {
-                        shared: false,
-                        x: {
-                            formatter: function (val) {
-                                return val
-                            }
-                        },
-                        y: {
-                            formatter: function (val) {
-                                return Math.abs(val) + "%"
-                            }
-                        }
-                    },
-                    title: {
-                        text: 'Mauritius population pyramid 2011'
-                    },
-                    xaxis: {
+                      },
+          
+                      xaxis: {
                         categories: this.state.datalist,
-                        title: {
-                            text: 'Percent'
-                        },
-                        labels: {
-                            formatter: function (val) {
-                                return Math.abs(Math.round(val)) + "%"
-                            }
-                        }
-                    }
+                      },
+                      legend: {
+                        position: 'right',
+                        offsetY: 40
+                      },
+                      fill: {
+                        opacity: 1
+                      }
                 }
-
             })
 
         } catch (err) {
@@ -137,7 +113,7 @@ class Barchart3 extends React.Component {
     render() {
         return (
             <div className="warp-chart">
-                <Chart options={this.state.options} series={this.state.series} type="bar" height="500" width="1000" />
+                <Chart options={this.state.options} series={this.state.series} type="bar" height="300" width="600" />
             </div>
         )
     }

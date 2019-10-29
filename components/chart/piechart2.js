@@ -31,8 +31,6 @@ class Picchart2 extends Component {
                 }))
             }
 
-            console.log(this.state.datalist);
-            
             this.setState({
                 options: {
                     labels: this.state.datalist,
