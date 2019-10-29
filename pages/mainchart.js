@@ -10,10 +10,10 @@ import Nav_logo from '../components/layout/nav_logo';
 //     { ssr: false }
 // )
 
-// const Radachart = dynamic(
-//     () => import('../components/chart/radachart'),
-//     { ssr: false }
-// )
+const Radachart = dynamic(
+    () => import('../components/chart/radachart'),
+    { ssr: false }
+)
 
 const Barchart3 = dynamic(
     () => import('../components/chart/barchart3'),
@@ -118,9 +118,9 @@ class Mainchart extends React.Component {
                             <div className="chart-contents">
                                    <Barchart3/>
                                 </div>
-                                {/* <div className="chart-contents">
-                                    <Barchart />
-                                </div> */}
+                                <div className="chart-contents">
+                                   <Radachart/>
+                                </div>
                              
                             </div>
 
