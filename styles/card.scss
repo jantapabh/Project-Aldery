@@ -92,6 +92,13 @@
                         align-items: center;
                     }
 
+                    h4{
+                      @media (max-width: 920px) {
+                        font-size: 1.5rem !important;
+                    }
+  
+                    }
+                    
                 }
                
             }

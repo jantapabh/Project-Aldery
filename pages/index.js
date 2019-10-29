@@ -5,6 +5,7 @@ import Footer from '../components/layout/footer';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Link from 'next/link'
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import Nav from '../components/nav';
 
 const center = { lat: 7.9082054, lng: 98.3349746 };
 const mapStyles = {
@@ -51,7 +52,7 @@ class Home extends React.Component {
       });
     }
 
-    else{
+    else {
       this.setState({
         selectedPlace: props,
         activeMarker: marker,
@@ -60,69 +61,10 @@ class Home extends React.Component {
     }
   }
 
-
-
-
-
   render() {
-
     return (
       <div className="warp-index">
-        <nav>
-          <ul>
-            <div className="nav-logo">
-              <Link href="/">
-                <li>
-                  <img src="/static/cover-img5.png"></img>
-                  <p>Eldery DB</p>
-                </li>
-              </Link>
-            </div>
-
-            <div className="warp-manu">
-              <ul>
-                <li>
-                  <p><AnchorLink href='#about'>About</AnchorLink></p>
-                  <p><AnchorLink href='#project'>Project</AnchorLink></p>
-                  <p><AnchorLink href='#services'>Services</AnchorLink></p>
-                  <p><AnchorLink href='#contact'>Contact</AnchorLink></p>
-                </li>
-              </ul>
-
-            </div>
-          </ul>
-        </nav>
-        <div class="collapsible-menu">
-
-          <div className="warp-nav-sidebar">
-            <div className="nav-logo">
-              <Link href="/">
-                <li>
-                  <img src="/static/cover-img5.png"></img>
-                  <p>Eldery DB</p>
-                </li>
-              </Link>
-            </div>
-            <div className="box-hamberger">
-              <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
-                <span></span>
-                <span></span>
-                <span></span>
-              </a>
-            </div>
-          </div>
-          <div className={`menu-content${this.state.status ? " show" : ""}`}>
-            <ul>
-              <li >
-                <p><AnchorLink href='#about'>About</AnchorLink></p>
-                <p><AnchorLink href='#project'>Project</AnchorLink></p>
-                <p><AnchorLink href='#services'>Services</AnchorLink></p>
-                <p><AnchorLink href='#contact'>Contact</AnchorLink></p>
-              </li>
-            </ul>
-          </div>
-        </div>
-
+        <Nav name="/"/>
         <main>
           <Header />
           <section id='about'>

@@ -57,7 +57,7 @@ class Main extends React.Component {
                                     </li>
 
                                 </div>
-                                <Navbar />
+                                {/* <Navbar /> */}
 
                             </ul>
                         </nav>

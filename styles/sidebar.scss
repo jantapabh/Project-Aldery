@@ -57,6 +57,10 @@
 
   .sidebar-wrapper:hover{
     width:230px;
+   
+    @media (max-width: 768px) {
+        width:210px !important;
+    }
 
     .sidebar-nav{
         position: absolute;
@@ -79,6 +83,10 @@
 /* Change the width of the sidebar to display it*/
 .wrapper.menuDisplayed .sidebar-wrapper{
     width:230px;
+
+    @media (max-width: 768px) {
+      width:210px !important;
+  }
 
     @media (max-width: 575.98px) { 
         width: 100% !important;

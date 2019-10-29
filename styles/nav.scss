@@ -67,9 +67,63 @@
             }
         }
 
+        
+
   }
 
+  nav.nav-other{
+    min-height: 2vh;
+    line-height: 2vh;
 
+    ul{
+        width: 100%;
+        list-style:none; 
+
+        .warp-table{
+            width: 100%;
+           
+                li{
+                    display: flex;
+                    cursor: pointer;
+                    p{
+                        font-size: 1.1rem !important;
+                        cursor: pointer;
+                        color:black !important;
+                        margin: 1rem 1.5rem;
+                        margin-top: 1.1rem;
+                    }
+                    p:hover{
+                        color: #bedadc ;
+                    }
+                }
+
+         }
+    }
+      
+        .warp-manu{
+           width: 100%;
+            ul{
+                display: flex;
+                justify-content: flex-end;
+                list-style:none;
+                li{
+                    display: flex;
+                     cursor: pointer;
+                   
+                    p{
+                        font-size: 1.1rem !important;
+                        cursor: pointer;
+                        color:black;
+                        margin: 1rem 1.5rem;
+                        margin-top: 1.1rem;
+                    }
+                    p:hover{
+                        color: #bedadc ;
+                    }
+                }
+            }
+        }
+  }
 
   nav.main{
 
