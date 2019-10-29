@@ -95,7 +95,6 @@ class Nav extends React.Component {
             </React.Fragment>
             :
             null
-
         }
 
         {
@@ -118,41 +117,6 @@ class Nav extends React.Component {
               </div>
             </React.Fragment>
 
-            :
-            null
-        }
-
-        {
-          this.props.name == "man" || this.props.name == "woman" || this.props.name == "total" ?
-            <React.Fragment>
-              <nav className="nav-other">
-                <ul>
-                  <div className="warp-table">
-                    <Link href="/maindoc">
-                      <li>
-                        <p>ย้อนกลับ</p>
-                      </li>
-                    </Link>
-                  </div>
-                  <div className="warp-manu">
-                    <ul>
-                      <li>
-                        {
-                          this.state.list.map((item, index) => {
-                            return (
-                              <Link href={item.href}>
-                                <p key={index}>{item.name}</p>
-                              </Link>
-
-                            )
-                          })
-                        }
-                      </li>
-                    </ul>
-                  </div>
-                </ul>
-              </nav>
-            </React.Fragment>
             :
             null
         }

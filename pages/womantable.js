@@ -30,7 +30,7 @@ class Womantable extends React.Component {
                     คำนำหน้า: this.list[i][2],
                     ชื่อ: this.list[i][3],
                     นามสกุล: this.list[i][4],
-               
+
                 }
                 this.setState(prevState => ({
                     data: [...prevState.data, value]
@@ -45,12 +45,12 @@ class Womantable extends React.Component {
     render() {
         return (
             <div className="warp-main">
-                <Nav name="woman" />
-               
-                    <Table
-                        data={this.state.data}
-                    />
-               
+                <Nav />
+
+                <Table
+                    data={this.state.data}
+                />
+
 
             </div>
         )

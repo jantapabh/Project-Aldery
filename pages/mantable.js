@@ -30,7 +30,7 @@ class Mantable extends React.Component {
                     คำนำหน้า: this.list[i][2],
                     ชื่อ: this.list[i][3],
                     นามสกุล: this.list[i][4],
-          
+
                 }
                 this.setState(prevState => ({
                     data: [...prevState.data, value]
@@ -43,17 +43,15 @@ class Mantable extends React.Component {
     }
 
     render() {
-        const {data} = this.state
-      
-        return (
-            <div className="warp-main">
-                <Nav name="man" />
+        const { data } = this.state
 
+        return (
+            <React.Fragment>
+                <Nav />
                 <Table
                     data={data}
                 />
-
-            </div>
+            </React.Fragment>
         )
     }
 }

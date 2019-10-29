@@ -30,7 +30,7 @@ class Totaltable extends React.Component {
                     คำนำหน้า: this.list[i][3],
                     ชื่อ: this.list[i][4],
                     นามสกุล: this.list[i][5],
-               
+
                 }
                 this.setState(prevState => ({
                     data: [...prevState.data, value]
@@ -45,12 +45,12 @@ class Totaltable extends React.Component {
     render() {
         return (
             <div className="warp-main">
-                <Nav name="total" />
-               
-                    <Table
-                        data={this.state.data}
-                    />
-               
+                <Nav />
+
+                <Table
+                    data={this.state.data}
+                />
+
 
             </div>
         )
