@@ -1,6 +1,7 @@
 .box-hamberger {
   width: 3.5rem;
   height: 3rem;
+  padding-bottom: 1rem !important;
 
   a.hamberger{
       position: relative;
@@ -15,6 +16,7 @@
     width:100%;
     transform: translate(-50%, -50%);
     cursor: pointer;
+    padding-bottom: 1rem;
   }
 
 

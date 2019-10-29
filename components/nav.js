@@ -19,6 +19,13 @@ class Nav extends React.Component {
       { name: "โรงพยาบาล", href: "/hospital" },
       { name: "ช่วยเหลือ", href: "/help" },
       ],
+
+      listMain: [{ name: "About", href: "/about" },
+      { name: "Project", href: "/project" },
+      { name: "Services", href: "/services" },
+      { name: "Contact", href: "/contact" },
+      ],
+
     }
   }
 
@@ -42,6 +49,88 @@ class Nav extends React.Component {
 
     return (
       <React.Fragment>
+        {
+          this.props.name == "/" ?
+            <React.Fragment>
+              <nav>
+                <ul>
+                  <div className="nav-logo">
+                    <Link href="/">
+                      <li>
+                        <img src="/static/cover-img5.png"></img>
+                        <p>Eldery DB</p>
+                      </li>
+                    </Link>
+                  </div>
+
+                  <div className="warp-manu">
+                    <ul>
+                      <li>
+                        <p><AnchorLink href='#about'>About</AnchorLink></p>
+                        <p><AnchorLink href='#project'>Project</AnchorLink></p>
+                        <p><AnchorLink href='#services'>Services</AnchorLink></p>
+                        <p><AnchorLink href='#contact'>Contact</AnchorLink></p>
+                      </li>
+                    </ul>
+                  </div>
+                </ul>
+              </nav>
+              <div class="collapsible-menu">
+                <div className="warp-nav-sidebar">
+                  <div className="nav-logo">
+                    <Link href="/">
+                      <li>
+                        <img src="/static/cover-img5.png"></img>
+                        <p>Eldery DB</p>
+                      </li>
+                    </Link>
+                  </div>
+                  <div className="box-hamberger">
+                    <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </a>
+                  </div>
+                </div>
+                <div className={`menu-content${this.state.status ? " show" : ""}`}>
+                  <ul>
+                    <li >
+                      <p><AnchorLink href='#about'>About</AnchorLink></p>
+                      <p><AnchorLink href='#project'>Project</AnchorLink></p>
+                      <p><AnchorLink href='#services'>Services</AnchorLink></p>
+                      <p><AnchorLink href='#contact'>Contact</AnchorLink></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </React.Fragment>
+            :
+            null
+
+        }
+
+        {
+          this.props.name == "main" ?
+
+            <div className="warp-manu">
+              <ul>
+                <li>
+                  {
+                    this.state.listMain.map((item,index) => {
+                      return(
+                        <Link href={item.href}>
+                          <p key={index}>{item.name}</p>
+                        </Link>
+                      )
+                    })
+                  }
+                </li>
+              </ul>
+            </div>
+            :
+            null
+        }
 
         {
           this.props.name == "man" || this.props.name == "woman" || this.props.name == "total" ?
@@ -78,69 +167,9 @@ class Nav extends React.Component {
             null
         }
 
-        {
-          this.props.name == "/" ?
-            <React.Fragment>
-              <nav>
-                <ul>
-                  <div className="nav-logo">
-                    <Link href="/">
-                      <li>
-                        <img src="/static/cover-img5.png"></img>
-                        <p>Eldery DB</p>
-                      </li>
-                    </Link>
-                  </div>
 
-                  <div className="warp-manu">
-                    <ul>
-                      <li>
-                        <p><AnchorLink href='#about'>About</AnchorLink></p>
-                        <p><AnchorLink href='#project'>Project</AnchorLink></p>
-                        <p><AnchorLink href='#services'>Services</AnchorLink></p>
-                        <p><AnchorLink href='#contact'>Contact</AnchorLink></p>
-                      </li>
-                    </ul>
-                  </div>
-                </ul>
-              </nav>
-              <div class="collapsible-menu">
 
-                <div className="warp-nav-sidebar">
-                  <div className="nav-logo">
-                    <Link href="/">
-                      <li>
-                        <img src="/static/cover-img5.png"></img>
-                        <p>Eldery DB</p>
-                      </li>
-                    </Link>
-                  </div>
-                  <div className="box-hamberger">
-                    <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </a>
-                  </div>
-                </div>
-                <div className={`menu-content${this.state.status ? " show" : ""}`}>
-                  <ul>
-                    <li >
-                      <p><AnchorLink href='#about'>About</AnchorLink></p>
-                      <p><AnchorLink href='#project'>Project</AnchorLink></p>
-                      <p><AnchorLink href='#services'>Services</AnchorLink></p>
-                      <p><AnchorLink href='#contact'>Contact</AnchorLink></p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </React.Fragment>
-            :
-            null
-
-        }
-
-      </React.Fragment>
+      </React.Fragment >
     )
   }
 }

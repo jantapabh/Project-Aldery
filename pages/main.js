@@ -1,9 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
-// import IconData from '../components/layout/icon-data';
 import Sidebar from '../components/layout/sidebar';
 import Geochart from '../components/chart/geochart';
-import Navbar from '../components/navbar_main';
+import Nav from '../components/nav';
 
 
 class Main extends React.Component {
@@ -12,13 +10,6 @@ class Main extends React.Component {
         super(props);
 
         this.state = {
-            list: [{ name: "หน้าหลัก", link: "/" },
-            { name: "ข้อมูลทางสถิติ", link: "/mainchart" },
-            { name: "สวัสดิการจากรัฐ", link: "/maindoc" },
-            { name: "การบริการ", link: "/service" },
-            { name: "โรงพยาบาล", link: "/hospital" },
-            { name: "ช่วยเหลือ", link: "/help" },
-            ],
             status: true
         }
     }
@@ -41,9 +32,8 @@ class Main extends React.Component {
         return (
             <div className="warp-main">
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                    <Sidebar />
-                    <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                        <nav className="main">
+                <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
+                        <nav className="nav-other">
                             <ul>
                                 <div className="warp-nav-sidebar">
                                     <li>
@@ -55,14 +45,12 @@ class Main extends React.Component {
                                             </a>
                                         </div>
                                     </li>
-
                                 </div>
-                                {/* <Navbar /> */}
-
+                                <Nav name="main" />
                             </ul>
                         </nav>
                     </div>
-
+                    <Sidebar />
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
                             <h1 className="text-center">สังคมผู้สูงอายุ</h1>

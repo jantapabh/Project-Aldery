@@ -70,6 +70,11 @@
         
 
   }
+  nav.nav-main{
+    min-height: 2vh;
+    line-height: 2vh;
+     
+  }
 
   nav.nav-other{
     min-height: 2vh;
@@ -271,6 +276,7 @@
 
             a.hamberger{
               top: 2.5rem;
+              
               }
         }
     }
