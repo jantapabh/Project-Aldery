@@ -3,6 +3,7 @@ import Sidebar from '../components/layout/sidebar';
 import Geochart from '../components/chart/geochart';
 import Nav from '../components/nav';
 import Nav_logo from '../components/layout/nav_logo';
+import Map from '../components/layout/Map';
 
 class Main extends React.Component {
 
@@ -83,7 +84,7 @@ class Main extends React.Component {
                             <h1 className="text-center">สังคมผู้สูงอายุ</h1>
                             <h2 className="small text-center"></h2>
                             <div className="warp-chart">
-                                <Geochart />
+                                <Map/>
                             </div>
                         </div>
                     </div>
