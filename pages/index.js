@@ -89,6 +89,12 @@ class Home extends React.Component {
             <div className="page-content">
               <div className="container-fluid">
                 <h1>Project</h1>
+                <div className="page-content-data">
+                  <div className="container-fluid">
+                    
+                      <img src="/static/cover-img2.png" className="card-img-top" alt="..." />
+                  </div>
+                </div>
               </div>
             </div>
           </section>
