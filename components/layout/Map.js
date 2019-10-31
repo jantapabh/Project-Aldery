@@ -38,8 +38,8 @@ const SpinnerPage = () => {
     );
 }
 
-const sheetId = '1gSVQSRjaC5kNE0jolNYsZyaM8Y5dhsFxVr42-TJjk_E'
-const sheetName = 'Visualization'
+const sheetId = '1gSVQSRjaC5kNE0jolNYsZyaM8Y5dhsFxVr42-TJjk_E';
+const sheetName = 'Visualization';
 const API = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}`
 const URL = 'https://docs.google.com/spreadsheets/d/1Ov1P86sWVU01OHKpCBBYTbZwtB9WHxeoRG2wfwsvOPw/edit#gid=355341358'
 const urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=TQ36Y7Jn0kdPjJ2dwl5nbHp-&grant_type=refresh_token&refresh_token=1//04X47z_dpQ-qmCgYIARAAGAQSNwF-L9Ir8Udetetcz-5EWxWI8LB9dMHcuOv9E5TFIk0lM5ptyDttdL6VigI9uF8k421N4sGTnmo&client_id=972202685112-andj9oha8pq3v0emis1702dkfhas0o4m.apps.googleusercontent.com'
@@ -104,7 +104,7 @@ class StudentMap extends Component {
     }
 
     loadPaths() {
-        get("/static/Mapjson/gadm36_THA_1.json")
+        get("/static/mapjson/gadm36_THA_1.json")
             .then(res => {
                 if (res.status !== 200) return
                 const world = res.data
@@ -146,8 +146,8 @@ class StudentMap extends Component {
                 <Motion
                     defaultStyle={{
                         zoom: 1,
-                        x: 100,
-                        y: 14,
+                        x: 98.3307975,
+                        y: 8.0252885,
                     }}
                     style={{
                         zoom: spring(this.state.zoom, { stiffness: 100, damping: 14 }),
@@ -214,8 +214,8 @@ class StudentMap extends Component {
                                     subject={[100, 14]}
                                     strokeWidth={0}
                                 >
-                                    <text className="font-TH">{"???????????????"}</text>
-                                    <text y={18} className="font-TH">{"????????????????"}</text>
+                                    {/* <text className="font-TH">{"สัดส่วนนักศึกษา"}</text>
+                                    <text y={18} className="font-TH">{"แยกตามรายจังหวัด"}</text> */}
                                 </Annotation>
                             </ZoomableGroup>
                         </ComposableMap>

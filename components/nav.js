@@ -21,10 +21,10 @@ class Nav extends React.Component {
       { name: "ช่วยเหลือ", href: "/help" },
       ],
 
-      listMain: [{ name: "About", href: "/about" },
-      { name: "Project", href: "/project" },
-      { name: "Services", href: "/services" },
-      { name: "Contact", href: "/contact" },
+      listMain: [{ name: "About", href: "#" },
+      { name: "Project", href: "#" },
+      { name: "Services", href: "#" },
+      { name: "Contact", href: "#" },
       ],
 
     }
