@@ -104,7 +104,7 @@ class Service extends React.Component {
                                 </div> */}
 
                                 <div className="card-contents-col">
-                                    <Card
+                                    {/* <Card
                                         title="texttttt"
                                         subtitle="subbbb"
                                         img="/static/activehover.svg"
@@ -114,7 +114,7 @@ class Service extends React.Component {
                                         title="texttttt"
                                         subtitle="subbbb"
                                         img="/static/activehover.svg"
-                                    />
+                                    /> */}
 
                                 </div>
 

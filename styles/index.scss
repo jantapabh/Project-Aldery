@@ -53,9 +53,44 @@
 
         
 
+        
+
     }
 
 }
+
+
+.page-content-data{
+    display: flex;
+    flex-direction: column;
+    width: 100%;	
+    min-height: 100vh;
+    position: relative;
+    .container-fluid{
+        display: flex;
+        justify-content: center;
+        text-align:center;
+        margin-top: 2rem;
+        padding-right: 10px;
+        padding-left: 10px;
+
+        .card{
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+
+            img{
+                width: 15rem;
+                height: 15rem;
+                padding: 1rem;
+            }
+
+            
+        }
+        
+    }
+}
+
 
 .page-content-map{
     display: flex;

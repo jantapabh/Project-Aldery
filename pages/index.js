@@ -63,7 +63,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="warp-index">
-        <Nav name="/"/>
+        <Nav name="/" />
         <main>
           <Header />
           <section id='about'>
@@ -86,7 +86,7 @@ class Home extends React.Component {
           </section>
 
           <section id='project'>
-            <div className="page-content-map">
+            <div className="page-content">
               <div className="container-fluid">
                 <h1>Project</h1>
               </div>
@@ -94,9 +94,33 @@ class Home extends React.Component {
           </section>
 
           <section id='services'>
-            <div className="page-content-map">
+            <div className="page-content">
               <div className="container-fluid">
                 <h1>Services</h1>
+                <div className="page-content-data">
+                  <div className="container-fluid">
+                    <div className="card">
+                      <img src="/static/cover-img2.png" className="card-img-top" alt="..." />
+                      <div class="card-body">
+                        <h6 class="card-text">ปรึกษาปัญหา</h6>
+                      </div>
+                    </div>
+                    <div className="card">
+                      <img src="/static/cover-img.png" className="card-img-top" alt="..." />
+                      <div class="card-body">
+                        <h6 class="card-text">การช่วยเหลือ</h6>
+                      </div>
+                    </div>
+                    <div className="card">
+                      <img src="/static/cover-img6.png" className="card-img-top" alt="..." />
+                      <div class="card-body">
+                        <h6 class="card-text">การดูเเล</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
               </div>
             </div>
           </section>
