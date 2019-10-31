@@ -14,6 +14,8 @@ import { feature } from "topojson-client"
 import { Motion, spring } from "react-motion"
 import axios from 'axios';
 
+import Sheetapi from '../../config/api'
+
 const wrapperStyles = {
     // width: "100%",
     maxWidth: 500,
@@ -41,7 +43,6 @@ const SpinnerPage = () => {
 const sheetId = '1gSVQSRjaC5kNE0jolNYsZyaM8Y5dhsFxVr42-TJjk_E'
 const sheetName = 'Visualization'
 const API = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}`
-const URL = 'https://docs.google.com/spreadsheets/d/1Ov1P86sWVU01OHKpCBBYTbZwtB9WHxeoRG2wfwsvOPw/edit#gid=355341358'
 const urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=TQ36Y7Jn0kdPjJ2dwl5nbHp-&grant_type=refresh_token&refresh_token=1//04X47z_dpQ-qmCgYIARAAGAQSNwF-L9Ir8Udetetcz-5EWxWI8LB9dMHcuOv9E5TFIk0lM5ptyDttdL6VigI9uF8k421N4sGTnmo&client_id=972202685112-andj9oha8pq3v0emis1702dkfhas0o4m.apps.googleusercontent.com'
 
 
@@ -53,6 +54,7 @@ class StudentMap extends Component {
             geographyPaths: [],
             center: [98.3185, 7.9801249],
             zoom: 40,
+            data:[]
 
         }
         this.loadPaths = this.loadPaths.bind(this)
@@ -61,7 +63,10 @@ class StudentMap extends Component {
         this.handleReset = this.handleReset.bind(this)
     }
 
-    componentDidMount() {
+    async componentDidMount() {
+        let userOauth = JSON.parse(localStorage.getItem("myOauth"))
+        this.access_token = userOauth.data.access_token
+        await this.listName('ข้อมูลการวิเคราะห์ทางสถิติ!C197:D213')
 
         localStorage.removeItem("token");
         this.postAccessToken()
@@ -69,6 +74,8 @@ class StudentMap extends Component {
             this.getSheetValues()
         }, 1000)
         this.loadPaths()
+
+
     }
 
     postAccessToken() {
@@ -86,6 +93,7 @@ class StudentMap extends Component {
                 localStorage.setItem("token", data.data.access_token);
             })
     }
+
     getSheetValues() {
         var token = localStorage.getItem("token");
         fetch(API,
@@ -97,10 +105,28 @@ class StudentMap extends Component {
             }).then(response => response.json()).then(data => {
                 let batchRowValues = data.values;
                 console.log(batchRowValues);
-                this.setState({population: batchRowValues  })
+                this.setState({ population: batchRowValues })
             })
+    }
+
+    listName = async (v) => {
+        try {
+
+            this.list = await Sheetapi.getSheet(this.access_token, v)
+
+            for (let i = 0; i < this.list.length; i++) {
+
+                this.setState(prevState => ({
+                  data: [...prevState.data,[this.list[i][0],this.list[i][1]] ],
+                }))
+              }
+
+            console.log(this.state.data);
 
 
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     loadPaths() {
