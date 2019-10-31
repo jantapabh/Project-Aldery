@@ -69,47 +69,13 @@ class StudentMap extends Component {
         await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.listName('ข้อมูลการวิเคราะห์ทางสถิติ!C197:F213')
 
-        localStorage.removeItem("token");
-        this.postAccessToken()
         setTimeout(() => {
-            this.getSheetValues()
+            this.listName('ข้อมูลการวิเคราะห์ทางสถิติ!C197:F213')
         }, 1000)
         this.loadPaths()
 
 
-    }
-
-    postAccessToken() {
-
-        axios.post(`${urlpost}`,
-            {
-                headers: {
-                    Authorization: "Bearer 4/rwEUwN26znXL2OhQFY7TlQKy7ceIVluDK-KfqgnHBYRaZ1okr2QilAn1eEYUBpKr-8tLaA7e6Pb18Yk74sFyiNo",
-                    Content_Type: "application/x-www-form-urlencoded",
-                    User_Agent: "google-oauth-playground",
-                    Content_length: "322",
-                    Host: "www.googleapis.com"
-                }
-            }).then(data => {
-                localStorage.setItem("token", data.data.access_token);
-            })
-    }
-
-    getSheetValues() {
-        var token = localStorage.getItem("token");
-        fetch(API,
-            {
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${token}`
-                }
-            }).then(response => response.json()).then(data => {
-                let batchRowValues = data.values;
-                console.log(batchRowValues);
-                this.setState({ population: batchRowValues })
-            })
     }
 
     listName = async (v) => {
@@ -117,15 +83,6 @@ class StudentMap extends Component {
 
             this.list = await Sheetapi.getSheet(this.access_token, v)
             this.setState({ dataList: this.list })
-
-            // for (let i = 0; i < this.list.length; i++) {
-
-            //     this.setState(prevState => ({
-            //         dataList: [...prevState.dataList,[this.list[i][0],this.list[i][2] ,this.list[i][3] ] ],
-            //     }))
-            //   }
-
-            console.log(this.state.dataList);
 
         } catch (err) {
             console.log(err);
@@ -165,11 +122,6 @@ class StudentMap extends Component {
     }
     render() {
 
-        // const { population } = this.state
-        // if (population.length === 0) {
-        //     return SpinnerPage()
-        // }
-
         const { dataList } = this.state
         if (dataList.length === 0) {
             return SpinnerPage()
@@ -201,9 +153,7 @@ class StudentMap extends Component {
                                 <Geographies geography={this.state.geographyPaths} disableOptimization>
                                     {(geographies, projection) =>
                                         geographies.map((geography, i) => {
-                                            // const statePopulation = population.find(s =>
                                             const statePopulation = dataList.find(s =>
-                                                // s[23] === geography.properties.NAME_3 
                                                 s[0] === geography.properties.NAME_3
 
                                             ) || {}
@@ -214,13 +164,11 @@ class StudentMap extends Component {
                                                     cacheId={`state-${geography.properties.ID_1}`}
                                                     round
                                                     data-html="true"
-                                                    // data-tip={statePopulation[26]}
                                                     data-tip={statePopulation[3]}
                                                     geography={geography}
                                                     projection={projection}
                                                     style={{
                                                         default: {
-                                                            // fill: colorScale(+statePopulation[25]),
                                                             fill: colorScale(+statePopulation[2]),
                                                             stroke: "#607D8B",
                                                             strokeWidth: 0.075,

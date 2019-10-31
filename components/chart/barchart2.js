@@ -98,7 +98,7 @@ class Barchart_2 extends Component {
   render() {
 
     return (
-      <div className="warp-chart">
+      <div className="chart-center">
         <Chart options={this.state.options}
           series={this.state.series}
           type="bar"

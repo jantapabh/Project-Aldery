@@ -100,7 +100,7 @@ listData = async () => {
 
     render() {
         return (
-            <React.Fragment>
+            <div className="chart-center">
 
                 <Chart
                     options={this.state.options}
@@ -108,7 +108,7 @@ listData = async () => {
                     type="radar"
                     height="350"
                 />
-            </React.Fragment>
+            </div>
         )
     }
 }
