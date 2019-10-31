@@ -12,6 +12,11 @@
 }
 
 .sidebar-wrapper{
+
+  @media (max-width: 768px) {
+    position: absolute;
+  }
+
     z-index:1;
     position: fixed;
     width:0;
@@ -33,6 +38,11 @@
         padding:0;
         list-style:none; 
         transition:all .5s;
+
+
+        @media (max-width: 768px) {
+          top: 1rem !important;
+      }
 
         .icon-sidebar{
             display: flex;
@@ -66,6 +76,10 @@
         display: flex;
         flex-direction: column;
 
+        @media (max-width: 768px) {
+          top: 1rem !important;
+      }
+
     }
 
     .non-sidebar-nav{
@@ -84,7 +98,6 @@
 
     @media (max-width: 768px) {
       width:210px !important;
-      
   }
 
     @media (max-width: 575.98px) { 
@@ -98,6 +111,13 @@
       top: 3rem;
       display: flex;
       flex-direction: column;
+      
+      
+      @media (max-width: 768px) {
+        top: 1rem !important;
+    }
+
+      /////
 
   }
 }

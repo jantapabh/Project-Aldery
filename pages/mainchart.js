@@ -116,10 +116,10 @@ class Mainchart extends React.Component {
 
                             <div className="warp-chart">
                             <div className="chart-contents">
-                                   {/* <Barchart3/> */}
+                                   <Barchart3/>
                                 </div>
                                 <div className="chart-contents">
-                                   {/* <Radachart/> */}
+                                   <Radachart/>
                                 </div>
                              
                             </div>
