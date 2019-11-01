@@ -58,6 +58,19 @@ class Mainchart extends React.Component {
             })
         }
     }
+    
+    collapsible = async () => {
+        if (!this.state.status) {
+          await this.setState({
+            status: true
+          })
+        }
+        else {
+          await this.setState({
+            status: false
+          })
+        }
+      }
 
     async componentDidMount() {
         await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))

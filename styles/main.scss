@@ -51,7 +51,8 @@
         position: relative;
         padding:15px;
         transition:all .5s;
-        background: linear-gradient(to right, rgb(116, 235, 213), rgb(172, 182, 229));
+        background: white;
+        // background: linear-gradient(to right, rgb(116, 235, 213), rgb(172, 182, 229));
         padding-left: 5rem;
 
         @media (max-width: 575.98px) { 
