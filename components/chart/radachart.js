@@ -77,9 +77,6 @@ listData = async () => {
         }))
       }
 
-      console.log("MAN",this.state.dataMan);
-      
-
       for (let i = 0; i < this.woman.length; i++) {
 
         this.setState(prevState => ({

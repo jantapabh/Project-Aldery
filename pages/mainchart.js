@@ -1,9 +1,8 @@
 import React from 'react'
 import Sheetapi from '../config/api'
-import Sidebar from '../components/layout/sidebar';
 import dynamic from 'next/dynamic'
-import Nav from '../components/nav';
-import Nav_logo from '../components/layout/nav_logo';
+import Navbar_main from '../components/navbar_main';
+import Sidebar from '../components/layout/sidebar';
 
 // const Areachart = dynamic(
 //     () => import('../components/chart/area'),
@@ -39,81 +38,27 @@ class Mainchart extends React.Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
-
-            status: true
-        }
+            status: true,
+        };
     }
 
-    toggle = async () => {
-        if (!this.state.status) {
-            await this.setState({
-                status: true
-            })
-        }
-        else {
-            await this.setState({
-                status: false
-            })
-        }
+    onConfirm = (order) => {
+        this.setState({
+            status: order,
+        })
     }
-    
-    collapsible = async () => {
-        if (!this.state.status) {
-          await this.setState({
-            status: true
-          })
-        }
-        else {
-          await this.setState({
-            status: false
-          })
-        }
-      }
 
     async componentDidMount() {
         await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
-
     }
 
     render() {
-
         return (
             <div className="warp-main">
+                <Navbar_main confirm={this.onConfirm} status={this.state.status} />
+                <Sidebar status={this.state.status} />
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                    <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                        <nav className="nav-other">
-                            <ul>
-                                <div className="warp-nav-sidebar">
-                                    <li>
-                                        <div className="box-hamberger">
-                                            <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.toggle} >
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </div>
-                                <Nav name="main" />
-                            </ul>
-                        </nav>
-                        <div class="collapsible-menu">
-                            <div className="warp-nav-sidebar">
-                                <Nav_logo />
-                                <div className="box-hamberger">
-                                    <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <Sidebar />
-
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
                             <h1 className="text-center">ข้อมูลทางสถิติ</h1>
@@ -128,13 +73,13 @@ class Mainchart extends React.Component {
                             </div>
 
                             <div className="warp-chart">
-                            <div className="chart-contents">
-                                   <Barchart3/>
+                                <div className="chart-contents">
+                                    <Barchart3 />
                                 </div>
                                 <div className="chart-contents">
-                                   <Radachart/>
+                                    <Radachart />
                                 </div>
-                             
+
                             </div>
 
                         </div>

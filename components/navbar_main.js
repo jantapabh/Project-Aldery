@@ -1,51 +1,36 @@
 import React from 'react'
 import Nav_logo from './layout/nav_logo';
 import Nav from '../components/nav';
+import Sidebar from '../components/layout/sidebar'
 class Navbar_main extends React.Component {
-    constructor(props) {
-        super(props);
 
-        this.state = {
-            status: true
-        }
+    static defaultProps = {
+        status: true
     }
 
-    collapsible = async () => {
-        if (!this.state.status) {
-            await this.setState({
-                status: true
-            })
-        }
-        else {
-            await this.setState({
-                status: false
-            })
-        }
-    }
+    onConfirmClick = () => {
 
-    toggle = async () => {
-        if (!this.state.status) {
-            await this.setState({
-                status: true
-            })
+        if (this.props.status) {
+            if (this.props.confirm) {
+                this.props.confirm(false)
+            }
         }
         else {
-            await this.setState({
-                status: false
-            })
+            if (this.props.confirm) {
+                this.props.confirm(true)
+            }
         }
     }
 
     render() {
-
         return (
-            <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
+            <div className={`wrapper${this.props.status ? " menuDisplayed" : ""}`}>
                 <nav className="nav-other">
                     <ul>
                         <div className="warp-nav-sidebar">
                             <li>
                                 <div className="box-hamberger">
-                                    <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.toggle} >
+                                    <a className={`hamberger btn${this.props.status ? " active" : " not-active"}`} onClick={this.onConfirmClick} >
                                         <span></span>
                                         <span></span>
                                         <span></span>
@@ -61,7 +46,7 @@ class Navbar_main extends React.Component {
                     <div className="warp-nav-sidebar">
                         <Nav_logo />
                         <div className="box-hamberger">
-                            <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
+                            <a className={`hamberger btn${this.props.status ? " active" : " not-active"}`} onClick={this.onConfirmClick} >
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -69,7 +54,9 @@ class Navbar_main extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Sidebar />
             </div>
+
         )
     }
 }

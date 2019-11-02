@@ -1,8 +1,9 @@
 import React from 'react'
-import Sidebar from '../components/layout/sidebar';
 import Card from '../components/layout/card';
 import Nav from '../components/nav';
 import Nav_logo from '../components/layout/nav_logo';
+import Navbar_main from '../components/navbar_main';
+import Sidebar from '../components/layout/sidebar';
 
 class Help extends React.Component {
 
@@ -21,23 +22,12 @@ class Help extends React.Component {
         }
     }
 
-    async componentDidMount() {
-
+    onConfirm = (order) => {
+        this.setState({
+            status: order,
+        })
     }
 
-
-    toggle = async () => {
-        if (!this.state.status) {
-            await this.setState({
-                status: true
-            })
-        }
-        else {
-            await this.setState({
-                status: false
-            })
-        }
-    }
 
     render() {
 
@@ -45,37 +35,8 @@ class Help extends React.Component {
 
             <div className="warp-main">
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                    <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                        <nav className="nav-other">
-                            <ul>
-                                <div className="warp-nav-sidebar">
-                                    <li>
-                                        <div className="box-hamberger">
-                                            <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.toggle} >
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </div>
-                                <Nav name="main" />
-                            </ul>
-                        </nav>
-                        <div class="collapsible-menu">
-                            <div className="warp-nav-sidebar">
-                                <Nav_logo />
-                                <div className="box-hamberger">
-                                    <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <Sidebar />
+                    <Navbar_main confirm={this.onConfirm} status={this.state.status} />
+                    <Sidebar status={this.state.status} />
 
                     <div className="page-content-wrapper">
                         <div className="container-fluid">

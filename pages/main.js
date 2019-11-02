@@ -1,83 +1,32 @@
 import React from 'react'
-import Sidebar from '../components/layout/sidebar';
-import Nav from '../components/nav';
-import Nav_logo from '../components/layout/nav_logo';
 import Map from '../components/layout/Map';
+import Navbar_main from '../components/navbar_main';
+import Sidebar from '../components/layout/sidebar';
 
 class Main extends React.Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
-            status: true
-        }
+            status: true,
+        };
     }
 
-    collapsible = async () => {
-        if (!this.state.status) {
-            await this.setState({
-                status: true
-            })
-        }
-        else {
-            await this.setState({
-                status: false
-            })
-        }
-    }
-
-    toggle = async () => {
-        if (!this.state.status) {
-            await this.setState({
-                status: true
-            })
-        }
-        else {
-            await this.setState({
-                status: false
-            })
-        }
+    onConfirm = (order) => {
+        this.setState({
+            status: order,
+        })
     }
 
     render() {
 
+        console.log("STATUS:",this.state.status);
+        
         return (
             <div className="warp-main">
+                <Navbar_main confirm={this.onConfirm} status = {this.state.status}/>
+                <Sidebar status ={this.state.status} />
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                    <nav className="nav-other">
-                        <ul>
-                            <div className="warp-nav-sidebar">
-                                <li>
-                                    <div className="box-hamberger">
-                                        <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.toggle} >
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </a>
-                                    </div>
-                                </li>
-                            </div>
-                            <Nav name="main" />
-                        </ul>
-                    </nav>
-
-                    <div class="collapsible-menu">
-                        <div className="warp-nav-sidebar">
-                            <Nav_logo />
-                            <div className="box-hamberger">
-                                <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                    <Sidebar />
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
                             <h1 className="text-center">สังคมผู้สูงอายุ</h1>
