@@ -65,6 +65,7 @@
 
   .sidebar-wrapper:hover{
     width:230px;
+    opacity: 1 !important;
    
     @media (max-width: 768px) {
         width:210px !important;
@@ -84,6 +85,9 @@
 
     .non-sidebar-nav{
         display: none;
+        .icon-sidebar{
+          display: none !important;
+        }
     }
 
   }

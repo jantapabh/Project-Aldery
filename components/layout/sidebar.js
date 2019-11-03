@@ -13,7 +13,7 @@ class Sidebar extends React.Component {
                 { name: "การบริการ",nameicon: "Service", img: "static/service.svg", link: "/mainhospital" },
                 { name: "โรงพยาบาล",nameicon: "Hospital", img: "/static/hospital.svg", link: "" },
                 { name: "ช่วยเหลือ",nameicon: "Help", img: "/static/help.svg", link: "/mainhelp" },
-            ]
+            ],
         }
     }
 
@@ -21,6 +21,7 @@ class Sidebar extends React.Component {
         return (
             <div className={`wrapper${this.props.status ? " menuDisplayed" : ""}`}>
                 <div className="sidebar-wrapper">
+                  
                     <ul className="sidebar-nav">
                         {
                             this.state.list.map((items, index) => {
@@ -32,6 +33,7 @@ class Sidebar extends React.Component {
                             })
                         }
                     </ul>
+                    
                     <ul className="non-sidebar-nav">
                         {
                             this.state.list.map((itemss, indexs) => {
