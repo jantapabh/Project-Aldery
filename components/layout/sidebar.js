@@ -2,49 +2,49 @@ import React from 'react'
 
 class Sidebar extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            list: [
+                { name: "หน้าหลัก",nameicon: "Home", img: "/static/home.svg", link: "/main" },
+                { name: "รายงานความคืบหน้า",nameicon: "Dashboard", img: "/static/dashboard.svg", link: "/mainchart" },
+                { name: "ข้อมูลทางสถิติ",nameicon: "Chart", img: "/static/chart.svg", link: "/maindoc" },
+                { name: "สวัสดิการจากรัฐ",nameicon: "Benefits", img: "/static/document.svg", link: "/mainservice" },
+                { name: "การบริการ",nameicon: "Service", img: "static/service.svg", link: "/mainhospital" },
+                { name: "โรงพยาบาล",nameicon: "Hospital", img: "/static/hospital.svg", link: "" },
+                { name: "ช่วยเหลือ",nameicon: "Help", img: "/static/help.svg", link: "/mainhelp" },
+            ]
+        }
+    }
+
     render() {
         return (
             <div className={`wrapper${this.props.status ? " menuDisplayed" : ""}`}>
                 <div className="sidebar-wrapper">
                     <ul className="sidebar-nav">
-                        <li><img src="/static/home.svg" /><a href="/">หน้าหลัก</a></li>
-                        <li><img src="/static/dashboard.svg" /><a href="/main">รายงานความคืบหน้า</a></li>
-                        <li><img src="/static/chart.svg" /><a href="/mainchart">ข้อมูลทางสถิติ</a></li>
-                        <li><img src="/static/document.svg" /><a href="/maindoc">สวัสดิการจากรัฐ</a></li>
-                        <li><img src="/static/service.svg" /><a href="/service">การบริการ</a></li>
-                        <li><img src="/static/hospital.svg" /><a href="/hospital">โรงพยาบาล</a></li>
-                        <li><img src="/static/help.svg" /><a href="/help">ช่วยเหลือ</a></li>
+                        {
+                            this.state.list.map((items, index) => {
+                                return (
+                                    <React.Fragment>
+                                        <li key={index}><img src={items.img} /><a href={items.link} >{items.name}</a></li>
+                                    </React.Fragment>
+                                )
+                            })
+                        }
                     </ul>
                     <ul className="non-sidebar-nav">
-                        <div className="icon-sidebar">
-                            <li><img src="/static/home.svg" /></li>
-                            <p>HOME</p>
-                        </div>
-                        <div className="icon-sidebar">
-                            <li><img src="/static/dashboard.svg" /></li>
-                            <p>Dashboard</p>
-                        </div>
-                        <div className="icon-sidebar">
-                            <li><img src="/static/chart.svg" /></li>
-                            <p>CHART</p>
-                        </div>
-                        <div className="icon-sidebar">
-                            <li><img src="/static/document.svg" /></li>
-                            <p>Benefits</p>
-                        </div>
-                        <div className="icon-sidebar">
-                            <li><img src="/static/service.svg" /></li>
-                            <p>Service</p>
-                        </div>
-                        <div className="icon-sidebar">
-                            <li><img src="/static/hospital.svg" /></li>
-                            <p>Hospital</p>
-                        </div>
-                        <div className="icon-sidebar">
-                            <li><img src="/static/help.svg" /></li>
-                            <p>HELP</p>
-                        </div>
-
+                        {
+                            this.state.list.map((itemss, indexs) => {
+                                return (
+                                    <React.Fragment>
+                                        <div className="icon-sidebar">
+                                            <li><img src={itemss.img} /></li>
+                                            <p>{itemss.nameicon}</p>
+                                        </div>
+                                    </React.Fragment>
+                                )
+                            })
+                        }
                     </ul>
                 </div>
             </div>

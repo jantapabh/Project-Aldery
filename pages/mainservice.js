@@ -18,7 +18,7 @@ const Picchart = dynamic(
 )
 
 
-class Service extends React.Component {
+class MainService extends React.Component {
 
     constructor(props) {
         super(props);
@@ -97,4 +97,4 @@ class Service extends React.Component {
         )
     }
 }
-export default Service
+export default MainService

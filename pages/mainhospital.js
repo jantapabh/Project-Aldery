@@ -1,11 +1,18 @@
 import React from 'react'
-import Card from '../components/layout/card';
+import Sheetapi from '../config/api'
+import dynamic from 'next/dynamic'
 import Nav from '../components/nav';
 import Nav_logo from '../components/layout/nav_logo';
 import Navbar_main from '../components/navbar_main';
 import Sidebar from '../components/layout/sidebar';
 
-class Help extends React.Component {
+
+const Barchart = dynamic(
+    () => import('../components/chart/barchart'),
+    { ssr: false }
+)
+
+class MainHospital extends React.Component {
 
     constructor(props) {
         super(props);
@@ -16,7 +23,7 @@ class Help extends React.Component {
             { name: "ข้อมูลทางสถิติ", link: "/mainchart" },
             { name: "สวัสดิการจากรัฐ", link: "/maindoc" },
             { name: "การบริการ", link: "/service" },
-            { name: "โรงพยาบาล", link: "/hospital" },
+            { name: "ช่วยเหลือ", link: "/help" },
             ],
             status: true
         }
@@ -28,11 +35,14 @@ class Help extends React.Component {
         })
     }
 
+    async componentDidMount() {
+        await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
+
+    }
 
     render() {
 
         return (
-
             <div className="warp-main">
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                     <Navbar_main confirm={this.onConfirm} status={this.state.status} />
@@ -40,14 +50,18 @@ class Help extends React.Component {
 
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
-                            <h1 className="text-center">การช่วยเหลือ</h1>
+                            <h1 className="text-center">โรงพยาบาลเเละการดูแลรักษา</h1>
                             <h2 className="small text-center"></h2>
 
-                            <Card
-                                title="texttttt"
-                                subtitle="subbbb"
-                                img="/static/activehover.svg"
-                            />
+                            <div className="warp-chart">
+                                <div className="chart-contents">
+                                    <Barchart />
+                                </div>
+                                {/* <div className="chart-contents">
+                                  
+                                </div> */}
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -56,5 +70,4 @@ class Help extends React.Component {
         )
     }
 }
-export default Help
-
+export default MainHospital;
