@@ -25,8 +25,8 @@ const wrapperStyles = {
 const colorScale = scaleLinear()
     .domain([1, 150])
     .range([
-        "#85C1E9",
-        "#2471A3"
+        "#b3e5b5",
+        "#79d27d"
     ])
 
 const SpinnerPage = () => {
@@ -170,19 +170,19 @@ class StudentMap extends Component {
                                                     style={{
                                                         default: {
                                                             fill: colorScale(+statePopulation[2]),
-                                                            stroke: "#607D8B",
+                                                            stroke: "#40bf45",
                                                             strokeWidth: 0.075,
                                                             outline: "none",
                                                         },
                                                         hover: {
-                                                            fill: "#607D8B",
-                                                            stroke: "#607D8B",
+                                                            fill: "#40bf45",
+                                                            stroke: "#40bf45",
                                                             strokeWidth: 0.075,
                                                             outline: "none",
                                                         },
                                                         pressed: {
                                                             fill: "#FF5722",
-                                                            stroke: "#607D8B",
+                                                            stroke: "#40bf45",
                                                             strokeWidth: 0.075,
                                                             outline: "none",
                                                         },
