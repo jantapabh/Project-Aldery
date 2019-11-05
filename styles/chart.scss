@@ -45,11 +45,28 @@
   margin: 0;
 }
 
+.warp-chart{
+  .chart-pic{
+    margin-top: 2rem;
+    margin-left: 5rem;
+    
+    .apexcharts-legend.center.position-right {
+      position: fixed !important;
+      top: 10px !important;
+      left: 1px;
+    }
+    .apexcharts-legend.center.position-right{
+      top: 3rem !important;
+    }
+
+  }
+}
+
 //Apexcharts
 
-.apexcharts-legend.center.position-right {
-  top: 90px !important;
-}
+// .apexcharts-legend.center.position-right {
+//   top: 90px !important;
+// }
 
 .apexcharts-legend-text {
   font-family: "Prompt", sans-serif !important ;
@@ -95,6 +112,6 @@ text {
   font-family: "Prompt", sans-serif !important ;
 }
 
-.apexcharts-xaxistooltip-text{
+.apexcharts-xaxistooltip-text {
   font-family: "Prompt", sans-serif !important ;
 }

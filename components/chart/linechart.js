@@ -121,7 +121,7 @@ class Linechart extends React.Component {
           dataMan: [...prevState.dataMan, parseInt(this.man[i][0])],
         }))
       }
-      console.log(this.state.dataMan);
+
       for (let i = 0; i < this.woman.length; i++) {
 
         this.setState(prevState => ({
@@ -132,10 +132,6 @@ class Linechart extends React.Component {
       this.setState({
         series: [{ name:"เพศชาย", data: this.state.dataMan },{ name:"เพศหญิง", data: this.state.dataWoman }]
       })
-
-      console.log(this.state.series);
-
-
 
     } catch (err) {
       console.log(err);

@@ -1,9 +1,6 @@
 import React from 'react'
 import Sheetapi from '../config/api'
 import dynamic from 'next/dynamic'
-import Card from '../components/layout/card'
-import Nav from '../components/nav';
-import Nav_logo from '../components/layout/nav_logo';
 import Navbar_main from '../components/navbar_main';
 import Sidebar from '../components/layout/sidebar';
 
@@ -24,13 +21,6 @@ class MainService extends React.Component {
         super(props);
 
         this.state = {
-            list: [{ name: "หน้าหลัก", link: "/" },
-            { name: "ความคืบหน้า", link: "/main" },
-            { name: "ข้อมูลทางสถิติ", link: "/mainchart" },
-            { name: "สวัสดิการจากรัฐ", link: "/maindoc" },
-            { name: "โรงพยาบาล", link: "/hospital" },
-            { name: "ช่วยเหลือ", link: "/help" },
-            ],
             status: true
         }
     }
@@ -62,13 +52,14 @@ class MainService extends React.Component {
                             <h2 className="small text-center"></h2>
 
                             <div className="warp-chart">
+                                <div className="chart-pic">
+                                    <Picchart />
+                                </div>
+
                                 <div className="chart-contents">
                                     <Linechart />
                                 </div>
 
-                                {/* <div className="chart-contents">
-                                    <Picchart />
-                                </div> */}
 
                                 <div className="card-contents-col">
                                     {/* <Card
