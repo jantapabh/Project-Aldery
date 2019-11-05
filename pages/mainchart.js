@@ -77,7 +77,7 @@ class Mainchart extends React.Component {
                                     <Barchart3 />
                                 </div>
                                 <div className="chart-contents">
-                                    <Radachart />
+                                    {/* <Radachart /> */}
                                 </div>
 
                             </div>

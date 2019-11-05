@@ -37,6 +37,7 @@ class Picchart_2 extends Component {
       this.setState({
         options: {
           labels: this.state.datalist,
+          title:{ text:"สภาพความเดือดร้อนในปัจจุบัน"},
           responsive: [{
             breakpoint: 480,
             options: {

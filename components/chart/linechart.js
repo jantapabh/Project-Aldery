@@ -67,13 +67,13 @@ class Linechart extends React.Component {
             },
           },
           markers: {
-            
+
             size: 6
           },
           xaxis: {
             categories: this.state.datalist,
             title: {
-              text: 'ความต้องการให้หน่วยงานของรัฐช่วยเหลือ'
+              text: 'การช่วยเหลือ'
             }
           },
           yaxis: {
@@ -130,7 +130,7 @@ class Linechart extends React.Component {
       }
 
       this.setState({
-        series: [{ name:"เพศชาย", data: this.state.dataMan },{ name:"เพศหญิง", data: this.state.dataWoman }]
+        series: [{ name: "เพศชาย", data: this.state.dataMan }, { name: "เพศหญิง", data: this.state.dataWoman }]
       })
 
     } catch (err) {
@@ -150,14 +150,12 @@ class Linechart extends React.Component {
           <Chart
             options={this.state.options}
             series={this.state.series}
-            type="line" 
-            height="400" 
+            type="line"
+            height="400"
             width="800"
           />
 
         </div>
-
-
       </div>
 
     )

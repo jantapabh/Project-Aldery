@@ -10,9 +10,8 @@ class Bar extends Component {
     this.state = {
       options: {},
       series: [],
-      categories: [],
-      data: [],
-      datalist: []
+      dataList: [],
+      dataName: []
     }
   }
 
@@ -20,7 +19,7 @@ class Bar extends Component {
     let userOauth = JSON.parse(localStorage.getItem("myOauth"))
     this.access_token = userOauth.data.access_token
     await this.namelist('ข้อมูลการวิเคราะห์ทางสถิติ!N79:N86')
-    await this.numberlist('ข้อมูลการวิเคราะห์ทางสถิติ!o79:o86')
+    await this.numberlist('ข้อมูลการวิเคราะห์ทางสถิติ!O79:O86')
   }
 
   namelist = async (value) => {
@@ -32,18 +31,34 @@ class Bar extends Component {
       for (let i = 0; i < this.list.length; i++) {
 
         this.setState(prevState => ({
-          datalist: [...prevState.datalist, this.list[i][0]],
+          dataName: [...prevState.dataName, this.list[i][0]],
         }))
       }
 
       this.setState({
 
         options: {
+          title: {
+            text: 'สถานพยาบาลที่ใช้ประจำ',
+            align: 'left'
+          },
           plotOptions: {
             bar: { horizontal: true }
           },
           dataLabels: { enabled: false },
-          xaxis: { categories: this.state.datalist }
+          xaxis: {
+            categories: this.state.dataName ,
+            title: {
+              text: 'จำนวน (คน)'
+            }
+          },
+          tooltip: {
+            y: {
+              formatter: function (val) {
+                return val + " คน"
+              }
+            }
+          },
         }
 
       })
@@ -62,15 +77,13 @@ class Bar extends Component {
       this.list = await Sheetapi.getSheet(this.access_token, value)
 
       for (let i = 0; i < this.list.length; i++) {
-
-
         this.setState(prevState => ({
-          datalist: [...prevState.datalist, this.list[i][0]],
+          dataList: [...prevState.dataList, parseInt(this.list[i][0])],
         }))
       }
 
       this.setState({
-        series: [{ data: this.state.datalist }],
+        series: [{ name: "จำนวน", data: this.state.dataList }],
       })
 
     } catch (err) {
@@ -80,8 +93,6 @@ class Bar extends Component {
   }
 
   render() {
-    console.log("Series", this.state.series);
-
 
     return (
       <div className="warp-chart">
@@ -89,8 +100,8 @@ class Bar extends Component {
           options={this.state.options}
           series={this.state.series}
           type="bar" width="700"
-          height="350"
-          width="700"
+          height="400"
+            width="800"
         />
       </div>
     );
