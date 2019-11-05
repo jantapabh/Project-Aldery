@@ -1,9 +1,8 @@
 import React from 'react'
-import Card from '../components/layout/card';
-import Nav from '../components/nav';
-import Nav_logo from '../components/layout/nav_logo';
 import Navbar_main from '../components/navbar_main';
 import Sidebar from '../components/layout/sidebar';
+import CardLink from '../components/layout/cardlinks';
+import Card from '../components/layout/card';
 
 class MainHelp extends React.Component {
 
@@ -36,12 +35,14 @@ class MainHelp extends React.Component {
                             <h1 className="text-center">การช่วยเหลือ</h1>
                             <h2 className="small text-center"></h2>
 
-                            <Card
+                            <CardLink
                                 title="texttttt"
                                 subtitle="subbbb"
                                 img="/static/activehover.svg"
                             />
+
                         </div>
+
                     </div>
                 </div>
 

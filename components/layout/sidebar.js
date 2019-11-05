@@ -6,12 +6,12 @@ class Sidebar extends React.Component {
         super(props);
         this.state = {
             list: [
-                { name: "หน้าหลัก",nameicon: "Home", img: "/static/home.svg", link: "/main" },
-                { name: "รายงานความคืบหน้า",nameicon: "Dashboard", img: "/static/dashboard.svg", link: "/mainchart" },
-                { name: "ข้อมูลทางสถิติ",nameicon: "Chart", img: "/static/chart.svg", link: "/maindoc" },
-                { name: "สวัสดิการจากรัฐ",nameicon: "Benefits", img: "/static/document.svg", link: "/mainservice" },
-                { name: "การบริการ",nameicon: "Service", img: "static/service.svg", link: "/mainhospital" },
-                { name: "โรงพยาบาล",nameicon: "Hospital", img: "/static/hospital.svg", link: "" },
+                { name: "หน้าหลัก",nameicon: "Home", img: "/static/home.svg", link: "/" },
+                { name: "รายงานความคืบหน้า",nameicon: "Dashboard", img: "/static/dashboard.svg", link: "/main" },
+                { name: "ข้อมูลทางสถิติ",nameicon: "Chart", img: "/static/chart.svg", link: "/mainchart" },
+                { name: "สวัสดิการจากรัฐ",nameicon: "Benefits", img: "/static/document.svg", link: "/maindoc" },
+                { name: "หน่วยงาน",nameicon: "Service", img: "static/service.svg", link: "/mainservice" },
+                { name: "โรงพยาบาล",nameicon: "Hospital", img: "/static/hospital.svg", link: "/mainhospital" },
                 { name: "ช่วยเหลือ",nameicon: "Help", img: "/static/help.svg", link: "/mainhelp" },
             ],
         }

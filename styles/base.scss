@@ -35,7 +35,6 @@ h1{
     @media (max-width: 991.98px) {
         font-size: 1.5rem !important;
     }
-
    
 }
 
@@ -77,6 +76,14 @@ h4{
     font-size: 1.75rem ;
     text-align: center;
     margin: 0.5rem;
+
+    @media (max-width: 1199.98px) {
+        font-size: 1.5rem !important;
+    }
+
+    @media (max-width: 991.98px) {
+        font-size: 1rem !important;
+    }
    
 }
 
@@ -99,6 +106,10 @@ h6{
     margin-bottom: 1rem !important;
 
     
+    @media (max-width: 991.98px) {
+        font-size: 0.75rem !important;
+    }
+    
 }
 
 p{
@@ -106,12 +117,20 @@ p{
     font-size: 1rem !important;
     color: gray;
 
+    @media (max-width: 991.98px) {
+        font-size: 0.75rem !important;
+    }
+
 }
 
 text{
     color: gray;
     margin: 0.7rem 0 !important;
-    font-size: 1.2rem;
+    font-size: 1rem;
+
+    @media (max-width: 991.98px) {
+        font-size: 0.7rem !important;
+    }
 }
 
 a{

@@ -71,6 +71,9 @@ class Barchart_2 extends Component {
       this.man = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!P11:P19')
       this.woman = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!Q11:Q19')
 
+
+      console.log(this.man);
+      
       for (let i = 0; i < this.man.length; i++) {
 
         this.setState(prevState => ({

@@ -1,90 +1,100 @@
-.warp-chart{
-   display: flex;
-   justify-content: center;
-   margin: 1rem 0;
+.warp-chart {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
 
-   @media (max-width: 1199.98px) {
-      flex-direction: column;
-      align-items: center;
-   }
+  @media (max-width: 1199.98px) {
+    flex-direction: column;
+    align-items: center;
+  }
 
-   .chart-contents{
-      display: flex;
-      background-color: white;
-      border-radius: 0.5rem;
-      margin: 0.5rem 1rem;
-      padding: 0.5rem;
-
-   }
+  .chart-contents {
+    display: flex;
+    background-color: white;
+    border-radius: 0.5rem;
+    margin: 0.5rem 1rem;
+    padding: 0.5rem;
+  }
 }
 
+.warp-map {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
 
-.warp-map{
-   display: flex;
-   justify-content: center;
-   margin: 1rem 0;
+  @media (max-width: 1199.98px) {
+    flex-direction: column;
+    align-items: center;
+  }
 
-   @media (max-width: 1199.98px) {
-      flex-direction: column;
-      align-items: center;
-   }
+  .chart-contents {
+    display: flex;
+    background-color: white;
+    border-radius: 0.5rem;
+    margin: 0.5rem 1rem;
+    padding: 0.5rem;
+  }
 
-   .chart-contents{
-      display: flex;
-      background-color: white;
-      border-radius: 0.5rem;
-      margin: 0.5rem 1rem;
-      padding: 0.5rem;
-
-   }
-
-   svg{
-      width: 500px !important;
-      height: 500px !important;
-   }
+  svg {
+    width: 500px !important;
+    height: 500px !important;
+  }
 }
 
-.chart-center{
-   margin: 0;
+.chart-center {
+  margin: 0;
 }
-
 
 //Apexcharts
 
-.apexcharts-legend.center.position-right{
-   top: 90px !important;
-   
-   
+.apexcharts-legend.center.position-right {
+  top: 90px !important;
 }
 
-.apexcharts-legend-text{
-   font-family: 'Prompt', sans-serif !important ;
+.apexcharts-legend-text {
+  font-family: "Prompt", sans-serif !important ;
 }
-   
-
 
 .apexcharts-yaxis-label {
-    font-family: 'Prompt', sans-serif !important ;
-   font-size: 0.9rem !important;
+  font-family: "Prompt", sans-serif !important ;
+  font-size: 0.9rem !important;
 }
 // .apexcharts-legend-text{
 //    // font-family: 'Prompt', sans-serif !important ;
 //    font-size: 1rem !important;
 // }
 
-.apexcharts-xaxis-texts-g{
-   text{
-      font-size: 1rem;
-   }
-}
-
-path{
-  .apexcharts-bar-area{
-      font-size: 5;
+.apexcharts-xaxis-texts-g {
+  text {
+    font-size: 1rem;
   }
 }
 
-text{
-  font-family: 'Prompt', sans-serif !important ;
+path {
+  .apexcharts-bar-area {
+    font-size: 5;
+  }
 }
 
+text {
+  font-family: "Prompt", sans-serif !important ;
+}
+
+.apexcharts-tooltip {
+  font-family: "Prompt", sans-serif !important ;
+}
+
+.apexcharts-tooltip-title {
+  font-family: "Prompt", sans-serif !important ;
+}
+
+.apexcharts-tooltip-series-group {
+  font-family: "Prompt", sans-serif !important ;
+}
+.apexcharts-tooltip-text {
+  font-family: "Prompt", sans-serif !important ;
+}
+
+.apexcharts-xaxistooltip-text{
+  font-family: "Prompt", sans-serif !important ;
+}

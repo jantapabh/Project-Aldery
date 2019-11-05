@@ -86,6 +86,8 @@ class Barchart3 extends React.Component {
           this.woman = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!K11:K16')
     
           for (let i = 0; i < this.man.length; i++) {
+
+            
     
             this.setState(prevState => ({
               dataMan: [...prevState.dataMan, this.man[i][0]],
