@@ -1,7 +1,7 @@
 import React from 'react'
-import Map from '../../components/layout/Map';
-import Navbar_main from '../../components/navbar_main';
-import Sidebar from '../../components/layout/sidebar';
+import Map from '../components/layout/Map';
+import Navbar_main from '../components/navbar_main';
+import Sidebar from '../components/layout/sidebar';
 
 class Main extends React.Component {
 

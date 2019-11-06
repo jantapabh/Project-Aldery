@@ -15,17 +15,17 @@ class Nav extends React.Component {
       status: false,
       list: [
         { name: "หน้าหลัก", href: "/" },
-        { name: "ข้อมูลทางสถิติ", href: "/mainchart" },
-        { name: "สวัสดิการจากรัฐ", href: "/maindoc" },
-        { name: "การบริการ", href: "/service" },
-        { name: "โรงพยาบาล", href: "/hospital" },
-        { name: "ช่วยเหลือ", href: "/help" },
+        { name: "ข้อมูลทางสถิติ", href: "/main/mainchart" },
+        { name: "สวัสดิการจากรัฐ", href: "/main/maindoc" },
+        { name: "การบริการ", href: "/main/service" },
+        { name: "โรงพยาบาล", href: "/main/hospital" },
+        { name: "ช่วยเหลือ", href: "/main/help" },
       ],
 
-      listMain: [{ name: "About", href: "/about" },
-      { name: "Project", href: "/project" },
-      { name: "Services", href: "/services" },
-      { name: "Contact", href: "contact" },
+      listMain: [{ name: "About", href: "/index/about" },
+      { name: "Project", href: "/index/project" },
+      { name: "Services", href: "/index/services" },
+      { name: "Contact", href: "/index/contact" },
       ],
 
     }

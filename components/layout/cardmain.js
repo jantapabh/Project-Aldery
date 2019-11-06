@@ -47,7 +47,7 @@ class CardData extends React.Component {
         return (
             <div className="warp-card">
                 <div className="card-group">
-                    <Link as={`/maindoc/man`} href={{ pathname: '/mantable' }}>
+                    <Link href="/main/mantable">
                         <div className="card">
                             <div className="card-data">
                                 <img src="/static/old-man.svg" />
@@ -65,7 +65,7 @@ class CardData extends React.Component {
                 </div>
 
                 <div className="card-group">
-                    <Link as={`/maindoc/woman`} href={{ pathname: '/womantable' }}>
+                    <Link href="/main/womantable">
                         <div className="card">
                             <div className="card-data">
                                 <img src="/static/old-woman.svg" />
@@ -83,7 +83,7 @@ class CardData extends React.Component {
                 </div>
 
                 <div className="card-group">
-                    <Link as={`/maindoc/total`} href={{ pathname: '/totaltable' }}>
+                    <Link href='totaltable/totaltable'>
                         <div className="card">
                             <div className="card-data">
                                 <img src="/static/couple.svg" />

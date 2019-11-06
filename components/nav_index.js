@@ -13,18 +13,18 @@ class Nav_index extends React.Component {
         this.state = {
             status: false,
             list: [
-                { name: "หน้าหลัก", href: "/" },
+                { name: "หน้าหลัก", href: "/main" },
                 { name: "ข้อมูลทางสถิติ", href: "/mainchart" },
                 { name: "สวัสดิการจากรัฐ", href: "/maindoc" },
-                { name: "การบริการ", href: "/service" },
-                { name: "โรงพยาบาล", href: "/hospital" },
-                { name: "ช่วยเหลือ", href: "/help" },
+                { name: "การบริการ", href: "/mainservice" },
+                { name: "โรงพยาบาล", href: "/mainhospital" },
+                { name: "ช่วยเหลือ", href: "/mainhelp" },
             ],
 
-            listMain: [{ name: "About", href: "/about" },
-            { name: "Project", href: "/project" },
-            { name: "Services", href: "/services" },
-            { name: "Contact", href: "contact" },
+            listMain: [{ name: "About", href: "/index/about" },
+            { name: "Project", href: "/index/project" },
+            { name: "Services", href: "/index/services" },
+            { name: "Contact", href: "/index/contact" },
             ],
 
         }

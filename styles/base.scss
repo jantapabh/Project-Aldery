@@ -61,14 +61,7 @@ h3{
     font-size: 1.75rem;
     text-align: center;
     margin: 0.5rem;
-   
-    @media (max-width: 1199.98px) {
-        font-size: 1.5rem !important;
-    }
-
-    @media (max-width: 991.98px) {
-        font-size: 1rem !important;
-    }
+  
 }
 
 h4{
@@ -76,15 +69,6 @@ h4{
     font-size: 1.5rem ;
     text-align: center;
     margin: 0.5rem;
-
-    @media (max-width: 1199.98px) {
-        font-size: 1rem !important;
-    }
-
-    @media (max-width: 991.98px) {
-        font-size: 0.5rem !important;
-    }
-   
 }
 
 h5{
