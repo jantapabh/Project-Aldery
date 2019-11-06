@@ -15,10 +15,10 @@ class CardAbout extends React.Component {
             <div className="warp-card">
                 <div className="card-group">
                     <div class="card">
-                        <h5 class="card-header">Featured</h5>
+                        <img src="/static/old-man.svg" />
                         <div class="card-body">
                             <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>

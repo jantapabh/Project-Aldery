@@ -30,7 +30,6 @@ class Nav_index extends React.Component {
         }
     }
 
-
     collapsible = async () => {
         if (!this.state.status) {
             await this.setState({
