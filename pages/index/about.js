@@ -15,17 +15,15 @@ const About = () => {
                         <h4>ฐานข้อมูลผู้สูงอายุ และอินโฟกราฟิก</h4>
                     </div>
                 </div>
-
-                <div className="card-detail">
-                    <CardAbout />
-                    <CardAbout />
-                    <CardAbout />
-
+                <div className="page-content-detail">
+                    <div className="container-fluid">
+                            <CardAbout />
+                            <CardAbout />
+                            <CardAbout />
+                    </div>
                 </div>
 
             </div>
-
-
         </div>
     )
 
