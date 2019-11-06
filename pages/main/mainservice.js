@@ -1,16 +1,16 @@
 import React from 'react'
-import Sheetapi from '../config/api'
+import Sheetapi from '../../config/api'
 import dynamic from 'next/dynamic'
-import Navbar_main from '../components/navbar_main';
-import Sidebar from '../components/layout/sidebar';
+import Navbar_main from '../../components/navbar_main';
+import Sidebar from '../../components/layout/sidebar';
 
 const Linechart = dynamic(
-    () => import('../components/chart/lineService'),
+    () => import('../../components/chart/lineService'),
     { ssr: false }
 )
 
 const Piechart = dynamic(
-    () => import('../components/chart/pieService'),
+    () => import('../../components/chart/pieService'),
     { ssr: false }
 )
 

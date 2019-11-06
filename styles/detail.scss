@@ -1,0 +1,24 @@
+.warp-detail {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background-color: #f3f5f7;
+
+  .page-detail {
+    padding: 2rem 1rem 0 1rem !important;
+   
+
+    .container-detail {
+      background-color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .item-header{
+        width: 50rem;
+        padding: 3rem 0;
+      }
+    }
+  }
+}

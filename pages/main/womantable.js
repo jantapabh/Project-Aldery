@@ -1,7 +1,7 @@
 import React from 'react'
-import Table from '../components/layout/table'
-import Nav from '../components/nav'
-import Sheetapi from '../config/api'
+import Table from '../../components/layout/table'
+import Nav from '../../components/nav'
+import Sheetapi from '../../config/api'
 class Womantable extends React.Component {
 
     constructor(props) {

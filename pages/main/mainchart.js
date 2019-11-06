@@ -1,8 +1,8 @@
 import React from 'react'
-import Sheetapi from '../config/api'
+import Sheetapi from '../../config/api'
 import dynamic from 'next/dynamic'
-import Navbar_main from '../components/navbar_main';
-import Sidebar from '../components/layout/sidebar';
+import Navbar_main from '../../components/navbar_main';
+import Sidebar from '../../components/layout/sidebar';
 
 // const Radachart = dynamic(
 //     () => import('../components/chart/radachart'),
@@ -10,17 +10,17 @@ import Sidebar from '../components/layout/sidebar';
 // )
 
 const Barchart = dynamic(
-    () => import('../components/chart/barChart'),
+    () => import('../../components/chart/barChart'),
     { ssr: false }
 )
 
 const Piechart = dynamic(
-    () => import('../components/chart/pieChart'),
+    () => import('../../components/chart/pieChart'),
     { ssr: false }
 )
 
 const Piechart2 = dynamic(
-    () => import('../components/chart/pieChart2'),
+    () => import('../../components/chart/pieChart2'),
     { ssr: false }
 )
 

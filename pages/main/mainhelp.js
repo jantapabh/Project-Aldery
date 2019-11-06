@@ -1,8 +1,7 @@
 import React from 'react'
-import Navbar_main from '../components/navbar_main';
-import Sidebar from '../components/layout/sidebar';
-import CardLink from '../components/layout/cardlinks';
-import Card from '../components/layout/card';
+import Navbar_main from '../../components/navbar_main';
+import Sidebar from '../../components/layout/sidebar';
+import CardLink from '../../components/layout/cardlinks';
 
 class MainHelp extends React.Component {
 

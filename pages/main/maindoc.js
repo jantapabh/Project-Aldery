@@ -1,9 +1,7 @@
 import React from 'react'
-import CardData from '../components/layout/cardmain';
-
-import Navbar_main from '../components/navbar_main';
-import Sidebar from '../components/layout/sidebar';
-import Link from 'next/link';
+import CardData from '../../components/layout/cardmain';
+import Navbar_main from '../../components/navbar_main';
+import Sidebar from '../../components/layout/sidebar';
 
 class Maindoc extends React.Component {
 

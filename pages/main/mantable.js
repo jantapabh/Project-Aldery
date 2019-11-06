@@ -1,8 +1,8 @@
 import React from 'react'
-import Table from '../components/layout/table'
-import Nav from '../components/nav'
-import Sheetapi from '../config/api'
-class Totaltable extends React.Component {
+import Table from '../../components/layout/table'
+import Nav from '../../components/nav'
+import Sheetapi from '../../config/api'
+class Mantable extends React.Component {
 
     constructor(props) {
         super(props);
@@ -15,7 +15,7 @@ class Totaltable extends React.Component {
         await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.list('ข้อมูลทั่วไป!A9:F')
+        await this.list('เพศชาย!A8:E')
     }
 
     list = async (value) => {
@@ -27,9 +27,9 @@ class Totaltable extends React.Component {
             for (let i = 0; i < this.list.length; i++) {
                 let value = await {
                     ลำดับที่: this.list[i][0],
-                    คำนำหน้า: this.list[i][3],
-                    ชื่อ: this.list[i][4],
-                    นามสกุล: this.list[i][5],
+                    คำนำหน้า: this.list[i][2],
+                    ชื่อ: this.list[i][3],
+                    นามสกุล: this.list[i][4],
 
                 }
                 this.setState(prevState => ({
@@ -43,17 +43,16 @@ class Totaltable extends React.Component {
     }
 
     render() {
+        const { data } = this.state
+
         return (
-            <div className="warp-main">
+            <React.Fragment>
                 <Nav />
-
                 <Table
-                    data={this.state.data}
+                    data={data}
                 />
-
-
-            </div>
+            </React.Fragment>
         )
     }
 }
-export default Totaltable
+export default Mantable
