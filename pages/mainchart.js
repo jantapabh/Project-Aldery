@@ -14,12 +14,12 @@ const Barchart = dynamic(
     { ssr: false }
 )
 
-const Picchart = dynamic(
-    () => import('../components/chart/pieChart'),
+const Piechart = dynamic(
+    () => import('../components/chart/pieChart1'),
     { ssr: false }
 )
 
-const Picchart2 = dynamic(
+const Piechart2 = dynamic(
     () => import('../components/chart/pieChart2'),
     { ssr: false }
 )
@@ -55,10 +55,10 @@ class Mainchart extends React.Component {
                             <h2 className="small text-center"></h2>
                             <div className="warp-chart">
                                 <div className="chart-contents">
-                                    <Picchart />
+                                    <Piechart />
                                 </div>
                                 <div className="chart-contents">
-                                    <Picchart2 />
+                                    <Piechart2 />
                                 </div>
                             </div>
 
