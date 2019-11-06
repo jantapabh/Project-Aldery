@@ -78,7 +78,7 @@ class Home extends React.Component {
                 </text>
                 </div>
 
-                <Link href="/about">
+                <Link as={`/main/about`} href={{ pathname: '/about' }} >
                   <button className="btn-outline-center" >อ่านต่อ</button>
                 </Link>
                 <Link href="/main">
@@ -94,7 +94,7 @@ class Home extends React.Component {
             <div className="page-content">
               <div className="container-fluid">
                 <h1>Project</h1>
-              
+
                 <div className="page-content-data">
                   <div className="container-fluid">
                     {/* <div className="card-img">
@@ -112,7 +112,7 @@ class Home extends React.Component {
             <div className="page-content">
               <div className="container-fluid">
                 <h1>Services</h1>
-                <Link href="/services">
+                <Link as={`/main/services`} href={{ pathname: '/services' }} >
                   <button className="btn-outline-center" >อ่านต่อ</button>
                 </Link>
                 <div className="page-content-data">
@@ -150,7 +150,7 @@ class Home extends React.Component {
                   <h1>Contact</h1>
                   <h6>สำนักงานเทศบาลเมืองกะทู้ 12 หมู่ 2 ถนนวิชิตสงคราม ตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต 83120<br /> โทรศัพท์ 076-321500 โทรสาร 076-322129 , 076-322126.</h6>
                   <div className="btn-center">
-                    <Link href="/contact">
+                    <Link as={`/main/contact`} href={{ pathname: '/contact' }}>
                       <button className="btn-outline-center" >อ่านต่อ</button>
                     </Link>
                   </div>

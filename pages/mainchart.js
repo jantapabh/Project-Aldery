@@ -10,7 +10,7 @@ import Sidebar from '../components/layout/sidebar';
 // )
 
 const Barchart = dynamic(
-    () => import('../components/chart/barChart1'),
+    () => import('../components/chart/barChart'),
     { ssr: false }
 )
 
