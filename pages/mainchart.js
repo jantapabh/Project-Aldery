@@ -4,10 +4,10 @@ import dynamic from 'next/dynamic'
 import Navbar_main from '../components/navbar_main';
 import Sidebar from '../components/layout/sidebar';
 
-const Radachart = dynamic(
-    () => import('../components/chart/radachart'),
-    { ssr: false }
-)
+// const Radachart = dynamic(
+//     () => import('../components/chart/radachart'),
+//     { ssr: false }
+// )
 
 const Barchart = dynamic(
     () => import('../components/chart/barChart'),
