@@ -5,12 +5,12 @@ import Navbar_main from '../components/navbar_main';
 import Sidebar from '../components/layout/sidebar';
 
 const Linechart = dynamic(
-    () => import('../components/chart/lineService'),
+    () => import('../components/chart/lineService1'),
     { ssr: false }
 )
 
 const Piechart = dynamic(
-    () => import('../components/chart/pieService'),
+    () => import('../components/chart/pieService1'),
     { ssr: false }
 )
 

@@ -20,7 +20,7 @@ const Piechart = dynamic(
 )
 
 const Piechart2 = dynamic(
-    () => import('../components/chart/pieChart2'),
+    () => import('../components/chart/pieChart22'),
     { ssr: false }
 )
 
