@@ -15,7 +15,7 @@ const Barchart = dynamic(
 )
 
 const Picchart = dynamic(
-    () => import('../components/chart/pieChart1'),
+    () => import('../components/chart/pieChart'),
     { ssr: false }
 )
 
