@@ -94,17 +94,16 @@ class Home extends React.Component {
             <div className="page-content">
               <div className="container-fluid">
                 <h1>Project</h1>
+              
                 <div className="page-content-data">
                   <div className="container-fluid">
-                    <div className="card-img">
+                    {/* <div className="card-img">
                       <img src="/static/cover-img2.png" className="card-img-top" alt="..." />
-                    </div>
+                    </div> */}
 
                   </div>
                 </div>
-                <Link href="/project">
-                  <button className="btn-outline-center" >อ่านต่อ</button>
-                </Link>
+
               </div>
             </div>
           </section>
@@ -113,7 +112,11 @@ class Home extends React.Component {
             <div className="page-content">
               <div className="container-fluid">
                 <h1>Services</h1>
+                <Link href="/services">
+                  <button className="btn-outline-center" >อ่านต่อ</button>
+                </Link>
                 <div className="page-content-data">
+
                   <div className="container-fluid">
                     <div className="card">
                       <img src="/static/cover-img2.png" className="card-img-top" alt="..." />
@@ -135,9 +138,7 @@ class Home extends React.Component {
                     </div>
                   </div>
                 </div>
-                <Link href="/services">
-                  <button className="btn-outline-center" >อ่านต่อ</button>
-                </Link>
+
               </div>
             </div>
           </section>
