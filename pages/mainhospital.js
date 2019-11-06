@@ -6,7 +6,7 @@ import Sidebar from '../components/layout/sidebar';
 
 
 const Barchart = dynamic(
-    () => import('../components/chart/barHospital1'),
+    () => import('../components/chart/barHospital'),
     { ssr: false }
 )
 
