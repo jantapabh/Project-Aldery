@@ -45,7 +45,7 @@ class CardData extends React.Component {
 
     render() {
         return (
-            <div className="warp-card">
+            <div className="warp-card-basic">
                 <div className="card-group">
                     <Link href="/main/mantable">
                         <div className="card">

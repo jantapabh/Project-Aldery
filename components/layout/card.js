@@ -12,7 +12,7 @@ class Card extends React.Component {
     render() {
 
         return (
-            <div className="warp-card">
+            <div className="warp-card-basic">
                 <div className="card-group">
                     <div className="card">
                         <div className="card-data">

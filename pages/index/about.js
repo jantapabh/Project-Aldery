@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Nav_index from '../../components/nav_index';
+import CardAbout from '../../components/layout/cardabout';
 
 
 const About = () => {
@@ -16,7 +17,10 @@ const About = () => {
                 </div>
 
                 <div className="card-detail">
-   
+                    <CardAbout />
+                    <CardAbout />
+                    <CardAbout />
+
                 </div>
 
             </div>
