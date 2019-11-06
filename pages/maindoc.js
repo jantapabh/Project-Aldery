@@ -1,22 +1,15 @@
 import React from 'react'
 import CardData from '../components/layout/cardmain';
-import Nav from '../components/nav';
-import Nav_logo from '../components/layout/nav_logo';
+
 import Navbar_main from '../components/navbar_main';
 import Sidebar from '../components/layout/sidebar';
+import Link from 'next/link';
 
 class Maindoc extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            list: [{ name: "หน้าหลัก", link: "/" },
-            { name: "ความคืบหน้า", link: "/main" },
-            { name: "ข้อมูลทางสถิติ", link: "/mainchart" },
-            { name: "การบริการ", link: "/service" },
-            { name: "โรงพยาบาล", link: "/hospital" },
-            { name: "ช่วยเหลือ", link: "/help" },
-            ],
             status: true
         }
     }
@@ -34,7 +27,6 @@ class Maindoc extends React.Component {
             <div className="warp-main">
                 <Navbar_main confirm={this.onConfirm} status={this.state.status} />
                 <Sidebar status={this.state.status} />
-
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
@@ -42,9 +34,12 @@ class Maindoc extends React.Component {
 
                             <CardData />
                             <div className="data-source" >
-                                {/* <Link href="/"> */}
-                                <img src="/static/logo-google-sheets.svg" />
-                                {/* </Link> */}
+                                <a
+                                    target="_blank"
+                                    href="https://docs.google.com/spreadsheets/d/15bzSXCpQI7qVZyW3-kCQsQ1Qg_6ssRSTa5X4aNavIp8/edit?usp=sharing">
+                                    <img src="/static/logo-google-sheets.svg" />
+                                </a>
+
                                 <div className="text-source">
                                     <h6 >ที่มา: แบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ ผู้พิการเเละผู้ป่วยในชุมชน</h6>
                                     <h6>เทศบาลเมืองกะทู้ จังหวัดภูเก็ต</h6>
