@@ -13,18 +13,19 @@ class Nav extends React.Component {
     super(props);
     this.state = {
       status: false,
-      list: [{ name: "หน้าหลัก", href: "/" },
-      { name: "ข้อมูลทางสถิติ", href: "/mainchart" },
-      { name: "สวัสดิการจากรัฐ", href: "/maindoc" },
-      { name: "การบริการ", href: "/service" },
-      { name: "โรงพยาบาล", href: "/hospital" },
-      { name: "ช่วยเหลือ", href: "/help" },
+      list: [
+        { name: "หน้าหลัก", href: "/" },
+        { name: "ข้อมูลทางสถิติ", href: "/mainchart" },
+        { name: "สวัสดิการจากรัฐ", href: "/maindoc" },
+        { name: "การบริการ", href: "/service" },
+        { name: "โรงพยาบาล", href: "/hospital" },
+        { name: "ช่วยเหลือ", href: "/help" },
       ],
 
-      listMain: [{ name: "About", href: "#" },
-      { name: "Project", href: "#" },
-      { name: "Services", href: "#" },
-      { name: "Contact", href: "#" },
+      listMain: [{ name: "About", href: "/about" },
+      { name: "Project", href: "/project" },
+      { name: "Services", href: "/services" },
+      { name: "Contact", href: "contact" },
       ],
 
     }
