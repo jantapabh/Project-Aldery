@@ -9,7 +9,7 @@ const Radachart = dynamic(
     { ssr: false }
 )
 
-const Barchart3 = dynamic(
+const Barchart = dynamic(
     () => import('../components/chart/barChart'),
     { ssr: false }
 )
@@ -64,7 +64,7 @@ class Mainchart extends React.Component {
 
                             <div className="warp-chart">
                                 <div className="chart-contents">
-                                    <Barchart3 />
+                                    <Barchart />
                                 </div>
                                 <div className="chart-contents">
                                     {/* <Radachart /> */}
