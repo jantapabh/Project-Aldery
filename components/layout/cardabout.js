@@ -94,7 +94,7 @@ class CardAbout extends React.Component {
                                         <div class="card-body">
                                             <h5 class="card-title">{title}</h5>
                                             <p class="card-text">{subtitle}</p>
-                                            <a href="#" class="btn btn-primary" id={id} onClick={this.setStatus}>{click}</a>
+                                            <a class="btn btn-primary" id={id} onClick={this.setStatus}>{click}</a>
                                         </div>
                                     </div>
                                 </div>
