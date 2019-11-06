@@ -30,19 +30,6 @@ class Home extends React.Component {
 
   }
 
-  collapsible = async () => {
-    if (!this.state.status) {
-      await this.setState({
-        status: true
-      })
-    }
-    else {
-      await this.setState({
-        status: false
-      })
-    }
-  }
-
   onMarkerClick = (props, marker, e) => {
     if (this.state.showingInfoWindow) {
       this.setState({

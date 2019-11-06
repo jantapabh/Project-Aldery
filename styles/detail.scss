@@ -19,6 +19,21 @@
         width: 50rem;
         padding: 3rem 0;
       }
+
+      .btn-close {
+        width: 3rem;
+        padding: 1rem;
+        .close {
+          font-size: 2rem;
+          span {
+            user-select: none;
+          }
+        }
+
+        .close:focus {
+          outline: none;
+        }
+      }
     }
 
     .container-fluid {
@@ -74,10 +89,16 @@
           }
         }
 
-        .card:hover{
+        .card:hover {
           box-shadow: 0 0 0 0 !important;
         }
       }
+    }
+  }
+
+  .container-fluid.non {
+    .non {
+      display: none;
     }
   }
 }
