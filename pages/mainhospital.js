@@ -1,14 +1,12 @@
 import React from 'react'
 import Sheetapi from '../config/api'
 import dynamic from 'next/dynamic'
-import Nav from '../components/nav';
-import Nav_logo from '../components/layout/nav_logo';
 import Navbar_main from '../components/navbar_main';
 import Sidebar from '../components/layout/sidebar';
 
 
 const Barchart = dynamic(
-    () => import('../components/chart/barchart'),
+    () => import('../components/chart/barHospital'),
     { ssr: false }
 )
 
@@ -18,13 +16,6 @@ class MainHospital extends React.Component {
         super(props);
 
         this.state = {
-            list: [{ name: "หน้าหลัก", link: "/" },
-            { name: "ความคืบหน้า", link: "/main" },
-            { name: "ข้อมูลทางสถิติ", link: "/mainchart" },
-            { name: "สวัสดิการจากรัฐ", link: "/maindoc" },
-            { name: "การบริการ", link: "/service" },
-            { name: "ช่วยเหลือ", link: "/help" },
-            ],
             status: true
         }
     }

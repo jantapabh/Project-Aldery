@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 
-class Picchart2 extends Component {
+class PieChart extends Component {
 
     constructor(props) {
         super(props);
@@ -88,4 +88,4 @@ class Picchart2 extends Component {
     }
 }
 
-export default Picchart2;
+export default PieChart;

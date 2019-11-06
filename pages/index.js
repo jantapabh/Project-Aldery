@@ -80,7 +80,6 @@ class Home extends React.Component {
                 <Link href="/main">
                   <button className="btn-outline-center" >หน้าหลัก</button>
                 </Link>
-
               </div>
             </div>
           </section>

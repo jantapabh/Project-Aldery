@@ -4,33 +4,23 @@ import dynamic from 'next/dynamic'
 import Navbar_main from '../components/navbar_main';
 import Sidebar from '../components/layout/sidebar';
 
-// const Areachart = dynamic(
-//     () => import('../components/chart/area'),
-//     { ssr: false }
-// )
-
 const Radachart = dynamic(
     () => import('../components/chart/radachart'),
     { ssr: false }
 )
 
 const Barchart3 = dynamic(
-    () => import('../components/chart/barchart3'),
-    { ssr: false }
-)
-
-const Barchart = dynamic(
-    () => import('../components/chart/barchart2'),
+    () => import('../components/chart/barChart'),
     { ssr: false }
 )
 
 const Picchart = dynamic(
-    () => import('../components/chart/piechart'),
+    () => import('../components/chart/pieChart'),
     { ssr: false }
 )
 
 const Picchart2 = dynamic(
-    () => import('../components/chart/piechart2'),
+    () => import('../components/chart/pieChart2'),
     { ssr: false }
 )
 

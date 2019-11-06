@@ -1,89 +1,112 @@
-import React, { Component } from 'react';
+import React from 'react'
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 
-class Bar extends Component {
 
+class Barchart extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       options: {},
+      datalist: [],
       series: [],
-      dataList: [],
-      dataName: []
+      dataMan: [],
+      dataWoman: [],
+
     }
   }
 
   async componentDidMount() {
     let userOauth = JSON.parse(localStorage.getItem("myOauth"))
     this.access_token = userOauth.data.access_token
-    await this.namelist('ข้อมูลการวิเคราะห์ทางสถิติ!N79:N86')
-    await this.numberlist('ข้อมูลการวิเคราะห์ทางสถิติ!O79:O86')
+    await this.listName('ข้อมูลการวิเคราะห์ทางสถิติ!H11:H16')
+    await this.listData()
   }
 
-  namelist = async (value) => {
-
+  listName = async (value) => {
     try {
-
       this.list = await Sheetapi.getSheet(this.access_token, value)
-
       for (let i = 0; i < this.list.length; i++) {
 
         this.setState(prevState => ({
-          dataName: [...prevState.dataName, this.list[i][0]],
+          datalist: [...prevState.datalist, this.list[i][0]],
         }))
       }
 
       this.setState({
-
         options: {
           title: {
-            text: 'สถานพยาบาลที่ใช้ประจำ',
+            text: 'สถานภาพ',
             align: 'left'
           },
-          plotOptions: {
-            bar: { horizontal: true }
-          },
-          dataLabels: { enabled: false },
-          xaxis: {
-            categories: this.state.dataName ,
-            title: {
-              text: 'จำนวน (คน)'
+          chart: {
+            stacked: true,
+            toolbar: {
+              show: true
+            },
+            zoom: {
+              enabled: true
             }
           },
-          tooltip: {
-            y: {
-              formatter: function (val) {
-                return val + " คน"
+          responsive: [{
+            breakpoint: 480,
+            options: {
+              legend: {
+                position: 'bottom',
+                offsetX: -10,
+                offsetY: 0
               }
             }
+          }],
+          plotOptions: {
+            bar: {
+              horizontal: false,
+            },
           },
+
+          xaxis: {
+            categories: this.state.datalist,
+          },
+          legend: {
+            position: 'right',
+            offsetY: 40
+          },
+          fill: {
+            opacity: 1
+          }
         }
-
       })
-
 
     } catch (err) {
       console.log(err);
     }
-
   }
 
-  numberlist = async (value) => {
-
+  listData = async () => {
     try {
 
-      this.list = await Sheetapi.getSheet(this.access_token, value)
+      this.man = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!J11:J16')
+      this.woman = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!K11:K16')
 
-      for (let i = 0; i < this.list.length; i++) {
+      for (let i = 0; i < this.man.length; i++) {
+
+
+
         this.setState(prevState => ({
-          dataList: [...prevState.dataList, parseInt(this.list[i][0])],
+          dataMan: [...prevState.dataMan, this.man[i][0]],
+        }))
+      }
+
+      for (let i = 0; i < this.woman.length; i++) {
+
+        this.setState(prevState => ({
+          dataWoman: [...prevState.dataWoman, this.woman[i][0]],
         }))
       }
 
       this.setState({
-        series: [{ name: "จำนวน", data: this.state.dataList }],
+        series: [{ name: "เพศชาย", data: this.state.dataMan }, { name: "เพศหญิง", data: this.state.dataWoman }],
       })
 
     } catch (err) {
@@ -92,20 +115,13 @@ class Bar extends Component {
 
   }
 
-  render() {
 
+  render() {
     return (
       <div className="warp-chart">
-        <Chart
-          options={this.state.options}
-          series={this.state.series}
-          type="bar" width="700"
-          height="400"
-            width="800"
-        />
+        <Chart options={this.state.options} series={this.state.series} type="bar" height="300" width="600" />
       </div>
-    );
+    )
   }
 }
-
-export default Bar;
+export default Barchart;

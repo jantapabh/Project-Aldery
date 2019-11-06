@@ -5,12 +5,12 @@ import Navbar_main from '../components/navbar_main';
 import Sidebar from '../components/layout/sidebar';
 
 const Linechart = dynamic(
-    () => import('../components/chart/linechart'),
+    () => import('../components/chart/lineService'),
     { ssr: false }
 )
 
-const Picchart = dynamic(
-    () => import('../components/chart/picchart2'),
+const Piechart = dynamic(
+    () => import('../components/chart/pieService'),
     { ssr: false }
 )
 
@@ -53,7 +53,7 @@ class MainService extends React.Component {
 
                             <div className="warp-chart">
                                 <div className="chart-pic">
-                                    <Picchart />
+                                    <Piechart />
                                 </div>
 
                                 <div className="chart-contents">

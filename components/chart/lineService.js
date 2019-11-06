@@ -2,7 +2,7 @@ import React from 'react'
 import Chart from "react-apexcharts";
 import Sheetapi from '../../config/api'
 
-class Linechart extends React.Component {
+class LineService extends React.Component {
   constructor(props) {
     super(props);
 
@@ -162,4 +162,4 @@ class Linechart extends React.Component {
   }
 }
 
-export default Linechart;
+export default LineService;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 
-class Picchart_2 extends Component {
+class PieService extends Component {
 
   constructor(props) {
     super(props);
@@ -102,4 +102,4 @@ console.log("DATA:::" , this.state.data);
   }
 }
 
-export default Picchart_2;
+export default PieService;
