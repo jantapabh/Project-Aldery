@@ -1,0 +1,115 @@
+import React from 'react'
+import Link from 'next/link'
+import Nav_logo from './layout/nav_logo';
+
+class Nav_index extends React.Component {
+
+    static defaultProps = {
+        name: "",
+    }
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            status: false,
+            list: [
+                { name: "หน้าหลัก", href: "/" },
+                { name: "ข้อมูลทางสถิติ", href: "/mainchart" },
+                { name: "สวัสดิการจากรัฐ", href: "/maindoc" },
+                { name: "การบริการ", href: "/service" },
+                { name: "โรงพยาบาล", href: "/hospital" },
+                { name: "ช่วยเหลือ", href: "/help" },
+            ],
+
+            listMain: [{ name: "About", href: "/about" },
+            { name: "Project", href: "/project" },
+            { name: "Services", href: "/services" },
+            { name: "Contact", href: "contact" },
+            ],
+
+        }
+    }
+
+
+    collapsible = async () => {
+        if (!this.state.status) {
+            await this.setState({
+                status: true
+            })
+        }
+        else {
+            await this.setState({
+                status: false
+            })
+        }
+    }
+
+
+    render() {
+
+        const { listMain } = this.state
+
+        return (
+            <React.Fragment>
+                <nav>
+                    <ul>
+                        <div className="warp-table">
+                            <Link href="/">
+                                <li>
+                                    <p>ย้อนกลับ</p>
+                                </li>
+                            </Link>
+                        </div>
+
+                        <div className="warp-manu">
+                            <ul>
+                                <li>
+                                    {
+                                        listMain.map((item, index) => {
+                                            return (
+                                                <Link href={item.href}>
+                                                    <p key={index}>{item.name}</p>
+                                                </Link>
+                                            )
+                                        })
+                                    }
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </nav>
+                <div class="collapsible-menu">
+                    <div className="warp-nav-sidebar">
+                        <Nav_logo />
+                        <div className="box-hamberger">
+                            <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div className={`menu-content${this.state.status ? " show" : ""}`}>
+                        <ul>
+                            <li >
+                                {
+                                    listMain.map((item, index) => {
+                                        return (
+                                            <Link href={item.href}>
+                                                <p key={index}>{item.name}</p>
+                                            </Link>
+                                        )
+                                    })
+                                }
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </React.Fragment>
+
+
+
+        )
+    }
+}
+export default Nav_index

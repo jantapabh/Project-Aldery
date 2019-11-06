@@ -138,10 +138,15 @@ class Nav extends React.Component {
                   <div className="warp-manu">
                     <ul>
                       <li>
-                        <p><AnchorLink href='#about'>About</AnchorLink></p>
-                        <p><AnchorLink href='#project'>Project</AnchorLink></p>
-                        <p><AnchorLink href='#services'>Services</AnchorLink></p>
-                        <p><AnchorLink href='#contact'>Contact</AnchorLink></p>
+                        {
+                          this.state.list.map((item, index) => {
+                            return (
+                              <Link href={item.href}>
+                                <p key={index}>{item.name}</p>
+                              </Link>
+                            )
+                          })
+                        }
                       </li>
                     </ul>
                   </div>
@@ -161,10 +166,15 @@ class Nav extends React.Component {
                 <div className={`menu-content${this.state.status ? " show" : ""}`}>
                   <ul>
                     <li >
-                      <p><AnchorLink href='#about'>About</AnchorLink></p>
-                      <p><AnchorLink href='#project'>Project</AnchorLink></p>
-                      <p><AnchorLink href='#services'>Services</AnchorLink></p>
-                      <p><AnchorLink href='#contact'>Contact</AnchorLink></p>
+                      {
+                        this.state.list.map((item, index) => {
+                          return (
+                            <Link href={item.href}>
+                              <p key={index}>{item.name}</p>
+                            </Link>
+                          )
+                        })
+                      }
                     </li>
                   </ul>
                 </div>
