@@ -77,13 +77,15 @@ class Home extends React.Component {
                     นอกจากนี้ยังมีการให้ข้อมูล เกี่ยวกับสิทธิที่พึ่งได้ของผู้สูงอายุ
                 </text>
                 </div>
-                <Link href="/main">
-                  <button className="btn-outline-center" >หน้าหลัก</button>
-                </Link>
 
                 <Link href="/about">
                   <button className="btn-outline-center" >อ่านต่อ</button>
                 </Link>
+                <Link href="/main">
+                  <button className="btn-outline-center" >หน้าหลัก</button>
+                </Link>
+
+
               </div>
             </div>
           </section>
@@ -146,9 +148,12 @@ class Home extends React.Component {
                 <div className="container-text">
                   <h1>Contact</h1>
                   <h6>สำนักงานเทศบาลเมืองกะทู้ 12 หมู่ 2 ถนนวิชิตสงคราม ตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต 83120<br /> โทรศัพท์ 076-321500 โทรสาร 076-322129 , 076-322126.</h6>
-                  <Link href="/contact">
-                    <button className="btn-outline-center" >อ่านต่อ</button>
-                  </Link>
+                  <div className="btn-center">
+                    <Link href="/contact">
+                      <button className="btn-outline-center" >อ่านต่อ</button>
+                    </Link>
+                  </div>
+
                 </div>
               </div>
 
