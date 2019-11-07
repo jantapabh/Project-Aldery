@@ -6,7 +6,15 @@ const Services = () => {
 
     return (
         <div>
-            <Nav_index/>
+            <Nav_index />
+            <div class="container">
+                <ul class="progressbar">
+                    <li class="active">login</li>
+                    <li>choose interest</li>
+                    <li>add friends</li>
+                    <li>View map</li>
+                </ul>
+            </div>
         </div>
     )
 
