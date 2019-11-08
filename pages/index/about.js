@@ -49,9 +49,6 @@ class About extends React.Component {
                                             click={items.click}
                                             confirm={this.onConfirm}
                                         />
-
-
-
                                     )
                                 })
                             }
