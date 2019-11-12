@@ -10,7 +10,7 @@ nav {
   z-index: 99;
   // position: fixed;
   @media (max-width: 799px) {
-    display: none;
+    display: none !important;
   }
 
   ul {

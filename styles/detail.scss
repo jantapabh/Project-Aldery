@@ -1,4 +1,5 @@
 .warp-detail {
+  position: fixed;
   width: 100%;
   min-height: 100vh;
   height: auto;
@@ -99,6 +100,46 @@
   .container-fluid.non {
     .non {
       display: none;
+    }
+  }
+}
+
+
+$margin-rs-steps: 2rem;
+
+///SERVICES
+.page-content-services {
+  margin: 3rem 1rem;
+
+  .rs-btn-group {
+    margin: 1rem 0.5rem 2rem 0.5rem;
+  }
+
+  .normal {
+    .rs-steps.rs-steps-vertical {
+      display: contents !important;
+
+      .rs-steps-item.rs-steps-item-status-wait {
+        margin-left: $margin-rs-steps;
+      }
+
+      .rs-steps-item.rs-steps-item-status-process {
+        margin-left: $margin-rs-steps;
+      }
+
+      .rs-steps-item.rs-steps-item-status-finish {
+        margin-left: $margin-rs-steps;
+      }
+    }
+    @media (max-width: 1023px) {
+      display: none !important;
+    }
+  }
+
+  .mobile {
+    display: none;
+    @media (max-width: 1023px) {
+      display: block;
     }
   }
 }

@@ -21,7 +21,7 @@ class Home extends React.Component {
       showingInfoWindow: false,
       activeMarker: {},
       selectedPlace: {},
-      link: ["/index/about","/index/project","/index/services","/index/contact"]
+      link: ["/index/about", "/index/project", "/index/services", "/index/contact"]
     };
   }
 
@@ -51,7 +51,7 @@ class Home extends React.Component {
   render() {
 
 
-    const {link} = this.state
+    const { link } = this.state
 
     return (
       <div className="warp-index">
@@ -107,15 +107,18 @@ class Home extends React.Component {
                 <Link href={link[2]} >
                   <button className="btn-outline-center" >อ่านต่อ</button>
                 </Link>
-                <div className="page-content-data">
+                {/* <div className="page-content-data">
 
                   <div className="container-fluid">
-                    <div className="card">
-                      <img src="/static/cover-img2.png" className="card-img-top" alt="..." />
-                      <div class="card-body">
-                        <h6 class="card-text">ปรึกษาปัญหา</h6>
+                    <Link href="">
+                      <div className="card">
+                        <img src="/static/cover-img2.png" className="card-img-top" alt="..." />
+                        <div class="card-body">
+                          <h6 class="card-text">ปรึกษาปัญหา</h6>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
+
                     <div className="card">
                       <img src="/static/cover-img.png" className="card-img-top" alt="..." />
                       <div class="card-body">
@@ -129,7 +132,7 @@ class Home extends React.Component {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
 
               </div>
             </div>
