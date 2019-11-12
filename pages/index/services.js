@@ -73,27 +73,6 @@ class Services extends React.Component {
                             </Steps>
                         </div>
 
-{/* 
-
-                        <div className="mobile">
-                            <ButtonGroup>
-                                <Button onClick={this.decline} disabled={step === 0} appearance={step !== 0 ? "primary" : ""}>
-                                    <h5>Previous</h5>
-                                </Button>
-                                <Button onClick={this.increase} disabled={step === 3} >
-                                    <h5>Next</h5>
-                                </Button>
-                            </ButtonGroup>
-                            <br />
-
-                            <Steps current={step} vertical style={styles} >
-                                <Steps.Item title="ลงทะเบียน" description="ลงทะเบียนผ่านเเบบคำขอลงทะเบียนรับเงินเบี้ยยังชีพผู้สูงอายุ" />
-                                <Steps.Item title="ตรวจสอบคุณสมบัติ" description="จากทะเบียนราษฎร" />
-                                <Steps.Item title="บันทึกข้อมูล" description="ลงฐานข้อมูล" />
-                                <Steps.Item title="เสนออนุมัติ" description="แจ้งผู้ยื่นขอ / ประกาศรายชื่อผู้มีสิทธิ" />
-                            </Steps>
-                        </div> */}
-
                         <div className="normal-message">
 
                             <Message
@@ -107,7 +86,6 @@ class Services extends React.Component {
                                             2. ทะเบียนบ้านพร้อมสำเนา<br />
                                             3. สมุดบัญชีธนาคาร พร้อมสำเนา (กรณีรับเงินผ่านธนาคาร)
                                             </h5>
-
 
                                         <br />
                                         <h4>แบบฟอร์มที่เกี่ยวข้อง</h4>
@@ -138,20 +116,6 @@ class Services extends React.Component {
                                         }
                                     />
                                     :
-
-                                    // message == 2 ?
-                                    //     <Message
-                                    //         type="error"
-                                    //         title="Error"
-                                    //         description={
-                                    //             <p>
-                                    //                 <h5>Additional description and informations about copywriting.</h5>
-                                    //                 <br />
-                                    //                 <a href="#">This is a Link.</a>
-                                    //             </p>
-                                    //         }
-                                    //     />
-                                    //     :
                                     message == 3 ?
                                         <Message
                                             type="success"
@@ -184,7 +148,6 @@ class Services extends React.Component {
                                             3. สมุดบัญชีธนาคาร พร้อมสำเนา (กรณีรับเงินผ่านธนาคาร)
                                             </h5>
 
-
                                         <br />
                                         <h4>แบบฟอร์มที่เกี่ยวข้อง</h4>
 
@@ -206,8 +169,7 @@ class Services extends React.Component {
                                             3. ไม่เป็นผู้ได้รับสวัสดิการ หรือสิทธิประโยชน์อื่นใดจากหน่วยงานของรัฐ<br />
                                             รัฐวิสาหกิจ หรือองค์กรปกครองส่วนท้องถิ่น เช่น ผู้ได้รับเงินบำนาญ เบี้ยวัด<br />
                                             ผู้ที่อยู่อาศัยในสถานสงเคราะห์ของรัฐ หรือองค์กรปกครองส่วนท้องถิ่น
-
-                                                </h5>
+                                        </h5>
                                         <p>ยกเว้นผู้พิการ เเละผู้ป่วยเอดส์</p>
                                     </p>
                                 }

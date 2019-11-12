@@ -8,9 +8,11 @@
 @import './sidebar.scss';
 @import './detail.scss';
 
+@import './index/services.scss';
+@import './index/concast.scss';
+
 
 $font : 'Prompt', sans-serif ;
-
 
 body{
     font-family: $font;
