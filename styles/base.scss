@@ -77,13 +77,7 @@ h5{
     text-align: center;
     margin-bottom: 0.5rem;
 
-    @media (max-width: 1199.98px) {
-        font-size: 1rem !important;
-    }
-
-    @media (max-width: 991.98px) {
-        font-size: 0.5rem !important;
-    }
+ 
     
 }
 
@@ -93,11 +87,6 @@ h6{
     text-align: center;
     margin-bottom: 1rem !important;
 
-    
-    @media (max-width: 991.98px) {
-        font-size: 0.75rem !important;
-    }
-    
 }
 
 p{

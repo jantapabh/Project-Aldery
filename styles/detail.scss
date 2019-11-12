@@ -1,5 +1,5 @@
 .warp-detail {
-  position: fixed;
+  position: absolute;
   width: 100%;
   min-height: 100vh;
   height: auto;
@@ -104,11 +104,13 @@
   }
 }
 
-
 $margin-rs-steps: 2rem;
+$font-rs-title: 1.2rem;
+$font-rs-description: 1rem;
 
 ///SERVICES
 .page-content-services {
+  display: flex;
   margin: 3rem 1rem;
 
   .rs-btn-group {
@@ -116,8 +118,17 @@ $margin-rs-steps: 2rem;
   }
 
   .normal {
+    width: 50%;
     .rs-steps.rs-steps-vertical {
       display: contents !important;
+
+      .rs-steps-item-title {
+        font-size: $font-rs-title;
+      }
+
+      .rs-steps-item-description {
+        font-size: $font-rs-description;
+      }
 
       .rs-steps-item.rs-steps-item-status-wait {
         margin-left: $margin-rs-steps;
@@ -131,6 +142,45 @@ $margin-rs-steps: 2rem;
         margin-left: $margin-rs-steps;
       }
     }
+    @media (max-width: 1023px) {
+      display: none !important;
+    }
+  }
+
+  .normal-message {
+    margin-top: 3rem;
+    width: 50%;
+
+    .rs-message {
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+
+    h5.rs-message-header {
+      text-align: start;
+      font-size: $font-rs-title !important;
+    }
+
+    .rs-message-body {
+      p {
+        color: black; 
+        p{
+          line-height: 1.5rem;
+          font-size: 0.7rem !important;
+          color: red;
+        }
+        h4,h5 {
+          text-align: start;
+          font-weight: 300;
+        }
+      }
+
+      a {
+        margin-right: 0.5rem;
+        text-decoration: none !important;
+      }
+    }
+
     @media (max-width: 1023px) {
       display: none !important;
     }
