@@ -163,13 +163,14 @@ $font-rs-description: 1rem;
 
     .rs-message-body {
       p {
-        color: black; 
-        p{
+        color: black;
+        p {
           line-height: 1.5rem;
           font-size: 0.7rem !important;
           color: red;
         }
-        h4,h5 {
+        h4,
+        h5 {
           text-align: start;
           font-weight: 300;
         }
@@ -182,7 +183,7 @@ $font-rs-description: 1rem;
     }
 
     @media (max-width: 1023px) {
-      display: none !important;
+      display: none;
     }
   }
 
@@ -191,5 +192,52 @@ $font-rs-description: 1rem;
     @media (max-width: 1023px) {
       display: block;
     }
+
+    .rs-steps.rs-steps-vertical {
+      width: 100% !important;
+    }
+  }
+
+  .mobile-message {
+    display: none;
+    @media (max-width: 1023px) {
+      display: block;
+      width: 100%;
+      margin-top: 3rem;
+      .rs-message {
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+
+      h5.rs-message-header {
+        text-align: start;
+        font-size: $font-rs-title !important;
+      }
+
+      .rs-message-body {
+        p {
+          color: black;
+          p {
+            line-height: 1.5rem;
+            font-size: 0.7rem !important;
+            color: red;
+          }
+          h4,
+          h5 {
+            text-align: start;
+            font-weight: 300;
+          }
+        }
+
+        a {
+          margin-right: 0.5rem;
+          text-decoration: none !important;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    display: block;
   }
 }

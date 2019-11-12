@@ -73,6 +73,27 @@ class Services extends React.Component {
                             </Steps>
                         </div>
 
+{/* 
+
+                        <div className="mobile">
+                            <ButtonGroup>
+                                <Button onClick={this.decline} disabled={step === 0} appearance={step !== 0 ? "primary" : ""}>
+                                    <h5>Previous</h5>
+                                </Button>
+                                <Button onClick={this.increase} disabled={step === 3} >
+                                    <h5>Next</h5>
+                                </Button>
+                            </ButtonGroup>
+                            <br />
+
+                            <Steps current={step} vertical style={styles} >
+                                <Steps.Item title="ลงทะเบียน" description="ลงทะเบียนผ่านเเบบคำขอลงทะเบียนรับเงินเบี้ยยังชีพผู้สูงอายุ" />
+                                <Steps.Item title="ตรวจสอบคุณสมบัติ" description="จากทะเบียนราษฎร" />
+                                <Steps.Item title="บันทึกข้อมูล" description="ลงฐานข้อมูล" />
+                                <Steps.Item title="เสนออนุมัติ" description="แจ้งผู้ยื่นขอ / ประกาศรายชื่อผู้มีสิทธิ" />
+                            </Steps>
+                        </div> */}
+
                         <div className="normal-message">
 
                             <Message
@@ -82,7 +103,7 @@ class Services extends React.Component {
                                     <p>
                                         <h4>หลักฐาน</h4>
                                         <h5>
-                                            1. บัตรประจำตัวประชานน หรือบัตรที่มีรูปถ่ายที่ออกโดยหน่วยงานรัฐพร้อมสำเนา<br />
+                                            1. บัตรประจำตัวประชาชน หรือบัตรที่มีรูปถ่ายที่ออกโดยหน่วยงานรัฐพร้อมสำเนา<br />
                                             2. ทะเบียนบ้านพร้อมสำเนา<br />
                                             3. สมุดบัญชีธนาคาร พร้อมสำเนา (กรณีรับเงินผ่านธนาคาร)
                                             </h5>
@@ -131,47 +152,81 @@ class Services extends React.Component {
                                     //         }
                                     //     />
                                     //     :
-                                        message == 3 ?
-                                            <Message
-                                                type="success"
-                                                title="ประกาศรายชื่อผู้ที่มีสิทธิ"
-                                                description={
-                                                    <p>
-                                                        <br />
-                                                        <a href="/main/mantable">รายชื่อเพศชาย</a>
-                                                        <a href="/main/womantable">รายชื่อเพศหญิง</a>
-                                                        <a href="/main/totaltable">รายชื่อรวม</a>
-                                                    </p>
-                                                }
-                                            />
-                                            :
-                                            null
+                                    message == 3 ?
+                                        <Message
+                                            type="success"
+                                            title="ประกาศรายชื่อผู้ที่มีสิทธิ"
+                                            description={
+                                                <p>
+                                                    <br />
+                                                    <a href="/main/mantable">รายชื่อเพศชาย</a>
+                                                    <a href="/main/womantable">รายชื่อเพศหญิง</a>
+                                                    <a href="/main/totaltable">รายชื่อรวม</a>
+                                                </p>
+                                            }
+                                        />
+                                        :
+                                        null
                             }
 
                         </div>
 
-                        <div className="mobile">
-                            <ButtonGroup>
-                                <Button onClick={this.decline} disabled={step === 0} appearance={step !== 0 ? "primary" : ""}>
-                                    <h5>Previous</h5>
-                                </Button>
-                                <Button onClick={this.increase} disabled={step === 3} >
-                                    <h5>Next</h5>
-                                </Button>
-                            </ButtonGroup>
-                            <br />
+                        <div className="mobile-message">
+                            <Message
+                                type="info"
+                                title="การลงทะเบียนรับเงินเบี้ยยังชีพผู้สูงอายุ"
+                                description={
+                                    <p>
+                                        <h4>หลักฐาน</h4>
+                                        <h5>
+                                            1. บัตรประจำตัวประชาชน หรือบัตรที่มีรูปถ่ายที่ออกโดยหน่วยงานรัฐพร้อมสำเนา<br />
+                                            2. ทะเบียนบ้านพร้อมสำเนา<br />
+                                            3. สมุดบัญชีธนาคาร พร้อมสำเนา (กรณีรับเงินผ่านธนาคาร)
+                                            </h5>
 
-                            <Steps current={step} vertical style={styles} >
-                                <Steps.Item title="ลงทะเบียน" description="ลงทะเบียนผ่านเเบบคำขอลงทะเบียนรับเงินเบี้ยยังชีพผู้สูงอายุ" />
-                                <Steps.Item title="ตรวจสอบคุณสมบัติ" description="จากทะเบียนราษฎร" />
-                                <Steps.Item title="บันทึกข้อมูล" description="ลงฐานข้อมูล" />
-                                <Steps.Item title="เสนออนุมัติ" description="แจ้งผู้ยื่นขอ / ประกาศรายชื่อผู้มีสิทธิ" />
-                            </Steps>
+
+                                        <br />
+                                        <h4>แบบฟอร์มที่เกี่ยวข้อง</h4>
+
+                                        <a href="#">เเบบคำขอลงทะเบียนรับเงินเบี้ยยังชีพผู้สูงอายุ</a>
+                                        <a href="#">หนังสือมอบอำนาจ</a>
+                                    </p>
+                                }
+                            />
+
+
+                            <Message
+                                type="warning"
+                                title="คุณสมบัติ"
+                                description={
+                                    <p>
+                                        <h5>
+                                            1. มีสัญชาติไทย อายุหกสิบปีบริบูรณ์ขึ้นไป<br />
+                                            2. มีภูมิลำเนาอยู่ในเขตองค์การปกครองส่วนท้องถิ่นตามทะเบียนบ้าน<br />
+                                            3. ไม่เป็นผู้ได้รับสวัสดิการ หรือสิทธิประโยชน์อื่นใดจากหน่วยงานของรัฐ<br />
+                                            รัฐวิสาหกิจ หรือองค์กรปกครองส่วนท้องถิ่น เช่น ผู้ได้รับเงินบำนาญ เบี้ยวัด<br />
+                                            ผู้ที่อยู่อาศัยในสถานสงเคราะห์ของรัฐ หรือองค์กรปกครองส่วนท้องถิ่น
+
+                                                </h5>
+                                        <p>ยกเว้นผู้พิการ เเละผู้ป่วยเอดส์</p>
+                                    </p>
+                                }
+                            />
+
+                            <Message
+                                type="success"
+                                title="ประกาศรายชื่อผู้ที่มีสิทธิ"
+                                description={
+                                    <p>
+                                        <br />
+                                        <a href="/main/mantable">รายชื่อเพศชาย</a>
+                                        <a href="/main/womantable">รายชื่อเพศหญิง</a>
+                                        <a href="/main/totaltable">รายชื่อรวม</a>
+                                    </p>
+                                }
+                            />
+
                         </div>
-
-
-
-
 
                     </div>
                 </div>
