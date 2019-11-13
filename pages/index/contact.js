@@ -16,7 +16,8 @@ const Contact = () => {
           </div>
         </div>
         <div className="page-content-contact">
-          <Cardcontact />
+          <Cardcontact position="ฝ่ายสังคม" />
+          <Cardcontact position="ฝ่ายสาธารณะสุข" />
 
         </div>
       </div>

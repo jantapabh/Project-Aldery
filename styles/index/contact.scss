@@ -1,9 +1,11 @@
 .page-content-contact {
   display: flex;
+  flex-direction: column;
   margin: 3rem 1rem;
 
   .warp-card-contact {
     width: 40%;
+    margin: 1rem 0;
     .card-contact {
       width: 100%;
       min-height: 15vh;
@@ -64,6 +66,10 @@
           align-items: center;
         }
       }
+      @media (max-width: 1024px) {
+        min-height: 10vh !important;
+      }
+
     }
 
     @media (max-width: 1199.98px) {
@@ -90,5 +96,6 @@
 
   @media (max-width: 1199.98px) {
     justify-content: center;
+    align-items: center;
   }
 }
