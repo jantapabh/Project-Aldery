@@ -17,6 +17,9 @@
         width: auto;
 
         .contact-img {
+          display: flex;
+          justify-content: center;
+          align-items: center;
           padding: 1rem;
           width: 20%;
           background-color: white;
@@ -34,15 +37,41 @@
           h4 {
             text-align: start;
           }
+
+          h6 {
+            text-align: start;
+            margin-bottom: 0 !important;
+          }
           .rs-tag-group {
             padding: 0.5rem 0;
+          }
+
+          @media (max-width: 575.98px) {
+            width: 100%;
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
           }
         }
 
         .contact-icon {
           width: 20%;
         }
+
+        @media (max-width: 575.98px) {
+          flex-direction: column;
+          align-items: center;
+        }
       }
+    }
+
+    @media (max-width: 1199.98px) {
+      width: 70%;
+    }
+
+    @media (max-width: 575.98px) {
+      width: 100% !important;
     }
   }
 
@@ -53,5 +82,13 @@
     .rs-carousel {
       height: 40vh;
     }
+
+    @media (max-width: 1199.98px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1199.98px) {
+    justify-content: center;
   }
 }

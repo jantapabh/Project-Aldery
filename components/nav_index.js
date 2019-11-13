@@ -21,10 +21,12 @@ class Nav_index extends React.Component {
                 { name: "ช่วยเหลือ", href: "/mainhelp" },
             ],
 
-            listMain: [{ name: "About", href: "/index/about" },
-            { name: "Project", href: "/index/project" },
-            { name: "Services", href: "/index/services" },
-            { name: "Contact", href: "/index/contact" },
+            listMain: [
+                { name: "Dashboard", href: "/main" },
+                { name: "About", href: "/index/about" },
+                { name: "Project", href: "/index/project" },
+                { name: "Services", href: "/index/services" },
+                { name: "Contact", href: "/index/contact" },
             ],
 
         }
@@ -66,7 +68,7 @@ class Nav_index extends React.Component {
                                     {
                                         listMain.map((item, index) => {
                                             return (
-                                                <Link key={index}  href={item.href}>
+                                                <Link key={index} href={item.href}>
                                                     <p >{item.name}</p>
                                                 </Link>
                                             )
@@ -94,7 +96,7 @@ class Nav_index extends React.Component {
                                 {
                                     listMain.map((item, indexs) => {
                                         return (
-                                            <Link  key={indexs}  href={item.href}>
+                                            <Link key={indexs} href={item.href}>
                                                 <p >{item.name}</p>
                                             </Link>
                                         )

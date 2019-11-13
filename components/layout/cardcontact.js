@@ -31,6 +31,7 @@ class Cardcontact extends React.Component {
                                     <Tag color="violet">Violet</Tag>
                                 </TagGroup>
                                 <text>""</text>
+                                <h6>เบอร์โทรติดต่อ: </h6>
                             </div>
 
                             <div className="contact-icon">

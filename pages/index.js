@@ -1,10 +1,9 @@
 import React from 'react'
+import Head from 'next/head'
 import Sheetapi from '../config/api'
 import Cover from '../components/layout/cover';
 import Footer from '../components/layout/footer';
-import Link from 'next/link'
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
-import Nav from '../components/nav';
 import Nav_index from '../components/nav_index';
 
 const center = { lat: 7.9082054, lng: 98.3349746 };
@@ -56,6 +55,12 @@ class Home extends React.Component {
 
     return (
       <div className="warp-index">
+
+        <Head>
+          <title>Eldery DB</title>
+          <link rel='icon' href='/static/favicon.ico' />
+        </Head>
+
         <Nav_index />
         <main>
           <Cover />
