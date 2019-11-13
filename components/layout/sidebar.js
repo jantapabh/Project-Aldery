@@ -40,7 +40,7 @@ class Sidebar extends React.Component {
                                 return (
                                     <React.Fragment>
                                         <div className="icon-sidebar">
-                                            <li key={index}><img src={itemss.img} /></li>
+                                            <li key={indexs}><img src={itemss.img} /></li>
                                             <p>{itemss.nameicon}</p>
                                         </div>
                                     </React.Fragment>
