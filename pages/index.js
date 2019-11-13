@@ -95,7 +95,7 @@ class Home extends React.Component {
 
               </div> */}
 
-          <Footer />
+          {/* <Footer /> */}
         </main>
       </div>
     )
