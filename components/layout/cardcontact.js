@@ -6,8 +6,7 @@ class Cardcontact extends React.Component {
 
     static defaultProps = {
         position: "",
-        name: "นางสาวภัทนรินทร์ สุเภากิจ",
-        subtitle: "",
+        name: "นางสาวxxx xxxx",
         img: "/static/Profile.svg"
 
     }
@@ -27,19 +26,20 @@ class Cardcontact extends React.Component {
 
                                 <TagGroup>
                                     {
-                                        this.props.position == "ฝ่ายสังคม" ?
-                                            <Tag color="yellow">ฝ่ายสังคม</Tag>
+                                        this.props.position == "กองสวัสดิการสังคม" ?
+                                            <Tag color="yellow">กองสวัสดิการสังคม</Tag>
                                             :
-                                            this.props.position == "ฝ่ายสาธารณะสุข" ?
-                                                <Tag color="green">ฝ่ายสาธารณะสุข</Tag>
+                                            this.props.position == "กองสาธารณสุขและสิ่งแวดล้อม" ?
+                                                <Tag color="green">กองสาธารณสุขและสิ่งแวดล้อม</Tag>
                                                 :
-                                                null
+                                                this.props.position == "กองวิชาการและแผนงาน" ?
+                                                    <Tag color="blue">กองวิชาการและแผนงาน</Tag>
+                                                    :
+                                                    this.props.position == "กองการศึกษา" ?
+                                                        <Tag color="orange">กองการศึกษา</Tag>
+                                                        :
+                                                        null
                                     }
-                                    {/* <Tag color="red">Red</Tag>
-                                    <Tag color="yellow">Yellow</Tag>
-
-                                    <Tag color="blue">Blue</Tag>
-                                    <Tag color="violet">Violet</Tag> */}
                                 </TagGroup>
                                 {/* <text>""</text> */}
                                 <h6>เบอร์โทรติดต่อ: 06-xxxxxx-xx</h6>
@@ -50,13 +50,8 @@ class Cardcontact extends React.Component {
 
                         </div>
                     </div>
-
                 </div>
 
-                {/* 
-                <div className="timeline-contact">
-                   
-                </div> */}
             </React.Fragment>
 
         )
