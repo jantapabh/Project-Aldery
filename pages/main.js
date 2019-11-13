@@ -20,12 +20,10 @@ class Main extends React.Component {
 
     render() {
 
-        console.log("STATUS:",this.state.status);
-        
         return (
             <div className="warp-main">
-                <Navbar_main confirm={this.onConfirm} status = {this.state.status}/>
-                <Sidebar status ={this.state.status} />
+                <Navbar_main confirm={this.onConfirm} status={this.state.status} />
+                <Sidebar status={this.state.status} />
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                     <div className="page-content-wrapper">
                         <div className="container-fluid">

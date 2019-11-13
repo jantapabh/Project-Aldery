@@ -13,10 +13,8 @@ class MyDocument extends Document {
                 <Head>
                     <head>
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
-                        <link href="dist/hamburgers.css" rel="stylesheet" />
                     </head>
 
-                    <title>Eldery DB</title>
                     <meta charset="utf-8" />
                     <meta name="theme-color" content="#fff"/>
                     <link rel="manifest" href="../static/manifest.json" />

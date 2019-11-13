@@ -42,6 +42,7 @@ class About extends React.Component {
                                 this.state.data.map((items, index) => {
                                     return (
                                         <CardAbout
+                                            key={index}
                                             id={items.id}
                                             title={items.title}
                                             subtitle={items.subtitle}

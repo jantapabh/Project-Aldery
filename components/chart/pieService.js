@@ -69,11 +69,6 @@ class PieService extends Component {
         }))
       }
 
-
-console.log("DATA:::" , this.state.data);
-
-      
-
       this.setState({
         series: this.state.data ,
       })

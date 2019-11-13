@@ -1,6 +1,6 @@
 import React from 'react'
 import Sheetapi from '../config/api'
-import Header from '../components/layout/header';
+import Cover from '../components/layout/cover';
 import Footer from '../components/layout/footer';
 import Link from 'next/link'
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
@@ -57,7 +57,7 @@ class Home extends React.Component {
       <div className="warp-index">
         <Nav name="/" />
         <main>
-          <Header />
+          <Cover />
           <section id='about'>
             <div className="page-content">
               <div className="container-fluid">

@@ -1,5 +1,5 @@
 import React from 'react'
-import Nav_logo from './layout/nav_logo';
+import Nav_logo from './nav_logo';
 import Nav from '../components/nav';
 import Sidebar from '../components/layout/sidebar'
 class Navbar_main extends React.Component {
@@ -42,7 +42,7 @@ class Navbar_main extends React.Component {
                     </ul>
                 </nav>
 
-                <div class="collapsible-menu">
+                <div className="collapsible-menu">
                     <div className="warp-nav-sidebar">
                         <Nav_logo />
                         <div className="box-hamberger">

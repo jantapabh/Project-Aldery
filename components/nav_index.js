@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import Nav_logo from './layout/nav_logo';
+import Nav_logo from './nav_logo';
 
 class Nav_index extends React.Component {
 
@@ -66,8 +66,8 @@ class Nav_index extends React.Component {
                                     {
                                         listMain.map((item, index) => {
                                             return (
-                                                <Link href={item.href}>
-                                                    <p key={index}>{item.name}</p>
+                                                <Link key={index}  href={item.href}>
+                                                    <p >{item.name}</p>
                                                 </Link>
                                             )
                                         })
@@ -77,7 +77,7 @@ class Nav_index extends React.Component {
                         </div>
                     </ul>
                 </nav>
-                <div class="collapsible-menu">
+                <div className="collapsible-menu">
                     <div className="warp-nav-sidebar">
                         <Nav_logo />
                         <div className="box-hamberger">
@@ -92,10 +92,10 @@ class Nav_index extends React.Component {
                         <ul>
                             <li >
                                 {
-                                    listMain.map((item, index) => {
+                                    listMain.map((item, indexs) => {
                                         return (
-                                            <Link href={item.href}>
-                                                <p key={index}>{item.name}</p>
+                                            <Link  key={indexs}  href={item.href}>
+                                                <p >{item.name}</p>
                                             </Link>
                                         )
                                     })

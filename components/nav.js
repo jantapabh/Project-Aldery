@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import Nav_logo from './layout/nav_logo';
+import Nav_logo from './nav_logo';
 
 class Nav extends React.Component {
 

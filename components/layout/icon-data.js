@@ -79,7 +79,7 @@ class IconData extends React.Component {
 
                                             return (
                                                 index == 0 && indexs == 0 ?
-                                                    <Circle
+                                                    <Circle key={index}
                                                         animate={true} // Boolean: Animated/Static progress
                                                         animationDuration="1s" // String: Length of animation
                                                         responsive={false} // Boolean: Make SVG adapt to parent size
@@ -100,7 +100,7 @@ class IconData extends React.Component {
                                                     />
                                                     :
                                                     index == 1 && indexs == 1 ?
-                                                        <Circle
+                                                        <Circle key={index}
                                                             animate={true}
                                                             animationDuration="1s"
                                                             responsive={false}
@@ -121,7 +121,7 @@ class IconData extends React.Component {
                                                         />
                                                         :
                                                         index == 2 && indexs == 2 ?
-                                                            <Circle
+                                                            <Circle key={index}
                                                                 animate={true}
                                                                 animationDuration="1s"
                                                                 responsive={false}
@@ -142,7 +142,7 @@ class IconData extends React.Component {
                                                             />
                                                             :
                                                             index == 3 && indexs == 3 ?
-                                                                <Circle
+                                                                <Circle key={index}
                                                                     animate={true}
                                                                     animationDuration="1s"
                                                                     responsive={false}

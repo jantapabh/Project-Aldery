@@ -23,8 +23,6 @@ class Services extends React.Component {
     changePercent(nextstep) {
         const step = nextstep < 0 ? 0 : nextstep > 3 ? 3 : nextstep;
 
-        console.log("STEP", step);
-
         this.setState({
             step,
             message: step
@@ -39,7 +37,6 @@ class Services extends React.Component {
 
 
     render() {
-        console.log(this.state.message);
 
         const { step, message } = this.state;
         return (

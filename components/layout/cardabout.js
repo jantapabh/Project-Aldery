@@ -26,7 +26,6 @@ class CardAbout extends React.Component {
                 this.setState({
                     status: true
                 })
-                console.log("1.1");
                 this.props.confirm(true)
             }
 
@@ -34,11 +33,9 @@ class CardAbout extends React.Component {
                 this.setState({
                     status: false
                 })
-                console.log("1.2");
                 this.props.confirm(false)
             }
         }
-
 
         else {
 
@@ -48,19 +45,14 @@ class CardAbout extends React.Component {
                 })
                 this.props.confirm(true)
 
-                console.log("2.1");
-
             }
 
             else {
                 this.setState({
                     status: false
                 })
-                console.log("2.2");
                 this.props.confirm(false)
             }
-
-
 
         }
 
@@ -72,10 +64,6 @@ class CardAbout extends React.Component {
     }
 
     render() {
-
-
-        console.log("ID///Status", this.state.id, this.state.status);
-
 
         const { id, img, title, subtitle, click } = this.props
 
