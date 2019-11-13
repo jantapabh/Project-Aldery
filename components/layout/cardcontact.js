@@ -30,8 +30,8 @@ class Cardcontact extends React.Component {
                                     <Tag color="blue">Blue</Tag>
                                     <Tag color="violet">Violet</Tag>
                                 </TagGroup>
-                                <text>""</text>
-                                <h6>เบอร์โทรติดต่อ: </h6>
+                                {/* <text>""</text> */}
+                                <h6>เบอร์โทรติดต่อ: 06-xxxxxx-xx</h6>
                             </div>
 
                             <div className="contact-icon">
