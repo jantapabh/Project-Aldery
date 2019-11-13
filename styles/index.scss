@@ -7,9 +7,10 @@
 }
 
 .warp-header{
-    min-height: 380px;
+    // min-height: 380px;
     line-height: 0;
-    min-height: 380px;
+    // min-height: 380px;
+    min-height: 80vh;
     height: auto;
 
     background-image: url("/static/bg.jpg");
@@ -146,6 +147,7 @@
 
 
 .warp-footer{
+    min-height: 5rem;
   //  background: linear-gradient(to right, rgb(28, 146, 210), rgb(242, 252, 254));
   .container-fluid{
       h6{

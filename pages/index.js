@@ -5,6 +5,7 @@ import Footer from '../components/layout/footer';
 import Link from 'next/link'
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import Nav from '../components/nav';
+import Nav_index from '../components/nav_index';
 
 const center = { lat: 7.9082054, lng: 98.3349746 };
 const mapStyles = {
@@ -55,105 +56,11 @@ class Home extends React.Component {
 
     return (
       <div className="warp-index">
-        <Nav name="/" />
+        <Nav_index />
         <main>
           <Cover />
-          <section id='about'>
-            <div className="page-content">
-              <div className="container-fluid">
-                <h1>Eldery DB</h1>
-                <h2>ฐานข้อมูลผู้สูงอายุ และอินโฟกราฟิก</h2>
-                <div className="textarea-center">
-                  <text>เป็นการนำข้อมูลของประชากรผู้ที่เป็นผู้สูงอายุ มาทำอินโฟกราฟิกในรูปแบบต่าง ๆ ซึ่งตัวของเว็บไซต์จะมีการใช้กราฟ<br />
-                    เพื่ออ้างอิงข้อมูลในการแสดงค่าทางสถิติว่าพื้นที่ในส่วนใด ที่มีจำนวนประชากรเป็นผู้สูงอายุมากที่สุด และพื้นที่ใดมีจำนวนน้อยที่สุด<br />
-                    นอกจากนี้ยังมีการให้ข้อมูล เกี่ยวกับสิทธิที่พึ่งได้ของผู้สูงอายุ
-                </text>
-                </div>
 
-                <Link href={link[0]} >
-                  <button className="btn-outline-center" >อ่านต่อ</button>
-                </Link>
-                <Link href="/main">
-                  <button className="btn-outline-center" >หน้าหลัก</button>
-                </Link>
-
-
-              </div>
-            </div>
-          </section>
-
-          <section id='project'>
-            <div className="page-content">
-              <div className="container-fluid">
-                <h1>Project</h1>
-
-                <div className="page-content-data">
-                  <div className="container-fluid">
-                    {/* <div className="card-img">
-                      <img src="/static/cover-img2.png" className="card-img-top" alt="..." />
-                    </div> */}
-
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </section>
-
-          <section id='services'>
-            <div className="page-content">
-              <div className="container-fluid">
-                <h1>Services</h1>
-                <Link href={link[2]} >
-                  <button className="btn-outline-center" >อ่านต่อ</button>
-                </Link>
-                {/* <div className="page-content-data">
-
-                  <div className="container-fluid">
-                    <Link href="">
-                      <div className="card">
-                        <img src="/static/cover-img2.png" className="card-img-top" alt="..." />
-                        <div class="card-body">
-                          <h6 class="card-text">ปรึกษาปัญหา</h6>
-                        </div>
-                      </div>
-                    </Link>
-
-                    <div className="card">
-                      <img src="/static/cover-img.png" className="card-img-top" alt="..." />
-                      <div class="card-body">
-                        <h6 class="card-text">การช่วยเหลือ</h6>
-                      </div>
-                    </div>
-                    <div className="card">
-                      <img src="/static/cover-img6.png" className="card-img-top" alt="..." />
-                      <div class="card-body">
-                        <h6 class="card-text">การดูเเล</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
-
-              </div>
-            </div>
-          </section>
-
-          <section id='contact'>
-            <div className="page-content-map">
-              <div className="container-fluid">
-                <div className="container-text">
-                  <h1>Contact</h1>
-                  <h6>สำนักงานเทศบาลเมืองกะทู้ 12 หมู่ 2 ถนนวิชิตสงคราม ตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต 83120<br /> โทรศัพท์ 076-321500 โทรสาร 076-322129 , 076-322126.</h6>
-                  <div className="btn-center">
-                    <Link href={link[3]}>
-                      <button className="btn-outline-center" >อ่านต่อ</button>
-                    </Link>
-                  </div>
-
-                </div>
-              </div>
-
-              <div className="container-fluid">
+          {/* <div className="container-fluid">
 
                 <Map
                   className={'map'}
@@ -181,9 +88,8 @@ class Home extends React.Component {
                   </InfoWindow>
                 </Map>
 
-              </div>
-            </div>
-          </section>
+              </div> */}
+
           <Footer />
         </main>
       </div>
