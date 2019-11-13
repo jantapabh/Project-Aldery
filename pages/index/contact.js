@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Nav_index from '../../components/nav_index'
+import Cardcontact from '../../components/layout/cardcontact'
 
 
 const Contact = () => {
@@ -15,7 +16,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="page-content-contact">
-
+          <Cardcontact />
 
         </div>
       </div>

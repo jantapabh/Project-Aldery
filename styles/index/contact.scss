@@ -1,6 +1,57 @@
-.page-content-contact{
-    display: flex;
-    margin: 3rem 1rem;
+.page-content-contact {
+  display: flex;
+  margin: 3rem 1rem;
 
-    
+  .warp-card-contact {
+    width: 40%;
+    .card-contact {
+      width: 100%;
+      min-height: 15vh;
+      height: auto;
+      border-radius: 1rem;
+      border: 1px solid #03a9f4;
+      background-color: white;
+      .contact {
+        display: flex;
+        margin: 1rem;
+        width: auto;
+
+        .contact-img {
+          padding: 1rem;
+          width: 20%;
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          img {
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+
+        .contact-data {
+          width: 60%;
+          margin-left: 1rem;
+          h4 {
+            text-align: start;
+          }
+          .rs-tag-group {
+            padding: 0.5rem 0;
+          }
+        }
+
+        .contact-icon {
+          width: 20%;
+        }
+      }
+    }
+  }
+
+  .timeline-contact {
+    width: 60%;
+    height: 10vh;
+    padding: 0 2rem 1rem 1rem;
+    .rs-carousel {
+      height: 40vh;
+    }
+  }
 }
