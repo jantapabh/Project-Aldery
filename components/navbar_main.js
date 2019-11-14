@@ -22,6 +22,20 @@ class Navbar_main extends React.Component {
         }
     }
 
+    onConfirmClick = () => {
+
+        if (this.props.status) {
+            if (this.props.confirm) {
+                this.props.confirm(false)
+            }
+        }
+        else {
+            if (this.props.confirm) {
+                this.props.confirm(true)
+            }
+        }
+    }
+
     collapsible = async () => {
         if (!this.state.status) {
             await this.setState({
