@@ -30,7 +30,10 @@ class Main extends React.Component {
                             <h1 className="text-center">สังคมผู้สูงอายุ</h1>
                             <h2 className="small text-center"></h2>
                             <div className="warp-map">
-                                <Map />
+                                <div className="map-Img">
+                                    <Map />
+                                </div>
+
                             </div>
                         </div>
                     </div>
