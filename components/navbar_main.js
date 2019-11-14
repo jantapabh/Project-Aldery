@@ -1,8 +1,6 @@
 import React from 'react'
 import Nav_logo from './nav_logo';
-import Nav from '../components/nav';
 import Link from 'next/link'
-import Sidebar from '../components/layout/sidebar'
 class Navbar_main extends React.Component {
 
     static defaultProps = {
@@ -19,21 +17,8 @@ class Navbar_main extends React.Component {
                 { name: "Services", href: "/index/services" },
                 { name: "Contact", href: "/index/contact" },
             ],
+            status: true
 
-        }
-    }
-
-    onConfirmClick = () => {
-
-        if (this.props.status) {
-            if (this.props.confirm) {
-                this.props.confirm(false)
-            }
-        }
-        else {
-            if (this.props.confirm) {
-                this.props.confirm(true)
-            }
         }
     }
 
@@ -67,7 +52,21 @@ class Navbar_main extends React.Component {
                                 </div>
                             </li>
                         </div>
-                        <Nav name="main" />
+                        <div className="warp-manu">
+                            <ul>
+                                <li>
+                                    {
+                                        this.state.listMain.map((item, index) => {
+                                            return (
+                                                <Link href={item.href}>
+                                                    <p key={index}>{item.name}</p>
+                                                </Link>
+                                            )
+                                        })
+                                    }
+                                </li>
+                            </ul>
+                        </div>
                     </ul>
                 </nav>
 
@@ -75,7 +74,7 @@ class Navbar_main extends React.Component {
                     <div className="warp-nav-sidebar">
                         <Nav_logo />
                         <div className="box-hamberger">
-                            <a className={`hamberger btn${this.props.status ? " active" : " not-active"}`} onClick={this.onConfirmClick} >
+                            <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
                                 <span></span>
                                 <span></span>
                                 <span></span>
