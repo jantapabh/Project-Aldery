@@ -20,6 +20,8 @@
 .warp-map {
   display: flex;
   margin: 1rem 0;
+  align-items: center;
+  text-align: center;
 
   @media (max-width: 1199.98px) {
     flex-direction: column;
@@ -27,11 +29,23 @@
   }
 
   .map-Img {
+    display: flex;
+    justify-content: center;
     width: 50%;
     text-align: center;
+
+    @media (max-width: 1199.98px) {
+      width: 100%;
+    }
+
     svg {
       width: 600px;
       height: 600px;
+
+      @media (max-width: 575.98px) {
+        width: 800px;
+        height: 400px;
+      }
     }
   }
   .chart-contents {
