@@ -47,7 +47,7 @@ class BarHospital extends Component {
           },
           dataLabels: { enabled: false },
           xaxis: {
-            categories: this.state.dataName ,
+            categories: this.state.dataName,
             title: {
               text: 'จำนวน (คน)'
             }
@@ -99,9 +99,9 @@ class BarHospital extends Component {
         <Chart
           options={this.state.options}
           series={this.state.series}
-          type="bar" width="700"
+          type="bar"
           height="400"
-            width="800"
+          width="700"
         />
       </div>
     );
