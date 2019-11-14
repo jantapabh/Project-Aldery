@@ -3,9 +3,6 @@
 .warp-table{
     display: flex;
 
-    @media (max-width: 575.98px) { 
-        display: none;
-    }
 
     .table-main{
         position: relative;
@@ -51,13 +48,12 @@
         position: relative;
         padding:15px;
         transition:all .5s;
-        background: white;
         // background: linear-gradient(to right, rgb(116, 235, 213), rgb(172, 182, 229));
         padding-left: 5rem;
 
-        @media (max-width: 575.98px) { 
-            display: none;
-        }
+        @media (max-width: 991.98px) { 
+            padding-left: 1rem;
+         }
 
         .container-fluid{
             margin-top: 5rem;
@@ -132,7 +128,9 @@
   
   .wrapper.menuDisplayed .page-content-wrapper{
     padding-left:230px;
-
+    @media (max-width: 991.98px) { 
+        padding-left: 1rem;
+     }
   }
 
   .text-center{

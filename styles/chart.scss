@@ -36,9 +36,17 @@
   }
 
   svg {
-    width: 500px !important;
-    height: 500px !important;
+    width: 600px ;
+    height: 600px ;
+
+    // @media (max-width: 580px) { 
+    //   width: 200px !important;
+    //   height: 200px !important;
+
+    // }
   }
+
+ 
 }
 
 .chart-center {
