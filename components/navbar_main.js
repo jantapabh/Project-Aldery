@@ -1,11 +1,26 @@
 import React from 'react'
 import Nav_logo from './nav_logo';
 import Nav from '../components/nav';
+import Link from 'next/link'
 import Sidebar from '../components/layout/sidebar'
 class Navbar_main extends React.Component {
 
     static defaultProps = {
         status: true
+    }
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            listMain: [
+                { name: "Dashboard", href: "/main" },
+                { name: "About", href: "/index/about" },
+                { name: "Project", href: "/index/project" },
+                { name: "Services", href: "/index/services" },
+                { name: "Contact", href: "/index/contact" },
+            ],
+
+        }
     }
 
     onConfirmClick = () => {
@@ -22,7 +37,21 @@ class Navbar_main extends React.Component {
         }
     }
 
+    collapsible = async () => {
+        if (!this.state.status) {
+            await this.setState({
+                status: true
+            })
+        }
+        else {
+            await this.setState({
+                status: false
+            })
+        }
+    }
+
     render() {
+        const { listMain } = this.state
         return (
             <div className={`wrapper${this.props.status ? " menuDisplayed" : ""}`}>
                 <nav className="nav-other">
@@ -53,8 +82,22 @@ class Navbar_main extends React.Component {
                             </a>
                         </div>
                     </div>
+                    <div className={`menu-content${this.state.status ? " show" : ""}`}>
+                        <ul>
+                            <li >
+                                {
+                                    listMain.map((item, indexs) => {
+                                        return (
+                                            <Link key={indexs} href={item.href}>
+                                                <p >{item.name}</p>
+                                            </Link>
+                                        )
+                                    })
+                                }
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <Sidebar />
             </div>
 
         )

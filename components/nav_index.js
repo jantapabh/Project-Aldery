@@ -52,33 +52,60 @@ class Nav_index extends React.Component {
 
         return (
             <React.Fragment>
-                <nav>
-                    <ul>
-                        <div className="warp-table">
-                            <Link href="/">
-                                <li>
-                                    <p>ย้อนกลับ</p>
-                                </li>
-                            </Link>
-                        </div>
 
-                        <div className="warp-manu">
+                {
+                    this.props.name == "/" ?
+                        <nav>
                             <ul>
-                                <li>
-                                    {
-                                        listMain.map((item, index) => {
-                                            return (
-                                                <Link key={index} href={item.href}>
-                                                    <p >{item.name}</p>
-                                                </Link>
-                                            )
-                                        })
-                                    }
-                                </li>
+                                <Nav_logo />
+
+                                <div className="warp-manu">
+                                    <ul>
+                                        <li>
+                                            {
+                                                listMain.map((item, index) => {
+                                                    return (
+                                                        <Link key={index} href={item.href}>
+                                                            <p >{item.name}</p>
+                                                        </Link>
+                                                    )
+                                                })
+                                            }
+                                        </li>
+                                    </ul>
+                                </div>
                             </ul>
-                        </div>
-                    </ul>
-                </nav>
+                        </nav>
+                        :
+                        <nav>
+                            <ul>
+                                <div className="warp-table">
+                                    <Link href="/">
+                                        <li>
+                                            <p>ย้อนกลับ</p>
+                                        </li>
+                                    </Link>
+                                </div>
+
+                                <div className="warp-manu">
+                                    <ul>
+                                        <li>
+                                            {
+                                                listMain.map((item, index) => {
+                                                    return (
+                                                        <Link key={index} href={item.href}>
+                                                            <p >{item.name}</p>
+                                                        </Link>
+                                                    )
+                                                })
+                                            }
+                                        </li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </nav>
+                }
+
                 <div className="collapsible-menu">
                     <div className="warp-nav-sidebar">
                         <Nav_logo />

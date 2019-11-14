@@ -22,7 +22,6 @@ class Sidebar extends React.Component {
         return (
             <div className={`wrapper${this.props.status ? " menuDisplayed" : ""}`}>
                 <div className="sidebar-wrapper">
-
                     <ul className="sidebar-nav">
                         {
                             this.state.list.map((items, index) => {

@@ -36,37 +36,28 @@
   }
 
   svg {
-    width: 600px ;
-    height: 600px ;
-
-    // @media (max-width: 580px) { 
-    //   width: 200px !important;
-    //   height: 200px !important;
-
-    // }
+    width: 600px;
+    height: 600px;
   }
-
- 
 }
 
 .chart-center {
   margin: 0;
 }
 
-.warp-chart{
-  .chart-pic{
+.warp-chart {
+  .chart-pic {
     margin-top: 2rem;
     margin-left: 5rem;
-    
+
     .apexcharts-legend.center.position-right {
       position: fixed !important;
       top: 10px !important;
       left: 1px;
     }
-    .apexcharts-legend.center.position-right{
+    .apexcharts-legend.center.position-right {
       top: 3rem !important;
     }
-
   }
 }
 
@@ -124,9 +115,9 @@ text {
   font-family: "Prompt", sans-serif !important ;
 }
 
-.apexcharts-xaxis-texts-g{
-  text{
-    tspan{
+.apexcharts-xaxis-texts-g {
+  text {
+    tspan {
       font-family: "Prompt", sans-serif !important ;
     }
   }

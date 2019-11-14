@@ -61,7 +61,7 @@ class Home extends React.Component {
           <link rel='icon' href='/static/favicon.ico' />
         </Head>
 
-        <Nav_index />
+        <Nav_index name="/" />
         <main>
           <Cover />
 
