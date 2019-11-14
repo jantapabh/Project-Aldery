@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 class Sidebar extends React.Component {
 
@@ -27,7 +28,9 @@ class Sidebar extends React.Component {
                             this.state.list.map((items, index) => {
                                 return (
                                     <React.Fragment>
-                                        <li key={index}><img src={items.img} /><a href={items.link} >{items.name}</a></li>
+                                        <Link href={items.link}>
+                                            <li key={index}><img src={items.img} /><a>{items.name}</a></li>
+                                        </Link>
                                     </React.Fragment>
                                 )
                             })
