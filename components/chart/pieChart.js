@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
+import Link from 'next/link';
 
 class PieChart extends Component {
 
@@ -9,7 +10,7 @@ class PieChart extends Component {
 
         this.state = {
             options: {},
-            datalist:[],
+            datalist: [],
             series: [],
         }
     }
@@ -36,7 +37,7 @@ class PieChart extends Component {
                     labels: this.state.datalist,
                     title: {
                         text: "เพศชาย"
-                      },
+                    },
                     responsive: [{
                         breakpoint: 480,
                         options: {
@@ -78,14 +79,26 @@ class PieChart extends Component {
     render() {
 
         return (
-            <div className="chart-center">
-                <Chart
-                    options={this.state.options}
-                    series={this.state.series}
-                    type="donut"
-                    width="500"
-                />
-            </div>
+            <React.Fragment>
+                <div className="chart-center">
+                    <Chart
+                        options={this.state.options}
+                        series={this.state.series}
+                        type="donut"
+                        width="500"
+                        height="250"
+                    />
+                </div>
+                <div className="chart-source">
+                    <a
+                        target="_blank"
+                        href="https://docs.google.com/spreadsheets/d/15bzSXCpQI7qVZyW3-kCQsQ1Qg_6ssRSTa5X4aNavIp8/edit#gid=1593061825">
+                        <h6>ที่มา: ข้อมูลทั่วไปเกี่ยวกับช่วงอายุของเพศชาย</h6>
+                    </a>
+                    <p>แบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ เทศบาลเมืองกะทู้ จังหวัดภูเก็ต</p>
+                </div>
+            </React.Fragment>
+
         );
     }
 }

@@ -118,9 +118,20 @@ class Barchart extends React.Component {
 
   render() {
     return (
-      <div className="warp-chart">
-        <Chart options={this.state.options} series={this.state.series} type="bar" height="300" width="600" />
-      </div>
+      <React.Fragment>
+        <div className="warp-chart">
+          <Chart options={this.state.options} series={this.state.series} type="bar" height="280" width="600" />
+        </div>
+        <div className="chart-source">
+          <a
+            target="_blank"
+            href="https://docs.google.com/spreadsheets/d/15bzSXCpQI7qVZyW3-kCQsQ1Qg_6ssRSTa5X4aNavIp8/edit#gid=1593061825">
+            <h6>ที่มา: ข้อมูลทั่วไปเกี่ยวกับช่วงอายุของเพศชาย</h6>
+          </a>
+          <p>แบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ เทศบาลเมืองกะทู้ จังหวัดภูเก็ต</p>
+        </div>
+      </React.Fragment>
+
     )
   }
 }

@@ -1,7 +1,6 @@
 .warp-chart {
   display: flex;
   justify-content: center;
-  margin: 1rem 0;
 
   @media (max-width: 1199.98px) {
     flex-direction: column;
@@ -10,10 +9,24 @@
 
   .chart-contents {
     display: flex;
+    flex-direction: column;
     background-color: white;
     border-radius: 0.5rem;
     margin: 0.5rem 1rem;
     padding: 0.5rem;
+  }
+
+  .chart-source {
+    h6 {
+      cursor: pointer;
+      text-align: start;
+      margin-top: 0.5rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+
+    h6:hover{
+      color: #bedadc;
+    }
   }
 }
 
@@ -65,23 +78,20 @@
   .chart-pic {
     margin-top: 2rem;
     margin-left: 5rem;
-
-    .apexcharts-legend.center.position-right {
-      position: fixed !important;
-      top: 10px !important;
-      left: 1px;
-    }
-    .apexcharts-legend.center.position-right {
-      top: 3rem !important;
+    foreignObject {
+      .apexcharts-legend.center.position-right {
+        position: fixed !important;
+        top: 10px !important;
+        left: 1px;
+      }
+      .apexcharts-legend.center.position-right {
+        top: 3rem !important;
+      }
     }
   }
 }
 
 //Apexcharts
-
-// .apexcharts-legend.center.position-right {
-//   top: 90px !important;
-// }
 
 .apexcharts-legend-text {
   font-family: "Prompt", sans-serif !important ;
@@ -91,10 +101,6 @@
   font-family: "Prompt", sans-serif !important ;
   font-size: 0.9rem !important;
 }
-// .apexcharts-legend-text{
-//    // font-family: 'Prompt', sans-serif !important ;
-//    font-size: 1rem !important;
-// }
 
 .apexcharts-xaxis-texts-g {
   text {
