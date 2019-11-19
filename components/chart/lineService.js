@@ -99,11 +99,8 @@ class LineService extends React.Component {
           },
         
             colors: ['#0693e3', '#00d084']
-          
         }
-
       })
-
     } catch (err) {
       console.log(err);
     }
@@ -114,9 +111,6 @@ class LineService extends React.Component {
 
       this.man = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!C179:C187')
       this.woman = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!E179:E187')
-
-
-
 
       for (let i = 0; i < this.man.length; i++) {
 
@@ -139,10 +133,7 @@ class LineService extends React.Component {
     } catch (err) {
       console.log(err);
     }
-
   }
-
-
 
   render() {
 
