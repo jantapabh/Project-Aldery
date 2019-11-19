@@ -36,7 +36,7 @@ class Main extends React.Component {
                                 </div>
 
                                 <div className="map-content">
-                                    <BarMap/>
+                                    {/* <BarMap/> */}
                                 </div>
 
                             </div>
