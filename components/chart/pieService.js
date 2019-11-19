@@ -61,8 +61,8 @@ class PieService extends Component {
           },
 
           colors: ['#2196f3', '#00d084', '#ffc107',
-            '#eb144c', '#673ab7', '#607d8b',
-            '#f78da7', '#fccb00', '#795548']
+            '#eb144c', '#673ab7', '#abb8c3',
+            '#f78da7', '#ff6900', '#7bdcb5']
         }
       })
 

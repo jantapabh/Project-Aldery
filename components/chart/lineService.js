@@ -96,7 +96,10 @@ class LineService extends React.Component {
             floating: true,
             offsetY: -25,
             offsetX: -5
-          }
+          },
+        
+            colors: ['#0693e3', '#00d084']
+          
         }
 
       })
