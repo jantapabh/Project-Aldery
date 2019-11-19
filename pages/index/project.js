@@ -9,9 +9,9 @@ class Project extends React.Component {
         super(props);
         this.state = {
             data: [
-                { id: "1", title: "การตรวจสุขภาพประจำปี", subtitle: "จากหน่วยงานอนามัยใกล้บ้าน", img: "/static/project1.jpg", click: "one" },
-                { id: "2", title: "โครงการอบรมวิชาชีพ", subtitle: "เพื่อการมีรายได้ เเละลดการขาดแคลนแรงงาน", img: "/static/project2.png", click: "two" },
-                { id: "3", title: "สถานสงเคราะห์", subtitle: "การดูเเล เเละการจัดการ", img: "/static/project3.png", click: "three" },
+                { id: "1", title: "การตรวจสุขภาพประจำปี", subtitle: "จากหน่วยงานอนามัยใกล้บ้าน", img: "/static/project1.jpg", click: "Click" },
+                { id: "2", title: "โครงการอบรมวิชาชีพ", subtitle: "เพื่อการมีรายได้ เเละลดการขาดแคลนแรงงาน", img: "/static/project2.png", click: "Click" },
+                { id: "3", title: "สถานสงเคราะห์", subtitle: "การดูเเล เเละการจัดการ", img: "/static/project3.png", click: "Click" },
             ],
             status: false
         }

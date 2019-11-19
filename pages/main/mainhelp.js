@@ -33,12 +33,12 @@ class MainHelp extends React.Component {
                         <div className="container-fluid">
                             <h1 className="text-center">การช่วยเหลือ</h1>
                             <h2 className="small text-center"></h2>
-
+{/* 
                             <CardLink
                                 title="texttttt"
                                 subtitle="subbbb"
                                 img="/static/activehover.svg"
-                            />
+                            /> */}
 
                         </div>
 
