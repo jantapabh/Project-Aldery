@@ -2,6 +2,12 @@ import React from 'react'
 import CardData from '../../components/layout/cardmain';
 import Navbar_main from '../../components/navbar_main';
 import Sidebar from '../../components/layout/sidebar';
+import dynamic from 'next/dynamic'
+
+const PieDoc = dynamic(
+    () => import('../../components/chart/pieDoc'),
+    { ssr: false }
+)
 
 class Doc extends React.Component {
 
@@ -42,6 +48,14 @@ class Doc extends React.Component {
                                     <h6 >ที่มา: แบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ ผู้พิการเเละผู้ป่วยในชุมชน</h6>
                                     <h6>เทศบาลเมืองกะทู้ จังหวัดภูเก็ต</h6>
                                 </div>
+
+                            </div>
+
+
+                            <div className="warp-chart">
+                                <PieDoc />
+
+
 
                             </div>
 
