@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 
-class BarHospital2 extends Component {
+class BarHospital3 extends Component {
 
     constructor(props) {
         super(props);
@@ -29,58 +29,48 @@ class BarHospital2 extends Component {
 
         try {
 
-            this.list = await Sheetapi.getSheet(this.access_token, value)
+           // this.list = await Sheetapi.getSheet(this.access_token, value)
 
-            for (let i = 0; i < this.list.length; i++) {
+            // for (let i = 0; i < this.list.length; i++) {
 
-                this.setState(prevState => ({
-                    dataName: [...prevState.dataName, this.list[i][0]],
-                }))
-            }
+            //     this.setState(prevState => ({
+            //         dataName: [...prevState.dataName, this.list[i][0]],
+            //     }))
+            // }
 
             this.setState({
 
                 options: {
                     title: {
-                        text: 'โรคประจำตัว',
+                        text: 'การดื่มสุรา และสูบบุหรี่',
                         align: 'left'
                     },
-                    chart: {
-                        height: 350,
-                        type: 'bar',
-                        stacked: true,
-                        toolbar: {
-                            show: true
-                        },
-                        zoom: {
-                            enabled: true
-                        }
-                    },
-                    responsive: [{
-                        breakpoint: 480,
-                        options: {
-                            legend: {
-                                position: 'bottom',
-                                offsetX: -10,
-                                offsetY: 0
-                            }
-                        }
-                    }],
                     plotOptions: {
                         bar: {
-                            horizontal: false,
+                          horizontal: false,
+                          columnWidth: '55%',
+                          endingShape: 'rounded'	
                         },
-                    },
-                    legend: {
-                        position: 'top',
-                        offsetY: 40
-                    },
-                    fill: {
-                        opacity: 1
-                    },
+                      },
+                      dataLabels: {
+                        enabled: false
+                      },
+                      stroke: {
+                        show: true,
+                        width: 2,
+                        colors: ['transparent']
+                      },
                     xaxis: {
-                        categories: this.state.dataName,
+                        categories: ["กะทู้"]
                     },
+                    yaxis: {
+                        title: {
+                          text: '$ (thousands)'
+                        }
+                      },
+                      fill: {
+                        opacity: 1
+                      },
                     tooltip: {
                         y: {
                             formatter: function (val) {
@@ -149,4 +139,4 @@ class BarHospital2 extends Component {
     }
 }
 
-export default BarHospital2;
+export default BarHospital3;

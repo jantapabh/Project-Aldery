@@ -9,6 +9,11 @@ const PieHospital = dynamic(
     { ssr: false }
 )
 
+const PieHospital2 = dynamic(
+    () => import('../../components/chart/pieHospital2'),
+    { ssr: false }
+)
+
 const Barchart = dynamic(
     () => import('../../components/chart/barHospital'),
     { ssr: false }
@@ -16,6 +21,11 @@ const Barchart = dynamic(
 
 const BarHospital2 = dynamic(
     () => import('../../components/chart/barHospital2'),
+    { ssr: false }
+)
+
+const BarHospital3 = dynamic(
+    () => import('../../components/chart/barHospital3'),
     { ssr: false }
 )
 
@@ -57,15 +67,24 @@ class Hospital extends React.Component {
                                 <div className="chart-pic">
                                     <PieHospital />
                                 </div>
-
-                                <div className="chart-contents">
-                                    <Barchart />
+                                <div className="chart-pic">
+                                    <PieHospital2/>
                                 </div>
-                             
+
                             </div>
 
                             <div className="warp-chart">
-                                <BarHospital2/>
+                                <div className="chart-contents">
+                                    <BarHospital2 />
+                                </div>
+                                <Barchart />
+                            </div>
+
+                            <div className="warp-chart">
+                                <div className="chart-contents">
+                                    {/* <BarHospital3/> */}
+                                </div>
+                               
                             </div>
 
 
