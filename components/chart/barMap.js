@@ -113,7 +113,7 @@ class BarMap extends Component {
             }
 
             this.setState({
-                series: [{ data: this.state.dataMan }],
+                series: [{name:"จำนวน", data: this.state.dataMan }],
             })
 
         } catch (err) {
