@@ -29,6 +29,11 @@ const BarHospital3 = dynamic(
     { ssr: false }
 )
 
+const BarHospital4 = dynamic(
+    () => import('../../components/chart/barHospital4'),
+    { ssr: false }
+)
+
 class Hospital extends React.Component {
 
     constructor(props) {
@@ -68,7 +73,7 @@ class Hospital extends React.Component {
                                     <PieHospital />
                                 </div>
                                 <div className="chart-pic">
-                                    <PieHospital2/>
+                                    <PieHospital2 />
                                 </div>
 
                             </div>
@@ -82,9 +87,16 @@ class Hospital extends React.Component {
 
                             <div className="warp-chart">
                                 <div className="chart-contents">
+                                    <BarHospital3 />
+                                </div>
+                                <BarHospital4 />
+                            </div>
+
+                            <div className="warp-chart">
+                                <div className="chart-contents">
                                     {/* <BarHospital3/> */}
                                 </div>
-                               
+
                             </div>
 
 

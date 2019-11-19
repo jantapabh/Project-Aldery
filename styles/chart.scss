@@ -68,6 +68,10 @@
     justify-content: center;
     width: 60%;
     text-align: center;
+
+    @media (max-width: 769px) { 
+      display: none;
+     }
   }
   
   .chart-contents {

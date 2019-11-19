@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 
-class BarHospital3 extends Component {
+class BarHospital4 extends Component {
 
     constructor(props) {
         super(props);
@@ -20,16 +20,15 @@ class BarHospital3 extends Component {
     async componentDidMount() {
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.namelist('ข้อมูลการวิเคราะห์ทางสถิติ!T79:T82')
+        await this.namelist('ข้อมูลการวิเคราะห์ทางสถิติ!T79:T86')
         await this.listData()
-
     }
 
     namelist = async (value) => {
 
         try {
 
-           this.list = await Sheetapi.getSheet(this.access_token, value)
+            this.list = await Sheetapi.getSheet(this.access_token, value)
 
             for (let i = 0; i < this.list.length; i++) {
 
@@ -42,55 +41,46 @@ class BarHospital3 extends Component {
 
                 options: {
                     title: {
-                        text: 'การตรวจสุภาพประจำปี',
+                        text: 'การออกกำลังกาย',
                         align: 'left'
                     },
                     plotOptions: {
                         bar: {
-                          horizontal: true,
-                          dataLabels: {
-                            position: 'top',
-                          },
-                        }
-                      },
-                      dataLabels: {
-                        enabled: true,
-                        offsetX: -6,
-                        style: {
-                          fontSize: '12px',
-                          colors: ['#fff']
-                        }
-                      },
-                      stroke: {
-                        show: true,
-                        width: 1,
-                        colors: ['#fff']
-                      },
-          
-                    xaxis: {
-                        categories: this.state.dataName
+                            horizontal: false,
+                            columnWidth: '55%',
+                            // endingShape: 'rounded'
+                        },
                     },
-                    // yaxis: {
-                    //     title: {
-                    //       text: 'การตรวจสุภาพ'
-                    //     }
-                    //   },
-                      fill: {
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        show: true,
+                        width: 2,
+                        colors: ['transparent']
+                    },
+                    xaxis: {
+                        categories: this.state.dataName,
+                    },
+                    yaxis: {
+                        title: {
+                            text: 'จำนวน'
+                        }
+                    },
+                    fill: {
                         opacity: 1
-                      },
+                    },
                     tooltip: {
                         y: {
                             formatter: function (val) {
                                 return val + " คน"
                             }
                         }
-                    },
+                    }
+
 
                 }
-
-
             })
-
 
         } catch (err) {
             console.log(err);
@@ -101,8 +91,8 @@ class BarHospital3 extends Component {
     listData = async () => {
         try {
 
-            this.man = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!U79:U82')
-            this.woman = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!V79:V82')
+            this.man = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!V79:V83')
+            this.woman = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!W79:W83')
 
             for (let i = 0; i < this.man.length; i++) {
 
@@ -138,12 +128,12 @@ class BarHospital3 extends Component {
                     options={this.state.options}
                     series={this.state.series}
                     type="bar"
-                    height="450"
-                    width="600"
+                    height="400"
+                    width="700"
                 />
             </div>
         );
     }
 }
 
-export default BarHospital3;
+export default BarHospital4;
