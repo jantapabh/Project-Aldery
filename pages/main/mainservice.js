@@ -52,10 +52,10 @@ class MainService extends React.Component {
                             <h2 className="small text-center"></h2>
 
                             <div className="warp-chart">
-                                <Piechart />
+                                {/* <Piechart /> */}
 
                                 <div className="chart-contents">
-                                    <Linechart />
+                                    {/* <Linechart /> */}
                                 </div>
 
                             </div>

@@ -1,7 +1,19 @@
 import React from 'react'
 import Navbar_main from '../../components/navbar_main';
 import Sidebar from '../../components/layout/sidebar';
-import CardLink from '../../components/layout/cardlinks';
+import Sheetapi from '../../config/api'
+import dynamic from 'next/dynamic'
+
+const Linechart = dynamic(
+    () => import('../../components/chart/lineService'),
+    { ssr: false }
+)
+
+const Piechart = dynamic(
+    () => import('../../components/chart/pieService'),
+    { ssr: false }
+)
+
 
 class MainHelp extends React.Component {
 
@@ -11,6 +23,11 @@ class MainHelp extends React.Component {
         this.state = {
             status: true
         }
+    }
+
+    async componentDidMount() {
+        await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
+
     }
 
     onConfirm = (order) => {
@@ -28,20 +45,21 @@ class MainHelp extends React.Component {
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                     <Navbar_main confirm={this.onConfirm} status={this.state.status} />
                     <Sidebar status={this.state.status} />
-
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
                             <h1 className="text-center">การช่วยเหลือ</h1>
                             <h2 className="small text-center"></h2>
-{/* 
-                            <CardLink
-                                title="texttttt"
-                                subtitle="subbbb"
-                                img="/static/activehover.svg"
-                            /> */}
+
+                            <div className="warp-chart">
+                                <Piechart />
+
+                                <div className="chart-contents">
+                                    <Linechart />
+                                </div>
+
+                            </div>
 
                         </div>
-
                     </div>
                 </div>
 
