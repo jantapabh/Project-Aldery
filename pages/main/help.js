@@ -14,8 +14,6 @@ const Piechart = dynamic(
     { ssr: false }
 )
 
-
-
 class Help extends React.Component {
 
     constructor(props) {

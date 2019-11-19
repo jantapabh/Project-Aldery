@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 
-class PieService extends Component {
+class PieHelp extends Component {
 
   constructor(props) {
     super(props);
@@ -111,4 +111,4 @@ class PieService extends Component {
   }
 }
 
-export default PieService;
+export default PieHelp;
