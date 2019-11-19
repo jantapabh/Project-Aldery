@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 
-class PieHospital extends Component {
+class PieService extends Component {
 
   constructor(props) {
     super(props);
@@ -20,7 +20,7 @@ class PieHospital extends Component {
   async componentDidMount() {
     let userOauth = JSON.parse(localStorage.getItem("myOauth"))
     this.access_token = userOauth.data.access_token
-    await this.listName('ข้อมูลการวิเคราะห์ทางสถิติ!B67:B70')
+    await this.listName('ข้อมูลการวิเคราะห์ทางสถิติ!B119:B121')
     await this.listData()
   }
 
@@ -37,7 +37,7 @@ class PieHospital extends Component {
       this.setState({
         options: {
           labels: this.state.datalist,
-          title: { text: "สุขภาพ" },
+          title: { text: "การเข้าร่วมกิจกรรมทางสังคม/เทศบาล" },
           responsive: [{
             breakpoint: 480,
             options: {
@@ -46,9 +46,21 @@ class PieHospital extends Component {
               },
               legend: {
                 position: 'bottom'
+              },
+
+
+            }
+          }],
+
+          tooltip: {
+            y: {
+              formatter: function (val) {
+                return val + " คน"
               }
             }
-          }]
+          },
+
+          colors: ['#ff8a65','#ffd54f','#90a4ae']
         }
       })
 
@@ -60,7 +72,7 @@ class PieHospital extends Component {
   listData = async () => {
     try {
 
-      this.list = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!C67:C70')
+      this.list = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!C119:C121')
 
       for (let i = 0; i < this.list.length; i++) {
 
@@ -79,8 +91,6 @@ class PieHospital extends Component {
 
   }
 
-
-
   render() {
 
     return (
@@ -95,4 +105,4 @@ class PieHospital extends Component {
   }
 }
 
-export default PieHospital;
+export default PieService;
