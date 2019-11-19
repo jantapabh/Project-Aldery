@@ -5,14 +5,15 @@ import Sheetapi from '../../config/api'
 import dynamic from 'next/dynamic'
 
 const Linechart = dynamic(
-    () => import('../../components/chart/lineService'),
+    () => import('../../components/chart/lineHelp'),
     { ssr: false }
 )
 
 const Piechart = dynamic(
-    () => import('../../components/chart/pieService'),
+    () => import('../../components/chart/pieHelp'),
     { ssr: false }
 )
+
 
 
 class Help extends React.Component {
