@@ -37,7 +37,7 @@ class PieService extends Component {
       this.setState({
         options: {
           labels: this.state.datalist,
-          title:{ text:"สภาพความเดือดร้อนในปัจจุบัน"},
+          title: { text: "สภาพความเดือดร้อนในปัจจุบัน" },
           responsive: [{
             breakpoint: 480,
             options: {
@@ -46,9 +46,23 @@ class PieService extends Component {
               },
               legend: {
                 position: 'bottom'
+              },
+
+
+            }
+          }],
+
+          tooltip: {
+            y: {
+              formatter: function (val) {
+                return val + " คน"
               }
             }
-          }]
+          },
+
+          colors: ['#2196f3', '#00d084', '#ffc107',
+            '#eb144c', '#673ab7', '#607d8b',
+            '#f78da7', '#fccb00', '#795548']
         }
       })
 
@@ -65,12 +79,12 @@ class PieService extends Component {
       for (let i = 0; i < this.list.length; i++) {
 
         this.setState(prevState => ({
-          data: [...prevState.data, parseInt(this.list[i][0]) ],
+          data: [...prevState.data, parseInt(this.list[i][0])],
         }))
       }
 
       this.setState({
-        series: this.state.data ,
+        series: this.state.data,
       })
 
     } catch (err) {
@@ -85,13 +99,13 @@ class PieService extends Component {
 
     return (
       // <div className="chart-center">
-        <Chart
-          options={this.state.options}
-          series={this.state.series}
-          type="pie"
-          width="450"
-          height="300"
-        />
+      <Chart
+        options={this.state.options}
+        series={this.state.series}
+        type="pie"
+        width="450"
+        height="300"
+      />
       // </div>
     );
   }
