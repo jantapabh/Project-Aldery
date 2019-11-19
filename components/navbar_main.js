@@ -10,12 +10,18 @@ class Navbar_main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            listMain: [
-                { name: "Dashboard", href: "/main" },
-                { name: "About", href: "/index/about" },
-                { name: "Project", href: "/index/project" },
-                { name: "Services", href: "/index/services" },
-                { name: "Contact", href: "/index/contact" },
+            listMain: [{ name: "About", href: "/index/about" },
+            { name: "Project", href: "/index/project" },
+            { name: "Services", href: "/index/services" },
+            { name: "Contact", href: "/index/contact" },
+            ],
+            list: [
+                { name: "หน้าหลัก", href: "/" },
+                { name: "ข้อมูลทางสถิติ", href: "/main/mainchart" },
+                { name: "สวัสดิการจากรัฐ", href: "/main/maindoc" },
+                { name: "การบริการ", href: "/main/mainservice" },
+                { name: "โรงพยาบาล", href: "/main/mainhospital" },
+                { name: "ช่วยเหลือ", href: "/main/mainhelp" },
             ],
             status: true
 
@@ -50,7 +56,7 @@ class Navbar_main extends React.Component {
     }
 
     render() {
-        const { listMain } = this.state
+        const { list } = this.state
         return (
             <div className={`wrapper${this.props.status ? " menuDisplayed" : ""}`}>
                 <nav className="nav-other">
@@ -99,7 +105,7 @@ class Navbar_main extends React.Component {
                         <ul>
                             <li >
                                 {
-                                    listMain.map((item, indexs) => {
+                                    list.map((item, indexs) => {
                                         return (
                                             <Link key={indexs} href={item.href}>
                                                 <p >{item.name}</p>

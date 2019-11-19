@@ -24,7 +24,7 @@
       margin-bottom: 0.5rem !important;
     }
 
-    h6:hover{
+    h6:hover {
       color: #bedadc;
     }
   }
@@ -44,7 +44,7 @@
   .map-Img {
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 40%;
     text-align: center;
 
     @media (max-width: 1199.98px) {
@@ -61,6 +61,14 @@
       }
     }
   }
+
+  .map-content {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+  }
+  
   .chart-contents {
     display: flex;
     background-color: white;

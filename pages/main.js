@@ -2,6 +2,7 @@ import React from 'react'
 import Map from '../components/layout/Map';
 import Navbar_main from '../components/navbar_main';
 import Sidebar from '../components/layout/sidebar';
+import BarMap from '../components/chart/barMap';
 
 class Main extends React.Component {
 
@@ -32,6 +33,10 @@ class Main extends React.Component {
                             <div className="warp-map">
                                 <div className="map-Img">
                                     <Map />
+                                </div>
+
+                                <div className="map-content">
+                                    <BarMap/>
                                 </div>
 
                             </div>
