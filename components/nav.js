@@ -15,8 +15,8 @@ class Nav extends React.Component {
       status: false,
       list: [
         { name: "หน้าหลัก", href: "/" },
-        { name: "ข้อมูลทางสถิติ", href: "/main/mainchart" },
-        { name: "สวัสดิการจากรัฐ", href: "/main/maindoc" },
+        { name: "ข้อมูลทางสถิติ", href: "/main/chart" },
+        { name: "สวัสดิการจากรัฐ", href: "/main/doc" },
         { name: "การบริการ", href: "/main/service" },
         { name: "โรงพยาบาล", href: "/main/hospital" },
         { name: "ช่วยเหลือ", href: "/main/help" },

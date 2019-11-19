@@ -3,7 +3,7 @@ import CardData from '../../components/layout/cardmain';
 import Navbar_main from '../../components/navbar_main';
 import Sidebar from '../../components/layout/sidebar';
 
-class Maindoc extends React.Component {
+class Doc extends React.Component {
 
     constructor(props) {
         super(props);
@@ -53,5 +53,5 @@ class Maindoc extends React.Component {
         )
     }
 }
-export default Maindoc
+export default Doc
 

@@ -17,11 +17,11 @@ class Navbar_main extends React.Component {
             ],
             list: [
                 { name: "หน้าหลัก", href: "/" },
-                { name: "ข้อมูลทางสถิติ", href: "/main/mainchart" },
-                { name: "สวัสดิการจากรัฐ", href: "/main/maindoc" },
-                { name: "การบริการ", href: "/main/mainservice" },
-                { name: "โรงพยาบาล", href: "/main/mainhospital" },
-                { name: "ช่วยเหลือ", href: "/main/mainhelp" },
+                { name: "ข้อมูลทางสถิติ", href: "/main/chart" },
+                { name: "สวัสดิการจากรัฐ", href: "/main/doc" },
+                { name: "การบริการ", href: "/main/service" },
+                { name: "โรงพยาบาล", href: "/main/hospital" },
+                { name: "ช่วยเหลือ", href: "/main/help" },
             ],
             status: true
 

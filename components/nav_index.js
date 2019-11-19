@@ -12,14 +12,6 @@ class Nav_index extends React.Component {
         super(props);
         this.state = {
             status: false,
-            list: [
-                { name: "หน้าหลัก", href: "/main" },
-                { name: "ข้อมูลทางสถิติ", href: "/mainchart" },
-                { name: "สวัสดิการจากรัฐ", href: "/maindoc" },
-                { name: "การบริการ", href: "/mainservice" },
-                { name: "โรงพยาบาล", href: "/mainhospital" },
-                { name: "ช่วยเหลือ", href: "/mainhelp" },
-            ],
 
             listMain: [
                 { name: "Dashboard", href: "/main" },

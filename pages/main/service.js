@@ -15,7 +15,7 @@ const Piechart = dynamic(
 )
 
 
-class MainService extends React.Component {
+class Service extends React.Component {
 
     constructor(props) {
         super(props);
@@ -68,4 +68,4 @@ class MainService extends React.Component {
         )
     }
 }
-export default MainService
+export default Service

@@ -9,11 +9,11 @@ class Sidebar extends React.Component {
             list: [
                 { name: "หน้าหลัก", nameicon: "Home", img: "/static/home.svg", link: "/" },
                 { name: "รายงานความคืบหน้า", nameicon: "Dashboard", img: "/static/dashboard.svg", link: "/main" },
-                { name: "ข้อมูลทางสถิติ", nameicon: "Chart", img: "/static/chart.svg", link: "/main/mainchart" },
-                { name: "สวัสดิการจากรัฐ", nameicon: "Benefits", img: "/static/document.svg", link: "/main/maindoc" },
-                { name: "หน่วยงาน", nameicon: "Service", img: "/static/service.svg", link: "/main/mainservice" },
-                { name: "โรงพยาบาล", nameicon: "Hospital", img: "/static/hospital.svg", link: "/main/mainhospital" },
-                { name: "ช่วยเหลือ", nameicon: "Help", img: "/static/help.svg", link: "/main/mainhelp" },
+                { name: "ข้อมูลทางสถิติ", nameicon: "Chart", img: "/static/chart.svg", link: "/main/chart" },
+                { name: "สวัสดิการจากรัฐ", nameicon: "Benefits", img: "/static/document.svg", link: "/main/doc" },
+                { name: "หน่วยงาน", nameicon: "Service", img: "/static/service.svg", link: "/main/service" },
+                { name: "โรงพยาบาล", nameicon: "Hospital", img: "/static/hospital.svg", link: "/main/hospital" },
+                { name: "ช่วยเหลือ", nameicon: "Help", img: "/static/help.svg", link: "/main/help" },
             ],
         }
     }
