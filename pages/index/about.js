@@ -9,9 +9,8 @@ class About extends React.Component {
         super(props);
         this.state = {
             data: [
-                { id: "1", title: "One", subtitle: "sub-one", img: "", click: "one" },
-                { id: "2", title: "Two", subtitle: "sub-two", img: "", click: "two" },
-                { id: "3", title: "Three", subtitle: "sub-three", img: "", click: "three" },
+                { id: "1", title: "สังคมผู้สูงอายุ", img: "/static/about1.png", click: "Click" },
+              
             ],
             status: false
         }
@@ -45,7 +44,6 @@ class About extends React.Component {
                                             key={index}
                                             id={items.id}
                                             title={items.title}
-                                            subtitle={items.subtitle}
                                             img={items.img}
                                             click={items.click}
                                             confirm={this.onConfirm}
@@ -54,6 +52,8 @@ class About extends React.Component {
                                 })
                             }
                         </div>
+
+                        
                     </div>
 
                 </div>

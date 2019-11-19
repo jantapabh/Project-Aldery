@@ -5,7 +5,6 @@ class CardAbout extends React.Component {
     static defaultProps = {
         id: "",
         title: "Special title treatment",
-        subtitle: "It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.",
         img: "",
         click: "Go somewhere"
     }
