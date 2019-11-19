@@ -1,8 +1,14 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 import Map from '../components/layout/Map';
 import Navbar_main from '../components/navbar_main';
 import Sidebar from '../components/layout/sidebar';
-import BarMap from '../components/chart/barMap';
+
+const BarMap = dynamic(
+    () => import('../components/chart/barMap'),
+    { ssr: false }
+)
+
 
 class Main extends React.Component {
 
@@ -36,7 +42,7 @@ class Main extends React.Component {
                                 </div>
 
                                 <div className="map-content">
-                                    {/* <BarMap/> */}
+                                    <BarMap/>
                                 </div>
 
                             </div>
