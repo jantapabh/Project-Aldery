@@ -18,6 +18,8 @@ class Nav extends React.Component {
         { name: "ข้อมูลทางสถิติ", href: "/main/chart" },
         { name: "สวัสดิการจากรัฐ", href: "/main/doc" },
         { name: "การบริการ", href: "/main/service" },
+        { name: "สภาพทางสังคม", href: "/main/social" },
+        { name: "ด้านเศรษฐกิจ", href: "/main/economy" },
         { name: "โรงพยาบาล", href: "/main/hospital" },
         { name: "ช่วยเหลือ", href: "/main/help" },
       ],

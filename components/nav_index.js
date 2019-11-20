@@ -12,7 +12,6 @@ class Nav_index extends React.Component {
         super(props);
         this.state = {
             status: false,
-
             listMain: [
                 { name: "Dashboard", href: "/main" },
                 { name: "About", href: "/index/about" },
