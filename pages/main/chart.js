@@ -4,11 +4,6 @@ import dynamic from 'next/dynamic'
 import Navbar_main from '../../components/navbar_main';
 import Sidebar from '../../components/layout/sidebar';
 
-// const Radachart = dynamic(
-//     () => import('../components/chart/radachart'),
-//     { ssr: false }
-// )
-
 const Barchart = dynamic(
     () => import('../../components/chart/barChart'),
     { ssr: false }
@@ -66,10 +61,6 @@ class Chart extends React.Component {
                                 <div className="chart-contents">
                                     <Barchart />
                                 </div>
-                                <div className="chart-contents">
-                                    {/* <Radachart /> */}
-                                </div>
-
                             </div>
 
                         </div>

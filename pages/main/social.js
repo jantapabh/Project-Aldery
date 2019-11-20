@@ -4,6 +4,17 @@ import dynamic from 'next/dynamic'
 import Navbar_main from '../../components/navbar_main';
 import Sidebar from '../../components/layout/sidebar';
 
+const BarSocial = dynamic(
+    () => import('../../components/chart/barSocial'),
+    { ssr: false }
+)
+
+const DonutSocial = dynamic(
+    () => import('../../components/chart/donutSocial'),
+    { ssr: false }
+)
+
+
 const PieSocial = dynamic(
     () => import('../../components/chart/pieSocial'),
     { ssr: false }
@@ -13,8 +24,6 @@ const PieSocial2 = dynamic(
     () => import('../../components/chart/pieSocial2'),
     { ssr: false }
 )
-
-
 
 class Social extends React.Component {
 
@@ -52,22 +61,27 @@ class Social extends React.Component {
                             <h1 className="text-center">สภาพทางสังคม</h1>
                             <h2 className="small text-center"></h2>
 
+
                             <div className="warp-chart">
                                 <div className="chart-contents">
-                                     <PieSocial/>
+                                    <BarSocial/>
                                 </div>
                                 <div className="chart-contents">
-                                  <PieSocial2/>
+                                    <DonutSocial/>
                                 </div>
-
                             </div>
 
                             <div className="warp-chart">
                                 <div className="chart-contents">
+                                    <PieSocial />
                                 </div>
                                 <div className="chart-contents">
+                                    <PieSocial2 />
                                 </div>
+
                             </div>
+
+
 
                         </div>
                     </div>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 
-class PieChart extends Component {
+class DonutSocial extends Component {
 
     constructor(props) {
         super(props);
@@ -17,7 +17,7 @@ class PieChart extends Component {
     async componentDidMount() {
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
-        await this.listName('ข้อมูลการวิเคราะห์ทางสถิติ!B14:B18')
+        await this.listName('ข้อมูลการวิเคราะห์ทางสถิติ!H102:H106')
         await this.listData()
     }
 
@@ -35,7 +35,7 @@ class PieChart extends Component {
                 options: {
                     labels: this.state.datalist,
                     title: {
-                        text: "เพศชาย"
+                        text: "บ้านพักอาศัย"
                     },
                     responsive: [{
                         breakpoint: 480,
@@ -67,8 +67,7 @@ class PieChart extends Component {
     listData = async () => {
         try {
 
-            this.man = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!C14:C18')
-            this.woman = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!D14:D18')
+            this.man = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!I102:I106')
 
             for (let i = 0; i < this.man.length; i++) {
 
@@ -101,4 +100,4 @@ class PieChart extends Component {
     }
 }
 
-export default PieChart;
+export default DonutSocial;

@@ -47,7 +47,14 @@ class PieChart extends Component {
                                 position: 'bottom'
                             }
                         }
-                    }]
+                    }],
+                    tooltip: {
+                        y: {
+                            formatter: function (val) {
+                                return val + " คน"
+                            }
+                        }
+                    }
                 }
             })
 
@@ -85,14 +92,6 @@ class PieChart extends Component {
                         width="500"
                         height="250"
                     />
-                </div>
-                <div className="chart-source">
-                    <a
-                        target="_blank"
-                        href="https://docs.google.com/spreadsheets/d/15bzSXCpQI7qVZyW3-kCQsQ1Qg_6ssRSTa5X4aNavIp8/edit#gid=1593061825">
-                        <h6>ที่มา: ข้อมูลทั่วไปเกี่ยวกับช่วงอายุของเพศหญิง</h6>
-                    </a>
-                    <p>แบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ เทศบาลเมืองกะทู้ จังหวัดภูเก็ต</p>
                 </div>
             </React.Fragment>
         );

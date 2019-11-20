@@ -48,7 +48,14 @@ class PieHospital2 extends Component {
                 position: 'bottom'
               }
             }
-          }]
+          }],
+          tooltip: {
+            y: {
+              formatter: function (val) {
+                return val + " คน"
+              }
+            }
+          }
         }
       })
 
