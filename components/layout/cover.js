@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 class Cover extends React.Component {
 
@@ -7,21 +8,18 @@ class Cover extends React.Component {
 
         return (
             <div className="warp-header">
+                <img src="/static/bg.jpg" alt="cover" />
 
-                {/* <div className="page-content">
+                <div className="page-content">
                     <div className="container-fluid">
-                        <h1>Eldery DB</h1>
-                        <h2>ฐานข้อมูลผู้สูงอายุ และอินโฟกราฟิก</h2>
-                        <div className="textarea-center">
-                            
-                            <h6>เป็นการนำข้อมูลของประชากรผู้ที่เป็นผู้สูงอายุ มาทำอินโฟกราฟิกในรูปแบบต่าง ๆ ซึ่งตัวของเว็บไซต์จะมีการใช้กราฟ<br />
-                                เพื่ออ้างอิงข้อมูลในการแสดงค่าทางสถิติว่าพื้นที่ในส่วนใด ที่มีจำนวนประชากรเป็นผู้สูงอายุมากที่สุด และพื้นที่ใดมีจำนวนน้อยที่สุด<br />
-                                นอกจากนี้ยังมีการให้ข้อมูล เกี่ยวกับสิทธิที่พึ่งได้ของผู้สูงอายุ
-                                </h6>
+                        <h1 className = "animated fadeInDown delay-s">Eldery DB</h1>
+                        <h2 className = "animated fadeInDown delay-s">ฐานข้อมูลผู้สูงอายุ และอินโฟกราฟิก</h2>
+                        <Link href="/main">
+                            <button type="button" class="btn btn-primary animated fadeInDown delay-s">เข้าสู่หน้าหลัก</button>
+                        </Link>
 
-                        </div>
                     </div>
-                </div> */}
+                </div>
 
             </div>
         )
