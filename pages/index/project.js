@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Nav_index from '../../components/nav_index';
-import CardAbout from '../../components/layout/cardabout';
-
+import CardProject from '../../components/layout/cardProject';
 
 class Project extends React.Component {
 
@@ -39,7 +38,7 @@ class Project extends React.Component {
                             {
                                 this.state.data.map((items, index) => {
                                     return (
-                                        <CardAbout
+                                        <CardProject
                                             key={index}
                                             id={items.id}
                                             title={items.title}
