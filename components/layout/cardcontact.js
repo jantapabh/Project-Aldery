@@ -5,13 +5,19 @@ import 'rsuite/lib/styles/index.less';
 class Cardcontact extends React.Component {
 
     static defaultProps = {
+
+        img: "/static/Profile.svg",
+        title: "",
+        name: "xxx ",
+        sername: "xxxx",
         position: "",
-        name: "นางสาวxxx xxxx",
-        img: "/static/Profile.svg"
+        tel: "06-xxxxxx-xx"
 
     }
 
     render() {
+
+        const { img, title, name, sername, position, tel } = this.props
 
         return (
             <React.Fragment>
@@ -19,30 +25,30 @@ class Cardcontact extends React.Component {
                     <div className="card-contact">
                         <div className="contact">
                             <div className="contact-img">
-                                <img src={this.props.img} alt="pic" />
+                                <img src={img} alt="pic" />
                             </div>
                             <div className="contact-data">
-                                <h4>{this.props.name}</h4>
+                                <h4>{title}{name} {sername}</h4>
 
                                 <TagGroup>
                                     {
-                                        this.props.position == "กองสวัสดิการสังคม" ?
+                                        position == "กองสวัสดิการสังคม" ?
                                             <Tag color="yellow">กองสวัสดิการสังคม</Tag>
                                             :
-                                            this.props.position == "กองสาธารณสุขและสิ่งแวดล้อม" ?
+                                            position == "กองสาธารณสุขและสิ่งแวดล้อม" ?
                                                 <Tag color="green">กองสาธารณสุขและสิ่งแวดล้อม</Tag>
                                                 :
-                                                this.props.position == "กองวิชาการและแผนงาน" ?
+                                                position == "กองวิชาการและแผนงาน" ?
                                                     <Tag color="blue">กองวิชาการและแผนงาน</Tag>
                                                     :
-                                                    this.props.position == "กองการศึกษา" ?
+                                                    position == "กองการศึกษา" ?
                                                         <Tag color="orange">กองการศึกษา</Tag>
                                                         :
                                                         null
                                     }
                                 </TagGroup>
                                 {/* <text>""</text> */}
-                                <h6>เบอร์โทรติดต่อ: 06-xxxxxx-xx</h6>
+                                <h6>เบอร์โทรติดต่อ: {tel}</h6>
                             </div>
 
                             <div className="contact-icon">
