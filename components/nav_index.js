@@ -19,6 +19,12 @@ class Nav_index extends React.Component {
                 { name: "Services", href: "/index/services" },
                 { name: "Contact", href: "/index/contact" },
             ],
+            listIndex: [
+                { name: "About", href: "/index/about" },
+                { name: "Project", href: "/index/project" },
+                { name: "Services", href: "/index/services" },
+                { name: "Contact", href: "/index/contact" },
+            ]
 
         }
     }
@@ -39,7 +45,7 @@ class Nav_index extends React.Component {
 
     render() {
 
-        const { listMain } = this.state
+        const { listMain, listIndex } = this.state
 
         return (
             <React.Fragment>
@@ -54,7 +60,7 @@ class Nav_index extends React.Component {
                                     <ul>
                                         <li>
                                             {
-                                                listMain.map((item, index) => {
+                                                listIndex.map((item, index) => {
                                                     return (
                                                         <Link key={index} href={item.href}>
                                                             <p >{item.name}</p>
