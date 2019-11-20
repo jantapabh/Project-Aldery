@@ -98,14 +98,17 @@
   width: 100%;
   min-height: 2rem;
   .chart-source {
-    padding-right: 4rem;
+    padding-right: 0.5rem;
     text-align: end !important;
     width: auto;
-    h6 {
-      cursor: pointer;
-      display: contents;
-      text-align: end;
-      margin-bottom: 0.5rem !important;
+    a {
+      user-select: none;
+      h6 {
+        cursor: pointer;
+        display: contents;
+        text-align: end;
+        margin-bottom: 0.5rem !important;
+      }
     }
 
     p {
