@@ -3,6 +3,7 @@ import Navbar_main from '../../components/navbar_main';
 import Sidebar from '../../components/layout/sidebar';
 import Sheetapi from '../../config/api'
 import dynamic from 'next/dynamic'
+import Footer from '../../components/layout/footer';
 
 const Linechart = dynamic(
     () => import('../../components/chart/lineHelp'),
@@ -59,6 +60,7 @@ class Help extends React.Component {
                             </div>
 
                         </div>
+                        <Footer nameFooter="help" />
                     </div>
                 </div>
 

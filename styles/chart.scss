@@ -16,19 +16,6 @@
     margin: 0.5rem 1rem;
     padding: 0.5rem;
   }
-
-  .chart-source {
-    h6 {
-      cursor: pointer;
-      text-align: start;
-      margin-top: 0.5rem !important;
-      margin-bottom: 0.5rem !important;
-    }
-
-    h6:hover {
-      color: #bedadc;
-    }
-  }
 }
 
 .warp-map {
@@ -69,11 +56,11 @@
     width: 60%;
     text-align: center;
 
-    @media (max-width: 769px) { 
+    @media (max-width: 769px) {
       display: none;
-     }
+    }
   }
-  
+
   .chart-contents {
     display: flex;
     background-color: white;
@@ -100,6 +87,29 @@
       .apexcharts-legend.center.position-right {
         top: 3rem !important;
       }
+    }
+  }
+}
+
+.warp-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 2rem;
+  .chart-source {
+    padding-right: 4rem;
+    text-align: end !important;
+    width: auto;
+    h6 {
+      cursor: pointer;
+      display: contents;
+      text-align: end;
+      margin-bottom: 0.5rem !important;
+    }
+
+    p {
+      margin-bottom: 0 !important;
     }
   }
 }

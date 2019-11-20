@@ -129,7 +129,7 @@ class BarHospital4 extends Component {
                     series={this.state.series}
                     type="bar"
                     height="400"
-                    width="700"
+                    width="500"
                 />
             </div>
         );

@@ -3,6 +3,7 @@ import Sheetapi from '../../config/api'
 import dynamic from 'next/dynamic'
 import Navbar_main from '../../components/navbar_main';
 import Sidebar from '../../components/layout/sidebar';
+import Footer from '../../components/layout/footer';
 
 // const Linechart = dynamic(
 //     () => import('../../components/chart/lineHelp'),
@@ -61,16 +62,11 @@ class Service extends React.Component {
                                     <PieService />
                                 </div>
                                 <div className="chart-pic">
-                                    <PieService2/>
-                                </div>
-
-
-                                <div className="chart-contents">
-
+                                    <PieService2 />
                                 </div>
 
                             </div>
-
+                            <Footer  nameFooter="service" />
                         </div>
                     </div>
                 </div>

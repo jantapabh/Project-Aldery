@@ -98,7 +98,7 @@ class PieSocial2 extends Component {
                 series={this.state.series}
                 type="pie"
                 width="550"
-                height="300"
+                height="250"
             />
         );
     }

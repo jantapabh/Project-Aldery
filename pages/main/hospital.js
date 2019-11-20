@@ -3,6 +3,7 @@ import Sheetapi from '../../config/api'
 import dynamic from 'next/dynamic'
 import Navbar_main from '../../components/navbar_main';
 import Sidebar from '../../components/layout/sidebar';
+import Footer from '../../components/layout/footer';
 
 const PieHospital = dynamic(
     () => import('../../components/chart/piehospital'),
@@ -82,7 +83,10 @@ class Hospital extends React.Component {
                                 <div className="chart-contents">
                                     <BarHospital2 />
                                 </div>
-                                <Barchart />
+                                <div className="chart-contents">
+                                    <Barchart />
+                                </div>
+
                             </div>
 
                             <div className="warp-chart">
@@ -92,16 +96,9 @@ class Hospital extends React.Component {
                                 <BarHospital4 />
                             </div>
 
-                            <div className="warp-chart">
-                                <div className="chart-contents">
-                                    {/* <BarHospital3/> */}
-                                </div>
-
-                            </div>
-
-
-
                         </div>
+
+                        <Footer nameFooter="hospital" />
                     </div>
                 </div>
 

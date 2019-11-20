@@ -97,8 +97,8 @@ class PieSocial extends Component {
                 options={this.state.options}
                 series={this.state.series}
                 type="pie"
-                width="550"
-                height="300"
+                width="500"
+                height="250"
             />
         );
     }

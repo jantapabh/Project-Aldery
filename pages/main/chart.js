@@ -3,6 +3,7 @@ import Sheetapi from '../../config/api'
 import dynamic from 'next/dynamic'
 import Navbar_main from '../../components/navbar_main';
 import Sidebar from '../../components/layout/sidebar';
+import Footer from '../../components/layout/footer';
 
 const Barchart = dynamic(
     () => import('../../components/chart/barChart'),
@@ -62,8 +63,9 @@ class Chart extends React.Component {
                                     <Barchart />
                                 </div>
                             </div>
-
+                            
                         </div>
+<Footer nameFooter = "chart" />
                     </div>
                 </div>
 

@@ -3,6 +3,7 @@ import Sheetapi from '../../config/api'
 import dynamic from 'next/dynamic'
 import Navbar_main from '../../components/navbar_main';
 import Sidebar from '../../components/layout/sidebar';
+import Footer from '../../components/layout/footer';
 
 const PieEconomy = dynamic(
     () => import('../../components/chart/pieEconomy'),
@@ -95,11 +96,13 @@ class Economy extends React.Component {
                                     <BarEconomy3 />
                                 </div>
                                 <div className="chart-contents">
-                                    <PieEconomy3/>
+                                    <PieEconomy3 />
                                 </div>
                             </div>
 
                         </div>
+
+                        <Footer nameFooter="economy" />
                     </div>
                 </div>
 

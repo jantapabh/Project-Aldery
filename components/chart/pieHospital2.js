@@ -96,7 +96,7 @@ class PieHospital2 extends Component {
         series={this.state.series}
         type="pie"
         width="500"
-        height="300"
+        height="250"
       />
     );
   }

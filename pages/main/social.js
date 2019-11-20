@@ -3,6 +3,7 @@ import Sheetapi from '../../config/api'
 import dynamic from 'next/dynamic'
 import Navbar_main from '../../components/navbar_main';
 import Sidebar from '../../components/layout/sidebar';
+import Footer from '../../components/layout/footer';
 
 const BarSocial = dynamic(
     () => import('../../components/chart/barSocial'),
@@ -64,10 +65,10 @@ class Social extends React.Component {
 
                             <div className="warp-chart">
                                 <div className="chart-contents">
-                                    <BarSocial/>
+                                    <BarSocial />
                                 </div>
                                 <div className="chart-contents">
-                                    <DonutSocial/>
+                                    <DonutSocial />
                                 </div>
                             </div>
 
@@ -81,9 +82,9 @@ class Social extends React.Component {
 
                             </div>
 
-
-
                         </div>
+
+                        <Footer nameFooter="social" />
                     </div>
                 </div>
 
