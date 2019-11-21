@@ -45,6 +45,10 @@ class BarEconomy extends Component {
           plotOptions: {
             bar: { horizontal: true }
           },
+          responsive: [{
+            breakpoint: 150,
+            
+        }],
           dataLabels: { enabled: false },
           xaxis: {
             categories: this.state.dataName,
@@ -101,7 +105,7 @@ class BarEconomy extends Component {
           series={this.state.series}
           type="bar"
           height="400"
-          width="700"
+          width="500"
         />
       </div>
     );

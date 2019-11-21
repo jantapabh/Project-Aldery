@@ -48,6 +48,10 @@ class BarEconomy2 extends React.Component {
                             },
                         }
                     },
+                    responsive: [{
+                        breakpoint: 150,
+                        
+                    }],
                     dataLabels: {
                         enabled: true,
                         offsetX: -6,

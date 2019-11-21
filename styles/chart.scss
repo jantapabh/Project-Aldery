@@ -76,8 +76,8 @@
 
 .warp-chart {
   .chart-pic {
-    margin-top: 2rem;
-    margin-left: 5rem;
+    margin: 0.5rem 1rem;
+
     foreignObject {
       .apexcharts-legend.center.position-right {
         position: fixed !important;
@@ -97,10 +97,15 @@
   bottom: 0;
   width: 100%;
   min-height: 2rem;
+  margin-top: 1rem;
   .chart-source {
     padding-right: 0.5rem;
     text-align: end !important;
     width: auto;
+
+    @media (max-width: 575.98px) { 
+      text-align: center !important;
+    }
     a {
       user-select: none;
       h6 {
@@ -118,6 +123,17 @@
 }
 
 //Apexcharts
+
+.warp-chart{
+  .apexcharts-canvas{
+    // @media (max-width: 575.98px) { 
+    //   width: 480px !important;
+    // }
+    // .apexcharts-legend{
+    //   display: none;
+    // }
+  }
+}
 
 .apexcharts-legend-text {
   font-family: "Prompt", sans-serif !important ;

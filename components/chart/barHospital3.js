@@ -53,6 +53,9 @@ class BarHospital3 extends Component {
                           },
                         }
                       },
+                      responsive: [{
+                        breakpoint: 150,
+                    }],
                       dataLabels: {
                         enabled: true,
                         offsetX: -6,

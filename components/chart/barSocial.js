@@ -47,6 +47,9 @@ class BarSocial extends React.Component {
                             // endingShape: 'rounded'
                         },
                     },
+                    responsive: [{
+                        breakpoint: 10,
+                    }],
                     dataLabels: {
                         enabled: false
                     },
@@ -118,7 +121,7 @@ class BarSocial extends React.Component {
                     series={this.state.series} 
                     type="bar" 
                     height="400" 
-                    width="600" />
+                    width="500" />
                 </div>
             </React.Fragment>
 

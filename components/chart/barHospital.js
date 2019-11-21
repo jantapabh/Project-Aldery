@@ -45,6 +45,11 @@ class BarHospital extends Component {
           plotOptions: {
             bar: { horizontal: true }
           },
+          responsive: [{
+            breakpoint: 150,
+
+          }],
+
           dataLabels: { enabled: false },
           xaxis: {
             categories: this.state.dataName,

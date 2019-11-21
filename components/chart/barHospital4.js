@@ -51,6 +51,9 @@ class BarHospital4 extends Component {
                             // endingShape: 'rounded'
                         },
                     },
+                    responsive: [{
+                        breakpoint: 150,
+                    }],
                     dataLabels: {
                         enabled: false
                     },

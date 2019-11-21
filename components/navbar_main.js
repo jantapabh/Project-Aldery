@@ -17,6 +17,7 @@ class Navbar_main extends React.Component {
             ],
             list: [
                 { name: "หน้าหลัก", href: "/" },
+                { name: "รายงานความคืบหน้า", href: "/main" },
                 { name: "ข้อมูลทางสถิติ", href: "/main/chart" },
                 { name: "สวัสดิการจากรัฐ", href: "/main/doc" },
                 { name: "การบริการ", href: "/main/service" },

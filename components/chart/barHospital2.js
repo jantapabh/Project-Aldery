@@ -57,7 +57,7 @@ class BarHospital2 extends Component {
                         }
                     },
                     responsive: [{
-                        breakpoint: 480,
+                        breakpoint: 150,
                         options: {
                             legend: {
                                 position: 'bottom',

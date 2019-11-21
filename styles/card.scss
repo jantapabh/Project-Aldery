@@ -102,6 +102,10 @@
       box-shadow: 0 0 0.875rem 0 rgba(53, 64, 82, 0.05);
     }
   }
+  @media (max-width: 575.98px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .warp-card-help {
@@ -127,7 +131,6 @@
     }
   }
 }
-
 
 .warp-card {
   margin: 1rem;
@@ -156,11 +159,11 @@
       background-color: white;
       cursor: pointer;
 
-      .card-header{
+      .card-header {
         text-align: left;
       }
 
-      .card-title{
+      .card-title {
         text-align: left;
       }
 
@@ -190,8 +193,6 @@
           @media (max-width: 1199.98px) {
             align-items: center;
           }
-
-        
         }
       }
     }

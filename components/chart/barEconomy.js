@@ -47,6 +47,10 @@ class BarEconomy extends React.Component {
                             // endingShape: 'rounded'
                         },
                     },
+                    responsive: [{
+                        breakpoint: 150,
+                        
+                    }],
                     dataLabels: {
                         enabled: false
                     },
@@ -114,11 +118,11 @@ class BarEconomy extends React.Component {
         return (
             <React.Fragment>
                 <div className="warp-chart">
-                    <Chart options={this.state.options} 
-                    series={this.state.series} 
-                    type="bar" 
-                    height="400" 
-                    width="600" />
+                    <Chart options={this.state.options}
+                        series={this.state.series}
+                        type="bar"
+                        height="400"
+                        width="600" />
                 </div>
             </React.Fragment>
 
