@@ -271,7 +271,7 @@ nav.main {
 nav {
   ul {
     .warp-table {
-      width: 50%;
+      width: 10%;
 
       li {
         display: flex;
@@ -286,6 +286,67 @@ nav {
         p:hover {
           color: #bedadc;
         }
+      }
+    }
+  }
+}
+
+.collapsible-menu-table {
+  background-color: rgb(255, 255, 255);
+  padding: 0 1rem;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+
+  label {
+
+    text-align: center;
+    font-size: 1.5rem;
+    display: block;
+    cursor: pointer;
+    // background: url(menu.png) no-repeat left center;
+    padding: 1rem;
+    margin-bottom: 0 !important;
+  }
+
+  .menu-content {
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        p {
+          cursor: pointer;
+          display: block;
+          padding: 10px;
+          text-decoration: none;
+        }
+        p:hover{
+          color: #bedadc !important;
+        }
+      }
+    }
+  }
+  .menu-content.show {
+    max-height: 100vh;
+    p:hover{
+      color: #bedadc;
+    }
+  }
+
+  .warp-nav-sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    .box-hamberger {
+      width: 3.5rem;
+      height: 4rem;
+
+      a.hamberger {
+        top: 2.5rem;
       }
     }
   }

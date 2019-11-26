@@ -24,12 +24,6 @@ class Nav extends React.Component {
         { name: "ช่วยเหลือ", href: "/main/help" },
       ],
 
-      listMain: [{ name: "About", href: "/index/about" },
-      { name: "Project", href: "/index/project" },
-      { name: "Services", href: "/index/services" },
-      { name: "Contact", href: "/index/contact" },
-      ],
-
     }
   }
 
@@ -57,7 +51,7 @@ class Nav extends React.Component {
         {
           this.props.name == "" ?
             <React.Fragment>
-              <nav>
+              {/* <nav>
                 <ul>
                   <div className="warp-table">
                     <Link href="/main">
@@ -65,11 +59,20 @@ class Nav extends React.Component {
                         <p>ย้อนกลับ</p>
                       </li>
                     </Link>
-                  </div>
 
-                  <div className="warp-manu">
+                  </div>
+                  <div className="warp-nav-sidebar">
+                    <div className="box-hamberger">
+                      <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </a>
+                    </div>
+                  </div>
+                  <div className={`menu-content${this.state.status ? " show" : ""}`}>
                     <ul>
-                      <li>
+                      <li >
                         {
                           this.state.list.map((item, index) => {
                             return (
@@ -82,11 +85,11 @@ class Nav extends React.Component {
                       </li>
                     </ul>
                   </div>
+
                 </ul>
-              </nav>
-              <div class="collapsible-menu">
+              </nav> */}
+              <div class="collapsible-menu-table">
                 <div className="warp-nav-sidebar">
-                  <Nav_logo />
                   <div className="box-hamberger">
                     <a className={`hamberger btn${this.state.status ? " active" : " not-active"}`} onClick={this.collapsible} >
                       <span></span>
