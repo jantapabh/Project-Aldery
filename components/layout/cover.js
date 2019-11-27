@@ -8,7 +8,7 @@ class Cover extends React.Component {
 
         return (
             <div className="warp-header">
-                <img src="/static/bg.jpg" alt="cover" />
+                <img src="/static/bg-test4.jpg" alt="cover" />
 
                 <div className="page-content">
                     <div className="container-fluid">
