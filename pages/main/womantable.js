@@ -46,7 +46,7 @@ class Womantable extends React.Component {
     render() {
         return (
             <div className="warp-main">
-                <Nav_table name="" />
+                <Nav_table name="table" />
 
                 <Table
                     data={this.state.data}

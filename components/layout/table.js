@@ -49,9 +49,6 @@ class Table extends React.Component {
                         <TableHeaderColumn dataField="ชื่อ">ชื่อ</TableHeaderColumn>
                         <TableHeaderColumn dataField="นามสกุล">นามสกุล</TableHeaderColumn>
                     </BootstrapTable>
-
-
-
                 </div>
 
 
