@@ -67,7 +67,10 @@ const Navbar_main = props => {
                     </div>
                     <div className="warp-logo-main">
                         <ul>
-                            <img src="/static/logomain.svg" />
+                            <Link href="/">
+                                <img src="/static/logomain.svg" />
+                            </Link>
+
                         </ul>
 
                     </div>
