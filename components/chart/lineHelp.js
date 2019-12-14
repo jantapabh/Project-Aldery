@@ -73,12 +73,12 @@ class LineHelp extends React.Component {
           xaxis: {
             categories: this.state.datalist,
             title: {
-              text: 'การช่วยเหลือ'
+              text: 'ประเภทของความต้องการ การช่วยเหลือ'
             }
           },
           yaxis: {
             title: {
-              text: 'เพศ'
+              text: 'จำนวน'
             },
             min: 0,
             max: 60
