@@ -1,7 +1,8 @@
 import React from 'react'
+import Nav_table from '../../components/nav_table';
 import Table from '../../components/layout/table'
-import Nav from '../../components/nav'
 import Sheetapi from '../../config/api'
+
 class Womantable extends React.Component {
 
     constructor(props) {
@@ -45,7 +46,7 @@ class Womantable extends React.Component {
     render() {
         return (
             <div className="warp-main">
-                <Nav />
+                <Nav_table name="" />
 
                 <Table
                     data={this.state.data}

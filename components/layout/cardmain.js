@@ -83,7 +83,7 @@ class CardData extends React.Component {
                 </div>
 
                 <div className="card-group">
-                    <Link href='totaltable/totaltable'>
+                    <Link href='/main/totaltable'>
                         <div className="card">
                             <div className="card-data">
                                 <img src="/static/couple.svg" />

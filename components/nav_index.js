@@ -32,18 +32,16 @@ const Nav_index = props => {
 
     return (
         <React.Fragment>
-
             {
                 props.name == "/" ?
                     <nav>
                         <ul>
                             <Nav_logo />
-
                             <div className="warp-manu">
                                 <ul>
                                     <li>
                                         {
-                                            listIndex.map((item, index) => {
+                                            index.map((item, index) => {
                                                 return (
                                                     <Link key={index} href={item.href}>
                                                         <p >{item.name}</p>
@@ -71,7 +69,7 @@ const Nav_index = props => {
                                 <ul>
                                     <li>
                                         {
-                                            index.map((item, index) => {
+                                            listIndex.map((item, index) => {
                                                 return (
                                                     <Link key={index} href={item.href}>
                                                         <p >{item.name}</p>

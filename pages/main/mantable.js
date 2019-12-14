@@ -1,6 +1,6 @@
 import React from 'react'
+import Nav_table from '../../components/nav_table';
 import Table from '../../components/layout/table'
-import Nav from '../../components/nav'
 import Sheetapi from '../../config/api'
 class Mantable extends React.Component {
 
@@ -47,7 +47,7 @@ class Mantable extends React.Component {
 
         return (
             <React.Fragment>
-                <Nav />
+                <Nav_table name="table" />
                 <Table
                     data={data}
                 />
