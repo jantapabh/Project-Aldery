@@ -65,6 +65,12 @@ const Navbar_main = props => {
                             </div>
                         </li>
                     </div>
+                    <div className="warp-logo-main">
+                        <ul>
+                            <img src="/static/logomain.svg" />
+                        </ul>
+
+                    </div>
                     <div className="warp-manu">
                         <ul>
                             <li>
