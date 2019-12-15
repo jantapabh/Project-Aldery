@@ -7,8 +7,9 @@ const Nav_logo = () => {
         <div className="nav-logo">
             <Link href="/">
                 <li>
-                    <img src="/static/cover-img5.png"></img>
-                    <p>Eldery DB</p>
+                    {/* <img src="/static/cover-img5.png"></img> */}
+                    <img src="/static/logomain.svg" alt="logo"/>
+                    <h4>Eldery DB</h4>
                 </li>
             </Link>
         </div>

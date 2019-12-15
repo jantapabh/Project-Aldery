@@ -36,18 +36,18 @@ li {
     cursor: pointer;
     color: black !important;
     margin: 1rem 1.5rem !important;
-    margin-top: 1.5rem !important;
+    margin-top: 1.7rem !important;
   }
   p:hover {
     color: #bedadc;
   }
 }
 
-.nav-logo {
-  min-width: 40%;
-  list-style: none;
-  display: flex;
-}
+// .nav-logo {
+//   min-width: 40%;
+//   list-style: none;
+//   display: flex;
+// }
 
 //Index
 nav {
@@ -69,14 +69,20 @@ nav {
     display: flex;
 
     .nav-logo {
+      min-width: 40%;
+      list-style: none;
+      display: flex;
       li {
         margin-bottom: 0.5rem;
 
         img {
           margin-top: 1rem;
-          margin-left: 1rem;
           width: 6rem;
           height: 3rem;
+        }
+        h4{
+          margin: 0;
+          margin-top: 1.8rem;
         }
       }
     }
