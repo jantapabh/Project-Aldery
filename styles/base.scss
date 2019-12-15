@@ -6,6 +6,7 @@
 @import "./menu-icon.scss";
 @import "./nav.scss";
 @import "./sidebar.scss";
+@import "./map.scss";
 
 @import "./index/services.scss";
 @import "./index/contact.scss";
@@ -19,10 +20,6 @@ body {
       font-family: $font !important;
       color: black !important;
   }
-}
-
-.warp {
-  width: 100%;
 }
 
 h1 {
