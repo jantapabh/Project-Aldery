@@ -63,9 +63,9 @@ class Chart extends React.Component {
                                     <Barchart />
                                 </div>
                             </div>
-                            
+
                         </div>
-<Footer nameFooter = "chart" />
+                        <Footer nameFooter="chart" />
                     </div>
                 </div>
 

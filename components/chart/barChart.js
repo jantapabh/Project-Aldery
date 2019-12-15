@@ -77,11 +77,11 @@ class Barchart extends React.Component {
           },
           tooltip: {
             y: {
-                formatter: function (val) {
-                    return val + " คน"
-                }
+              formatter: function (val) {
+                return val + " คน"
+              }
             }
-        }
+          }
         }
       })
 
@@ -127,8 +127,35 @@ class Barchart extends React.Component {
     return (
       <React.Fragment>
         <div className="warp-chart">
-          <Chart options={this.state.options} series={this.state.series} type="bar" height="285" width="600" />
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="bar" height="285"
+            width="600"
+          />
         </div>
+
+        <div className="warp-chart-small">
+          <h1>Small</h1>
+        </div>
+
+        <div className="warp-chart-mobile">
+          <h1>Mobile</h1>
+        </div>
+
+        <div className="warp-chart-tablets">
+          <h1>Tablets</h1>
+        </div>
+
+        <div className="warp-chart-desktops">
+          <h1>Desktops</h1>
+        </div>
+
+        <div className="warp-chart-large">
+          <h1>Large</h1>
+        </div>
+
+
       </React.Fragment>
 
     )
