@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
 let order = 'desc';
@@ -39,7 +39,7 @@ class Table extends React.Component {
                     <BootstrapTable
                         ref='table'
                         data={data}
-                        
+
                         pagination={true}
                         search={true}
                         searchPlaceholder={"ค้นหา"}
@@ -56,4 +56,5 @@ class Table extends React.Component {
         )
     }
 }
+
 export default Table;
