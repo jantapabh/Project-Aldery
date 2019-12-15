@@ -12,7 +12,6 @@ import Typed from 'react-typed'
 import { get } from "axios"
 import { feature } from "topojson-client"
 import { Motion, spring } from "react-motion"
-import axios from 'axios';
 import Sheetapi from '../../config/api'
 
 const wrapperStyles = {

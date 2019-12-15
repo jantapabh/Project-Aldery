@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Nav_table from '../../components/nav_table';
 import Table from '../../components/layout/table'
 import Sheetapi from '../../config/api'
+
+
 class Mantable extends React.Component {
 
     constructor(props) {
@@ -44,6 +46,7 @@ class Mantable extends React.Component {
 
     render() {
         const { data } = this.state
+
 
         return (
             <React.Fragment>
