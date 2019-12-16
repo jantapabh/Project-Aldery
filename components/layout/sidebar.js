@@ -24,11 +24,10 @@ const Sidebar = props => {
                     {
                         sidebar.map((items, index) => {
                             return (
-                                <React.Fragment>
-                                    <Link href={items.link}>
-                                        <li key={index}><img src={items.img} /><a>{items.name}</a></li>
-                                    </Link>
-                                </React.Fragment>
+
+                                <Link key={index} href={items.link}>
+                                    <li ><img src={items.img} /><a>{items.name}</a></li>
+                                </Link>
                             )
                         })
                     }
@@ -38,12 +37,12 @@ const Sidebar = props => {
                     {
                         sidebar.map((itemss, indexs) => {
                             return (
-                                <React.Fragment>
-                                    <div className="icon-sidebar">
-                                        <li key={indexs}><img src={itemss.img} /></li>
-                                        <p>{itemss.nameicon}</p>
-                                    </div>
-                                </React.Fragment>
+
+                                <div key={indexs} className="icon-sidebar">
+                                    <li ><img src={itemss.img} /></li>
+                                    <p>{itemss.nameicon}</p>
+                                </div>
+
                             )
                         })
                     }

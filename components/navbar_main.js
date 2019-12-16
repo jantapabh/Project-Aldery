@@ -79,8 +79,8 @@ const Navbar_main = props => {
                                 {
                                     index.map((item, index) => {
                                         return (
-                                            <Link href={item.href}>
-                                                <p key={index}>{item.name}</p>
+                                            <Link key={index} href={item.href}>
+                                                <p>{item.name}</p>
                                             </Link>
                                         )
                                     })

@@ -50,7 +50,7 @@ class Barchart extends React.Component {
             }
           },
           responsive: [{
-            breakpoint: 480,
+            breakpoint: 1000,
             options: {
               legend: {
                 position: 'bottom',
@@ -126,15 +126,6 @@ class Barchart extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {/* <div className="warp-chart">
-          <Chart
-            options={this.state.options}
-            series={this.state.series}
-            type="bar" height="285"
-            width="600"
-          />
-        </div> */}
-
         <div className="warp-chart-small">
           <Chart
             options={this.state.options}
@@ -172,7 +163,6 @@ class Barchart extends React.Component {
         </div>
 
         <div className="warp-chart-large">
-          <h1>Large</h1>
           <Chart
             options={this.state.options}
             series={this.state.series}

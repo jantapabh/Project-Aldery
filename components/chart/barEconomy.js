@@ -49,7 +49,7 @@ class BarEconomy extends React.Component {
                     },
                     responsive: [{
                         breakpoint: 150,
-                        
+
                     }],
                     dataLabels: {
                         enabled: false
@@ -117,12 +117,49 @@ class BarEconomy extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="warp-chart">
+                <div className="warp-chart-small">
+                    <Chart options={this.state.options}
+                        series={this.state.series}
+                        type="bar"
+                        height="300"
+                        width="325"
+                    />
+                </div>
+
+                <div className="warp-chart-mobile">
+                    <Chart options={this.state.options}
+                        series={this.state.series}
+                        type="bar"
+                        height="300"
+                        width="400"
+                    />
+                </div>
+
+                <div className="warp-chart-tablets">
+                    <Chart options={this.state.options}
+                        series={this.state.series}
+                        type="bar"
+                        height="325"
+                        width="450"
+                    />
+                </div>
+
+                <div className="warp-chart-desktops">
+                    <Chart options={this.state.options}
+                        series={this.state.series}
+                        type="bar"
+                        height="350"
+                        width="500"
+                    />
+                </div>
+
+                <div className="warp-chart-large">
                     <Chart options={this.state.options}
                         series={this.state.series}
                         type="bar"
                         height="400"
-                        width="600" />
+                        width="550"
+                    />
                 </div>
             </React.Fragment>
 

@@ -46,18 +46,17 @@ class BarHospital2 extends Component {
                         align: 'left'
                     },
                     chart: {
-                        height: 350,
-                        type: 'bar',
                         stacked: true,
                         toolbar: {
-                            show: true
+                          show: true
                         },
                         zoom: {
-                            enabled: true
+                          enabled: true
                         }
-                    },
+                      },
+                    dataLabels: { enabled: false },
                     responsive: [{
-                        breakpoint: 150,
+                        breakpoint: 1000,
                         options: {
                             legend: {
                                 position: 'bottom',
@@ -136,15 +135,53 @@ class BarHospital2 extends Component {
     render() {
 
         return (
-            <div className="warp-chart">
-                <Chart
-                    options={this.state.options}
-                    series={this.state.series}
-                    type="bar"
-                    height="400"
-                    width="500"
-                />
-            </div>
+            <React.Fragment>
+                <div className="warp-chart-small">
+                    <Chart options={this.state.options}
+                        series={this.state.series}
+                        type="bar"
+                        height="300"
+                        width="290"
+                    />
+                </div>
+
+                <div className="warp-chart-mobile">
+                    <Chart options={this.state.options}
+                        series={this.state.series}
+                        type="bar"
+                        height="300"
+                        width="400"
+                    />
+                </div>
+
+                <div className="warp-chart-tablets">
+                    <Chart options={this.state.options}
+                        series={this.state.series}
+                        type="bar"
+                        height="325"
+                        width="450"
+                    />
+                </div>
+
+                <div className="warp-chart-desktops">
+                    <Chart options={this.state.options}
+                        series={this.state.series}
+                        type="bar"
+                        height="350"
+                        width="500"
+                    />
+                </div>
+
+                <div className="warp-chart-large">
+                    <Chart
+                        options={this.state.options}
+                        series={this.state.series}
+                        type="bar"
+                        height="400"
+                        width="500"
+                    />
+                </div>
+            </React.Fragment>
         );
     }
 }

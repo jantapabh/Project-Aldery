@@ -41,25 +41,22 @@ class BarEconomy2 extends React.Component {
                         align: 'left'
                     },
                     plotOptions: {
-                        bar: {
-                            horizontal: true,
-                            dataLabels: {
-                                position: 'top',
-                            },
-                        }
+                        bar: { horizontal: true }
                     },
                     responsive: [{
-                        breakpoint: 150,
-                        
-                    }],
-                    dataLabels: {
-                        enabled: true,
-                        offsetX: -6,
-                        style: {
-                            fontSize: '12px',
-                            colors: ['#fff']
+                        breakpoint: 1000,
+                        options: {
+                            plotOptions: {
+                                bar: {
+                                    horizontal: false
+                                }
+                            },
+                            legend: {
+                                position: "bottom"
+                            }
                         }
-                    },
+                    }],
+                    dataLabels: { enabled: false },
                     stroke: {
                         show: true,
                         width: 1,
@@ -73,9 +70,6 @@ class BarEconomy2 extends React.Component {
                         title: {
                             text: 'รายได้'
                         }
-                    },
-                    fill: {
-                        opacity: 1,
                     },
                     tooltip: {
                         y: {
@@ -124,12 +118,49 @@ class BarEconomy2 extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="warp-chart">
+                <div className="warp-chart-small">
+                    <Chart options={this.state.options}
+                        series={this.state.series}
+                        type="bar"
+                        height="300"
+                        width="250"
+                    />
+                </div>
+
+                <div className="warp-chart-mobile">
+                    <Chart options={this.state.options}
+                        series={this.state.series}
+                        type="bar"
+                        height="300"
+                        width="400"
+                    />
+                </div>
+
+                <div className="warp-chart-tablets">
+                    <Chart options={this.state.options}
+                        series={this.state.series}
+                        type="bar"
+                        height="325"
+                        width="450"
+                    />
+                </div>
+
+                <div className="warp-chart-desktops">
                     <Chart options={this.state.options}
                         series={this.state.series}
                         type="bar"
                         height="350"
-                        width="600" />
+                        width="500"
+                    />
+                </div>
+
+                <div className="warp-chart-large">
+                    <Chart options={this.state.options}
+                        series={this.state.series}
+                        type="bar"
+                        height="400"
+                        width="550"
+                    />
                 </div>
             </React.Fragment>
 

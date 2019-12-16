@@ -93,7 +93,11 @@ class Hospital extends React.Component {
                                 <div className="chart-contents">
                                     <BarHospital3 />
                                 </div>
-                                <BarHospital4 />
+                                <div className="chart-contents">
+                                    <BarHospital4 />
+                                </div>
+
+
                             </div>
 
                         </div>
