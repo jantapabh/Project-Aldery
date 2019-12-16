@@ -126,33 +126,59 @@ class Barchart extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="warp-chart">
+        {/* <div className="warp-chart">
           <Chart
             options={this.state.options}
             series={this.state.series}
             type="bar" height="285"
             width="600"
           />
-        </div>
+        </div> */}
 
         <div className="warp-chart-small">
-          <h1>Small</h1>
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="bar" height="300"
+            width="250"
+          />
         </div>
 
         <div className="warp-chart-mobile">
-          <h1>Mobile</h1>
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="bar" height="200"
+            width="450"
+          />
         </div>
 
         <div className="warp-chart-tablets">
-          <h1>Tablets</h1>
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="bar" height="220"
+            width="500"
+          />
         </div>
 
         <div className="warp-chart-desktops">
-          <h1>Desktops</h1>
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="bar" height="245"
+            width="550"
+          />
         </div>
 
         <div className="warp-chart-large">
           <h1>Large</h1>
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="bar" height="285"
+            width="600"
+          />
         </div>
 
 
