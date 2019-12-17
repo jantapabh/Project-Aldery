@@ -71,13 +71,31 @@ class Doughnutchart extends React.Component {
     const { data } = this.state
     return (
       <React.Fragment>
-        <Doughnut
-          data={data}
-          legend={legend}
-          width={400}
-          height={150}
-          options={{ maintainAspectRatio: false,responsive:false  }}
-        />
+        <div className="warp-chart-small">
+
+        </div>
+
+        <div className="warp-chart-mobile">
+
+        </div>
+
+        <div className="warp-chart-tablets">
+
+        </div>
+
+        <div className="warp-chart-desktops">
+
+        </div>
+
+        <div className="warp-chart-large">
+          <Doughnut
+            data={data}
+            legend={legend}
+            width={400}
+            height={150}
+            options={{ maintainAspectRatio: false, responsive: false }}
+          />
+        </div>
       </React.Fragment>
     )
   }
