@@ -39,14 +39,12 @@ class PieDoc extends Component {
           labels: this.state.datalist,
           title: { text: "สถานภาพการรับสวัสดิการจากรัฐ" },
           responsive: [{
-            breakpoint: 480,
+            breakpoint: 800,
             options: {
-              chart: {
-                width: 100
-              },
               legend: {
                 position: 'bottom'
-              }
+              },
+              // dataLabels: { enabled: false },
             }
           }],
 
@@ -96,14 +94,58 @@ class PieDoc extends Component {
   render() {
 
     return (
-      <Chart
-        options={this.state.options}
-        series={this.state.series}
-        type="pie"
-        width="600"
-        height="300"
-      />
- 
+      <React.Fragment>
+        <div className="warp-chart-small">
+        <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="pie"
+            width="400"
+            height="200"
+          />
+        </div>
+
+        <div className="warp-chart-mobile">
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="pie"
+            width="600"
+            height="300"
+          />
+        </div>
+
+        <div className="warp-chart-tablets">
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="pie"
+            width="600"
+            height="300"
+          />
+        </div>
+
+        <div className="warp-chart-desktops">
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="pie"
+            width="600"
+            height="300"
+          />
+        </div>
+
+        <div className="warp-chart-large">
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="pie"
+            width="600"
+            height="300"
+          />
+        </div>
+      </React.Fragment>
+
     );
   }
 }

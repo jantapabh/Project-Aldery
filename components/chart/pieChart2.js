@@ -38,14 +38,15 @@ class PieChart extends Component {
                         text: "เพศหญิง"
                     },
                     responsive: [{
-                        breakpoint: 480,
+                        breakpoint: 900,
                         options: {
                             chart: {
-                                width: 200
+                                width: 250
                             },
                             legend: {
                                 position: 'bottom'
-                            }
+                            },
+                            dataLabels: { enabled: false },
                         }
                     }],
                     tooltip: {
@@ -84,7 +85,48 @@ class PieChart extends Component {
 
         return (
             <React.Fragment>
-                <div className="chart-center">
+                <div className="warp-chart-small">
+                    <Chart
+                        options={this.state.options}
+                        series={this.state.series}
+                        type="donut"
+                        width="500"
+                        height="250"
+                    />
+
+                </div>
+
+                <div className="warp-chart-mobile">
+                    <Chart
+                        options={this.state.options}
+                        series={this.state.series}
+                        type="donut"
+                        width="500"
+                        height="250"
+                    />
+                </div>
+
+                <div className="warp-chart-tablets">
+                    <Chart
+                        options={this.state.options}
+                        series={this.state.series}
+                        type="donut"
+                        width="500"
+                        height="250"
+                    />
+                </div>
+
+                <div className="warp-chart-desktops">
+                    <Chart
+                        options={this.state.options}
+                        series={this.state.series}
+                        type="donut"
+                        width="500"
+                        height="250"
+                    />
+                </div>
+
+                <div className="warp-chart-large">
                     <Chart
                         options={this.state.options}
                         series={this.state.series}

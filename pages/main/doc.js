@@ -54,9 +54,6 @@ class Doc extends React.Component {
 
                             <div className="warp-chart">
                                 <PieDoc />
-
-
-
                             </div>
 
                         </div>
