@@ -39,7 +39,7 @@ class PieService2 extends Component {
           labels: this.state.datalist,
           title: { text: "การเข้าร่วมกิจกรรมทางศาสนกิจ" },
           responsive: [{
-            breakpoint: 480,
+            breakpoint: 900,
             options: {
               chart: {
                 width: 300
@@ -97,8 +97,8 @@ class PieService2 extends Component {
         options={this.state.options}
         series={this.state.series}
         type="pie"
-        width="400"
-        height="290"
+        width="600"
+        height="300"
       />
     );
   }

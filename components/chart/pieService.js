@@ -39,7 +39,7 @@ class PieService extends Component {
           labels: this.state.datalist,
           title: { text: "การเข้าร่วมกิจกรรมทางสังคม/เทศบาล" },
           responsive: [{
-            breakpoint: 480,
+            breakpoint: 900,
             options: {
               chart: {
                 width: 300
@@ -48,7 +48,6 @@ class PieService extends Component {
                 position: 'bottom'
               },
               dataLabels: { enabled: false }
-
             }
           }],
 
@@ -94,13 +93,15 @@ class PieService extends Component {
   render() {
 
     return (
+
       <Chart
         options={this.state.options}
         series={this.state.series}
         type="pie"
-        width="400"
-        height="290"
+        width="600"
+        height="300"
       />
+
     );
   }
 }

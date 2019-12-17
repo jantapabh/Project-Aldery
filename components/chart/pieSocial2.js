@@ -38,16 +38,15 @@ class PieSocial2 extends Component {
                     labels: this.state.datalist,
                     title: { text: "สภาพบ้าน" },
                     responsive: [{
-                        breakpoint: 480,
+                        breakpoint: 900,
                         options: {
                             chart: {
-                                width: 100
+                                width: 300
                             },
                             legend: {
                                 position: 'bottom'
                             },
-
-
+                            dataLabels: { enabled: false }
                         }
                     }],
 
