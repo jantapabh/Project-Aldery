@@ -42,12 +42,12 @@ class PieService extends Component {
             breakpoint: 480,
             options: {
               chart: {
-                width: 100
+                width: 300
               },
               legend: {
                 position: 'bottom'
               },
-
+              dataLabels: { enabled: false }
 
             }
           }],
@@ -60,7 +60,7 @@ class PieService extends Component {
             }
           },
 
-          colors: ['#ff8a65','#ffd54f','#90a4ae']
+          colors: ['#ff8a65', '#ffd54f', '#90a4ae']
         }
       })
 
@@ -98,8 +98,8 @@ class PieService extends Component {
         options={this.state.options}
         series={this.state.series}
         type="pie"
-        width="450"
-        height="300"
+        width="400"
+        height="290"
       />
     );
   }
