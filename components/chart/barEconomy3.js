@@ -106,11 +106,11 @@ class BarEconomy extends Component {
     return (
       <React.Fragment>
         <div className="warp-chart-small">
-          <Chart
-            options={this.state.options}
+          <Chart options={this.state.options}
             series={this.state.series}
-            type="bar" height="300"
-            width="250"
+            type="bar"
+            height="300"
+            width="325"
           />
         </div>
 
@@ -118,7 +118,7 @@ class BarEconomy extends Component {
           <Chart
             options={this.state.options}
             series={this.state.series}
-            type="bar" height="200"
+            type="bar" height="350"
             width="450"
           />
         </div>
@@ -128,7 +128,7 @@ class BarEconomy extends Component {
             options={this.state.options}
             series={this.state.series}
             type="bar" height="300"
-            width="300"
+            width="450"
           />
         </div>
 
@@ -137,7 +137,7 @@ class BarEconomy extends Component {
             options={this.state.options}
             series={this.state.series}
             type="bar" height="245"
-            width="550"
+            width="500"
           />
         </div>
 

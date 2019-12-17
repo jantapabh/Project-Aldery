@@ -66,11 +66,6 @@ class BarEconomy2 extends React.Component {
                     xaxis: {
                         categories: this.state.datalist,
                     },
-                    yaxis: {
-                        title: {
-                            text: 'รายได้'
-                        }
-                    },
                     tooltip: {
                         y: {
                             formatter: function (val) {
@@ -123,7 +118,7 @@ class BarEconomy2 extends React.Component {
                         series={this.state.series}
                         type="bar"
                         height="300"
-                        width="250"
+                        width="325"
                     />
                 </div>
 
@@ -131,8 +126,8 @@ class BarEconomy2 extends React.Component {
                     <Chart options={this.state.options}
                         series={this.state.series}
                         type="bar"
-                        height="300"
-                        width="400"
+                        height="325"
+                        width="450"
                     />
                 </div>
 

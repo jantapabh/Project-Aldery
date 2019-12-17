@@ -15,7 +15,6 @@ class PieEconomy extends Component {
     }
   }
 
-
   async componentDidMount() {
     let userOauth = JSON.parse(localStorage.getItem("myOauth"))
     this.access_token = userOauth.data.access_token
@@ -41,13 +40,12 @@ class PieEconomy extends Component {
             breakpoint: 480,
             options: {
               chart: {
-                width: 100
+                width: 290
               },
               legend: {
                 position: 'bottom'
               },
-
-
+              dataLabels: { enabled: false },
             }
           }],
 
@@ -95,13 +93,57 @@ class PieEconomy extends Component {
   render() {
 
     return (
-      <Chart
-        options={this.state.options}
-        series={this.state.series}
-        type="pie"
-        width="450"
-        height="300"
-      />
+      <React.Fragment>
+        <div className="warp-chart-small">
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="pie"
+            width="300"
+            height="350"
+          />
+        </div>
+
+        <div className="warp-chart-mobile">
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="pie"
+            width="450"
+            height="300"
+          />
+        </div>
+
+        <div className="warp-chart-tablets">
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="pie"
+            width="450"
+            height="300"
+          />
+        </div>
+
+        <div className="warp-chart-desktops">
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="pie"
+            width="450"
+            height="300"
+          />
+        </div>
+
+        <div className="warp-chart-large">
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="pie"
+            width="450"
+            height="300"
+          />
+        </div>
+      </React.Fragment>
     );
   }
 }

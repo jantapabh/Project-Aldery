@@ -62,11 +62,6 @@ class BarEconomy extends React.Component {
                     xaxis: {
                         categories: this.state.datalist,
                     },
-                    yaxis: {
-                        title: {
-                            text: 'จำนวน'
-                        }
-                    },
                     fill: {
                         opacity: 1
                     },
@@ -130,8 +125,8 @@ class BarEconomy extends React.Component {
                     <Chart options={this.state.options}
                         series={this.state.series}
                         type="bar"
-                        height="300"
-                        width="400"
+                        height="325"
+                        width="450"
                     />
                 </div>
 
