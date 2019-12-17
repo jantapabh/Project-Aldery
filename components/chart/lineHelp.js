@@ -48,6 +48,19 @@ class LineHelp extends React.Component {
               show: false
             }
           },
+          responsive: [{
+            breakpoint: 900,
+            options: {
+              dataLabels: { enabled: false },
+              legend: {
+                position: 'top',
+                horizontalAlign: 'center',
+                offsetY: -10,
+                offsetX: -5
+
+              },
+            }
+          }],
           colors: ['#77B6EA', '#545454'],
           dataLabels: {
             enabled: true,
@@ -72,14 +85,8 @@ class LineHelp extends React.Component {
           },
           xaxis: {
             categories: this.state.datalist,
-            title: {
-              text: 'ประเภทของความต้องการ การช่วยเหลือ'
-            }
           },
           yaxis: {
-            title: {
-              text: 'จำนวน'
-            },
             min: 0,
             max: 60
           },
@@ -97,8 +104,8 @@ class LineHelp extends React.Component {
             offsetY: -25,
             offsetX: -5
           },
-        
-            colors: ['#0693e3', '#00d084']
+
+          colors: ['#0693e3', '#00d084']
         }
       })
     } catch (err) {
@@ -138,19 +145,57 @@ class LineHelp extends React.Component {
   render() {
 
     return (
-      <div className="warp-chart">
-        <div className="chart">
-
+      <React.Fragment>
+        <div className="warp-chart-small">
           <Chart
             options={this.state.options}
             series={this.state.series}
             type="line"
             height="400"
-            width="800"
+            width="300"
           />
-
         </div>
-      </div>
+
+        <div className="warp-chart-mobile">
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="line"
+            height="400"
+            width="500"
+          />
+        </div>
+
+        <div className="warp-chart-tablets">
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="line"
+            height="400"
+            width="700"
+          />
+        </div>
+
+        <div className="warp-chart-desktops">
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="line"
+            height="400"
+            width="700"
+          />
+        </div>
+
+        <div className="warp-chart-large">
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="line"
+            height="400"
+            width="700"
+          />
+        </div>
+      </React.Fragment>
 
     )
   }
