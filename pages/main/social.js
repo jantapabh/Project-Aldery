@@ -71,6 +71,7 @@ class Social extends React.Component {
                                     <DonutSocial />
                                 </div>
                             </div>
+                           
 
                             <div className="warp-chart">
                                 <div className="chart-contents">

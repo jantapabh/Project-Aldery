@@ -38,16 +38,18 @@ class DonutSocial extends Component {
                         text: "บ้านพักอาศัย"
                     },
                     responsive: [{
-                        breakpoint: 480,
+                        breakpoint: 1000,
                         options: {
                             chart: {
-                                width: 200
+                                width: 250
                             },
                             legend: {
                                 position: 'bottom'
-                            }
+                            },
+                            dataLabels: { enabled: false },
                         }
                     }],
+                    
                     tooltip: {
                         y: {
                             formatter: function (val) {
@@ -85,7 +87,47 @@ class DonutSocial extends Component {
 
         return (
             <React.Fragment>
-                <div className="chart-center">
+                <div className="warp-chart-small">
+                    <Chart
+                        options={this.state.options}
+                        series={this.state.series}
+                        type="donut"
+                        width="430"
+                        height="150"
+                    />
+                </div>
+
+                <div className="warp-chart-mobile">
+                    <Chart
+                        options={this.state.options}
+                        series={this.state.series}
+                        type="donut"
+                        width="400"
+                        height="200"
+                    />
+                </div>
+
+                <div className="warp-chart-tablets">
+                    <Chart
+                        options={this.state.options}
+                        series={this.state.series}
+                        type="donut"
+                        width="450"
+                        height="200"
+                    />
+                </div>
+
+                <div className="warp-chart-desktops">
+                    <Chart
+                        options={this.state.options}
+                        series={this.state.series}
+                        type="donut"
+                        width="450"
+                        height="200"
+                    />
+                </div>
+
+                <div className="warp-chart-large">
                     <Chart
                         options={this.state.options}
                         series={this.state.series}

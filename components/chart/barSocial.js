@@ -117,7 +117,7 @@ class BarSocial extends React.Component {
                         series={this.state.series}
                         type="bar"
                         height="325"
-                        width="300"
+                        width="290"
                     />
                 </div>
 
