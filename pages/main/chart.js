@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Sheetapi from '../../config/api'
 import dynamic from 'next/dynamic'
 import Navbar_main from '../../components/nav_main';
 import Sidebar from '../../components/layout/sidebar';
@@ -30,7 +29,7 @@ const Chart = () => {
 
     return (
         <div className="warp-main">
-            <Navbar_main confirm={this.onConfirm} status={this.state.status} />
+            <Navbar_main confirm={onConfirm} status={this.state.status} />
             <Sidebar status={this.state.status} />
             <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                 <div className="page-content-wrapper">
