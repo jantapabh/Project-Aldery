@@ -1,7 +1,7 @@
 import React from 'react'
 import Sheetapi from '../../config/api'
 import dynamic from 'next/dynamic'
-import Navbar_main from '../../components/navbar_main';
+import Navbar_main from '../../components/nav_main';
 import Sidebar from '../../components/layout/sidebar';
 import Footer from '../../components/layout/footer';
 

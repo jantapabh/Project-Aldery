@@ -1,6 +1,6 @@
 import React from 'react'
 import CardData from '../../components/layout/cardmain';
-import Navbar_main from '../../components/navbar_main';
+import Navbar_main from '../../components/nav_main';
 import Sidebar from '../../components/layout/sidebar';
 import dynamic from 'next/dynamic'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar_main from '../../components/navbar_main';
+import Navbar_main from '../../components/nav_main';
 import Sidebar from '../../components/layout/sidebar';
 import Sheetapi from '../../config/api'
 import dynamic from 'next/dynamic'
