@@ -18,7 +18,7 @@ class BarMap extends Component {
     }
 
     async componentDidMount() {
-        let userOauth = JSON.parse(localStorage.getItem("myOauth"))
+        let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
         await this.namelist('ข้อมูลการวิเคราะห์ทางสถิติ!D197:D213')
         await this.listData()

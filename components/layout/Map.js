@@ -65,7 +65,7 @@ class StudentMap extends Component {
     }
 
     async componentDidMount() {
-        await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
+        // await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
 
