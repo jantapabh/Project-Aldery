@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const Navbar_main = props => {
 
-    const [status, setStatus] = useState(true)
+    const [status, setStatus] = useState(false)
     const [index, setIndex] = useState(
         [
             { name: "Services", href: "/index/services" },
