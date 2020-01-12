@@ -7,9 +7,14 @@ import Nav_index from '../components/nav_index';
 
 const Home = () => {
 
-  useEffect( async() => {
-    window.localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
-  })
+
+  useEffect(() => {
+    async function fetchData() {
+      window.localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
+    }
+    fetchData();
+  });
+
 
   return (
     <div className="warp-index">
