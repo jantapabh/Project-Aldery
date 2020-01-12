@@ -15,7 +15,6 @@ const Home = () => {
     fetchData();
   });
 
-
   return (
     <div className="warp-index">
       <Head>
