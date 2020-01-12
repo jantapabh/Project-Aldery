@@ -34,7 +34,6 @@ const Main = () => {
                             <div className="map-content">
                                 <BarMap />
                             </div>
-
                         </div>
                     </div>
                 </div>

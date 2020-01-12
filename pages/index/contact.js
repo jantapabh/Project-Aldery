@@ -7,7 +7,6 @@ import Sheetapi from '../../config/api'
 
 class Contact extends React.Component {
 
-
   constructor(props) {
     super(props);
     this.state = {
@@ -56,8 +55,6 @@ class Contact extends React.Component {
   render() {
     const { userlist, img } = this.state
 
-    console.log(userlist);
-    
     return (
       <div className="warp-detail">
         <Nav_index />
@@ -103,8 +100,6 @@ class Contact extends React.Component {
 
               </Carousel>
             </div>
-
-
           </div>
         </div>
       </div>

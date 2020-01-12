@@ -7,7 +7,6 @@ import Nav_index from '../components/nav_index';
 
 const Home = () => {
 
-
   useEffect(() => {
     async function fetchData() {
       window.localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
