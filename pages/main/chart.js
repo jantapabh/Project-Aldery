@@ -29,9 +29,9 @@ const Chart = () => {
 
     return (
         <div className="warp-main">
-            <Navbar_main confirm={onConfirm} status={this.state.status} />
-            <Sidebar status={this.state.status} />
-            <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
+            <Navbar_main confirm={onConfirm} status={status} />
+            <Sidebar status={status} />
+            <div className={`wrapper${status ? " menuDisplayed" : ""}`}>
                 <div className="page-content-wrapper">
                     <div className="container-fluid">
                         <h1 className="text-center">ข้อมูลทางสถิติ</h1>
