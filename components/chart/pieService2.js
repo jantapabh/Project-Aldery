@@ -97,8 +97,9 @@ class PieService2 extends Component {
         options={this.state.options}
         series={this.state.series}
         type="pie"
-        width="600"
         height="300"
+        width="500"
+        
       />
     );
   }

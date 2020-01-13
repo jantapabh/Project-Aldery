@@ -143,8 +143,8 @@ class PieHelp extends Component {
             options={this.state.options}
             series={this.state.series}
             type="pie"
-            width="450"
-            height="300"
+            width="400"
+            height="250"
           />
         </div>
       </React.Fragment>

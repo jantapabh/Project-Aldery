@@ -169,7 +169,7 @@ class BarMap extends Component {
                         series={this.state.series}
                         type="bar"
                         height="400"
-                        width="700"
+                        width="650"
                     />
                 </div>
             </React.Fragment>

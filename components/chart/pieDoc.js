@@ -89,10 +89,7 @@ class PieDoc extends Component {
 
   }
 
-
-
   render() {
-
     return (
       <React.Fragment>
         <div className="warp-chart-small">

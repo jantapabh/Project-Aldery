@@ -37,6 +37,9 @@ class PieSocial extends Component {
                 options: {
                     labels: this.state.datalist,
                     title: { text: "สภาพบ้านพักอาศัย" },
+                    legend: {
+                        position: 'bottom'
+                    },
                     responsive: [{
                         breakpoint: 900,
                         options: {
@@ -96,8 +99,9 @@ class PieSocial extends Component {
                 options={this.state.options}
                 series={this.state.series}
                 type="pie"
-                width="500"
                 height="250"
+                width="480"
+
             />
         );
     }

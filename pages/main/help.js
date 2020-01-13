@@ -49,18 +49,14 @@ class Help extends React.Component {
                         <div className="container-fluid">
                             <h1 className="text-center">การช่วยเหลือ</h1>
                             <h2 className="small text-center"></h2>
-
                             <div className="warp-chart">
                                 <Piechart />
-
                                 <div className="chart-contents">
                                     <Linechart />
                                 </div>
-
                             </div>
-
+                            <Footer nameFooter="help" />
                         </div>
-                        <Footer nameFooter="help" />
                     </div>
                 </div>
 

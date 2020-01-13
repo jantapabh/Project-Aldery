@@ -38,7 +38,7 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 15px;
+  padding: 0 15px;
   transition: all 0.5s;
   background-color: #f3f5f7;
   // background: linear-gradient(to right, rgb(116, 235, 213), rgb(172, 182, 229));
@@ -50,6 +50,7 @@
 
   .container-fluid {
     margin-top: 5rem;
+    padding: 0;
 
     @media (max-width: 768px) {
       margin-top: 1rem !important;
@@ -128,7 +129,7 @@
 }
 
 .wrapper.menuDisplayed .page-content-wrapper {
-  padding-left: 230px;
+  padding-left: 215px;
   @media (max-width: 991.98px) {
     padding-left: 1rem;
   }

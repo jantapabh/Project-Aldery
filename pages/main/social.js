@@ -61,8 +61,6 @@ class Social extends React.Component {
                         <div className="container-fluid">
                             <h1 className="text-center">สภาพทางสังคม</h1>
                             <h2 className="small text-center"></h2>
-
-
                             <div className="warp-chart">
                                 <div className="chart-contents">
                                     <BarSocial />
@@ -71,8 +69,6 @@ class Social extends React.Component {
                                     <DonutSocial />
                                 </div>
                             </div>
-                           
-
                             <div className="warp-chart">
                                 <div className="chart-contents">
                                     <PieSocial />
@@ -80,15 +76,11 @@ class Social extends React.Component {
                                 <div className="chart-contents">
                                     <PieSocial2 />
                                 </div>
-
                             </div>
-
+                            <Footer nameFooter="social" />
                         </div>
-
-                        <Footer nameFooter="social" />
                     </div>
                 </div>
-
             </div>
         )
     }

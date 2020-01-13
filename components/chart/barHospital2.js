@@ -48,12 +48,12 @@ class BarHospital2 extends Component {
                     chart: {
                         stacked: true,
                         toolbar: {
-                          show: true
+                            show: true
                         },
                         zoom: {
-                          enabled: true
+                            enabled: true
                         }
-                      },
+                    },
                     dataLabels: { enabled: false },
                     responsive: [{
                         breakpoint: 1000,
@@ -177,8 +177,8 @@ class BarHospital2 extends Component {
                         options={this.state.options}
                         series={this.state.series}
                         type="bar"
-                        height="400"
-                        width="500"
+                        height="350"
+                        width="450"
                     />
                 </div>
             </React.Fragment>

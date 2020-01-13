@@ -132,8 +132,9 @@ class DonutSocial extends Component {
                         options={this.state.options}
                         series={this.state.series}
                         type="donut"
-                        width="500"
                         height="250"
+                        width="450"
+                        
                     />
                 </div>
             </React.Fragment>

@@ -147,8 +147,8 @@ class BarHospital extends Component {
             options={this.state.options}
             series={this.state.series}
             type="bar"
-            height="400"
-            width="500"
+            height="350"
+            width="450"
           />
         </div>
       </React.Fragment>

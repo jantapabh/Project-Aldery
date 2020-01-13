@@ -50,9 +50,8 @@ const Chart = () => {
                                 <Barchart />
                             </div>
                         </div>
-
+                        <Footer nameFooter="chart" />
                     </div>
-                    <Footer nameFooter="chart" />
                 </div>
             </div>
 

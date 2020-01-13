@@ -50,13 +50,10 @@ class Service extends React.Component {
                 <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
                     <Navbar_main confirm={this.onConfirm} status={this.state.status} />
                     <Sidebar status={this.state.status} />
-
-
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
                             <h1 className="text-center">หน่วยงานเเละการบริการ</h1>
                             <h2 className="small text-center"></h2>
-
                             <div className="warp-chart">
                                 <div className="chart-pic">
                                     <PieService />
@@ -64,9 +61,8 @@ class Service extends React.Component {
                                 <div className="chart-pic">
                                     <PieService2 />
                                 </div>
-
                             </div>
-                            <Footer  nameFooter="service" />
+                            <Footer nameFooter="service" />
                         </div>
                     </div>
                 </div>

@@ -191,8 +191,8 @@ class LineHelp extends React.Component {
             options={this.state.options}
             series={this.state.series}
             type="line"
-            height="400"
-            width="700"
+            height="325"
+            width="625"
           />
         </div>
       </React.Fragment>

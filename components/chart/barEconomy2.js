@@ -154,7 +154,7 @@ class BarEconomy2 extends React.Component {
                         series={this.state.series}
                         type="bar"
                         height="400"
-                        width="550"
+                        width="470"
                     />
                 </div>
             </React.Fragment>

@@ -68,7 +68,6 @@ class Hospital extends React.Component {
                         <div className="container-fluid">
                             <h1 className="text-center">โรงพยาบาลเเละการดูแลรักษา</h1>
                             <h2 className="small text-center"></h2>
-
                             <div className="warp-chart">
                                 <div className="chart-pic">
                                     <PieHospital />
@@ -76,9 +75,7 @@ class Hospital extends React.Component {
                                 <div className="chart-pic">
                                     <PieHospital2 />
                                 </div>
-
                             </div>
-
                             <div className="warp-chart">
                                 <div className="chart-contents">
                                     <BarHospital2 />
@@ -86,9 +83,7 @@ class Hospital extends React.Component {
                                 <div className="chart-contents">
                                     <Barchart />
                                 </div>
-
                             </div>
-
                             <div className="warp-chart">
                                 <div className="chart-contents">
                                     <BarHospital3 />
@@ -96,16 +91,11 @@ class Hospital extends React.Component {
                                 <div className="chart-contents">
                                     <BarHospital4 />
                                 </div>
-
-
                             </div>
-
+                            <Footer nameFooter="hospital" />
                         </div>
-
-                        <Footer nameFooter="hospital" />
                     </div>
                 </div>
-
             </div>
         )
     }

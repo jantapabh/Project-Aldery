@@ -131,7 +131,7 @@ class PieChart extends Component {
                         options={this.state.options}
                         series={this.state.series}
                         type="donut"
-                        width="500"
+                        width="450"
                         height="250"
                     />
                 </div>

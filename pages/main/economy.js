@@ -99,10 +99,8 @@ class Economy extends React.Component {
                                     <PieEconomy3 />
                                 </div>
                             </div>
-
+                            <Footer nameFooter="economy" />
                         </div>
-
-                        <Footer nameFooter="economy" />
                     </div>
                 </div>
 
