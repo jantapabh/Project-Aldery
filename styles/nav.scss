@@ -43,12 +43,6 @@ li {
   }
 }
 
-// .nav-logo {
-//   min-width: 40%;
-//   list-style: none;
-//   display: flex;
-// }
-
 //Index
 nav {
   background-color: white;
@@ -77,8 +71,8 @@ nav {
 
         img {
           margin-top: 1rem;
-          width: 6rem;
-          height: 3rem;
+          width: 5rem;
+          height: 2.5rem;
         }
         h4{
           margin: 0;
@@ -179,8 +173,8 @@ nav.nav-other {
       li {
         img {
           margin-top: 1rem;
-          width: 6rem;
-          height: 3rem;
+          width: 5rem;
+          height: 2.5rem;
         }
         h4{
           margin-top: 1.8rem;
@@ -193,7 +187,7 @@ nav.nav-other {
       height: 4rem;
 
       a.hamberger {
-        top: 2.5rem;
+        top: 2.4rem;
       }
     }
   }
