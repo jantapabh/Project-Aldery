@@ -14,7 +14,7 @@ class Footer extends React.Component {
             <div className="warp-footer">
                 <div className="chart-source">
                     {
-                        nameFooter == "chart" || nameFooter == "economy" ?
+                        nameFooter == "chart" || nameFooter == "doc" || nameFooter == "economy" ?
                             <a
                                 target="_blank"
                                 href="https://docs.google.com/spreadsheets/d/15bzSXCpQI7qVZyW3-kCQsQ1Qg_6ssRSTa5X4aNavIp8/edit#gid=1593061825">

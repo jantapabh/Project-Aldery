@@ -8,6 +8,7 @@ const Sidebar = props => {
         [
             { name: "รายงานความคืบหน้า", nameicon: "Dashboard", img: "/static/dashboard.svg", link: "/main" },
             { name: "ข้อมูลทางสถิติ", nameicon: "Chart", img: "/static/chart.svg", link: "/main/chart" },
+            { name: "เบี้ยยังชีพผู้สูงอายุ", nameicon: "Allowance", img: "/static/allowance.png", link: "/main/allowance" },
             { name: "สวัสดิการจากรัฐ", nameicon: "Benefits", img: "/static/document.svg", link: "/main/doc" },
             { name: "หน่วยงาน", nameicon: "Service", img: "/static/service.svg", link: "/main/service" },
             { name: "สภาพทางสังคม", nameicon: "", img: "/static/social.svg", link: "/main/social" },

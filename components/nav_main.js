@@ -18,6 +18,7 @@ const Navbar_main = props => {
         [
             { name: "รายงานความคืบหน้า", href: "/main" },
             { name: "ข้อมูลทางสถิติ", href: "/main/chart" },
+            { name: "เบี้ยยังชีพผู้สูงอายุ", href: "/main/allowance" },
             { name: "สวัสดิการจากรัฐ", href: "/main/doc" },
             { name: "การบริการ", href: "/main/service" },
             { name: "สภาพทางสังคม", href: "/main/social" },
