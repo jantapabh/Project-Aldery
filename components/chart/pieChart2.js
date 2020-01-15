@@ -41,7 +41,8 @@ class PieChart extends Component {
                         breakpoint: 900,
                         options: {
                             chart: {
-                                width: 250
+                                width: 260,
+                                height: 260
                             },
                             legend: {
                                 position: 'bottom'
