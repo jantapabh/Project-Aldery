@@ -120,8 +120,8 @@ class StudentMap extends Component {
         }
 
         return (
-            <React.Fragment style={wrapperStyles}>
-                <Motion
+            <React.Fragment >
+                <Motion style={wrapperStyles}
                     defaultStyle={{
                         zoom: 1,
                         x: 100,
