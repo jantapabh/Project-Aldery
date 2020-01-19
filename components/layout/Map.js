@@ -30,22 +30,16 @@ const colorScale = scaleLinear()
 
 const SpinnerPage = () => {
     return (
-        <>
+        <React.Fragment>
             <div>
                 <Typed
                     strings={['กรุณรอสักครู่...', 'กำลังดาวน์โหลด...']}
                     typeSpeed={45}
                 />
             </div>
-        </>
+        </React.Fragment>
     );
 }
-
-const sheetId = '1gSVQSRjaC5kNE0jolNYsZyaM8Y5dhsFxVr42-TJjk_E'
-const sheetName = 'Visualization'
-const API = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}`
-const urlpost = 'https://www.googleapis.com/oauth2/v4/token/?client_secret=TQ36Y7Jn0kdPjJ2dwl5nbHp-&grant_type=refresh_token&refresh_token=1//04X47z_dpQ-qmCgYIARAAGAQSNwF-L9Ir8Udetetcz-5EWxWI8LB9dMHcuOv9E5TFIk0lM5ptyDttdL6VigI9uF8k421N4sGTnmo&client_id=972202685112-andj9oha8pq3v0emis1702dkfhas0o4m.apps.googleusercontent.com'
-
 
 class StudentMap extends Component {
     constructor() {
@@ -196,8 +190,6 @@ class StudentMap extends Component {
                                     subject={[98, 7.93]}
                                     strokeWidth={0}
                                 >
-                                    {/* <text className="font-TH font-map">{"??????????????????????????????????????????"}</text> */}
-                                    {/* <text y={2} className="font-TH font-map">{""}</text> */}
                                 </Annotation>
                             </ZoomableGroup>
                         </ComposableMap>
