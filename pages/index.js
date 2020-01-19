@@ -18,7 +18,7 @@ const Home = () => {
     <div className="warp-index">
       <Head>
         <title>Eldery DB</title>
-        <link rel='icon' href='/static/favicon.ico' />
+        <link rel='icon' href='/static/logomain.svg' />
       </Head>
       <Nav_index name="/" />
       <main>
