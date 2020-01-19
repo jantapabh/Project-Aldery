@@ -33,8 +33,8 @@ const SpinnerPage = () => {
         <>
             <div>
                 <Typed
-                    strings={['Please wait...', 'loading...']}
-                    typeSpeed={40}
+                    strings={['กรุณรอสักครู่...', 'กำลังดาวน์โหลด...']}
+                    typeSpeed={45}
                 />
             </div>
         </>
@@ -65,7 +65,6 @@ class StudentMap extends Component {
     }
 
     async componentDidMount() {
-        // await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
         this.access_token = userOauth.data.access_token
 
