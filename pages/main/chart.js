@@ -4,6 +4,8 @@ import Navbar_main from '../../components/nav_main';
 import Sidebar from '../../components/layout/sidebar';
 import Footer from '../../components/layout/footer';
 
+import _ from 'lodash'
+
 const Barchart = dynamic(
     () => import('../../components/chart/barChart'),
     { ssr: false }

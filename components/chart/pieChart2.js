@@ -1,9 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
-import _ from 'lodash'
-
-
 
 const PieChart = () => {
 
