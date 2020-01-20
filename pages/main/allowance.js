@@ -2,12 +2,10 @@ import React, {useState} from 'react'
 import CardData from '../../components/layout/cardmain';
 import Navbar_main from '../../components/nav_main';
 import Sidebar from '../../components/layout/sidebar';
-
-
+import _ from 'lodash'
 
 const Allowance = props => {
-
-
+    
     const [status,setStatus] = useState(true)
     
     const onConfirm = (order) => {
@@ -22,7 +20,6 @@ const Allowance = props => {
                 <div className="page-content-wrapper">
                     <div className="container-fluid">
                         <h1 className="text-center">เบี้ยยังชีพผู้สูงอายุ</h1>
-
                         <CardData />
                         <div className="data-source" >
                             <a
