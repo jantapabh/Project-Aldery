@@ -1,159 +1,126 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 
-class BarEconomy extends Component {
+const BarEconomy = () => {
+  const [options, setOptions] = useState({
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      options: {},
-      series: [],
-      dataList: [],
-      dataName: []
-    }
-  }
-
-  async componentDidMount() {
-    let userOauth = JSON.parse(localStorage.getItem("myOauth"))
-    this.access_token = userOauth.data.access_token
-    await this.namelist('ข้อมูลการวิเคราะห์ทางสถิติ!T47:T49')
-    await this.numberlist('ข้อมูลการวิเคราะห์ทางสถิติ!U47:U49')
-  }
-
-  namelist = async (value) => {
-
-    try {
-
-      this.list = await Sheetapi.getSheet(this.access_token, value)
-
-      for (let i = 0; i < this.list.length; i++) {
-
-        this.setState(prevState => ({
-          dataName: [...prevState.dataName, this.list[i][0]],
-        }))
-      }
-
-      this.setState({
-
-        options: {
-          title: {
-            text: 'รายจ่าย',
-            align: 'left'
-          },
-          plotOptions: {
-            bar: { horizontal: true }
-          },
-          responsive: [{
-            breakpoint: 1000,
-            options: {
-              plotOptions: {
-                bar: {
-                  horizontal: false
-                }
-              },
-              legend: {
-                position: "bottom"
-              }
-            }
-          }],
-          dataLabels: { enabled: false },
-          xaxis: {
-            categories: this.state.dataName,
-          },
-          tooltip: {
-            y: {
-              formatter: function (val) {
-                return val + " คน"
-              }
-            }
-          },
+    title: {
+      text: 'รายจ่าย',
+      align: 'left'
+    },
+    plotOptions: {
+      bar: { horizontal: true }
+    },
+    responsive: [{
+      breakpoint: 1000,
+      options: {
+        plotOptions: {
+          bar: {
+            horizontal: false
+          }
+        },
+        legend: {
+          position: "bottom"
         }
+      }
+    }],
+    dataLabels: { enabled: false },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return val + " คน"
+        }
+      }
+    },
+  })
+  const [series, setSeries] = useState([])
+  const [dataName, setDataName] = useState([])
 
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  const fetchData = async () => {
+
+    let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
+    await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!AJ8:AJ16')
+    await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!AL8:AL16', 'สรุปข้อมูลทางสถิติ!AM8:AM16')
+  }
+
+  const namelist = async (token, value) => {
+    try {
+      var list = await Sheetapi.getSheet(token, value)
+      setDataName(_.flatten(list))
+
+      setOptions({
+        xaxis: {
+          categories: _.flatten(list),
+        }
       })
-
     } catch (err) {
       console.log(err);
     }
-
   }
 
-  numberlist = async (value) => {
-
+  const listData = async (token, value1, value2) => {
     try {
 
-      this.list = await Sheetapi.getSheet(this.access_token, value)
-
-      for (let i = 0; i < this.list.length; i++) {
-        this.setState(prevState => ({
-          dataList: [...prevState.dataList, parseInt(this.list[i][0])],
-        }))
-      }
-
-      this.setState({
-        series: [{ name: "จำนวน", data: this.state.dataList }],
-      })
-
+      var man = await Sheetapi.getSheet(token, value1)
+      var woman = await Sheetapi.getSheet(token, value2)
+      setSeries([{ name: "เพศชาย", data: _.flatten(man) }, { name: "เพศหญิง", data: _.flatten(woman) }])
     } catch (err) {
       console.log(err);
     }
-
   }
+  return (
+    <React.Fragment>
+      <div className="warp-chart-small">
+        <Chart options={options}
+          series={series}
+          type="bar"
+          height="300"
+          width="325"
+        />
+      </div>
 
-  render() {
+      <div className="warp-chart-mobile">
+        <Chart
+          options={options}
+          series={series}
+          type="bar" height="350"
+          width="450"
+        />
+      </div>
 
-    return (
-      <React.Fragment>
-        <div className="warp-chart-small">
-          <Chart options={this.state.options}
-            series={this.state.series}
-            type="bar"
-            height="300"
-            width="325"
-          />
-        </div>
+      <div className="warp-chart-tablets">
+        <Chart
+          options={options}
+          series={series}
+          type="bar" height="300"
+          width="450"
+        />
+      </div>
 
-        <div className="warp-chart-mobile">
-          <Chart
-            options={this.state.options}
-            series={this.state.series}
-            type="bar" height="350"
-            width="450"
-          />
-        </div>
+      <div className="warp-chart-desktops">
+        <Chart
+          options={options}
+          series={series}
+          type="bar" height="245"
+          width="500"
+        />
+      </div>
 
-        <div className="warp-chart-tablets">
-          <Chart
-            options={this.state.options}
-            series={this.state.series}
-            type="bar" height="300"
-            width="450"
-          />
-        </div>
-
-        <div className="warp-chart-desktops">
-          <Chart
-            options={this.state.options}
-            series={this.state.series}
-            type="bar" height="245"
-            width="500"
-          />
-        </div>
-
-        <div className="warp-chart-large">
-          <Chart
-            options={this.state.options}
-            series={this.state.series}
-            type="bar"
-            height="400"
-            width="500"
-          />
-        </div>
-      </React.Fragment>
-
-    );
-  }
+      <div className="warp-chart-large">
+        <Chart
+          options={options}
+          series={series}
+          type="bar"
+          height="400"
+          width="500"
+        />
+      </div>
+    </React.Fragment>
+  )
 }
-
 export default BarEconomy;

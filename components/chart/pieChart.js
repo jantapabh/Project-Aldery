@@ -30,9 +30,7 @@ const PieChart = () => {
         }
     })
 
-    const [dataname, setDataName] = useState([])
     const [series, setSeries] = useState([])
-
 
     useEffect(() => {
         fetchData()
