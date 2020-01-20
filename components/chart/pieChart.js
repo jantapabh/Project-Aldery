@@ -60,8 +60,8 @@ const PieChart = () => {
     const listData = async (token, value) => {
         try {
 
-            var manData = await Sheetapi.getSheet(token, value)
-            var data = _.flatten(manData).map(Number)
+            var result = await Sheetapi.getSheet(token, value)
+            var data = _.flatten(result).map(Number)
             setSeries(data)
         } catch (err) {
             console.log(err);
