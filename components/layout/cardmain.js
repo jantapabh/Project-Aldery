@@ -6,7 +6,7 @@ import _ from 'lodash'
 
 const CardData = () => {
 
-    const [data, setData] = useState([])
+    const [data, setData] = useState(false)
 
     useEffect(() => {
         fetchData()
@@ -49,7 +49,8 @@ const CardData = () => {
                                             <h4 key={index}>{item.ชาย} คน</h4>
                                         )
                                     )
-                                        : ''
+                                        :
+                                        <h4>0 คน</h4>
                                 }
                             </div>
                         </div>
@@ -70,7 +71,7 @@ const CardData = () => {
                                             <h4 key={index}>{item.หญิง} คน</h4>
                                         )
                                     )
-                                        : ''
+                                        : <h4>0 คน</h4>
                                 }
                             </div>
                         </div>
@@ -91,7 +92,7 @@ const CardData = () => {
                                             <h4 key={index}><CountUp end={item.รวม} /> คน</h4>
                                         )
                                     )
-                                        : ''
+                                        : <h4>0 คน</h4>
                                 }
                             </div>
                         </div>
