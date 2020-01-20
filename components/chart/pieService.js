@@ -2,108 +2,73 @@ import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 
-// class PieService extends Component {
+const PieService = () => {
+    const [options, setOptions] = useState({
+        title: { text: "การเข้าร่วมกิจกรรมทางสังคม/เทศบาล" },
+        responsive: [{
+            breakpoint: 900,
+            options: {
+                chart: {
+                    width: 300
+                },
+                legend: {
+                    position: 'bottom'
+                },
+                dataLabels: { enabled: false }
+            }
+        }],
+        tooltip: {
+            y: {
+                formatter: function (val) {
+                    return val + " คน"
+                }
+            }
+        },
+        colors: ['#ff8a65', '#ffd54f', '#90a4ae']
+    })
 
-//   constructor(props) {
-//     super(props);
+    const [series, setSeries] = useState([])
 
-//     this.state = {
+    useEffect(() => {
+        fetchData()
+    }, [])
 
-//       options: {},
-//       datalist: [],
-//       series: [],
-//       data: [],
-//     }
-//   }
+    const fetchData = async () => {
 
+        let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
+        await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!CV8:CV10')
+        await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!CW8:CW10')
+    }
 
-//   async componentDidMount() {
-//     let userOauth = JSON.parse(localStorage.getItem("myOauth"))
-//     this.access_token = userOauth.data.access_token
-//     await this.listName('ข้อมูลการวิเคราะห์ทางสถิติ!B119:B121')
-//     await this.listData()
-//   }
+    const namelist = async (token, value) => {
+        try {
+            var list = await Sheetapi.getSheet(token, value)
 
-//   listName = async (value) => {
-//     try {
-//       this.list = await Sheetapi.getSheet(this.access_token, value)
-//       for (let i = 0; i < this.list.length; i++) {
+            setOptions({
+                labels: _.flatten(list)
+            })
+        } catch (err) {
+            console.log(err);
+        }
+    }
 
-//         this.setState(prevState => ({
-//           datalist: [...prevState.datalist, this.list[i][0]],
-//         }))
-//       }
-
-//       this.setState({
-//         options: {
-//           labels: this.state.datalist,
-//           title: { text: "การเข้าร่วมกิจกรรมทางสังคม/เทศบาล" },
-//           responsive: [{
-//             breakpoint: 900,
-//             options: {
-//               chart: {
-//                 width: 300
-//               },
-//               legend: {
-//                 position: 'bottom'
-//               },
-//               dataLabels: { enabled: false }
-//             }
-//           }],
-
-//           tooltip: {
-//             y: {
-//               formatter: function (val) {
-//                 return val + " คน"
-//               }
-//             }
-//           },
-
-//           colors: ['#ff8a65', '#ffd54f', '#90a4ae']
-//         }
-//       })
-
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   }
-
-//   listData = async () => {
-//     try {
-
-//       this.list = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!C119:C121')
-
-//       for (let i = 0; i < this.list.length; i++) {
-
-//         this.setState(prevState => ({
-//           data: [...prevState.data, parseInt(this.list[i][0])],
-//         }))
-//       }
-
-//       this.setState({
-//         series: this.state.data,
-//       })
-
-//     } catch (err) {
-//       console.log(err);
-//     }
-
-//   }
-
-//   render() {
-
-//     return (
-
-//       <Chart
-//         options={this.state.options}
-//         series={this.state.series}
-//         type="pie"
-//         height="300"
-//         width="500"
-//       />
-
-//     );
-//   }
-// }
-
+    const listData = async (token, value) => {
+        try {
+            var result = await Sheetapi.getSheet(token, value)
+            var data = _.flatten(result).map(Number)
+            setSeries(data)
+        } catch (err) {
+            console.log(err);
+        }
+    }
+    return (
+        <Chart
+            options={options}
+            series={series}
+            type="pie"
+            height="300"
+            width="500"
+        />
+    )
+}
 export default PieService;
