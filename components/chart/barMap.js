@@ -61,8 +61,8 @@ const BarMap = () => {
     const fetchData = async () => {
 
         let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-        await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!D197:D213')
-        await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!E197:E213')
+        await namelist(userOauth.data.access_token, 'แผนที่!C5:C21')
+        await listData(userOauth.data.access_token, 'แผนที่!D5:D21')
     }
 
     const namelist = async (token, value) => {
@@ -94,61 +94,55 @@ const BarMap = () => {
     return (
 
         <React.Fragment>
-            {localStorage.getItem("myOauth") != "" ?
-                <React.Fragment>
-                    <div className="warp-chart-small">
-                        <Chart
-                            options={options}
-                            series={series}
-                            type="bar"
-                            height="300"
-                            width="350"
-                        />
-                    </div>
+            <div className="warp-chart-small">
+                <Chart
+                    options={options}
+                    series={series}
+                    type="bar"
+                    height="300"
+                    width="350"
+                />
+            </div>
 
-                    <div className="warp-chart-mobile">
-                        <Chart
-                            options={options}
-                            series={series}
-                            type="bar"
-                            height="300"
-                            width="450"
-                        />
-                    </div>
+            <div className="warp-chart-mobile">
+                <Chart
+                    options={options}
+                    series={series}
+                    type="bar"
+                    height="300"
+                    width="450"
+                />
+            </div>
 
-                    <div className="warp-chart-tablets">
-                        <Chart
-                            options={options}
-                            series={series}
-                            type="bar"
-                            height="325"
-                            width="500"
-                        />
-                    </div>
+            <div className="warp-chart-tablets">
+                <Chart
+                    options={options}
+                    series={series}
+                    type="bar"
+                    height="325"
+                    width="500"
+                />
+            </div>
 
-                    <div className="warp-chart-desktops">
-                        <Chart
-                            options={options}
-                            series={series}
-                            type="bar"
-                            height="350"
-                            width="650"
-                        />
-                    </div>
+            <div className="warp-chart-desktops">
+                <Chart
+                    options={options}
+                    series={series}
+                    type="bar"
+                    height="350"
+                    width="650"
+                />
+            </div>
 
-                    <div className="warp-chart-large">
-                        <Chart
-                            options={options}
-                            series={series}
-                            type="bar"
-                            height="400"
-                            width="650"
-                        />
-                    </div>
-                </React.Fragment>
-                :
-                console.log("Hello")
-            }
+            <div className="warp-chart-large">
+                <Chart
+                    options={options}
+                    series={series}
+                    type="bar"
+                    height="400"
+                    width="650"
+                />
+            </div>
         </React.Fragment>
     )
 }

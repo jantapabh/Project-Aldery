@@ -50,7 +50,9 @@ class Help extends React.Component {
                             <h1 className="text-center">การช่วยเหลือ</h1>
                             <h2 className="small text-center"></h2>
                             <div className="warp-chart">
-                                <Piechart />
+                                <div className="chart-contents">
+                                    <Piechart />
+                                </div>
                                 <div className="chart-contents">
                                     <Linechart />
                                 </div>
