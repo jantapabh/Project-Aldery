@@ -49,7 +49,7 @@ const BarEconomy2 = () => {
     const fetchData = async () => {
 
         let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-        await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!AFB8:AFB10')
+        await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!AF8:AF10')
         await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!AH8:AH10', 'สรุปข้อมูลทางสถิติ!AI8:AI10')
     }
 
