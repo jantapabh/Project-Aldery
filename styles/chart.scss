@@ -64,6 +64,7 @@
       cursor: pointer;
       h6 {
         cursor: pointer;
+        user-select: none;
         display: contents;
         text-align: end;
         margin-bottom: 0.5rem !important;

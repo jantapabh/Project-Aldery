@@ -1,146 +1,125 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 
-class DonutSocial extends Component {
 
-    constructor(props) {
-        super(props);
+const DonutSocial = () => {
 
-        this.state = {
-            options: {},
-            datalist: [],
-            series: [],
-        }
-    }
-
-    async componentDidMount() {
-        let userOauth = JSON.parse(localStorage.getItem("myOauth"))
-        this.access_token = userOauth.data.access_token
-        await this.listName('ข้อมูลการวิเคราะห์ทางสถิติ!H102:H106')
-        await this.listData()
-    }
-
-    listName = async (value) => {
-        try {
-            this.list = await Sheetapi.getSheet(this.access_token, value)
-            for (let i = 0; i < this.list.length; i++) {
-
-                this.setState(prevState => ({
-                    datalist: [...prevState.datalist, this.list[i][0]],
-                }))
+    const [options, setOptions] = useState({
+        title: {
+            text: "บ้านพักอาศัย"
+        },
+        responsive: [{
+            breakpoint: 1000,
+            options: {
+                chart: {
+                    width: 250
+                },
+                legend: {
+                    position: 'bottom'
+                },
+                dataLabels: { enabled: false },
             }
-
-            this.setState({
-                options: {
-                    labels: this.state.datalist,
-                    title: {
-                        text: "บ้านพักอาศัย"
-                    },
-                    responsive: [{
-                        breakpoint: 1000,
-                        options: {
-                            chart: {
-                                width: 250
-                            },
-                            legend: {
-                                position: 'bottom'
-                            },
-                            dataLabels: { enabled: false },
-                        }
-                    }],
-                    
-                    tooltip: {
-                        y: {
-                            formatter: function (val) {
-                                return val + " คน"
-                            }
-                        }
-                    }
+        }],
+        tooltip: {
+            y: {
+                formatter: function (val) {
+                    return val + " คน"
                 }
+            }
+        }
+    })
 
+    const [dataname, setDataName] = useState([])
+    const [series, setSeries] = useState([])
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+
+    const fetchData = async () => {
+
+        let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
+        await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!CJ8:CJ13')
+        await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!CK8:CK13')
+    }
+
+    const namelist = async (token, value) => {
+        try {
+            var list = await Sheetapi.getSheet(token, value)
+
+            setOptions({
+                labels: _.flatten(list)
             })
-
         } catch (err) {
             console.log(err);
         }
     }
 
-    listData = async () => {
+    const listData = async (token, value) => {
         try {
 
-            this.man = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!I102:I106')
-
-            for (let i = 0; i < this.man.length; i++) {
-
-                this.setState(prevState => ({
-                    series: [...prevState.series, parseInt(this.man[i][0])],
-                }))
-            }
-
+            var result = await Sheetapi.getSheet(token, value)
+            var data = _.flatten(result).map(Number)
+            setSeries(data)
         } catch (err) {
             console.log(err);
         }
     }
 
-    render() {
+    return (
+        <React.Fragment>
+            <div className="warp-chart-small">
+                <Chart
+                    options={options}
+                    series={series}
+                    type="donut"
+                    width="430"
+                    height="150"
+                />
+            </div>
 
-        return (
-            <React.Fragment>
-                <div className="warp-chart-small">
-                    <Chart
-                        options={this.state.options}
-                        series={this.state.series}
-                        type="donut"
-                        width="430"
-                        height="150"
-                    />
-                </div>
+            <div className="warp-chart-mobile">
+                <Chart
+                    options={options}
+                    series={series}
+                    type="donut"
+                    width="400"
+                    height="200"
+                />
+            </div>
 
-                <div className="warp-chart-mobile">
-                    <Chart
-                        options={this.state.options}
-                        series={this.state.series}
-                        type="donut"
-                        width="400"
-                        height="200"
-                    />
-                </div>
+            <div className="warp-chart-tablets">
+                <Chart
+                    options={options}
+                    series={series}
+                    type="donut"
+                    width="450"
+                    height="200"
+                />
+            </div>
 
-                <div className="warp-chart-tablets">
-                    <Chart
-                        options={this.state.options}
-                        series={this.state.series}
-                        type="donut"
-                        width="450"
-                        height="200"
-                    />
-                </div>
+            <div className="warp-chart-desktops">
+                <Chart
+                    options={options}
+                    series={series}
+                    type="donut"
+                    width="450"
+                    height="200"
+                />
+            </div>
 
-                <div className="warp-chart-desktops">
-                    <Chart
-                        options={this.state.options}
-                        series={this.state.series}
-                        type="donut"
-                        width="450"
-                        height="200"
-                    />
-                </div>
+            <div className="warp-chart-large">
+                <Chart
+                    options={options}
+                    series={series}
+                    type="donut"
+                    height="250"
+                    width="450"
 
-                <div className="warp-chart-large">
-                    <Chart
-                        options={this.state.options}
-                        series={this.state.series}
-                        type="donut"
-                        height="250"
-                        width="450"
-                        
-                    />
-                </div>
-            </React.Fragment>
-
-        );
-    }
+                />
+            </div>
+        </React.Fragment>
+    )
 }
-
 export default DonutSocial;

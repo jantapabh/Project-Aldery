@@ -1,9 +1,9 @@
 import React from 'react'
-import CardData from '../../components/layout/cardmain';
 import Navbar_main from '../../components/nav_main';
 import Sidebar from '../../components/layout/sidebar';
 import dynamic from 'next/dynamic'
 import Footer from '../../components/layout/footer';
+import _ from 'lodash'
 
 const PieDoc = dynamic(
     () => import('../../components/chart/pieDoc'),

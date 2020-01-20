@@ -4,11 +4,7 @@ import dynamic from 'next/dynamic'
 import Navbar_main from '../../components/nav_main';
 import Sidebar from '../../components/layout/sidebar';
 import Footer from '../../components/layout/footer';
-
-// const Linechart = dynamic(
-//     () => import('../../components/chart/lineHelp'),
-//     { ssr: false }
-// )
+import _ from 'lodash'
 
 const PieService = dynamic(
     () => import('../../components/chart/pieService'),
