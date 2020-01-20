@@ -90,7 +90,6 @@ const BarMap = () => {
         }
     }
 
-
     return (
 
         <React.Fragment>
