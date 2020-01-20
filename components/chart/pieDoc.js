@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 
@@ -33,7 +33,6 @@ const PieDoc = () => {
   const [dataname, setDataName] = useState([])
   const [series, setSeries] = useState([])
 
-
   useEffect(() => {
     fetchData()
   }, [])
@@ -60,66 +59,66 @@ const PieDoc = () => {
   const listData = async (token, value) => {
     try {
 
-        var result = await Sheetapi.getSheet(token, value)
-        var data = _.flatten(result).map(Number)
-        setSeries(data)
+      var result = await Sheetapi.getSheet(token, value)
+      var data = _.flatten(result).map(Number)
+      setSeries(data)
     } catch (err) {
-        console.log(err);
+      console.log(err);
     }
-}
+  }
 
   return (
-          <React.Fragment>
-        <div className="warp-chart-small">
+    <React.Fragment>
+      <div className="warp-chart-small">
         <Chart
-            options={options}
-            series={series}
-            type="pie"
-            width="400"
-            height="200"
-          />
-        </div>
+          options={options}
+          series={series}
+          type="pie"
+          width="400"
+          height="200"
+        />
+      </div>
 
-        <div className="warp-chart-mobile">
-          <Chart
-            options={options}
-            series={series}
-            type="pie"
-            width="600"
-            height="300"
-          />
-        </div>
+      <div className="warp-chart-mobile">
+        <Chart
+          options={options}
+          series={series}
+          type="pie"
+          width="600"
+          height="300"
+        />
+      </div>
 
-        <div className="warp-chart-tablets">
-          <Chart
-            options={options}
-            series={series}
-            type="pie"
-            width="600"
-            height="300"
-          />
-        </div>
+      <div className="warp-chart-tablets">
+        <Chart
+          options={options}
+          series={series}
+          type="pie"
+          width="600"
+          height="300"
+        />
+      </div>
 
-        <div className="warp-chart-desktops">
-          <Chart
-            options={options}
-            series={series}
-            type="pie"
-            width="600"
-            height="300"
-          />
-        </div>
+      <div className="warp-chart-desktops">
+        <Chart
+          options={options}
+          series={series}
+          type="pie"
+          width="600"
+          height="300"
+        />
+      </div>
 
-        <div className="warp-chart-large">
-          <Chart
-            options={options}
-            series={series}
-            type="pie"
-            width="600"
-            height="300"
-          />
-        </div>
-      </React.Fragment>
+      <div className="warp-chart-large">
+        <Chart
+          options={options}
+          series={series}
+          type="pie"
+          width="600"
+          height="300"
+        />
+      </div>
+    </React.Fragment>
   )
 }
 

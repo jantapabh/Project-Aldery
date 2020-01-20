@@ -4,6 +4,7 @@ import Sidebar from '../../components/layout/sidebar';
 import Sheetapi from '../../config/api'
 import dynamic from 'next/dynamic'
 import Footer from '../../components/layout/footer';
+import _ from 'lodash'
 
 const Linechart = dynamic(
     () => import('../../components/chart/lineHelp'),
