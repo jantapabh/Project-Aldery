@@ -8,6 +8,7 @@ const PieChart = () => {
         title: {
             text: "เพศหญิง"
         },
+        dataLabels: { enabled: false },
         responsive: [{
             breakpoint: 900,
             options: {
@@ -41,8 +42,8 @@ const PieChart = () => {
     const fetchData = async () => {
 
         let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-        await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!D8:D12')
-        await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!G8:G12')
+        await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!E9:E13')
+        await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!H9:H13')
     }
 
     const namelist = async (token, value) => {

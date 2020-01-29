@@ -26,7 +26,6 @@ const PieHelp = () => {
         }
       }
     },
-
     colors: ['#2196f3', '#00d084', '#ffc107',
       '#eb144c', '#673ab7', '#abb8c3',
       '#f78da7', '#ff6900', '#7bdcb5']
@@ -41,8 +40,8 @@ const PieHelp = () => {
   const fetchData = async () => {
 
     let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-    await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!DL8:DL16')
-    await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!DM8:DM16')
+    await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!D152:D160')
+    await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!C152:C160')
   }
 
   const namelist = async (token, value) => {

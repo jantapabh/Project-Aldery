@@ -83,8 +83,8 @@ const LineHelp = () => {
   const fetchData = async () => {
 
     let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-    await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!DP8:DP16')
-    await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!DR8:DR16', 'สรุปข้อมูลทางสถิติ!DS8:DS16')
+    await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!B172:B180')
+    await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!D172:D180', 'ข้อมูลการวิเคราะห์ทางสถิติ!E172:E180')
   }
 
   const namelist = async (token, value) => {

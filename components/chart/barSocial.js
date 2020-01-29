@@ -49,8 +49,8 @@ const BarSocial = () => {
     const fetchData = async () => {
 
         let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-        await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!CJ8:CJ13')
-        await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!CL8:CL13','สรุปข้อมูลทางสถิติ!CM8:CM13')
+        await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!B98:B103')
+        await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!D98:D103','ข้อมูลการวิเคราะห์ทางสถิติ!E98:E103')
     }
 
     const namelist = async (token, value) => {

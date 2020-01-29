@@ -14,6 +14,7 @@ const PieDoc = () => {
         legend: {
           position: 'bottom'
         },
+        dataLabels: { enabled: false },
       }
     }],
 
@@ -39,8 +40,8 @@ const PieDoc = () => {
   const fetchData = async () => {
 
     let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-    await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!L8:L16')
-    await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!M8:M16')
+    await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!M9:M17')
+    await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!N9:N17')
   }
 
   const namelist = async (token, value) => {

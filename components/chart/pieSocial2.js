@@ -4,7 +4,7 @@ import Sheetapi from '../../config/api'
 
 const PieSocial2 = () => {
     const [options, setOptions] = useState({
-        title: { text: "สภาพบ้านพักอาศัย" },
+        title: { text: "สภาพบ้าน" },
         legend: {
             position: 'bottom'
         },
@@ -42,8 +42,8 @@ const PieSocial2 = () => {
     const fetchData = async () => {
 
         let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-        await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!CR8:CR9')
-        await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!CS8:CS9')
+        await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!N98:N99')
+        await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!O98:O99')
     }
 
     const namelist = async (token, value) => {

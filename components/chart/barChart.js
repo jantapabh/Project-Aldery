@@ -60,8 +60,8 @@ const Barchart = () => {
   const fetchData = async () => {
 
     let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-    await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!H8:H13')
-    await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!J8:J13', 'สรุปข้อมูลทางสถิติ!K8:K13')
+    await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!I9:I14')
+    await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!K9:K14', 'ข้อมูลการวิเคราะห์ทางสถิติ!L9:L14')
   }
 
   const namelist = async (token, value) => {

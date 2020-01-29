@@ -38,8 +38,8 @@ const PieEconomy2 = () => {
   const fetchData = async () => {
 
     let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-    await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!X8:X13')
-    await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!Y8:Y13')
+    await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!B52:B57')
+    await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!C52:C57')
   }
 
   const namelist = async (token, value) => {

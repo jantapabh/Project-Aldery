@@ -36,8 +36,8 @@ const PieService = () => {
     const fetchData = async () => {
 
         let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-        await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!CV8:CV10')
-        await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!CW8:CW10')
+        await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!B116:B118')
+        await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!C116:C118')
     }
 
     const namelist = async (token, value) => {

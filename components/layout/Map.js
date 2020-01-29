@@ -63,7 +63,7 @@ class StudentMap extends Component {
         this.access_token = userOauth.data.access_token
 
         setTimeout(() => {
-            this.listName('ข้อมูลการวิเคราะห์ทางสถิติ!C197:F213')
+            this.listName('แผนที่!B5:E21')
         }, 1000)
         this.loadPaths()
 

@@ -40,8 +40,8 @@ const DonutSocial = () => {
     const fetchData = async () => {
 
         let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-        await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!CJ8:CJ13')
-        await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!CK8:CK13')
+        await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!F98:F102')
+        await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!G98:G102')
     }
 
     const namelist = async (token, value) => {

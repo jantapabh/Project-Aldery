@@ -36,8 +36,8 @@ const PieHospital = () => {
     const fetchData = async () => {
 
         let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-        await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!AR8:AR11')
-        await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!AS8:AS11')
+        await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!B74:B77')
+        await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!C74:C77')
     }
 
     const namelist = async (token, value) => {

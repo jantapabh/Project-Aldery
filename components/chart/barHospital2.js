@@ -60,8 +60,8 @@ const BarHospital2 = () => {
     const fetchData = async () => {
 
         let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-        await namelist(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!BD8:BD20')
-        await listData(userOauth.data.access_token, 'สรุปข้อมูลทางสถิติ!BF8:BF20', 'สรุปข้อมูลทางสถิติ!BG8:BG20')
+        await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!N74:N85')
+        await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!P74:P85', 'ข้อมูลการวิเคราะห์ทางสถิติ!Q74:Q85')
     }
 
     const namelist = async (token, value) => {
