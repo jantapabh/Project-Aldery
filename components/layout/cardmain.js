@@ -14,7 +14,7 @@ const CardData = () => {
 
     const fetchData = async () => {
         let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-        await dataList(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!B9:D9')
+        await dataList(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!B10:D10')
     }
 
     const dataList = async (token, value) => {

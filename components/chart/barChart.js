@@ -7,7 +7,7 @@ const Barchart = () => {
 
   const [options, setOptions] = useState({
     title: {
-      text: 'สถานภาพ',
+      text: 'สถานภาพของผู้สูงอายุ',
       align: 'left'
     },
     chart: {

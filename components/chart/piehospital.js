@@ -5,7 +5,7 @@ import Sheetapi from '../../config/api'
 
 const PieHospital = () => {
     const [options, setOptions] = useState({
-        title: { text: "สุขภาพ" },
+        title: { text: "สุขภาพของผู้สูงอายุ" },
         responsive: [{
             breakpoint: 700,
             options: {

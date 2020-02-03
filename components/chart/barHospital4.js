@@ -6,7 +6,7 @@ import Sheetapi from '../../config/api'
 const BarHospital4 = () => {
     const [options, setOptions] = useState({
         title: {
-            text: 'การออกกำลังกาย',
+            text: 'การออกกำลังกายของผู้สูงอายุ',
             align: 'left'
         },
         plotOptions: {

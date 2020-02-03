@@ -68,6 +68,7 @@ class Hospital extends React.Component {
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
                             <h1 className="text-center">โรงพยาบาลเเละการดูแลรักษา</h1>
+                            <h4 className="text-center">ประชากรผู้สูงอายุภายในตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต</h4>
                             <h2 className="small text-center"></h2>
                             <div className="warp-chart">
                                 <div className="chart-pic">

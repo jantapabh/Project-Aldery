@@ -19,7 +19,8 @@ const Allowance = props => {
             <div className={`wrapper${status ? " menuDisplayed" : ""}`}>
                 <div className="page-content-wrapper">
                     <div className="container-fluid">
-                        <h1 className="text-center">เบี้ยยังชีพผู้สูงอายุ</h1>
+                        <h1 className="text-center">การรับเบี้ยยังชีพผู้สูงอายุ</h1>
+                        <h4 className="text-center">ของประชากรผู้สูงอายุภายในตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต</h4>
                         <CardData />
                         <div className="data-source" >
                             <a

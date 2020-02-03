@@ -7,7 +7,7 @@ const BarHospital = () => {
   const [options, setOptions] = useState({
 
     title: {
-      text: 'สถานพยาบาลที่ใช้ประจำ',
+      text: 'สถานพยาบาลที่ใช้ประจำของผู้สูงอายุ',
       align: 'left'
     },
     plotOptions: {
