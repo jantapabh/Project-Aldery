@@ -71,7 +71,7 @@ class Economy extends React.Component {
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
                             <h1 className="text-center">ด้านเศรษฐกิจ</h1>
-                            <h2 className="small text-center"></h2>
+                            <h4 className="text-center">ของประชากรผู้สูงอายุภายในตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต</h4>
 
                             <div className="warp-chart">
                                 <div className="chart-contents">

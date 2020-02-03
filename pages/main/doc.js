@@ -36,6 +36,7 @@ class Doc extends React.Component {
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
                             <h1 className="text-center">สวัสดิการจากรัฐ</h1>
+                            <h4 className="text-center">ของประชากรผู้สูงอายุภายในตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต</h4>
                             <br />
                             <div className="warp-chart">
                                 <PieDoc />

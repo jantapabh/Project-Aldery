@@ -7,7 +7,7 @@ const DonutSocial = () => {
 
     const [options, setOptions] = useState({
         title: {
-            text: "บ้านพักอาศัย"
+            text: "บ้านพักอาศัยของประชากรผู้สูงอายุ"
         },
         responsive: [{
             breakpoint: 1000,

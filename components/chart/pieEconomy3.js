@@ -5,7 +5,7 @@ import Sheetapi from '../../config/api'
 
 const PieEconomy3 = () => {
   const [options, setOptions] = useState({
-    title: { text: "การออม" },
+    title: { text: "การออมของประชากรผู้สูงอายุ" },
     plotOptions: {
       radialBar: {
         offsetY: -5,

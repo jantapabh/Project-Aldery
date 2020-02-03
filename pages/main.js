@@ -25,7 +25,7 @@ const Main = () => {
                 <div className="page-content-wrapper">
                     <div className="container-fluid">
                         <h1 className="text-center">สังคมผู้สูงอายุ</h1>
-                        <h2 className="small text-center">จำนวนประชากรภายในจังหวัดภูเก็ต</h2>
+                        <h2 className="small text-center">จำนวนประชากรผู้สูงอายุภายในจังหวัดภูเก็ต</h2>
                         <div className="warp-map">
                             <div className="map-Img">
                                 <Map />

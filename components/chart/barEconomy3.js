@@ -6,7 +6,7 @@ const BarEconomy = () => {
   const [options, setOptions] = useState({
 
     title: {
-      text: 'รายจ่าย',
+      text: 'รายจ่ายของประชากรผู้สูงอายุ',
       align: 'left'
     },
     plotOptions: {

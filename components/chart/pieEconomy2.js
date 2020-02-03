@@ -5,7 +5,7 @@ import Sheetapi from '../../config/api'
 const PieEconomy2 = () => {
 
   const [options, setOptions] = useState({
-    title: { text: "อาชีพ" },
+    title: { text: "อาชีพของประชากรผู้สูงอายุ" },
     responsive: [{
       breakpoint: 480,
       options: {

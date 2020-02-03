@@ -6,7 +6,7 @@ const BarEconomy = () => {
 
     const [options, setOptions] = useState({
         title: {
-            text: 'รายได้เฉลี่ยต่อเดือน',
+            text: 'รายได้เฉลี่ยต่อเดือนของประชากรผู้สูงอายุ',
             align: 'left'
         },
         plotOptions: {

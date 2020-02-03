@@ -5,7 +5,7 @@ import Sheetapi from '../../config/api'
 const PieHelp = () => {
 
   const [options, setOptions] = useState({
-    title: { text: "สภาพความเดือดร้อนในปัจจุบัน" },
+    title: { text: "สภาพความเดือดร้อนในปัจจุบันของผู้สูงอายุ", align: 'left' },
     responsive: [{
       breakpoint: 480,
       options: {
@@ -40,7 +40,7 @@ const PieHelp = () => {
   const fetchData = async () => {
 
     let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-    await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!D152:D160')
+    await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!B152:B160')
     await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!C152:C160')
   }
 
@@ -95,7 +95,7 @@ const PieHelp = () => {
           options={options}
           series={series}
           type="pie"
-          width="450"
+          width="550"
           height="300"
         />
       </div>
@@ -105,7 +105,7 @@ const PieHelp = () => {
           options={options}
           series={series}
           type="pie"
-          width="450"
+          width="600"
           height="300"
         />
       </div>
@@ -115,7 +115,7 @@ const PieHelp = () => {
           options={options}
           series={series}
           type="pie"
-          width="400"
+          width="700"
           height="250"
         />
       </div>

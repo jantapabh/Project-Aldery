@@ -6,7 +6,7 @@ import Sheetapi from '../../config/api'
 const PieEconomy = () => {
 
   const [options, setOptions] = useState({
-    title: { text: "การศึกษา" },
+    title: { text: "การศึกษาของประชากรผู้สูงอายุ" },
     responsive: [{
       breakpoint: 480,
       options: {
@@ -42,8 +42,8 @@ const PieEconomy = () => {
   const fetchData = async () => {
 
     let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-    await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!B29:B38')
-    await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!C29:C38')
+    await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!B30:B38')
+    await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!C30:C38')
   }
 
   const namelist = async (token, value) => {

@@ -48,8 +48,8 @@ class Help extends React.Component {
                     <Sidebar status={this.state.status} />
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
-                            <h1 className="text-center">การช่วยเหลือ</h1>
-                            <h2 className="small text-center"></h2>
+                            <h1 className="text-center">การช่วยเหลือของหน่วยงานภาครัฐ</h1>
+                            <h4 className="text-center">ของประชากรผู้สูงอายุภายในตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต</h4>
                             <div className="warp-chart">
                                 <div className="chart-contents">
                                     <Piechart />

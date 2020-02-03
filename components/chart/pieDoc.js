@@ -7,7 +7,7 @@ import Sheetapi from '../../config/api'
 const PieDoc = () => {
 
   const [options, setOptions] = useState({
-    title: { text: "สถานภาพการรับสวัสดิการจากรัฐ" },
+    title: { text: "สถานภาพการรับสวัสดิการจากรัฐของผู้สูงอายุ" },
     responsive: [{
       breakpoint: 800,
       options: {

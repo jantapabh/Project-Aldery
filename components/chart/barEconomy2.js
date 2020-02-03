@@ -6,7 +6,7 @@ import Sheetapi from '../../config/api'
 const BarEconomy2 = () => {
     const [options, setOptions] = useState({
         title: {
-            text: 'ที่มาของรายได้',
+            text: 'ที่มาของรายได้ของประชากรผู้สูงอายุ',
             align: 'left'
         },
         plotOptions: {

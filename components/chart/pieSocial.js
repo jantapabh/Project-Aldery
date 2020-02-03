@@ -7,7 +7,7 @@ import Sheetapi from '../../config/api'
 const PieSocial = () => {
 
     const [options, setOptions] = useState({
-        title: { text: "สภาพบ้านพักอาศัย" },
+        title: { text: "สภาพบ้านพักอาศัยของประชากรผู้สูงอายุ" },
         legend: {
             position: 'bottom'
         },
