@@ -60,15 +60,19 @@ class StudentMap extends Component {
 
     async componentDidMount() {
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
-        this.access_token = userOauth.data.access_token
-
+        this.access_token = `${userOauth != null ? userOauth.data.access_token : window.location.replace("/")}`
         setTimeout(() => {
             this.listName('แผนที่!B5:E21')
         }, 1000)
         this.loadPaths()
-
-
     }
+
+    oauthToken = () => {
+        return (
+            <div>ข้อมูลไม่ถูกต้อง โปรดกลับสู่หน้าหลัก</div>
+        )
+    }
+
 
     listName = async (v) => {
         try {
