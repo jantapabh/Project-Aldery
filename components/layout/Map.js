@@ -67,13 +67,7 @@ class StudentMap extends Component {
         this.loadPaths()
     }
 
-    oauthToken = () => {
-        return (
-            <div>ข้อมูลไม่ถูกต้อง โปรดกลับสู่หน้าหลัก</div>
-        )
-    }
-
-
+    
     listName = async (v) => {
         try {
 
@@ -124,7 +118,7 @@ class StudentMap extends Component {
         }
 
         return (
-            <React.Fragment >
+            <React.Fragment >   
                 <Motion style={wrapperStyles}
                     defaultStyle={{
                         zoom: 1,
