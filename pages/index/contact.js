@@ -84,7 +84,6 @@ class Contact extends React.Component {
               }
             </div>
 
-
             <div className="timeline-contact">
               <Carousel autoplay className="custom-slider">
                 {

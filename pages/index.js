@@ -11,19 +11,20 @@ const Home = () => {
       window.localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
     }
     fetchData();
-
-  });
+  }, []);
 
   return (
     <div className="warp-index">
-
       <Head>
         <title>Eldery DB</title>
         <link rel='icon' href='/static/logomain.svg' />
       </Head>
       <React.Fragment>
         <Nav_index name="/" />
-        <Cover />
+        <main>
+          <Cover />
+        </main>
+
       </React.Fragment>
 
     </div>
