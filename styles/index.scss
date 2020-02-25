@@ -2,6 +2,17 @@
   width: 100%;
   min-height: 100vh;
   height: auto;
+
+  .MuiLinearProgress-root {
+    height: 5px;
+  }
+
+  .MuiLinearProgress-colorPrimary {
+    background-color: #c4def6;
+  }
+  .MuiLinearProgress-barColorPrimary {
+    background-color: #0693e3;
+  }
 }
 
 .warp-header {

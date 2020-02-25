@@ -4,7 +4,6 @@ import Sheetapi from '../config/api'
 import Cover from '../components/layout/cover';
 import Nav_index from '../components/nav_index';
 
-
 const Home = () => {
 
   useEffect(() => {
@@ -12,18 +11,21 @@ const Home = () => {
       window.localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
     }
     fetchData();
+
   });
 
   return (
     <div className="warp-index">
+
       <Head>
         <title>Eldery DB</title>
         <link rel='icon' href='/static/logomain.svg' />
       </Head>
-      <Nav_index name="/" />
-      <main>
+      <React.Fragment>
+        <Nav_index name="/" />
         <Cover />
-      </main>
+      </React.Fragment>
+
     </div>
   )
 }

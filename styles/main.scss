@@ -1,3 +1,26 @@
+.warp-main {
+  nav {
+    transition: all 0.5s;
+    ul {
+      justify-content: flex-start;
+    }
+    .toggle {
+      padding-left: 230px;
+    }
+  }
+
+  .MuiLinearProgress-root {
+    height: 5px;
+  }
+
+  .MuiLinearProgress-colorPrimary {
+    background-color: #c4def6;
+  }
+  .MuiLinearProgress-barColorPrimary {
+    background-color: #0693e3;
+  }
+}
+
 //Table
 .warp-table {
   display: flex;

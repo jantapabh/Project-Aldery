@@ -1,16 +1,4 @@
 //sidebar
-.warp-main {
-  nav {
-    transition: all 0.5s;
-    ul {
-      justify-content: flex-start;
-    }
-    .toggle {
-      padding-left: 230px;
-    }
-  }
-}
-
 .sidebar-wrapper {
   @media (max-width: 768px) {
     position: absolute;
