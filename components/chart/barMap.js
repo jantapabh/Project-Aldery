@@ -52,11 +52,13 @@ const BarMap = () => {
     })
     const [series, setSeries] = useState([])
     const [dataName, setDataName] = useState([])
+    const [loading, setLoading] = useState(false)
 
 
     useEffect(() => {
+        setLoading(true)
         fetchData()
-    }, [])
+    }, [listData])
 
     const fetchData = async () => {
 
@@ -73,7 +75,12 @@ const BarMap = () => {
             setOptions({
                 xaxis: {
                     categories: _.flatten(list),
+                },
+                fill: {
+                    opacity: 1,
+                    colors: ['#00d084']
                 }
+
             })
         } catch (err) {
             console.log(err);
@@ -82,9 +89,9 @@ const BarMap = () => {
 
     const listData = async (token, value) => {
         try {
-
             var data = await Sheetapi.getSheet(token, value)
             setSeries([{ name: "จำนวน", data: _.flatten(data) }])
+            setLoading(false)
         } catch (err) {
             console.log(err);
         }
@@ -93,55 +100,62 @@ const BarMap = () => {
     return (
 
         <React.Fragment>
-            <div className="warp-chart-small">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="bar"
-                    height="300"
-                    width="350"
-                />
-            </div>
+            {
+                loading ? <h2>Loading...</h2> : <React.Fragment>
+                    <div className="warp-chart-small">
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="bar"
+                            height="300"
+                            width="350"
+                        />
+                    </div>
 
-            <div className="warp-chart-mobile">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="bar"
-                    height="300"
-                    width="450"
-                />
-            </div>
+                    <div className="warp-chart-mobile">
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="bar"
+                            height="300"
+                            width="450"
+                        />
+                    </div>
 
-            <div className="warp-chart-tablets">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="bar"
-                    height="325"
-                    width="500"
-                />
-            </div>
+                    <div className="warp-chart-tablets">
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="bar"
+                            height="325"
+                            width="500"
+                        />
+                    </div>
 
-            <div className="warp-chart-desktops">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="bar"
-                    height="350"
-                    width="650"
-                />
-            </div>
+                    <div className="warp-chart-desktops">
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="bar"
+                            height="350"
+                            width="650"
+                        />
+                    </div>
 
-            <div className="warp-chart-large">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="bar"
-                    height="400"
-                    width="650"
-                />
-            </div>
+                    <div className="warp-chart-large">
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="bar"
+                            height="400"
+                            width="650"
+                        />
+                    </div>
+                </React.Fragment>
+            }
+
+
+
         </React.Fragment>
     )
 }
