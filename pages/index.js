@@ -24,7 +24,6 @@ const Home = () => {
         <main>
           <Cover />
         </main>
-
       </React.Fragment>
 
     </div>

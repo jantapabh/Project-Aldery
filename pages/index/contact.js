@@ -71,7 +71,7 @@ class Contact extends React.Component {
               {
                 userlist.map((item, index) => {
                   return (
-                    <Cardcontact
+                    <Cardcontact key={index}
                       img={item.รูปภาพ}
                       title={item.คำนำหน้าชื่อ}
                       name={item.ชื่อ}
@@ -89,14 +89,13 @@ class Contact extends React.Component {
                 {
                   img.map((item, index) => {
                     return (
-                      <img
+                      <img key={index}
                         src={item.img}
                         height="250"
                       />
                     )
                   })
                 }
-
               </Carousel>
             </div>
           </div>
