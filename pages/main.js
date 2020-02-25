@@ -27,7 +27,7 @@ const Main = () => {
     const isMobile = useMediaQuery({ maxWidth: 768 })
     const isSmallScreen = useMediaQuery({ maxWidth: 576 })
     const [loading, setLoading] = useState(true)
-    const [completed, setCompleted] = React.useState(0);
+    const [completed, setCompleted] = useState(0);
     const [status, setStatus] = useState(true)
 
     const onConfirm = (order) => {
@@ -67,23 +67,7 @@ const Main = () => {
                     <React.Fragment>
                         <Navbar_main confirm={onConfirm} status={status} />
                         <Sidebar status={status} />
-                        <div className={`wrapper${status ? " menuDisplayed" : ""}`}>
-                            <div className="page-content-wrapper">
-                                <div className="container-fluid">
-                                    <h1 className="text-center">สังคมผู้สูงอายุ</h1>
-                                    <h2 className="small text-center">จำนวนประชากรผู้สูงอายุภายในจังหวัดภูเก็ต</h2>
-                                    <div className="warp-map">
-                                        <div className="map-Img">
-                                            <Map />
-                                        </div>
-
-                                        <div className="map-content">
-                                            <BarMap />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                           
                     </React.Fragment>
             }
         </div >

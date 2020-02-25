@@ -16,7 +16,7 @@ const Navbar_main = props => {
 
     const [main, setMain] = useState(
         [
-            { name: "รายงานความคืบหน้า", href: "/main" },
+            { name: "รายงานความคืบหน้า", href: "/main/people" },
             { name: "ข้อมูลทางสถิติ", href: "/main/chart" },
             { name: "เบี้ยยังชีพผู้สูงอายุ", href: "/main/allowance" },
             { name: "สวัสดิการจากรัฐ", href: "/main/doc" },

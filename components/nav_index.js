@@ -9,7 +9,7 @@ const Nav_index = props => {
     const [status, setStatus] = useState(false)
     const [index, setIndex] = useState(
         [
-            { name: "Dashboard", href: "/main" },
+            { name: "หน้าหลัก", href: "/main" },
             { name: "Services", href: "/index/services" },
             { name: "Contact", href: "/index/contact" },
         ]
