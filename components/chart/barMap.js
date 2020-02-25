@@ -8,8 +8,6 @@ const BarMap = () => {
 
     const [options, setOptions] = useState({
         chart: {
-            height: 350,
-            type: 'bar',
             stacked: true,
             toolbar: {
                 show: true
@@ -18,9 +16,8 @@ const BarMap = () => {
                 enabled: true
             }
         },
-        dataLabels: { enabled: false },
         responsive: [{
-            breakpoint: 480,
+            breakpoint: 1000,
             options: {
                 legend: {
                     position: 'bottom',
@@ -37,18 +34,6 @@ const BarMap = () => {
         legend: {
             position: 'right',
             offsetY: 40
-        },
-        fill: {
-            opacity: 1,
-            colors: ['#00d084']
-        },
-        xaxis: {},
-        tooltip: {
-            y: {
-                formatter: function (val) {
-                    return val + " คน"
-                }
-            },
         },
     })
     const [series, setSeries] = useState([])
@@ -80,6 +65,13 @@ const BarMap = () => {
                 fill: {
                     opacity: 1,
                     colors: ['#00d084']
+                },
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return val + " คน"
+                        }
+                    }
                 }
 
             })
