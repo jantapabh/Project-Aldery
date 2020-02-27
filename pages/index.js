@@ -2,9 +2,28 @@ import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Sheetapi from '../config/api'
 import Cover from '../components/layout/cover';
-import Nav_index from '../components/nav_index';
+import NavBar from '../components/layout/nav';
+import { useMediaQuery } from 'react-responsive'
+
 
 const Home = () => {
+
+  const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
+
+  const [home, setHome] = useState(
+    [
+      { name: "หน้าหลัก", href: "/main" },
+      { name: "Services", href: "/index/services" },
+      { name: "Contact", href: "/index/contact" },
+    ]
+  )
+
+  const [homeMin, setHomeMin] = useState(
+    [
+      { name: "Services", href: "/index/services" },
+      { name: "Contact", href: "/index/contact" },
+    ]
+  )
 
   useEffect(() => {
     async function fetchData() {
@@ -20,7 +39,8 @@ const Home = () => {
         <link rel='icon' href='/static/logomain.svg' />
       </Head>
       <React.Fragment>
-        <Nav_index name="/" />
+        <NavBar tab={isSmallScreen ? homeMin : home} />
+        {/* <Nav_index name="/" /> */}
         <main>
           <Cover />
         </main>
