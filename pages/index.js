@@ -40,7 +40,6 @@ const Home = () => {
       </Head>
       <React.Fragment>
         <NavBar tab={isSmallScreen ? homeMin : home} />
-        {/* <Nav_index name="/" /> */}
         <main>
           <Cover />
         </main>

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Carousel } from 'rsuite';
-import Nav_index from '../../components/nav_index'
 import Cardcontact from '../../components/layout/cardcontact'
 import Sheetapi from '../../config/api'
+import NavBar from '../../components/layout/nav';
 
 
 class Contact extends React.Component {
@@ -57,7 +57,7 @@ class Contact extends React.Component {
 
     return (
       <div className="warp-detail">
-        <Nav_index />
+        {/* <NavBar /> */}
         <div className="page-detail">
           <div className="container-detail">
             <div className="item-header">

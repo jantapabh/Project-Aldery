@@ -1,7 +1,7 @@
 import React from 'react'
-import Nav_index from '../../components/nav_index'
 import { Steps, ButtonGroup, Button, Message } from 'rsuite';
 import 'rsuite/lib/styles/index.less';
+import NavBar from '../../components/layout/nav';
 
 const styles = {
     width: '200px',
@@ -41,7 +41,7 @@ class Services extends React.Component {
         const { step, message } = this.state;
         return (
             <div className="warp-detail">
-                <Nav_index />
+                {/* <NavBar/> */}
                 <div className="page-detail">
                     <div className="container-detail">
                         <div className="item-header">
