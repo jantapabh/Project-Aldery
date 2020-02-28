@@ -39,7 +39,7 @@ const Home = () => {
         <link rel='icon' href='/static/logomain.svg' />
       </Head>
       <React.Fragment>
-        <NavBar tab={isSmallScreen ? homeMin : home} />
+        <NavBar name="index" tab={isSmallScreen ? homeMin : home} />
         <main>
           <Cover />
         </main>

@@ -1,21 +1,18 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import CardData from '../../components/layout/cardmain';
-import Navbar_main from '../../components/nav_main';
-import Sidebar from '../../components/layout/sidebar';
+import Dashboard from '../../components/layout/dashboard';
 import _ from 'lodash'
 
 const Allowance = props => {
-    
-    const [status,setStatus] = useState(true)
-    
-    const onConfirm = (order) => {
+
+    const [status, setStatus] = useState(false)
+
+    const statusMain = (order) => {
         setStatus(order)
     }
-
     return (
         <div className="warp-main">
-            <Navbar_main confirm={onConfirm} status={status} />
-            <Sidebar status={status} />
+            <Dashboard onStatusMain={statusMain} statusMain={status} />
             <div className={`wrapper${status ? " menuDisplayed" : ""}`}>
                 <div className="page-content-wrapper">
                     <div className="container-fluid">

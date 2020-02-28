@@ -1,7 +1,7 @@
 import React from 'react'
+import NavBar from '../../components/layout/nav'
 import { Steps, ButtonGroup, Button, Message } from 'rsuite';
 import 'rsuite/lib/styles/index.less';
-import NavBar from '../../components/layout/nav';
 
 const styles = {
     width: '200px',
@@ -15,7 +15,9 @@ class Services extends React.Component {
         super();
         this.state = {
             step: 0,
-            message: 0
+            message: 0,
+            service: [{ name: "หน้าหลัก", href: "/main" },
+            { name: "Contact", href: "/index/contact" },]
         };
         this.decline = this.decline.bind(this);
         this.increase = this.increase.bind(this);
@@ -41,7 +43,7 @@ class Services extends React.Component {
         const { step, message } = this.state;
         return (
             <div className="warp-detail">
-                {/* <NavBar/> */}
+                <NavBar name="other" tab={this.state.service} />
                 <div className="page-detail">
                     <div className="container-detail">
                         <div className="item-header">

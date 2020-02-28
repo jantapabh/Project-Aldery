@@ -1,16 +1,20 @@
+.wrapper {
+  display: flex;
+}
+
 //sidebar
 .sidebar-wrapper {
   @media (max-width: 768px) {
     position: absolute;
   }
-
+  top: 0;
   z-index: 1;
   position: fixed;
   width: 0;
   height: 100vh;
   overflow-y: hidden;
   background: white;
-  box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.2);
+  // box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.2);
   opacity: 0.9;
   transition: all 0.5s;
   width: 4rem;

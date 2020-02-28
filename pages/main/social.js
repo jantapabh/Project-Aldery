@@ -1,10 +1,8 @@
-import React from 'react'
-import Sheetapi from '../../config/api'
+import React, { useState } from 'react'
 import dynamic from 'next/dynamic'
-import Navbar_main from '../../components/nav_main';
-import Sidebar from '../../components/layout/sidebar';
 import Footer from '../../components/layout/footer';
 import _ from 'lodash'
+import Dashboard from '../../components/layout/dashboard';
 
 const BarSocial = dynamic(
     () => import('../../components/chart/barSocial'),
@@ -27,64 +25,44 @@ const PieSocial2 = dynamic(
     { ssr: false }
 )
 
-class Social extends React.Component {
+const Social = () => {
+    const [status, setStatus] = useState(false)
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            status: true
-        }
+    const statusMain = (order) => {
+        setStatus(order)
     }
 
-    onConfirm = (order) => {
-        this.setState({
-            status: order,
-        })
-    }
+    return (
+        <div className="warp-main">
+            <Dashboard onStatusMain={statusMain} statusMain={status} />
+            <div className={`wrapper${status ? " menuDisplayed" : ""}`}>
 
-
-    async componentDidMount() {
-        await localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
-
-    }
-
-    render() {
-
-        return (
-            <div className="warp-main">
-                <div className={`wrapper${this.state.status ? " menuDisplayed" : ""}`}>
-                    <Navbar_main confirm={this.onConfirm} status={this.state.status} />
-                    <Sidebar status={this.state.status} />
-
-
-                    <div className="page-content-wrapper">
-                        <div className="container-fluid">
-                            <h1 className="text-center">สภาพทางสังคม</h1>
-                            <h4 className="text-center">ของประชากรผู้สูงอายุภายในตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต</h4>
-                            <h2 className="small text-center"></h2>
-                            <div className="warp-chart">
-                                <div className="chart-contents">
-                                    <BarSocial />
-                                </div>
-                                <div className="chart-contents">
-                                    <DonutSocial />
-                                </div>
+                <div className="page-content-wrapper">
+                    <div className="container-fluid">
+                        <h1 className="text-center">สภาพทางสังคม</h1>
+                        <h4 className="text-center">ของประชากรผู้สูงอายุภายในตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต</h4>
+                        <h2 className="small text-center"></h2>
+                        <div className="warp-chart">
+                            <div className="chart-contents">
+                                <BarSocial />
                             </div>
-                            <div className="warp-chart">
-                                <div className="chart-contents">
-                                    <PieSocial />
-                                </div>
-                                <div className="chart-contents">
-                                    <PieSocial2 />
-                                </div>
+                            <div className="chart-contents">
+                                <DonutSocial />
                             </div>
-                            <Footer nameFooter="social" />
                         </div>
+                        <div className="warp-chart">
+                            <div className="chart-contents">
+                                <PieSocial />
+                            </div>
+                            <div className="chart-contents">
+                                <PieSocial2 />
+                            </div>
+                        </div>
+                        <Footer nameFooter="social" />
                     </div>
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }
 export default Social;

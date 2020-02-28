@@ -1,48 +1,60 @@
 .warp-map {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  margin-top: 2rem !important;
+  margin: 1rem 0;
+  text-align: center;
+
+  .card-header {
+  }
+
+  .card-body-text {
+    flex: 1 1 auto;
+    padding: 1.25rem;
     display: flex;
-    margin: 1rem 0;
+    justify-content: center;
     align-items: center;
+  }
+
+  @media (max-width: 1199.98px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map-Img {
+    display: flex;
+    justify-content: center;
+    width: 40%;
     text-align: center;
-  
+
     @media (max-width: 1199.98px) {
-      flex-direction: column;
-      align-items: center;
+      width: 100%;
     }
-  
-    .map-Img {
-      display: flex;
-      justify-content: center;
-      width: 40%;
-      text-align: center;
-  
-      @media (max-width: 1199.98px) {
-        width: 100%;
+
+    svg {
+      width: 600px;
+      height: 600px;
+
+      @media (max-width: 575.98px) {
+        width: 800px;
+        height: 400px;
       }
-  
-      svg {
-        width: 600px;
-        height: 600px;
-  
-        @media (max-width: 575.98px) {
-          width: 800px;
-          height: 400px;
-        }
-      }
-    }
-  
-    .map-content {
-      display: flex;
-      justify-content: center;
-      width: 60%;
-      text-align: center;
-    }
-  
-    .chart-contents {
-      display: flex;
-      background-color: white;
-      border-radius: 0.5rem;
-      margin: 0.5rem 1rem;
-      padding: 0.5rem;
     }
   }
-  
+
+  .map-content {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+  }
+
+  .chart-contents {
+    display: flex;
+    background-color: white;
+    border-radius: 0.5rem;
+    margin: 0.5rem 1rem;
+    padding: 0.5rem;
+  }
+}

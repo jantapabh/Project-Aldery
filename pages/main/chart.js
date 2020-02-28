@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
-import Navbar_main from '../../components/nav_main';
-import Sidebar from '../../components/layout/sidebar';
 import Footer from '../../components/layout/footer';
 import _ from 'lodash'
+import Dashboard from '../../components/layout/dashboard';
+
 
 const Barchart = dynamic(
     () => import('../../components/chart/barChart'),
@@ -21,17 +21,14 @@ const Piechart2 = dynamic(
 )
 
 const Chart = () => {
+    const [status, setStatus] = useState(false)
 
-    const [status, setStatus] = useState(true)
-
-    const onConfirm = (order) => {
+    const statusMain = (order) => {
         setStatus(order)
     }
-
     return (
         <div className="warp-main">
-            <Navbar_main confirm={onConfirm} status={status} />
-            <Sidebar status={status} />
+            <Dashboard onStatusMain={statusMain} statusMain={status} />
             <div className={`wrapper${status ? " menuDisplayed" : ""}`}>
                 <div className="page-content-wrapper">
                     <div className="container-fluid">

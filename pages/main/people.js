@@ -1,33 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import Map from '../../components/layout/Map';
-import Navbar_main from '../../components/nav_main';
-import Sidebar from '../../components/layout/sidebar';
+import Dashboard from '../../components/layout/dashboard';
+
 
 const BarMap = dynamic(
     () => import('../../components/chart/barMap'),
     { ssr: false }
 )
 
-const Main = () => {
-  
-    const [status, setStatus] = useState(true)
+const People = () => {
 
-    const onConfirm = (order) => {
+    const [status, setStatus] = useState(false)
+
+    const statusMain = (order) => {
         setStatus(order)
     }
-
 
     return (
         <div className="warp-main">
             <React.Fragment>
-                <Navbar_main confirm={onConfirm} status={status} />
-                <Sidebar status={status} />
+                <Dashboard onStatusMain={statusMain} statusMain={status} />
                 <div className={`wrapper${status ? " menuDisplayed" : ""}`}>
                     <div className="page-content-wrapper">
                         <div className="container-fluid">
-                            <h1 className="text-center">สังคมผู้สูงอายุ</h1>
-                            <h2 className="small text-center">จำนวนประชากรผู้สูงอายุภายในจังหวัดภูเก็ต</h2>
+                            <h1 className="text-center">จำนวนประชากรผู้สูงอายุ</h1>
+                            <h2 className="small text-center">ภายในจังหวัดภูเก็ต โดยเเบ่งตามตำบลที่อยู่อาศัย</h2>
                             <div className="warp-map">
                                 <div className="map-Img">
                                     <Map />
@@ -45,4 +43,4 @@ const Main = () => {
         </div >
     )
 }
-export default Main;
+export default People;

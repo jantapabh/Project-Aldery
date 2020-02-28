@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import NavBar from '../../components/layout/nav'
 import { Carousel } from 'rsuite';
 import Cardcontact from '../../components/layout/cardcontact'
 import Sheetapi from '../../config/api'
-import NavBar from '../../components/layout/nav';
-
 
 class Contact extends React.Component {
 
@@ -17,7 +16,9 @@ class Contact extends React.Component {
         { img: "/static/contact3.jpg" },
         { img: "/static/contact4.jpg" },
         { img: "/static/contact5.jpg" },
-      ]
+      ],
+      contact: [{ name: "หน้าหลัก", href: "/main" },
+      { name: "Services", href: "/index/services" },]
     }
   }
 
@@ -57,7 +58,7 @@ class Contact extends React.Component {
 
     return (
       <div className="warp-detail">
-        {/* <NavBar /> */}
+        <NavBar name="other" tab={this.state.contact} />
         <div className="page-detail">
           <div className="container-detail">
             <div className="item-header">
@@ -71,7 +72,7 @@ class Contact extends React.Component {
               {
                 userlist.map((item, index) => {
                   return (
-                    <Cardcontact key={index}
+                    <Cardcontact
                       img={item.รูปภาพ}
                       title={item.คำนำหน้าชื่อ}
                       name={item.ชื่อ}
@@ -89,13 +90,14 @@ class Contact extends React.Component {
                 {
                   img.map((item, index) => {
                     return (
-                      <img key={index}
+                      <img
                         src={item.img}
                         height="250"
                       />
                     )
                   })
                 }
+
               </Carousel>
             </div>
           </div>
