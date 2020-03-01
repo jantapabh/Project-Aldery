@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import _ from 'lodash'
-import Nav_logo from '../nav_logo'
 import { useMediaQuery } from 'react-responsive'
-
-
+import '../../styles/nav.scss'
 
 const NavBar = props => {
 
