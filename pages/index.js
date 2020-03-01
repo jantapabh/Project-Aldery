@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import Head from 'next/head'
-import Sheetapi from '../config/api'
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Sheetapi from '../config/api';
 import Cover from '../components/layout/cover';
 import NavBar from '../components/layout/nav';
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'react-responsive';
 
 
 const Home = () => {
@@ -12,16 +12,21 @@ const Home = () => {
 
   const [home, setHome] = useState(
     [
-      { name: "หน้าหลัก", href: "/main" },
-      { name: "Services", href: "/index/services" },
-      { name: "Contact", href: "/index/contact" },
+      { name: "หน้าหลัก", href: "/" },
+      { name: "เกี่ยวกับเรา", href: "/" },
+      { name: "ข่าวสาร", href: "/" },
+      { name: "ติดต่อ", href: "/index/contact" },
+      { name: "เข้าสู่ระบบ", href: "/main" }
     ]
   )
 
   const [homeMin, setHomeMin] = useState(
     [
-      { name: "Services", href: "/index/services" },
-      { name: "Contact", href: "/index/contact" },
+      { name: "หน้าหลัก", href: "/" },
+      { name: "เกี่ยวกับเรา", href: "/" },
+      { name: "ข่าวสาร", href: "/" },
+      { name: "ติดต่อ", href: "/index/contact" },
+      { name: "เข้าสู่ระบบ", href: "/main" },
     ]
   )
 

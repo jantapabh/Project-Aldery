@@ -43,28 +43,37 @@ const NavBar = props => {
                 isBigScreen && name == "index" ?
                     <nav>
                         <ul>
-                            <Nav_logo />
-                            <div className="warp-manu">
-                                <ul>
-                                    <li>
-                                        {
-                                            tab.map((item, index) => {
-                                                return (
-                                                    <Link key={index} href={item.href}>
-                                                        <p >{item.name}</p>
-                                                    </Link>
-                                                )
-                                            })
-                                        }
-                                    </li>
-                                </ul>
-                            </div>
+                            <Link href="/">
+                                <li>
+                                    <h2>Eldery DB</h2>
+                                </li>
+                            </Link>
+                            <li>
+                                {
+                                    tab.map((item, index) => {
+                                        return (
+                                            <Link key={index} href={item.href}>
+                                                {
+                                                    item.name == "ติดต่อ" ?
+                                                        <p className="li-buttom-line">{item.name}</p>
+                                                        :
+                                                        item.name == "เข้าสู่ระบบ" ?
+                                                            <p className="li-buttom-line-active">{item.name}</p>
+                                                            :
+                                                            <p >{item.name}</p>
+                                                }
+
+                                            </Link>
+                                        )
+                                    })
+                                }
+                            </li>
                         </ul>
                     </nav>
                     :
                     isBigScreen && name == "main" ?
                         <div className={`wrapper${props.status ? " menuDisplayed" : ""}`}>
-                            <nav className="nav-other">
+                            <nav>
                                 <ul>
                                     <div className="warp-nav-sidebar">
                                         <li>
@@ -77,28 +86,24 @@ const NavBar = props => {
                                             </div>
                                         </li>
                                     </div>
-                                    <div className="warp-logo-main">
-                                        <ul>
-                                            <Link href="/">
-                                                <img src="/static/logomain.svg" />
-                                            </Link>
-                                        </ul>
-                                    </div>
-                                    <div className="warp-manu">
-                                        <ul>
-                                            <li>
-                                                {
-                                                    tab.map((item, index) => {
-                                                        return (
-                                                            <Link key={index} href={item.href}>
+                                    <li>
+                                        {
+                                            tab.map((item, index) => {
+                                                return (
+                                                    <Link key={index} href={item.href}>
+                                                        {
+                                                            item.name == "ติดต่อ" ?
+                                                                <p className="li-buttom-line">{item.name}</p>
+                                                                :
                                                                 <p>{item.name}</p>
-                                                            </Link>
-                                                        )
-                                                    })
-                                                }
-                                            </li>
-                                        </ul>
-                                    </div>
+                                                        }
+
+                                                    </Link>
+                                                )
+                                            })
+                                        }
+                                    </li>
+
                                 </ul>
                             </nav>
                         </div>
@@ -134,7 +139,9 @@ const NavBar = props => {
                             isSmallScreen ?
                                 <div className="collapsible-menu">
                                     <div className="warp-nav-sidebar">
-                                        <Nav_logo />
+                                        <Link href="/">
+                                            <h2>Eldery DB</h2>
+                                        </Link>
                                         <div className="box-hamberger">
                                             <a className={`hamberger btn${status ? " active" : " not-active"}`} onClick={collapsible} >
                                                 <span></span>

@@ -1,130 +1,35 @@
-//logoMain
-.warp-logo-main {
-  ul {
-    padding: 0.5rem;
-    img {
-      cursor: pointer;
-      width: 3rem;
-      height: 3rem;
-    }
-  }
-}
+$font-color: #071d40 !important;
+$font-header: "Frank Ruhl Libre" !important;
+$primary-color: #39b54a !important;
 
-//manu
-.warp-manu {
-  width: 100%;
-  ul {
-    display: flex;
-    justify-content: flex-end !important;
-    list-style: none;
-  }
-}
-
-nav {
-  ul {
-    .warp-table {
-      width: 20%;
-    }
-  }
-}
-
-li {
-  display: flex;
-  cursor: pointer;
-  p {
-    font-size: 1.1rem !important;
-    cursor: pointer;
-    color: black !important;
-    margin: 1rem 1.5rem !important;
-    margin-top: 1.7rem !important;
-  }
-  p:hover {
-    color: #bedadc;
-  }
-}
-
-//Index
-nav {
-  background-color: white;
-  width: 100%;
-  min-height: 3vh;
-  height: auto;
-  display: flex;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-  z-index: 99;
-
-  @media (max-width: 576px) {
-    display: none !important;
-  }
-
-  //logo
-  ul {
-    width: 100%;
-    display: flex;
-
-    .nav-logo {
-      min-width: 40%;
-      list-style: none;
+.warp-index {
+  nav {
+    ul {
+      user-select: none;
+      padding: 0.5rem;
       display: flex;
+      justify-content: space-between;
       li {
-        margin-bottom: 0.5rem;
-
-        img {
-          margin-top: 1rem;
-          width: 5rem;
-          height: 2.5rem;
+        p.li-buttom-line-active {
+          border: 1px solid $primary-color;
+          border-radius: 1.5rem;
+          padding: 0.5rem 2rem !important;
+          margin: 0 0.5rem !important;
+          background-color: $primary-color;
+          color: white !important;
         }
-        h4 {
-          margin: 0;
-          margin-top: 1.8rem;
+        p.li-buttom-line-active:hover {
+          color: $font-color;
+          background-color: white !important;
         }
       }
     }
   }
 }
 
-nav.nav-main {
-  min-height: 2vh;
-  line-height: 2vh;
-}
-
-nav.nav-other {
-  min-height: 2vh;
-  line-height: 2vh;
-
-  .warp-nav-sidebar {
-    width: 100%;
-  }
-
-  ul {
-    width: 100%;
-    list-style: none;
-    .warp-table {
-      width: 100%;
-    }
-  }
-}
-
 .collapsible-menu {
-  @media (min-width: 576px) {
-    display: none;
-  }
   background-color: rgb(255, 255, 255);
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
-
-  label {
-    text-align: center;
-    font-size: 1.5rem;
-    display: block;
-    cursor: pointer;
-    // background: url(menu.png) no-repeat left center;
-    padding: 1rem;
-    margin-bottom: 0 !important;
-  }
-
-  label:hover {
-    color: salmon;
-  }
 
   .menu-content {
     text-align: center;
@@ -137,6 +42,7 @@ nav.nav-other {
 
       li {
         p {
+          color: $font-color;
           display: block;
           padding: 10px;
           text-decoration: none;
@@ -151,11 +57,12 @@ nav.nav-other {
       li {
         display: flex;
         flex-direction: column;
+        width: 100%;
         p {
           margin: 0.5rem !important;
         }
         p:hover {
-          color: #c4def6 !important;
+          color: $primary-color;
         }
       }
     }
@@ -166,30 +73,54 @@ nav.nav-other {
     height: 4rem;
     display: flex;
     justify-content: center;
+    h2 {
+      display: flex;
+      align-items: center;
+      font-family: $font-header;
+      font-size: 1.5rem !important;
+    }
+  }
+}
 
-    .nav-logo {
-      margin-bottom: 1rem;
-      li {
-        img {
-          margin-top: 1rem;
-          width: 4rem;
-          height: 2rem;
-        }
-        h4 {
-          font-size: 1.2rem;
-          margin-top: 1.5rem;
-          padding-bottom: 0;
-        }
-      }
+.wrapper {
+  nav {
+    min-width: 100%;
+  }
+}
+
+ul {
+  user-select: none;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    display: flex;
+    align-items: center;
+    h2 {
+      font-size: 2rem !important;
+      padding: 0 1rem !important;
+      font-family: $font-header;
+    }
+    p {
+      cursor: pointer;
+      color: $font-color;
+      margin: 1rem !important;
+    }
+    p:hover {
+      color: $primary-color;
     }
 
-    .box-hamberger {
-      width: 3.5rem;
-      height: 4rem;
+    p.li-buttom-line {
+      border: 1px solid $primary-color;
+      border-radius: 1.5rem;
+      padding: 0.5rem 2rem !important;
+      margin: 0 0.5rem !important;
+    }
 
-      a.hamberger {
-        top: 2.4rem;
-      }
+    p.li-buttom-line:hover {
+      color: white !important;
+      background-color: $primary-color;
     }
   }
 }

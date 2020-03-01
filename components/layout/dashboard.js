@@ -12,8 +12,10 @@ const Dashboard = props => {
 
     const [main, setMain] = useState(
         [
-            { name: "Services", href: "/index/services" },
-            { name: "Contact", href: "/index/contact" },
+            { name: "หน้าหลัก", href: "/" },
+            { name: "เกี่ยวกับเรา", href: "/" },
+            { name: "ข่าวสาร", href: "/" },
+            { name: "ติดต่อ", href: "/index/contact" },
         ]
     )
 

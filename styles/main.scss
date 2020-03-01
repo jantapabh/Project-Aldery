@@ -1,13 +1,16 @@
 .warp-main {
-  nav {
-    transition: all 0.5s;
-    ul {
-      justify-content: flex-start;
-    }
-    .toggle {
-      padding-left: 230px;
-    }
-  }
+  // nav {
+  //   transition: all 0.5s;
+  //   ul {
+  //     justify-content: flex-start;
+  //   }
+  //   .toggle {
+  //     padding-left: 230px;
+  //   }
+  // }
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
 
   .MuiLinearProgress-root {
     height: 5px;

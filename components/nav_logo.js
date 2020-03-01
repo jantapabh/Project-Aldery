@@ -8,7 +8,7 @@ const Nav_logo = () => {
             <Link href="/">
                 <li>
                     <img src="/static/logomain.svg" alt="logo"/>
-                    <h4>Eldery DB</h4>
+                    {/* <h4>Eldery DB</h4> */}
                 </li>
             </Link>
         </div>

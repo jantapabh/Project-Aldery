@@ -20,7 +20,7 @@ const MainPage = () => {
     const isMobile = useMediaQuery({ maxWidth: 768 })
     const isSmallScreen = useMediaQuery({ maxWidth: 576 })
     const isShowMap = useMediaQuery({ minDeviceWidth: 1224 })
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const [completed, setCompleted] = useState(0);
 
     const [status, setStatus] = useState(false)

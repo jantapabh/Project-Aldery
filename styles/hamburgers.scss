@@ -1,7 +1,12 @@
+$primary-color: #39b54a !important;
+
 .box-hamberger {
-  width: 3.5rem;
-  height: 3rem;
-  padding-bottom: 1rem !important;
+  width: 2.5rem;
+  height: auto;
+
+  a.btn{
+    padding: 0.5rem;
+  }
 
   a.hamberger {
     position: relative;
@@ -10,22 +15,19 @@
   }
 
   .btn.hamberger {
-    margin: 0.3rem 0 ;
-    margin-bottom: 0 !important;
     display: flex;
     flex-direction: column;
     width: 100%;
     transform: translate(-50%, -50%);
     cursor: pointer;
-    padding-bottom: 1.4rem;
-    padding-left: 1rem;
+    
   }
 
   span {
     width: 100%;
     border-radius: 3px;
     height: 0.1rem;
-    background: #0693e3;
+    background: $primary-color;
     transition: all 0.3s;
     position: relative;
   }
