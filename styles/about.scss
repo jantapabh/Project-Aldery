@@ -28,13 +28,14 @@
           padding: 0 3rem;
 
           .header-title-content {
-            font-weight: bold;
+            font-weight: bold !important;
           }
 
           h6 {
             text-align: start;
             opacity: 0.8;
             margin-bottom: 0.5rem !important;
+            font-weight: lighter ;
           }
         }
         }
