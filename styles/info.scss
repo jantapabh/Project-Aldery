@@ -1,0 +1,45 @@
+$primary-color: #39b54a !important;
+
+.warp-info {
+  //   background-color: #fbfbfb;
+  .page-content {
+    padding: 3rem 0;
+
+    .container-fluid {
+      display: flex;
+      flex-direction: column;
+      .head-content {
+        h3 {
+          font-size: 2rem !important;
+          margin-bottom: 1rem !important;
+        }
+      }
+      .detail-content {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 3rem;
+
+        .card {
+          width: 12rem;
+          height: 7rem;
+          border: 1px solid $primary-color;
+          border-radius: 1rem;
+          background-color: white;
+          margin: 0 2rem;
+          .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 1rem !important;
+            h1 {
+              font-size: 1.75rem !important;
+              color: #fc6e50 !important;
+              padding: 0.5rem 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

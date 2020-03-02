@@ -1,0 +1,45 @@
+.warp-about {
+  .page-content {
+    padding-top: 3rem;
+
+    .container-fluid {
+      display: flex;
+      flex-direction: column;
+      .head-content {
+        h3 {
+          font-size: 2rem !important;
+          margin-bottom: 1rem !important;
+        }
+      }
+      .detail-content {
+        display: flex;
+        justify-content: center;
+        // justify-content: space-evenly;
+        margin: 2rem 3rem;
+        img {
+          height: 20rem;
+          margin-right: 1rem;
+        }
+
+        .data-detail-content{
+          display: flex;
+          flex-direction: column;
+          .title-content {
+          padding: 0 3rem;
+
+          .header-title-content {
+            font-weight: bold;
+          }
+
+          h6 {
+            text-align: start;
+            opacity: 0.8;
+            margin-bottom: 0.5rem !important;
+          }
+        }
+        }
+        
+      }
+    }
+  }
+}

@@ -4,6 +4,8 @@ import Sheetapi from '../config/api';
 import Cover from '../components/cover';
 import NavBar from '../components/layout/nav';
 import { useMediaQuery } from 'react-responsive';
+import About from '../components/about';
+import Info from '../components/info';
 
 
 const Home = () => {
@@ -47,6 +49,8 @@ const Home = () => {
         <NavBar name="index" tab={isSmallScreen ? homeMin : home} />
         <main>
           <Cover />
+          <About />
+          <Info />
         </main>
       </React.Fragment>
 

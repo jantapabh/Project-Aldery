@@ -1,10 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const About = () => {
 
+    const [data, setData] = useState([
+        {
+            title: "ระดับเริ่มต้น (Aging society)",
+            text: "สังคมที่มีประชากรอายุ 60 ปีขึ้นไปมากกว่าร้อยละ 10 ของประชากรทั้งประเทศ",
+            subtext: "หรือมีประชากรอายุตั้งแต่ 65 ปีมากกว่าร้อยละ 7 ของประชากรทั้งประเทศ"
+        },
+        {
+            title: "ระดับสมบูรณ์ (Aged society)",
+            text: "สังคมที่มีประชากรอายุ 60 ปีขึ้นไป มากกว่าร้อยละ 20 ของประชากรทั้งประเทศ",
+            subtext: "หรือมีประชากรอายุตั้งแต่ 65 ปี มากกว่าร้อยละ 14 ของประชากรทั้งประเทศ"
+        },
+        {
+            title: "ระดับสูง (Super-aged society)",
+            text: "สังคมที่มีประชากรอายุ 65 ปีขึ้นไปมากกว่า ร้อยละ 20 ของประชากรทั้งประเทศ",
+            subtext: ""
+        },
+    ])
+
     return (
         <div className="warp-about">
-            
+            <div className="page-content">
+                <div className="container-fluid">
+                    <div className="head-content">
+                        <h3>สังคมผู้สูงอายุ และระดับของการเข้าสู่สังคมผู้สูงอายุ</h3>
+                        <h3> ถูกแบ่งออกเป็น 3 ระดับ</h3>
+                    </div>
+
+                    <div className="detail-content">
+                        <img src="/static/trstcover2.gif" />
+                        <div className="data-detail-content">
+                            {
+                                data.map((item, index) => (
+                                    <div className="title-content">
+                                        <h6 className="header-title-content">{item.title}</h6>
+                                        <h6>{item.text}</h6>
+                                        <h6>{item.subtext}</h6>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

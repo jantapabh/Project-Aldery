@@ -7,7 +7,7 @@ const Cover = () => {
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 768.99 })
 
     return (
-        <div className="warp-header">
+        <div className="warp-cover">
             <div className="page-content">
                 {
                     isSmallScreen ?
@@ -18,8 +18,8 @@ const Cover = () => {
                                 <div className="detail">
                                     <div className="text-content">
                                         <h6>ElderlyDB เป็นการนำข้อมูลเกี่ยวกับผู้สูงอายุ</h6>
-                                        <h6>มาแสดงผลในรูปเเบบของ </h6>
-                                        <h6>กราฟในรูปแบบต่าง ๆ </h6>
+                                        <h6>มาแสดงผลในรูปเเบบของกราฟในรูปแบบต่าง ๆ</h6>
+                                        <h6>ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h6>
                                     </div>
                                 </div>
 
@@ -39,8 +39,8 @@ const Cover = () => {
                                     </svg>
                                     <div className="text-content">
                                         <h6 className="animated fadeInDown delay-1s">ElderlyDB เป็นการนำข้อมูลเกี่ยวกับผู้สูงอายุ</h6>
-                                        <h6 className="animated fadeInDown delay-1s">มาแสดงผลในรูปเเบบของ </h6>
-                                        <h6 className="animated fadeInDown delay-1s">กราฟในรูปแบบต่าง ๆ </h6>
+                                        <h6 className="animated fadeInDown delay-1s">มาแสดงผลในรูปเเบบของกราฟในรูปแบบต่าง ๆ </h6>
+                                        <h6 className="animated fadeInDown delay-1s">ภายในอำเภอกะทู้ จังหวัดภูเก็ต </h6>
 
                                     </div>
 
