@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import Nav_logo from './nav_logo';
 
 
 const Nav_table = props => {
@@ -60,7 +59,6 @@ const Nav_table = props => {
 
       <div className="collapsible-menu">
         <div className="warp-nav-sidebar">
-          <Nav_logo />
           <div className="box-hamberger">
             <a className={`hamberger btn${status ? " active" : " not-active"}`} onClick={collapsible} >
               <span></span>

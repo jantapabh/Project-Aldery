@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Sheetapi from '../config/api';
-import Cover from '../components/layout/cover';
+import Cover from '../components/cover';
 import NavBar from '../components/layout/nav';
 import { useMediaQuery } from 'react-responsive';
 
