@@ -21,7 +21,7 @@ $primary-color: #39b54a !important;
 
         .card {
           width: 12rem;
-          height: 8rem;
+          height: 7rem;
           border: 1px solid $primary-color;
           border-radius: 1rem;
           background-color: white;
@@ -36,6 +36,10 @@ $primary-color: #39b54a !important;
               font-size: 1.75rem !important;
               color: #fc6e50 !important;
               padding: 0.5rem 0 !important;
+            }
+
+            .margin-bottom{
+                margin-bottom: 0 !important;
             }
           }
         }
