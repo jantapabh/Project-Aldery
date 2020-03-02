@@ -13,8 +13,8 @@ const Cover = () => {
                     isSmallScreen ?
                         <div className="container-fluid">
                             <div className="title">
-                                <h1 className="animated fadeInDown delay-s">ระบบฐานข้อมูลผู้สูงอายุ</h1>
-                                <h1 className="animated fadeInDown delay-s">และอินโฟกราฟิก</h1>
+                                <h1>ระบบฐานข้อมูลผู้สูงอายุ</h1>
+                                <h1>และอินโฟกราฟิก</h1>
                                 <div className="detail">
                                     <div className="text-content">
                                         <h6>ElderlyDB เป็นการนำข้อมูลเกี่ยวกับผู้สูงอายุ</h6>
@@ -34,20 +34,20 @@ const Cover = () => {
                                 <h1 className="animated fadeInDown delay-s">ระบบฐานข้อมูลผู้สูงอายุ</h1>
                                 <h1 className="animated fadeInDown delay-s">และอินโฟกราฟิก</h1>
                                 <div className="detail">
-                                    <svg >
+                                    <svg className="animated zoomIn delay-1s" >
                                         <line x1="0" y1="0" x2="0" y2="100" />
                                     </svg>
                                     <div className="text-content">
-                                        <h6>ElderlyDB เป็นการนำข้อมูลเกี่ยวกับผู้สูงอายุ</h6>
-                                        <h6>มาแสดงผลในรูปเเบบของ </h6>
-                                        <h6>กราฟในรูปแบบต่าง ๆ </h6>
+                                        <h6 className="animated fadeInDown delay-1s">ElderlyDB เป็นการนำข้อมูลเกี่ยวกับผู้สูงอายุ</h6>
+                                        <h6 className="animated fadeInDown delay-1s">มาแสดงผลในรูปเเบบของ </h6>
+                                        <h6 className="animated fadeInDown delay-1s">กราฟในรูปแบบต่าง ๆ </h6>
 
                                     </div>
 
                                 </div>
 
                                 <Link href="/main">
-                                    <h5>เข้าสู่ระบบ</h5>
+                                    <h5 className="animated zoomIn delay-1s" >เข้าสู่ระบบ</h5>
                                 </Link>
                             </div>
                             <div className="cover">
