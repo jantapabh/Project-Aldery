@@ -38,15 +38,12 @@ $primary-color: #39b54a !important;
               padding: 0.5rem 0 !important;
             }
 
-            .margin-bottom{
-                margin-bottom: 0 !important;
+            .margin-bottom {
+              margin-bottom: 0 !important;
             }
 
-            .card-subtitle{
-                h6{
-                    font-weight: lighter !important;
-                }
-
+            h6.card-subtitle {
+              font-weight: lighter !important;
             }
           }
         }
