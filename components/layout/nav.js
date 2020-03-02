@@ -9,8 +9,8 @@ const NavBar = props => {
     const tab = props.tab
     const name = props.name
     const [status, setStatus] = useState(false)
-    const isBigScreen = useMediaQuery({ minDeviceWidth: 576 })
-    const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
+    const isBigScreen = useMediaQuery({ minDeviceWidth: 769 })
+    const isSmallScreen = useMediaQuery({ maxDeviceWidth: 768.99 })
 
     const collapsible = async () => {
         if (!status) {

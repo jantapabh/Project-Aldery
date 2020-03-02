@@ -28,6 +28,7 @@ $primary-color: #39b54a !important;
   .page-content {
     display: flex;
     width: 100%;
+    min-height: 50vh;
     height: auto;
     position: relative;
     padding-top: 2rem;
@@ -35,20 +36,23 @@ $primary-color: #39b54a !important;
     .container-fluid {
       display: flex;
       .title {
-        padding-left: 5rem;
-        width: 50%;
+        padding-left: 9rem;
+        width: 40%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        @media (min-width: 767px) and (max-width: 1024px) {
+          padding-left: 5rem;
+          width: 50%;
+        }
 
         h1 {
-          font-family: $font-header;
           font-weight: 600;
           color: $font-color;
         }
         h5 {
           margin-top: 1rem;
-          
+
           background-color: $primary-color;
           color: white !important;
           border-radius: 2rem;
@@ -64,7 +68,7 @@ $primary-color: #39b54a !important;
           display: flex;
           margin: 1rem 0.5rem;
           svg {
-            height: 5rem;
+            height: 5.5rem;
             width: 1rem;
             stroke: $primary-color;
             stroke-width: 3;
@@ -74,7 +78,8 @@ $primary-color: #39b54a !important;
             display: flex;
             flex-direction: column;
             h6 {
-              color: $font-color !important;
+              color: $font-color;
+              opacity: 0.8;
               text-align: start;
               padding-top: 0.5rem;
               margin-bottom: 0rem !important;
@@ -83,7 +88,14 @@ $primary-color: #39b54a !important;
         }
       }
       .cover {
-        width: 50%;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        
+        @media (max-width: 1199.98px) {
+          width: 50%;
+        }
+
         img {
           width: auto;
           height: 20rem;
@@ -91,34 +103,22 @@ $primary-color: #39b54a !important;
       }
     }
   }
-}
-
-.page-content {
-  display: flex;
-  width: 100%;
-  min-height: 50vh;
-  position: relative;
-  .container-fluid {
-    text-align: center;
-    margin-top: 2rem;
-    padding-right: 10px;
-    padding-left: 10px;
-
-    h2 {
-      margin-top: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    .textarea-center {
-      margin: 1rem 2rem;
+  @media (max-width: 768.99px) {
+    .title {
+      display: flex;
+      align-items: center !important;
+      padding-left: 0 !important;
+      width: 100% !important;
       text-align: center;
 
-      text {
-        margin: 0.7rem 0;
-        color: black !important;
+      .text-content {
+        align-items: center;
+        text-align: center !important;
       }
     }
   }
 }
+
 
 .gm-style-iw-d {
   a {
