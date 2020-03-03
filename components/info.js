@@ -28,7 +28,7 @@ const Info = () => {
             <div className="page-content">
                 <div className="container-fluid">
                     <div className="head-content">
-                        <h3>จำนวนประชากรผู้สูงอายุ</h3>
+                        <h3>จำนวนประชากรผู้สูงอายุที่มีอายุ 60 ปีขึ้นไป</h3>
                         <h6>ณ วันที่ 31 ธันวาคม 2562</h6>
                     </div>
 
