@@ -41,7 +41,7 @@ $primary-color: #39b54a !important;
           }
   
           h1 {
-            font-weight: 600;
+            font-weight: bold;
             color: $font-color;
           }
           h5 {
@@ -73,7 +73,6 @@ $primary-color: #39b54a !important;
               flex-direction: column;
               h6 {
                 color: $font-color;
-                opacity: 0.8;
                 text-align: start;
                 padding-top: 0.5rem;
                 margin-bottom: 0rem !important;

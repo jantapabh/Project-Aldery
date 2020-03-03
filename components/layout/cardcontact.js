@@ -1,6 +1,4 @@
 import React from 'react'
-import { Tag, TagGroup, Timeline, Carousel } from 'rsuite';
-import 'rsuite/lib/styles/index.less';
 
 class Cardcontact extends React.Component {
 
@@ -30,7 +28,7 @@ class Cardcontact extends React.Component {
                             <div className="contact-data">
                                 <h4>{title}{name} {sername}</h4>
 
-                                <TagGroup>
+                                {/* <TagGroup>
                                     {
                                         position == "กองสวัสดิการสังคม" ?
                                             <Tag color="yellow">กองสวัสดิการสังคม</Tag>
@@ -46,7 +44,7 @@ class Cardcontact extends React.Component {
                                                         :
                                                         null
                                     }
-                                </TagGroup>
+                                </TagGroup> */}
                                 {/* <text>""</text> */}
                                 <h6>เบอร์โทรติดต่อ: {tel}</h6>
                             </div>

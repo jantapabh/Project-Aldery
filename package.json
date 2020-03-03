@@ -37,7 +37,6 @@
     "react-simple-maps": "^0.12.1",
     "react-tooltip": "^3.11.1",
     "react-typed": "^1.2.0",
-    "reactstrap": "^8.0.1",
-    "rsuite": "^4.1.0"
+    "reactstrap": "^8.0.1"
   }
 }
