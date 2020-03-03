@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import NavBar from '../../components/layout/nav'
-import { Carousel } from 'rsuite';
 import Cardcontact from '../../components/layout/cardcontact'
 import Sheetapi from '../../config/api'
 
@@ -86,19 +85,6 @@ class Contact extends React.Component {
             </div>
 
             <div className="timeline-contact">
-              <Carousel autoplay className="custom-slider">
-                {
-                  img.map((item, index) => {
-                    return (
-                      <img
-                        src={item.img}
-                        height="250"
-                      />
-                    )
-                  })
-                }
-
-              </Carousel>
             </div>
           </div>
         </div>
