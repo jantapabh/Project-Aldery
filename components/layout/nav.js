@@ -65,7 +65,10 @@ const NavBar = props => {
                     isBigScreen && name == "main" ?
                         <div className="warp-nav">
                             <div className="nav-back">
-                                <img src="/static/logomain.svg" />  <h2>Eldery DB</h2>
+                                <Link href="/">
+                                    <img src="/static/logomain.svg" />  <h2>Eldery DB</h2>
+                                </Link>
+
                             </div>
                             <nav>
                                 <ul>
