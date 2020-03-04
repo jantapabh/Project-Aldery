@@ -19,36 +19,29 @@ const Sidebar = props => {
     )
 
     return (
-        <div className={`wrapper${props.status ? " menuDisplayed" : ""}`}>
-            <div className="sidebar-wrapper">
-                <ul className="sidebar-nav">
+        <div className="sidebar-wrapper">
+
+            <div className="sidebar-nav">
+                <ul>
                     {
                         sidebar.map((items, index) => {
                             return (
-
-                                <Link key={index} href={items.link}>
-                                    <li ><img src={items.img} /><a>{items.name}</a></li>
-                                </Link>
-                            )
-                        })
-                    }
-                </ul>
-
-                <ul className="non-sidebar-nav">
-                    {
-                        sidebar.map((itemss, indexs) => {
-                            return (
-
-                                <div key={indexs} className="icon-sidebar">
-                                    <li ><img src={itemss.img} /></li>
-                                    <p>{itemss.nameicon}</p>
+                                <div className="sidebar-list">
+                                    <Link key={index} href={items.link}>
+                                        <li ><img src={items.img} /><p>{items.name}</p></li>
+                                    </Link>
                                 </div>
 
                             )
                         })
                     }
+
                 </ul>
             </div>
+
+            <ul className="sidebar-nav">
+
+            </ul>
         </div>
     )
 }

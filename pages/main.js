@@ -72,7 +72,6 @@ const MainPage = () => {
                                                 <div class="card-header">จำนวนประชากรสูงอายุ 60 ปี ขึ้นไป</div>
                                                 <div class="card-body">
                                                     <h1 class="card-title"><CountUp end={11} /> %</h1>
-                                                    {/* <p class="card-text">ต่อจำนวนประชากรทั้งหมด ภายในจังหวัดภูเก็ต </p> */}
                                                     <div class="card-footer bg-transparent ">ณ วันที่ 31 ธันวาคม 2562</div>
                                                 </div>
                                             </div>

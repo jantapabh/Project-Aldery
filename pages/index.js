@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Sheetapi from '../config/api';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Cover from '../components/cover';
 import NavBar from '../components/layout/nav';
 import { useMediaQuery } from 'react-responsive';
@@ -25,8 +26,8 @@ const Home = () => {
   const [homeMin, setHomeMin] = useState(
     [
       { name: "หน้าหลัก", href: "/" },
-      { name: "เกี่ยวกับเรา", href: "/" },
-      { name: "ข่าวสาร", href: "/" },
+      { name: "เกี่ยวกับเรา", href: "#about" },
+      { name: "ข่าวสาร", href: "#info" },
       { name: "ติดต่อ", href: "/index/contact" },
       { name: "เข้าสู่ระบบ", href: "/main" },
     ]
@@ -46,11 +47,15 @@ const Home = () => {
         <link rel='icon' href='/static/logomain.svg' />
       </Head>
       <React.Fragment>
-        <NavBar name="index" tab={isSmallScreen ? homeMin : home} />
+        <NavBar name="index" tab={isSmallScreen ? homeMin : home}/>
         <main>
           <Cover />
-          <About />
-          <Info />
+          <section id='about'>
+            <About />
+          </section>
+          <section id='info'>
+            <Info />
+          </section>
         </main>
       </React.Fragment>
 

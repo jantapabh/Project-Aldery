@@ -19,7 +19,7 @@ const Dashboard = props => {
         ]
     )
 
-    const [mainMin, setMainMin] = useState(
+    const [sidebar, setSidebar] = useState(
         [
             { name: "รายงานความคืบหน้า", href: "/main/people" },
             { name: "ข้อมูลทางสถิติ", href: "/main/chart" },
@@ -61,7 +61,7 @@ const Dashboard = props => {
 
     return (
         <React.Fragment>
-            <NavBar name="main" tab={isSmallScreen ? mainMin : main} confirm={onConfirm} status={status} />
+            <NavBar name="main" tab={isSmallScreen ? sidebar : main} confirm={onConfirm} status={status} />
             <Sidebar status={status} />
         </React.Fragment>
 

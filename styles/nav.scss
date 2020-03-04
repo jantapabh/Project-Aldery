@@ -1,6 +1,7 @@
 $font-color: #071d40 !important;
 $font-header: "Frank Ruhl Libre" !important;
 $primary-color: #39b54a !important;
+$line-color: #e8e9fe;
 
 .warp-index {
   nav {
@@ -14,7 +15,7 @@ $primary-color: #39b54a !important;
           border: 1px solid $primary-color;
           border-radius: 1.5rem;
           padding: 0.5rem 2rem !important;
-          margin: 0 1rem 0 0.5rem  !important;
+          margin: 0 1rem 0 0.5rem !important;
           background-color: $primary-color;
           color: white !important;
         }
@@ -82,13 +83,48 @@ $primary-color: #39b54a !important;
   }
 }
 
-.wrapper {
+.warp-nav {
+  display: flex;
+  .nav-back {
+    display: flex;
+    width: 250px;
+    border-right: 1px solid $line-color;
+
+    img{
+      margin: 1rem 0 1rem 1.5rem;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    h2 {
+      margin-top: 0.5rem;
+      padding: 1rem;
+      font-family: $font-header;
+      font-size: 1.5rem !important;
+    }
+  }
+
   nav {
-    min-width: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid $line-color;
+
+    @media (max-width: 1024px) {
+      width: 75%;
+     }
+
+    ul {
+      margin-left: 0;
+      display: flex;
+      justify-content: flex-end;
+      width: auto;
+    }
   }
 }
 
 ul {
+  margin-left: 4rem;
   user-select: none;
   padding: 0.5rem;
   display: flex;

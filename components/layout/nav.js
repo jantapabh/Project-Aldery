@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+
 import _ from 'lodash'
 import { useMediaQuery } from 'react-responsive'
 import '../../styles/nav.scss'
@@ -18,20 +20,6 @@ const NavBar = props => {
         }
         else {
             setStatus(false)
-        }
-    }
-
-    const onConfirmClick = () => {
-
-        if (props.status) {
-            if (props.confirm) {
-                props.confirm(false)
-            }
-        }
-        else {
-            if (props.confirm) {
-                props.confirm(true)
-            }
         }
     }
 
@@ -58,7 +46,12 @@ const NavBar = props => {
                                                         item.name == "เข้าสู่ระบบ" ?
                                                             <p className="li-buttom-line-active">{item.name}</p>
                                                             :
-                                                            <p >{item.name}</p>
+                                                            <React.Fragment>
+                                                                <AnchorLink href={item.href == "about" ? '#about' : '#info'}  >
+                                                                    <button className="btn">
+                                                                        <p>{item.name}</p>
+                                                                    </button> </AnchorLink>
+                                                            </React.Fragment>
                                                 }
 
                                             </Link>
@@ -70,20 +63,12 @@ const NavBar = props => {
                     </nav>
                     :
                     isBigScreen && name == "main" ?
-                        <div className={`wrapper${props.status ? " menuDisplayed" : ""}`}>
+                        <div className="warp-nav">
+                            <div className="nav-back">
+                                <img src="/static/logomain.svg" />  <h2>Eldery DB</h2>
+                            </div>
                             <nav>
                                 <ul>
-                                    <div className="warp-nav-sidebar">
-                                        <li>
-                                            <div className="box-hamberger">
-                                                <a className={`hamberger btn${props.status ? " active" : " not-active"}`} onClick={onConfirmClick} >
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </div>
                                     <li>
                                         {
                                             tab.map((item, index) => {
