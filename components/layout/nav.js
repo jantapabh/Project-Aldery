@@ -63,13 +63,11 @@ const NavBar = props => {
                     </nav>
                     :
                     isBigScreen && name == "main" ?
-                        <div className="warp-nav">
+                        <div className="warp-nav"> <Link href="/">
                             <div className="nav-back">
-                                <Link href="/">
-                                    <img src="/static/logomain.svg" />  <h2>Eldery DB</h2>
-                                </Link>
-
+                                <img src="/static/logomain.svg" />  <h2>Eldery DB</h2>
                             </div>
+                        </Link>
                             <nav>
                                 <ul>
                                     <li>
