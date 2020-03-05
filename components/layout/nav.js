@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-
 import _ from 'lodash'
 import { useMediaQuery } from 'react-responsive'
 import '../../styles/nav.scss'
