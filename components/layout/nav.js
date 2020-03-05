@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import _ from 'lodash'
 import { useMediaQuery } from 'react-responsive'
 import '../../styles/nav.scss'
 
@@ -46,10 +44,10 @@ const NavBar = props => {
                                                             <p className="li-buttom-line-active">{item.name}</p>
                                                             :
                                                             <React.Fragment>
-                                                                <AnchorLink href={item.href == "about" ? '#about' : '#info'}  >
-                                                                    <button className="btn">
-                                                                        <p>{item.name}</p>
-                                                                    </button> </AnchorLink>
+
+                                                                <button className="btn">
+                                                                    <p>{item.name}</p>
+                                                                </button>
                                                             </React.Fragment>
                                                 }
 
