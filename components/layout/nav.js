@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { useMediaQuery } from 'react-responsive'
-import '../../styles/nav.scss'
 
 const NavBar = props => {
 

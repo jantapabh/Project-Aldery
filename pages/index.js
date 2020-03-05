@@ -9,7 +9,6 @@ import Info from '../components/info';
 
 
 const Home = () => {
-
   const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
 
   const [home, setHome] = useState(
@@ -47,9 +46,9 @@ const Home = () => {
       </Head>
       <React.Fragment>
         <NavBar name="index" tab={isSmallScreen ? homeMin : home} />
-          <Cover />
-          <About />
-          <Info />
+        <Cover />
+        <About />
+        <Info />
       </React.Fragment>
 
     </div>
