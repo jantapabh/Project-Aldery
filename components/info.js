@@ -7,8 +7,8 @@ moment.locale("th")
 moment().format('LL');
 
 const style = {
-    width: '45%',
-    height: '30%'
+    width: '100%',
+    height: '100%'
 }
 
 const Info = props => {
