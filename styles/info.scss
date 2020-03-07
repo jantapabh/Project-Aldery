@@ -1,4 +1,5 @@
 $primary-color: #39b54a !important;
+$border: 1px solid #e4e2f0;
 $font-text-p: #978bab !important;
 $small-text: 0.9rem !important;
 
@@ -26,11 +27,12 @@ $small-text: 0.9rem !important;
         display: flex;
         justify-content: start;
 
-        padding: 1rem;
-        border: 1px solid black;
+        // padding: 1rem;
+        border: $border;
         border-radius: 1rem;
 
         .main-data {
+          padding: 1rem;
           display: flex;
           flex-direction: column;
           margin-right: 2rem;
@@ -61,6 +63,8 @@ $small-text: 0.9rem !important;
         }
 
         .other-data {
+          border-left: $border;
+          padding: 1rem;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
