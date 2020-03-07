@@ -21,6 +21,7 @@
     "google-maps-react": "^2.0.2",
     "less": "^3.10.3",
     "lodash": "^4.17.15",
+    "moment": "^2.24.0",
     "next": "^9.1.7",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",

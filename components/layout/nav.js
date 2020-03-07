@@ -49,7 +49,6 @@ const NavBar = props => {
                                                                 </button>
                                                             </React.Fragment>
                                                 }
-
                                             </Link>
                                         )
                                     })

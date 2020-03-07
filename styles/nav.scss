@@ -91,12 +91,14 @@ $line-color: #e8e9fe;
     border-right: 1px solid $line-color;
 
     img {
+      cursor: pointer;
       margin: 1rem 0 1rem 1.5rem;
       width: 2rem;
       height: 2rem;
     }
 
     h2 {
+      cursor: pointer;
       margin-top: 0.5rem;
       padding: 1rem;
       font-family: $font-header;

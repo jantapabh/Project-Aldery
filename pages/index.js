@@ -6,6 +6,8 @@ import NavBar from '../components/layout/nav';
 import { useMediaQuery } from 'react-responsive';
 import About from '../components/about';
 import Info from '../components/info';
+import Footer from '../components/footer';
+import Quoter from '../components/quotes';
 
 
 const Home = () => {
@@ -24,8 +26,8 @@ const Home = () => {
   const [homeMin, setHomeMin] = useState(
     [
       { name: "หน้าหลัก", href: "/" },
-      { name: "เกี่ยวกับเรา", href: "#about" },
-      { name: "ข่าวสาร", href: "#info" },
+      { name: "เกี่ยวกับเรา", href: "" },
+      { name: "ข่าวสาร", href: "" },
       { name: "ติดต่อ", href: "/index/contact" },
       { name: "เข้าสู่ระบบ", href: "/main" },
     ]
@@ -49,6 +51,8 @@ const Home = () => {
         <Cover />
         <About />
         <Info />
+        <Quoter />
+        <Footer />
       </React.Fragment>
 
     </div>

@@ -1,48 +1,104 @@
 $primary-color: #39b54a !important;
+$font-text-p: #978bab !important;
+$small-text: 0.9rem !important;
 
 .warp-info {
-  //   background-color: #fbfbfb;
+  margin: 3rem 1rem;
   .page-content {
-    padding: 3rem 0;
+    display: flex;
+    justify-content: space-evenly;
 
-    .container-fluid {
-      display: flex;
-      flex-direction: column;
-      .head-content {
-        h3 {
-          font-size: 2rem !important;
-          margin-bottom: 1rem !important;
+    .container-data {
+      width: 50%;
+      padding: 0 4rem 0 2rem;
+      .title-data {
+        display: flex;
+
+        padding: 1rem;
+
+        h6 {
+          margin-bottom: 0 !important;
+          text-align: start;
         }
       }
-      .detail-content {
+
+      .content-data {
         display: flex;
-        justify-content: center;
-        margin: 1rem 3rem;
+        justify-content: start;
 
-        .card {
-          width: 12rem;
-          height: 7rem;
-          border: 1px solid $primary-color;
-          border-radius: 1rem;
-          background-color: white;
-          margin: 0 2rem;
-          .card-body {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 1rem !important;
-            h1.card-title {
-              font-size: 1.75rem !important;
-              color: #fc6e50 !important;
-              padding: 0.5rem 0 !important;
-              margin-bottom: 0 !important;
-            }
+        padding: 1rem;
+        border: 1px solid black;
+        border-radius: 1rem;
 
-            h6.card-subtitle {
-              font-weight: lighter !important;
+        .main-data {
+          display: flex;
+          flex-direction: column;
+          margin-right: 2rem;
+          .card-data {
+            margin: 0 1rem;
+            // display: flex;
+            // flex-direction: column;
+            .title {
+              display: flex;
+              justify-content: space-between;
+
+              h5 {
+                text-align: start;
+                margin-bottom: 0 !important;
+              }
+              p {
+                color: $font-text-p;
+                margin-bottom: 0 !important;
+              }
             }
           }
+        }
+
+        .progress {
+          height: 0.5rem;
+          margin: 0.5rem;
+          margin-bottom: 1rem !important;
+        }
+
+        .other-data {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .title-other-data {
+            display: flex;
+
+            h5 {
+              padding-top: 0.5rem;
+              margin-bottom: 0.5rem !important;
+            }
+
+            img {
+              width: 1.5rem;
+              height: 1.5rem;
+              margin-right: 1rem;
+            }
+          }
+          p {
+            font-size: $small-text;
+            color: $font-text-p;
+            margin-bottom: 0.5rem !important;
+          }
+          h6 {
+            font-size: $small-text;
+            text-align: start;
+            margin-bottom: 0.5rem !important;
+          }
+        }
+      }
+    }
+
+    .content-map {
+      width: 50%;
+      .gm-style-iw-d {
+        h6 {
+          font-family: "Prompt", sans-serif;
+          margin: 0.2rem 0 !important;
         }
       }
     }
