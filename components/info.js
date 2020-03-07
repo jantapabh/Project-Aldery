@@ -142,8 +142,9 @@ const Info = props => {
                 </div>
 
                 <div className="content-map">
+                {/* <img src="/static/testcover3.jpg"/>
 
-                    <Map
+                     <Map
                         google={props.google}
                         style={style}
                         initialCenter={{
@@ -168,7 +169,7 @@ const Info = props => {
                                 <h6>{selectedPlace.name}</h6>
                             </div>
                         </InfoWindow>
-                    </Map>
+                    </Map>  */}
                 </div>
             </div>
         </div>
