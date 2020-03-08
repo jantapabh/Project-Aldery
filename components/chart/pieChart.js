@@ -1,34 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
+import { useMediaQuery } from 'react-responsive';
 
 const PieChart = () => {
+
+    const isBigScreen = useMediaQuery({ minDeviceWidth: 1281 })
+    const isMobile = useMediaQuery({ maxWidth: 1280 })
+    const isSmallScreen = useMediaQuery({ maxWidth: 576 })
 
     const [options, setOptions] = useState({
         title: {
             text: "เพศชาย"
         },
         dataLabels: { enabled: false },
-        responsive: [{
-            breakpoint: 900,
-            options: {
-                chart: {
-                    width: 260,
-                    height: 260
-                },
-                legend: {
-                    position: 'bottom'
-                },
-                dataLabels: { enabled: false },
-            }
-        }],
         tooltip: {
             y: {
                 formatter: function (val) {
                     return val + " คน"
                 }
             }
-        }
+        },
+        legend: {
+            position: 'bottom'
+        },
     })
 
     const [series, setSeries] = useState([])
@@ -48,7 +43,7 @@ const PieChart = () => {
         try {
             var list = await Sheetapi.getSheet(token, value)
             console.log(list);
-            
+
 
             setOptions({
                 labels: _.flatten(list)
@@ -70,56 +65,36 @@ const PieChart = () => {
     }
     return (
         <React.Fragment>
-            <div className="warp-chart-small">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="donut"
-                    width="500"
-                    height="250"
-                />
-
-            </div>
-
-            <div className="warp-chart-mobile">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="donut"
-                    width="500"
-                    height="250"
-                />
-            </div>
-
-            <div className="warp-chart-tablets">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="donut"
-                    width="500"
-                    height="250"
-                />
-            </div>
-
-            <div className="warp-chart-desktops">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="donut"
-                    width="500"
-                    height="250"
-                />
-            </div>
-
-            <div className="warp-chart-large">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="donut"
-                    width="450"
-                    height="250"
-                />
-            </div>
+            {
+                isBigScreen ?
+                    <Chart
+                        options={options}
+                        series={series}
+                        type="donut"
+                        width="400"
+                        height="200"
+                    />
+                    :
+                    isMobile ?
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="donut"
+                            width="300"
+                            height="200"
+                        />
+                        :
+                        isSmallScreen ?
+                            <Chart
+                                options={options}
+                                series={series}
+                                type="donut"
+                                width="200"
+                                height="100"
+                            />
+                            :
+                            null
+            }
         </React.Fragment>
     )
 }

@@ -52,31 +52,6 @@ const Hospital = () => {
                             <h1 className="text-center">โรงพยาบาลเเละการดูแลรักษา</h1>
                             <h4 className="text-center">ประชากรผู้สูงอายุภายในตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต</h4>
                             <h2 className="small text-center"></h2>
-                            <div className="warp-chart">
-                                <div className="chart-pic">
-                                    <PieHospital />
-                                </div>
-                                <div className="chart-pic">
-                                    <PieHospital2 />
-                                </div>
-                            </div>
-                            <div className="warp-chart">
-                                <div className="chart-contents">
-                                    <BarHospital2 />
-                                </div>
-                                <div className="chart-contents">
-                                    <Barchart />
-                                </div>
-                            </div>
-                            <div className="warp-chart">
-                                <div className="chart-contents">
-                                    <BarHospital3 />
-                                </div>
-                                <div className="chart-contents">
-                                    <BarHospital4 />
-                                </div>
-                            </div>
-                            <Footer nameFooter="hospital" />
                         </div>
                     </div>
                 </div>

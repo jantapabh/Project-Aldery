@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Link from 'next/link';
-import '../../styles/sidebar.scss';
 
 
 const Sidebar = props => {
@@ -21,13 +20,13 @@ const Sidebar = props => {
     return (
         <div className="sidebar-wrapper">
             <div className="sidebar-nav">
-                <ul>
+                <ul className="ul-sidebar-nav">
                     {
                         sidebar.map((items, index) => {
                             return (
                                 <div className="sidebar-list">
                                     <Link key={index} href={items.link}>
-                                        <li ><img src={items.img} /><p>{items.name}</p></li>
+                                        <li className="li-sidebar-list" ><img src={items.img} /><p>{items.name}</p></li>
                                     </Link>
                                 </div>
                             )

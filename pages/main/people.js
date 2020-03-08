@@ -26,15 +26,6 @@ const People = () => {
                         <div className="container-fluid">
                             <h1 className="text-center">จำนวนประชากรผู้สูงอายุ</h1>
                             <h2 className="small text-center">ภายในจังหวัดภูเก็ต โดยเเบ่งตามตำบลที่อยู่อาศัย</h2>
-                            <div className="warp-map">
-                                <div className="map-Img">
-                                    <Map />
-                                </div>
-
-                                <div className="map-content">
-                                    <BarMap />
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

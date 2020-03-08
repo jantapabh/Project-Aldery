@@ -34,21 +34,7 @@ const Chart = () => {
                     <div className="container-fluid">
                         <h1 className="text-center">ข้อมูลทางสถิติ</h1>
                         <h4 className="text-center">ของประชากรผู้สูงอายุภายในตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต</h4>
-                        <div className="warp-chart">
-                            <div className="chart-contents">
-                                <Piechart />
-                            </div>
-                            <div className="chart-contents">
-                                <Piechart2 />
-                            </div>
-                        </div>
-
-                        <div className="warp-chart">
-                            <div className="chart-contents">
-                                <Barchart />
-                            </div>
-                        </div>
-                        <Footer nameFooter="chart" />
+                        
                     </div>
                 </div>
             </div>

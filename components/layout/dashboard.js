@@ -47,7 +47,7 @@ const Dashboard = props => {
     return (
         <React.Fragment>
             <NavBar name="main" tab={isSmallScreen ? sidebar : main} confirm={onConfirm} status={status} />
-            <Sidebar status={status} />
+            {/* <Sidebar status={status} /> */}
         </React.Fragment>
     )
 }

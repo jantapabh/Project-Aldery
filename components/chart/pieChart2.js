@@ -1,34 +1,29 @@
 import React, { useState,useEffect } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
+import { useMediaQuery } from 'react-responsive';
 
 const PieChart = () => {
+
+    const isBigScreen = useMediaQuery({ minDeviceWidth: 1281 })
+    const isMobile = useMediaQuery({ maxWidth: 1280 })
+    const isSmallScreen = useMediaQuery({ maxWidth: 576 })
 
     const [options, setOptions] = useState({
         title: {
             text: "เพศหญิง"
         },
         dataLabels: { enabled: false },
-        responsive: [{
-            breakpoint: 900,
-            options: {
-                chart: {
-                    width: 260,
-                    height: 260
-                },
-                legend: {
-                    position: 'bottom'
-                },
-                dataLabels: { enabled: false },
-            }
-        }],
         tooltip: {
             y: {
                 formatter: function (val) {
                     return val + " คน"
                 }
             }
-        }
+        },
+        legend: {
+            position: 'bottom'
+        },
     })
 
     const [dataname, setDataName] = useState([])
@@ -70,195 +65,37 @@ const PieChart = () => {
     }
     return (
         <React.Fragment>
-            <div className="warp-chart-small">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="donut"
-                    width="500"
-                    height="250"
-                />
-
-            </div>
-
-            <div className="warp-chart-mobile">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="donut"
-                    width="500"
-                    height="250"
-                />
-            </div>
-
-            <div className="warp-chart-tablets">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="donut"
-                    width="500"
-                    height="250"
-                />
-            </div>
-
-            <div className="warp-chart-desktops">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="donut"
-                    width="500"
-                    height="250"
-                />
-            </div>
-
-            <div className="warp-chart-large">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="donut"
-                    width="450"
-                    height="250"
-                />
-            </div>
+           {
+                isBigScreen ?
+                    <Chart
+                        options={options}
+                        series={series}
+                        type="donut"
+                        width="400"
+                        height="200"
+                    />
+                    :
+                    isMobile ?
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="donut"
+                            width="300"
+                            height="200"
+                        />
+                        :
+                        isSmallScreen ?
+                            <Chart
+                                options={options}
+                                series={series}
+                                type="donut"
+                                width="200"
+                                height="100"
+                            />
+                            :
+                            null
+            }
         </React.Fragment>
     )
 }
-export default PieChart
-// class PieChart extends Component {
-
-//     constructor(props) {
-//         super(props);
-
-//         this.state = {
-//             options: {},
-//             datalist: [],
-//             series: [],
-//         }
-//     }
-
-//     async componentDidMount() {
-//         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
-//         this.access_token = userOauth.data.access_token
-//         await this.listName('ข้อมูลการวิเคราะห์ทางสถิติ!B14:B18')
-//         await this.listData()
-//     }
-
-//     listName = async (value) => {
-//         try {
-//             this.list = await Sheetapi.getSheet(this.access_token, value)
-//             for (let i = 0; i < this.list.length; i++) {
-
-//                 this.setState(prevState => ({
-//                     datalist: [...prevState.datalist, this.list[i][0]],
-//                 }))
-//             }
-
-//             this.setState({
-//                 options: {
-//                     labels: this.state.datalist,
-//                     title: {
-//                         text: "เพศหญิง"
-//                     },
-//                     responsive: [{
-//                         breakpoint: 900,
-//                         options: {
-//                             chart: {
-//                                 width: 260,
-//                                 height: 260
-//                             },
-//                             legend: {
-//                                 position: 'bottom'
-//                             },
-//                             dataLabels: { enabled: false },
-//                         }
-//                     }],
-//                     tooltip: {
-//                         y: {
-//                             formatter: function (val) {
-//                                 return val + " คน"
-//                             }
-//                         }
-//                     }
-//                 }
-//             })
-
-//         } catch (err) {
-//             console.log(err);
-//         }
-//     }
-
-//     listData = async () => {
-//         try {
-
-//             this.woman = await Sheetapi.getSheet(this.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!D14:D18')
-
-//             for (let i = 0; i < this.woman.length; i++) {
-
-//                 this.setState(prevState => ({
-//                     series: [...prevState.series, parseInt(this.woman[i][0])],
-//                 }))
-//             }
-
-//         } catch (err) {
-//             console.log(err);
-//         }
-//     }
-
-//     render() {
-//         return (
-//             <React.Fragment>
-//                 <div className="warp-chart-small">
-//                     <Chart
-//                         options={this.state.options}
-//                         series={this.state.series}
-//                         type="donut"
-//                         width="500"
-//                         height="250"
-//                     />
-
-//                 </div>
-
-//                 <div className="warp-chart-mobile">
-//                     <Chart
-//                         options={this.state.options}
-//                         series={this.state.series}
-//                         type="donut"
-//                         width="500"
-//                         height="250"
-//                     />
-//                 </div>
-
-//                 <div className="warp-chart-tablets">
-//                     <Chart
-//                         options={this.state.options}
-//                         series={this.state.series}
-//                         type="donut"
-//                         width="500"
-//                         height="250"
-//                     />
-//                 </div>
-
-//                 <div className="warp-chart-desktops">
-//                     <Chart
-//                         options={this.state.options}
-//                         series={this.state.series}
-//                         type="donut"
-//                         width="500"
-//                         height="250"
-//                     />
-//                 </div>
-
-//                 <div className="warp-chart-large">
-//                     <Chart
-//                         options={this.state.options}
-//                         series={this.state.series}
-//                         type="donut"
-//                         width="450"
-//                         height="250"
-//                     />
-//                 </div>
-//             </React.Fragment>
-//         );
-//     }
-// }
-// export default PieChart;
+export default PieChart;

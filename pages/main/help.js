@@ -31,15 +31,6 @@ const Help = () => {
                     <div className="container-fluid">
                         <h1 className="text-center">การช่วยเหลือของหน่วยงานภาครัฐ</h1>
                         <h4 className="text-center">ของประชากรผู้สูงอายุภายในตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต</h4>
-                        <div className="warp-chart">
-                            <div className="chart-contents">
-                                <Piechart />
-                            </div>
-                            <div className="chart-contents">
-                                <Linechart />
-                            </div>
-                        </div>
-                        <Footer nameFooter="help" />
                     </div>
                 </div>
             </div>

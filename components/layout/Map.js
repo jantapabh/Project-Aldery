@@ -31,7 +31,7 @@ const colorScale = scaleLinear()
 const SpinnerPage = () => {
     return (
         <React.Fragment>
-            <div>
+            <div className="warp-load-map">
                 <Typed
                     strings={['กรุณรอสักครู่...', 'กำลังดาวน์โหลด...']}
                     typeSpeed={45}
@@ -41,7 +41,7 @@ const SpinnerPage = () => {
     );
 }
 
-class StudentMap extends Component {
+class Map extends Component {
     constructor() {
         super()
         this.state = {
@@ -67,7 +67,7 @@ class StudentMap extends Component {
         this.loadPaths()
     }
 
-    
+
     listName = async (v) => {
         try {
 
@@ -118,7 +118,7 @@ class StudentMap extends Component {
         }
 
         return (
-            <React.Fragment >   
+            <React.Fragment >
                 <Motion style={wrapperStyles}
                     defaultStyle={{
                         zoom: 1,
@@ -200,4 +200,4 @@ class StudentMap extends Component {
     }
 }
 
-export default StudentMap
+export default Map

@@ -1,17 +1,49 @@
 .warp-main {
-  width: 100%;
-  min-height: 100vh;
   height: auto;
 
-  .MuiLinearProgress-root {
-    height: 5px;
-  }
+  .page-content-main {
+    padding-left: 150px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 0 15px;
+    transition: all 0.5s;
 
-  .MuiLinearProgress-colorPrimary {
-    background-color: #c4def6;
-  }
-  .MuiLinearProgress-barColorPrimary {
-    background-color: #0693e3;
+    .container-fluid-main {
+       margin-left: 150px;
+      margin-right: 1rem;
+      margin-top: 2rem;
+      padding: 0;
+
+      @media (max-width: 768px) {
+        margin-top: 1rem !important;
+        margin: 0;
+      }
+
+      .info-main {
+        display: flex;
+        margin-top: 2rem !important;
+        margin: 1rem;
+
+        .warp-chart-main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 1rem;
+          .chart-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            @media (max-width: 1199.98px) {
+              flex-direction: column;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

@@ -1,9 +1,26 @@
 import React, { useState, useEffect } from 'react'
-import CountUp from 'react-countup';
+import dynamic from 'next/dynamic'
 import { makeStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { useMediaQuery } from 'react-responsive';
 import Dashboard from '../components/layout/dashboard';
+import Map from '../components/layout/Map';
+import _ from 'lodash'
+
+const Barchart = dynamic(
+    () => import('../components/chart/barChart'),
+    { ssr: false }
+)
+
+const Piechart = dynamic(
+    () => import('../components/chart/pieChart'),
+    { ssr: false }
+)
+
+const Piechart2 = dynamic(
+    () => import('../components/chart/pieChart2'),
+    { ssr: false }
+)
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -57,59 +74,28 @@ const MainPage = () => {
                     <div className={classes.root} >
                         <LinearProgress variant="determinate" value={completed} />
                     </div >
-
                     :
                     <React.Fragment>
                         <Dashboard onStatusMain={statusMain} statusMain={status} />
-                        <div className={`wrapper${status ? " menuDisplayed" : ""}`}>
-                            <div className="page-content-wrapper">
-                                <div className="container-fluid">
-                                    <h1 className="text-center">สังคมผู้สูงอายุ</h1>
-                                    <h2 className="small text-center">ประชากรผู้สูงอายุภายในจังหวัดภูเก็ต</h2>
+                        <div className="page-content-main">
+                            <div className="container-fluid-main">
+                                <h1 className="text-center">จำนวนผู้สูงอายุ</h1>
+                                <h2 className="small text-center">อำเภอกะทู้ จังหวัดภูเก็ต</h2>
+                                <div className="info-main">
                                     <div className="warp-map">
-                                        <div className="map-Img">
-                                            <div class="card bg-while mb-3">
-                                                <div class="card-header">จำนวนประชากรสูงอายุ 60 ปี ขึ้นไป</div>
-                                                <div class="card-body">
-                                                    <h1 class="card-title"><CountUp end={11} /> %</h1>
-                                                    <div class="card-footer bg-transparent ">ณ วันที่ 31 ธันวาคม 2562</div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
+                                        <Map />
                                     </div>
-
-                                    <div className="warp-map">
-                                        <div className="map-Img">
-                                            <div class="card bg-light mb-3">
-                                                <div class="card-header">จำนวนประชากรสูงอายุ ที่ได้รับเบี้ยยังชีพ</div>
-                                                <div class="card-body-text">
-                                                    <h1 class="card-title">9,792 คน</h1>
-                                                </div>
-                                            </div>
+                                    <div className="warp-chart-main">
+                                        <div className="chart-row">
+                                            <Piechart />
+                                            <Piechart2 />
                                         </div>
-
-                                        <div className="map-Img">
-                                            <div class="card bg-light mb-3">
-                                                <div class="card-header">จำนวนประชากรสูงอายุ ที่ได้รับเบี้ยยังชีพผู้พิการ</div>
-                                                <div class="card-body-text">
-                                                    <h1 class="card-title">575 คน</h1>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="map-Img">
-                                            <div class="card bg-light mb-3">
-                                                <div class="card-header">จำนวนประชากรสูงอายุ ที่ไม่มีชื่อในทะเบียน</div>
-                                                <div class="card-body-text">
-                                                    <h1 class="card-title">6 คน</h1>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <Barchart />
                                     </div>
 
                                 </div>
+
+
 
                             </div>
                         </div>

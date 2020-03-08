@@ -32,15 +32,6 @@ const Service = () => {
                         <h1 className="text-center">หน่วยงานเเละการบริการ</h1>
                         <h4 className="text-center">ของประชากรผู้สูงอายุภายในตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต</h4>
                         <h2 className="small text-center"></h2>
-                        <div className="warp-chart">
-                            <div className="chart-pic">
-                                <PieService />
-                            </div>
-                            <div className="chart-pic">
-                                <PieService2 />
-                            </div>
-                        </div>
-                        <Footer nameFooter="service" />
                     </div>
                 </div>
             </div>

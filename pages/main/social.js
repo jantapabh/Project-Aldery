@@ -42,23 +42,6 @@ const Social = () => {
                         <h1 className="text-center">สภาพทางสังคม</h1>
                         <h4 className="text-center">ของประชากรผู้สูงอายุภายในตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต</h4>
                         <h2 className="small text-center"></h2>
-                        <div className="warp-chart">
-                            <div className="chart-contents">
-                                <BarSocial />
-                            </div>
-                            <div className="chart-contents">
-                                <DonutSocial />
-                            </div>
-                        </div>
-                        <div className="warp-chart">
-                            <div className="chart-contents">
-                                <PieSocial />
-                            </div>
-                            <div className="chart-contents">
-                                <PieSocial2 />
-                            </div>
-                        </div>
-                        <Footer nameFooter="social" />
                     </div>
                 </div>
             </div>

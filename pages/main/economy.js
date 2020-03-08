@@ -52,35 +52,6 @@ const Economy = () => {
                     <div className="container-fluid">
                         <h1 className="text-center">ด้านเศรษฐกิจ</h1>
                         <h4 className="text-center">ของประชากรผู้สูงอายุภายในตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต</h4>
-
-                        <div className="warp-chart">
-                            <div className="chart-contents">
-                                <PieEconomy />
-                            </div>
-                            <div className="chart-contents">
-                                <PieEconomy2 />
-                            </div>
-
-                        </div>
-
-                        <div className="warp-chart">
-                            <div className="chart-contents">
-                                <BarEconomy />
-                            </div>
-                            <div className="chart-contents">
-                                <BarEconomy2 />
-                            </div>
-                        </div>
-
-                        <div className="warp-chart">
-                            <div className="chart-contents">
-                                <BarEconomy3 />
-                            </div>
-                            <div className="chart-contents">
-                                <PieEconomy3 />
-                            </div>
-                        </div>
-                        <Footer nameFooter="economy" />
                     </div>
                 </div>
             </div>
