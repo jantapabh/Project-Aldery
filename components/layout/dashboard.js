@@ -23,7 +23,6 @@ const Dashboard = props => {
         [
             { name: "รายงานความคืบหน้า", href: "/main/people" },
             { name: "ข้อมูลทางสถิติ", href: "/main/chart" },
-            { name: "เบี้ยยังชีพผู้สูงอายุ", href: "/main/allowance" },
             { name: "สวัสดิการจากรัฐ", href: "/main/doc" },
             { name: "การบริการ", href: "/main/service" },
             { name: "สภาพทางสังคม", href: "/main/social" },
@@ -32,20 +31,6 @@ const Dashboard = props => {
             { name: "ช่วยเหลือ", href: "/main/help" }
         ]
     )
-
-    const onConfirmClick = () => {
-
-        if (props.status) {
-            if (props.confirm) {
-                props.confirm(false)
-            }
-        }
-        else {
-            if (props.confirm) {
-                props.confirm(true)
-            }
-        }
-    }
 
     const onConfirm = (order) => {
         setStatus(order)
