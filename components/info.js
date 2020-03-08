@@ -29,7 +29,7 @@ const Info = () => {
 
     useEffect(() => {
         fetchData()
-    }, [])
+    }, [data])
 
     const fetchData = async () => {
         let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
