@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import Link from 'next/link'
+import Link from 'next/link';
+import '../../styles/sidebar.scss';
 
 
 const Sidebar = props => {
@@ -19,7 +20,6 @@ const Sidebar = props => {
 
     return (
         <div className="sidebar-wrapper">
-
             <div className="sidebar-nav">
                 <ul>
                     {
@@ -30,7 +30,6 @@ const Sidebar = props => {
                                         <li ><img src={items.img} /><p>{items.name}</p></li>
                                     </Link>
                                 </div>
-
                             )
                         })
                     }

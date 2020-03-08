@@ -54,6 +54,7 @@ $line-color: #e8e9fe;
   .menu-content.show {
     max-height: 100vh;
     ul {
+      margin-left: 0 !important;
       padding: 0 !important;
       li {
         display: flex;
