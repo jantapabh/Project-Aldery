@@ -79,7 +79,7 @@ const MainPage = () => {
                         <Dashboard onStatusMain={statusMain} statusMain={status} />
                         <div className="page-content-main">
                             <div className="container-fluid-main">
-                                <h1 className="text-center">จำนวนผู้สูงอายุ</h1>
+                                <h1 className="text-center">ผู้สูงอายุ</h1>
                                 <h2 className="small text-center">อำเภอกะทู้ จังหวัดภูเก็ต</h2>
                                 <div className="info-main">
                                     <div className="warp-map">
