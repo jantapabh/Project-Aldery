@@ -143,12 +143,13 @@ $small-text: 0.9rem !important;
 
             a {
               p.p-click {
-                cursor: pointer;
+                cursor: pointer; 
+                color: $primary-color;
                 margin-bottom: 0;
                 font-weight: bold;
               }
               p.p-click:hover {
-                color: $primary-color;
+               color: #79d2ae !important;
               }
             }
           }

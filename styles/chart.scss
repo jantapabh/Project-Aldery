@@ -43,39 +43,39 @@
   margin: 0;
 }
 
-.warp-footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  min-height: 2rem;
-  margin-top: 3rem;
-  .chart-source {
-    margin-right: 1rem;
-    margin-bottom: 0.5rem;
-    padding-right: 0.5rem;
-    text-align: end !important;
-    width: auto;
+// .warp-footer {
+//   left: 0;
+//   bottom: 0;
+//   width: 100%;
+//   min-height: 2rem;
+//   margin-top: 3rem;
+//   .chart-source {
+//     margin-right: 1rem;
+//     margin-bottom: 0.5rem;
+//     padding-right: 0.5rem;
+//     text-align: end !important;
+//     width: auto;
 
-    @media (max-width: 575.98px) {
-      text-align: center !important;
-    }
+//     @media (max-width: 575.98px) {
+//       text-align: center !important;
+//     }
 
-    a {
-      cursor: pointer;
-      h6 {
-        cursor: pointer;
-        user-select: none;
-        display: contents;
-        text-align: end;
-        margin-bottom: 0.5rem !important;
-      }
-    }
+//     a {
+//       cursor: pointer;
+//       h6 {
+//         cursor: pointer;
+//         user-select: none;
+//         display: contents;
+//         text-align: end;
+//         margin-bottom: 0.5rem !important;
+//       }
+//     }
 
-    p {
-      margin-bottom: 0 !important;
-    }
-  }
-}
+//     p {
+//       margin-bottom: 0 !important;
+//     }
+//   }
+// }
 
 //Apexcharts
 .apexcharts-legend-text {
