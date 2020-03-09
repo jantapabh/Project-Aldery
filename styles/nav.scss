@@ -89,6 +89,7 @@ $line-color: #e8e9fe;
 .warp-nav {
   display: flex;
   .nav-back {
+    max-height: 5rem;
     display: flex;
     width: 250px;
     border-bottom: 1px solid $line-color;

@@ -3,6 +3,7 @@ $font-text-sub: #978bab !important;
 $font-color-text-in-border: white !important;
 
 .warp-agency {
+  user-select: none;
   margin: 1rem;
   .head-agency {
     display: flex;
@@ -50,7 +51,7 @@ $font-color-text-in-border: white !important;
         h6 {
           text-align: center;
           color: $font-color-text-in-border;
-          padding:0.5rem 0;
+          padding: 0.5rem 0;
           margin-bottom: 0 !important;
         }
       }

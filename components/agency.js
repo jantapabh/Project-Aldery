@@ -47,6 +47,7 @@ const Agency = () => {
                                 <h6>{items.box}</h6>
                             </div>
                             <p>{items.content}</p>
+
                         </div>
                     ))
                 }
