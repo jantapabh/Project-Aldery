@@ -34,12 +34,12 @@ const Home = () => {
     ]
   )
 
-  useEffect(() => {
-    async function fetchData() {
-      window.localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
-    }
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     window.localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
+  //   }
+  //   fetchData();
+  // }, []);
 
   return (
     <div className="warp-index">

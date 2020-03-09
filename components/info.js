@@ -32,6 +32,7 @@ const Info = () => {
     }, [data])
 
     const fetchData = async () => {
+        window.localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
         let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
         await dataList(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!B10:D10')
     }
@@ -92,41 +93,22 @@ const Info = () => {
                                 <a href="http://kathucity.go.th/public/allowance/data/index/menu/194">
                                     <p className="p-click">โปรดคลิกที่นี่</p>
                                 </a>
-                                <p>คำเเนะนำ: โปรดเตรียมบัตรประชาชนของท่าน เพื่อใช้<br/>ในการตรวจสอบข้อมูล</p>
-                            </div>
+                                <p>คำเเนะนำ: โปรดเตรียมบัตรประชาชนของท่าน เพื่อใช้<br />ในการตรวจสอบข้อมูล</p>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div className="container-data">
-                        <div className="title-data">
-                            <h6>จำนวนผู้สูงอายุ</h6>
-                        </div>
-                        <div className="content-data">
-                            <div className="main-data">
-                                {
-                                    data ? data.map((item, index) => (
-                                        <React.Fragment>
-                                            <div className="card-data" key={index}>
-                                                <div className="title">
-                                                    <h5>{item.title}</h5>
-
-                                                    <p>{item.number} คน</p>
-                                                </div>
-                                                <div className="progress">
-                                                    <div className={`progress-bar bg-${item.color} progress-bar-striped progress-bar-animated`}
-                                                        role="progressbar"
-                                                        style={{ width: item.number }}
-                                                        aria-valuenow={item.number}
-                                                        aria-valuemin="0"
-                                                        aria-valuemax="100">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </React.Fragment>
-                                    ))
-                                        :
-                                        <div className="card-data">
+                <div className="container-data">
+                    <div className="title-data">
+                        <h6>จำนวนผู้สูงอายุ</h6>
+                    </div>
+                    <div className="content-data">
+                        <div className="main-data">
+                            {
+                                data ? data.map((item, index) => (
+                                    <React.Fragment>
+                                        <div className="card-data" key={index}>
                                             <div className="title">
                                                 <h5>{item.title}</h5>
 
@@ -142,25 +124,44 @@ const Info = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                }
+                                    </React.Fragment>
+                                ))
+                                    :
+                                    <div className="card-data">
+                                        <div className="title">
+                                            <h5>{item.title}</h5>
+
+                                            <p>{item.number} คน</p>
+                                        </div>
+                                        <div className="progress">
+                                            <div className={`progress-bar bg-${item.color} progress-bar-striped progress-bar-animated`}
+                                                role="progressbar"
+                                                style={{ width: item.number }}
+                                                aria-valuenow={item.number}
+                                                aria-valuemin="0"
+                                                aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                    </div>
+                            }
+                        </div>
+
+                        <div className="other-data">
+                            <div className="title-other-data">
+                                <img src="/static/logomain.svg" alt="icon" />
+                                <h5>ข้อมูลผู้สูงอายุ</h5>
                             </div>
 
-                            <div className="other-data">
-                                <div className="title-other-data">
-                                    <img src="/static/logomain.svg" alt="icon" />
-                                    <h5>ข้อมูลผู้สูงอายุ</h5>
-                                </div>
-
-                                <p>วันที่ {moment().add(543, 'year').format('LL')}</p>
-                                <h6>ที่มา: แบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ </h6>
-                                <h6>เทศบาลเมืองกะทู้ จังหวัดภูเก็ต</h6>
-                            </div>
+                            <p>วันที่ {moment().add(543, 'year').format('LL')}</p>
+                            <h6>ที่มา: แบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ </h6>
+                            <h6>เทศบาลเมืองกะทู้ จังหวัดภูเก็ต</h6>
                         </div>
                     </div>
-
-
                 </div>
+
+
             </div>
-            )
-        }
+        </div>
+    )
+}
 export default Info
