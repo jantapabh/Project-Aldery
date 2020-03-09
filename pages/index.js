@@ -52,7 +52,8 @@ const Home = () => {
         <Cover />
         <About />
         {/* <Quoter /> */}
-        {/* <Agency /> */}
+        <Agency />
+
         <Info />
 
         <Footer />

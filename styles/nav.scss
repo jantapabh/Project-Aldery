@@ -5,6 +5,8 @@ $line-color: #e8e9fe;
 
 .warp-index {
   nav {
+    width: 100%;
+    min-height: 5rem;
     ul {
       user-select: none;
       padding: 0.5rem;
@@ -89,7 +91,7 @@ $line-color: #e8e9fe;
   .nav-back {
     display: flex;
     width: 250px;
-    border-right: 1px solid $line-color;
+    border-bottom: 1px solid $line-color;
 
     img {
       cursor: pointer;
@@ -109,6 +111,7 @@ $line-color: #e8e9fe;
 
   nav {
     width: 80%;
+    max-height: 5rem;
     display: flex;
     justify-content: flex-end;
     border-bottom: 1px solid $line-color;
@@ -136,6 +139,14 @@ ul {
   li {
     display: flex;
     align-items: center;
+
+    .btn:focus {
+      box-shadow: none;
+
+      p:focus {
+        box-shadow: none;
+      }
+    }
     h2 {
       font-size: 2rem !important;
       padding: 0 1rem !important;
