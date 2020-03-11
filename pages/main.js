@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 import Dashboard from '../components/layout/dashboard';
 import Map from '../components/layout/Map';
 import _ from 'lodash'
+import Empty from '../components/Empty';
 
 const Barchart = dynamic(
     () => import('../components/chart/barChart'),
@@ -41,8 +42,13 @@ const MainPage = () => {
     const [completed, setCompleted] = useState(0);
 
     const [status, setStatus] = useState(false)
+    const [userOauth, setUserOauth] = useState()
+
 
     useEffect(() => {
+
+        fetchData()
+
         function progress() {
             setCompleted(oldCompleted => {
                 if (oldCompleted === 100) {
@@ -62,6 +68,11 @@ const MainPage = () => {
         };
     });
 
+    const fetchData = async () => {
+        setUserOauth(await JSON.parse(localStorage.getItem("myOauth")))
+
+    }
+
     const statusMain = (order) => {
         setStatus(order)
     }
@@ -75,31 +86,34 @@ const MainPage = () => {
                         <LinearProgress variant="determinate" value={completed} />
                     </div >
                     :
-                    <React.Fragment>
-                        <Dashboard onStatusMain={statusMain} statusMain={status} />
-                        <div className="page-content-main">
-                            <div className="container-fluid-main">
-                                <h1 className="text-center">ผู้สูงอายุ</h1>
-                                <h2 className="small text-center">อำเภอกะทู้ จังหวัดภูเก็ต</h2>
-                                <div className="info-main">
-                                    <div className="warp-map">
-                                        <Map />
-                                    </div>
-                                    <div className="warp-chart-main">
-                                        <div className="chart-row">
-                                            <Piechart />
-                                            <Piechart2 />
+                    userOauth != null ?
+                        <React.Fragment>
+                            <Dashboard onStatusMain={statusMain} statusMain={status} />
+                            <div className="page-content-main">
+                                <div className="container-fluid-main">
+                                    <h1 className="text-center">ผู้สูงอายุ</h1>
+                                    <h2 className="small text-center">อำเภอกะทู้ จังหวัดภูเก็ต</h2>
+                                    <div className="info-main">
+                                        <div className="warp-map">
+                                            <Map />
                                         </div>
-                                        <Barchart />
+                                        <div className="warp-chart-main">
+                                            <div className="chart-row">
+                                                <Piechart />
+                                                <Piechart2 />
+                                            </div>
+                                            <Barchart />
+                                        </div>
                                     </div>
-
                                 </div>
-
-
-
                             </div>
-                        </div>
-                    </React.Fragment>
+                        </React.Fragment>
+                        :
+                        <React.Fragment>
+                            <Empty />
+                        </React.Fragment>
+
+
             }
         </div >
 

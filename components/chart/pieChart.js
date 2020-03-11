@@ -3,7 +3,7 @@ import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 import { useMediaQuery } from 'react-responsive';
 
-const PieChart = () => {
+const PieChart = props => {
 
     const isBigScreen = useMediaQuery({ minDeviceWidth: 1281 })
     const isMobile = useMediaQuery({ maxWidth: 1280 })
@@ -36,8 +36,11 @@ const PieChart = () => {
     const fetchData = async () => {
 
         let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-        await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!E9:E13')
-        await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!G9:G13')
+    
+            await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!E9:E13')
+            await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!G9:G13')
+        
+
     }
 
     const namelist = async (token, value) => {
@@ -62,7 +65,13 @@ const PieChart = () => {
                 labels: _.flatten(list)
             })
         } catch (err) {
-            console.log(err);
+            if (err.response.status == 401) {
+
+                props.onStatusError(err.response.status);
+            }
+            else {
+                console.log(err);
+            }
         }
     }
 

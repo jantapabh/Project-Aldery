@@ -73,11 +73,9 @@ const BarMap = () => {
                         }
                     }
                 }
-
             })
         } catch (err) {
             console.log(err);
-            window.location.replace("/")
         }
     }
 

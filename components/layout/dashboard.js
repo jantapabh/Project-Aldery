@@ -6,7 +6,6 @@ import Sidebar from './sidebar'
 
 const Dashboard = props => {
 
-
     const [status, setStatus] = useState(false)
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
 
