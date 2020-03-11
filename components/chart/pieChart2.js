@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 import { useMediaQuery } from 'react-responsive';
@@ -24,10 +24,10 @@ const PieChart = () => {
         legend: {
             position: 'bottom'
         },
+        labels: ['รูปแบบที่ 1', 'รูปแบบที่ 2', 'รูปแบบที่ 3', 'รูปแบบที่ 4', 'รูปแบบที่ 5']
     })
 
-    const [dataname, setDataName] = useState([])
-    const [series, setSeries] = useState([])
+    const [series, setSeries] = useState([25, 25, 25, 25])
 
 
     useEffect(() => {
@@ -46,6 +46,20 @@ const PieChart = () => {
             var list = await Sheetapi.getSheet(token, value)
 
             setOptions({
+                title: {
+                    text: "เพศหญิง"
+                },
+                dataLabels: { enabled: false },
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return val + " คน"
+                        }
+                    }
+                },
+                legend: {
+                    position: 'bottom'
+                },
                 labels: _.flatten(list)
             })
         } catch (err) {
@@ -65,7 +79,7 @@ const PieChart = () => {
     }
     return (
         <React.Fragment>
-           {
+            {
                 isBigScreen ?
                     <Chart
                         options={options}

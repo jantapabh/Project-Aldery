@@ -30,6 +30,13 @@ $line-color: #e8e9fe;
   }
 }
 
+.warp-main {
+  ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
 .collapsible-menu {
   background-color: rgb(255, 255, 255);
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
@@ -82,50 +89,6 @@ $line-color: #e8e9fe;
       align-items: center;
       font-family: $font-header;
       font-size: 1.5rem !important;
-    }
-  }
-}
-
-.warp-nav {
-  display: flex;
-  .nav-back {
-    max-height: 5rem;
-    display: flex;
-    width: 250px;
-    border-bottom: 1px solid $line-color;
-
-    img {
-      cursor: pointer;
-      margin: 1rem 0 1rem 1.5rem;
-      width: 2rem;
-      height: 2rem;
-    }
-
-    h2 {
-      cursor: pointer;
-      margin-top: 0.5rem;
-      padding: 1rem;
-      font-family: $font-header;
-      font-size: 1.5rem !important;
-    }
-  }
-
-  nav {
-    width: 80%;
-    max-height: 5rem;
-    display: flex;
-    justify-content: flex-end;
-    border-bottom: 1px solid $line-color;
-
-    @media (max-width: 1024px) {
-      width: 75%;
-    }
-
-    ul {
-      margin-left: 0;
-      display: flex;
-      justify-content: flex-end;
-      width: auto;
     }
   }
 }

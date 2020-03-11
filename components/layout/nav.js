@@ -58,34 +58,28 @@ const NavBar = props => {
                     </nav>
                     :
                     isBigScreen && name == "main" ?
-                        <div className="warp-nav"> <Link href="/">
-                            <div className="nav-back">
-                                <img src="/static/logomain.svg" />  <h2>Eldery DB</h2>
-                            </div>
-                        </Link>
-                            <nav>
-                                <ul>
-                                    <li>
-                                        {
-                                            tab.map((item, index) => {
-                                                return (
-                                                    <Link key={index} href={item.href}>
-                                                        {
-                                                            item.name == "ติดต่อ" ?
-                                                                <p className="li-buttom-line">{item.name}</p>
-                                                                :
-                                                                <p>{item.name}</p>
-                                                        }
+                        <nav>
+                            <ul>
+                                <li>
+                                    {
+                                        tab.map((item, index) => {
+                                            return (
+                                                <Link key={index} href={item.href}>
+                                                    {
+                                                        item.name == "ติดต่อ" ?
+                                                            <p className="li-buttom-line">{item.name}</p>
+                                                            :
+                                                            <p>{item.name}</p>
+                                                    }
 
-                                                    </Link>
-                                                )
-                                            })
-                                        }
-                                    </li>
+                                                </Link>
+                                            )
+                                        })
+                                    }
+                                </li>
 
-                                </ul>
-                            </nav>
-                        </div>
+                            </ul>
+                        </nav>
                         :
                         isBigScreen && name == "other" ?
                             <nav>

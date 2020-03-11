@@ -24,9 +24,10 @@ const PieChart = () => {
         legend: {
             position: 'bottom'
         },
+        labels: ['รูปแบบที่ 1', 'รูปแบบที่ 2', 'รูปแบบที่ 3', 'รูปแบบที่ 4', 'รูปแบบที่ 5']
     })
 
-    const [series, setSeries] = useState([])
+    const [series, setSeries] = useState([25, 25, 25, 25])
 
     useEffect(() => {
         fetchData()
@@ -42,10 +43,22 @@ const PieChart = () => {
     const namelist = async (token, value) => {
         try {
             var list = await Sheetapi.getSheet(token, value)
-            console.log(list);
-
 
             setOptions({
+                title: {
+                    text: "เพศชาย"
+                },
+                dataLabels: { enabled: false },
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return val + " คน"
+                        }
+                    }
+                },
+                legend: {
+                    position: 'bottom'
+                },
                 labels: _.flatten(list)
             })
         } catch (err) {
