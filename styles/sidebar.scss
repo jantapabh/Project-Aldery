@@ -1,4 +1,4 @@
-$primary-color: #39b54a !important;
+$primary-color: #c8e6c9 !important;
 
 .sidebar-wrapper {
   top: 0;
@@ -11,5 +11,27 @@ $primary-color: #39b54a !important;
 
   @media (max-width: 1024px) {
     display: none;
+  }
+
+  .content-sidebar {
+    display: flex;
+    justify-content: center;
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 !important;
+
+      img {
+        display: flex;
+        justify-content: center;
+        width: 5rem;
+        height: 5rem;
+      }
+
+      li {
+        padding: 2rem 0;
+      }
+    }
   }
 }

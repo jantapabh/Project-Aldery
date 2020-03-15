@@ -1,7 +1,7 @@
 import React from 'react'
 import App from 'next/app'
 import '../styles/base.scss'
-
+import 'antd/dist/antd.less'
 
 class MyApp extends App {
 

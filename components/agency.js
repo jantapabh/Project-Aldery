@@ -1,6 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
+
 
 const Agency = () => {
+
+    const isTablet = useMediaQuery({ maxDeviceWidth: 1024 })
 
     const [card, setCard] = useState([
         {
@@ -38,20 +42,38 @@ const Agency = () => {
 
             </div>
 
-            <div className="content-agency">
-                {
-                    card.map((items, index) => (
-                        <div className="content-agency-card" key={index}>
-                            <img src={items.img} alt={`box${index}`} />
-                            <div className="agency-box">
-                                <h6>{items.box}</h6>
-                            </div>
-                            <p>{items.content}</p>
+            {
+                isTablet ?
+                    <div className="content-agency">
+                        {
+                            card.map((items, index) => (
+                                <div className="content-agency-card" key={index}>
+                                    <div className="agency-box">
+                                        <h6>{items.box}</h6>
+                                    </div>
+                                    <p>{items.content}</p>
 
-                        </div>
-                    ))
-                }
-            </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                    :
+                    <div className="content-agency">
+                        {
+                            card.map((items, index) => (
+                                <div className="content-agency-card" key={index}>
+                                    <img src={items.img} alt={`box${index}`} />
+                                    <div className="agency-box">
+                                        <h6>{items.box}</h6>
+                                    </div>
+                                    <p>{items.content}</p>
+
+                                </div>
+                            ))
+                        }
+                    </div>
+            }
+
         </div>
     )
 }

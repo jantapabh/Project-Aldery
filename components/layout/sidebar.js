@@ -18,7 +18,16 @@ const Sidebar = () => {
 
     return (
         <div className="sidebar-wrapper">
-            
+            <div className="content-sidebar">
+                <ul>
+                    <img src="/static/logomain.svg" />
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+
+                </ul>
+
+            </div>
         </div>
     )
 }
