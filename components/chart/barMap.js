@@ -2,47 +2,57 @@ import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 import _ from 'lodash'
-import Typed from 'react-typed'
+import { useMediaQuery } from 'react-responsive';
 
-const BarMap = () => {
+const BarMap = props => {
+
+    const isMobile = useMediaQuery({ maxWidth: 1280 })
+    const isSmallScreen = useMediaQuery({ maxWidth: 768 })
 
     const [options, setOptions] = useState({
-        chart: {
+        title: {
+            text: 'สถานภาพของผู้สูงอายุ',
+            align: 'left'
+          },
+          chart: {
             stacked: true,
             toolbar: {
-                show: true
+              show: true
             },
             zoom: {
-                enabled: true
+              enabled: true
             }
-        },
-        responsive: [{
-            breakpoint: 1000,
-            options: {
-                legend: {
-                    position: 'bottom',
-                    offsetX: -10,
-                    offsetY: 0
-                }
-            }
-        }],
-        plotOptions: {
+          },
+          plotOptions: {
             bar: {
-                horizontal: false,
+              horizontal: false,
             },
-        },
-        legend: {
+          },
+          legend: {
             position: 'right',
             offsetY: 40
+          },
+          fill: {
+            opacity: 1,
+            colors: ['#00d084']
+          },
+          tooltip: {
+            y: {
+              formatter: function (val) {
+                return val + " คน"
+              }
+            }
+          },
+          dataLabels: {
+            enabled: false
+        },
+        xaxis: {
+            categories: ["กมลา", "กะทู้", "ป่าตอง", "ฉลอง", "กะรน", "เกาะแก้ว", "รัษฎา", "ราไวย์", "ตลาดเหนือ", "ตลาดใหญ่", "วิชิต", "เชิงทะเล", "ไม้ขาว", "ป่าคลอก", "สาคู", "ศรีสุนทร", "เทพกระษัตรี"],
         },
     })
-    const [series, setSeries] = useState([])
-    const [dataName, setDataName] = useState([])
-    const [loading, setLoading] = useState(false)
-
+    const [series, setSeries] = useState([{ name: "จำนวน", data: [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100] }])
 
     useEffect(() => {
-        setLoading(true)
         fetchData()
     }, [listData])
 
@@ -56,7 +66,6 @@ const BarMap = () => {
     const namelist = async (token, value) => {
         try {
             var list = await Sheetapi.getSheet(token, value)
-            setDataName(_.flatten(list))
 
             setOptions({
                 xaxis: {
@@ -76,6 +85,7 @@ const BarMap = () => {
             })
         } catch (err) {
             console.log(err);
+
         }
     }
 
@@ -83,79 +93,31 @@ const BarMap = () => {
         try {
             var data = await Sheetapi.getSheet(token, value)
             setSeries([{ name: "จำนวน", data: _.flatten(data) }])
-            setLoading(false)
         } catch (err) {
-            console.log(err);
+            props.onToken(true)
         }
     }
 
     return (
-
         <React.Fragment>
             {
-                loading ?
-                    <React.Fragment>
-                        <Typed
-                            strings={['กำลังดาวน์โหลด...']}
-                            typeSpeed={45}
-                        />
-                    </React.Fragment>
+                isSmallScreen ?
+                    <Chart
+                        options={options}
+                        series={series}
+                        type="bar"
+                        height="300"
+                        width="350"
+                    />
                     :
-                    <React.Fragment>
-                        <div className="warp-chart-small">
-                            <Chart
-                                options={options}
-                                series={series}
-                                type="bar"
-                                height="300"
-                                width="350"
-                            />
-                        </div>
-
-                        <div className="warp-chart-mobile">
-                            <Chart
-                                options={options}
-                                series={series}
-                                type="bar"
-                                height="300"
-                                width="450"
-                            />
-                        </div>
-
-                        <div className="warp-chart-tablets">
-                            <Chart
-                                options={options}
-                                series={series}
-                                type="bar"
-                                height="325"
-                                width="500"
-                            />
-                        </div>
-
-                        <div className="warp-chart-desktops">
-                            <Chart
-                                options={options}
-                                series={series}
-                                type="bar"
-                                height="350"
-                                width="650"
-                            />
-                        </div>
-
-                        <div className="warp-chart-large">
-                            <Chart
-                                options={options}
-                                series={series}
-                                type="bar"
-                                height="400"
-                                width="650"
-                            />
-                        </div>
-                    </React.Fragment>
+                    <Chart
+                        options={options}
+                        series={series}
+                        type="bar"
+                        height="400"
+                        width="650"
+                    />
             }
-
-
-
         </React.Fragment>
     )
 }

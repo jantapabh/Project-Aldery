@@ -14,7 +14,6 @@ const Dashboard = props => {
             { name: "หน้าหลัก", href: "/" },
             { name: "เกี่ยวกับเรา", href: "/" },
             { name: "ข่าวสาร", href: "/" },
-            { name: "ติดต่อ", href: "/index/contact" },
         ]
     )
 
@@ -46,7 +45,7 @@ const Dashboard = props => {
     return (
         <React.Fragment>
             <NavBar name="main" tab={isSmallScreen ? sidebar : main} confirm={onConfirm} status={status} />
-            {/* <Sidebar status={status} /> */}
+            <Sidebar/>
         </React.Fragment>
     )
 }

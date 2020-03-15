@@ -12,9 +12,6 @@
     transition: all 0.5s;
 
     .container-fluid-main {
-      @media (min-width: 1281px) {
-        margin-left: 180px !important;
-      }
 
       @media (max-width: 1224px) {
         margin-left: 0 !important;
@@ -28,7 +25,7 @@
 
       @media (max-width: 768px) {
         margin-top: 1rem !important;
-        margin: 0;
+        margin: 0 !important;
       }
 
       .info-main {
@@ -47,42 +44,12 @@
             justify-content: center;
             margin-bottom: 2rem;
           }
-        }
-      }
 
-
-
-
-    }
-  }
-}
-
-//Table
-.warp-table {
-  display: flex;
-
-  .table-main {
-    position: relative;
-    margin: 5rem;
-    .react-bs-table-container {
-      .react-bs-table {
-        background-color: white;
-      }
-
-      .react-bs-table-bordered {
-        border-radius: 0.2rem 0.2rem 0 0;
-        .react-bs-container-header {
-          background-color: #cccccc;
-          border-radius: 0.2rem 0.2rem 0 0;
-
-          table {
-            thead {
-              tr {
-                th {
-                  text-align: center !important;
-                }
-              }
-            }
+          .chart-col{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
           }
         }
       }
@@ -90,113 +57,7 @@
   }
 }
 
-/* Main Content */
-.page-content-wrapper {
-  padding-left: 250px;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  padding: 0 15px;
-  transition: all 0.5s;
-  // background-color: #f3f5f7;
 
-  .container-fluid {
-    margin-left: 250px;
-    margin-right: 1rem;
-    margin-top: 2rem;
-    padding: 0;
-
-    @media (max-width: 768px) {
-      margin-top: 1rem !important;
-      margin: 0;
-    }
-  }
-
-  .data-source {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-    img {
-      width: 3rem;
-      height: 3rem;
-      cursor: pointer;
-      @media (max-width: 575.98px) {
-        width: 2rem;
-        height: 2rem;
-      }
-    }
-    .text-source {
-      display: flex;
-      flex-direction: column;
-      margin: 1rem;
-
-      h6 {
-        user-select: none;
-        @media (max-width: 575.98px) {
-          font-size: 0.7rem !important;
-        }
-      }
-    }
-  }
-
-  .warp-icon-data {
-    display: flex;
-    justify-content: center;
-
-    .icon-data {
-      display: flex;
-
-      .icon-content {
-        margin: 1rem 2rem;
-
-        svg {
-          margin: 0 1rem;
-        }
-
-        p {
-          color: black;
-          margin: 1rem;
-        }
-        .circle-bg {
-          fill: none;
-          stroke: #eee;
-          stroke-width: 5px;
-        }
-
-        .progress-ring__circle {
-          fill: none;
-          transform: rotate(-90, 60, 60);
-          stroke-width: 4px;
-
-          animation: change 1s linear;
-        }
-
-        @keyframes change {
-          from {
-            stroke-dasharray: 90, 250;
-          } /*0%*/
-          to {
-            stroke-dasharray: 250, 250;
-          } /*100%*/
-        }
-      }
-    }
-  }
-}
-
-.text-center {
-  user-select: none;
-  .card {
-    padding: 1rem;
-    max-width: 50%;
-    width: auto;
-    height: auto;
-    margin: 1rem 0;
-    border-radius: 0.7rem;
-  }
-}
 
 .__react_component_tooltip.type-dark.place-top:after {
   border-top-color: white;

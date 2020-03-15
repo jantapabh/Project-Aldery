@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link';
 
-
-const Sidebar = props => {
+const Sidebar = () => {
 
     const [sidebar, setSidebar] = useState(
         [
@@ -19,26 +18,7 @@ const Sidebar = props => {
 
     return (
         <div className="sidebar-wrapper">
-            <div className="sidebar-nav">
-                <ul className="ul-sidebar-nav">
-                    {
-                        sidebar.map((items, index) => {
-                            return (
-                                <div className="sidebar-list">
-                                    <Link key={index} href={items.link}>
-                                        <li className="li-sidebar-list" ><img src={items.img} /><p>{items.name}</p></li>
-                                    </Link>
-                                </div>
-                            )
-                        })
-                    }
-
-                </ul>
-            </div>
-
-            <ul className="sidebar-nav">
-
-            </ul>
+            
         </div>
     )
 }

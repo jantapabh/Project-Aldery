@@ -19,6 +19,21 @@
   }
 }
 
+.warp-small-map {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-right: 0 !important;
+
+  svg {
+    width: 300px;
+    height: 400px;
+  }
+
+  .map-data {
+  }
+}
+
 .warp-load-map {
   width: 400px;
   height: 500px;

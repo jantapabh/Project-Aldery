@@ -9,6 +9,11 @@ import Dashboard from '../components/layout/dashboard';
 import Map from '../components/layout/Map';
 import Empty from '../components/Empty';
 
+const BarMap = dynamic(
+    () => import('../components/chart/barMap'),
+    { ssr: false }
+)
+
 const Barchart = dynamic(
     () => import('../components/chart/barChart'),
     { ssr: false }
@@ -36,9 +41,8 @@ const useStyles = makeStyles(theme => ({
 const MainPage = () => {
     const classes = useStyles();
     const isLaptop = useMediaQuery({ minDeviceWidth: 1224 })
-    const isTablet = useMediaQuery({ maxWidth: 1224 })
-    const isMobile = useMediaQuery({ minDeviceWidth: 768 })
-    const isSmall = useMediaQuery({ maxDeviceWidth: 768 })
+    const isTablet = useMediaQuery({ minWidth: 768 })
+    const isMobile = useMediaQuery({ maxDeviceWidth: 768 })
 
     const [loading, setLoading] = useState(false)
     const [completed, setCompleted] = useState(0);
@@ -120,21 +124,21 @@ const MainPage = () => {
                                                 isTablet ?
                                                     <div className="info-main">
                                                         <div className="warp-chart-main">
+                                                            <BarMap onToken={statusToken} />
                                                             <div className="chart-row">
-                                                                <Piechart onToken={statusToken} />
+                                                                <Piechart />
                                                                 <Piechart2 />
                                                             </div>
                                                             <Barchart />
                                                         </div>
                                                     </div>
                                                     :
-                                                    isSmall ?
+                                                    isMobile?
                                                         <div className="info-main">
-                                                            <div className="warp-map">
-                                                                <Map onToken={statusToken} />
-                                                            </div>
+
                                                             <div className="warp-chart-main">
-                                                                <div className="chart-row">
+                                                                <BarMap onToken={statusToken} />
+                                                                <div className="chart-col">
                                                                     <Piechart onToken={statusToken} />
                                                                     <Piechart2 />
                                                                 </div>

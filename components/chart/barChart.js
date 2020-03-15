@@ -7,8 +7,7 @@ import { useMediaQuery } from 'react-responsive';
 const Barchart = () => {
 
   const isBigScreen = useMediaQuery({ minDeviceWidth: 1281 })
-  const isMobile = useMediaQuery({ maxWidth: 1280 })
-  const isSmallScreen = useMediaQuery({ maxWidth: 576 })
+  const isSmallScreen = useMediaQuery({ maxWidth: 768 })
 
   const [options, setOptions] = useState({
     title: {
@@ -108,33 +107,23 @@ const Barchart = () => {
 
   return (
     <React.Fragment>
-
       {
-        isBigScreen ?
+        isSmallScreen ?
           <Chart
             options={options}
             series={series}
-            type="bar" height="285"
-            width="600"
+            type="bar"
+            height="300"
+            width="300"
           />
           :
-          isMobile ?
-            <Chart
-              options={options}
-              series={series}
-              type="bar" height="250"
-              width="500"
-            />
-            :
-            isSmallScreen ?
-              <Chart
-                options={options}
-                series={series}
-                type="bar" height="300"
-                width="250"
-              />
-              :
-              null
+          <Chart
+            options={options}
+            series={series}
+            type="bar"
+            height="285"
+            width="600"
+          />
       }
     </React.Fragment >
   )

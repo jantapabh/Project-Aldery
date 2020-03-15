@@ -1,36 +1,15 @@
-$font-header: "Frank Ruhl Libre" !important;
-$line-color: #e8e9fe;
+$primary-color: #39b54a !important;
 
 .sidebar-wrapper {
-  width: 250px;
-  top: 72px;
-  z-index: 1;
+  top: 0;
+  bottom: 0;
   position: absolute;
-  height: 100vh;
-  background: white;
-  opacity: 0.9;
-  border-right: 1px solid $line-color;
+  width: 200px;
+  min-height: 100vh;
+  height: auto;
+  background-color: $primary-color;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: none;
-  }
-
-  .sidebar-nav {
-    ul.ul-sidebar-nav {
-      border-top: 1px solid $line-color;
-      display: flex;
-      flex-direction: column;
-      margin-left: 0;
-
-      .sidebar-list {
-        li.li-sidebar-list {
-          display: flex;
-          img {
-            width: 2rem;
-            height: 2rem;
-          }
-        }
-      }
-    }
   }
 }
