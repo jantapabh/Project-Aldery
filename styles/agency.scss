@@ -16,12 +16,18 @@ $font-color-text-in-border: white !important;
       stroke: $primary-color;
       stroke-width: 10;
     }
-    h6 {
-      color: $font-text-sub;
-      font-style: italic;
 
-      sup {
-        color: red;
+    .title-agency {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h6 {
+        color: $font-text-sub;
+        font-style: italic;
+
+        sup {
+          color: red;
+        }
       }
     }
   }
@@ -60,5 +66,38 @@ $font-color-text-in-border: white !important;
         text-align: center;
       }
     }
+
+    img {
+      width: 20rem;
+      height: 15rem;
+    }
   }
+}
+
+.ant-steps-dot .ant-steps-item-tail::after,
+.ant-steps-dot.ant-steps-small .ant-steps-item-tail::after {
+  background-color: $primary-color;
+}
+
+.ant-steps-icon-dot {
+  background: $primary-color;
+}
+
+.ant-steps-item-title {
+  color: black !important;
+}
+
+//isMobile
+.ant-steps {
+  width: 50% !important;
+}
+.ant-steps-item-content {
+  width: 20rem !important;
+}
+.ant-steps-item-title {
+  width: 20rem !important;
+}
+
+.ant-steps-item-description {
+  width: 20rem !important;
 }
