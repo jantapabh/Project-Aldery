@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import Sheetapi from '../config/api';
 import moment from 'moment';
 
@@ -6,6 +7,9 @@ moment.locale("th")
 moment().format('LL');
 
 const Info = () => {
+
+    const isTablet = useMediaQuery({ maxDeviceWidth: 1024 })
+    const isMobile = useMediaQuery({ maxDeviceWidth: 768 })
 
     const [data, setData] = useState([
         {
@@ -61,104 +65,193 @@ const Info = () => {
     return (
         <div className="warp-info">
             <div className="page-content">
-                <div className="content-agency">
-                    <div className="head-agency">
-                        <img src="/static/logo1.png" alt="logo" />
-                        <div className="title-agency">
-                            <h2>เทศบาลเมืองกะทู้</h2>
-                            <h6>จังหวัดภูเก็ต</h6>
-                        </div>
-
-                    </div>
-                    <div className="main-agency">
-                        <div className="main-agency-row">
-                            <div className="title-main-agency">
-                                <h6>กองสวัสดิการสังคม</h6>
+                {isTablet || isMobile ?
+                    <React.Fragment>
+                        <div className="content-data-agency">
+                            <div className="head-agency">
+                                <img src="/static/logo1.png" alt="logo" />
+                                <div className="title-agency">
+                                    <h2>เทศบาลเมืองกะทู้</h2>
+                                    <h6>จังหวัดภูเก็ต</h6>
+                                </div>
                             </div>
-                            <div className="detail-main-agency">
-                                <h6>วิสัยทัศน์</h6>
-                                <p>"มุ่งเน้นพัฒนาองค์ความรู้ <br />เสริมสร้างการมีส่วนร่วม
-                            ลดปัญหาผู้ด้อยโอกาส<br /> พัฒนาความเข้มแข็งของชุมชนอย่างยั่งยืน"</p>
-                                <h6>หน้าที่</h6>
-                                <p>1. ฝ่ายสังคมสงเคราะห์<br />2. ฝ่ายพัฒนาชุมชน <br />3. งานธุรการ</p>
-
-                            </div>
-                        </div>
-                        <div className="main-agency-row">
-                            <div className="title-main-agency">
-                                <h6>ตรวจสอบเบี้ยยังชีพผู้สูงอายุ</h6>
-                            </div>
-                            <div className="detail-main-agency">
-                                <a href="http://kathucity.go.th/public/allowance/data/index/menu/194">
-                                    <p className="p-click">โปรดคลิกที่นี่</p>
-                                </a>
-                                <p>คำเเนะนำ: โปรดเตรียมบัตรประชาชนของท่าน เพื่อใช้<br />ในการตรวจสอบข้อมูล</p>
+                            <div className="main-agency-row-mobile">
+                                <div className="title-main-agency">
+                                    <h6>ตรวจสอบเบี้ยยังชีพผู้สูงอายุ</h6>
+                                </div>
+                                <div className="detail-main-agency">
+                                    <a href="http://kathucity.go.th/public/allowance/data/index/menu/194">
+                                        <p className="p-click">โปรดคลิกที่นี่</p>
+                                    </a>
+                                    <p>คำเเนะนำ:<br /> โปรดเตรียมบัตรประชาชนของท่าน <br />เพื่อใช้ในการตรวจสอบข้อมูล</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                        <div className="container-data">
+                            <div className="title-data">
+                                <h6>จำนวนผู้สูงอายุ</h6>
+                            </div>
+                            <div className="content-data">
+                                <div className="main-data">
+                                    {
+                                        data ? data.map((item, index) => (
+                                            <React.Fragment>
+                                                <div className="card-data" key={index}>
+                                                    <div className="title">
+                                                        <h5>{item.title}</h5>
 
-                <div className="container-data">
-                    <div className="title-data">
-                        <h6>จำนวนผู้สูงอายุ</h6>
-                    </div>
-                    <div className="content-data">
-                        <div className="main-data">
-                            {
-                                data ? data.map((item, index) => (
-                                    <React.Fragment>
-                                        <div className="card-data" key={index}>
-                                            <div className="title">
-                                                <h5>{item.title}</h5>
+                                                        <p>{item.number} คน</p>
+                                                    </div>
+                                                    <div className="progress">
+                                                        <div className={`progress-bar bg-${item.color} progress-bar-striped progress-bar-animated`}
+                                                            role="progressbar"
+                                                            style={{ width: item.number }}
+                                                            aria-valuenow={item.number}
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </React.Fragment>
+                                        ))
+                                            :
+                                            <div className="card-data">
+                                                <div className="title">
+                                                    <h5>{item.title}</h5>
 
-                                                <p>{item.number} คน</p>
-                                            </div>
-                                            <div className="progress">
-                                                <div className={`progress-bar bg-${item.color} progress-bar-striped progress-bar-animated`}
-                                                    role="progressbar"
-                                                    style={{ width: item.number }}
-                                                    aria-valuenow={item.number}
-                                                    aria-valuemin="0"
-                                                    aria-valuemax="100">
+                                                    <p>{item.number} คน</p>
+                                                </div>
+                                                <div className="progress">
+                                                    <div className={`progress-bar bg-${item.color} progress-bar-striped progress-bar-animated`}
+                                                        role="progressbar"
+                                                        style={{ width: item.number }}
+                                                        aria-valuenow={item.number}
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </React.Fragment>
-                                ))
-                                    :
-                                    <div className="card-data">
-                                        <div className="title">
-                                            <h5>{item.title}</h5>
+                                    }
+                                </div>
 
-                                            <p>{item.number} คน</p>
-                                        </div>
-                                        <div className="progress">
-                                            <div className={`progress-bar bg-${item.color} progress-bar-striped progress-bar-animated`}
-                                                role="progressbar"
-                                                style={{ width: item.number }}
-                                                aria-valuenow={item.number}
-                                                aria-valuemin="0"
-                                                aria-valuemax="100">
-                                            </div>
-                                        </div>
+                                <div className="other-data">
+                                    <div className="title-other-data">
+                                        <img src="/static/logomain.svg" alt="icon" />
+                                        <h5>ข้อมูลผู้สูงอายุ</h5>
                                     </div>
-                            }
-                        </div>
 
-                        <div className="other-data">
-                            <div className="title-other-data">
-                                <img src="/static/logomain.svg" alt="icon" />
-                                <h5>ข้อมูลผู้สูงอายุ</h5>
+                                    <p>วันที่ {moment().add(543, 'year').format('LL')}</p>
+                                    <h6>ที่มา: แบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ </h6>
+                                    <h6>เทศบาลเมืองกะทู้ จังหวัดภูเก็ต</h6>
+                                </div>
                             </div>
-
-                            <p>วันที่ {moment().add(543, 'year').format('LL')}</p>
-                            <h6>ที่มา: แบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ </h6>
-                            <h6>เทศบาลเมืองกะทู้ จังหวัดภูเก็ต</h6>
                         </div>
-                    </div>
-                </div>
+
+                    </React.Fragment>
 
 
+                    :
+                    <React.Fragment>
+                        <div className="content-data-agency">
+                            <div className="head-agency">
+                                <img src="/static/logo1.png" alt="logo" />
+                                <div className="title-agency">
+                                    <h2>เทศบาลเมืองกะทู้</h2>
+                                    <h6>จังหวัดภูเก็ต</h6>
+                                </div>
+
+                            </div>
+                            <div className="main-agency">
+                                <div className="main-agency-row">
+                                    <div className="title-main-agency">
+                                        <h6>กองสวัสดิการสังคม</h6>
+                                    </div>
+                                    <div className="detail-main-agency">
+                                        <h6>วิสัยทัศน์</h6>
+                                        <p>"มุ่งเน้นพัฒนาองค์ความรู้ <br />เสริมสร้างการมีส่วนร่วม
+                            ลดปัญหาผู้ด้อยโอกาส<br /> พัฒนาความเข้มแข็งของชุมชนอย่างยั่งยืน"</p>
+                                        <h6>หน้าที่</h6>
+                                        <p>1. ฝ่ายสังคมสงเคราะห์<br />2. ฝ่ายพัฒนาชุมชน <br />3. งานธุรการ</p>
+
+                                    </div>
+                                </div>
+                                <div className="main-agency-row">
+                                    <div className="title-main-agency">
+                                        <h6>ตรวจสอบเบี้ยยังชีพผู้สูงอายุ</h6>
+                                    </div>
+                                    <div className="detail-main-agency">
+                                        <a href="http://kathucity.go.th/public/allowance/data/index/menu/194">
+                                            <p className="p-click">โปรดคลิกที่นี่</p>
+                                        </a>
+                                        <p>คำเเนะนำ: โปรดเตรียมบัตรประชาชนของท่าน เพื่อใช้<br />ในการตรวจสอบข้อมูล</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="container-data">
+                            <div className="title-data">
+                                <h6>จำนวนผู้สูงอายุ</h6>
+                            </div>
+                            <div className="content-data">
+                                <div className="main-data">
+                                    {
+                                        data ? data.map((item, index) => (
+                                            <React.Fragment>
+                                                <div className="card-data" key={index}>
+                                                    <div className="title">
+                                                        <h5>{item.title}</h5>
+
+                                                        <p>{item.number} คน</p>
+                                                    </div>
+                                                    <div className="progress">
+                                                        <div className={`progress-bar bg-${item.color} progress-bar-striped progress-bar-animated`}
+                                                            role="progressbar"
+                                                            style={{ width: item.number }}
+                                                            aria-valuenow={item.number}
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </React.Fragment>
+                                        ))
+                                            :
+                                            <div className="card-data">
+                                                <div className="title">
+                                                    <h5>{item.title}</h5>
+
+                                                    <p>{item.number} คน</p>
+                                                </div>
+                                                <div className="progress">
+                                                    <div className={`progress-bar bg-${item.color} progress-bar-striped progress-bar-animated`}
+                                                        role="progressbar"
+                                                        style={{ width: item.number }}
+                                                        aria-valuenow={item.number}
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    }
+                                </div>
+
+                                <div className="other-data">
+                                    <div className="title-other-data">
+                                        <img src="/static/logomain.svg" alt="icon" />
+                                        <h5>ข้อมูลผู้สูงอายุ</h5>
+                                    </div>
+
+                                    <p>วันที่ {moment().add(543, 'year').format('LL')}</p>
+                                    <h6>ที่มา: แบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ </h6>
+                                    <h6>เทศบาลเมืองกะทู้ จังหวัดภูเก็ต</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </React.Fragment>
+
+
+                }
             </div>
         </div>
     )

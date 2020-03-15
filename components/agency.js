@@ -5,7 +5,7 @@ const { Step } = Steps;
 
 const Agency = () => {
 
-    const isTablet = useMediaQuery({ maxDeviceWidth: 1024 })
+    const isTablet = useMediaQuery({ maxDeviceWidth: 1025 })
     const isMobile = useMediaQuery({ maxDeviceWidth: 768 })
 
     const [card, setCard] = useState([
@@ -51,7 +51,7 @@ const Agency = () => {
                                 <h6><sup>*</sup>เว้นแต่กรณีที่ผู้สูงอายุย้ายที่อยู่อาศัย</h6>
                             </div>
                         </div>
-                        <div className="content-agency">
+                        <div className="content-agency-mobile">
                             <Steps progressDot current={3} direction="vertical">
                                 {
                                     card.map((items, index) => (
