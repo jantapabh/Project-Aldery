@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
-import Footer from '../../components/layout/footer';
 import _ from 'lodash'
 import Dashboard from '../../components/layout/dashboard';
 

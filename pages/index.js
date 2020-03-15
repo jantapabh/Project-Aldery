@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Sheetapi from '../config/api';
 import Cover from '../components/cover';
 import NavBar from '../components/layout/nav';
 import { useMediaQuery } from 'react-responsive';
@@ -33,13 +32,6 @@ const Home = () => {
       { name: "เข้าสู่ระบบ", href: "/main" },
     ]
   )
-
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     window.localStorage.setItem("myOauth", JSON.stringify(await Sheetapi.postSheetValues()))
-  //   }
-  //   fetchData();
-  // }, []);
 
   return (
     <div className="warp-index">

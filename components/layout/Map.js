@@ -28,19 +28,6 @@ const colorScale = scaleLinear()
         "#79d27d"
     ])
 
-const SpinnerPage = () => {
-    return (
-        <React.Fragment>
-            <div className="warp-load-map">
-                <Typed
-                    strings={['กรุณรอสักครู่...', 'กำลังดาวน์โหลด...']}
-                    typeSpeed={40}
-                />
-            </div>
-        </React.Fragment>
-    );
-}
-
 class Map extends Component {
     constructor() {
         super()
@@ -83,15 +70,15 @@ class Map extends Component {
         this.loadPaths()
     }
 
-
     listName = async (v) => {
         try {
 
             this.list = await Sheetapi.getSheet(this.access_token, v)
             this.setState({ dataList: this.list })
+            this.props.onToken(false)
 
         } catch (err) {
-            console.log(err);
+            this.props.onToken(true)
         }
     }
 
@@ -129,9 +116,9 @@ class Map extends Component {
     render() {
 
         const { dataList } = this.state
-        if (dataList.length === 0) {
-            return SpinnerPage()
-        }
+        // if (dataList.length === 0) {
+        //     return SpinnerPage()
+        // }
 
         return (
             <React.Fragment >
@@ -187,7 +174,7 @@ class Map extends Component {
                                                             outline: "none",
                                                         },
                                                         pressed: {
-                                                            fill: "#FF5722",
+                                                            fill: "#c4def6",
                                                             stroke: "#40bf45",
                                                             strokeWidth: 0.075,
                                                             outline: "none",

@@ -71,7 +71,7 @@ const Barchart = () => {
 
   useEffect(() => {
     fetchData()
-  }, [series])
+  }, [])
 
   const fetchData = async () => {
 

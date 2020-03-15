@@ -36,10 +36,10 @@ const PieChart = props => {
     const fetchData = async () => {
 
         let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
-    
-            await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!E9:E13')
-            await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!G9:G13')
-        
+
+        await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!E9:E13')
+        await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!G9:G13')
+
 
     }
 
@@ -65,13 +65,7 @@ const PieChart = props => {
                 labels: _.flatten(list)
             })
         } catch (err) {
-            if (err.response.status == 401) {
-
-                props.onStatusError(err.response.status);
-            }
-            else {
-                console.log(err);
-            }
+            console.log(err);
         }
     }
 
@@ -82,7 +76,7 @@ const PieChart = props => {
             var data = _.flatten(result).map(Number)
             setSeries(data)
         } catch (err) {
-            console.log(err);
+            props.onToken(true)
         }
     }
     return (

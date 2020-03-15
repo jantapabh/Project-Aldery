@@ -3,7 +3,7 @@ import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 import { useMediaQuery } from 'react-responsive';
 
-const PieChart = () => {
+const PieChart = props => {
 
     const isBigScreen = useMediaQuery({ minDeviceWidth: 1281 })
     const isMobile = useMediaQuery({ maxWidth: 1280 })
@@ -64,6 +64,7 @@ const PieChart = () => {
             })
         } catch (err) {
             console.log(err);
+            
         }
     }
 

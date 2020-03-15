@@ -84,28 +84,29 @@ const NavBar = props => {
                         isBigScreen && name == "other" ?
                             <nav>
                                 <ul>
-                                    <div className="warp-manu">
-                                        <Link href="/">
-                                            <li>
-                                                <p>ย้อนกลับ</p>
-                                            </li>
-                                        </Link>
-                                    </div>
-                                    <div className="warp-manu">
-                                        <ul>
-                                            <li>
-                                                {
-                                                    tab.map((item, index) => {
-                                                        return (
-                                                            <Link key={index} href={item.href}>
-                                                                <p >{item.name}</p>
-                                                            </Link>
-                                                        )
-                                                    })
-                                                }
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <Link href="/">
+                                        <li>
+                                            <h2>Eldery DB</h2>
+                                        </li>
+                                    </Link>
+                                    <li>
+                                        {
+                                            tab.map((item, index) => {
+                                                return (
+                                                    <Link key={index} href={item.href}>
+                                                        {
+                                                            <React.Fragment>
+
+                                                                <button className="btn">
+                                                                    <p>{item.name}</p>
+                                                                </button>
+                                                            </React.Fragment>
+                                                        }
+                                                    </Link>
+                                                )
+                                            })
+                                        }
+                                    </li>
                                 </ul>
                             </nav>
                             :

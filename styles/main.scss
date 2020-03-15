@@ -12,8 +12,13 @@
     transition: all 0.5s;
 
     .container-fluid-main {
-      @media (min-width: 1281px) { 
+      @media (min-width: 1281px) {
         margin-left: 180px !important;
+      }
+
+      @media (max-width: 1224px) {
+        margin-left: 0 !important;
+        margin-left: 1rem !important;
       }
       width: 100%;
       margin-left: 150px;
@@ -28,6 +33,7 @@
 
       .info-main {
         display: flex;
+        justify-content: center;
         margin-top: 2rem !important;
         margin: 1rem;
 
@@ -40,13 +46,13 @@
             display: flex;
             justify-content: center;
             margin-bottom: 2rem;
-            @media (max-width: 1199.98px) {
-              flex-direction: column;
-              align-items: center;
-            }
           }
         }
       }
+
+
+
+
     }
   }
 }
