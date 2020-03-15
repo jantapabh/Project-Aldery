@@ -1,6 +1,6 @@
 $primary-color: #c8e6c9 !important;
 
-.sidebar-wrapper {
+.sidebar-wrapper-active {
   top: 0;
   bottom: 0;
   position: fixed;
@@ -8,11 +8,6 @@ $primary-color: #c8e6c9 !important;
   min-height: 100vh;
   height: auto;
   background-color: $primary-color;
-
-  @media (max-width: 1024px) {
-    display: none;
-  }
-
   .content-sidebar {
     display: flex;
     justify-content: center;
@@ -22,16 +17,13 @@ $primary-color: #c8e6c9 !important;
       flex-direction: column;
       margin: 0 !important;
 
-      img {
-        display: flex;
-        justify-content: center;
-        width: 5rem;
-        height: 5rem;
-      }
-
       li {
         padding: 2rem 0;
       }
     }
   }
+}
+
+.sidebar-wrapper-non-active {
+  display: none;
 }

@@ -32,8 +32,21 @@ $line-color: #e8e9fe;
 
 .warp-main {
   ul {
-    display: flex;
-    justify-content: flex-end;
+    margin-left: 0;
+    li.hamberger-active {
+      padding-left: 250px;
+      img {
+        width: 4rem;
+        height: 2rem;
+      }
+    }
+
+    li.hamberger-non-active {
+      img {
+        width: 4rem;
+        height: 2rem;
+      }
+    }
   }
 }
 

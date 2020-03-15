@@ -11,11 +11,14 @@ const NavBar = props => {
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 768.99 })
 
     const collapsible = async () => {
+
         if (!status) {
             setStatus(true)
+            props.confirm(true)
         }
         else {
             setStatus(false)
+            props.confirm(false)
         }
     }
 
@@ -59,7 +62,10 @@ const NavBar = props => {
                     :
                     isBigScreen && name == "main" ?
                         <nav>
-                            <ul>
+                            <ul >
+                                <li className={`hamberger-${status ? "active" : "non-active"}`}>
+                                    <img src="/static/hamberger.svg" alt="hamberger" onClick={collapsible} />
+                                </li>
                                 <li>
                                     {
                                         tab.map((item, index) => {

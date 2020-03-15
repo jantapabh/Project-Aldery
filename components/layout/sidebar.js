@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import Link from 'next/link';
 
-const Sidebar = () => {
+const Sidebar = props => {
+
+    const status = props.status
 
     const [sidebar, setSidebar] = useState(
         [
@@ -17,16 +19,13 @@ const Sidebar = () => {
     )
 
     return (
-        <div className="sidebar-wrapper">
+        <div className={`sidebar-wrapper-${status ? "active" : "non-active"}`}>
             <div className="content-sidebar">
                 <ul>
-                    <img src="/static/logomain.svg" />
                     <li>Home</li>
                     <li>Home</li>
                     <li>Home</li>
-
                 </ul>
-
             </div>
         </div>
     )

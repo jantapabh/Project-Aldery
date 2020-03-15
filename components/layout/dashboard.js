@@ -39,13 +39,13 @@ const Dashboard = props => {
         else {
             props.onStatusMain(true)
         }
-
+        console.log(order);
     }
 
     return (
         <React.Fragment>
             <NavBar name="main" tab={isSmallScreen ? sidebar : main} confirm={onConfirm} status={status} />
-            <Sidebar/>
+            <Sidebar  status={status} />
         </React.Fragment>
     )
 }
