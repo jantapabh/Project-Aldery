@@ -6,7 +6,6 @@ import { useMediaQuery } from 'react-responsive';
 import About from '../components/about';
 import Info from '../components/info';
 import Footer from '../components/footer';
-import Quoter from '../components/quotes';
 import Agency from '../components/agency';
 
 
@@ -43,11 +42,8 @@ const Home = () => {
         <NavBar name="index" tab={isSmallScreen ? homeMin : home} />
         <Cover />
         <About />
-        {/* <Quoter /> */}
         <Agency />
-
         <Info />
-
         <Footer />
       </React.Fragment>
 
