@@ -1,24 +1,19 @@
 @import "./nav.scss";
+@import "./index.scss";
 @import "./cover.scss";
 @import "./about.scss";
 @import "./agency.scss";
 @import "./info.scss";
-@import "./quoter.scss";
-
 @import "./footer.scss";
 
-@import "./card.scss";
+//Main
+@import "./main.scss";
 @import "./chart.scss";
 @import "./hamburgers.scss";
-@import "./index.scss";
-@import "./main.scss";
-@import "./menu-icon.scss";
+
+
 @import "./sidebar.scss";
 @import "./map.scss";
-
-@import "./index/services.scss";
-@import "./index/contact.scss";
-@import "./index//project.scss";
 
 //Other
 @import "./empty.scss";
