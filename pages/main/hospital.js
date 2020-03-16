@@ -26,7 +26,7 @@ const PieHospital = dynamic(
 )
 
 const PieHospital2 = dynamic(
-    () => import('../../components/chart/piehospital2'),
+    () => import('../../components/chart/pieHospital2'),
     { ssr: false }
 )
 
