@@ -1,11 +1,11 @@
-@import './nav.scss';
-@import './cover.scss';
-@import './about.scss';
-@import './agency.scss';
-@import './info.scss';
-@import './quoter.scss';
+@import "./nav.scss";
+@import "./cover.scss";
+@import "./about.scss";
+@import "./agency.scss";
+@import "./info.scss";
+@import "./quoter.scss";
 
-@import './footer.scss';
+@import "./footer.scss";
 
 @import "./card.scss";
 @import "./chart.scss";
@@ -21,15 +21,22 @@
 @import "./index//project.scss";
 
 //Other
-@import './empty.scss';
+@import "./empty.scss";
 
 $font: "Prompt", sans-serif;
 
 body {
   font-family: $font !important;
-  h1, h2, h3, h4, h5, h6, p, text{
-      font-family: $font !important;
-      color: black !important;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  text {
+    font-family: $font !important;
+    color: black !important;
   }
 }
 
@@ -39,6 +46,7 @@ h1 {
   margin-block-start: 0;
   margin-block-end: 0;
   padding: 0.5rem;
+  margin-bottom: 0 !important;
 
   @media (max-width: 1199.98px) {
     font-size: 2rem !important;

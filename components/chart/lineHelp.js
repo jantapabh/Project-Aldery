@@ -1,60 +1,30 @@
 import React, { useState, useEffect } from 'react'
-import Chart from "react-apexcharts";
+import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
+import { useMediaQuery } from 'react-responsive';
 
 const LineHelp = () => {
-  const [options, setOptions] = useState({
-    chart: {
-      shadow: {
-        enabled: true,
-        color: '#000',
-        top: 18,
-        left: 7,
-        blur: 10,
-        opacity: 1
-      },
-      toolbar: {
-        show: false
-      }
-    },
-    responsive: [{
-      breakpoint: 900,
-      options: {
-        dataLabels: { enabled: false },
-        legend: {
-          position: 'top',
-          horizontalAlign: 'center',
-          offsetY: -10,
-          offsetX: -5
 
-        },
-      }
-    }],
-    colors: ['#77B6EA', '#545454'],
-    dataLabels: {
-      enabled: true,
-    },
-    stroke: {
-      curve: 'smooth'
-    },
+  const isSmallScreen = useMediaQuery({ maxWidth: 768 })
+
+  const [options, setOptions] = useState({
     title: {
       text: 'ความต้องการให้หน่วยงานของรัฐช่วยเหลือของประชากรผู้สูงอายุ',
-      align: 'left'
+      align: 'center'
     },
-    grid: {
-      borderColor: '#e7e7e7',
-      row: {
-        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-        opacity: 0.5
+    plotOptions: {
+      bar: {
+        horizontal: true,
       },
     },
-    markers: {
-
-      size: 6
+    dataLabels: {
+      enabled: false
+  },
+    legend: {
+      position: 'bottom',
     },
-    yaxis: {
-      min: 0,
-      max: 60
+    fill: {
+      opacity: 1
     },
     tooltip: {
       y: {
@@ -63,18 +33,22 @@ const LineHelp = () => {
         }
       }
     },
-    legend: {
-      position: 'top',
-      horizontalAlign: 'right',
-      floating: true,
-      offsetY: -25,
-      offsetX: -5
+    xaxis: {
+      categories: ['รูปแบบที่ 1', 'รูปแบบที่ 2', 'รูปแบบที่ 3', 'รูปแบบที่ 4', 'รูปแบบที่ 5']
     },
 
-    colors: ['#0693e3', '#00d084']
   })
 
-  const [series, setSeries] = useState([])
+  const [series, setSeries] = useState([
+    {
+      name: 'เพศชาย',
+      data: [50, 50, 50, 50, 50]
+    },
+    {
+      name: 'เพศหญิง',
+      data: [50, 50, 50, 50, 50]
+    }
+  ])
 
   useEffect(() => {
     fetchData()
@@ -113,56 +87,25 @@ const LineHelp = () => {
   }
   return (
     <React.Fragment>
-      <div className="warp-chart-small">
-        <Chart
-          options={options}
-          series={series}
-          type="line"
-          height="400"
-          width="300"
-        />
-      </div>
-
-      <div className="warp-chart-mobile">
-        <Chart
-          options={options}
-          series={series}
-          type="line"
-          height="400"
-          width="500"
-        />
-      </div>
-
-      <div className="warp-chart-tablets">
-        <Chart
-          options={options}
-          series={series}
-          type="line"
-          height="400"
-          width="700"
-        />
-      </div>
-
-      <div className="warp-chart-desktops">
-        <Chart
-          options={options}
-          series={series}
-          type="line"
-          height="400"
-          width="700"
-        />
-      </div>
-
-      <div className="warp-chart-large">
-        <Chart
-          options={options}
-          series={series}
-          type="line"
-          height="325"
-          width="625"
-        />
-      </div>
-    </React.Fragment>
+      {
+        isSmallScreen ?
+          <Chart
+            options={options}
+            series={series}
+            type="bar"
+            height="300"
+            width="300"
+          />
+          :
+          <Chart
+            options={options}
+            series={series}
+            type="bar"
+            height="400"
+            width="600"
+          />
+      }
+    </React.Fragment >
   )
 }
 export default LineHelp;

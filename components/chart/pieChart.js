@@ -27,7 +27,7 @@ const PieChart = props => {
         labels: ['รูปแบบที่ 1', 'รูปแบบที่ 2', 'รูปแบบที่ 3', 'รูปแบบที่ 4', 'รูปแบบที่ 5']
     })
 
-    const [series, setSeries] = useState([25, 25, 25, 25])
+    const [series, setSeries] = useState([20, 20, 20, 20])
 
     useEffect(() => {
         fetchData()
@@ -39,7 +39,6 @@ const PieChart = props => {
 
         await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!E9:E13')
         await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!G9:G13')
-
 
     }
 

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
+import { useMediaQuery } from 'react-responsive';
 
+const BarSocial = props => {
+    const isSmallScreen = useMediaQuery({ maxWidth: 768 })
 
-const BarSocial = () => {
     const [options, setOptions] = useState({
         title: {
             text: 'ที่่ดิน',
@@ -11,22 +13,12 @@ const BarSocial = () => {
         },
         plotOptions: {
             bar: {
-                horizontal: false,
-                columnWidth: '60%',
+                horizontal: true,
             },
         },
-        responsive: [{
-            breakpoint: 10,
-        }],
         dataLabels: {
             enabled: false
         },
-        stroke: {
-            show: true,
-            width: 2,
-            colors: ['transparent']
-        },
-
         fill: {
             opacity: 1
         },
@@ -36,11 +28,23 @@ const BarSocial = () => {
                     return val + " คน"
                 }
             }
+        },
+        xaxis: {
+            categories: ['รูปแบบที่ 1', 'รูปแบบที่ 2', 'รูปแบบที่ 3',
+                'รูปแบบที่ 4', 'รูปแบบที่ 5', 'รูปแบบที่ 6']
         }
     })
 
-    const [dataname, setDataName] = useState([])
-    const [series, setSeries] = useState([])
+    const [series, setSeries] = useState([
+        {
+            name: 'เพศชาย',
+            data: [50, 50, 50, 50, 50]
+        },
+        {
+            name: 'เพศหญิง',
+            data: [50, 50, 50, 50, 50]
+        }
+    ])
 
     useEffect(() => {
         fetchData()
@@ -50,7 +54,7 @@ const BarSocial = () => {
 
         let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
         await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!B98:B103')
-        await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!D98:D103','ข้อมูลการวิเคราะห์ทางสถิติ!E98:E103')
+        await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!D98:D103', 'ข้อมูลการวิเคราะห์ทางสถิติ!E98:E103')
     }
 
     const namelist = async (token, value) => {
@@ -73,57 +77,30 @@ const BarSocial = () => {
             var woman = await Sheetapi.getSheet(token, value2)
             setSeries([{ name: "เพศชาย", data: _.flatten(man) }, { name: "เพศหญิง", data: _.flatten(woman) }])
         } catch (err) {
-            console.log(err);
+            props.onToken(true)
         }
     }
 
     return (
         <React.Fragment>
-            <div className="warp-chart-small">
-                <Chart options={options}
-                    series={series}
-                    type="bar"
-                    height="325"
-                    width="290"
-                />
-            </div>
-
-            <div className="warp-chart-mobile">
-                <Chart options={options}
-                    series={series}
-                    type="bar"
-                    height="325"
-                    width="400"
-                />
-            </div>
-
-            <div className="warp-chart-tablets">
-                <Chart options={options}
-                    series={series}
-                    type="bar"
-                    height="325"
-                    width="450"
-                />
-            </div>
-
-            <div className="warp-chart-desktops">
-                <Chart options={options}
-                    series={series}
-                    type="bar"
-                    height="350"
-                    width="500"
-                />
-            </div>
-
-            <div className="warp-chart-large">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="bar"
-                    height="400"
-                    width="480"
-                />
-            </div>
+            {
+                isSmallScreen ?
+                    <Chart
+                        options={options}
+                        series={series}
+                        type="bar"
+                        height="300"
+                        width="300"
+                    />
+                    :
+                    <Chart
+                        options={options}
+                        series={series}
+                        type="bar"
+                        height="300"
+                        width="600"
+                    />
+            }
         </React.Fragment>
     )
 }

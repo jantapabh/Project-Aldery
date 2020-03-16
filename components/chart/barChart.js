@@ -3,10 +3,8 @@ import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
 import { useMediaQuery } from 'react-responsive';
 
-
 const Barchart = () => {
 
-  const isBigScreen = useMediaQuery({ minDeviceWidth: 1281 })
   const isSmallScreen = useMediaQuery({ maxWidth: 768 })
 
   const [options, setOptions] = useState({
@@ -23,16 +21,6 @@ const Barchart = () => {
         enabled: true
       }
     },
-    responsive: [{
-      breakpoint: 1000,
-      options: {
-        legend: {
-          position: 'bottom',
-          offsetX: -10,
-          offsetY: 0
-        }
-      }
-    }],
     plotOptions: {
       bar: {
         horizontal: false,

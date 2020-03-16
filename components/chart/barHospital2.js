@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import Chart from 'react-apexcharts'
-import Sheetapi from '../../config/api'
+import Chart from 'react-apexcharts';
+import Sheetapi from '../../config/api';
+import { useMediaQuery } from 'react-responsive';
 
 
 const BarHospital2 = () => {
+
+    const isSmallScreen = useMediaQuery({ maxWidth: 768 })
+
     const [options, setOptions] = useState({
         title: {
             text: 'โรคประจำตัวของผู้สูงอายุ',
             align: 'left'
         },
+        plotOptions: {
+            bar: { horizontal: true }
+          },
         chart: {
             stacked: true,
             toolbar: {
@@ -18,40 +25,33 @@ const BarHospital2 = () => {
                 enabled: true
             }
         },
+        // legend: {
+        //     position: 'right'
+        // },
         dataLabels: { enabled: false },
-        responsive: [{
-            breakpoint: 1000,
-            options: {
-                legend: {
-                    position: 'bottom',
-                    offsetX: -10,
-                    offsetY: 0
-                }
-            }
-        }],
-        plotOptions: {
-            bar: {
-                horizontal: false,
-            },
-        },
-        legend: {
-            position: 'top',
-            offsetY: 40
-        },
-        fill: {
-            opacity: 1
-        },
         tooltip: {
             y: {
                 formatter: function (val) {
                     return val + " คน"
                 }
             }
+        },
+        xaxis: {
+            categories: ['รูปแบบที่ 1', 'รูปแบบที่ 2', 'รูปแบบที่ 3', 'รูปแบบที่ 4', 'รูปแบบที่ 5',
+            'รูปแบบที่ 6', 'รูปแบบที่ 7', 'รูปแบบที่ 8', 'รูปแบบที่ 9', 'รูปแบบที่ 10', 'รูปแบบที่ 11', 'รูปแบบที่ 12']
         }
     })
 
-    const [series, setSeries] = useState([])
-    const [dataName, setDataName] = useState([])
+    const [series, setSeries] = useState([
+        {
+            name: 'เพศชาย',
+            data: [50, 50, 50, 50, 50]
+        },
+        {
+            name: 'เพศหญิง',
+            data: [50, 50, 50, 50, 50]
+        }
+    ])
 
     useEffect(() => {
         fetchData()
@@ -67,7 +67,6 @@ const BarHospital2 = () => {
     const namelist = async (token, value) => {
         try {
             var list = await Sheetapi.getSheet(token, value)
-            setDataName(_.flatten(list))
 
             setOptions({
                 xaxis: {
@@ -92,51 +91,24 @@ const BarHospital2 = () => {
 
     return (
         <React.Fragment>
-            <div className="warp-chart-small">
-                <Chart options={options}
-                    series={series}
-                    type="bar"
-                    height="300"
-                    width="290"
-                />
-            </div>
-
-            <div className="warp-chart-mobile">
-                <Chart options={options}
-                    series={series}
-                    type="bar"
-                    height="300"
-                    width="400"
-                />
-            </div>
-
-            <div className="warp-chart-tablets">
-                <Chart options={options}
-                    series={series}
-                    type="bar"
-                    height="325"
-                    width="450"
-                />
-            </div>
-
-            <div className="warp-chart-desktops">
-                <Chart options={options}
-                    series={series}
-                    type="bar"
-                    height="350"
-                    width="500"
-                />
-            </div>
-
-            <div className="warp-chart-large">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="bar"
-                    height="350"
-                    width="450"
-                />
-            </div>
+            {
+                isSmallScreen ?
+                    <Chart
+                        options={options}
+                        series={series}
+                        type="bar"
+                        height="300"
+                        width="300"
+                    />
+                    :
+                    <Chart
+                        options={options}
+                        series={series}
+                        type="bar"
+                        height="400"
+                        width="600"
+                    />
+            }
         </React.Fragment>
     )
 }

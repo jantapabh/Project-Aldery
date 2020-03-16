@@ -1,9 +1,24 @@
-import React, { useState } from 'react'
-import dynamic from 'next/dynamic'
-import Footer from '../../components/layout/footer';
-import _ from 'lodash'
+import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
+import _ from 'lodash';
 import Dashboard from '../../components/layout/dashboard';
+import { useMediaQuery } from 'react-responsive';
+import Empty from '../../components/Empty';
 
+const PieHelp = dynamic(
+    () => import('../../components/chart/pieHelp'),
+    { ssr: false }
+)
+
+const LineHelp = dynamic(
+    () => import('../../components/chart/lineHelp'),
+    { ssr: false }
+)
+
+const PieDoc = dynamic(
+    () => import('../../components/chart/pieDoc'),
+    { ssr: false }
+)
 
 const PieService = dynamic(
     () => import('../../components/chart/pieService'),
@@ -17,24 +32,54 @@ const PieService2 = dynamic(
 
 const Service = () => {
 
+    const isLaptop = useMediaQuery({ minDeviceWidth: 1224 })
+    const isTablet = useMediaQuery({ minWidth: 768 })
+    const isMobile = useMediaQuery({ maxDeviceWidth: 768 })
+
     const [status, setStatus] = useState(false)
+    const [tokenError, setTokenError] = useState(false)
 
     const statusMain = (order) => {
         setStatus(order)
     }
+    const statusToken = (token) => {
+        setTokenError(token)
+    }
 
     return (
+
         <div className="warp-main">
-            <Dashboard onStatusMain={statusMain} statusMain={status} />
-            <div className={`wrapper${status ? " menuDisplayed" : ""}`}>
-                <div className="page-content-wrapper">
-                    <div className="container-fluid">
-                        <h1 className="text-center">หน่วยงานเเละการบริการ</h1>
-                        <h4 className="text-center">ของประชากรผู้สูงอายุภายในตำบลกะทู้ อำเภอกะทู้ จังหวัดภูเก็ต</h4>
-                        <h2 className="small text-center"></h2>
+
+            {
+                !tokenError ? <React.Fragment>
+                    <Dashboard onStatusMain={statusMain} statusMain={status} />
+                    <div className="page-content-main">
+                        <div className="container-fluid-main">
+                            <h1 className="text-center">หน่วยงานภาครัฐ</h1>
+                            <h2 className="small text-center">สวัสดิการ การเข้าร่วมกิจกรรม และการช่วยเหลือ</h2>
+                            {
+
+                                <div className="info-main">
+                                    <div className="warp-chart-main ">
+                                        <div className="chart-row">
+                                            <PieHelp onToken={statusToken} />
+                                            <LineHelp />
+                                        </div>
+                                        <div className="chart-row">
+                                            <PieDoc />
+                                            <PieService />
+                                            <PieService2 />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
+                        </div>
                     </div>
-                </div>
-            </div>
+                </React.Fragment>
+                    :
+                    <Empty />
+            }
 
         </div>
     )

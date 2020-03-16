@@ -11,22 +11,22 @@ const Dashboard = props => {
 
     const [main, setMain] = useState(
         [
-            { name: "หน้าหลัก", href: "/" },
-            { name: "เกี่ยวกับเรา", href: "/" },
-            { name: "ข่าวสาร", href: "/" },
+            { name: "ข้อมูลทั่วไป", href: "/main" },
+            { name: "ข้อมูลด้านสุขภาพ", href: "/main/hospital" },
+            { name: "ข้อมูลด้านสังคม", href: "/main/social" },
+            { name: "ข้อมูลด้านเศรษฐกิจ", href: "/main/economy" },
+            { name: "ข้อมูลด้านการช่วยเหลือ", href: "/main/service" },
+
         ]
     )
 
     const [sidebar, setSidebar] = useState(
         [
-            { name: "รายงานความคืบหน้า", href: "/main/people" },
-            { name: "ข้อมูลทางสถิติ", href: "/main/chart" },
-            { name: "สวัสดิการจากรัฐ", href: "/main/doc" },
-            { name: "การบริการ", href: "/main/service" },
-            { name: "สภาพทางสังคม", href: "/main/social" },
-            { name: "ด้านเศรษฐกิจ", href: "/main/economy" },
-            { name: "โรงพยาบาล", href: "/main/hospital" },
-            { name: "ช่วยเหลือ", href: "/main/help" }
+            { name: "ข้อมูลทั่วไป", href: "/main" },
+            { name: "ข้อมูลด้านสุขภาพ", href: "/main/hospital" },
+            { name: "ข้อมูลด้านสังคม", href: "/main/social" },
+            { name: "ข้อมูลด้านเศรษฐกิจ", href: "/main/economy" },
+            { name: "ข้อมูลด้านการช่วยเหลือ", href: "/main/service" },
         ]
     )
 
@@ -45,7 +45,7 @@ const Dashboard = props => {
     return (
         <React.Fragment>
             <NavBar name="main" tab={isSmallScreen ? sidebar : main} confirm={onConfirm} status={status} />
-            <Sidebar  status={status} />
+            {/* <Sidebar  status={status} /> */}
         </React.Fragment>
     )
 }

@@ -1,25 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
+import { useMediaQuery } from 'react-responsive';
 
 const PieSocial2 = () => {
+
+    const isBigScreen = useMediaQuery({ minDeviceWidth: 1281 })
+    const isMobile = useMediaQuery({ maxWidth: 1280 })
+    const isSmallScreen = useMediaQuery({ maxWidth: 576 })
+    
     const [options, setOptions] = useState({
         title: { text: "สภาพบ้านของประชากรผู้สูงอายุ" },
         legend: {
             position: 'bottom'
         },
-        responsive: [{
-            breakpoint: 900,
-            options: {
-                chart: {
-                    width: 300
-                },
-                legend: {
-                    position: 'bottom'
-                },
-                dataLabels: { enabled: false }
-            }
-        }],
+        dataLabels: { enabled: false },
 
         tooltip: {
             y: {
@@ -28,11 +23,10 @@ const PieSocial2 = () => {
                 }
             }
         },
-
+        labels: ['รูปแบบที่ 1', 'รูปแบบที่ 2', 'รูปแบบที่ 3', 'รูปแบบที่ 4', 'รูปแบบที่ 5'],
         colors: ['#7bdcb5', '#d3b3e5', '#ffd54f', '#90a4ae']
     })
 
-    const [dataname, setDataName] = useState([])
     const [series, setSeries] = useState([])
 
     useEffect(() => {
@@ -70,13 +64,38 @@ const PieSocial2 = () => {
     }
 
     return (
-        <Chart
-            options={options}
-            series={series}
-            type="pie"
-            height="250"
-            width="450"
-        />
+        <React.Fragment>
+            {
+                isBigScreen ?
+                    <Chart
+                        options={options}
+                        series={series}
+                        type="donut"
+                        width="400"
+                        height="200"
+                    />
+                    :
+                    isMobile ?
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="donut"
+                            width="300"
+                            height="200"
+                        />
+                        :
+                        isSmallScreen ?
+                            <Chart
+                                options={options}
+                                series={series}
+                                type="donut"
+                                width="200"
+                                height="100"
+                            />
+                            :
+                            null
+            }
+        </React.Fragment>
     )
 }
 export default PieSocial2;

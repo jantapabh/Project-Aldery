@@ -1,24 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
-
+import { useMediaQuery } from 'react-responsive';
 
 const PieHospital2 = () => {
+
+    const isBigScreen = useMediaQuery({ minDeviceWidth: 1281 })
+    const isMobile = useMediaQuery({ maxWidth: 1280 })
+    const isSmallScreen = useMediaQuery({ maxWidth: 576 })
+
     const [options, setOptions] = useState({
         title: { text: "สภาพความพิการ" },
-
-        responsive: [{
-            breakpoint: 700,
-            options: {
-                chart: {
-                    width: 300
-                },
-                legend: {
-                    position: 'bottom'
-                },
-                dataLabels: { enabled: false },
-            }
-        }],
+        dataLabels: { enabled: false },
         tooltip: {
             y: {
                 formatter: function (val) {
@@ -26,12 +19,15 @@ const PieHospital2 = () => {
                 }
             }
         },
+        legend: {
+            position: 'bottom'
+        },
         colors: ['#2196f3', '#00d084', '#ffc107',
-            '#eb144c', '#673ab7', '#abb8c3',
-            '#f78da7', '#ff6900', '#7bdcb5']
+            '#eb144c', '#673ab7', '#ff6900', '#7bdcb5'],
+        labels: ['รูปแบบที่ 1', 'รูปแบบที่ 2', 'รูปแบบที่ 3', 'รูปแบบที่ 4', 'รูปแบบที่ 5', 'รูปแบบที่ 6', 'รูปแบบที่ 7']
     })
 
-    const [series, setSeries] = useState([])
+    const [series, setSeries] = useState([20, 20, 20, 20])
 
     useEffect(() => {
         fetchData()
@@ -69,55 +65,25 @@ const PieHospital2 = () => {
 
     return (
         <React.Fragment>
-            <div className="warp-chart-small">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="pie"
-                    width="500"
-                    height="300"
-                />
-            </div>
+            {
 
-            <div className="warp-chart-mobile">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="pie"
-                    width="500"
-                    height="300"
-                />
-            </div>
-
-            <div className="warp-chart-tablets">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="pie"
-                    width="500"
-                    height="250"
-                />
-            </div>
-
-            <div className="warp-chart-desktops">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="pie"
-                    width="500"
-                    height="250"
-                />
-            </div>
-
-            <div className="warp-chart-large">
-                <Chart
-                    options={options}
-                    series={series}
-                    type="pie"
-                    width="500"
-                    height="250"
-                />
-            </div>
+                isSmallScreen ?
+                    <Chart
+                        options={options}
+                        series={series}
+                        type="donut"
+                        width="200"
+                        height="100"
+                    />
+                    :
+                    <Chart
+                        options={options}
+                        series={series}
+                        type="donut"
+                        width="400"
+                        height="200"
+                    />
+            }
         </React.Fragment>
     )
 }

@@ -1,5 +1,6 @@
 $font-color: #071d40 !important;
 $font-header: "Frank Ruhl Libre" !important;
+$font-base: "Prompt", sans-serif;
 $primary-color: #39b54a !important;
 $line-color: #e8e9fe;
 
@@ -32,6 +33,8 @@ $line-color: #e8e9fe;
 
 .warp-main {
   ul {
+    cursor: pointer;
+    user-select: none;
     margin-left: 0;
     li.hamberger-active {
       padding-left: 250px;

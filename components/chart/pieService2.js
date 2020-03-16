@@ -1,22 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
+import { useMediaQuery } from 'react-responsive';
 
 const PieService2 = () => {
+    const isBigScreen = useMediaQuery({ minDeviceWidth: 1281 })
+    const isMobile = useMediaQuery({ maxWidth: 1280 })
+    const isSmallScreen = useMediaQuery({ maxWidth: 576 })
+
     const [options, setOptions] = useState({
         title: { text: "การเข้าร่วมกิจกรรมทางศาสนกิจ" },
-        responsive: [{
-            breakpoint: 900,
-            options: {
-                chart: {
-                    width: 300
-                },
-                legend: {
-                    position: 'bottom'
-                },
-                dataLabels: { enabled: false }
-            }
-        }],
+        legend: {
+            position: 'bottom'
+        },
+        dataLabels: { enabled: false },
         tooltip: {
             y: {
                 formatter: function (val) {
@@ -24,10 +21,11 @@ const PieService2 = () => {
                 }
             }
         },
-        colors: ['#8ed1fc', '#7bdcb5', '#d3b3e5']
+        colors: ['#8ed1fc', '#7bdcb5', '#d3b3e5'],
+        labels: ['รูปแบบที่ 1', 'รูปแบบที่ 2', 'รูปแบบที่ 3']
     })
 
-    const [series, setSeries] = useState([])
+    const [series, setSeries] = useState([20, 25, 50])
 
     useEffect(() => {
         fetchData()
@@ -64,14 +62,38 @@ const PieService2 = () => {
     }
 
     return (
-        <Chart
-            options={options}
-            series={series}
-            type="pie"
-            height="300"
-            width="500"
-
-        />
+        <React.Fragment>
+            {
+                isBigScreen ?
+                    <Chart
+                        options={options}
+                        series={series}
+                        type="donut"
+                        width="400"
+                        height="200"
+                    />
+                    :
+                    isMobile ?
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="donut"
+                            width="300"
+                            height="200"
+                        />
+                        :
+                        isSmallScreen ?
+                            <Chart
+                                options={options}
+                                series={series}
+                                type="donut"
+                                width="200"
+                                height="100"
+                            />
+                            :
+                            null
+            }
+        </React.Fragment>
     )
 }
 export default PieService2;

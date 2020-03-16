@@ -63,9 +63,14 @@ const NavBar = props => {
                     isBigScreen && name == "main" ?
                         <nav>
                             <ul >
-                                <li className={`hamberger-${status ? "active" : "non-active"}`}>
+                                {/* <li className={`hamberger-${status ? "active" : "non-active"}`}>
                                     <img src="/static/hamberger.svg" alt="hamberger" onClick={collapsible} />
-                                </li>
+                                </li> */}
+                                <Link href="/">
+                                    <li>
+                                        <p>ย้อนกลับ</p>
+                                    </li>
+                                </Link>
                                 <li>
                                     {
                                         tab.map((item, index) => {

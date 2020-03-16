@@ -1,66 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts'
 import Sheetapi from '../../config/api'
+import { useMediaQuery } from 'react-responsive';
 
 
 const PieEconomy3 = () => {
+  const isBigScreen = useMediaQuery({ minDeviceWidth: 1281 })
+  const isMobile = useMediaQuery({ maxWidth: 1280 })
+  const isSmallScreen = useMediaQuery({ maxWidth: 576 })
+
   const [options, setOptions] = useState({
     title: { text: "การออมของประชากรผู้สูงอายุ" },
-    plotOptions: {
-      radialBar: {
-        offsetY: -5,
-        startAngle: 0,
-        endAngle: 270,
-        hollow: {
-          margin: 5,
-          size: '30%',
-          background: 'transparent',
-          image: undefined,
-        },
-        dataLabels: {
-          name: {
-            show: false,
-
-          },
-          value: {
-            show: false,
-          }
+    dataLabels: { enabled: false },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return val + " คน"
         }
       }
     },
-    colors: ['#1ab7ea', '#0084ff', '#39539E', '#0077B5'],
     legend: {
-      show: true,
-      floating: true,
-      fontSize: '16px',
-      position: 'left',
-      offsetX: 10,
-      offsetY: 70,
-      labels: {
-        useSeriesColors: true,
-      },
-      markers: {
-        size: 0
-      },
-      formatter: function (seriesName, opts) {
-        return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex] + " คน "
-      },
-      itemMargin: {
-        horizontal: 1,
-      }
+      position: 'bottom'
     },
-    responsive: [{
-      breakpoint: 480,
-      options: {
-        legend: {
-          show: false
-        }
-      }
-    }
-    ]
+    labels: ['รูปแบบที่ 1', 'รูปแบบที่ 2'],
+    colors: ['#00d084', '#eb144c'],
   })
 
-  const [series, setSeries] = useState([])
+  const [series, setSeries] = useState([50, 50])
 
   useEffect(() => {
     fetchData()
@@ -99,13 +65,38 @@ const PieEconomy3 = () => {
 
 
   return (
-    <Chart
-      options={options}
-      series={series}
-      type="radialBar"
-      height="350"
-      width="400"
-    />
+    <React.Fragment>
+      {
+        isBigScreen ?
+          <Chart
+            options={options}
+            series={series}
+            type="donut"
+            width="400"
+            height="200"
+          />
+          :
+          isMobile ?
+            <Chart
+              options={options}
+              series={series}
+              type="donut"
+              width="300"
+              height="200"
+            />
+            :
+            isSmallScreen ?
+              <Chart
+                options={options}
+                series={series}
+                type="donut"
+                width="200"
+                height="100"
+              />
+              :
+              null
+      }
+    </React.Fragment>
   )
 }
 export default PieEconomy3;

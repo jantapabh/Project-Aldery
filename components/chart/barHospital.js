@@ -1,31 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import Chart from 'react-apexcharts'
-import Sheetapi from '../../config/api'
-
+import Chart from 'react-apexcharts';
+import Sheetapi from '../../config/api';
+import { useMediaQuery } from 'react-responsive';
 
 const BarHospital = () => {
+  const isSmallScreen = useMediaQuery({ maxWidth: 768 })
   const [options, setOptions] = useState({
 
     title: {
       text: 'สถานพยาบาลที่ใช้ประจำของผู้สูงอายุ',
       align: 'left'
     },
-    plotOptions: {
-      bar: { horizontal: true }
-    },
-    responsive: [{
-      breakpoint: 1000,
-      options: {
-        plotOptions: {
-          bar: {
-            horizontal: false
-          }
-        },
-        legend: {
-          position: "bottom"
-        }
-      }
-    }],
     dataLabels: { enabled: false },
     tooltip: {
       y: {
@@ -33,10 +18,18 @@ const BarHospital = () => {
           return val + " คน"
         }
       }
-    }
+    },
+    legend: {
+      position: 'bottom'
+    },
+    colors: ['#2196f3', '#00d084', '#ffc107',
+      '#eb144c', '#673ab7', '#ff6900', '#455a64','#f44336'],
+
+    labels: ['รูปแบบที่ 1', 'รูปแบบที่ 2', 'รูปแบบที่ 3', 'รูปแบบที่ 4',
+      'รูปแบบที่ 5', 'รูปแบบที่ 6', 'รูปแบบที่ 7', 'รูปแบบที่ 8']
   })
-  const [series, setSeries] = useState([])
-  const [dataName, setDataName] = useState([])
+
+  const [series, setSeries] = useState([20, 20, 20, 20])
 
   useEffect(() => {
     fetchData()
@@ -46,30 +39,27 @@ const BarHospital = () => {
 
     let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
     await namelist(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!V74:V81')
-    await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!X74:X81', 'ข้อมูลการวิเคราะห์ทางสถิติ!Y74:Y81')
+    await listData(userOauth.data.access_token, 'ข้อมูลการวิเคราะห์ทางสถิติ!W74:W81')
   }
 
   const namelist = async (token, value) => {
     try {
       var list = await Sheetapi.getSheet(token, value)
-      setDataName(_.flatten(list))
 
       setOptions({
-        xaxis: {
-          categories: _.flatten(list),
-        }
+        labels: _.flatten(list)
       })
     } catch (err) {
       console.log(err);
     }
   }
 
-  const listData = async (token, value1, value2) => {
+  const listData = async (token, value) => {
     try {
 
-      var man = await Sheetapi.getSheet(token, value1)
-      var woman = await Sheetapi.getSheet(token, value2)
-      setSeries([{ name: "เพศชาย", data: _.flatten(man) }, { name: "เพศหญิง", data: _.flatten(woman) }])
+      var result = await Sheetapi.getSheet(token, value)
+      var data = _.flatten(result).map(Number)
+      setSeries(data)
     } catch (err) {
       console.log(err);
     }
@@ -77,51 +67,24 @@ const BarHospital = () => {
 
   return (
     <React.Fragment>
-      <div className="warp-chart-small">
-        <Chart options={options}
-          series={series}
-          type="bar"
-          height="300"
-          width="290"
-        />
-      </div>
-
-      <div className="warp-chart-mobile">
-        <Chart options={options}
-          series={series}
-          type="bar"
-          height="300"
-          width="400"
-        />
-      </div>
-
-      <div className="warp-chart-tablets">
-        <Chart options={options}
-          series={series}
-          type="bar"
-          height="325"
-          width="450"
-        />
-      </div>
-
-      <div className="warp-chart-desktops">
-        <Chart options={options}
-          series={series}
-          type="bar"
-          height="350"
-          width="500"
-        />
-      </div>
-
-      <div className="warp-chart-large">
-        <Chart
-          options={options}
-          series={series}
-          type="bar"
-          height="350"
-          width="450"
-        />
-      </div>
+      {
+        isSmallScreen ?
+          <Chart
+            options={options}
+            series={series}
+            type="donut"
+            width="200"
+            height="100"
+          />
+          :
+          <Chart
+            options={options}
+            series={series}
+            type="donut"
+            width="400"
+            height="200"
+          />
+      }
     </React.Fragment>
   )
 }

@@ -144,9 +144,7 @@ const MainPage = () => {
                                 </div>
                             </React.Fragment>
                             :
-                            <React.Fragment>
-                                <Empty />
-                            </React.Fragment>
+                            <Empty />
                 }
             </div >
         </React.Fragment>
