@@ -48,40 +48,44 @@ const Service = () => {
 
     return (
 
-        <div className="warp-main">
+        <React.Fragment>
+            <Head>
+                <title>Eldery Dashboard</title>
+                <link rel='icon' href='/static/logomain.svg' />
+            </Head>
+            <div className="warp-main">
+                {
+                    !tokenError ? <React.Fragment>
+                        <Dashboard onStatusMain={statusMain} statusMain={status} />
+                        <div className="page-content-main">
+                            <div className="container-fluid-main">
+                                <h1 className="text-center">หน่วยงานภาครัฐ</h1>
+                                <h2 className="small text-center">สวัสดิการ การเข้าร่วมกิจกรรม และการช่วยเหลือ</h2>
+                                {
 
-            {
-                !tokenError ? <React.Fragment>
-                    <Dashboard onStatusMain={statusMain} statusMain={status} />
-                    <div className="page-content-main">
-                        <div className="container-fluid-main">
-                            <h1 className="text-center">หน่วยงานภาครัฐ</h1>
-                            <h2 className="small text-center">สวัสดิการ การเข้าร่วมกิจกรรม และการช่วยเหลือ</h2>
-                            {
-
-                                <div className="info-main">
-                                    <div className="warp-chart-main ">
-                                        <div className="chart-row">
-                                            <PieHelp onToken={statusToken} />
-                                            <LineHelp />
-                                        </div>
-                                        <div className="chart-row">
-                                            <PieDoc />
-                                            <PieService />
-                                            <PieService2 />
+                                    <div className="info-main">
+                                        <div className="warp-chart-main ">
+                                            <div className="chart-row">
+                                                <PieHelp onToken={statusToken} />
+                                                <LineHelp />
+                                            </div>
+                                            <div className="chart-row">
+                                                <PieDoc />
+                                                <PieService />
+                                                <PieService2 />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-
-                            }
+                                }
+                            </div>
                         </div>
-                    </div>
-                </React.Fragment>
-                    :
-                    <Empty />
-            }
+                    </React.Fragment>
+                        :
+                        <Empty />
+                }
 
-        </div>
+            </div>
+        </React.Fragment>
     )
 }
 export default Service

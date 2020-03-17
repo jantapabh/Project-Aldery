@@ -48,40 +48,48 @@ const Economy = () => {
     }
 
     return (
-        <div className="warp-main">
-            {
 
-                !tokenError ?
-                    <React.Fragment>
-                        <Dashboard onStatusMain={statusMain} statusMain={status} />
-                        <div className="page-content-main">
-                            <div className="container-fluid-main">
-                                <h1 className="text-center">ข้อมูลด้านเศรษฐกิจ</h1>
-                                <h2 className="small text-center">ของประชากรผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h2>
+        <React.Fragment>
+            <Head>
+                <title>Eldery Dashboard</title>
+                <link rel='icon' href='/static/logomain.svg' />
+            </Head>
+            <div className="warp-main">
+                {
 
-                                <div className="info-main">
-                                    <div className="warp-chart-main ">
-                                        <div className="chart-row">
-                                            <PieEconomy onToken={statusToken} />
-                                            <BarEconomy />
-                                        </div>
-                                        <div className="chart-row">
-                                            <PieEconomy2 />
-                                            <BarEconomy2 />
-                                        </div>
+                    !tokenError ?
+                        <React.Fragment>
+                            <Dashboard onStatusMain={statusMain} statusMain={status} />
+                            <div className="page-content-main">
+                                <div className="container-fluid-main">
+                                    <h1 className="text-center">ข้อมูลด้านเศรษฐกิจ</h1>
+                                    <h2 className="small text-center">ของประชากรผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h2>
 
-                                        <div className="chart-row">
-                                            <BarEconomy3 />
+                                    <div className="info-main">
+                                        <div className="warp-chart-main ">
+                                            <div className="chart-row">
+                                                <PieEconomy onToken={statusToken} />
+                                                <BarEconomy />
+                                            </div>
+                                            <div className="chart-row">
+                                                <PieEconomy2 />
+                                                <BarEconomy2 />
+                                            </div>
+
+                                            <div className="chart-row">
+                                                <BarEconomy3 />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </React.Fragment>
-                    :
-                    <Empty />
-            }
-        </div>
+                        </React.Fragment>
+                        :
+                        <Empty />
+                }
+            </div>
+        </React.Fragment>
+
     )
 }
 export default Economy;

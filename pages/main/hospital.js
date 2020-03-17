@@ -53,46 +53,53 @@ const Hospital = () => {
     }
 
     return (
-        <div className="warp-main">
-            {
+        <React.Fragment>
+            <Head>
+                <title>Eldery Dashboard</title>
+                <link rel='icon' href='/static/logomain.svg' />
+            </Head>
+            <div className="warp-main">
+                {
 
-                !tokenError ?
-                    <React.Fragment>
-                        <Dashboard onStatusMain={statusMain} statusMain={status} />
-                        <div className="page-content-main">
-                            <div className="container-fluid-main">
-                                <h1 className="text-center">ข้อมูลด้านสุขภาพ</h1>
-                                <h2 className="small text-center">ของประชากรผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h2>
+                    !tokenError ?
+                        <React.Fragment>
+                            <Dashboard onStatusMain={statusMain} statusMain={status} />
+                            <div className="page-content-main">
+                                <div className="container-fluid-main">
+                                    <h1 className="text-center">ข้อมูลด้านสุขภาพ</h1>
+                                    <h2 className="small text-center">ของประชากรผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h2>
 
-                                <div className="info-main">
-                                    <div className="warp-chart-main ">
-                                        <div className="chart-row">
-                                            <PieHospital onToken={statusToken} />
-                                            <BarHospital />
-                                        </div>
+                                    <div className="info-main">
+                                        <div className="warp-chart-main ">
+                                            <div className="chart-row">
+                                                <PieHospital onToken={statusToken} />
+                                                <BarHospital />
+                                            </div>
 
-                                        <div className="chart-row">
-                                            <PieHospital2 />
-                                            <BarHospital2 />
-                                        </div>
+                                            <div className="chart-row">
+                                                <PieHospital2 />
+                                                <BarHospital2 />
+                                            </div>
 
-                                        <div className="chart-row">
-                                            <PieHospital3 />
-                                            <BarHospital3 />
+                                            <div className="chart-row">
+                                                <PieHospital3 />
+                                                <BarHospital3 />
+                                            </div>
+
                                         </div>
 
                                     </div>
 
                                 </div>
-
                             </div>
-                        </div>
-                    </React.Fragment>
-                    :
-                    <Empty />
-            }
+                        </React.Fragment>
+                        :
+                        <Empty />
+                }
 
-        </div>
+            </div>
+        </React.Fragment>
+
     )
 }
 export default Hospital;
