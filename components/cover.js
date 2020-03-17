@@ -23,7 +23,7 @@ const Cover = () => {
                                     </div>
                                 </div>
                                 <Link href="/main">
-                                    <h5>เข้าสู่ระบบ</h5>
+                                    <h5>เข้าสู่หน้าหลัก</h5>
                                 </Link>
                             </div>
                         </div>
@@ -46,7 +46,7 @@ const Cover = () => {
                                 </div>
 
                                 <Link href="/main">
-                                    <h5 className="animated zoomIn delay-1s" >เข้าสู่ระบบ</h5>
+                                    <h5 className="animated zoomIn delay-1s" >เข้าสู่หน้าหลัก</h5>
                                 </Link>
                             </div>
                             <div className="cover">
