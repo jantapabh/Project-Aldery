@@ -17,7 +17,7 @@ const Home = () => {
       { name: "เกี่ยวกับเรา", href: "/" },
       { name: "ข่าวสาร", href: "/" },
       { name: "ติดต่อ", href: "/index/contact" },
-      { name: "เข้าสู่เว็บหน้าหลัก", href: "/main" }
+      { name: "เข้าสู่หน้าหลัก", href: "/main" }
     ]
   )
 

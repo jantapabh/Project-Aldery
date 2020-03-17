@@ -42,7 +42,7 @@ const NavBar = props => {
                                                     item.name == "ติดต่อ" ?
                                                         <p className="li-buttom-line">{item.name}</p>
                                                         :
-                                                        item.name == "เข้าสู่ระบบ" ?
+                                                        item.name == "เข้าสู่หน้าหลัก" ?
                                                             <p className="li-buttom-line-active">{item.name}</p>
                                                             :
                                                             <React.Fragment>
