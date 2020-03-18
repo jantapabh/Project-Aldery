@@ -22,7 +22,7 @@ const PieService2 = () => {
             }
         },
         colors: ['#8ed1fc', '#7bdcb5', '#d3b3e5'],
-        labels: ['รูปแบบที่ 1', 'รูปแบบที่ 2', 'รูปแบบที่ 3']
+        labels: ["เข้าร่วมประจำ", "เข้าร่วมนานๆ ครั้ง", "ไม่เข้าร่วม"]
     })
 
     const [series, setSeries] = useState([20, 25, 50])

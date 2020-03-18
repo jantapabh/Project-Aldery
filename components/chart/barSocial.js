@@ -30,8 +30,7 @@ const BarSocial = props => {
             }
         },
         xaxis: {
-            categories: ['รูปแบบที่ 1', 'รูปแบบที่ 2', 'รูปแบบที่ 3',
-                'รูปแบบที่ 4', 'รูปแบบที่ 5', 'รูปแบบที่ 6']
+            categories: ["ที่ดินของตนเอง", "อาศัยที่ดินญาติ", "ที่ดินสาธารณะ/ที่ดินของรัฐ", "ที่ดินวัด/มัสยิด", "ที่ดินเอกชน/เช่าที่เอกชน", "อื่นๆ"]
         }
     })
 
@@ -60,6 +59,7 @@ const BarSocial = props => {
     const namelist = async (token, value) => {
         try {
             var list = await Sheetapi.getSheet(token, value)
+
             setOptions({
                 xaxis: {
                     categories: _.flatten(list)

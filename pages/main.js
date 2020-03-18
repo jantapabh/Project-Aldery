@@ -34,7 +34,7 @@ const MainPage = () => {
     const isTablet = useMediaQuery({ minWidth: 768 })
     const isMobile = useMediaQuery({ maxDeviceWidth: 768 })
 
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const [completed, setCompleted] = useState(0);
 
     const [status, setStatus] = useState(false)

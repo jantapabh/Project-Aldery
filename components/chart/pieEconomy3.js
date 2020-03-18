@@ -22,7 +22,7 @@ const PieEconomy3 = () => {
     legend: {
       position: 'bottom'
     },
-    labels: ['รูปแบบที่ 1', 'รูปแบบที่ 2'],
+    labels: ["มีการออม", "ไม่มีการออม"],
     colors: ['#00d084', '#eb144c'],
   })
 

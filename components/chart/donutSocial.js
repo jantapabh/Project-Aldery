@@ -23,7 +23,7 @@ const DonutSocial = props => {
                 }
             }
         },
-        labels: ['รูปแบบที่ 1', 'รูปแบบที่ 2', 'รูปแบบที่ 3', 'รูปแบบที่ 4', 'รูปแบบที่ 5'],
+        labels: ["บ้านของตนเอง", "อาศัยกับครอบครัวเดิม", "อาศัยญาติ/พี่น้อง", "บ้านเช่า", "อื่นๆ"]
     })
 
     const [series, setSeries] = useState([20, 20, 20, 20])
@@ -64,7 +64,7 @@ const DonutSocial = props => {
 
     return (
         <React.Fragment>
-           {
+            {
                 isBigScreen ?
                     <Chart
                         options={options}

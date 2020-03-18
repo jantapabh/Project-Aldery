@@ -8,7 +8,7 @@ const PieSocial2 = () => {
     const isBigScreen = useMediaQuery({ minDeviceWidth: 1281 })
     const isMobile = useMediaQuery({ maxWidth: 1280 })
     const isSmallScreen = useMediaQuery({ maxWidth: 576 })
-    
+
     const [options, setOptions] = useState({
         title: { text: "สภาพบ้านของประชากรผู้สูงอายุ" },
         legend: {
@@ -23,11 +23,11 @@ const PieSocial2 = () => {
                 }
             }
         },
-        labels: ['รูปแบบที่ 1', 'รูปแบบที่ 2', 'รูปแบบที่ 3', 'รูปแบบที่ 4', 'รูปแบบที่ 5'],
+        labels: ["สภาพบ้านเหมาะสม เพียงพอต่อการพักอาศัย", "สภาพบ้านคับเเคบ ไม่เพียงพอต่อการพักอาศัย"],
         colors: ['#7bdcb5', '#d3b3e5', '#ffd54f', '#90a4ae']
     })
 
-    const [series, setSeries] = useState([])
+    const [series, setSeries] = useState([50,50])
 
     useEffect(() => {
         fetchData()

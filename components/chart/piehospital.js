@@ -22,10 +22,10 @@ const PieHospital = props => {
                 }
             }
         },
-        labels: ['รูปแบบที่ 1', 'รูปแบบที่ 2', 'รูปแบบที่ 3', 'รูปแบบที่ 4']
+        labels: ["สมบูรณ์เเข็งเเรง", "ดูเเลช่วยเหลือตนเองได้", "ต้องได้รับการช่วยเหลือบ้าง", "ช่วยเหลือตนเองไม่ได้"]
     })
 
-    const [series, setSeries] = useState([25,25,25,25])
+    const [series, setSeries] = useState([25, 25, 25, 25])
 
     useEffect(() => {
         fetchData()
