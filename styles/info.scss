@@ -9,17 +9,22 @@ $small-text: 0.9rem !important;
     display: flex;
     justify-content: space-evenly;
 
-    // @media (max-width: 1024px) {
-    //   flex-direction: column;
-    //   align-items: center;
-
-    // }
+    @media (max-width: 575.98px) {
+      flex-direction: column;
+      align-items: center;
+    }
 
     .container-data {
       @media (max-width: 1024px) {
         width: 60%;
         padding: 1rem;
       }
+
+      @media (max-width: 575.98px) {
+        width: 100%;
+        padding: 0.5rem;
+      }
+
       width: 50%;
       padding: 0 4rem 0 2rem;
       .title-data {
@@ -35,6 +40,9 @@ $small-text: 0.9rem !important;
       .content-data {
         display: flex;
         justify-content: start;
+        @media (max-width: 575.98px) {
+          flex-direction: column;
+        }
 
         // padding: 1rem;
         border: $border;
@@ -45,6 +53,10 @@ $small-text: 0.9rem !important;
           display: flex;
           flex-direction: column;
           margin-right: 2rem;
+          @media (max-width: 575.98px) {
+            margin-right: 0;
+          }
+
           .card-data {
             margin: 0;
             .title {
@@ -75,6 +87,11 @@ $small-text: 0.9rem !important;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
+
+          @media (max-width: 575.98px) {
+            align-items: center;
+            border-left: none;
+          }
 
           .title-other-data {
             display: flex;
@@ -108,12 +125,22 @@ $small-text: 0.9rem !important;
       @media (max-width: 1024px) {
         width: 40%;
       }
+
+      @media (max-width: 575.98px) {
+        width: 100%;
+      }
+
       width: 50%;
       .head-agency {
         display: flex;
         align-items: center;
         padding-left: 3rem;
         margin-bottom: 1rem;
+        @media (max-width: 575.98px) {
+          padding-left: 1rem;
+          justify-content: flex-start;
+        }
+
         h2 {
           padding: 0;
         }
@@ -127,6 +154,10 @@ $small-text: 0.9rem !important;
           flex-direction: column;
           padding: 1rem;
           align-items: flex-start;
+        }
+
+        @media (max-width: 575.98px) {
+          margin-bottom: 0;
         }
       }
       .main-agency {
@@ -163,6 +194,9 @@ $small-text: 0.9rem !important;
                 color: #79d2ae !important;
               }
             }
+            p {
+              margin-bottom: 0 !important;
+            }
           }
         }
       }
@@ -172,6 +206,12 @@ $small-text: 0.9rem !important;
         flex-direction: column;
         align-items: flex-start;
         padding-left: 4rem;
+
+        @media (max-width: 575.98px) {
+          margin-top: 1rem;
+          padding-left: 1rem;
+        }
+
         .detail-main-agency {
           a {
             p.p-click {

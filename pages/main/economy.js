@@ -57,7 +57,6 @@ const Economy = () => {
             </Head>
             <div className="warp-main">
                 {
-
                     !tokenError ?
                         <React.Fragment>
                             <Dashboard onStatusMain={statusMain} statusMain={status} />
