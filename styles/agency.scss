@@ -72,6 +72,10 @@ $font-color-text-in-border: white !important;
     display: flex;
     justify-content: space-evenly;
     margin: 1rem;
+
+    @media (max-width: 575.98px) {
+      justify-content: start !important;
+    }
     img {
       width: 20rem;
       height: 15rem;
@@ -101,8 +105,15 @@ $font-color-text-in-border: white !important;
 }
 .ant-steps-item-title {
   width: 20rem !important;
+  @media (max-width: 575.98px) {
+    margin-left: 1rem;
+  }
 }
 
 .ant-steps-item-description {
   width: 20rem !important;
+
+  @media (max-width: 575.98px) {
+    margin-left: 1rem;
+  }
 }

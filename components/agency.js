@@ -7,6 +7,7 @@ const Agency = () => {
 
     const isTablet = useMediaQuery({ maxDeviceWidth: 1025 })
     const isMobile = useMediaQuery({ maxDeviceWidth: 768 })
+    const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
 
     const [card, setCard] = useState([
         {
@@ -38,10 +39,8 @@ const Agency = () => {
 
     return (
         <div className="warp-agency">
-
-
             {
-                isMobile || isTablet ?
+                isSmallScreen ?
                     <React.Fragment>
                         <div className="head-agency">
                             <h3>วิธีการลงทะเบียนรับเบี้ยยังชีพผู้สูงอายุ</h3>
@@ -59,9 +58,30 @@ const Agency = () => {
                                     ))
                                 }
                             </Steps>
-                            <img src="/static/agency.jpg" alt="img-agency"/>
                         </div>
                     </React.Fragment>
+                    :
+                    isMobile || isTablet ?
+                        <React.Fragment>
+                            <div className="head-agency">
+                                <h3>วิธีการลงทะเบียนรับเบี้ยยังชีพผู้สูงอายุ</h3>
+                                <div className="title-agency">
+                                    <h6>โดยการลงทะเบียนรับเบี้ยยังชีพผู้สูงอายุ</h6>
+                                    <h6>ไม่จำเป็นต้องไปลงทะเบียนใหม่ทุกปี ลงเพียงครั้งเดียวก็ได้รับสิทธิไปตลอด</h6>
+                                    <h6><sup>*</sup>เว้นแต่กรณีที่ผู้สูงอายุย้ายที่อยู่อาศัย</h6>
+                                </div>
+                            </div>
+                            <div className="content-agency-mobile">
+                                <Steps progressDot current={3} direction="vertical">
+                                    {
+                                        card.map((items, index) => (
+                                            <Step key={index} title={items.content} description={items.description} />
+                                        ))
+                                    }
+                                </Steps>
+                                <img src="/static/agency.jpg" alt="img-agency" />
+                            </div>
+                        </React.Fragment>
                         :
                         <React.Fragment>
                             <div className="head-agency">
