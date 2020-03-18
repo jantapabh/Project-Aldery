@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 const About = () => {
+
+    const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
 
     const [data, setData] = useState([
         {
@@ -23,27 +26,53 @@ const About = () => {
     return (
         <div className="warp-about">
             <div className="page-content">
-                <div className="container-fluid">
-                    <div className="head-content">
-                        <h3>สังคมผู้สูงอายุ และระดับของการเข้าสู่สังคมผู้สูงอายุ</h3>
-                        <h3> ถูกแบ่งออกเป็น 3 ระดับ</h3>
-                    </div>
+                {
+                    isSmallScreen ?
+                        <div className="container-fluid">
+                            <div className="head-content">
+                                <h4>สังคมผู้สูงอายุ <br />และระดับของการเข้าสู่สังคมผู้สูงอายุ</h4>
+                                <h5> ถูกแบ่งออกเป็น 3 ระดับ</h5>
+                            </div>
 
-                    <div className="detail-content">
-                        <img src="/static/trstcover2.gif" />
-                        <div className="data-detail-content">
-                            {
-                                data.map((item, index) => (
-                                    <div className="title-content">
-                                        <h6 className="header-title-content">{item.title}</h6>
-                                        <h6>{item.text}</h6>
-                                        <h6>{item.subtext}</h6>
-                                    </div>
-                                ))
-                            }
+                            <div className="detail-content">
+                                <img src="/static/trstcover2.gif" />
+                                <div className="data-detail-content">
+                                    {
+                                        data.map((item, index) => (
+                                            <div className="title-content">
+                                                <h6 className="header-title-content">{item.title}</h6>
+                                                <h6>{item.text}</h6>
+                                                <h6>{item.subtext}</h6>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                        :
+                        <div className="container-fluid">
+                            <div className="head-content">
+                                <h3>สังคมผู้สูงอายุ และระดับของการเข้าสู่สังคมผู้สูงอายุ</h3>
+                                <h3> ถูกแบ่งออกเป็น 3 ระดับ</h3>
+                            </div>
+
+                            <div className="detail-content">
+                                <img src="/static/trstcover2.gif" />
+                                <div className="data-detail-content">
+                                    {
+                                        data.map((item, index) => (
+                                            <div className="title-content">
+                                                <h6 className="header-title-content">{item.title}</h6>
+                                                <h6>{item.text}</h6>
+                                                <h6>{item.subtext}</h6>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                }
+
             </div>
         </div>
     )
