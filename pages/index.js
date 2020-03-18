@@ -12,6 +12,8 @@ import Agency from '../components/agency';
 const Home = () => {
   const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
 
+  const [status, setStatus] = useState(false)
+
   const [home, setHome] = useState(
     [
       { name: "เกี่ยวกับเรา", href: "/" },
@@ -30,6 +32,10 @@ const Home = () => {
     ]
   )
 
+  const onConfirm = (order) => {
+    setStatus(order)
+  }
+
   return (
     <div className="warp-index">
       <Head>
@@ -37,14 +43,13 @@ const Home = () => {
         <link rel='icon' href='/static/logomain.svg' />
       </Head>
       <React.Fragment>
-        <NavBar name="index" tab={isSmallScreen ? homeMin : home} />
+        <NavBar name="index" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
         <Cover />
         <About />
         <Agency />
         <Info />
         <Footer />
       </React.Fragment>
-
     </div>
   )
 }
