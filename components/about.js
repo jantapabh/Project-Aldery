@@ -39,7 +39,7 @@ const About = () => {
                                 <div className="data-detail-content">
                                     {
                                         data.map((item, index) => (
-                                            <div className="title-content">
+                                            <div className="title-content" key={index}>
                                                 <h6 className="header-title-content">{item.title}</h6>
                                                 <h6>{item.text}</h6>
                                                 <h6>{item.subtext}</h6>
@@ -61,7 +61,7 @@ const About = () => {
                                 <div className="data-detail-content">
                                     {
                                         data.map((item, index) => (
-                                            <div className="title-content">
+                                            <div className="title-content" key={index}>
                                                 <h6 className="header-title-content">{item.title}</h6>
                                                 <h6>{item.text}</h6>
                                                 <h6>{item.subtext}</h6>
