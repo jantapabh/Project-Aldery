@@ -76,14 +76,13 @@ $font-color-text-in-border: white !important;
     @media (max-width: 575.98px) {
       justify-content: start !important;
     }
+
     img {
       width: 20rem;
       height: 15rem;
     }
   }
 }
-
-.ant-steps-dot .ant-steps-item-tail::after,
 .ant-steps-dot.ant-steps-small .ant-steps-item-tail::after {
   background-color: $primary-color;
 }
@@ -115,5 +114,6 @@ $font-color-text-in-border: white !important;
 
   @media (max-width: 575.98px) {
     margin-left: 1rem;
+    width: 17rem !important;
   }
 }
