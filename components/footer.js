@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <div className="warp-footer">
-            Footer
+            <h6>© 2019 Patnarin Supaokit</h6>
         </div>
     )
 }
