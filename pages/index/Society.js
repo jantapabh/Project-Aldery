@@ -3,7 +3,7 @@ import Head from 'next/head';
 import NavBar from '../../components/layout/nav';
 import { useMediaQuery } from 'react-responsive';
 
-const About = () => {
+const Society = () => {
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
     const [data, setData] = useState([
         {
@@ -27,14 +27,14 @@ const About = () => {
 
     const [home, setHome] = useState(
         [
-            { name: "ข่าวสาร", href: "#" },
+            { name: "เบี้ยยังชีพ", href: "#" },
             { name: "เข้าสู่หน้าหลัก", href: "/main" }
         ]
     )
 
     const [homeMin, setHomeMin] = useState(
         [
-            { name: "ข่าวสาร", href: "#" },
+            { name: "เบี้ยยังชีพ", href: "#" },
             { name: "เข้าสู่หน้าหลัก", href: "/main" },
         ]
     )
@@ -94,20 +94,13 @@ const About = () => {
                                                 </div>
                                             ))
                                         }
-                                        <div className="more-content">
-                                            <h6>อ่านต่อ</h6>
-                                            <img className="hvr-wobble-horizontal" src="/static/arrow.svg" alt="arrow-icon" />
-                                        </div>
-
                                     </div>
                                 </div>
                             </div>
                     }
-
                 </div>
             </div>
         </React.Fragment>
-
     )
 }
-export default About;
+export default Society;
