@@ -13,7 +13,6 @@ class MyDocument extends Document {
                 <Head>
                     <head>
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
-                        <link href="css/hover.css" rel="stylesheet" media="all"></link>
                     </head>
 
                     <meta charset="utf-8" />

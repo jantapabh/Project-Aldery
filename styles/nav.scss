@@ -13,20 +13,6 @@ $line-color: #e8e9fe;
       padding: 0.5rem;
       display: flex;
       justify-content: space-between;
-      li {
-        p.li-buttom-line-active {
-          border: 1px solid $primary-color;
-          border-radius: 1.5rem;
-          padding: 0.5rem 2rem !important;
-          margin: 0 1rem 0 0.5rem !important;
-          background-color: $primary-color;
-          color: white !important;
-        }
-        p.li-buttom-line-active:hover {
-          color: $font-color;
-          background-color: white !important;
-        }
-      }
     }
   }
 }
@@ -151,6 +137,19 @@ ul {
     p.li-buttom-line:hover {
       color: white !important;
       background-color: $primary-color;
+    }
+
+    p.li-buttom-line-active {
+      border: 1px solid $primary-color;
+      border-radius: 1.5rem;
+      padding: 0.5rem 2rem !important;
+      margin: 0 1rem 0 0.5rem !important;
+      background-color: $primary-color;
+      color: white !important;
+    }
+    p.li-buttom-line-active:hover {
+      color: $font-color;
+      background-color: white !important;
     }
   }
 }

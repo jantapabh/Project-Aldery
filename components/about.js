@@ -47,6 +47,12 @@ const About = () => {
                                             </div>
                                         ))
                                     }
+                                    <div className="more-content">
+                                        <h6>อ่านต่อ</h6>
+                                        <Link href="/index/about">
+                                            <img className="hvr-wobble-horizontal" src="/static/arrow.svg" alt="arrow-icon" />
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +80,6 @@ const About = () => {
                                         <Link href="/index/about">
                                             <img className="hvr-wobble-horizontal" src="/static/arrow.svg" alt="arrow-icon" />
                                         </Link>
-
                                     </div>
 
                                 </div>

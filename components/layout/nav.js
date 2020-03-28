@@ -37,7 +37,7 @@ const NavBar = props => {
                                 {
                                     tab.map((item, index) => {
                                         return (
-                                            <Link key={index} href={item.href}>
+                                            <a href={item.href} key={index} >
                                                 {
                                                     item.name == "ติดต่อ" ?
                                                         <p className="li-buttom-line">{item.name}</p>
@@ -46,13 +46,12 @@ const NavBar = props => {
                                                             <p className="li-buttom-line-active">{item.name}</p>
                                                             :
                                                             <React.Fragment>
-
                                                                 <button className="btn">
                                                                     <p>{item.name}</p>
                                                                 </button>
                                                             </React.Fragment>
                                                 }
-                                            </Link>
+                                            </a>
                                         )
                                     })
                                 }
@@ -63,9 +62,6 @@ const NavBar = props => {
                     isBigScreen && name == "main" ?
                         <nav>
                             <ul >
-                                {/* <li className={`hamberger-${status ? "active" : "non-active"}`}>
-                                    <img src="/static/hamberger.svg" alt="hamberger" onClick={collapsible} />
-                                </li> */}
                                 <Link href="/">
                                     <li>
                                         <p>ย้อนกลับ</p>
@@ -75,14 +71,20 @@ const NavBar = props => {
                                     {
                                         tab.map((item, index) => {
                                             return (
-                                                <Link key={index} href={item.href}>
+                                                <Link href={item.href} key={index}>
                                                     {
                                                         item.name == "ติดต่อ" ?
                                                             <p className="li-buttom-line">{item.name}</p>
                                                             :
-                                                            <p>{item.name}</p>
+                                                            item.name == "เข้าสู่หน้าหลัก" ?
+                                                                <p className="li-buttom-line-active">{item.name}</p>
+                                                                :
+                                                                <React.Fragment>
+                                                                    <button className="btn">
+                                                                        <p>{item.name}</p>
+                                                                    </button>
+                                                                </React.Fragment>
                                                     }
-
                                                 </Link>
                                             )
                                         })
@@ -107,7 +109,6 @@ const NavBar = props => {
                                                     <Link key={index} href={item.href}>
                                                         {
                                                             <React.Fragment>
-
                                                                 <button className="btn">
                                                                     <p>{item.name}</p>
                                                                 </button>
