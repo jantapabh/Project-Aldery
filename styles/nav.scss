@@ -130,7 +130,7 @@ ul {
     }
 
     p.li-buttom-line {
-      border: 1px solid $primary-color;
+      border: $border-bg-color;
       border-radius: 1.5rem;
       padding: 0.5rem 2rem !important;
       margin: 0 0.5rem 0 2rem !important;
@@ -138,7 +138,7 @@ ul {
 
     p.li-buttom-line:hover {
       color: white !important;
-      background-color: $primary-color;
+      background: $bg-color;
     }
 
     p.li-buttom-line-active {

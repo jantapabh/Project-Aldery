@@ -7,21 +7,24 @@ const Society = () => {
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
     const [data, setData] = useState([
         {
-            title: "ระดับเริ่มต้น (Aging society)",
+            title: "ศูนย์การเรียนรู้สำหรับผู้สูงอายุ",
             text: "สังคมที่มีประชากรอายุ 60 ปีขึ้นไปมากกว่าร้อยละ 10 ของประชากรทั้งประเทศ",
             subtext: "หรือมีประชากรอายุตั้งแต่ 65 ปีมากกว่าร้อยละ 7 ของประชากรทั้งประเทศ"
         },
         {
-            title: "ระดับสมบูรณ์ (Aged society)",
+            title: "สถานพยาบาล",
             text: "สังคมที่มีประชากรอายุ 60 ปีขึ้นไป มากกว่าร้อยละ 20 ของประชากรทั้งประเทศ",
             subtext: "หรือมีประชากรอายุตั้งแต่ 65 ปี มากกว่าร้อยละ 14 ของประชากรทั้งประเทศ"
         },
         {
-            title: "ระดับสูง (Super-aged society)",
+            title: "กิจกรรมสำหรับผู้สูงอายุในด้านต่างๆ",
             text: "สังคมที่มีประชากรอายุ 65 ปีขึ้นไปมากกว่า ร้อยละ 20 ของประชากรทั้งประเทศ",
             subtext: ""
         },
     ])
+
+    const [header,setHeader] = useState("สังคมผู้สูงอายุ")
+    const [subHead,setSubHead] = useState("ภายในอำเภอกะทู้ จังหวัดภูเก็ต")
 
     const [status, setStatus] = useState(false)
 
@@ -56,12 +59,12 @@ const Society = () => {
                         isSmallScreen ?
                             <div className="container-fluid">
                                 <div className="head-content">
-                                    <h4>สังคมผู้สูงอายุ </h4>
-                                    <h5>ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h5>
+                                    <h4>{header}</h4>
+                                    <h5>{subHead}</h5>
                                 </div>
 
                                 <div className="detail-content">
-                                    <img src="/static/trstcover2.gif" />
+                                    <img src="/static/gifcover2.gif" />
                                     <div className="data-detail-content">
                                         {
                                             data.map((item, index) => (
@@ -78,12 +81,12 @@ const Society = () => {
                             :
                             <div className="container-fluid">
                                 <div className="head-content">
-                                    <h3>สังคมผู้สูงอายุ </h3>
-                                    <h3>ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h3>
+                                    <h3>{header}</h3>
+                                    <h3>{subHead}</h3>
                                 </div>
 
                                 <div className="detail-content">
-                                    <img src="/static/trstcover2.gif" />
+                                    <img src="/static/gifcover2.gif" />
                                     <div className="data-detail-content">
                                         {
                                             data.map((item, index) => (

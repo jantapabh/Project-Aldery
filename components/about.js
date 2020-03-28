@@ -36,7 +36,7 @@ const About = () => {
                             </div>
 
                             <div className="detail-content">
-                                <img src="/static/trstcover2.gif" />
+                                <img src="/static/gifcover.gif" />
                                 <div className="data-detail-content">
                                     {
                                         data.map((item, index) => (
@@ -64,7 +64,7 @@ const About = () => {
                             </div>
 
                             <div className="detail-content">
-                                <img src="/static/trstcover2.gif" />
+                                <img src="/static/gifcover.gif" />
                                 <div className="data-detail-content">
                                     {
                                         data.map((item, index) => (
