@@ -2,6 +2,8 @@ $font-color: #071d40 !important;
 $font-header: "Frank Ruhl Libre" !important;
 $font-base: "Prompt", sans-serif;
 $primary-color: #39b54a !important;
+$bg-color: linear-gradient(to left, #a6d254, #83d2ae);
+$border-bg-color: 1px solid #83d2ae;
 $line-color: #e8e9fe;
 
 .warp-index {
@@ -140,16 +142,18 @@ ul {
     }
 
     p.li-buttom-line-active {
-      border: 1px solid $primary-color;
+      border: $border-bg-color;
       border-radius: 1.5rem;
       padding: 0.5rem 2rem !important;
       margin: 0 1rem 0 0.5rem !important;
-      background-color: $primary-color;
+      background: $bg-color;
       color: white !important;
     }
     p.li-buttom-line-active:hover {
+      margin: 0 1rem 0 0.5rem !important;
       color: $font-color;
-      background-color: white !important;
+      border: $border-bg-color;
+      background: white !important;
     }
   }
 }

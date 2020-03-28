@@ -50,14 +50,14 @@ const Society = () => {
                 <link rel='icon' href='/static/logomain.svg' />
             </Head>
             <NavBar name="main" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
-            <div className="warp-about">
+            <div className="warp-society">
                 <div className="page-content">
                     {
                         isSmallScreen ?
                             <div className="container-fluid">
                                 <div className="head-content">
-                                    <h4>สังคมผู้สูงอายุ <br />และระดับของการเข้าสู่สังคมผู้สูงอายุ</h4>
-                                    <h5> ถูกแบ่งออกเป็น 3 ระดับ</h5>
+                                    <h4>สังคมผู้สูงอายุ </h4>
+                                    <h5>ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h5>
                                 </div>
 
                                 <div className="detail-content">
@@ -78,8 +78,8 @@ const Society = () => {
                             :
                             <div className="container-fluid">
                                 <div className="head-content">
-                                    <h3>สังคมผู้สูงอายุ และระดับของการเข้าสู่สังคมผู้สูงอายุ</h3>
-                                    <h3> ถูกแบ่งออกเป็น 3 ระดับ</h3>
+                                    <h3>สังคมผู้สูงอายุ </h3>
+                                    <h3>ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h3>
                                 </div>
 
                                 <div className="detail-content">
