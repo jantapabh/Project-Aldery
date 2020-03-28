@@ -70,7 +70,7 @@ const About = () => {
                                     }
                                     <div className="more-content">
                                         <h6>อ่านต่อ</h6>
-                                        <img className="animated-fadeRight" src="/static/arrow.svg" alt="arrow-icon" />
+                                        <img className="hvr-wobble-horizontal" src="/static/arrow.svg" alt="arrow-icon" />
                                     </div>
 
                                 </div>

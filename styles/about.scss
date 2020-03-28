@@ -71,6 +71,36 @@
               width: 2rem;
               height: auto;
             }
+            .hvr-wobble-horizontal:hover {
+              animation-name: hvr-wobble-horizontal;
+              animation-duration: 1s;
+              animation-timing-function: ease-in-out;
+              animation-iteration-count: 1;
+              display: inline-block;
+              vertical-align: middle;
+              transform: perspective(1px) translateZ(0);
+            }
+
+            @keyframes hvr-wobble-horizontal {
+              17% {
+                transform: translateX(8px);
+              }
+              34% {
+                transform: translateX(-6px);
+              }
+              50% {
+                transform: translateX(4px);
+              }
+              70% {
+                transform: translateX(-2px);
+              }
+              80% {
+                transform: translateX(1px);
+              }
+              100% {
+                transform: translateX(0);
+              }
+            }
           }
         }
       }
