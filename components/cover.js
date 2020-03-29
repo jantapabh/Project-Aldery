@@ -13,7 +13,7 @@ const Cover = () => {
                     isSmallScreen ?
                         <div className="container-fluid">
                             <div className="title">
-                                <h1>ระบบฐานข้อมูลผู้สูงอายุ</h1>
+                                <h1>เว็บฐานข้อมูลผู้สูงอายุ</h1>
                                 <h1>และอินโฟกราฟิก</h1>
                                 <div className="detail">
                                     <div className="text-content">
