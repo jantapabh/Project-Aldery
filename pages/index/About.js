@@ -3,7 +3,7 @@ import Head from 'next/head';
 import NavBar from '../../components/layout/nav';
 import { useMediaQuery } from 'react-responsive';
 
-const Society = () => {
+const About = () => {
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
     const [data, setData] = useState([
         {
@@ -23,14 +23,13 @@ const Society = () => {
         },
     ])
 
-    const [header, setHeader] = useState("สังคมผู้สูงอายุ")
-    const [subHead, setSubHead] = useState("ภายในอำเภอกะทู้ จังหวัดภูเก็ต")
+    const [header,setHeader] = useState("สังคมผู้สูงอายุ")
+    const [subHead,setSubHead] = useState("ภายในอำเภอกะทู้ จังหวัดภูเก็ต")
 
     const [status, setStatus] = useState(false)
 
     const [home, setHome] = useState(
         [
-            { name: "เกี่ยวกับเรา", href: "/index/about" },
             { name: "เบี้ยยังชีพ", href: "#" },
             { name: "เข้าสู่หน้าหลัก", href: "/main" }
         ]
@@ -38,7 +37,6 @@ const Society = () => {
 
     const [homeMin, setHomeMin] = useState(
         [
-            { name: "เกี่ยวกับเรา", href: "/index/about" },
             { name: "เบี้ยยังชีพ", href: "#" },
             { name: "เข้าสู่หน้าหลัก", href: "/main" },
         ]
@@ -108,4 +106,4 @@ const Society = () => {
         </React.Fragment>
     )
 }
-export default Society;
+export default About;

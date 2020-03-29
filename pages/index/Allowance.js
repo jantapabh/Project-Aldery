@@ -27,6 +27,7 @@ const Allowance = () => {
 
     const [home, setHome] = useState(
         [
+            { name: "เกี่ยวกับเรา", href: "/index/about" },
             { name: "เบี้ยยังชีพ", href: "#" },
             { name: "เข้าสู่หน้าหลัก", href: "/main" }
         ]
@@ -34,6 +35,7 @@ const Allowance = () => {
 
     const [homeMin, setHomeMin] = useState(
         [
+            { name: "เกี่ยวกับเรา", href: "/index/about" },
             { name: "เบี้ยยังชีพ", href: "#" },
             { name: "เข้าสู่หน้าหลัก", href: "/main" },
         ]
