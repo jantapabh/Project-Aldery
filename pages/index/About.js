@@ -25,6 +25,7 @@ const About = () => {
 
     const [header,setHeader] = useState("สังคมผู้สูงอายุ")
     const [subHead,setSubHead] = useState("ภายในอำเภอกะทู้ จังหวัดภูเก็ต")
+    const [image,setImage] = useState("/static/")
 
     const [status, setStatus] = useState(false)
 
@@ -66,7 +67,7 @@ const About = () => {
                                 <div className="detail-content">
                                     <img src="/static/gifcover2.gif" />
                                     <div className="data-detail-content">
-                                        {
+                                        {/* {
                                             data.map((item, index) => (
                                                 <div className="title-content" key={index}>
                                                     <h6 className="header-title-content">{item.title}</h6>
@@ -74,7 +75,7 @@ const About = () => {
                                                     <h6>{item.subtext}</h6>
                                                 </div>
                                             ))
-                                        }
+                                        } */}
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +89,7 @@ const About = () => {
                                 <div className="detail-content">
                                     <img src="/static/gifcover2.gif" />
                                     <div className="data-detail-content">
-                                        {
+                                        {/* {
                                             data.map((item, index) => (
                                                 <div className="title-content" key={index}>
                                                     <h6 className="header-title-content">{item.title}</h6>
@@ -96,7 +97,7 @@ const About = () => {
                                                     <h6>{item.subtext}</h6>
                                                 </div>
                                             ))
-                                        }
+                                        } */}
                                     </div>
                                 </div>
                             </div>
