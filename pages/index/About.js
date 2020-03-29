@@ -53,7 +53,7 @@ const About = () => {
                 <link rel='icon' href='/static/logomain.svg' />
             </Head>
             <NavBar name="main" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
-            <div className="warp-society">
+            <div className="warp-main-page">
                 <div className="page-content">
                     {
                         isSmallScreen ?
