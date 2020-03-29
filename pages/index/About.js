@@ -87,7 +87,7 @@ const About = () => {
                                 </div>
 
                                 <div className="detail-content">
-                                    <img src="/static/gifcover2.gif" />
+                                    <img src="/static/testcoverAbout.jpg" />
                                     <div className="data-detail-content">
                                         {/* {
                                             data.map((item, index) => (

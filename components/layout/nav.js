@@ -71,7 +71,7 @@ const NavBar = props => {
                                     {
                                         tab.map((item, index) => {
                                             return (
-                                                <Link href={item.href} key={index}>
+                                                <a href={item.href} key={index}>
                                                     {
                                                         item.name == "ติดต่อ" ?
                                                             <p className="li-buttom-line">{item.name}</p>
@@ -85,7 +85,7 @@ const NavBar = props => {
                                                                     </button>
                                                                 </React.Fragment>
                                                     }
-                                                </Link>
+                                                </a>
                                             )
                                         })
                                     }
