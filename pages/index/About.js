@@ -14,8 +14,8 @@ const About = () => {
         },
         {
             title: "1. ข้อมูลทั่วไป",
-            text: "ประวัติส่วนตัว เช่น ชื่อ-นามสกุล ช่วงอายุ สัญชาติ ศาสนา และที่อยู่",
-            subtext: ""
+            text: "ประวัติส่วนตัว เช่น ชื่อ-นามสกุล ช่วงอายุ สัญชาติ ศาสนา การศึกษา",
+            subtext: "รวมไปถึงข้อมูลด้านรายได้ รายจ่าย เเละการออม"
         },
         {
             title: "2. ข้อมูลด้านสุขภาพ",
@@ -29,8 +29,8 @@ const About = () => {
         },
         {
             title: "4. ข้อมูลเกี่ยวกับภาครัฐ",
-            text: "ข้อมูลเกี่ยวกับการเข้าร่วมกิจกรรมทางสังคม/เทศบาล และการเข้าร่วมกิจกรรมทางศาสนกิจ",
-            subtext: "รวมไปถึงช่องทางการรับรู้ข้อมูลข่าวสารของทางเทศบาล"
+            text: "ข้อมูลเกี่ยวกับการเข้าร่วมกิจกรรมทางสังคม/เทศบาล หรือทางศาสนกิจ",
+            subtext: "สภาพความเดือดร้อนในปัจจุบัน และความต้องการให้หน่วยงานของรัฐช่วยเหลือ"
         },
     ])
 
@@ -95,22 +95,22 @@ const About = () => {
                             :
                             <div className="container-fluid">
                                 <div className="head-content">
-                                    <h1 className="name-header animated fadeInDown delay-s">{header}</h1>
-                                    <h4 className="animated fadeInDown delay-s">{subHead}</h4>
+                                    <h1 className="name-header ">{header}</h1>
+                                    <h4 className="">{subHead}</h4>
                                     <div className="title-about">
-                                        <h6 className="animated fadeIn delay-1s">เว็บไซต์ฐานข้อมูประชากรผู้สูงอายุ แสดงค่าทางสถิติในรูปเเบบของกราฟประเภทต่าง ๆ</h6>
+                                        <h6 className="">เว็บไซต์ฐานข้อมูประชากรผู้สูงอายุ แสดงค่าทางสถิติในรูปเเบบของกราฟประเภทต่าง ๆ</h6>
                                     </div>
                                 </div>
 
                                 <div className="detail-content">
-                                    <img className="animated fadeIn delay-1s" src="/static/testcoverAbout.jpg" />
+                                    <img className="" src="/static/testcoverAbout.jpg" />
                                     <div className="data-detail-content">
                                         <div className="title-content">
                                             <h6> </h6>
                                         </div>
                                         {
                                             data.map((item, index) => (
-                                                <div className="title-content animated fadeIn delay-1s" key={index}>
+                                                <div className="title-content " key={index}>
                                                     <h6 className="header-title-content">{item.title}</h6>
                                                     <h6 className="sub-title-content">{item.text}</h6>
                                                     <h6 className="sub-title-content">{item.subtext}</h6>
