@@ -1,3 +1,6 @@
+$font-header: "Frank Ruhl Libre" !important;
+$font-text-sub: #978bab !important;
+
 .warp-about {
   .page-content {
     padding-top: 3rem;
@@ -108,8 +111,7 @@
   }
 }
 
-
-.warp-main-page{
+.warp-about-page {
   .page-content {
     padding-top: 3rem;
 
@@ -117,14 +119,25 @@
       display: flex;
       flex-direction: column;
       .head-content {
-        h3 {
-          font-size: 2rem !important;
-          margin-bottom: 1rem !important;
+        h1.name-header {
+          font-family: $font-header;
+        }
+
+        .title-about {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h6 {
+            margin-top: 0.5rem;
+            color: $font-text-sub;
+            font-style: italic;
+          }
         }
       }
       .detail-content {
         display: flex;
         justify-content: center;
+        align-items: center;
         margin: 2rem 3rem;
 
         @media (max-width: 575.98px) {
@@ -140,6 +153,7 @@
         }
 
         .data-detail-content {
+          margin-left: 2rem;
           display: flex;
           flex-direction: column;
 
@@ -156,6 +170,10 @@
 
             .header-title-content {
               font-weight: bold !important;
+            }
+
+            .sub-title-content {
+              margin-left: 1rem;
             }
 
             h6 {

@@ -6,26 +6,37 @@ import { useMediaQuery } from 'react-responsive';
 const About = () => {
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
     const [data, setData] = useState([
+
         {
-            title: "ศูนย์การเรียนรู้สำหรับผู้สูงอายุ",
-            text: "สังคมที่มีประชากรอายุ 60 ปีขึ้นไปมากกว่าร้อยละ 10 ของประชากรทั้งประเทศ",
-            subtext: "หรือมีประชากรอายุตั้งแต่ 65 ปีมากกว่าร้อยละ 7 ของประชากรทั้งประเทศ"
-        },
-        {
-            title: "สถานพยาบาล",
-            text: "สังคมที่มีประชากรอายุ 60 ปีขึ้นไป มากกว่าร้อยละ 20 ของประชากรทั้งประเทศ",
-            subtext: "หรือมีประชากรอายุตั้งแต่ 65 ปี มากกว่าร้อยละ 14 ของประชากรทั้งประเทศ"
-        },
-        {
-            title: "กิจกรรมสำหรับผู้สูงอายุในด้านต่างๆ",
-            text: "สังคมที่มีประชากรอายุ 65 ปีขึ้นไปมากกว่า ร้อยละ 20 ของประชากรทั้งประเทศ",
+            title: "แบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ",
+            text: "",
             subtext: ""
+        },
+        {
+            title: "1. ข้อมูลทั่วไป",
+            text: "ประวัติส่วนตัว เช่น ชื่อ-นามสกุล ช่วงอายุ สัญชาติ ศาสนา และที่อยู่",
+            subtext: ""
+        },
+        {
+            title: "2. ข้อมูลด้านสุขภาพ",
+            text: "ประวัติด้านการรักษา สภาพความพิการ โรคประจำตัว การตรวจสุภาพ ",
+            subtext: "สถานพยาบาลที่ใช้ประจำ การออกกำลังกาย รวมไปถึงการสูบบุหรี่ หรือดื่มสุรา"
+        },
+        {
+            title: "3. ข้อมูลด้านครอบครัวเเละที่อยู่อาศัย",
+            text: "ข้อมูลเกี่ยวกับที่อยู่อาศัย สภาพบ้านที่อยู่อาศัย เเละจำนวนผู้อาศัยในภายครอบครัว",
+            subtext: ""
+        },
+        {
+            title: "4. ข้อมูลเกี่ยวกับภาครัฐ",
+            text: "ข้อมูลเกี่ยวกับการเข้าร่วมกิจกรรมทางสังคม/เทศบาล และการเข้าร่วมกิจกรรมทางศาสนกิจ",
+            subtext: "รวมไปถึงช่องทางการรับรู้ข้อมูลข่าวสารของทางเทศบาล"
         },
     ])
 
-    const [header,setHeader] = useState("สังคมผู้สูงอายุ")
-    const [subHead,setSubHead] = useState("ภายในอำเภอกะทู้ จังหวัดภูเก็ต")
-    const [image,setImage] = useState("/static/")
+    const [header, setHeader] = useState("Elderly DB")
+    const [subHead, setSubHead] = useState("เว็บฐานข้อมูลผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต")
+    const [image, setImage] = useState("/static/")
 
     const [status, setStatus] = useState(false)
 
@@ -54,7 +65,7 @@ const About = () => {
                 <link rel='icon' href='/static/logomain.svg' />
             </Head>
             <NavBar name="main" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
-            <div className="warp-main-page">
+            <div className="warp-about-page">
                 <div className="page-content">
                     {
                         isSmallScreen ?
@@ -82,22 +93,28 @@ const About = () => {
                             :
                             <div className="container-fluid">
                                 <div className="head-content">
-                                    <h3>{header}</h3>
-                                    <h3>{subHead}</h3>
+                                    <h1 className="name-header animated fadeInDown delay-s">{header}</h1>
+                                    <h4 className="animated fadeInDown delay-s">{subHead}</h4>
+                                    <div className="title-about">
+                                        <h6 className="animated fadeIn delay-1s">เว็บไซต์ฐานข้อมูประชากรผู้สูงอายุ แสดงค่าทางสถิติในรูปเเบบของกราฟประเภทต่าง ๆ</h6>
+                                    </div>
                                 </div>
 
                                 <div className="detail-content">
-                                    <img src="/static/testcoverAbout.jpg" />
+                                    <img className="animated fadeIn delay-1s" src="/static/testcoverAbout.jpg" />
                                     <div className="data-detail-content">
-                                        {/* {
+                                        <div className="title-content">
+                                            <h6> </h6>
+                                        </div>
+                                        {
                                             data.map((item, index) => (
-                                                <div className="title-content" key={index}>
+                                                <div className="title-content animated fadeIn delay-1s" key={index}>
                                                     <h6 className="header-title-content">{item.title}</h6>
-                                                    <h6>{item.text}</h6>
-                                                    <h6>{item.subtext}</h6>
+                                                    <h6 className="sub-title-content">{item.text}</h6>
+                                                    <h6 className="sub-title-content">{item.subtext}</h6>
                                                 </div>
                                             ))
-                                        } */}
+                                        }
                                     </div>
                                 </div>
                             </div>

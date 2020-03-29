@@ -40,9 +40,7 @@ const Cover = () => {
                                         <h6 className="animated fadeInDown delay-1s">ElderlyDB เป็นการนำข้อมูลเกี่ยวกับผู้สูงอายุ</h6>
                                         <h6 className="animated fadeInDown delay-1s">มาแสดงผลในรูปเเบบของกราฟในรูปแบบต่าง ๆ </h6>
                                         <h6 className="animated fadeInDown delay-1s">ภายในอำเภอกะทู้ จังหวัดภูเก็ต </h6>
-
                                     </div>
-
                                 </div>
 
                                 <Link href="/main">
