@@ -42,6 +42,7 @@ const About = () => {
 
     const [home, setHome] = useState(
         [
+            { name: "สังคมผู้สูงอายุ", href: "/index/society" },
             { name: "เบี้ยยังชีพ", href: "#" },
             { name: "เข้าสู่หน้าหลัก", href: "/main" }
         ]
@@ -49,6 +50,7 @@ const About = () => {
 
     const [homeMin, setHomeMin] = useState(
         [
+            { name: "สังคมผู้สูงอายุ", href: "/index/society" },
             { name: "เบี้ยยังชีพ", href: "#" },
             { name: "เข้าสู่หน้าหลัก", href: "/main" },
         ]
