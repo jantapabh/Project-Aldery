@@ -17,9 +17,9 @@ const Cover = () => {
                                 <h1>และอินโฟกราฟิก</h1>
                                 <div className="detail">
                                     <div className="text-content">
-                                        <h6>ElderlyDB เป็นการนำข้อมูลเกี่ยวกับผู้สูงอายุ</h6>
-                                        <h6>มาแสดงผลในรูปเเบบของกราฟในรูปแบบต่าง ๆ</h6>
-                                        <h6>ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h6>
+                                        <h6>ElderlyDB เป็นการนำข้อมูลทางสถิติเกี่ยวกับผู้สูงอายุ</h6>
+                                        <h6>มาเเสดงผลในรูปเเบบของกราฟ</h6>
+                                        <h6>ในรูปแบบต่าง ๆ  </h6>
                                     </div>
                                 </div>
                                 <Link href="/main">
@@ -37,9 +37,9 @@ const Cover = () => {
                                         <line x1="0" y1="0" x2="0" y2="100" />
                                     </svg>
                                     <div className="text-content">
-                                        <h6 className="animated fadeInDown delay-1s">ElderlyDB เป็นการนำข้อมูลเกี่ยวกับผู้สูงอายุ</h6>
-                                        <h6 className="animated fadeInDown delay-1s">มาแสดงผลในรูปเเบบของกราฟในรูปแบบต่าง ๆ </h6>
-                                        <h6 className="animated fadeInDown delay-1s">ภายในอำเภอกะทู้ จังหวัดภูเก็ต </h6>
+                                        <h6 className="animated fadeInDown delay-1s">ElderlyDB เป็นการนำข้อมูลทางสถิติเกี่ยวกับผู้สูงอายุ</h6>
+                                        <h6 className="animated fadeInDown delay-1s">มาเเสดงผลในรูปเเบบของกราฟ</h6>
+                                        <h6 className="animated fadeInDown delay-1s">ในรูปแบบต่าง ๆ  </h6>
                                     </div>
                                 </div>
 

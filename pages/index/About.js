@@ -95,10 +95,10 @@ const About = () => {
                             :
                             <div className="container-fluid">
                                 <div className="head-content">
-                                    <h1 className="name-header ">{header}</h1>
+                                    <h1 className="name-header">{header}</h1>
                                     <h4 className="">{subHead}</h4>
                                     <div className="title-about">
-                                        <h6 className="">เว็บไซต์ฐานข้อมูประชากรผู้สูงอายุ แสดงค่าทางสถิติในรูปเเบบของกราฟประเภทต่าง ๆ</h6>
+                                        <h6 className="">เว็บไซต์ฐานข้อมูลประชากรผู้สูงอายุ เป็นการนำข้อมูลทางสถิติมาเเสดงผลในรูปเเบบของกราฟรูปแบบต่าง ๆ</h6>
                                     </div>
                                 </div>
 
