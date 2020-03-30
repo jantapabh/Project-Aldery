@@ -5,6 +5,9 @@ import { useMediaQuery } from 'react-responsive';
 
 const Allowance = () => {
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
+    const [header, setHeader] = useState("เบี้ยยังชีพผู้สูงอายุ")
+    const [subHead, setSubHead] = useState("เว็บฐานข้อมูลผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต")
+
     const [data, setData] = useState([
         {
             title: "ระดับเริ่มต้น (Aging society)",
@@ -28,7 +31,7 @@ const Allowance = () => {
     const [home, setHome] = useState(
         [
             { name: "เกี่ยวกับเรา", href: "/index/about" },
-            { name: "เบี้ยยังชีพ", href: "#" },
+            { name: "สังคมผู้สูงอายุ", href: "/index/society" },
             { name: "เข้าสู่หน้าหลัก", href: "/main" }
         ]
     )
@@ -36,7 +39,7 @@ const Allowance = () => {
     const [homeMin, setHomeMin] = useState(
         [
             { name: "เกี่ยวกับเรา", href: "/index/about" },
-            { name: "เบี้ยยังชีพ", href: "#" },
+            { name: "สังคมผู้สูงอายุ", href: "/index/society" },
             { name: "เข้าสู่หน้าหลัก", href: "/main" },
         ]
     )
@@ -58,7 +61,7 @@ const Allowance = () => {
                         isSmallScreen ?
                             <div className="container-fluid">
                                 <div className="head-content">
-                                    <h4>สังคมผู้สูงอายุ <br />และระดับของการเข้าสู่สังคมผู้สูงอายุ</h4>
+                                    <h4>{header}</h4>
                                     <h5> ถูกแบ่งออกเป็น 3 ระดับ</h5>
                                 </div>
 
@@ -80,12 +83,12 @@ const Allowance = () => {
                             :
                             <div className="container-fluid">
                                 <div className="head-content">
-                                    <h3>สังคมผู้สูงอายุ และระดับของการเข้าสู่สังคมผู้สูงอายุ</h3>
+                                    <h3>{header}</h3>
                                     <h3> ถูกแบ่งออกเป็น 3 ระดับ</h3>
                                 </div>
 
                                 <div className="detail-content">
-                                    <img src="/static/trstcover2.gif" />
+                                    {/* <img src="/static/trstcover2.gif" /> */}
                                     <div className="data-detail-content">
                                         {
                                             data.map((item, index) => (

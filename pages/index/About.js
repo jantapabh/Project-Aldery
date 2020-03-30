@@ -38,8 +38,6 @@ const About = () => {
     const [subHead, setSubHead] = useState("เว็บฐานข้อมูลผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต")
     const [summary, setSummary] = useState("เว็บไซต์ฐานข้อมูลผู้สูงอายุ เป็นการนำข้อมูลทางสถิติเกี่ยวกับผู้สูงอายุมาเเสดงผลในรูปของกราฟรูปแบบต่าง ๆ")
 
-    const [image, setImage] = useState("/static/")
-
     const [status, setStatus] = useState(false)
 
     const [home, setHome] = useState(
