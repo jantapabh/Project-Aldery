@@ -105,9 +105,6 @@ const About = () => {
                                 <div className="detail-content">
                                     <img className="" src="/static/testcoverAbout.jpg" />
                                     <div className="data-detail-content">
-                                        <div className="title-content">
-                                            <h6> </h6>
-                                        </div>
                                         {
                                             data.map((item, index) => (
                                                 <div className="title-content " key={index}>

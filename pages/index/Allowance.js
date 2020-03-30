@@ -10,9 +10,9 @@ const Allowance = () => {
 
     const [data, setData] = useState([
         {
-            title: "ระดับเริ่มต้น (Aging society)",
-            text: "สังคมที่มีประชากรอายุ 60 ปีขึ้นไปมากกว่าร้อยละ 10 ของประชากรทั้งประเทศ",
-            subtext: "หรือมีประชากรอายุตั้งแต่ 65 ปีมากกว่าร้อยละ 7 ของประชากรทั้งประเทศ"
+            title: "เบี้ยยังชีพผู้สูงอายุ คือ",
+            text: "เป็นสวัสดิการขั้นพื้นฐานที่ภาครัฐจัดสรรไว้ให้กับผู้สูงอายุซึ่งหมายถึง บุคคลที่มีอายุ 60 ปีขึ้นไป ",
+            subtext: "เพื่อเป็นเงินช่วยเหลือ และแบ่งเบาภาระค่าใช้จ่ายการดำรงชีวิตในแต่ละเดือน"
         },
         {
             title: "ระดับสมบูรณ์ (Aged society)",
@@ -55,7 +55,7 @@ const Allowance = () => {
                 <link rel='icon' href='/static/logomain.svg' />
             </Head>
             <NavBar name="main" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
-            <div className="warp-about">
+            <div className="warp-allowance-page">
                 <div className="page-content">
                     {
                         isSmallScreen ?
@@ -94,8 +94,8 @@ const Allowance = () => {
                                             data.map((item, index) => (
                                                 <div className="title-content" key={index}>
                                                     <h6 className="header-title-content">{item.title}</h6>
-                                                    <h6>{item.text}</h6>
-                                                    <h6>{item.subtext}</h6>
+                                                    <h6 className="sub-title-content">{item.text}</h6>
+                                                    <h6 className="sub-title-content">{item.subtext}</h6>
                                                 </div>
                                             ))
                                         }
