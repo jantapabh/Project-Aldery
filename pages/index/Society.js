@@ -8,16 +8,19 @@ const Society = () => {
     const [data, setData] = useState([
         {
             title: "ศูนย์การเรียนรู้สำหรับผู้สูงอายุ",
-            text: "สังคมที่มีประชากรอายุ 60 ปีขึ้นไปมากกว่าร้อยละ 10 ของประชากรทั้งประเทศ",
+            amount: "มีทั้งหมด 14 เเห่ง",
+            text: "",
             subtext: "หรือมีประชากรอายุตั้งแต่ 65 ปีมากกว่าร้อยละ 7 ของประชากรทั้งประเทศ"
         },
         {
             title: "สถานพยาบาล",
-            text: "สังคมที่มีประชากรอายุ 60 ปีขึ้นไป มากกว่าร้อยละ 20 ของประชากรทั้งประเทศ",
-            subtext: "หรือมีประชากรอายุตั้งแต่ 65 ปี มากกว่าร้อยละ 14 ของประชากรทั้งประเทศ"
+            amount: "มีทั้งหมด 7 เเห่ง",
+            text: "โดยเป็นสถานพยาบาลที่มีช่องทางพิเศษบริการผู้สูงอายุ",
+            subtext: "ทำให้สามารถเข้าถึงการบริการสุขภาพได้สะดวก รวดเร็ว"
         },
         {
             title: "กิจกรรมสำหรับผู้สูงอายุในด้านต่างๆ",
+            amount: "มีทั้งหมด 14 เเห่ง",
             text: "สังคมที่มีประชากรอายุ 65 ปีขึ้นไปมากกว่า ร้อยละ 20 ของประชากรทั้งประเทศ",
             subtext: ""
         },
@@ -31,7 +34,7 @@ const Society = () => {
     const [home, setHome] = useState(
         [
             { name: "เกี่ยวกับเรา", href: "/index/about" },
-            { name: "เบี้ยยังชีพ", href: "#" },
+            { name: "เบี้ยยังชีพ", href: "/index/allowance" },
             { name: "เข้าสู่หน้าหลัก", href: "/main" }
         ]
     )
@@ -39,7 +42,7 @@ const Society = () => {
     const [homeMin, setHomeMin] = useState(
         [
             { name: "เกี่ยวกับเรา", href: "/index/about" },
-            { name: "เบี้ยยังชีพ", href: "#" },
+            { name: "เบี้ยยังชีพ", href: "/index/allowance" },
             { name: "เข้าสู่หน้าหลัก", href: "/main" },
         ]
     )
@@ -93,7 +96,11 @@ const Society = () => {
                                         {
                                             data.map((item, index) => (
                                                 <div className="title-content" key={index}>
-                                                    <h6 className="header-title-content">{item.title}</h6>
+                                                    <div className="header-title-content">
+                                                        <h6 >{item.title}</h6>
+                                                        <h5>{item.amount}</h5>
+                                                    </div>
+
                                                     <h6>{item.text}</h6>
                                                     <h6>{item.subtext}</h6>
                                                 </div>
