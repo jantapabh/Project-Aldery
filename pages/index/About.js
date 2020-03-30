@@ -36,6 +36,8 @@ const About = () => {
 
     const [header, setHeader] = useState("Elderly DB")
     const [subHead, setSubHead] = useState("เว็บฐานข้อมูลผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต")
+    const [summary, setSummary] = useState("เว็บไซต์ฐานข้อมูลผู้สูงอายุ เป็นการนำข้อมูลทางสถิติเกี่ยวกับผู้สูงอายุมาเเสดงผลในรูปของกราฟรูปแบบต่าง ๆ")
+
     const [image, setImage] = useState("/static/")
 
     const [status, setStatus] = useState(false)
@@ -98,7 +100,7 @@ const About = () => {
                                     <h1 className="name-header">{header}</h1>
                                     <h4 className="">{subHead}</h4>
                                     <div className="title-about">
-                                        <h6 className="">เว็บไซต์ฐานข้อมูลประชากรผู้สูงอายุ เป็นการนำข้อมูลทางสถิติมาเเสดงผลในรูปเเบบของกราฟรูปแบบต่าง ๆ</h6>
+                                    <h6 className="">{summary}</h6>
                                     </div>
                                 </div>
 

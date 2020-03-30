@@ -18,8 +18,8 @@ const Cover = () => {
                                 <div className="detail">
                                     <div className="text-content">
                                         <h6>ElderlyDB เป็นการนำข้อมูลทางสถิติเกี่ยวกับผู้สูงอายุ</h6>
-                                        <h6>มาเเสดงผลในรูปเเบบของกราฟ</h6>
-                                        <h6>ในรูปแบบต่าง ๆ  </h6>
+                                        <h6>มาเเสดงผลในรูปของกราฟ</h6>
+                                        <h6>รูปแบบต่าง ๆ</h6>
                                     </div>
                                 </div>
                                 <Link href="/main">
