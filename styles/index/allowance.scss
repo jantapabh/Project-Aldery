@@ -35,6 +35,7 @@ $primary-color: #39b54a !important;
         img {
           height: 20rem;
           margin-right: 1rem;
+          margin-bottom: 1rem;
           @media (max-width: 575.98px) {
             margin-right: 0;
             height: 18rem;
@@ -42,6 +43,7 @@ $primary-color: #39b54a !important;
         }
 
         .data-detail-content {
+          width: 50%;
           margin-left: 2rem;
           display: flex;
           flex-direction: column;
@@ -59,11 +61,16 @@ $primary-color: #39b54a !important;
             }
 
             .header-title-content {
+              margin-top: 1rem;
               font-weight: bold !important;
             }
 
             .sub-title-content {
               margin-left: 1rem;
+
+              .sub-content {
+                margin-left: 1rem;
+              }
             }
 
             h6 {
@@ -89,7 +96,7 @@ $primary-color: #39b54a !important;
   }
 
   .ant-steps {
-    width: 70%;
+    width: 50%;
   }
 
   .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after {
@@ -100,7 +107,7 @@ $primary-color: #39b54a !important;
     flex-direction: column;
     user-select: none;
 
-    .ant-steps-item-subtitle{
+    .ant-steps-item-subtitle {
       margin-left: 0;
       color: rgba(0, 0, 0, 0.65);
     }
@@ -138,7 +145,7 @@ $primary-color: #39b54a !important;
     color: $primary-color;
   }
 
-  .ant-steps-vertical > .ant-steps-item > .ant-steps-item-container > .ant-steps-item-tail::after{
+  .ant-steps-vertical > .ant-steps-item > .ant-steps-item-container > .ant-steps-item-tail::after {
     height: 2rem;
     background: $primary-color;
   }
