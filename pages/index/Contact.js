@@ -3,7 +3,7 @@ import Head from 'next/head';
 import NavBar from '../../components/layout/nav';
 import { useMediaQuery } from 'react-responsive';
 import { Skeleton, Switch, Card, Avatar } from 'antd';
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+import { EditOutlined, EllipsisOutlined, SettingOutlined, HomeOutlined, CopyOutlined } from '@ant-design/icons';
 const { Meta } = Card;
 
 const Contact = () => {
@@ -27,12 +27,6 @@ const Contact = () => {
             detail: "",
             tel: ""
         },
-        {
-            name: "",
-            detail: "",
-            tel: ""
-        },
-
     ])
 
     const [status, setStatus] = useState(false)
@@ -74,7 +68,7 @@ const Contact = () => {
                 <link rel='icon' href='/static/logomain.svg' />
             </Head>
             <NavBar name="main" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
-            <div className="warp-about">
+            <div className="warp-contact-page">
                 <div className="page-content">
                     {
                         isSmallScreen ?
@@ -107,29 +101,30 @@ const Contact = () => {
                                 </div>
 
                                 <div className="detail-content">
-                                    {
-                                        data.map((item, index) => (
-                                            <Card style={{ width: 300, marginTop: 16 }} loading={loading}>
-                                                <Meta
-                                                    avatar={
-                                                        <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-                                                    }
-                                                    title="Card title"
-                                                    description="This is the description"
-                                                />
-                                            </Card>
-                                        ))
-                                    }
                                     <div className="data-detail-content">
-                                        {/* {
+                                        {
                                             data.map((item, index) => (
-                                                <div className="title-content" key={index}>
-                                                    <h6 className="header-title-content">{item.title}</h6>
-                                                    <h6>{item.text}</h6>
-                                                    <h6>{item.subtext}</h6>
-                                                </div>
+                                                <Card
+                                                    style={{ width: 300, marginTop: 15 }}
+                                                    actions={[
+                                                        <HomeOutlined key="home" />,
+                                                        <CopyOutlined key="Copy" />,
+                                                        <EllipsisOutlined key="ellipsis" />,
+
+                                                    ]}
+                                                >
+                                                    <Skeleton loading={loading} avatar active>
+                                                        <Meta
+                                                            avatar={
+                                                                <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                                                            }
+                                                            title="Card title"
+                                                            description="This is the description"
+                                                        />
+                                                    </Skeleton>
+                                                </Card>
                                             ))
-                                        } */}
+                                        }
                                     </div>
                                 </div>
                             </div>
