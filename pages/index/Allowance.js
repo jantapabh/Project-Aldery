@@ -8,7 +8,7 @@ const { Step } = Steps;
 const Allowance = () => {
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
     const [header, setHeader] = useState("เบี้ยยังชีพผู้สูงอายุ")
-    const [subHead, setSubHead] = useState("เว็บฐานข้อมูลผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต")
+    const [subHead, setSubHead] = useState("อำเภอกะทู้ จังหวัดภูเก็ต")
 
     const [data, setData] = useState([
         {
@@ -84,30 +84,23 @@ const Allowance = () => {
                             <div className="container-fluid">
                                 <div className="head-content">
                                     <h4>{header}</h4>
-                                    <h5> ถูกแบ่งออกเป็น 3 ระดับ</h5>
+                                    <h5>{subHead}</h5>
                                 </div>
 
                                 <div className="detail-content">
-                                    <img src="/static/trstcover2.gif" />
-                                    <div className="data-detail-content">
-                                        {
-                                            data.map((item, index) => (
-                                                <div className="title-content" key={index}>
-                                                    <h6 className="header-title-content">{item.title}</h6>
-                                                    <h6>{item.text}</h6>
-                                                    <h6>{item.subtext}</h6>
-                                                    <h6>{item.subtext2}</h6>
-                                                </div>
-                                            ))
+                                    <Steps current={current} direction="vertical" onChange={onChangeStep}>
+                                        {data.map((item, index) => (
+                                            <Step key={index} title={item.title} description={item.description} />
+                                        ))
                                         }
-                                    </div>
+                                    </Steps>
                                 </div>
                             </div>
                             :
                             <div className="container-fluid">
                                 <div className="head-content">
                                     <h3>{header}</h3>
-                                    <h3> ถูกแบ่งออกเป็น 3 ระดับ</h3>
+                                    <h3>{subHead}</h3>
                                 </div>
                                 <div className="detail-content">
                                     <Steps current={current} direction="vertical" onChange={onChangeStep}>
@@ -143,7 +136,7 @@ const Allowance = () => {
                     }
                 </div>
             </div>
-        </React.Fragment>
+        </React.Fragment >
     )
 }
 export default Allowance;
