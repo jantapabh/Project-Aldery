@@ -5,6 +5,9 @@ import { useMediaQuery } from 'react-responsive';
 
 const Contact = () => {
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
+    const [header, setHeader] = useState("การติดต่อหน่วยงาน")
+    const [subHead, setSubHead] = useState("อำเภอกะทู้ จังหวัดภูเก็ต")
+
     const [data, setData] = useState([
         {
             title: "ระดับเริ่มต้น (Aging society)",
@@ -80,14 +83,13 @@ const Contact = () => {
                             :
                             <div className="container-fluid">
                                 <div className="head-content">
-                                    <h3>สังคมผู้สูงอายุ และระดับของการเข้าสู่สังคมผู้สูงอายุ</h3>
-                                    <h3> ถูกแบ่งออกเป็น 3 ระดับ</h3>
+                                    <h3>{header}</h3>
+                                    <h3>{subHead}</h3>
                                 </div>
 
                                 <div className="detail-content">
-                                    <img src="/static/trstcover2.gif" />
                                     <div className="data-detail-content">
-                                        {
+                                        {/* {
                                             data.map((item, index) => (
                                                 <div className="title-content" key={index}>
                                                     <h6 className="header-title-content">{item.title}</h6>
@@ -95,7 +97,7 @@ const Contact = () => {
                                                     <h6>{item.subtext}</h6>
                                                 </div>
                                             ))
-                                        }
+                                        } */}
                                     </div>
                                 </div>
                             </div>
