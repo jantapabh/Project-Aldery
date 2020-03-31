@@ -15,7 +15,7 @@ $primary-color: #39b54a !important;
         .title-about {
           display: flex;
           flex-direction: column;
-          align-items: center;
+          // align-items: center;
           h6 {
             margin-top: 0.5rem;
             color: $font-text-sub;
@@ -170,4 +170,5 @@ $primary-color: #39b54a !important;
     .ant-steps-item-description {
     color: $primary-color;
   }
+
 }
