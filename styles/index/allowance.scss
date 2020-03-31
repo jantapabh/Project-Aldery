@@ -96,7 +96,14 @@ $primary-color: #39b54a !important;
     background-color: $primary-color;
   }
   .ant-steps-item-title {
+    display: flex;
+    flex-direction: column;
     user-select: none;
+
+    .ant-steps-item-subtitle{
+      margin-left: 0;
+      color: rgba(0, 0, 0, 0.65);
+    }
   }
 
   //Icon
@@ -131,9 +138,15 @@ $primary-color: #39b54a !important;
     color: $primary-color;
   }
 
+  .ant-steps-vertical > .ant-steps-item > .ant-steps-item-container > .ant-steps-item-tail::after{
+    height: 2rem;
+    background: $primary-color;
+  }
+
   //Content
   .ant-steps-item-content {
     outline: none;
+    margin-bottom: 1rem;
   }
 
   .ant-steps

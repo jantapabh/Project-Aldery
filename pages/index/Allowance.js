@@ -13,31 +13,31 @@ const Allowance = () => {
     const [data, setData] = useState([
         {
             title: "เบี้ยยังชีพผู้สูงอายุ ",
-            description: "detaildetaildetaildetaildetaildetail"
+            description: "เบี้ยยังชีพผู้สูงอายุคืออะไร"
         },
         {
             title: "ใครบ้างมีสิทธิได้รับเบี้ยยังชีพผู้สูงอายุ",
-            description: "detaildetaildetaildetaildetaildetail"
+            description: "สิทธิในการรับเบี้ยยังชีพผู้สูงอายุ"
         },
         {
             title: "การลงทะเบียนรับเบี้ยยังชีพผู้สูงอายุ",
-            description: "detaildetaildetaildetaildetaildetail"
+            description: "สามารถลงได้ที่ไหน ต้องทำอย่างไร และรับเงินเบี้ยยังชีพผ่านทางช่องทางไหนได้บ้าง"
         },
         {
             title: "หลักฐานในการลงทะเบียนรับเบี้ยยังชีพผู้สูงอายุ",
-            description: "detaildetaildetaildetaildetaildetail"
+            description: " ในกรณีผู้สูงอายุมารับด้วยตนเอง หรือให้ผู้เเทนมารับ"
         },
         {
             title: "เบี้ยยังชีพที่ผู้สูงอายุจะได้รับ",
-            description: "detaildetaildetaildetaildetaildetail"
+            description: "การจ่ายเบี้ยยังชัพผู้สูงอายุแบบบันไดตามช่วงอายุ"
         },
         {
             title: "กฎหมายผู้สูงอายุฉบับใหม่ให้สิทธิอะไรเพิ่มขึ้นบ้าง",
-            description: "detaildetaildetaildetaildetaildetail"
+            description: "กฎหมายผู้สูงอายุ ฉบับใหม่"
         },
         {
             title: "การจัดสรรเงินช่วยเหลือ",
-            description: "detaildetaildetaildetaildetaildetail"
+            description: "หลักเกณฑ์ วิธีการ และเงื่อนไขในการจัดสรรเงินช่วยเหลือ"
         }
     ])
 
@@ -90,7 +90,7 @@ const Allowance = () => {
                                 <div className="detail-content">
                                     <Steps current={current} direction="vertical" onChange={onChangeStep}>
                                         {data.map((item, index) => (
-                                            <Step key={index} title={item.title} description={item.description} />
+                                            <Step key={index} title={item.title}  description={item.descriptionn} />
                                         ))
                                         }
                                     </Steps>
