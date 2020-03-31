@@ -103,7 +103,6 @@ const Allowance = () => {
                                     {
                                         current == 0 ?
                                             <div className="data-detail-content">
-                                                {/* <img src="/static/box1.jpg" alt="img" /> */}
                                                 <div className="title-content">
                                                     <h6 className="header-title-content">เบี้ยยังชีพผู้สูงอายุ</h6>
                                                     <div className="sub-title-content">
@@ -115,7 +114,6 @@ const Allowance = () => {
                                             :
                                             current == 1 ?
                                                 <div className="data-detail-content">
-                                                    {/* <img src="/static/box1.jpg" alt="img" /> */}
                                                     <div className="title-content">
                                                         <h6 className="header-title-content">ใครบ้างมีสิทธิได้รับเบี้ยยังชีพผู้สูงอายุ</h6>
                                                         <h6>คุณสมบัติของผู้ที่จะได้รับเงินช่วยเหลือต้องมีเกณฑ์ ดังต่อไปนี้</h6>
@@ -139,7 +137,6 @@ const Allowance = () => {
                                                 :
                                                 current == 2 ?
                                                     <div className="data-detail-content">
-                                                        {/* <img src="/static/box1.jpg" alt="img" /> */}
                                                         <div className="title-content">
                                                             <h6 className="header-title-content">การลงทะเบียนรับเบี้ยยังชีพผู้สูงอายุ</h6>
                                                             <h6>สำหรับผู้สูงอายุที่มีคุณสมบัติตามเกณฑ์ที่กำหนด</h6>
@@ -161,7 +158,6 @@ const Allowance = () => {
                                                     :
                                                     current == 3 ?
                                                         <div className="data-detail-content">
-                                                            {/* <img src="/static/box1.jpg" alt="img" /> */}
                                                             <div className="title-content">
                                                                 <h6 className="header-title-content">หลักฐานในการลงทะเบียนรับเบี้ยยังชีพผู้สูงอายุ</h6>
                                                                 <div className="sub-title-content">
@@ -179,7 +175,6 @@ const Allowance = () => {
                                                         :
                                                         current == 4 ?
                                                             <div className="data-detail-content">
-                                                                {/* <img src="/static/box1.jpg" alt="img" /> */}
                                                                 <div className="title-content">
                                                                     <h6 className="header-title-content">เบี้ยยังชีพที่ผู้สูงอายุจะได้รับ</h6>
                                                                     <h6>ปัจจุบันการจ่ายเบี้ยยังชีพผู้สูงอายุ จะเป็นแบบขั้นบันไดตามช่วงอายุ</h6>
