@@ -30,19 +30,21 @@ const Contact = () => {
 
     const [home, setHome] = useState(
         [
-            { name: "เกี่ยวกับเรา", href: "/index/about" },
-            { name: "เบี้ยยังชีพ", href: "#" },
-            { name: "เข้าสู่หน้าหลัก", href: "/main" }
+          { name: "เกี่ยวกับเรา", href: "/index/about" },
+          { name: "สังคมผู้สูงอายุ", href: "/index/society" },
+          { name: "เบี้ยยังชีพ", href: "/index/allowance" },
+          { name: "เข้าสู่หน้าหลัก", href: "/main" }
         ]
-    )
-
-    const [homeMin, setHomeMin] = useState(
+      )
+    
+      const [homeMin, setHomeMin] = useState(
         [
-            { name: "เกี่ยวกับเรา", href: "/index/about" },
-            { name: "เบี้ยยังชีพ", href: "#" },
-            { name: "เข้าสู่หน้าหลัก", href: "/main" },
+          { name: "เกี่ยวกับเรา", href: "/index/about" },
+          { name: "สังคมผู้สูงอายุ", href: "/index/society" },
+          { name: "เบี้ยยังชีพ", href: "/index/allowance" },
+          { name: "เข้าสู่หน้าหลัก", href: "/main" },
         ]
-    )
+      )
 
     const onConfirm = (order) => {
         setStatus(order)
