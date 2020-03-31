@@ -4,7 +4,7 @@ import NavBar from '../../components/layout/nav';
 import { useMediaQuery } from 'react-responsive';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Skeleton, Card, Avatar, message, Button } from 'antd';
-import { EditOutlined, EllipsisOutlined, SettingOutlined, HomeOutlined, CopyOutlined } from '@ant-design/icons';
+import { EditOutlined, EllipsisOutlined, SettingOutlined, LinkOutlined, CopyOutlined } from '@ant-design/icons';
 const { Meta } = Card;
 
 const Contact = () => {
@@ -14,16 +14,19 @@ const Contact = () => {
 
     const [data, setData] = useState([
         {
+            img: "",
             name: "",
             detail: "",
             tel: ""
         },
         {
+            img: "",
             name: "",
             detail: "",
             tel: ""
         },
         {
+            img: "",
             name: "",
             detail: "",
             tel: ""
@@ -59,7 +62,7 @@ const Contact = () => {
     }, [])
 
     const success = () => {
-        message.success('This is a success message');
+        message.success('Copied.');
     }
 
     const onConfirm = (order) => {
@@ -112,8 +115,8 @@ const Contact = () => {
                                                 <Card
                                                     style={{ width: 300, marginTop: 15 }}
                                                     actions={[
-                                                        <a href="https://www.google.com/">
-                                                            <HomeOutlined key="home" />
+                                                        <a href="https://www.google.com/" target="_blank">
+                                                            <LinkOutlined key="link"/>
                                                         </a>,
                                                         <CopyToClipboard text={"Copy"} >
                                                             <CopyOutlined key="Copy" onClick={success} />
@@ -122,7 +125,7 @@ const Contact = () => {
 
                                                     ]}
                                                 >
-                                                    <Skeleton loading={loading} avatar active>
+                                                    <Skeleton loading={loading} avatar active >
                                                         <Meta
                                                             avatar={
                                                                 <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
