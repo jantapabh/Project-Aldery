@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import NavBar from '../../components/layout/nav';
 import { useMediaQuery } from 'react-responsive';
-import { Skeleton, Switch, Card, Avatar } from 'antd';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { Skeleton, Card, Avatar, message, Button } from 'antd';
 import { EditOutlined, EllipsisOutlined, SettingOutlined, HomeOutlined, CopyOutlined } from '@ant-design/icons';
 const { Meta } = Card;
 
@@ -57,6 +58,10 @@ const Contact = () => {
         }, 1500)
     }, [])
 
+    const success = () => {
+        message.success('This is a success message');
+    }
+
     const onConfirm = (order) => {
         setStatus(order)
     }
@@ -107,8 +112,12 @@ const Contact = () => {
                                                 <Card
                                                     style={{ width: 300, marginTop: 15 }}
                                                     actions={[
-                                                        <HomeOutlined key="home" />,
-                                                        <CopyOutlined key="Copy" />,
+                                                        <a href="https://www.google.com/">
+                                                            <HomeOutlined key="home" />
+                                                        </a>,
+                                                        <CopyToClipboard text={"Copy"} >
+                                                            <CopyOutlined key="Copy" onClick={success} />
+                                                        </CopyToClipboard>,
                                                         <EllipsisOutlined key="ellipsis" />,
 
                                                     ]}
