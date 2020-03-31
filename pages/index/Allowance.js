@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import NavBar from '../../components/layout/nav';
 import { useMediaQuery } from 'react-responsive';
+import { Steps, Divider } from 'antd';
+const { Step } = Steps;
 
 const Allowance = () => {
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
@@ -10,20 +12,33 @@ const Allowance = () => {
 
     const [data, setData] = useState([
         {
-            title: "เบี้ยยังชีพผู้สูงอายุ คือ",
-            text: "เป็นสวัสดิการขั้นพื้นฐานที่ภาครัฐจัดสรรไว้ให้กับผู้สูงอายุซึ่งหมายถึง บุคคลที่มีอายุ 60 ปีขึ้นไป ",
-            subtext: "เพื่อเป็นเงินช่วยเหลือ และแบ่งเบาภาระค่าใช้จ่ายการดำรงชีวิตในแต่ละเดือน"
+            title: "เบี้ยยังชีพผู้สูงอายุ ",
+            description: "detaildetaildetaildetaildetaildetail"
         },
         {
-            title: "ระดับสมบูรณ์ (Aged society)",
-            text: "สังคมที่มีประชากรอายุ 60 ปีขึ้นไป มากกว่าร้อยละ 20 ของประชากรทั้งประเทศ",
-            subtext: "หรือมีประชากรอายุตั้งแต่ 65 ปี มากกว่าร้อยละ 14 ของประชากรทั้งประเทศ"
+            title: "ใครบ้างมีสิทธิได้รับเบี้ยยังชีพผู้สูงอายุ",
+            description: "detaildetaildetaildetaildetaildetail"
         },
         {
-            title: "ระดับสูง (Super-aged society)",
-            text: "สังคมที่มีประชากรอายุ 65 ปีขึ้นไปมากกว่า ร้อยละ 20 ของประชากรทั้งประเทศ",
-            subtext: ""
+            title: "การลงทะเบียนรับเบี้ยยังชีพผู้สูงอายุ",
+            description: "detaildetaildetaildetaildetaildetail"
         },
+        {
+            title: "หลักฐานในการลงทะเบียนรับเบี้ยยังชีพผู้สูงอายุ",
+            description: "detaildetaildetaildetaildetaildetail"
+        },
+        {
+            title: "เบี้ยยังชีพที่ผู้สูงอายุจะได้รับ",
+            description: "detaildetaildetaildetaildetaildetail"
+        },
+        {
+            title: "กฎหมายผู้สูงอายุฉบับใหม่ให้สิทธิอะไรเพิ่มขึ้นบ้าง",
+            description: "detaildetaildetaildetaildetaildetail"
+        },
+        {
+            title: "การจัดสรรเงินช่วยเหลือ",
+            description: "detaildetaildetaildetaildetaildetail"
+        }
     ])
 
     const [status, setStatus] = useState(false)
@@ -44,9 +59,16 @@ const Allowance = () => {
         ]
     )
 
+    const [current, setCurrent] = useState(0)
+
     const onConfirm = (order) => {
         setStatus(order)
     }
+
+    const onChangeStep = current => {
+        console.log('onChange:', current);
+        setCurrent(current)
+    };
 
     return (
         <React.Fragment>
@@ -74,6 +96,7 @@ const Allowance = () => {
                                                     <h6 className="header-title-content">{item.title}</h6>
                                                     <h6>{item.text}</h6>
                                                     <h6>{item.subtext}</h6>
+                                                    <h6>{item.subtext2}</h6>
                                                 </div>
                                             ))
                                         }
@@ -86,20 +109,35 @@ const Allowance = () => {
                                     <h3>{header}</h3>
                                     <h3> ถูกแบ่งออกเป็น 3 ระดับ</h3>
                                 </div>
-
                                 <div className="detail-content">
-                                    {/* <img src="/static/trstcover2.gif" /> */}
-                                    <div className="data-detail-content">
+                                    <Steps current={current} direction="vertical" onChange={onChangeStep}>
+                                        {data.map((item, index) => (
+                                            <Step key={index} title={item.title} description={item.description} />
+                                        ))
+                                        }
+                                    </Steps>
+                                    {
+                                        current == 0 ?
+                                            <img src="/static/cover-img.png" alt="current" />
+                                            :
+                                            null
+
+                                    }
+
+                                    {/* <div className="data-detail-content">
                                         {
                                             data.map((item, index) => (
                                                 <div className="title-content" key={index}>
                                                     <h6 className="header-title-content">{item.title}</h6>
-                                                    <h6 className="sub-title-content">{item.text}</h6>
-                                                    <h6 className="sub-title-content">{item.subtext}</h6>
+                                                    <div className="sub-title-content">
+                                                        <h6 >{item.text}</h6>
+                                                        <h6 >{item.subtext}</h6>
+                                                        <h6 >{item.subtext2}</h6>
+                                                    </div>
                                                 </div>
                                             ))
                                         }
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                     }
