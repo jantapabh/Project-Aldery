@@ -3,9 +3,10 @@ import Head from 'next/head';
 import NavBar from '../../components/layout/nav';
 import { useMediaQuery } from 'react-responsive';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { Skeleton, Card, Avatar, message, Button } from 'antd';
+import { Skeleton, Card, Avatar, message, Tooltip, Button } from 'antd';
 import { EditOutlined, EllipsisOutlined, SettingOutlined, LinkOutlined, CopyOutlined } from '@ant-design/icons';
 const { Meta } = Card;
+
 
 const Contact = () => {
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
@@ -65,6 +66,10 @@ const Contact = () => {
         message.success('Copied.');
     }
 
+    const text = <span>prompt text</span>;
+
+    const buttonWidth = 70;
+
     const onConfirm = (order) => {
         setStatus(order)
     }
@@ -115,13 +120,21 @@ const Contact = () => {
                                                 <Card
                                                     style={{ width: 300, marginTop: 15 }}
                                                     actions={[
-                                                        <a href="https://www.google.com/" target="_blank">
-                                                            <LinkOutlined key="link"/>
-                                                        </a>,
-                                                        <CopyToClipboard text={"Copy"} >
-                                                            <CopyOutlined key="Copy" onClick={success} />
-                                                        </CopyToClipboard>,
-                                                        <EllipsisOutlined key="ellipsis" />,
+
+                                                        <Tooltip placement="bottom" title={text}>
+                                                            <a href="https://www.google.com/" target="_blank">
+                                                                <LinkOutlined key="link" />
+                                                            </a>
+                                                        </Tooltip>,
+
+                                                        <Tooltip placement="bottom" title={text}>
+                                                            <CopyToClipboard text={"Copy"} >
+                                                                <CopyOutlined key="Copy" onClick={success} />
+                                                            </CopyToClipboard>
+                                                        </Tooltip>,
+
+                                                            <EllipsisOutlined key="ellipsis" />
+                                                    
 
                                                     ]}
                                                 >
