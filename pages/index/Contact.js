@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import NavBar from '../../components/layout/nav';
 import { useMediaQuery } from 'react-responsive';
+import { Skeleton, Switch, Card, Avatar } from 'antd';
+import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+const { Meta } = Card;
 
 const Contact = () => {
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
@@ -10,41 +13,55 @@ const Contact = () => {
 
     const [data, setData] = useState([
         {
-            title: "ระดับเริ่มต้น (Aging society)",
-            text: "สังคมที่มีประชากรอายุ 60 ปีขึ้นไปมากกว่าร้อยละ 10 ของประชากรทั้งประเทศ",
-            subtext: "หรือมีประชากรอายุตั้งแต่ 65 ปีมากกว่าร้อยละ 7 ของประชากรทั้งประเทศ"
+            name: "",
+            detail: "",
+            tel: ""
         },
         {
-            title: "ระดับสมบูรณ์ (Aged society)",
-            text: "สังคมที่มีประชากรอายุ 60 ปีขึ้นไป มากกว่าร้อยละ 20 ของประชากรทั้งประเทศ",
-            subtext: "หรือมีประชากรอายุตั้งแต่ 65 ปี มากกว่าร้อยละ 14 ของประชากรทั้งประเทศ"
+            name: "",
+            detail: "",
+            tel: ""
         },
         {
-            title: "ระดับสูง (Super-aged society)",
-            text: "สังคมที่มีประชากรอายุ 65 ปีขึ้นไปมากกว่า ร้อยละ 20 ของประชากรทั้งประเทศ",
-            subtext: ""
+            name: "",
+            detail: "",
+            tel: ""
         },
+        {
+            name: "",
+            detail: "",
+            tel: ""
+        },
+
     ])
 
     const [status, setStatus] = useState(false)
 
     const [home, setHome] = useState(
         [
-          { name: "เกี่ยวกับเรา", href: "/index/about" },
-          { name: "สังคมผู้สูงอายุ", href: "/index/society" },
-          { name: "เบี้ยยังชีพ", href: "/index/allowance" },
-          { name: "เข้าสู่หน้าหลัก", href: "/main" }
+            { name: "เกี่ยวกับเรา", href: "/index/about" },
+            { name: "สังคมผู้สูงอายุ", href: "/index/society" },
+            { name: "เบี้ยยังชีพ", href: "/index/allowance" },
+            { name: "เข้าสู่หน้าหลัก", href: "/main" }
         ]
-      )
-    
-      const [homeMin, setHomeMin] = useState(
+    )
+
+    const [homeMin, setHomeMin] = useState(
         [
-          { name: "เกี่ยวกับเรา", href: "/index/about" },
-          { name: "สังคมผู้สูงอายุ", href: "/index/society" },
-          { name: "เบี้ยยังชีพ", href: "/index/allowance" },
-          { name: "เข้าสู่หน้าหลัก", href: "/main" },
+            { name: "เกี่ยวกับเรา", href: "/index/about" },
+            { name: "สังคมผู้สูงอายุ", href: "/index/society" },
+            { name: "เบี้ยยังชีพ", href: "/index/allowance" },
+            { name: "เข้าสู่หน้าหลัก", href: "/main" },
         ]
-      )
+    )
+
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 1500)
+    }, [])
 
     const onConfirm = (order) => {
         setStatus(order)
@@ -90,6 +107,19 @@ const Contact = () => {
                                 </div>
 
                                 <div className="detail-content">
+                                    {
+                                        data.map((item, index) => (
+                                            <Card style={{ width: 300, marginTop: 16 }} loading={loading}>
+                                                <Meta
+                                                    avatar={
+                                                        <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                                                    }
+                                                    title="Card title"
+                                                    description="This is the description"
+                                                />
+                                            </Card>
+                                        ))
+                                    }
                                     <div className="data-detail-content">
                                         {/* {
                                             data.map((item, index) => (
