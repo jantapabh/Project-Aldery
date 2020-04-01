@@ -3,10 +3,9 @@ import Head from 'next/head';
 import NavBar from '../../components/layout/nav';
 import { useMediaQuery } from 'react-responsive';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { Skeleton, Card, Avatar, message, Tooltip, Button } from 'antd';
-import { EditOutlined, EllipsisOutlined, SettingOutlined, LinkOutlined, CopyOutlined } from '@ant-design/icons';
+import { Skeleton, Card, Avatar, message, Tooltip } from 'antd';
+import { FacebookFilled, EnvironmentFilled, CopyFilled, EllipsisOutlined } from '@ant-design/icons';
 const { Meta } = Card;
-
 
 const Contact = () => {
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
@@ -15,22 +14,28 @@ const Contact = () => {
 
     const [data, setData] = useState([
         {
-            img: "",
-            name: "",
-            detail: "",
-            tel: ""
+            img: "/static/imgContact1.png",
+            name: "สำนักงานเทศบาลเมืองกะทู้",
+            detail: "12 ม.2 ถ.วิชิตสงคราม ต.กะทู้ อ.กะทู้ จ.ภูเก็ต โทร.076-321500",
+            tel: "076321500",
+            link: "https://www.facebook.com/kathu.municipality",
+            map: "https://www.google.com/maps/place/%E0%B8%AA%E0%B8%B3%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%B0%E0%B8%97%E0%B8%B9%E0%B9%89/@7.9111378,98.3452833,17z/data=!3m1!4b1!4m5!3m4!1s0x3050305d21d9042d:0x24ca59f8b15d6fde!8m2!3d7.9111378!4d98.347472"
+        },
+        {
+            img: "/static/imgContact2.png",
+            name: "สถานีตำรวจภูธรกะทู้",
+            detail: "51/22 ม.6 ถ.วิชิตสงคราม ต.กะทู้ อ.กะทู้ จ.ภูเก็ต โทร.076-323300",
+            tel: "076323300",
+            link: "https://www.facebook.com/Kathu.Phuket.Police",
+            map: "https://www.google.com/maps/place/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%95%E0%B8%B3%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B8%A0%E0%B8%B9%E0%B8%98%E0%B8%A3%E0%B8%81%E0%B8%B0%E0%B8%97%E0%B8%B9%E0%B9%89/@7.9084711,98.3305519,17z/data=!3m1!4b1!4m5!3m4!1s0x30503042d20d8c13:0x53b56df584a63ddb!8m2!3d7.9084711!4d98.3327406"
         },
         {
             img: "",
             name: "",
             detail: "",
-            tel: ""
-        },
-        {
-            img: "",
-            name: "",
-            detail: "",
-            tel: ""
+            tel: "",
+            link: "",
+            map: ""
         },
     ])
 
@@ -63,7 +68,7 @@ const Contact = () => {
     }, [])
 
     const success = () => {
-        message.success('Copied.');
+        message.success('คัดลอกสำเร็จ');
     }
 
     const text = <span>prompt text</span>;
@@ -73,6 +78,7 @@ const Contact = () => {
     const onConfirm = (order) => {
         setStatus(order)
     }
+
 
     return (
         <React.Fragment>
@@ -121,30 +127,33 @@ const Contact = () => {
                                                     style={{ width: 300, marginTop: 15 }}
                                                     actions={[
 
-                                                        <Tooltip placement="bottom" title={text}>
-                                                            <a href="https://www.google.com/" target="_blank">
-                                                                <LinkOutlined key="link" />
+                                                        <Tooltip placement="bottom" title="เฟซบุ๊ก">
+                                                            <a href={item.link} target="_blank">
+                                                                <FacebookFilled key="fb" />
+                                                            </a>
+                                                        </Tooltip>,
+                                                        <Tooltip placement="bottom" title="แผนที่">
+                                                            <a href={item.map} target="_blank">
+                                                                <EnvironmentFilled />
                                                             </a>
                                                         </Tooltip>,
 
-                                                        <Tooltip placement="bottom" title={text}>
-                                                            <CopyToClipboard text={"Copy"} >
-                                                                <CopyOutlined key="Copy" onClick={success} />
+                                                        <Tooltip placement="bottom" title="คัดลอกเบอร์โทร">
+                                                            <CopyToClipboard text={item.tel} >
+                                                                <CopyFilled key="Copy" onClick={success} />
                                                             </CopyToClipboard>
                                                         </Tooltip>,
-
-                                                            <EllipsisOutlined key="ellipsis" />
-                                                    
 
                                                     ]}
                                                 >
                                                     <Skeleton loading={loading} avatar active >
                                                         <Meta
                                                             avatar={
-                                                                <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                                                                <Avatar src={item.img} />
                                                             }
-                                                            title="Card title"
-                                                            description="This is the description"
+                                                            title={item.name}
+                                                            subTitle={item.detail}
+                                                            description={item.detail}
                                                         />
                                                     </Skeleton>
                                                 </Card>
