@@ -12,7 +12,7 @@ const Contact = () => {
     const [header, setHeader] = useState("การติดต่อหน่วยงาน")
     const [subHead, setSubHead] = useState("อำเภอกะทู้ จังหวัดภูเก็ต")
 
-    const [data, setData] = useState([
+    const [department, setDepartment] = useState([
         {
             img: "/static/imgContact1.png",
             name: "สำนักงานเทศบาลเมืองกะทู้",
@@ -37,6 +37,24 @@ const Contact = () => {
             link: "https://www.facebook.com/tevakarnaumpor",
             map: "https://www.google.co.th/maps/place/%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%B3%E0%B9%80%E0%B8%A0%E0%B8%AD%E0%B8%81%E0%B8%B0%E0%B8%97%E0%B8%B9%E0%B9%89+Kathu+District+Office/@7.9100774,98.3360604,16z/data=!4m8!1m2!2m1!1z4LiX4Li14LmI4Lin4LmI4Liy4LiB4Liy4Lij4Lit4Liz4LmA4Lig4Lit4LiB4Liw4LiX4Li54LmJICDguIjguLHguIfguKvguKfguLHguJTguKDguLnguYDguIHguYfguJU!3m4!1s0x3050305d2835917d:0x9a921465196e83a6!8m2!3d7.9090171!4d98.3334266?hl=th&authuser=0"
         },
+    ])
+
+    const [help, setHelp] = useState([
+        {
+            img: "/static/imgContact4.png",
+            name: "โรงพยาบาลส่งเสริมสุขภาพตำบล ตำบลกะทู้",
+            detail: "59/3 ม.4 ต.กะทู้ อ.กะทู้ จ.ภูเก็ต โทร.076-321548",
+            tel: "076321548",
+            map: "https://www.google.com/maps/place/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%AA%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%95%E0%B8%B3%E0%B8%9A%E0%B8%A5%E0%B8%95%E0%B8%B3%E0%B8%9A%E0%B8%A5%E0%B8%95%E0%B8%B3%E0%B8%9A%E0%B8%A5%E0%B8%81%E0%B8%B0%E0%B8%97%E0%B8%B9%E0%B9%89/@7.916979,98.3415863,17z/data=!3m1!4b1!4m5!3m4!1s0x30503057af5e0b47:0xb21089b5f78f4817!8m2!3d7.916979!4d98.343775"
+        },
+        {
+            img: "",
+            name: "ศูนย์ดูแลผู้สูงอายุภูเก็ต",
+            detail: "",
+            tel: "",
+            map: ""
+        },
+        
     ])
 
     const [status, setStatus] = useState(false)
@@ -112,7 +130,7 @@ const Contact = () => {
                                 <div className="detail-content">
                                     <div className="data-detail-content">
                                         {
-                                            data.map((item, index) => (
+                                            department.map((item, index) => (
                                                 <Card
                                                     style={{ width: 300, marginTop: 15 }}
                                                     actions={[
@@ -127,7 +145,41 @@ const Contact = () => {
                                                                 <EnvironmentFilled />
                                                             </a>
                                                         </Tooltip>,
+                                                        <Tooltip placement="bottom" title="คัดลอกเบอร์โทร">
+                                                            <CopyToClipboard text={item.tel} >
+                                                                <CopyFilled key="Copy" onClick={success} />
+                                                            </CopyToClipboard>
+                                                        </Tooltip>,
 
+                                                    ]}
+                                                >
+                                                    <Skeleton loading={loading} avatar active >
+                                                        <Meta
+                                                            avatar={
+                                                                <Avatar src={item.img} />
+                                                            }
+                                                            title={item.name}
+                                                            subTitle={item.detail}
+                                                            description={item.detail}
+                                                        />
+                                                    </Skeleton>
+                                                </Card>
+                                            ))
+                                        }
+                                    </div>
+
+                                    <div className="data-detail-content">
+                                        {
+                                            help.map((item, index) => (
+                                                <Card
+                                                    style={{ width: 400, marginTop: 15 }}
+                                                    actions={[
+
+                                                        <Tooltip placement="bottom" title="แผนที่">
+                                                            <a href={item.map} target="_blank">
+                                                                <EnvironmentFilled />
+                                                            </a>
+                                                        </Tooltip>,
                                                         <Tooltip placement="bottom" title="คัดลอกเบอร์โทร">
                                                             <CopyToClipboard text={item.tel} >
                                                                 <CopyFilled key="Copy" onClick={success} />
