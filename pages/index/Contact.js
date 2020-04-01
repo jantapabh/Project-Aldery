@@ -30,12 +30,12 @@ const Contact = () => {
             map: "https://www.google.com/maps/place/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%95%E0%B8%B3%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B8%A0%E0%B8%B9%E0%B8%98%E0%B8%A3%E0%B8%81%E0%B8%B0%E0%B8%97%E0%B8%B9%E0%B9%89/@7.9084711,98.3305519,17z/data=!3m1!4b1!4m5!3m4!1s0x30503042d20d8c13:0x53b56df584a63ddb!8m2!3d7.9084711!4d98.3327406"
         },
         {
-            img: "",
-            name: "",
-            detail: "",
-            tel: "",
-            link: "",
-            map: ""
+            img: "/static/imgContact3.png",
+            name: "ที่ว่าการอำเภอกะทู้",
+            detail: "51/16 ถ.วิชิตสงคราม ต.กะทู้ อ.กะทู้ จ.ภูเก็ต โทร.076-321133",
+            tel: "076321133",
+            link: "https://www.facebook.com/tevakarnaumpor",
+            map: "https://www.google.co.th/maps/place/%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%B3%E0%B9%80%E0%B8%A0%E0%B8%AD%E0%B8%81%E0%B8%B0%E0%B8%97%E0%B8%B9%E0%B9%89+Kathu+District+Office/@7.9100774,98.3360604,16z/data=!4m8!1m2!2m1!1z4LiX4Li14LmI4Lin4LmI4Liy4LiB4Liy4Lij4Lit4Liz4LmA4Lig4Lit4LiB4Liw4LiX4Li54LmJICDguIjguLHguIfguKvguKfguLHguJTguKDguLnguYDguIHguYfguJU!3m4!1s0x3050305d2835917d:0x9a921465196e83a6!8m2!3d7.9090171!4d98.3334266?hl=th&authuser=0"
         },
     ])
 
@@ -79,7 +79,6 @@ const Contact = () => {
         setStatus(order)
     }
 
-
     return (
         <React.Fragment>
             <Head>
@@ -93,22 +92,13 @@ const Contact = () => {
                         isSmallScreen ?
                             <div className="container-fluid">
                                 <div className="head-content">
-                                    <h4>สังคมผู้สูงอายุ <br />และระดับของการเข้าสู่สังคมผู้สูงอายุ</h4>
-                                    <h5> ถูกแบ่งออกเป็น 3 ระดับ</h5>
+                                    <h4>{header}</h4>
+                                    <h5>{subHead}</h5>
                                 </div>
 
                                 <div className="detail-content">
-                                    <img src="/static/trstcover2.gif" />
                                     <div className="data-detail-content">
-                                        {
-                                            data.map((item, index) => (
-                                                <div className="title-content" key={index}>
-                                                    <h6 className="header-title-content">{item.title}</h6>
-                                                    <h6>{item.text}</h6>
-                                                    <h6>{item.subtext}</h6>
-                                                </div>
-                                            ))
-                                        }
+
                                     </div>
                                 </div>
                             </div>
