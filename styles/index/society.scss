@@ -1,4 +1,4 @@
-.warp-society {
+.warp-society-page {
   .page-content {
     padding-top: 3rem;
 
@@ -44,6 +44,11 @@
 
             @media (max-width: 768px) {
               padding: 0;
+            }
+            
+            h5{
+              text-align: start;
+              font-weight: lighter !important;
             }
 
             .header-title-content {

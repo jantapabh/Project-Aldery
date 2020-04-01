@@ -58,7 +58,7 @@ const Society = () => {
                 <link rel='icon' href='/static/logomain.svg' />
             </Head>
             <NavBar name="main" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
-            <div className="warp-society">
+            <div className="warp-society-page">
                 <div className="page-content">
                     {
                         isSmallScreen ?
@@ -74,7 +74,10 @@ const Society = () => {
                                         {
                                             data.map((item, index) => (
                                                 <div className="title-content" key={index}>
-                                                    <h6 className="header-title-content">{item.title}</h6>
+                                                    <div className="header-title-content">
+                                                        <h6 >{item.title}</h6>
+                                                    </div>
+                                                    <h5>{item.amount}</h5>
                                                     <h6>{item.text}</h6>
                                                     <h6>{item.subtext}</h6>
                                                 </div>
@@ -100,7 +103,6 @@ const Society = () => {
                                                         <h6 >{item.title}</h6>
                                                         <h5>{item.amount}</h5>
                                                     </div>
-
                                                     <h6>{item.text}</h6>
                                                     <h6>{item.subtext}</h6>
                                                 </div>
