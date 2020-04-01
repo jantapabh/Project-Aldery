@@ -30,7 +30,9 @@ $primary-color: #39b54a !important;
         margin: 2rem 3rem;
 
         @media (max-width: 575.98px) {
+          margin-top: 1rem !important;
           flex-direction: column;
+          margin: 0 1rem;
         }
         img {
           height: 20rem;
@@ -49,13 +51,15 @@ $primary-color: #39b54a !important;
           align-items: center;
           flex-direction: column;
 
-          img{
+          img {
             width: 20rem;
             height: 15rem;
           }
 
           @media (max-width: 575.98px) {
+            width: 100%;
             margin-top: 1rem;
+            margin-left: 0;
           }
 
           .title-content {
@@ -154,6 +158,9 @@ $primary-color: #39b54a !important;
   .ant-steps-vertical > .ant-steps-item > .ant-steps-item-container > .ant-steps-item-tail::after {
     height: 2rem;
     background: $primary-color;
+    @media (max-width: 575.98px) {
+      height: inherit;
+    }
   }
 
   //Content
@@ -177,4 +184,24 @@ $primary-color: #39b54a !important;
     color: $primary-color;
   }
 
+  //Min
+  .ant-steps-item-title {
+    @media (max-width: 575.98px) {
+      width: 30rem;
+    }
+  }
+  .ant-steps-item-container {
+    @media (max-width: 575.98px) {
+      display: flex;
+      width: 20rem;
+    }
+  }
+
+  .ant-steps-item-content {
+    @media (max-width: 575.98px) {
+      display: flex;
+      margin: 0;
+      width: 20rem;
+    }
+  }
 }
