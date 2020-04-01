@@ -103,6 +103,7 @@ const Allowance = () => {
                                     {
                                         current == 0 ?
                                             <div className="data-detail-content">
+                                                <img src="/static/imgAllowance.png" />
                                                 <div className="title-content">
                                                     <h6 className="header-title-content">เบี้ยยังชีพผู้สูงอายุ</h6>
                                                     <div className="sub-title-content">

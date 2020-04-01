@@ -46,7 +46,13 @@ $primary-color: #39b54a !important;
           width: 50%;
           margin-left: 2rem;
           display: flex;
+          align-items: center;
           flex-direction: column;
+
+          img{
+            width: 20rem;
+            height: 15rem;
+          }
 
           @media (max-width: 575.98px) {
             margin-top: 1rem;
