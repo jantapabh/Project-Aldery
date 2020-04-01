@@ -42,19 +42,19 @@ const About = () => {
 
     const [home, setHome] = useState(
         [
-          { name: "สังคมผู้สูงอายุ", href: "/index/society" },
-          { name: "เบี้ยยังชีพ", href: "/index/allowance" },
-          { name: "เข้าสู่หน้าหลัก", href: "/main" }
+            { name: "สังคมผู้สูงอายุ", href: "/index/society" },
+            { name: "เบี้ยยังชีพ", href: "/index/allowance" },
+            { name: "เข้าสู่หน้าหลัก", href: "/main" }
         ]
-      )
-    
-      const [homeMin, setHomeMin] = useState(
+    )
+
+    const [homeMin, setHomeMin] = useState(
         [
-          { name: "สังคมผู้สูงอายุ", href: "/index/society" },
-          { name: "เบี้ยยังชีพ", href: "/index/allowance" },
-          { name: "เข้าสู่หน้าหลัก", href: "/main" },
+            { name: "สังคมผู้สูงอายุ", href: "/index/society" },
+            { name: "เบี้ยยังชีพ", href: "/index/allowance" },
+            { name: "เข้าสู่หน้าหลัก", href: "/main" },
         ]
-      )
+    )
 
     const onConfirm = (order) => {
         setStatus(order)
@@ -78,17 +78,17 @@ const About = () => {
                                 </div>
 
                                 <div className="detail-content">
-                                    <img src="/static/gifcover2.gif" />
+                                    <img className="" src="/static/testcoverAbout.jpg" />
                                     <div className="data-detail-content">
-                                        {/* {
+                                        {
                                             data.map((item, index) => (
-                                                <div className="title-content" key={index}>
+                                                <div className="title-content " key={index}>
                                                     <h6 className="header-title-content">{item.title}</h6>
-                                                    <h6>{item.text}</h6>
-                                                    <h6>{item.subtext}</h6>
+                                                    <h6 className="sub-title-content">{item.text}</h6>
+                                                    <h6 className="sub-title-content">{item.subtext}</h6>
                                                 </div>
                                             ))
-                                        } */}
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -98,7 +98,7 @@ const About = () => {
                                     <h1 className="name-header">{header}</h1>
                                     <h4 className="">{subHead}</h4>
                                     <div className="title-about">
-                                    <h6 className="">{summary}</h6>
+                                        <h6 className="">{summary}</h6>
                                     </div>
                                 </div>
 
