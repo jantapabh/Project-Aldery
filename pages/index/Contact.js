@@ -54,7 +54,7 @@ const Contact = () => {
             tel: "0763426334",
             map: "https://www.google.co.th/maps/place/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B8%95%E0%B8%AD%E0%B8%87/@7.896479,98.2996783,17z/data=!3m1!4b1!4m5!3m4!1s0x30503aa248747279:0xe0ff9b6f01619ceb!8m2!3d7.896479!4d98.301867?hl=th&authuser=0"
         },
-        
+
     ])
 
     const [status, setStatus] = useState(false)
@@ -116,7 +116,78 @@ const Contact = () => {
 
                                 <div className="detail-content">
                                     <div className="data-detail-content">
+                                        {
+                                            department.map((item, index) => (
+                                                <Card
+                                                    style={{ width: 350, marginTop: 15 }}
+                                                    actions={[
 
+                                                        <Tooltip placement="bottom" title="เฟซบุ๊ก">
+                                                            <a href={item.link} target="_blank">
+                                                                <FacebookFilled key="fb" />
+                                                            </a>
+                                                        </Tooltip>,
+                                                        <Tooltip placement="bottom" title="แผนที่">
+                                                            <a href={item.map} target="_blank">
+                                                                <EnvironmentFilled />
+                                                            </a>
+                                                        </Tooltip>,
+                                                        <Tooltip placement="bottom" title="คัดลอกเบอร์โทร">
+                                                            <CopyToClipboard text={item.tel} >
+                                                                <CopyFilled key="Copy" onClick={success} />
+                                                            </CopyToClipboard>
+                                                        </Tooltip>,
+
+                                                    ]}
+                                                >
+                                                    <Skeleton loading={loading} avatar active >
+                                                        <Meta
+                                                            avatar={
+                                                                <Avatar src={item.img} />
+                                                            }
+                                                            title={item.name}
+                                                            subTitle={item.detail}
+                                                            description={item.detail}
+                                                        />
+                                                    </Skeleton>
+                                                </Card>
+                                            ))
+                                        }
+                                    </div>
+
+                                    <div className="data-detail-content">
+                                        {
+                                            help.map((item, index) => (
+                                                <Card
+                                                    style={{ width: 400, marginTop: 15 }}
+                                                    actions={[
+
+                                                        <Tooltip placement="bottom" title="แผนที่">
+                                                            <a href={item.map} target="_blank">
+                                                                <EnvironmentFilled />
+                                                            </a>
+                                                        </Tooltip>,
+                                                        <Tooltip placement="bottom" title="คัดลอกเบอร์โทร">
+                                                            <CopyToClipboard text={item.tel} >
+                                                                <CopyFilled key="Copy" onClick={success} />
+                                                            </CopyToClipboard>
+                                                        </Tooltip>,
+
+                                                    ]}
+                                                >
+                                                    <Skeleton loading={loading} avatar active >
+                                                        <Meta
+                                                            avatar={
+                                                                <Avatar src={item.img} />
+                                                            }
+                                                            title={item.name}
+                                                            subTitle={item.detail}
+                                                            description={item.detail}
+                                                        />
+                                                    </Skeleton>
+                                                </Card>
+                                            ))
+                                        }
                                     </div>
                                 </div>
                             </div>
