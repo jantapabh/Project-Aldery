@@ -145,7 +145,7 @@ const Info = () => {
                             <div className="page-content">
                                 <div className="content-data-agency">
                                     <div className="head-agency">
-                                        <img src="/static/logo1.png" alt="logo" />
+                                        <img src="/static/imgContact1.png" alt="logo" />
                                         <div className="title-agency">
                                             <h2>เทศบาลเมืองกะทู้</h2>
                                             <h6>จังหวัดภูเก็ต</h6>
@@ -230,7 +230,7 @@ const Info = () => {
                             <div className="page-content">
                                 <div className="content-data-agency">
                                     <div className="head-agency">
-                                        <img src="/static/logo1.png" alt="logo" />
+                                        <img src="/static/imgContact1.png" alt="logo" />
                                         <div className="title-agency">
                                             <h2>เทศบาลเมืองกะทู้</h2>
                                             <h6>จังหวัดภูเก็ต</h6>
