@@ -49,7 +49,7 @@ const Contact = () => {
         },
         {
             img: "",
-            name: "ศูนย์ดูแลผู้สูงอายุภูเก็ต",
+            name: "",
             detail: "",
             tel: "",
             map: ""
