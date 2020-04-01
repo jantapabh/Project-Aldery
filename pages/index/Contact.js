@@ -48,11 +48,11 @@ const Contact = () => {
             map: "https://www.google.com/maps/place/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%AA%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%95%E0%B8%B3%E0%B8%9A%E0%B8%A5%E0%B8%95%E0%B8%B3%E0%B8%9A%E0%B8%A5%E0%B8%95%E0%B8%B3%E0%B8%9A%E0%B8%A5%E0%B8%81%E0%B8%B0%E0%B8%97%E0%B8%B9%E0%B9%89/@7.916979,98.3415863,17z/data=!3m1!4b1!4m5!3m4!1s0x30503057af5e0b47:0xb21089b5f78f4817!8m2!3d7.916979!4d98.343775"
         },
         {
-            img: "",
-            name: "",
-            detail: "",
-            tel: "",
-            map: ""
+            img: "/static/imgContact5.png",
+            name: "โรงพยาบาลป่าตอง",
+            detail: " 57 ถ.ใสน้ำเย็น ต.ป่าตอง อ.กะทู้ จ.ภูเก็ต โทร.076-3426334",
+            tel: "0763426334",
+            map: "https://www.google.co.th/maps/place/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B8%95%E0%B8%AD%E0%B8%87/@7.896479,98.2996783,17z/data=!3m1!4b1!4m5!3m4!1s0x30503aa248747279:0xe0ff9b6f01619ceb!8m2!3d7.896479!4d98.301867?hl=th&authuser=0"
         },
         
     ])
