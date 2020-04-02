@@ -25,53 +25,22 @@ const NavBar = props => {
     return (
         <React.Fragment>
             {
-                isBigScreen && name == "index" ?
-                    <nav>
-                        <ul>
-                            <Link href="/">
-                                <li>
-                                    <h2>Eldery DB</h2>
-                                </li>
-                            </Link>
-                            <li>
-                                {
-                                    tab.map((item, index) => {
-                                        return (
-                                            <a href={item.href} key={index} >
-                                                {
-                                                    item.name == "ติดต่อ" ?
-                                                        <p className="li-buttom-line">{item.name}</p>
-                                                        :
-                                                        item.name == "เข้าสู่หน้าหลัก" ?
-                                                            <p className="li-buttom-line-active">{item.name}</p>
-                                                            :
-                                                            <React.Fragment>
-                                                                <button className="btn">
-                                                                    <p>{item.name}</p>
-                                                                </button>
-                                                            </React.Fragment>
-                                                }
-                                            </a>
-                                        )
-                                    })
-                                }
-                            </li>
-                        </ul>
-                    </nav>
-                    :
-                    isBigScreen && name == "main" ?
+
+                typeof document === 'undefined' ?
+                    null :
+                    isBigScreen && name == "index" ?
                         <nav>
-                            <ul >
+                            <ul>
                                 <Link href="/">
                                     <li>
-                                        <p>ย้อนกลับ</p>
+                                        <h2>Eldery DB</h2>
                                     </li>
                                 </Link>
                                 <li>
                                     {
                                         tab.map((item, index) => {
                                             return (
-                                                <a href={item.href} key={index}>
+                                                <a href={item.href} key={index} >
                                                     {
                                                         item.name == "ติดต่อ" ?
                                                             <p className="li-buttom-line">{item.name}</p>
@@ -90,70 +59,104 @@ const NavBar = props => {
                                         })
                                     }
                                 </li>
-
                             </ul>
                         </nav>
                         :
-                        isBigScreen && name == "other" ?
+                        isBigScreen && name == "main" ?
                             <nav>
-                                <ul>
+                                <ul >
                                     <Link href="/">
                                         <li>
-                                            <h2>Eldery DB</h2>
+                                            <p>ย้อนกลับ</p>
                                         </li>
                                     </Link>
                                     <li>
                                         {
                                             tab.map((item, index) => {
                                                 return (
-                                                    <Link key={index} href={item.href}>
+                                                    <a href={item.href} key={index}>
                                                         {
-                                                            <React.Fragment>
-                                                                <button className="btn">
-                                                                    <p>{item.name}</p>
-                                                                </button>
-                                                            </React.Fragment>
+                                                            item.name == "ติดต่อ" ?
+                                                                <p className="li-buttom-line">{item.name}</p>
+                                                                :
+                                                                item.name == "เข้าสู่หน้าหลัก" ?
+                                                                    <p className="li-buttom-line-active">{item.name}</p>
+                                                                    :
+                                                                    <React.Fragment>
+                                                                        <button className="btn">
+                                                                            <p>{item.name}</p>
+                                                                        </button>
+                                                                    </React.Fragment>
                                                         }
-                                                    </Link>
+                                                    </a>
                                                 )
                                             })
                                         }
                                     </li>
+
                                 </ul>
                             </nav>
                             :
-                            isSmallScreen ?
-                                <div className="collapsible-menu">
-                                    <div className="warp-nav-sidebar">
+                            isBigScreen && name == "other" ?
+                                <nav>
+                                    <ul>
                                         <Link href="/">
-                                            <h2>Eldery DB</h2>
+                                            <li>
+                                                <h2>Eldery DB</h2>
+                                            </li>
                                         </Link>
-                                        <div className="box-hamberger">
-                                            <a className={`hamberger btn${status ? " active" : " not-active"}`} onClick={collapsible} >
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </a>
+                                        <li>
+                                            {
+                                                tab.map((item, index) => {
+                                                    return (
+                                                        <Link key={index} href={item.href}>
+                                                            {
+                                                                <React.Fragment>
+                                                                    <button className="btn">
+                                                                        <p>{item.name}</p>
+                                                                    </button>
+                                                                </React.Fragment>
+                                                            }
+                                                        </Link>
+                                                    )
+                                                })
+                                            }
+                                        </li>
+                                    </ul>
+                                </nav>
+                                :
+                                isSmallScreen ?
+                                    <div className="collapsible-menu">
+                                        <div className="warp-nav-sidebar">
+                                            <Link href="/">
+                                                <h2>Eldery DB</h2>
+                                            </Link>
+                                            <div className="box-hamberger">
+                                                <a className={`hamberger btn${status ? " active" : " not-active"}`} onClick={collapsible} >
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className={`menu-content${status ? " show" : ""}`}>
+                                            <ul>
+                                                <li >
+                                                    {
+                                                        tab.map((item, indexs) => {
+                                                            return (
+                                                                <Link key={indexs} href={item.href}>
+                                                                    <p >{item.name}</p>
+                                                                </Link>
+                                                            )
+                                                        })
+                                                    }
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    <div className={`menu-content${status ? " show" : ""}`}>
-                                        <ul>
-                                            <li >
-                                                {
-                                                    tab.map((item, indexs) => {
-                                                        return (
-                                                            <Link key={indexs} href={item.href}>
-                                                                <p >{item.name}</p>
-                                                            </Link>
-                                                        )
-                                                    })
-                                                }
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                :
-                                null
+                                    :
+                                    null
             }
         </React.Fragment>
 
