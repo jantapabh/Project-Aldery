@@ -74,79 +74,85 @@ const MainPage = () => {
 
     return (
         <React.Fragment>
-            <Head>
-                <title>Eldery Dashboard</title>
-                <link rel='icon' href='/static/logomain.svg' />
-            </Head>
-            <div className="warp-main">
-                {
-                    loading ?
-                        <Progress
-                            strokeColor={{
-                                from: '#108ee9',
-                                to: '#87d068',
-                            }}
-                            percent={completed}
-                            status="active"
-                        />
-                        :
-                        userOauth != null && !tokenError ?
-                            <React.Fragment>
-                                <Dashboard onStatusMain={statusMain} statusMain={status} />
-                                <div className="page-content-main">
-                                    <div className="container-fluid-main">
-                                        <h1 className="text-center">ผู้สูงอายุ</h1>
-                                        <h2 className="small text-center">อำเภอกะทู้ จังหวัดภูเก็ต</h2>
-                                        {
-                                            isLaptop ?
+            {
+                typeof document === 'undefined' ?
+                    null :
+                    <React.Fragment>
+                        <Head>
+                            <title>Eldery Dashboard</title>
+                            <link rel='icon' href='/static/logomain.svg' />
+                        </Head>
+                        <div className="warp-main">
+                            {
+                                loading ?
+                                    <Progress
+                                        strokeColor={{
+                                            from: '#108ee9',
+                                            to: '#87d068',
+                                        }}
+                                        percent={completed}
+                                        status="active"
+                                    />
+                                    :
+                                    userOauth != null && !tokenError ?
+                                        <React.Fragment>
+                                            <Dashboard onStatusMain={statusMain} statusMain={status} />
+                                            <div className="page-content-main">
+                                                <div className="container-fluid-main">
+                                                    <h1 className="text-center">ผู้สูงอายุ</h1>
+                                                    <h2 className="small text-center">อำเภอกะทู้ จังหวัดภูเก็ต</h2>
+                                                    {
+                                                        isLaptop ?
 
-                                                <div className="info-main">
-                                                    <div className="warp-map">
-                                                        <Map onToken={statusToken} />
-                                                    </div>
-                                                    <div className="warp-chart-main">
-                                                        <div className="chart-row">
-                                                            <Piechart onToken={statusToken} />
-                                                            <Piechart2 />
-                                                        </div>
-                                                        <Barchart />
-                                                    </div>
-                                                </div>
-                                                :
-                                                isTablet ?
-                                                    <div className="info-main">
-                                                        <div className="warp-chart-main">
-                                                            <BarMap onToken={statusToken} />
-                                                            <div className="chart-row">
-                                                                <Piechart />
-                                                                <Piechart2 />
-                                                            </div>
-                                                            <Barchart />
-                                                        </div>
-                                                    </div>
-                                                    :
-                                                    isMobile ?
-                                                        <div className="info-main">
-
-                                                            <div className="warp-chart-main">
-                                                                <BarMap onToken={statusToken} />
-                                                                <div className="chart-col">
-                                                                    <Piechart onToken={statusToken} />
-                                                                    <Piechart2 />
+                                                            <div className="info-main">
+                                                                <div className="warp-map">
+                                                                    <Map onToken={statusToken} />
                                                                 </div>
-                                                                <Barchart />
+                                                                <div className="warp-chart-main">
+                                                                    <div className="chart-row">
+                                                                        <Piechart onToken={statusToken} />
+                                                                        <Piechart2 />
+                                                                    </div>
+                                                                    <Barchart />
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        :
-                                                        null
-                                        }
-                                    </div>
-                                </div>
-                            </React.Fragment>
-                            :
-                            <Empty />
-                }
-            </div >
+                                                            :
+                                                            isTablet ?
+                                                                <div className="info-main">
+                                                                    <div className="warp-chart-main">
+                                                                        <BarMap onToken={statusToken} />
+                                                                        <div className="chart-row">
+                                                                            <Piechart />
+                                                                            <Piechart2 />
+                                                                        </div>
+                                                                        <Barchart />
+                                                                    </div>
+                                                                </div>
+                                                                :
+                                                                isMobile ?
+                                                                    <div className="info-main">
+
+                                                                        <div className="warp-chart-main">
+                                                                            <BarMap onToken={statusToken} />
+                                                                            <div className="chart-col">
+                                                                                <Piechart onToken={statusToken} />
+                                                                                <Piechart2 />
+                                                                            </div>
+                                                                            <Barchart />
+                                                                        </div>
+                                                                    </div>
+                                                                    :
+                                                                    null
+                                                    }
+                                                </div>
+                                            </div>
+                                        </React.Fragment>
+                                        :
+                                        <Empty />
+                            }
+                        </div >
+                    </React.Fragment>
+            }
         </React.Fragment>
     )
 }

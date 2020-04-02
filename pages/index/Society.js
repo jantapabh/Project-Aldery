@@ -53,67 +53,73 @@ const Society = () => {
 
     return (
         <React.Fragment>
-            <Head>
-                <title>Eldery DB</title>
-                <link rel='icon' href='/static/logomain.svg' />
-            </Head>
-            <NavBar name="main" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
-            <div className="warp-society-page">
-                <div className="page-content">
-                    {
-                        isSmallScreen ?
-                            <div className="container-fluid">
-                                <div className="head-content">
-                                    <h4>{header}</h4>
-                                    <h5>{subHead}</h5>
-                                </div>
+            {
+                typeof document === 'undefined' ?
+                    null :
+                    <React.Fragment>
+                        <Head>
+                            <title>Eldery DB</title>
+                            <link rel='icon' href='/static/logomain.svg' />
+                        </Head>
+                        <NavBar name="main" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
+                        <div className="warp-society-page">
+                            <div className="page-content">
+                                {
+                                    isSmallScreen ?
+                                        <div className="container-fluid">
+                                            <div className="head-content">
+                                                <h4>{header}</h4>
+                                                <h5>{subHead}</h5>
+                                            </div>
 
-                                <div className="detail-content">
-                                    <img src="/static/gifcover2.gif" />
-                                    <div className="data-detail-content">
-                                        {
-                                            data.map((item, index) => (
-                                                <div className="title-content" key={index}>
-                                                    <div className="header-title-content">
-                                                        <h6 >{item.title}</h6>
-                                                    </div>
-                                                    <h5>{item.amount}</h5>
-                                                    <h6>{item.text}</h6>
-                                                    <h6>{item.subtext}</h6>
+                                            <div className="detail-content">
+                                                <img src="/static/gifcover2.gif" />
+                                                <div className="data-detail-content">
+                                                    {
+                                                        data.map((item, index) => (
+                                                            <div className="title-content" key={index}>
+                                                                <div className="header-title-content">
+                                                                    <h6 >{item.title}</h6>
+                                                                </div>
+                                                                <h5>{item.amount}</h5>
+                                                                <h6>{item.text}</h6>
+                                                                <h6>{item.subtext}</h6>
+                                                            </div>
+                                                        ))
+                                                    }
                                                 </div>
-                                            ))
-                                        }
-                                    </div>
-                                </div>
-                            </div>
-                            :
-                            <div className="container-fluid">
-                                <div className="head-content">
-                                    <h3>{header}</h3>
-                                    <h3>{subHead}</h3>
-                                </div>
+                                            </div>
+                                        </div>
+                                        :
+                                        <div className="container-fluid">
+                                            <div className="head-content">
+                                                <h3>{header}</h3>
+                                                <h3>{subHead}</h3>
+                                            </div>
 
-                                <div className="detail-content">
-                                    <img src="/static/gifcover2.gif" />
-                                    <div className="data-detail-content">
-                                        {
-                                            data.map((item, index) => (
-                                                <div className="title-content" key={index}>
-                                                    <div className="header-title-content">
-                                                        <h6 >{item.title}</h6>
-                                                        <h5>{item.amount}</h5>
-                                                    </div>
-                                                    <h6>{item.text}</h6>
-                                                    <h6>{item.subtext}</h6>
+                                            <div className="detail-content">
+                                                <img src="/static/gifcover2.gif" />
+                                                <div className="data-detail-content">
+                                                    {
+                                                        data.map((item, index) => (
+                                                            <div className="title-content" key={index}>
+                                                                <div className="header-title-content">
+                                                                    <h6 >{item.title}</h6>
+                                                                    <h5>{item.amount}</h5>
+                                                                </div>
+                                                                <h6>{item.text}</h6>
+                                                                <h6>{item.subtext}</h6>
+                                                            </div>
+                                                        ))
+                                                    }
                                                 </div>
-                                            ))
-                                        }
-                                    </div>
-                                </div>
+                                            </div>
+                                        </div>
+                                }
                             </div>
-                    }
-                </div>
-            </div>
+                        </div>
+                    </React.Fragment>
+            }
         </React.Fragment>
     )
 }

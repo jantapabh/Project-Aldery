@@ -46,45 +46,50 @@ const Social = () => {
 
     return (
         <React.Fragment>
-            <Head>
-                <title>Eldery Dashboard</title>
-                <link rel='icon' href='/static/logomain.svg' />
-            </Head>
-            <div className="warp-main">
-                {
+            {
+                typeof document === 'undefined' ?
+                    null :
+                    <React.Fragment>
+                        <Head>
+                            <title>Eldery Dashboard</title>
+                            <link rel='icon' href='/static/logomain.svg' />
+                        </Head>
+                        <div className="warp-main">
+                            {
 
-                    !tokenError ?
-                        <React.Fragment>
-                            <Dashboard onStatusMain={statusMain} statusMain={status} />
-                            <div className="page-content-main">
-                                <div className="container-fluid-main">
-                                    <h1 className="text-center">ข้อมูลด้านสังคม</h1>
-                                    <h2 className="small text-center">ของประชากรผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h2>
+                                !tokenError ?
+                                    <React.Fragment>
+                                        <Dashboard onStatusMain={statusMain} statusMain={status} />
+                                        <div className="page-content-main">
+                                            <div className="container-fluid-main">
+                                                <h1 className="text-center">ข้อมูลด้านสังคม</h1>
+                                                <h2 className="small text-center">ของประชากรผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h2>
 
-                                    <div className="info-main">
-                                        <div className="warp-chart-main ">
-                                            <div className="chart-row">
-                                                <DonutSocial onToken={statusToken} />
-                                                <BarSocial />
+                                                <div className="info-main">
+                                                    <div className="warp-chart-main ">
+                                                        <div className="chart-row">
+                                                            <DonutSocial onToken={statusToken} />
+                                                            <BarSocial />
 
+                                                        </div>
+
+                                                        <div className="chart-row">
+                                                            <PieSocial />
+                                                            <PieSocial2 />
+                                                        </div>
+
+                                                    </div>
+                                                </div>
                                             </div>
-
-                                            <div className="chart-row">
-                                                <PieSocial />
-                                                <PieSocial2 />
-                                            </div>
-
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </React.Fragment>
-                        :
-                        <Empty />
-                }
-            </div>
+                                    </React.Fragment>
+                                    :
+                                    <Empty />
+                            }
+                        </div>
+                    </React.Fragment>
+            }
         </React.Fragment>
-
     )
 }
 export default Social;

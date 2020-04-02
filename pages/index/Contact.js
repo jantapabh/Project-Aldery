@@ -99,185 +99,191 @@ const Contact = () => {
 
     return (
         <React.Fragment>
-            <Head>
-                <title>Eldery DB</title>
-                <link rel='icon' href='/static/logomain.svg' />
-            </Head>
-            <NavBar name="main" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
-            <div className="warp-contact-page">
-                <div className="page-content">
-                    {
-                        isSmallScreen ?
-                            <div className="container-fluid">
-                                <div className="head-content">
-                                    <h4>{header}</h4>
-                                    <h5>{subHead}</h5>
-                                </div>
+            {
+                typeof document === 'undefined' ?
+                    null :
+                    <React.Fragment>
+                        <Head>
+                            <title>Eldery DB</title>
+                            <link rel='icon' href='/static/logomain.svg' />
+                        </Head>
+                        <NavBar name="main" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
+                        <div className="warp-contact-page">
+                            <div className="page-content">
+                                {
+                                    isSmallScreen ?
+                                        <div className="container-fluid">
+                                            <div className="head-content">
+                                                <h4>{header}</h4>
+                                                <h5>{subHead}</h5>
+                                            </div>
 
-                                <div className="detail-content">
-                                    <div className="data-detail-content">
-                                        {
-                                            department.map((item, index) => (
-                                                <Card
-                                                    style={{ width: 350, marginTop: 15 }}
-                                                    actions={[
+                                            <div className="detail-content">
+                                                <div className="data-detail-content">
+                                                    {
+                                                        department.map((item, index) => (
+                                                            <Card
+                                                                style={{ width: 350, marginTop: 15 }}
+                                                                actions={[
 
-                                                        <Tooltip placement="bottom" title="เฟซบุ๊ก">
-                                                            <a href={item.link} target="_blank">
-                                                                <FacebookFilled key="fb" />
-                                                            </a>
-                                                        </Tooltip>,
-                                                        <Tooltip placement="bottom" title="แผนที่">
-                                                            <a href={item.map} target="_blank">
-                                                                <EnvironmentFilled />
-                                                            </a>
-                                                        </Tooltip>,
-                                                        <Tooltip placement="bottom" title="คัดลอกเบอร์โทร">
-                                                            <CopyToClipboard text={item.tel} >
-                                                                <CopyFilled key="Copy" onClick={success} />
-                                                            </CopyToClipboard>
-                                                        </Tooltip>,
+                                                                    <Tooltip placement="bottom" title="เฟซบุ๊ก">
+                                                                        <a href={item.link} target="_blank">
+                                                                            <FacebookFilled key="fb" />
+                                                                        </a>
+                                                                    </Tooltip>,
+                                                                    <Tooltip placement="bottom" title="แผนที่">
+                                                                        <a href={item.map} target="_blank">
+                                                                            <EnvironmentFilled />
+                                                                        </a>
+                                                                    </Tooltip>,
+                                                                    <Tooltip placement="bottom" title="คัดลอกเบอร์โทร">
+                                                                        <CopyToClipboard text={item.tel} >
+                                                                            <CopyFilled key="Copy" onClick={success} />
+                                                                        </CopyToClipboard>
+                                                                    </Tooltip>,
 
-                                                    ]}
-                                                >
-                                                    <Skeleton loading={loading} avatar active >
-                                                        <Meta
-                                                            avatar={
-                                                                <Avatar src={item.img} />
-                                                            }
-                                                            title={item.name}
-                                                            subTitle={item.detail}
-                                                            description={item.detail}
-                                                        />
-                                                    </Skeleton>
-                                                </Card>
-                                            ))
-                                        }
-                                    </div>
+                                                                ]}
+                                                            >
+                                                                <Skeleton loading={loading} avatar active >
+                                                                    <Meta
+                                                                        avatar={
+                                                                            <Avatar src={item.img} />
+                                                                        }
+                                                                        title={item.name}
+                                                                        subTitle={item.detail}
+                                                                        description={item.detail}
+                                                                    />
+                                                                </Skeleton>
+                                                            </Card>
+                                                        ))
+                                                    }
+                                                </div>
 
-                                    <div className="data-detail-content">
-                                        {
-                                            help.map((item, index) => (
-                                                <Card
-                                                    style={{ width: 400, marginTop: 15 }}
-                                                    actions={[
+                                                <div className="data-detail-content">
+                                                    {
+                                                        help.map((item, index) => (
+                                                            <Card
+                                                                style={{ width: 400, marginTop: 15 }}
+                                                                actions={[
 
-                                                        <Tooltip placement="bottom" title="แผนที่">
-                                                            <a href={item.map} target="_blank">
-                                                                <EnvironmentFilled />
-                                                            </a>
-                                                        </Tooltip>,
-                                                        <Tooltip placement="bottom" title="คัดลอกเบอร์โทร">
-                                                            <CopyToClipboard text={item.tel} >
-                                                                <CopyFilled key="Copy" onClick={success} />
-                                                            </CopyToClipboard>
-                                                        </Tooltip>,
+                                                                    <Tooltip placement="bottom" title="แผนที่">
+                                                                        <a href={item.map} target="_blank">
+                                                                            <EnvironmentFilled />
+                                                                        </a>
+                                                                    </Tooltip>,
+                                                                    <Tooltip placement="bottom" title="คัดลอกเบอร์โทร">
+                                                                        <CopyToClipboard text={item.tel} >
+                                                                            <CopyFilled key="Copy" onClick={success} />
+                                                                        </CopyToClipboard>
+                                                                    </Tooltip>,
 
-                                                    ]}
-                                                >
-                                                    <Skeleton loading={loading} avatar active >
-                                                        <Meta
-                                                            avatar={
-                                                                <Avatar src={item.img} />
-                                                            }
-                                                            title={item.name}
-                                                            subTitle={item.detail}
-                                                            description={item.detail}
-                                                        />
-                                                    </Skeleton>
-                                                </Card>
-                                            ))
-                                        }
-                                    </div>
-                                </div>
+                                                                ]}
+                                                            >
+                                                                <Skeleton loading={loading} avatar active >
+                                                                    <Meta
+                                                                        avatar={
+                                                                            <Avatar src={item.img} />
+                                                                        }
+                                                                        title={item.name}
+                                                                        subTitle={item.detail}
+                                                                        description={item.detail}
+                                                                    />
+                                                                </Skeleton>
+                                                            </Card>
+                                                        ))
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                        :
+                                        <div className="container-fluid">
+                                            <div className="head-content">
+                                                <h3>{header}</h3>
+                                                <h3>{subHead}</h3>
+                                            </div>
+
+                                            <div className="detail-content">
+                                                <div className="data-detail-content">
+                                                    {
+                                                        department.map((item, index) => (
+                                                            <Card
+                                                                style={{ width: 300, marginTop: 15 }}
+                                                                actions={[
+
+                                                                    <Tooltip placement="bottom" title="เฟซบุ๊ก">
+                                                                        <a href={item.link} target="_blank">
+                                                                            <FacebookFilled key="fb" />
+                                                                        </a>
+                                                                    </Tooltip>,
+                                                                    <Tooltip placement="bottom" title="แผนที่">
+                                                                        <a href={item.map} target="_blank">
+                                                                            <EnvironmentFilled />
+                                                                        </a>
+                                                                    </Tooltip>,
+                                                                    <Tooltip placement="bottom" title="คัดลอกเบอร์โทร">
+                                                                        <CopyToClipboard text={item.tel} >
+                                                                            <CopyFilled key="Copy" onClick={success} />
+                                                                        </CopyToClipboard>
+                                                                    </Tooltip>,
+
+                                                                ]}
+                                                            >
+                                                                <Skeleton loading={loading} avatar active >
+                                                                    <Meta
+                                                                        avatar={
+                                                                            <Avatar src={item.img} />
+                                                                        }
+                                                                        title={item.name}
+                                                                        subTitle={item.detail}
+                                                                        description={item.detail}
+                                                                    />
+                                                                </Skeleton>
+                                                            </Card>
+                                                        ))
+                                                    }
+                                                </div>
+
+                                                <div className="data-detail-content">
+                                                    {
+                                                        help.map((item, index) => (
+                                                            <Card
+                                                                style={{ width: 400, marginTop: 15 }}
+                                                                actions={[
+
+                                                                    <Tooltip placement="bottom" title="แผนที่">
+                                                                        <a href={item.map} target="_blank">
+                                                                            <EnvironmentFilled />
+                                                                        </a>
+                                                                    </Tooltip>,
+                                                                    <Tooltip placement="bottom" title="คัดลอกเบอร์โทร">
+                                                                        <CopyToClipboard text={item.tel} >
+                                                                            <CopyFilled key="Copy" onClick={success} />
+                                                                        </CopyToClipboard>
+                                                                    </Tooltip>,
+
+                                                                ]}
+                                                            >
+                                                                <Skeleton loading={loading} avatar active >
+                                                                    <Meta
+                                                                        avatar={
+                                                                            <Avatar src={item.img} />
+                                                                        }
+                                                                        title={item.name}
+                                                                        subTitle={item.detail}
+                                                                        description={item.detail}
+                                                                    />
+                                                                </Skeleton>
+                                                            </Card>
+                                                        ))
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                }
                             </div>
-                            :
-                            <div className="container-fluid">
-                                <div className="head-content">
-                                    <h3>{header}</h3>
-                                    <h3>{subHead}</h3>
-                                </div>
-
-                                <div className="detail-content">
-                                    <div className="data-detail-content">
-                                        {
-                                            department.map((item, index) => (
-                                                <Card
-                                                    style={{ width: 300, marginTop: 15 }}
-                                                    actions={[
-
-                                                        <Tooltip placement="bottom" title="เฟซบุ๊ก">
-                                                            <a href={item.link} target="_blank">
-                                                                <FacebookFilled key="fb" />
-                                                            </a>
-                                                        </Tooltip>,
-                                                        <Tooltip placement="bottom" title="แผนที่">
-                                                            <a href={item.map} target="_blank">
-                                                                <EnvironmentFilled />
-                                                            </a>
-                                                        </Tooltip>,
-                                                        <Tooltip placement="bottom" title="คัดลอกเบอร์โทร">
-                                                            <CopyToClipboard text={item.tel} >
-                                                                <CopyFilled key="Copy" onClick={success} />
-                                                            </CopyToClipboard>
-                                                        </Tooltip>,
-
-                                                    ]}
-                                                >
-                                                    <Skeleton loading={loading} avatar active >
-                                                        <Meta
-                                                            avatar={
-                                                                <Avatar src={item.img} />
-                                                            }
-                                                            title={item.name}
-                                                            subTitle={item.detail}
-                                                            description={item.detail}
-                                                        />
-                                                    </Skeleton>
-                                                </Card>
-                                            ))
-                                        }
-                                    </div>
-
-                                    <div className="data-detail-content">
-                                        {
-                                            help.map((item, index) => (
-                                                <Card
-                                                    style={{ width: 400, marginTop: 15 }}
-                                                    actions={[
-
-                                                        <Tooltip placement="bottom" title="แผนที่">
-                                                            <a href={item.map} target="_blank">
-                                                                <EnvironmentFilled />
-                                                            </a>
-                                                        </Tooltip>,
-                                                        <Tooltip placement="bottom" title="คัดลอกเบอร์โทร">
-                                                            <CopyToClipboard text={item.tel} >
-                                                                <CopyFilled key="Copy" onClick={success} />
-                                                            </CopyToClipboard>
-                                                        </Tooltip>,
-
-                                                    ]}
-                                                >
-                                                    <Skeleton loading={loading} avatar active >
-                                                        <Meta
-                                                            avatar={
-                                                                <Avatar src={item.img} />
-                                                            }
-                                                            title={item.name}
-                                                            subTitle={item.detail}
-                                                            description={item.detail}
-                                                        />
-                                                    </Skeleton>
-                                                </Card>
-                                            ))
-                                        }
-                                    </div>
-                                </div>
-                            </div>
-                    }
-                </div>
-            </div>
+                        </div>
+                    </React.Fragment>
+            }
         </React.Fragment>
     )
 }

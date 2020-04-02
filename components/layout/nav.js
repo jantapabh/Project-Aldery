@@ -25,7 +25,6 @@ const NavBar = props => {
     return (
         <React.Fragment>
             {
-
                 typeof document === 'undefined' ?
                     null :
                     isBigScreen && name == "index" ?
