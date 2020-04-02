@@ -12,6 +12,15 @@ const Barchart = () => {
       text: 'สถานภาพของผู้สูงอายุ',
       align: 'left'
     },
+    responsive: [{
+      breakpoint: 575.98,
+      options: {
+        legend: {
+          position: "bottom",
+          offsetY: 5
+        },
+      },
+    }],
     chart: {
       stacked: true,
       toolbar: {
