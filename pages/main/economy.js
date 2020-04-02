@@ -68,23 +68,40 @@ const Economy = () => {
                                             <div className="container-fluid-main">
                                                 <h1 className="text-center">ข้อมูลด้านเศรษฐกิจ</h1>
                                                 <h2 className="small text-center">ของประชากรผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h2>
+                                                {
+                                                    isLaptop || isTablet ?
+                                                        <div className="info-main">
+                                                            <div className="warp-chart-main ">
+                                                                <div className="chart-row">
+                                                                    <PieEconomy onToken={statusToken} />
+                                                                    <BarEconomy />
+                                                                </div>
+                                                                <div className="chart-row">
+                                                                    <PieEconomy2 />
+                                                                    <BarEconomy2 />
+                                                                </div>
 
-                                                <div className="info-main">
-                                                    <div className="warp-chart-main ">
-                                                        <div className="chart-row">
-                                                            <PieEconomy onToken={statusToken} />
-                                                            <BarEconomy />
+                                                                <div className="chart-row">
+                                                                    <BarEconomy3 />
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div className="chart-row">
-                                                            <PieEconomy2 />
-                                                            <BarEconomy2 />
-                                                        </div>
-
-                                                        <div className="chart-row">
-                                                            <BarEconomy3 />
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                        :
+                                                        isMobile ?
+                                                            <div className="info-main">
+                                                                <div className="warp-chart-main ">
+                                                                    <div className="chart-col">
+                                                                        <PieEconomy onToken={statusToken} />
+                                                                        <BarEconomy />
+                                                                        <PieEconomy2 />
+                                                                        <BarEconomy2 />
+                                                                        <BarEconomy3 />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            :
+                                                            null
+                                                }
                                             </div>
                                         </div>
                                     </React.Fragment>
