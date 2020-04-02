@@ -65,21 +65,56 @@ const Social = () => {
                                                 <h1 className="text-center">ข้อมูลด้านสังคม</h1>
                                                 <h2 className="small text-center">ของประชากรผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h2>
 
-                                                <div className="info-main">
-                                                    <div className="warp-chart-main ">
-                                                        <div className="chart-row">
-                                                            <DonutSocial onToken={statusToken} />
-                                                            <BarSocial />
+                                                {
+                                                    isLaptop ?
+                                                        <div className="info-main">
+                                                            <div className="warp-chart-main ">
+                                                                <div className="chart-row">
+                                                                    <DonutSocial onToken={statusToken} />
+                                                                    <BarSocial />
 
+                                                                </div>
+
+                                                                <div className="chart-row">
+                                                                    <PieSocial />
+                                                                    <PieSocial2 />
+                                                                </div>
+
+                                                            </div>
                                                         </div>
+                                                        :
+                                                        isTablet ?
+                                                            <div className="info-main">
+                                                                <div className="warp-chart-main ">
+                                                                    <div className="chart-row">
+                                                                        <DonutSocial onToken={statusToken} />
+                                                                        <BarSocial />
 
-                                                        <div className="chart-row">
-                                                            <PieSocial />
-                                                            <PieSocial2 />
-                                                        </div>
+                                                                    </div>
 
-                                                    </div>
-                                                </div>
+                                                                    <div className="chart-row">
+                                                                        <PieSocial />
+                                                                        <PieSocial2 />
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            :
+                                                            isMobile ?
+                                                                <div className="info-main">
+                                                                    <div className="warp-chart-main ">
+                                                                        <div className="chart-col">
+                                                                            <DonutSocial onToken={statusToken} />
+                                                                            <BarSocial />
+                                                                            <PieSocial />
+                                                                            <PieSocial2 />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                :
+                                                                null
+                                                }
+
                                             </div>
                                         </div>
                                     </React.Fragment>

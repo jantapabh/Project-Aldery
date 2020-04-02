@@ -4,6 +4,7 @@ import Sheetapi from '../../config/api'
 import { useMediaQuery } from 'react-responsive';
 
 const BarSocial = props => {
+    const isTablet = useMediaQuery({ minWidth: 768 })
     const isSmallScreen = useMediaQuery({ maxWidth: 768 })
 
     const [options, setOptions] = useState({
@@ -11,6 +12,19 @@ const BarSocial = props => {
             text: 'ที่่ดิน',
             align: 'left'
         },
+        responsive: [{
+            breakpoint: 1000,
+            options: {
+                plotOptions: {
+                    bar: {
+                        horizontal: false
+                    }
+                },
+                legend: {
+                    position: "bottom"
+                }
+            }
+        }],
         plotOptions: {
             bar: {
                 horizontal: true,
@@ -93,13 +107,22 @@ const BarSocial = props => {
                         width="300"
                     />
                     :
-                    <Chart
-                        options={options}
-                        series={series}
-                        type="bar"
-                        height="300"
-                        width="600"
-                    />
+                    isTablet ?
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="bar"
+                            height="400"
+                            width="500"
+                        />
+                        :
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="bar"
+                            height="300"
+                            width="600"
+                        />
             }
         </React.Fragment>
     )
