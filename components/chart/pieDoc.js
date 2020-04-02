@@ -74,7 +74,7 @@ const PieDoc = () => {
               options={options}
               series={series}
               type="donut"
-              width="500"
+              width="400"
               height="200"
             />
             :

@@ -67,20 +67,56 @@ const Service = () => {
                                             <h1 className="text-center">หน่วยงานภาครัฐ</h1>
                                             <h2 className="small text-center">สวัสดิการ การเข้าร่วมกิจกรรม และการช่วยเหลือ</h2>
                                             {
-
-                                                <div className="info-main">
-                                                    <div className="warp-chart-main ">
-                                                        <div className="chart-row">
-                                                            <PieHelp onToken={statusToken} />
-                                                            <LineHelp />
-                                                        </div>
-                                                        <div className="chart-row">
-                                                            <PieDoc />
-                                                            <PieService />
-                                                            <PieService2 />
+                                                isLaptop ?
+                                                    <div className="info-main">
+                                                        <div className="warp-chart-main ">
+                                                            <div className="chart-row">
+                                                                <PieHelp onToken={statusToken} />
+                                                                <LineHelp />
+                                                            </div>
+                                                            <div className="chart-row">
+                                                                <PieDoc />
+                                                                <PieService />
+                                                                <PieService2 />
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                    :
+                                                    isTablet ?
+                                                        <div className="info-main">
+                                                            <div className="warp-chart-main ">
+                                                                <div className="chart-row">
+                                                                    <PieHelp onToken={statusToken} />
+                                                                    <LineHelp />
+                                                                </div>
+                                                                <div className="chart-col">
+                                                                    <PieDoc />
+                                                                </div>
+                                                                <div className="chart-row">
+                                                                    <PieService />
+                                                                    <PieService2 />
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        :
+                                                        isMobile ?
+                                                            <div className="info-main">
+                                                                <div className="warp-chart-main ">
+                                                                    <div className="chart-col">
+                                                                        <PieHelp onToken={statusToken} />
+                                                                        <LineHelp />
+                                                                        <PieDoc />
+                                                                        <PieService />
+                                                                        <PieService2 />
+                                                                    </div>
+                                                                    <div className="chart-row">
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            :
+                                                            null
                                             }
                                         </div>
                                     </div>

@@ -9,9 +9,22 @@ const LineHelp = () => {
 
   const [options, setOptions] = useState({
     title: {
-      text: 'ความต้องการให้หน่วยงานของรัฐช่วยเหลือของประชากรผู้สูงอายุ',
+      text: 'ความต้องการให้หน่วยงานรัฐช่วยเหลือ',
       align: 'center'
     },
+    responsive: [{
+      breakpoint: 1000,
+      options: {
+        plotOptions: {
+          bar: {
+            horizontal: false
+          }
+        },
+        legend: {
+          position: "bottom"
+        }
+      }
+    }],
     plotOptions: {
       bar: {
         horizontal: true,
@@ -19,7 +32,7 @@ const LineHelp = () => {
     },
     dataLabels: {
       enabled: false
-  },
+    },
     legend: {
       position: 'bottom',
     },
