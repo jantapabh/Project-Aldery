@@ -48,20 +48,21 @@ const Home = () => {
       {
         typeof document === 'undefined' ?
           null :
-          <div className="warp-index">
+          <React.Fragment>
             <Head>
               <title>Eldery DB</title>
               <link rel='icon' href='/static/logomain.svg' />
             </Head>
-            <React.Fragment>
-              <NavBar name="index" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
-              <Cover />
-              <About />
-              <Agency />
-              <Info />
-              <Footer />
-            </React.Fragment>
-          </div>
+            <NavBar name="index" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
+            <div className="warp-index">
+                <Cover />
+                <About />
+                <Agency />
+                <Info />
+                <Footer />
+            </div>
+          </React.Fragment>
+
       }
     </React.Fragment>
 

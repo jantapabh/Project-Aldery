@@ -6,18 +6,42 @@ $bg-color: linear-gradient(to left, #a6d254, #83d2ae);
 $border-bg-color: 1px solid #83d2ae;
 $line-color: #e8e9fe;
 
-.warp-index {
-  nav {
-    width: 100%;
-    min-height: 5rem;
-    ul {
-      user-select: none;
-      padding: 0.5rem;
-      display: flex;
-      justify-content: space-between;
-    }
+
+nav {
+  width: 100%;
+  min-height: 5rem;
+  ul {
+    user-select: none;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
   }
 }
+
+
+//Navbar-Scroll
+// nav {
+//   position: fixed;
+//   width: 100%;
+//   min-height: 5rem;
+//   top: 0;
+//   z-index: 1000;
+//   ul {
+//     user-select: none;
+//     padding: 0.5rem;
+//     display: flex;
+//     justify-content: space-between;
+//   }
+// }
+
+// nav.scroll {
+//   position: fixed;
+//   width: 100%;
+//   top: 0;
+//   z-index: 1000;
+//   background-color: greenyellow;
+//   transition: background-color 0.4s ease-out;
+// }
 
 .warp-main {
   ul {

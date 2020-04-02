@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useMediaQuery } from 'react-responsive';
 
@@ -6,6 +6,7 @@ const NavBar = props => {
 
     const tab = props.tab
     const name = props.name
+    const [navbar,setNavbar] = useState("")
     const [status, setStatus] = useState(false)
     const isBigScreen = useMediaQuery({ minDeviceWidth: 769 })
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 768.99 })
@@ -22,13 +23,22 @@ const NavBar = props => {
         }
     }
 
+    useEffect(() => {
+        window.onscroll = () => {
+            if (window.scrollY <= 10) 
+            setNavbar(null)
+            else 
+            setNavbar("scroll")
+        };
+    }, [])
+
     return (
         <React.Fragment>
             {
                 typeof document === 'undefined' ?
                     null :
                     isBigScreen && name == "index" ?
-                        <nav>
+                        <nav className={navbar}>
                             <ul>
                                 <Link href="/">
                                     <li>
