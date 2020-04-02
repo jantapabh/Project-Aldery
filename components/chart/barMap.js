@@ -7,7 +7,6 @@ import { useMediaQuery } from 'react-responsive';
 const BarMap = props => {
 
     const isMobile = useMediaQuery({ maxWidth: 575.98 })
-
     const isSmallScreen = useMediaQuery({ maxWidth: 768 })
 
     const [options, setOptions] = useState({

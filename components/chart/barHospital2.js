@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 
 const BarHospital2 = () => {
 
+    const isTablet = useMediaQuery({ minWidth: 768 })
     const isSmallScreen = useMediaQuery({ maxWidth: 768 })
 
     const [options, setOptions] = useState({
@@ -15,7 +16,7 @@ const BarHospital2 = () => {
         },
         plotOptions: {
             bar: { horizontal: true }
-          },
+        },
         chart: {
             stacked: true,
             toolbar: {
@@ -97,13 +98,22 @@ const BarHospital2 = () => {
                         width="300"
                     />
                     :
-                    <Chart
-                        options={options}
-                        series={series}
-                        type="bar"
-                        height="400"
-                        width="600"
-                    />
+                    isTablet ?
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="bar"
+                            height="400"
+                            width="500"
+                        />
+                        :
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="bar"
+                            height="400"
+                            width="600"
+                        />
             }
         </React.Fragment>
     )

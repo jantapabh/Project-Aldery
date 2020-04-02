@@ -72,8 +72,8 @@ const BarHospital = () => {
             options={options}
             series={series}
             type="donut"
-            width="200"
-            height="100"
+            width="300"
+            height="200"
           />
           :
           <Chart

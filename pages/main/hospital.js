@@ -65,7 +65,6 @@ const Hospital = () => {
                         </Head>
                         <div className="warp-main">
                             {
-
                                 !tokenError ?
                                     <React.Fragment>
                                         <Dashboard onStatusMain={statusMain} statusMain={status} />
@@ -74,34 +73,73 @@ const Hospital = () => {
                                                 <h1 className="text-center">ข้อมูลด้านสุขภาพ</h1>
                                                 <h2 className="small text-center">ของประชากรผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h2>
 
-                                                <div className="info-main">
-                                                    <div className="warp-chart-main ">
-                                                        <div className="chart-row">
-                                                            <PieHospital onToken={statusToken} />
-                                                            <BarHospital />
-                                                        </div>
+                                                {isLaptop ?
+                                                    <div className="info-main">
+                                                        <div className="warp-chart-main ">
+                                                            <div className="chart-row">
+                                                                <PieHospital onToken={statusToken} />
+                                                                <BarHospital />
+                                                            </div>
 
-                                                        <div className="chart-row">
-                                                            <PieHospital2 />
-                                                            <BarHospital2 />
-                                                        </div>
+                                                            <div className="chart-row">
+                                                                <PieHospital2 />
+                                                                <BarHospital2 />
+                                                            </div>
 
-                                                        <div className="chart-row">
-                                                            <PieHospital3 />
-                                                            <BarHospital3 />
+                                                            <div className="chart-row">
+                                                                <PieHospital3 />
+                                                                <BarHospital3 />
+                                                            </div>
+
                                                         </div>
 
                                                     </div>
+                                                    :
+                                                    isTablet ?
+                                                        <div className="info-main">
+                                                            <div className="warp-chart-main ">
+                                                                <div className="chart-row">
+                                                                    <PieHospital onToken={statusToken} />
+                                                                    <BarHospital />
+                                                                </div>
 
-                                                </div>
+                                                                <div className="chart-row">
+                                                                    <PieHospital2 />
+                                                                    <BarHospital2 />
+                                                                </div>
 
+                                                                <div className="chart-row">
+                                                                    <PieHospital3 />
+                                                                    <BarHospital3 />
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                        :
+                                                        isMobile ?
+                                                            <div className="info-main">
+
+                                                                <div className="warp-chart-main">
+                                                                    <div className="chart-col">
+                                                                        <PieHospital onToken={statusToken} />
+                                                                        <BarHospital />
+                                                                        <PieHospital2 />
+                                                                        <BarHospital2 />
+                                                                        <PieHospital3 />
+                                                                        <BarHospital3 />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            :
+                                                            null
+                                                }
                                             </div>
                                         </div>
                                     </React.Fragment>
                                     :
                                     <Empty />
                             }
-
                         </div>
                     </React.Fragment>
             }

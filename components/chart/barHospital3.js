@@ -4,7 +4,9 @@ import Sheetapi from '../../config/api';
 import { useMediaQuery } from 'react-responsive';
 
 const BarHospital3 = () => {
+    const isTablet = useMediaQuery({ minWidth: 768 })
     const isSmallScreen = useMediaQuery({ maxWidth: 768 })
+    
     const [options, setOptions] = useState({
         title: {
             text: 'การตรวจสุขภาพประจำปีของผู้สูงอายุ',
@@ -112,13 +114,22 @@ const BarHospital3 = () => {
                         width="300"
                     />
                     :
-                    <Chart
-                        options={options}
-                        series={series}
-                        type="bar"
-                        height="300"
-                        width="600"
-                    />
+                    isTablet ?
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="bar"
+                            height="400"
+                            width="500"
+                        />
+                        :
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="bar"
+                            height="300"
+                            width="600"
+                        />
             }
         </React.Fragment>
     )
