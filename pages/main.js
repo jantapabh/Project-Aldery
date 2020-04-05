@@ -101,8 +101,8 @@ const MainPage = () => {
                                             <Sidebar />
                                             <div className="page-content-main">
                                                 <div className="container-fluid-main">
-                                                    <h1 className="text-center">ผู้สูงอายุ</h1>
-                                                    <h2 className="small text-center">อำเภอกะทู้ จังหวัดภูเก็ต</h2>
+                                                    <h1 className="text-center">ข้อมูลด้านทั่วไป</h1>
+                                                    <h2 className="small text-center">ของประชากรผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h2>
                                                     {
                                                         isLaptop ?
 
