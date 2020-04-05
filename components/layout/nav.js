@@ -6,7 +6,7 @@ const NavBar = props => {
 
     const tab = props.tab
     const name = props.name
-    const [navbar,setNavbar] = useState("")
+    const [navbar, setNavbar] = useState("")
     const [status, setStatus] = useState(false)
     const isBigScreen = useMediaQuery({ minDeviceWidth: 769 })
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 768.99 })
@@ -25,10 +25,10 @@ const NavBar = props => {
 
     useEffect(() => {
         window.onscroll = () => {
-            if (window.scrollY <= 10) 
-            setNavbar(null)
-            else 
-            setNavbar("scroll")
+            if (window.scrollY <= 10)
+                setNavbar(null)
+            else
+                setNavbar("scroll")
         };
     }, [])
 
@@ -134,38 +134,66 @@ const NavBar = props => {
                                     </ul>
                                 </nav>
                                 :
-                                isSmallScreen ?
-                                    <div className="collapsible-menu">
-                                        <div className="warp-nav-sidebar">
+                                isBigScreen && name == "empty" ?
+                                    <nav>
+                                        <ul>
                                             <Link href="/">
-                                                <h2>Eldery DB</h2>
+                                                <li>
+                                                    <h2>Eldery DB</h2>
+                                                </li>
                                             </Link>
-                                            <div className="box-hamberger">
-                                                <a className={`hamberger btn${status ? " active" : " not-active"}`} onClick={collapsible} >
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </a>
+                                            <li>
+                                                {
+                                                    tab.map((item, index) => {
+                                                        return (
+                                                            <Link key={index} href={item.href}>
+                                                                {
+                                                                    <React.Fragment>
+                                                                        <button className="btn">
+                                                                            <p>{item.name}</p>
+                                                                        </button>
+                                                                    </React.Fragment>
+                                                                }
+                                                            </Link>
+                                                        )
+                                                    })
+                                                }
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    :
+                                    isSmallScreen ?
+                                        <div className="collapsible-menu">
+                                            <div className="warp-nav-sidebar">
+                                                <Link href="/">
+                                                    <h2>Eldery DB</h2>
+                                                </Link>
+                                                <div className="box-hamberger">
+                                                    <a className={`hamberger btn${status ? " active" : " not-active"}`} onClick={collapsible} >
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div className={`menu-content${status ? " show" : ""}`}>
+                                                <ul>
+                                                    <li >
+                                                        {
+                                                            tab.map((item, indexs) => {
+                                                                return (
+                                                                    <Link key={indexs} href={item.href}>
+                                                                        <p >{item.name}</p>
+                                                                    </Link>
+                                                                )
+                                                            })
+                                                        }
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <div className={`menu-content${status ? " show" : ""}`}>
-                                            <ul>
-                                                <li >
-                                                    {
-                                                        tab.map((item, indexs) => {
-                                                            return (
-                                                                <Link key={indexs} href={item.href}>
-                                                                    <p >{item.name}</p>
-                                                                </Link>
-                                                            )
-                                                        })
-                                                    }
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    :
-                                    null
+                                        :
+                                        null
             }
         </React.Fragment>
 

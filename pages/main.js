@@ -8,6 +8,7 @@ import Map from '../components/layout/Map';
 import Empty from '../components/Empty';
 
 import { Progress } from 'antd';
+import Sidebar from '../components/layout/sidebar';
 
 const BarMap = dynamic(
     () => import('../components/chart/barMap'),
@@ -97,6 +98,7 @@ const MainPage = () => {
                                     userOauth != null && !tokenError ?
                                         <React.Fragment>
                                             <Dashboard onStatusMain={statusMain} statusMain={status} />
+                                            <Sidebar />
                                             <div className="page-content-main">
                                                 <div className="container-fluid-main">
                                                     <h1 className="text-center">ผู้สูงอายุ</h1>

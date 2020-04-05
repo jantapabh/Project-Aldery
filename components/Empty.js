@@ -24,7 +24,7 @@ const Empty = () => {
 
     return (
         <div className="warp-empty">
-            <NavBar name="other" tab={isSmallScreen ? homeMin : home} />
+            <NavBar name="empty" tab={isSmallScreen ? homeMin : home} />
             <div className="content-empty">
                 <img src="/static/empty.jpg" alt="empty" />
                 <div className="title-empty">

@@ -1,38 +1,47 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Drawer, Button, Radio } from 'antd';
 import Link from 'next/link';
+
 
 const Sidebar = props => {
 
-    const status = props.status
+    const [visible, setVisible] = useState(false)
+    const [placement, setPlacement] = useState('left')
 
     const [sidebar, setSidebar] = useState(
         [
-            { name: "ข้อมูลทางสถิติ", nameicon: "Chart", img: "/static/chart.svg", link: "/main" },
-            { name: "สวัสดิการ และการช่วยเหลือ", nameicon: "Benefits", img: "/static/document.svg", link: "/main/service" },
-            { name: "สภาพทางสังคม", nameicon: "", img: "/static/social.svg", link: "/main/social" },
-            { name: "ด้านเศรษฐกิจ", nameicon: "Economy", img: "/static/economy.svg", link: "/main/economy" },
-            { name: "โรงพยาบาล", nameicon: "Hospital", img: "/static/hospital.svg", link: "/main/hospital" },
+            { name: "ข้อมูลทั่วไป", href: "/main" },
+            { name: "ข้อมูลด้านสุขภาพ", href: "/main/hospital" },
+            { name: "ข้อมูลด้านสังคม", href: "/main/social" },
+            { name: "ข้อมูลด้านเศรษฐกิจ", href: "/main/economy" },
+            { name: "ข้อมูลด้านการช่วยเหลือ", href: "/main/service" },
         ]
     )
 
+    const showDrawer = () => {
+        setVisible(true)
+    };
+
+    const onClose = () => {
+        setVisible(false)
+    };
+
     return (
-        <div className={`sidebar-wrapper-${status ? "active" : "non-active"}`}>
-            <div className="content-sidebar">
-                <ul>
-                    {
-                        sidebar.map((items, index) => (
-                            <li key={index}>
-                                <Link href={items.link} >
-                                    <p>{items.name}</p>
-                                </Link>
-                            </li>
-
-
-                        ))
-                    }
-
-                </ul>
-            </div>
+        <div>
+            <Button type="primary" onClick={showDrawer}>
+                Open
+        </Button>
+            <Drawer
+                title="Basic Drawer"
+                placement={placement}
+                closable={false}
+                onClose={onClose}
+                visible={visible}
+            >
+                <p>Some contents...</p>
+                <p>Some contents...</p>
+                <p>Some contents...</p>
+            </Drawer>
         </div>
     )
 }

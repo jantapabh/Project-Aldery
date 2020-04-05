@@ -75,7 +75,7 @@ const Allowance = () => {
                             <title>Eldery DB</title>
                             <link rel='icon' href='/static/logomain.svg' />
                         </Head>
-                        <NavBar name="main" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
+                        <NavBar name="other" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
                         <div className="warp-allowance-page">
                             <div className="page-content">
                                 {
