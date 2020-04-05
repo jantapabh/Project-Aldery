@@ -31,8 +31,7 @@ const Sidebar = props => {
     };
 
     return (
-        <div>
-            {console.log("Visible: ", visible)}
+        <div className="warp-sidebar">
             <Drawer
                 title="เมนู"
                 placement={placement}

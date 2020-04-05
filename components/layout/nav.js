@@ -106,7 +106,7 @@ const NavBar = props => {
                                     <ul>
                                         <Link href="/">
                                             <li>
-                                                <h2>Eldery DB</h2>
+                                                <p>ย้อนกลับ</p>
                                             </li>
                                         </Link>
                                         <li>

@@ -1,29 +1,11 @@
-$primary-color: #c8e6c9 !important;
+$primary-color: #39b54a !important;
 
-.sidebar-wrapper-active {
-  top: 0;
-  bottom: 0;
-  position: fixed;
-  width: 250px;
-  min-height: 100vh;
-  height: auto;
-  background-color: $primary-color;
-  .content-sidebar {
-    display: flex;
-    justify-content: center;
-    ul {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      margin: 0 !important;
-
-      li {
-        padding: 1rem;
-      }
-    }
-  }
+.ant-drawer-wrapper-body {
+  user-select: none;
 }
 
-.sidebar-wrapper-non-active {
-  display: none;
+.ant-drawer-body {
+  p:hover {
+    color: $primary-color;
+  }
 }
