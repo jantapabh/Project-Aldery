@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useMediaQuery } from 'react-responsive';
+import Sidebar from './sidebar';
 
 const NavBar = props => {
 
@@ -8,6 +9,7 @@ const NavBar = props => {
     const name = props.name
     const [navbar, setNavbar] = useState("")
     const [status, setStatus] = useState(false)
+    const [visible, setVisible] = useState(false)
     const isBigScreen = useMediaQuery({ minDeviceWidth: 769 })
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 768.99 })
 
@@ -22,6 +24,10 @@ const NavBar = props => {
             props.confirm(false)
         }
     }
+
+    const showDrawer = () => {
+        setVisible(true)
+    };
 
     useEffect(() => {
         window.onscroll = () => {
@@ -83,21 +89,10 @@ const NavBar = props => {
                                         {
                                             tab.map((item, index) => {
                                                 return (
-                                                    <a href={item.href} key={index}>
-                                                        {
-                                                            item.name == "ติดต่อ" ?
-                                                                <p className="li-buttom-line">{item.name}</p>
-                                                                :
-                                                                item.name == "เข้าสู่หน้าหลัก" ?
-                                                                    <p className="li-buttom-line-active">{item.name}</p>
-                                                                    :
-                                                                    <React.Fragment>
-                                                                        <button className="btn">
-                                                                            <p>{item.name}</p>
-                                                                        </button>
-                                                                    </React.Fragment>
-                                                        }
-                                                    </a>
+                                                    <React.Fragment key={index}>
+                                                        <p className="li-buttom-line-active" onClick={showDrawer}>{item.name}</p>
+                                                        <Sidebar status={visible} />
+                                                    </React.Fragment>
                                                 )
                                             })
                                         }

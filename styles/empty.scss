@@ -1,6 +1,7 @@
 $font-header: "Frank Ruhl Libre" !important;
 $font-color: #071d40 !important;
-$primary-color: #39b54a !important;
+$bg-color: linear-gradient(to left, #a6d254, #83d2ae);
+$border-bg-color: 1px solid #83d2ae;
 
 .warp-empty {
   display: flex;
@@ -63,14 +64,13 @@ $primary-color: #39b54a !important;
   h5 {
     cursor: pointer;
     background-color: white;
-    border: 1px solid $primary-color;
-    color: $primary-color;
+    border: $border-bg-color;
     border-radius: 2rem;
     padding: 1rem 2rem;
   }
   h5:hover {
     color: white !important;
-    background-color: $primary-color;
+    background: $bg-color;
   }
 
   @media (max-width: 768px) {

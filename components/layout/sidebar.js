@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Drawer, Button, Radio } from 'antd';
-import Link from 'next/link';
 
 
 const Sidebar = props => {
 
+    const status = props.status
     const [visible, setVisible] = useState(false)
     const [placement, setPlacement] = useState('left')
-
     const [sidebar, setSidebar] = useState(
         [
             { name: "ข้อมูลทั่วไป", href: "/main" },
@@ -18,9 +17,14 @@ const Sidebar = props => {
         ]
     )
 
-    const showDrawer = () => {
-        setVisible(true)
-    };
+    useEffect(() => {
+        if (status) {
+            setVisible(true)
+        } else {
+            setVisible(false)
+        }
+
+    }, [status])
 
     const onClose = () => {
         setVisible(false)
@@ -28,19 +32,22 @@ const Sidebar = props => {
 
     return (
         <div>
-            <Button type="primary" onClick={showDrawer}>
-                Open
-        </Button>
+            {console.log("Visible: ", visible)}
             <Drawer
-                title="Basic Drawer"
+                title="เมนู"
                 placement={placement}
                 closable={false}
                 onClose={onClose}
                 visible={visible}
             >
-                <p>Some contents...</p>
-                <p>Some contents...</p>
-                <p>Some contents...</p>
+                {
+                    sidebar.map((item, index) => (
+                        <a key={index} href={item.href}>
+                            <p>{item.name}</p>
+                        </a>
+
+                    ))
+                }
             </Drawer>
         </div>
     )
