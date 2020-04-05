@@ -177,9 +177,9 @@ const NavBar = props => {
                                                         {
                                                             tab.map((item, indexs) => {
                                                                 return (
-                                                                    <Link key={indexs} href={item.href}>
+                                                                    <a key={indexs} href={item.href}>
                                                                         <p >{item.name}</p>
-                                                                    </Link>
+                                                                    </a>
                                                                 )
                                                             })
                                                         }
