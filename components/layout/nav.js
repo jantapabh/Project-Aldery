@@ -113,15 +113,18 @@ const NavBar = props => {
                                             {
                                                 tab.map((item, index) => {
                                                     return (
-                                                        <Link key={index} href={item.href}>
+                                                        <a key={index} href={item.href}>
                                                             {
-                                                                <React.Fragment>
-                                                                    <button className="btn">
-                                                                        <p>{item.name}</p>
-                                                                    </button>
-                                                                </React.Fragment>
+                                                                    item.name == "เข้าสู่หน้าหลัก" ?
+                                                                        <p className="li-buttom-line-active">{item.name}</p>
+                                                                        :
+                                                                        <React.Fragment>
+                                                                            <button className="btn">
+                                                                                <p>{item.name}</p>
+                                                                            </button>
+                                                                        </React.Fragment>
                                                             }
-                                                        </Link>
+                                                        </a>
                                                     )
                                                 })
                                             }
@@ -141,7 +144,7 @@ const NavBar = props => {
                                                 {
                                                     tab.map((item, index) => {
                                                         return (
-                                                            <Link key={index} href={item.href}>
+                                                            <a key={index} href={item.href}>
                                                                 {
                                                                     <React.Fragment>
                                                                         <button className="btn">
@@ -149,7 +152,7 @@ const NavBar = props => {
                                                                         </button>
                                                                     </React.Fragment>
                                                                 }
-                                                            </Link>
+                                                            </a>
                                                         )
                                                     })
                                                 }
