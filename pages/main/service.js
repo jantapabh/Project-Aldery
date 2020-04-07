@@ -61,7 +61,7 @@ const Service = () => {
                         <div className="warp-main">
                             {
                                 !tokenError ? <React.Fragment>
-                                    <Dashboard onStatusMain={statusMain} statusMain={status} />
+                                    <Dashboard />
                                     <div className="page-content-main">
                                         <div className="container-fluid-main">
                                             <h1 className="text-center">หน่วยงานภาครัฐ</h1>

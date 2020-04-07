@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Drawer } from 'antd';
 
+const Sidebar = () => {
 
-const Sidebar = props => {
-
-    const status = props.status
-    const [visible, setVisible] = useState(false)
-    const [placement, setPlacement] = useState('left')
     const [sidebar, setSidebar] = useState(
         [
             { name: "ข้อมูลทั่วไป", href: "/main" },
@@ -18,36 +13,12 @@ const Sidebar = props => {
     )
 
     useEffect(() => {
-        if (status) {
-            setVisible(true)
-        } else {
-            setVisible(false)
-        }
-
-    }, [status])
-
-    const onClose = () => {
-        setVisible(false)
-    };
+       
+    }, [])
 
     return (
         <div className="warp-sidebar">
-            <Drawer
-                title="เมนู"
-                placement={placement}
-                closable={false}
-                onClose={onClose}
-                visible={visible}
-            >
-                {
-                    sidebar.map((item, index) => (
-                        <a key={index} href={item.href}>
-                            <p>{item.name}</p>
-                        </a>
-
-                    ))
-                }
-            </Drawer>
+          
         </div>
     )
 }

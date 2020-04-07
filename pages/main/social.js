@@ -33,12 +33,7 @@ const Social = () => {
     const isTablet = useMediaQuery({ minWidth: 768 })
     const isMobile = useMediaQuery({ maxDeviceWidth: 768 })
 
-    const [status, setStatus] = useState(false)
     const [tokenError, setTokenError] = useState(false)
-
-    const statusMain = (order) => {
-        setStatus(order)
-    }
 
     const statusToken = (token) => {
         setTokenError(token)
@@ -59,7 +54,7 @@ const Social = () => {
 
                                 !tokenError ?
                                     <React.Fragment>
-                                        <Dashboard onStatusMain={statusMain} statusMain={status} />
+                                        <Dashboard  />
                                         <div className="page-content-main">
                                             <div className="container-fluid-main">
                                                 <h1 className="text-center">ข้อมูลด้านสังคม</h1>

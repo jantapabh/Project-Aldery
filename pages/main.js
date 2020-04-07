@@ -65,9 +65,6 @@ const MainPage = () => {
         setUserOauth(await JSON.parse(localStorage.getItem("myOauth")))
     }
 
-    const statusMain = (order) => {
-        setStatus(order)
-    }
 
     const statusToken = (token) => {
         setTokenError(token)
@@ -97,8 +94,8 @@ const MainPage = () => {
                                     :
                                     userOauth != null && !tokenError ?
                                         <React.Fragment>
-                                            <Dashboard onStatusMain={statusMain} statusMain={status} />
-                                            <Sidebar />
+                                            <Dashboard />
+                                            {/* <Sidebar /> */}
                                             <div className="page-content-main">
                                                 <div className="container-fluid-main">
                                                     <h1 className="text-center">ข้อมูลด้านทั่วไป</h1>

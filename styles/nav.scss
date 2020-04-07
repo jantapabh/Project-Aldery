@@ -6,7 +6,6 @@ $bg-color: linear-gradient(to left, #a6d254, #83d2ae);
 $border-bg-color: 1px solid #83d2ae;
 $line-color: #e8e9fe;
 
-
 nav {
   width: 100%;
   min-height: 5rem;
@@ -17,7 +16,6 @@ nav {
     justify-content: space-between;
   }
 }
-
 
 //Navbar-Scroll
 // nav {
@@ -106,7 +104,6 @@ nav {
       }
     }
   }
-
 }
 
 ul {
@@ -168,5 +165,16 @@ ul {
       border: $border-bg-color;
       background: white !important;
     }
+  }
+}
+
+//SideBar
+.ant-drawer-wrapper-body {
+  user-select: none;
+}
+
+.ant-drawer-body {
+  p:hover {
+    color: $primary-color;
   }
 }
