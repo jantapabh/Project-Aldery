@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import Link from 'next/link';
 
 const About = () => {
 
@@ -49,9 +48,9 @@ const About = () => {
                                     }
                                     <div className="more-content">
                                         <h6>อ่านต่อ</h6>
-                                        <Link href="/index/society">
+                                        <a href="/index/society">
                                             <img className="hvr-wobble-horizontal" src="/static/arrow.svg" alt="arrow-icon" />
-                                        </Link>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -77,9 +76,9 @@ const About = () => {
                                     }
                                     <div className="more-content">
                                         <h6>อ่านต่อ</h6>
-                                        <Link href="/index/society">
+                                        <a href="/index/society">
                                             <img className="hvr-wobble-horizontal" src="/static/arrow.svg" alt="arrow-icon" />
-                                        </Link>
+                                        </a>
                                     </div>
 
                                 </div>
