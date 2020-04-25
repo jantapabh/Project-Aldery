@@ -65,11 +65,11 @@ nav {
 
 .collapsible-menu {
   height: 4rem;
-  padding: 1rem;
+  padding: 1rem 0;
   background-color: rgb(255, 255, 255);
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 
-  .warp-nav-sidebar{
+  .warp-nav-sidebar {
     display: flex;
     justify-content: center;
   }
@@ -94,8 +94,24 @@ nav {
     }
   }
   .menu-content.show {
-    max-height: 100vh;
+    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
+     margin-top: 4rem;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    opacity: 1;
+    background-color: #ff5a79;
+    visibility: visible;
     ul {
+      height: 100vh;
+      width: 100%;
       margin-left: 0 !important;
       padding: 0 !important;
       li {
@@ -185,7 +201,5 @@ ul {
     color: $primary-color;
   }
 }
-
-
 
 //collapsible
