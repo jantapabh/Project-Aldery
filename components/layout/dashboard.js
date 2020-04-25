@@ -41,6 +41,7 @@
 // }
 // export default Dashboard
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Layout, Menu } from 'antd';
 import {
     MenuUnfoldOutlined,
@@ -49,6 +50,7 @@ import {
     VideoCameraOutlined,
     UploadOutlined,
 } from '@ant-design/icons';
+
 
 const { Header, Sider, Content } = Layout;
 
@@ -77,7 +79,12 @@ const Dashboard = () => {
     return (
         <Layout>
             <Sider trigger={null} collapsible collapsed={collapsed}>
-                <div className="logo" />
+                <div className="logo">
+                    <Link href="/">
+                        <h2>Eldery DB</h2>
+                    </Link>
+
+                </div>
                 <Menu defaultSelectedKeys={['1']}>
                     {
                         sidebar.map((item, index) => (
@@ -90,20 +97,13 @@ const Dashboard = () => {
                 </Menu>
             </Sider>
             <Layout className="site-layout">
-                <Header className="site-layout-background" style={{ padding: 0 }}>
+                <Header className="site-layout-background">
                     {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
                         className: 'trigger',
                         onClick: toggle,
                     })}
                 </Header>
-                <Content
-                    className="site-layout-background"
-                    style={{
-                        margin: '24px 16px',
-                        padding: 24,
-                        minHeight: 280,
-                    }}
-                >
+                <Content className="site-layout-background" >
                     Content
           </Content>
             </Layout>

@@ -1,35 +1,58 @@
-#components-layout-demo-custom-trigger .trigger {
-    font-size: 18px;
-    line-height: 64px;
-    padding: 0 24px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
+$font-header: "Frank Ruhl Libre" !important;
+$bg-color: white !important;
+$hover-color: #1890ff;
 
-#components-layout-demo-custom-trigger .trigger:hover {
-    color: #1890ff;
-}
+.ant-layout {
+    .logo {
+        margin: 1rem;
+        h2 {
+            font-family: $font-header;
+        }
+    }
 
-#components-layout-demo-custom-trigger .logo {
-    height: 32px;
-    margin: 16px;
-}
+    #components-layout-demo-custom-trigger .trigger {
+        font-size: 18px;
+        line-height: 64px;
+        padding: 0 24px;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
 
-.site-layout .site-layout-background {
-    background: #fff;
-}
+    #components-layout-demo-custom-trigger .trigger:hover {
+        color: $hover-color;
+    }
 
-.ant-menu {
-    display: flex;
-    flex-direction: column;
-}
-.ant-layout-header {
-    display: flex;
-    align-items: center;
-    padding: 1rem !important;
-}
+    .site-layout .site-layout-background {
+        background: $bg-color;
+    }
 
-.ant-menu-inline-collapsed > .ant-menu-item {
-    display: flex;
-    justify-content: center;
+    .ant-menu {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    .ant-layout-header {
+        display: flex;
+        align-items: center;
+        padding: 1rem !important;
+    }
+
+    .ant-menu-inline-collapsed > .ant-menu-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .ant-layout-sider {
+        background: $bg-color;
+    }
+
+    .ant-layout-content {
+        margin: 24px 16px;
+        padding: 24;
+        min-height: 280;
+    }
+
+    // .site-layout-background {
+
+    // }
 }
