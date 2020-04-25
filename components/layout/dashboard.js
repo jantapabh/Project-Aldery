@@ -42,20 +42,22 @@
 // export default Dashboard
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useMediaQuery } from 'react-responsive';
 import { Layout, Menu } from 'antd';
 import {
     MenuUnfoldOutlined,
     MenuFoldOutlined,
     UserOutlined,
-    VideoCameraOutlined,
-    UploadOutlined,
+
 } from '@ant-design/icons';
+
 
 
 const { Header, Sider, Content } = Layout;
 
 const Dashboard = () => {
 
+    const isSmallScreen = useMediaQuery({ maxDeviceWidth: 1023 })
 
     const [sidebar, setSidebar] = useState(
         [
@@ -94,13 +96,18 @@ const Dashboard = () => {
                         </div>
                 }
 
-                <Menu defaultSelectedKeys={['1']}>
+                <Menu defaultSelectedKeys={['0']}>
                     {
                         sidebar.map((item, index) => (
+
                             <Menu.Item key={index}>
-                                <UserOutlined />
-                                <span>{item.name}</span>
+                                <a href={item.href}>
+                                    <UserOutlined />
+                                    <span>{item.name}</span>
+                                </a>
+
                             </Menu.Item>
+
                         ))
                     }
                 </Menu>
@@ -112,9 +119,9 @@ const Dashboard = () => {
                         onClick: toggle,
                     })}
                 </Header>
-                <Content className="site-layout-background" >
+                {/* <Content className="site-layout-background" >
                     Content
-          </Content>
+          </Content> */}
             </Layout>
         </Layout>
     );

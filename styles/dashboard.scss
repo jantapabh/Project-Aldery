@@ -9,7 +9,7 @@ $hover-color: #1890ff;
         h2 {
             font-family: $font-header;
         }
-        h6{
+        h6 {
             font-family: $font-header;
         }
     }
@@ -39,7 +39,7 @@ $hover-color: #1890ff;
         display: flex;
         align-items: center;
         padding: 1rem !important;
-        svg{
+        svg {
             height: 1.5rem;
             width: 1.5rem;
         }
@@ -50,8 +50,21 @@ $hover-color: #1890ff;
         justify-content: center;
     }
 
+    .ant-menu-item > a:only-child {
+        display: flex;
+        align-items: center;
+    }
+
+    .ant-menu-vertical .ant-menu-item:not(:last-child){
+        display: flex;
+    }
+
     .ant-layout-sider {
         background: $bg-color;
+    }
+
+    .ant-menu-item.ant-menu-item-only-child .anticon {
+        margin-right: 10px;
     }
 
     .ant-layout-content {
@@ -59,6 +72,4 @@ $hover-color: #1890ff;
         padding: 24;
         min-height: 280;
     }
-
-
 }

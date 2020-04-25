@@ -65,7 +65,6 @@ const MainPage = () => {
         setUserOauth(await JSON.parse(localStorage.getItem("myOauth")))
     }
 
-
     const statusToken = (token) => {
         setTokenError(token)
     }
@@ -96,7 +95,7 @@ const MainPage = () => {
                                         <React.Fragment>
                                             <Dashboard />
                                             {/* <Sidebar /> */}
-                                            <div className="page-content-main">
+                                            {/* <div className="page-content-main">
                                                 <div className="container-fluid-main">
                                                     <h1 className="text-center">ข้อมูลด้านทั่วไป</h1>
                                                     <h2 className="small text-center">ของประชากรผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h2>
@@ -144,7 +143,7 @@ const MainPage = () => {
                                                                     null
                                                     }
                                                 </div>
-                                            </div>
+                                            </div> */}
                                         </React.Fragment>
                                         :
                                         <Empty />
