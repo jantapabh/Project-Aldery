@@ -72,6 +72,6 @@ $hover-color: #1890ff;
     .ant-layout-content {
         margin: 24px 16px;
         padding: 24;
-        min-height: 280;
+        min-height: auto !important;
     }
 }

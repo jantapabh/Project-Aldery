@@ -64,8 +64,15 @@ nav {
 }
 
 .collapsible-menu {
+  height: 4rem;
+  padding: 1rem;
   background-color: rgb(255, 255, 255);
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+
+  .warp-nav-sidebar{
+    display: flex;
+    justify-content: center;
+  }
 
   .menu-content {
     text-align: center;
@@ -178,3 +185,7 @@ ul {
     color: $primary-color;
   }
 }
+
+
+
+//collapsible
