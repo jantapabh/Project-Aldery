@@ -4,8 +4,12 @@ $hover-color: #1890ff;
 
 .ant-layout {
     .logo {
+        cursor: pointer;
         margin: 1rem;
         h2 {
+            font-family: $font-header;
+        }
+        h6{
             font-family: $font-header;
         }
     }
@@ -35,6 +39,10 @@ $hover-color: #1890ff;
         display: flex;
         align-items: center;
         padding: 1rem !important;
+        svg{
+            height: 1.5rem;
+            width: 1.5rem;
+        }
     }
 
     .ant-menu-inline-collapsed > .ant-menu-item {
@@ -52,7 +60,5 @@ $hover-color: #1890ff;
         min-height: 280;
     }
 
-    // .site-layout-background {
 
-    // }
 }

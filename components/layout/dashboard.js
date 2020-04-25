@@ -79,12 +79,21 @@ const Dashboard = () => {
     return (
         <Layout>
             <Sider trigger={null} collapsible collapsed={collapsed}>
-                <div className="logo">
-                    <Link href="/">
-                        <h2>Eldery DB</h2>
-                    </Link>
+                {
+                    collapsed ?
+                        <div className="logo">
+                            <Link href="/">
+                                <h6>Eldery DB</h6>
+                            </Link>
+                        </div>
+                        :
+                        <div className="logo">
+                            <Link href="/">
+                                <h2>Eldery DB</h2>
+                            </Link>
+                        </div>
+                }
 
-                </div>
                 <Menu defaultSelectedKeys={['1']}>
                     {
                         sidebar.map((item, index) => (
