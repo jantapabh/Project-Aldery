@@ -119,9 +119,9 @@ const Dashboard = () => {
                         onClick: toggle,
                     })}
                 </Header>
-                {/* <Content className="site-layout-background" >
+                <Content className="site-layout-background" >
                     Content
-          </Content> */}
+          </Content>
             </Layout>
         </Layout>
     );

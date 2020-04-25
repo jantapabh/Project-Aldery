@@ -3,6 +3,8 @@ $bg-color: white !important;
 $hover-color: #1890ff;
 
 .ant-layout {
+    width: 100%;
+    height: 100vh;
     .logo {
         cursor: pointer;
         margin: 1rem;
