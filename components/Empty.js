@@ -8,7 +8,7 @@ const Empty = () => {
             {
                 typeof document === 'undefined' ?
                     null :
-                    <Dashboard>
+              
                         <div className="warp-empty">
                             <div className="content-empty">
                                 <img src="/static/empty.jpg" alt="empty" />
@@ -20,7 +20,6 @@ const Empty = () => {
                                 <h5>หน้าหลัก</h5>
                             </Link>
                         </div>
-                    </Dashboard>
             }
         </React.Fragment>
     )
