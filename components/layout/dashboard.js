@@ -66,6 +66,16 @@ const Dashboard = () => {
     const isTablet = useMediaQuery({ minWidth: 769 })
     const isMobile = useMediaQuery({ maxDeviceWidth: 768 })
 
+    const [navbar, setNavbar] = useState(
+        [
+            { name: "เกี่ยวกับเรา", href: "/index/about" },
+            { name: "สังคมผู้สูงอายุ", href: "/index/society" },
+            { name: "เบี้ยยังชีพ", href: "/index/allowance" },
+            { name: "ติดต่อ", href: "/index/contact" },
+            { name: "เข้าสู่หน้าหลัก", href: "/main" }
+        ]
+    )
+
     const [sidebar, setSidebar] = useState(
         [
             { name: "ข้อมูลทั่วไป", href: "/main" },
@@ -162,13 +172,11 @@ const Dashboard = () => {
                                                     <Menu defaultSelectedKeys={['0']}>
                                                         {
                                                             sidebar.map((item, index) => (
-
                                                                 <Menu.Item key={index}>
                                                                     <a href={item.href}>
                                                                         <UserOutlined />
                                                                         <span>{item.name}</span>
                                                                     </a>
-
                                                                 </Menu.Item>
 
                                                             ))
@@ -189,6 +197,16 @@ const Dashboard = () => {
                                                         })
 
                                                         }
+                                                        <nav className="layout-header-navbar">
+                                                            {
+                                                                navbar.map((item, index) => (
+                                                                    <a key={index} href={item.href}>
+                                                                        <p>{item.name}</p>
+                                                                    </a>
+                                                                ))
+                                                            }
+
+                                                        </nav>
                                                     </Header>
                                                     :
                                                     <NavBar tab={sidebar} confirm={onConfirm} />

@@ -1,6 +1,7 @@
 $font-header: "Frank Ruhl Libre" !important;
 $bg-color: white !important;
 $hover-color: #1890ff;
+$primary-color: #39b54a !important;
 
 .ant-layout {
     width: 100%;
@@ -46,6 +47,27 @@ $hover-color: #1890ff;
             height: 1.5rem;
             width: 1.5rem;
         }
+
+        nav {
+            min-height: auto;
+        }
+        .layout-header-navbar {
+            display: flex;
+            justify-content: flex-end;
+
+            p {
+            }
+
+            p {
+                cursor: pointer;
+                margin-bottom: 0;
+                margin: 0 1rem;
+                margin: 1rem !important;
+            }
+            p:hover {
+                color: $primary-color;
+            }
+        }
     }
 
     .ant-menu-inline-collapsed > .ant-menu-item {
@@ -58,7 +80,7 @@ $hover-color: #1890ff;
         align-items: center;
     }
 
-    .ant-menu-vertical .ant-menu-item:not(:last-child){
+    .ant-menu-vertical .ant-menu-item:not(:last-child) {
         display: flex;
     }
 
