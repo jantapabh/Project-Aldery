@@ -18,7 +18,7 @@ import NavBar from './nav';
 
 const { Header, Sider, Content } = Layout;
 
-const Dashboard = () => {
+const Dashboard = props => {
 
     const isLaptop = useMediaQuery({ minDeviceWidth: 1224 })
     const isTablet = useMediaQuery({ minWidth: 769 })
@@ -35,7 +35,8 @@ const Dashboard = () => {
 
     const [sidebar, setSidebar] = useState(
         [
-            { name: "ข้อมูลทั่วไป", href: "/main" },
+            { name: "หน้าหลัก", href: "/main" },
+            { name: "ข้อมูลทั่วไป", href: "/main/people" },
             { name: "ข้อมูลด้านสุขภาพ", href: "/main/hospital" },
             { name: "ข้อมูลด้านสังคม", href: "/main/social" },
             { name: "ข้อมูลด้านเศรษฐกิจ", href: "/main/economy" },
@@ -126,7 +127,7 @@ const Dashboard = () => {
                                                             </div>
                                                     }
 
-                                                    <Menu defaultSelectedKeys={['0']}>
+                                                    <Menu >
                                                         {
                                                             sidebar.map((item, index) => (
                                                                 <Menu.Item key={index}>
@@ -171,11 +172,7 @@ const Dashboard = () => {
 
                                             <Content className="site-layout-background" >
 
-
-                                                <Hospital />
-
-
-
+                                                {props.children}
                                             </Content>
                                         </Layout>
                                     </Layout>

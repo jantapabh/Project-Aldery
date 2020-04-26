@@ -58,73 +58,76 @@ const Service = () => {
                             <title>Eldery Dashboard</title>
                             <link rel='icon' href='/static/logomain.svg' />
                         </Head>
-                        <div className="warp-main">
-                            {
-                                !tokenError ? <React.Fragment>
-                                    <Dashboard />
-                                    <div className="page-content-main">
-                                        <div className="container-fluid-main">
-                                            <h1 className="text-center">หน่วยงานภาครัฐ</h1>
-                                            <h2 className="small text-center">สวัสดิการ การเข้าร่วมกิจกรรม และการช่วยเหลือ</h2>
-                                            {
-                                                isLaptop ?
-                                                    <div className="info-main">
-                                                        <div className="warp-chart-main ">
-                                                            <div className="chart-row">
-                                                                <PieHelp onToken={statusToken} />
-                                                                <LineHelp />
-                                                            </div>
-                                                            <div className="chart-row">
-                                                                <PieDoc />
-                                                                <PieService />
-                                                                <PieService2 />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    :
-                                                    isTablet ?
-                                                        <div className="info-main">
-                                                            <div className="warp-chart-main ">
-                                                                <div className="chart-row">
-                                                                    <PieHelp onToken={statusToken} />
-                                                                    <LineHelp />
-                                                                </div>
-                                                                <div className="chart-col">
-                                                                    <PieDoc />
-                                                                </div>
-                                                                <div className="chart-row">
-                                                                    <PieService />
-                                                                    <PieService2 />
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        :
-                                                        isMobile ?
+                        <Dashboard>
+                            <div className="warp-main">
+                                {
+                                    !tokenError ?
+                                        <React.Fragment>
+                                            <div className="page-content-main">
+                                                <div className="container-fluid-main">
+                                                    <h1 className="text-center">หน่วยงานภาครัฐ</h1>
+                                                    <h2 className="small text-center">สวัสดิการ การเข้าร่วมกิจกรรม และการช่วยเหลือ</h2>
+                                                    {
+                                                        isLaptop ?
                                                             <div className="info-main">
                                                                 <div className="warp-chart-main ">
-                                                                    <div className="chart-col">
+                                                                    <div className="chart-row">
                                                                         <PieHelp onToken={statusToken} />
                                                                         <LineHelp />
+                                                                    </div>
+                                                                    <div className="chart-row">
                                                                         <PieDoc />
                                                                         <PieService />
                                                                         <PieService2 />
                                                                     </div>
-                                                                    <div className="chart-row">
-
-                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             :
-                                                            null
-                                            }
-                                        </div>
-                                    </div>
-                                </React.Fragment>
-                                    :
-                                    <Empty />
-                            }
-                        </div>
+                                                            isTablet ?
+                                                                <div className="info-main">
+                                                                    <div className="warp-chart-main ">
+                                                                        <div className="chart-row">
+                                                                            <PieHelp onToken={statusToken} />
+                                                                            <LineHelp />
+                                                                        </div>
+                                                                        <div className="chart-col">
+                                                                            <PieDoc />
+                                                                        </div>
+                                                                        <div className="chart-row">
+                                                                            <PieService />
+                                                                            <PieService2 />
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                :
+                                                                isMobile ?
+                                                                    <div className="info-main">
+                                                                        <div className="warp-chart-main ">
+                                                                            <div className="chart-col">
+                                                                                <PieHelp onToken={statusToken} />
+                                                                                <LineHelp />
+                                                                                <PieDoc />
+                                                                                <PieService />
+                                                                                <PieService2 />
+                                                                            </div>
+                                                                            <div className="chart-row">
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    :
+                                                                    null
+                                                    }
+                                                </div>
+                                            </div>
+                                        </React.Fragment>
+                                        :
+                                        <Empty />
+                                }
+                            </div>
+                        </Dashboard>
+
                     </React.Fragment>
             }
         </React.Fragment>

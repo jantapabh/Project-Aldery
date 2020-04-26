@@ -8,7 +8,9 @@ const MainPage = () => {
             {
                 typeof document === 'undefined' ?
                     null :
-                    <Dashboard />
+                    <Dashboard>
+                       
+                    </Dashboard>
             }
         </React.Fragment>
     )

@@ -54,56 +54,58 @@ const Economy = () => {
                             <title>Eldery Dashboard</title>
                             <link rel='icon' href='/static/logomain.svg' />
                         </Head>
-                        <div className="warp-main">
-                            {
-                                !tokenError ?
-                                    <React.Fragment>
-                                        <Dashboard  />
-                                        <div className="page-content-main">
-                                            <div className="container-fluid-main">
-                                                <h1 className="text-center">ข้อมูลด้านเศรษฐกิจ</h1>
-                                                <h2 className="small text-center">ของประชากรผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h2>
-                                                {
-                                                    isLaptop || isTablet ?
-                                                        <div className="info-main">
-                                                            <div className="warp-chart-main ">
-                                                                <div className="chart-row">
-                                                                    <PieEconomy onToken={statusToken} />
-                                                                    <BarEconomy />
-                                                                </div>
-                                                                <div className="chart-row">
-                                                                    <PieEconomy2 />
-                                                                    <BarEconomy2 />
-                                                                </div>
-
-                                                                <div className="chart-row">
-                                                                    <BarEconomy3 />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        :
-                                                        isMobile ?
+                        <Dashboard>
+                            <div className="warp-main">
+                                {
+                                    !tokenError ?
+                                        <React.Fragment>
+                                            <div className="page-content-main">
+                                                <div className="container-fluid-main">
+                                                    <h1 className="text-center">ข้อมูลด้านเศรษฐกิจ</h1>
+                                                    <h2 className="small text-center">ของประชากรผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h2>
+                                                    {
+                                                        isLaptop || isTablet ?
                                                             <div className="info-main">
                                                                 <div className="warp-chart-main ">
-                                                                    <div className="chart-col">
+                                                                    <div className="chart-row">
                                                                         <PieEconomy onToken={statusToken} />
                                                                         <BarEconomy />
+                                                                    </div>
+                                                                    <div className="chart-row">
                                                                         <PieEconomy2 />
                                                                         <BarEconomy2 />
+                                                                    </div>
+
+                                                                    <div className="chart-row">
                                                                         <BarEconomy3 />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             :
-                                                            null
-                                                }
+                                                            isMobile ?
+                                                                <div className="info-main">
+                                                                    <div className="warp-chart-main ">
+                                                                        <div className="chart-col">
+                                                                            <PieEconomy onToken={statusToken} />
+                                                                            <BarEconomy />
+                                                                            <PieEconomy2 />
+                                                                            <BarEconomy2 />
+                                                                            <BarEconomy3 />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                :
+                                                                null
+                                                    }
+                                                </div>
                                             </div>
-                                        </div>
-                                    </React.Fragment>
-                                    :
-                                    <Empty />
-                            }
-                        </div>
+                                        </React.Fragment>
+                                        :
+                                        <Empty />
+                                }
+                            </div>
+                        </Dashboard>
+
                     </React.Fragment>
             }
 

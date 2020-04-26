@@ -3,8 +3,9 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head';
 import _ from 'lodash';
 import { useMediaQuery } from 'react-responsive';
-import Map from '../components/layout/Map';
-import Empty from '../components/Empty';
+import Map from '../../components/layout/Map';
+import Empty from '../../components/Empty';
+import Dashboard from '../../components/layout/dashboard';
 
 
 const BarMap = dynamic(
@@ -52,64 +53,67 @@ const People = () => {
                             <title>Eldery Dashboard</title>
                             <link rel='icon' href='/static/logomain.svg' />
                         </Head>
-                        <div className="warp-main">
-                            {
-                                !tokenError ?
-                                    <React.Fragment>
-                                        <div className="page-content-main">
-                                            <div className="container-fluid-main">
-                                                <h1 className="text-center">ข้อมูลด้านทั่วไป</h1>
-                                                <h2 className="small text-center">ของประชากรผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h2>
-                                                {
-                                                    isLaptop ?
+                        <Dashboard>
+                            <div className="warp-main">
+                                {
+                                    !tokenError ?
+                                        <React.Fragment>
+                                            <div className="page-content-main">
+                                                <div className="container-fluid-main">
+                                                    <h1 className="text-center">ข้อมูลด้านทั่วไป</h1>
+                                                    <h2 className="small text-center">ของประชากรผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต</h2>
+                                                    {
+                                                        isLaptop ?
 
-                                                        <div className="info-main">
-                                                            <div className="warp-map">
-                                                                <Map onToken={statusToken} />
-                                                            </div>
-                                                            <div className="warp-chart-main">
-                                                                <div className="chart-row">
-                                                                    <Piechart onToken={statusToken} />
-                                                                    <Piechart2 />
-                                                                </div>
-                                                                <Barchart />
-                                                            </div>
-                                                        </div>
-                                                        :
-                                                        isTablet ?
                                                             <div className="info-main">
+                                                                <div className="warp-map">
+                                                                    <Map onToken={statusToken} />
+                                                                </div>
                                                                 <div className="warp-chart-main">
-                                                                    <BarMap onToken={statusToken} />
                                                                     <div className="chart-row">
-                                                                        <Piechart />
+                                                                        <Piechart onToken={statusToken} />
                                                                         <Piechart2 />
                                                                     </div>
                                                                     <Barchart />
                                                                 </div>
                                                             </div>
                                                             :
-                                                            isMobile ?
+                                                            isTablet ?
                                                                 <div className="info-main">
-
                                                                     <div className="warp-chart-main">
                                                                         <BarMap onToken={statusToken} />
-                                                                        <div className="chart-col">
-                                                                            <Piechart onToken={statusToken} />
+                                                                        <div className="chart-row">
+                                                                            <Piechart />
                                                                             <Piechart2 />
                                                                         </div>
                                                                         <Barchart />
                                                                     </div>
                                                                 </div>
                                                                 :
-                                                                null
-                                                }
+                                                                isMobile ?
+                                                                    <div className="info-main">
+
+                                                                        <div className="warp-chart-main">
+                                                                            <BarMap onToken={statusToken} />
+                                                                            <div className="chart-col">
+                                                                                <Piechart onToken={statusToken} />
+                                                                                <Piechart2 />
+                                                                            </div>
+                                                                            <Barchart />
+                                                                        </div>
+                                                                    </div>
+                                                                    :
+                                                                    null
+                                                    }
+                                                </div>
                                             </div>
-                                        </div>
-                                    </React.Fragment>
-                                    :
-                                    <Empty />
-                            }
-                        </div >
+                                        </React.Fragment>
+                                        :
+                                        <Empty />
+                                }
+                            </div >
+                        </Dashboard>
+
                     </React.Fragment>
             }
         </React.Fragment>
