@@ -144,7 +144,6 @@ const Dashboard = props => {
                                                 :
                                                 null
                                         }
-
                                         <Layout className="site-layout">
                                             {
                                                 isTablet ?
