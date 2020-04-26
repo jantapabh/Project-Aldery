@@ -170,12 +170,12 @@ const NavBar = props => {
                                                         </div>
                                                     </nav>
                                                 </li>
-                                                <li >
+                                                <li className="menu-content-list">
                                                     {
                                                         tab.map((item, indexs) => {
                                                             return (
                                                                 <a key={indexs} href={item.href}>
-                                                                    <p >{item.name}</p>
+                                                                    <h5 >{item.name}</h5>
                                                                 </a>
                                                             )
                                                         })

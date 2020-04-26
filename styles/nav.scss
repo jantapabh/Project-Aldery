@@ -74,7 +74,7 @@ nav {
     padding: 0 1rem;
     justify-content: space-between;
 
-    h2{
+    h2 {
       font-family: $font-header;
     }
   }
@@ -132,11 +132,19 @@ nav {
         display: flex;
         flex-direction: column;
         width: 100%;
-        p {
+        h5 {
           margin: 0.5rem !important;
         }
-        p:hover {
+        h5:hover {
           color: $primary-color;
+        }
+      }
+      .menu-content-list {
+        height: 100vh;
+        margin-top: 2rem;
+        a{
+          width: 100%;
+          margin: 1rem 0;
         }
       }
     }
@@ -215,4 +223,3 @@ ul {
     color: $primary-color;
   }
 }
-
