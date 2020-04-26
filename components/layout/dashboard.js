@@ -72,7 +72,6 @@ const Dashboard = () => {
             { name: "สังคมผู้สูงอายุ", href: "/index/society" },
             { name: "เบี้ยยังชีพ", href: "/index/allowance" },
             { name: "ติดต่อ", href: "/index/contact" },
-            { name: "เข้าสู่หน้าหลัก", href: "/main" }
         ]
     )
 
