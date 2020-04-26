@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { useMediaQuery } from 'react-responsive';
 import { Progress } from 'antd';
@@ -9,10 +10,10 @@ import {
     UserOutlined,
 
 } from '@ant-design/icons';
-import Hospital from '../../pages/main/hospital';
-import Head from 'next/head';
-import Empty from '../Empty';
+
 import NavBar from './nav';
+import Error from '../empty';
+
 
 
 
@@ -48,7 +49,6 @@ const Dashboard = props => {
     const [loading, setLoading] = useState(false)
     const [completed, setCompleted] = useState(0)
     const [userOauth, setUserOauth] = useState()
-    const [tokenError, setTokenError] = useState(false)
 
     useEffect(() => {
         fetchData()
@@ -70,10 +70,6 @@ const Dashboard = props => {
 
     const fetchData = async () => {
         setUserOauth(await JSON.parse(localStorage.getItem("myOauth")))
-    }
-
-    const statusToken = (token) => {
-        setTokenError(token)
     }
 
     const toggle = () => {
@@ -107,7 +103,7 @@ const Dashboard = props => {
                                     status="active"
                                 />
                                 :
-                                userOauth != null && !tokenError ?
+                                userOauth != null ?
                                     <Layout>
                                         {
                                             isTablet ?
@@ -170,13 +166,12 @@ const Dashboard = props => {
                                             }
 
                                             <Content className="site-layout-background" >
-
                                                 {props.children}
                                             </Content>
                                         </Layout>
                                     </Layout>
                                     :
-                                    <Empty />
+                                    <Error />
                         }
                     </React.Fragment>
             }

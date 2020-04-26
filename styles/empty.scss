@@ -8,7 +8,26 @@ $border-bg-color: 1px solid #83d2ae;
   flex-direction: column;
   align-items: center;
   justify-content: center;
- 
+  nav {
+    width: 100%;
+    margin-bottom: 4rem;
+    ul {
+      margin-left: 0;
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        h2 {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .collapsible-menu {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
   .content-empty {
     img {
       object-fit: cover;

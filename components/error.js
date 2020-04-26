@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useMediaQuery } from 'react-responsive';
 import NavBar from './layout/nav';
 
-const Empty = () => {
+const Error = () => {
 
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
 
@@ -42,4 +42,4 @@ const Empty = () => {
         </div>
     )
 }
-export default Empty;
+export default Error;

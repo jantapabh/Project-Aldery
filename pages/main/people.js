@@ -4,7 +4,7 @@ import Head from 'next/head';
 import _ from 'lodash';
 import { useMediaQuery } from 'react-responsive';
 import Map from '../../components/layout/Map';
-import Empty from '../../components/Empty';
+import Empty from '../../components/empty';
 import Dashboard from '../../components/layout/dashboard';
 
 
