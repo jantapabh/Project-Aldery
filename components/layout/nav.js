@@ -159,6 +159,17 @@ const NavBar = props => {
                                         </div>
                                         <div className={`menu-content${status ? " show" : ""}`}>
                                             <ul>
+                                                <li>
+                                                    <nav>
+                                                        <div className="box-hamberger">
+                                                            <a className={`hamberger btn${status ? " active" : " not-active"}`} onClick={collapsible} >
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </a>
+                                                        </div>
+                                                    </nav>
+                                                </li>
                                                 <li >
                                                     {
                                                         tab.map((item, indexs) => {

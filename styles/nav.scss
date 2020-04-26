@@ -71,7 +71,12 @@ nav {
 
   .warp-nav-sidebar {
     display: flex;
-    justify-content: center;
+    padding: 0 1rem;
+    justify-content: space-between;
+
+    h2{
+      font-family: $font-header;
+    }
   }
 
   .menu-content {
@@ -94,6 +99,7 @@ nav {
     }
   }
   .menu-content.show {
+    display: block;
     min-height: 100vh;
     height: 100vh;
     width: 100%;
@@ -106,9 +112,18 @@ nav {
     z-index: 1000;
 
     opacity: 1;
-    background-color: #ff5a79;
+    background-color: #b3e5cc;
     visibility: visible;
+
+    nav {
+      min-height: 2rem;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0.5rem 1rem;
+    }
+
     ul {
+      display: block;
       height: 100vh;
       width: 100%;
       margin-left: 0 !important;
@@ -201,4 +216,3 @@ ul {
   }
 }
 
-//collapsible
