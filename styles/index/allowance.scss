@@ -51,11 +51,6 @@ $primary-color: #39b54a !important;
           align-items: center;
           flex-direction: column;
 
-          img {
-            width: 20rem;
-            height: 15rem;
-          }
-
           @media (max-width: 575.98px) {
             width: 100%;
             margin-top: 1rem;
