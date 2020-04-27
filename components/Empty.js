@@ -8,7 +8,7 @@ const Empty = () => {
             <div className="content-empty">
                 <img src="/static/empty.jpg" alt="empty" />
                 <div className="title-empty">
-                    <h4>ความผิดพลาด 401 ข้อมูลไม่พร้อมใช้งาน </h4>
+                    <h4>ความผิดพลาด 401 ข้อมูลไม่พร้อมใช้งาน</h4>
                     <h4>โปรดกลับสู่หน้าหลัก</h4>
                 </div>
             </div>
