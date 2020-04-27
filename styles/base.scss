@@ -21,6 +21,7 @@
 @import "./map.scss";
 
 //Other
+@import "./error.scss";
 @import "./empty.scss";
 
 $font: "Prompt", sans-serif;
@@ -104,9 +105,6 @@ text {
   @media (max-width: 991.98px) {
     font-size: 0.9rem !important;
   }
-}
-
-a {
 }
 
 a:hover {

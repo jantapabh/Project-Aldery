@@ -28,11 +28,11 @@ const Error = () => {
     )
 
     return (
-        <div className="warp-empty">
+        <div className="warp-error">
             <NavBar name="empty" tab={isSmallScreen ? homeMin : home} />
-            <div className="content-empty">
+            <div className="content-error">
                 <img src="/static/empty.jpg" alt="empty" />
-                <div className="title-empty">
+                <div className="title-error">
                     <h4>หน้ายังไม่พร้อมใช้งาน โปรดกลับสู่หน้าหลัก</h4>
                 </div>
             </div>

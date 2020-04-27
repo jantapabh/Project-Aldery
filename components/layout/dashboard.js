@@ -7,12 +7,13 @@ import { Layout, Menu } from 'antd';
 import {
     MenuUnfoldOutlined,
     MenuFoldOutlined,
-    UserOutlined,
-    BankOutlined,
     HomeOutlined,
-    HeartOutlined
-
 } from '@ant-design/icons';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBullhorn } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faHeart, faHospital, faBuilding, faNewspaper } from '@fortawesome/free-regular-svg-icons'
+
 
 import NavBar from './nav';
 import Error from '../empty';
@@ -136,18 +137,18 @@ const Dashboard = props => {
                                                                                 <HomeOutlined />
                                                                                 :
                                                                                 index == 1 ?
-                                                                                    <UserOutlined />
+                                                                                    <FontAwesomeIcon icon={faUser} />
                                                                                     :
                                                                                     index == 2 ?
-                                                                                        <HeartOutlined />
+                                                                                        <FontAwesomeIcon icon={faHeart} />
                                                                                         :
                                                                                         index == 3 ?
-                                                                                            <BankOutlined />
+                                                                                            <FontAwesomeIcon icon={faBuilding} />
                                                                                             :
                                                                                             index == 4 ?
-                                                                                                null
+                                                                                                <FontAwesomeIcon icon={faNewspaper} />
                                                                                                 :
-                                                                                                null
+                                                                                                <FontAwesomeIcon icon={faBullhorn} />
                                                                         }
                                                                         <span>{item.name}</span>
                                                                     </a>

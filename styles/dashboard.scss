@@ -56,9 +56,6 @@ $primary-color: #39b54a !important;
             justify-content: flex-end;
 
             p {
-            }
-
-            p {
                 cursor: pointer;
                 margin-bottom: 0;
                 margin: 0 1rem;
@@ -73,6 +70,16 @@ $primary-color: #39b54a !important;
     .ant-menu-inline-collapsed > .ant-menu-item {
         display: flex;
         justify-content: center;
+    }
+
+    .ant-menu-item {
+        span {
+            margin-right: 0 !important;
+        }
+
+        svg {
+            margin-right: 10px;
+        }
     }
 
     .ant-menu-item > a:only-child {
