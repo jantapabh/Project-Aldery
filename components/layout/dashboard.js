@@ -8,6 +8,9 @@ import {
     MenuUnfoldOutlined,
     MenuFoldOutlined,
     UserOutlined,
+    BankOutlined,
+    HomeOutlined,
+    HeartOutlined
 
 } from '@ant-design/icons';
 
@@ -128,7 +131,24 @@ const Dashboard = props => {
                                                             sidebar.map((item, index) => (
                                                                 <Menu.Item key={index}>
                                                                     <a href={item.href}>
-                                                                        <UserOutlined />
+                                                                        {
+                                                                            index == 0 ?
+                                                                                <HomeOutlined />
+                                                                                :
+                                                                                index == 1 ?
+                                                                                    <UserOutlined />
+                                                                                    :
+                                                                                    index == 2 ?
+                                                                                        <HeartOutlined />
+                                                                                        :
+                                                                                        index == 3 ?
+                                                                                            <BankOutlined />
+                                                                                            :
+                                                                                            index == 4 ?
+                                                                                                null
+                                                                                                :
+                                                                                                null
+                                                                        }
                                                                         <span>{item.name}</span>
                                                                     </a>
                                                                 </Menu.Item>

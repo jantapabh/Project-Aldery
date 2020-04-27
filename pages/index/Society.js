@@ -26,7 +26,7 @@ const Society = () => {
         },
     ])
 
-    const [header, setHeader] = useState("สังคมผู้สูงอายุ")
+    const [header, setHeader] = useState("การจัดการเกี่ยวกับสังคมผู้สูงอายุ")
     const [subHead, setSubHead] = useState("ภายในอำเภอกะทู้ จังหวัดภูเก็ต")
 
     const [status, setStatus] = useState(false)
