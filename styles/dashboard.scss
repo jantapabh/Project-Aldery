@@ -58,8 +58,7 @@ $primary-color: #39b54a !important;
             p {
                 cursor: pointer;
                 margin-bottom: 0;
-                margin: 0 1rem;
-                margin: 1rem !important;
+                margin: 0.5rem !important;
             }
             p:hover {
                 color: $primary-color;
@@ -80,6 +79,14 @@ $primary-color: #39b54a !important;
         svg {
             margin-right: 10px;
         }
+    }
+
+    .ant-menu-item > a:hover {
+        color: $primary-color;
+    }
+
+    .ant-menu-item:active {
+        background-color: #dcedc8;
     }
 
     .ant-menu-item > a:only-child {

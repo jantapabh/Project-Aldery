@@ -9,11 +9,11 @@ const Empty = () => {
                 <img src="/static/empty.jpg" alt="empty" />
                 <div className="title-empty">
                     <h4>ความผิดพลาด 401 ข้อมูลไม่พร้อมใช้งาน</h4>
-                    <h4>โปรดกลับสู่หน้าหลัก</h4>
+                    <h4>โปรดกลับสู่หน้าแรก</h4>
                 </div>
             </div>
             <Link href="/">
-                <h5>หน้าหลัก</h5>
+                <h5>หน้าแรก</h5>
             </Link>
         </div>
     )

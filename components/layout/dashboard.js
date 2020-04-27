@@ -41,11 +41,11 @@ const Dashboard = props => {
     const [sidebar, setSidebar] = useState(
         [
             { name: "หน้าหลัก", href: "/main" },
-            { name: "ข้อมูลทั่วไป", href: "/main/people" },
-            { name: "ข้อมูลด้านสุขภาพ", href: "/main/hospital" },
-            { name: "ข้อมูลด้านสังคม", href: "/main/social" },
-            { name: "ข้อมูลด้านเศรษฐกิจ", href: "/main/economy" },
-            { name: "ข้อมูลด้านการช่วยเหลือ", href: "/main/service" },
+            { name: "ด้านทั่วไป", href: "/main/people" },
+            { name: "ด้านสุขภาพ", href: "/main/hospital" },
+            { name: "ด้านสังคม", href: "/main/social" },
+            { name: "ด้านเศรษฐกิจ", href: "/main/economy" },
+            { name: "ด้านการช่วยเหลือ", href: "/main/service" },
         ]
     )
     const [status, setStatus] = useState(false)
@@ -137,18 +137,28 @@ const Dashboard = props => {
                                                                                 <HomeOutlined />
                                                                                 :
                                                                                 index == 1 ?
-                                                                                    <FontAwesomeIcon icon={faUser} />
+                                                                                    <span className="anticon">
+                                                                                        <FontAwesomeIcon icon={faUser} />
+                                                                                    </span>
                                                                                     :
                                                                                     index == 2 ?
-                                                                                        <FontAwesomeIcon icon={faHeart} />
+                                                                                        <span className="anticon">
+                                                                                            <FontAwesomeIcon icon={faHeart} />
+                                                                                        </span>
                                                                                         :
                                                                                         index == 3 ?
-                                                                                            <FontAwesomeIcon icon={faBuilding} />
+                                                                                            <span className="anticon">
+                                                                                                <FontAwesomeIcon icon={faBuilding} />
+                                                                                            </span>
                                                                                             :
                                                                                             index == 4 ?
-                                                                                                <FontAwesomeIcon icon={faNewspaper} />
+                                                                                                <span className="anticon">
+                                                                                                    <FontAwesomeIcon icon={faNewspaper} />
+                                                                                                </span>
                                                                                                 :
-                                                                                                <FontAwesomeIcon icon={faBullhorn} />
+                                                                                                <span className="anticon">
+                                                                                                    <FontAwesomeIcon icon={faBullhorn} />
+                                                                                                </span>
                                                                         }
                                                                         <span>{item.name}</span>
                                                                     </a>
