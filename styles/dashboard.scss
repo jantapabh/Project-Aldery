@@ -84,7 +84,7 @@ $menu-select-color: #dcedcc !important;
         }
     }
 
-    .ant-menu-item:hover{
+    .ant-menu-item:hover {
         color: $primary-color;
     }
 
@@ -121,4 +121,9 @@ $menu-select-color: #dcedcc !important;
         padding: 24;
         min-height: auto !important;
     }
+}
+
+.menu-sidebar {
+    display: flex;
+    align-items: center;
 }

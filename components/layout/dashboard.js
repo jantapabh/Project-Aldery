@@ -126,7 +126,7 @@ const Dashboard = props => {
                                                             sidebar.map((item, index) => (
                                                                 <Menu.Item key={index}>
                                                                     <Link href={item.href} >
-                                                                        <div onClick={() => { action.index(item.id) }}>
+                                                                        <div className="menu-sidebar" onClick={() => { action.index(item.id) }}>
                                                                             {
                                                                                 index == 0 ?
                                                                                     <HomeOutlined />
