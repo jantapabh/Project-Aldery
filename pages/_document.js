@@ -36,10 +36,6 @@ class MyDocument extends Document {
                         crossorigin="anonymous"
                     />
 
-                    <script src="https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table.min.js" />
-                    <link rel="stylesheet" href="https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table-all.min.css">
-                    </link>
-
                 </Head>
                 <body>
                     <Main />
