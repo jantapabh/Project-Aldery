@@ -84,7 +84,7 @@ $menu-select-color: #dcedcc !important;
         }
     }
 
-    .ant-menu-item > a:hover {
+    .ant-menu-item:hover{
         color: $primary-color;
     }
 
@@ -93,7 +93,7 @@ $menu-select-color: #dcedcc !important;
     }
 
     .ant-menu-item-selected {
-        a {
+        span {
             color: $primary-color;
         }
         background-color: $menu-select-color;

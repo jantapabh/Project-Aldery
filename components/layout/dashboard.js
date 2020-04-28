@@ -49,7 +49,7 @@ const Dashboard = props => {
     const [userOauth, setUserOauth] = useState()
 
     useEffect(() => {
-      //  fetchData()
+        fetchData()
         function progress() {
             setCompleted(oldCompleted => {
                 if (oldCompleted === 100) {
@@ -66,9 +66,9 @@ const Dashboard = props => {
         const timer = setInterval(progress, 500);
     }, []);
 
-    // const fetchData = async () => {
-    //     setUserOauth(await JSON.parse(localStorage.getItem("myOauth")))
-    // }
+    const fetchData = async () => {
+        setUserOauth(await JSON.parse(localStorage.getItem("myOauth")))
+    }
 
     const toggle = () => {
 
@@ -125,37 +125,39 @@ const Dashboard = props => {
                                                         {
                                                             sidebar.map((item, index) => (
                                                                 <Menu.Item key={index}>
-                                                                    <Link href="/main">
-                                                                        <h6>Eldery DB</h6>
-                                                                        {
-                                                                            index == 0 ?
-                                                                                <HomeOutlined />
-                                                                                :
-                                                                                index == 1 ?
-                                                                                    <span className="anticon">
-                                                                                        <FontAwesomeIcon icon={faUser} />
-                                                                                    </span>
+                                                                    <Link href={item.href}>
+                                                                        <React.Fragment>
+                                                                            {
+                                                                                index == 0 ?
+                                                                                    <HomeOutlined />
                                                                                     :
-                                                                                    index == 2 ?
+                                                                                    index == 1 ?
                                                                                         <span className="anticon">
-                                                                                            <FontAwesomeIcon icon={faHeart} />
+                                                                                            <FontAwesomeIcon icon={faUser} />
                                                                                         </span>
                                                                                         :
-                                                                                        index == 3 ?
+                                                                                        index == 2 ?
                                                                                             <span className="anticon">
-                                                                                                <FontAwesomeIcon icon={faBuilding} />
+                                                                                                <FontAwesomeIcon icon={faHeart} />
                                                                                             </span>
                                                                                             :
-                                                                                            index == 4 ?
+                                                                                            index == 3 ?
                                                                                                 <span className="anticon">
-                                                                                                    <FontAwesomeIcon icon={faNewspaper} />
+                                                                                                    <FontAwesomeIcon icon={faBuilding} />
                                                                                                 </span>
                                                                                                 :
-                                                                                                <span className="anticon">
-                                                                                                    <FontAwesomeIcon icon={faBullhorn} />
-                                                                                                </span>
-                                                                        }
-                                                                        <span>{item.name}</span>
+                                                                                                index == 4 ?
+                                                                                                    <span className="anticon">
+                                                                                                        <FontAwesomeIcon icon={faNewspaper} />
+                                                                                                    </span>
+                                                                                                    :
+                                                                                                    <span className="anticon">
+                                                                                                        <FontAwesomeIcon icon={faBullhorn} />
+                                                                                                    </span>
+                                                                            }
+                                                                            <span>{item.name}</span>
+                                                                        </React.Fragment>
+
                                                                     </Link>
                                                                 </Menu.Item>
 
