@@ -3,6 +3,7 @@ $bg-color: white !important;
 $font-color: rgba(0, 0, 0, 0.65) !important;
 $hover-color: #1890ff;
 $primary-color: #39b54a !important;
+$menu-select-color: #dcedcc !important;
 
 .ant-layout {
     width: 100%;
@@ -60,7 +61,7 @@ $primary-color: #39b54a !important;
                 color: $font-color;
                 cursor: pointer;
                 margin-bottom: 0;
-                margin: 0.5rem 1rem!important;
+                margin: 0.5rem 1rem !important;
             }
             p:hover {
                 color: $primary-color;
@@ -88,7 +89,14 @@ $primary-color: #39b54a !important;
     }
 
     .ant-menu-item:active {
-        background-color: #dcedc8;
+        background-color: $menu-select-color;
+    }
+
+    .ant-menu-item-selected {
+        a {
+            color: $primary-color;
+        }
+        background-color: $menu-select-color;
     }
 
     .ant-menu-item > a:only-child {

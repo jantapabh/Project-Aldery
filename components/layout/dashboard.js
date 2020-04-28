@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useSelector, useDispatch } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import { useMediaQuery } from 'react-responsive';
 import { Progress } from 'antd';
 import { Layout, Menu } from 'antd';
@@ -22,6 +24,8 @@ const { Header, Sider, Content } = Layout;
 
 const Dashboard = props => {
 
+    const sidebar = useSelector(state => state.dashboard.sidebar)
+
     const isLaptop = useMediaQuery({ minDeviceWidth: 1224 })
     const isTablet = useMediaQuery({ minWidth: 769 })
     const isMobile = useMediaQuery({ maxDeviceWidth: 768 })
@@ -35,16 +39,7 @@ const Dashboard = props => {
         ]
     )
 
-    const [sidebar, setSidebar] = useState(
-        [
-            { name: "หน้าหลัก", href: "/main" },
-            { name: "ด้านทั่วไป", href: "/main/people" },
-            { name: "ด้านสุขภาพ", href: "/main/hospital" },
-            { name: "ด้านสังคม", href: "/main/social" },
-            { name: "ด้านเศรษฐกิจ", href: "/main/economy" },
-            { name: "ด้านการช่วยเหลือ", href: "/main/service" },
-        ]
-    )
+
     const [status, setStatus] = useState(false)
     const [collapsed, setCollapsed] = useState(false)
     const [loading, setLoading] = useState(false)
@@ -124,7 +119,7 @@ const Dashboard = props => {
                                                             </div>
                                                     }
 
-                                                    <Menu >
+                                                    <Menu defaultSelectedKeys={['0']} >
                                                         {
                                                             sidebar.map((item, index) => (
                                                                 <Menu.Item key={index}>
