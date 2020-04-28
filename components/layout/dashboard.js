@@ -12,10 +12,11 @@ import {
     HomeOutlined,
 } from '@ant-design/icons';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBullhorn } from '@fortawesome/free-solid-svg-icons'
-import { faUser, faHeart, faHospital, faBuilding, faNewspaper } from '@fortawesome/free-regular-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBullhorn } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faHeart, faBuilding, faNewspaper } from '@fortawesome/free-regular-svg-icons';
 
+import {setIndex} from '../../redux/dashboard/action';
 
 import NavBar from './nav';
 import Error from '../error';
@@ -25,6 +26,7 @@ const { Header, Sider, Content } = Layout;
 const Dashboard = props => {
 
     const sidebar = useSelector(state => state.dashboard.sidebar)
+    const action = bindActionCreators({ ...setIndex }, useDispatch())
 
     const isLaptop = useMediaQuery({ minDeviceWidth: 1224 })
     const isTablet = useMediaQuery({ minWidth: 769 })
@@ -123,7 +125,7 @@ const Dashboard = props => {
                                                         {
                                                             sidebar.map((item, index) => (
                                                                 <Menu.Item key={index}>
-                                                                    <a href={item.href}>
+                                                                    <a href={item.href}  onClick={() => { item.id, item.status }}>
                                                                         {
                                                                             index == 0 ?
                                                                                 <HomeOutlined />
