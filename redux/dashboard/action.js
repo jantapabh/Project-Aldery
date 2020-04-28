@@ -1,5 +1,5 @@
 export const setIndex = {
-    setKey: (index) => (dispatch, getState) => {
+    index: (index) => (dispatch, getState) => {
         dispatch({ type: 'SET_KEY', index })
     },
 }

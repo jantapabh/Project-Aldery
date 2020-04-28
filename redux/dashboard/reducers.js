@@ -13,7 +13,7 @@ const dashboard = {
 export const dashboardReducer = (state = dashboard, action) => {
     switch (action.type) {
         case 'SET_KEY':
-            return state = { ...state }
+            return state = { ...state, index: action.index }
         default:
             return state
     }

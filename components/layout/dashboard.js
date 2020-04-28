@@ -16,7 +16,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBullhorn } from '@fortawesome/free-solid-svg-icons';
 import { faUser, faHeart, faBuilding, faNewspaper } from '@fortawesome/free-regular-svg-icons';
 
-import {setIndex} from '../../redux/dashboard/action';
+import { setIndex } from '../../redux/dashboard/action';
 
 import NavBar from './nav';
 import Error from '../error';
@@ -49,7 +49,7 @@ const Dashboard = props => {
     const [userOauth, setUserOauth] = useState()
 
     useEffect(() => {
-        fetchData()
+      //  fetchData()
         function progress() {
             setCompleted(oldCompleted => {
                 if (oldCompleted === 100) {
@@ -66,9 +66,9 @@ const Dashboard = props => {
         const timer = setInterval(progress, 500);
     }, []);
 
-    const fetchData = async () => {
-        setUserOauth(await JSON.parse(localStorage.getItem("myOauth")))
-    }
+    // const fetchData = async () => {
+    //     setUserOauth(await JSON.parse(localStorage.getItem("myOauth")))
+    // }
 
     const toggle = () => {
 
@@ -125,7 +125,8 @@ const Dashboard = props => {
                                                         {
                                                             sidebar.map((item, index) => (
                                                                 <Menu.Item key={index}>
-                                                                    <a href={item.href}  onClick={() => { item.id, item.status }}>
+                                                                    <Link href="/main">
+                                                                        <h6>Eldery DB</h6>
                                                                         {
                                                                             index == 0 ?
                                                                                 <HomeOutlined />
@@ -155,7 +156,7 @@ const Dashboard = props => {
                                                                                                 </span>
                                                                         }
                                                                         <span>{item.name}</span>
-                                                                    </a>
+                                                                    </Link>
                                                                 </Menu.Item>
 
                                                             ))
