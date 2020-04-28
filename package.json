@@ -41,10 +41,14 @@
     "react-dom": "^16.9.0",
     "react-google-charts": "^3.0.15",
     "react-motion": "^0.5.2",
+    "react-redux": "^7.2.0",
     "react-responsive": "^8.0.3",
     "react-simple-maps": "^0.12.1",
     "react-tooltip": "^3.11.1",
     "react-typed": "^1.2.0",
-    "reactstrap": "^8.0.1"
+    "reactstrap": "^8.0.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
   }
 }
