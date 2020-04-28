@@ -26,7 +26,9 @@ const { Header, Sider, Content } = Layout;
 const Dashboard = props => {
 
     const sidebar = useSelector(state => state.dashboard.sidebar)
+    const indexSidebar = useSelector(state => state.dashboard.index)
     const action = bindActionCreators({ ...setIndex }, useDispatch())
+
 
     const isLaptop = useMediaQuery({ minDeviceWidth: 1224 })
     const isTablet = useMediaQuery({ minWidth: 769 })
@@ -40,7 +42,6 @@ const Dashboard = props => {
             { name: "ติดต่อ", href: "/index/contact" },
         ]
     )
-
 
     const [status, setStatus] = useState(false)
     const [collapsed, setCollapsed] = useState(false)
@@ -79,7 +80,6 @@ const Dashboard = props => {
     const onConfirm = (order) => {
         setStatus(order)
     }
-
     return (
         < React.Fragment>
             {
@@ -121,12 +121,12 @@ const Dashboard = props => {
                                                             </div>
                                                     }
 
-                                                    <Menu defaultSelectedKeys={['0']} >
+                                                    <Menu defaultSelectedKeys={[indexSidebar]} >
                                                         {
                                                             sidebar.map((item, index) => (
                                                                 <Menu.Item key={index}>
-                                                                    <Link href={item.href}>
-                                                                        <React.Fragment>
+                                                                    <Link href={item.href} >
+                                                                        <div onClick={() => { action.index(item.id) }}>
                                                                             {
                                                                                 index == 0 ?
                                                                                     <HomeOutlined />
@@ -156,7 +156,7 @@ const Dashboard = props => {
                                                                                                     </span>
                                                                             }
                                                                             <span>{item.name}</span>
-                                                                        </React.Fragment>
+                                                                        </div>
 
                                                                     </Link>
                                                                 </Menu.Item>
