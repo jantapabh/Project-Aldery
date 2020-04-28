@@ -121,6 +121,10 @@ $menu-select-color: #dcedcc !important;
         padding: 24;
         min-height: auto !important;
     }
+
+    .ant-menu-inline-collapsed > .ant-menu-item {
+        padding: 0 20px !important;
+    }
 }
 
 .menu-sidebar {
