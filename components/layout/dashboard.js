@@ -16,7 +16,7 @@ import { faUser, faHeart, faHospital, faBuilding, faNewspaper } from '@fortaweso
 
 
 import NavBar from './nav';
-import Error from '../empty';
+import Error from '../error';
 
 
 
