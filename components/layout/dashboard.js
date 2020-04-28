@@ -18,9 +18,6 @@ import { faUser, faHeart, faHospital, faBuilding, faNewspaper } from '@fortaweso
 import NavBar from './nav';
 import Error from '../error';
 
-
-
-
 const { Header, Sider, Content } = Layout;
 
 const Dashboard = props => {
