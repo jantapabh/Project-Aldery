@@ -4,7 +4,7 @@ import Head from 'next/head';
 import _ from 'lodash';
 import Dashboard from '../../components/layout/dashboard';
 import { useMediaQuery } from 'react-responsive';
-import Empty from '../../components/empty';
+import Empty from '../../components/Empty';
 
 const BarHospital = dynamic(
     () => import('../../components/chart/barHospital3'),
