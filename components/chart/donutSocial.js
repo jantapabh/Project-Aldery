@@ -23,6 +23,18 @@ const DonutSocial = props => {
                 }
             }
         },
+        responsive: [{
+            breakpoint: 992,
+            options: {
+                legend: {
+                    offsetY: 60,
+                    itemMargin: {
+                        horizontal: 1,
+                        vertical: 1
+                    },
+                },
+            },
+        }],
         labels: ["บ้านของตนเอง", "อาศัยกับครอบครัวเดิม", "อาศัยญาติ/พี่น้อง", "บ้านเช่า", "อื่นๆ"]
     })
 

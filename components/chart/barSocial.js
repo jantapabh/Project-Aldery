@@ -21,7 +21,7 @@ const BarSocial = props => {
                     }
                 },
                 legend: {
-                    position: "bottom"
+                    position: "bottom",
                 }
             }
         }],
@@ -103,7 +103,7 @@ const BarSocial = props => {
                         options={options}
                         series={series}
                         type="bar"
-                        height="300"
+                        height="400"
                         width="300"
                     />
                     :

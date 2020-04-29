@@ -24,6 +24,18 @@ const PieSocial = () => {
                 }
             }
         },
+        responsive: [{
+            breakpoint: 992,
+            options: {
+                legend: {
+                    offsetY: 80,
+                    itemMargin: {
+                        horizontal: 1,
+                        vertical: 1
+                    },
+                },
+            },
+        }],
         labels: ["เหมาะสม คงทนถาวร", "บ้านที่อยู่อาศัยทรุดโทรม สภาพเก่ามาก", "วัสดุก่อสร้างไม่ถาวร ไม่คงทน", "อื่นๆ"],
         colors: ['#7bdcb5', '#d3b3e5', '#ffd54f', '#90a4ae']
     })
@@ -64,8 +76,8 @@ const PieSocial = () => {
         }
     }
     return (
-       <React.Fragment>
-           {
+        <React.Fragment>
+            {
                 isBigScreen ?
                     <Chart
                         options={options}
@@ -95,7 +107,7 @@ const PieSocial = () => {
                             :
                             null
             }
-       </React.Fragment>
+        </React.Fragment>
     )
 }
 export default PieSocial;

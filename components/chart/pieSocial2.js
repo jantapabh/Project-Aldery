@@ -23,11 +23,23 @@ const PieSocial2 = () => {
                 }
             }
         },
+        responsive: [{
+            breakpoint: 992,
+            options: {
+                legend: {
+                    offsetY: 60,
+                    itemMargin: {
+                        horizontal: 1,
+                        vertical: 1
+                    },
+                },
+            },
+        }],
         labels: ["สภาพบ้านเหมาะสม เพียงพอต่อการพักอาศัย", "สภาพบ้านคับเเคบ ไม่เพียงพอต่อการพักอาศัย"],
         colors: ['#7bdcb5', '#d3b3e5', '#ffd54f', '#90a4ae']
     })
 
-    const [series, setSeries] = useState([50,50])
+    const [series, setSeries] = useState([50, 50])
 
     useEffect(() => {
         fetchData()
