@@ -26,7 +26,7 @@ const PieHospital2 = () => {
                 breakpoint: 992,
                 options: {
                     legend: {
-                        offsetY: 80,
+                        offsetY: 100,
                         itemMargin: {
                             horizontal: 1,
                             vertical: 1
