@@ -5,6 +5,7 @@ import { useMediaQuery } from 'react-responsive';
 
 const PieDoc = () => {
 
+  const isBigScreen = useMediaQuery({ minDeviceWidth: 1281 })
   const isMobile = useMediaQuery({ maxWidth: 1280 })
   const isSmallScreen = useMediaQuery({ maxWidth: 576 })
 
@@ -26,11 +27,7 @@ const PieDoc = () => {
       breakpoint: 992,
       options: {
         legend: {
-          offsetY: 150,
-          itemMargin: {
-            horizontal: 1,
-            vertical: 1
-          },
+          offsetY: 120,
         },
       },
     }],
@@ -80,25 +77,25 @@ const PieDoc = () => {
   return (
     <React.Fragment>
       {
-        isMobile ?
-          <Chart
-            options={options}
-            series={series}
-            type="donut"
-            width="400"
-            height="200"
-          />
-          :
-          isSmallScreen ?
+          isMobile ?
             <Chart
               options={options}
               series={series}
               type="donut"
-              width="200"
-              height="100"
+              width="400"
+              height="200"
             />
             :
-            null
+            isSmallScreen ?
+              <Chart
+                options={options}
+                series={series}
+                type="donut"
+                width="200"
+                height="100"
+              />
+              :
+              null
       }
     </React.Fragment>
   )
