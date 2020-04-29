@@ -37,7 +37,6 @@ const Barchart = () => {
     },
     legend: {
       position: 'right',
-      offsetY: 40
     },
     fill: {
       opacity: 1

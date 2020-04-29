@@ -8,6 +8,7 @@ const BarMap = props => {
 
     const isMobile = useMediaQuery({ maxWidth: 575.98 })
     const isSmallScreen = useMediaQuery({ maxWidth: 768 })
+    const isMedium = useMediaQuery({ maxWidth: 992 })
 
     const [options, setOptions] = useState({
         title: {
@@ -119,13 +120,22 @@ const BarMap = props => {
                             width="350"
                         />
                         :
-                        <Chart
-                            options={options}
-                            series={series}
-                            type="bar"
-                            height="400"
-                            width="650"
-                        />
+                        isMedium ?
+                            <Chart
+                                options={options}
+                                series={series}
+                                type="bar"
+                                height="400"
+                                width="500"
+                            />
+                            :
+                            <Chart
+                                options={options}
+                                series={series}
+                                type="bar"
+                                height="400"
+                                width="650"
+                            />
             }
         </React.Fragment>
     )

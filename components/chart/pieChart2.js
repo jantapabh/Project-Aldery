@@ -24,6 +24,18 @@ const PieChart = props => {
         legend: {
             position: 'bottom'
         },
+        responsive: [{
+            breakpoint: 992,
+            options: {
+                legend: {
+                    offsetY: 90,
+                    itemMargin: {
+                        horizontal: 1,
+                        vertical: 1
+                    },
+                },
+            },
+        }],
         labels: ["อายุน้อยกว่า 60 ปี",
             "อายุ 60 ถึง 69 ปี",
             "อายุ 70 ถึง 79 ปี",
