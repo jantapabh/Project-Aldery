@@ -6,6 +6,8 @@ import { useMediaQuery } from 'react-responsive';
 const BarEconomy = () => {
 
     const isSmallScreen = useMediaQuery({ maxWidth: 768 })
+    const isMediumScreen = useMediaQuery({ maxWidth: 992 })
+
 
     const [options, setOptions] = useState({
         title: {
@@ -15,7 +17,7 @@ const BarEconomy = () => {
         chart: {
             type: 'bar',
             stacked: true,
-          },
+        },
         plotOptions: {
             bar: {
                 horizontal: true,
@@ -100,17 +102,26 @@ const BarEconomy = () => {
                         options={options}
                         series={series}
                         type="bar"
-                        height="300"
-                        width="300"
+                        height="400"
+                        width="310"
                     />
                     :
-                    <Chart
-                        options={options}
-                        series={series}
-                        type="bar"
-                        height="350"
-                        width="600"
-                    />
+                    isMediumScreen ?
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="bar"
+                            height="350"
+                            width="500"
+                        />
+                        :
+                        <Chart
+                            options={options}
+                            series={series}
+                            type="bar"
+                            height="350"
+                            width="600"
+                        />
             }
         </React.Fragment>
     )

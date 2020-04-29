@@ -34,8 +34,8 @@ const PieEconomy2 = dynamic(
 const Economy = () => {
 
     const isLaptop = useMediaQuery({ minDeviceWidth: 1224 })
-    const isTablet = useMediaQuery({ minWidth: 768 })
-    const isMobile = useMediaQuery({ maxDeviceWidth: 768 })
+    const isTablet = useMediaQuery({ minWidth: 992 })
+    const isMobile = useMediaQuery({ maxDeviceWidth: 992 })
 
     const [tokenError, setTokenError] = useState(false)
 

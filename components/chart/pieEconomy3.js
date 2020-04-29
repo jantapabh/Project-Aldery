@@ -22,6 +22,18 @@ const PieEconomy3 = () => {
     legend: {
       position: 'bottom'
     },
+    responsive: [{
+      breakpoint: 992,
+      options: {
+        legend: {
+          offsetY: 20,
+          itemMargin: {
+            horizontal: 1,
+            vertical: 1
+          },
+        },
+      },
+    }],
     labels: ["มีการออม", "ไม่มีการออม"],
     colors: ['#00d084', '#eb144c'],
   })
