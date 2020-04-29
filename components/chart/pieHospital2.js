@@ -5,8 +5,6 @@ import { useMediaQuery } from 'react-responsive';
 
 const PieHospital2 = () => {
 
-    const isBigScreen = useMediaQuery({ minDeviceWidth: 1281 })
-    const isMobile = useMediaQuery({ maxWidth: 1280 })
     const isSmallScreen = useMediaQuery({ maxWidth: 576 })
 
     const [options, setOptions] = useState({
@@ -24,6 +22,18 @@ const PieHospital2 = () => {
         },
         colors: ['#2196f3', '#00d084', '#ffc107',
             '#eb144c', '#673ab7', '#ff6900', '#7bdcb5'],
+            responsive: [{
+                breakpoint: 992,
+                options: {
+                    legend: {
+                        offsetY: 80,
+                        itemMargin: {
+                            horizontal: 1,
+                            vertical: 1
+                        },
+                    },
+                },
+            }],
         labels: ["ไม่เป็นผู้พิการ", "ทางการมองเห็น", "ทางการได้ยินหรือสื่อความหมาย", "ทางกายหรือการเคลื่อนไหว", "ทางจิตใจหรือพฤติกรรม", "ทางสติปัญญาหรือการเรียนรู้", "อื่นๆ"]
     })
 

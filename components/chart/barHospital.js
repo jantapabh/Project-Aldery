@@ -3,7 +3,7 @@ import Chart from 'react-apexcharts';
 import Sheetapi from '../../config/api';
 import { useMediaQuery } from 'react-responsive';
 
-const BarHospital = () => {
+const PicHospital3 = () => {
   const isSmallScreen = useMediaQuery({ maxWidth: 768 })
   const [options, setOptions] = useState({
 
@@ -24,7 +24,18 @@ const BarHospital = () => {
     },
     colors: ['#2196f3', '#00d084', '#ffc107',
       '#eb144c', '#673ab7', '#ff6900', '#455a64', '#f44336'],
-
+    responsive: [{
+      breakpoint: 992,
+      options: {
+        legend: {
+          offsetY: 80,
+          itemMargin: {
+            horizontal: 1,
+            vertical: 1
+          },
+        },
+      },
+    }],
     labels: ["โรงพยาบาลส่งเสริมสุขภาพกะทู้", "โรงพยาบาลป่าตอง", "โรงพยาบาลวชิระภูเก็ต", "โรงพยาบาลเอกชน", "คลินิกเอกชน", "ซื้อยาทานเอง", "อื่นๆ", "มากกว่า 1 เเหล่ง"]
   })
 
@@ -87,4 +98,4 @@ const BarHospital = () => {
     </React.Fragment>
   )
 }
-export default BarHospital;
+export default PicHospital3;

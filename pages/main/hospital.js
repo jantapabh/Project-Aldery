@@ -39,8 +39,10 @@ const PieHospital3 = dynamic(
 const Hospital = () => {
 
     const isLaptop = useMediaQuery({ minDeviceWidth: 1224 })
-    const isTablet = useMediaQuery({ minWidth: 768 })
+    const isMedium = useMediaQuery({ maxWidth: 992 })
+    const isTablet = useMediaQuery({ maxWidth: 768 })
     const isMobile = useMediaQuery({ maxDeviceWidth: 768 })
+
 
     const [status, setStatus] = useState(false)
     const [tokenError, setTokenError] = useState(false)
@@ -118,7 +120,7 @@ const Hospital = () => {
 
                                                             </div>
                                                             :
-                                                            isMobile ?
+                                                            isMedium || isMobile ?
                                                                 <div className="info-main">
 
                                                                     <div className="warp-chart-main">

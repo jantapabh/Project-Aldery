@@ -13,7 +13,7 @@ const PieHospital = props => {
         title: { text: "สุขภาพของผู้สูงอายุ" },
         dataLabels: { enabled: false },
         legend: {
-            position: 'bottom'
+            position: 'bottom',
         },
         tooltip: {
             y: {
@@ -22,6 +22,18 @@ const PieHospital = props => {
                 }
             }
         },
+        responsive: [{
+            breakpoint: 992,
+            options: {
+                legend: {
+                    offsetY: 60,
+                    itemMargin: {
+                        horizontal: 1,
+                        vertical: 1
+                    },
+                },
+            },
+        }],
         labels: ["สมบูรณ์เเข็งเเรง", "ดูเเลช่วยเหลือตนเองได้", "ต้องได้รับการช่วยเหลือบ้าง", "ช่วยเหลือตนเองไม่ได้"]
     })
 
