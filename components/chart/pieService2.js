@@ -21,6 +21,18 @@ const PieService2 = () => {
                 }
             }
         },
+        responsive: [{
+            breakpoint: 992,
+            options: {
+                legend: {
+                    offsetY: 20,
+                    itemMargin: {
+                        horizontal: 1,
+                        vertical: 1
+                    },
+                },
+            },
+        }],
         colors: ['#8ed1fc', '#7bdcb5', '#d3b3e5'],
         labels: ["เข้าร่วมประจำ", "เข้าร่วมนานๆ ครั้ง", "ไม่เข้าร่วม"]
     })

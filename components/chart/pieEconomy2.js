@@ -26,7 +26,7 @@ const PieEconomy2 = props => {
       breakpoint: 992,
       options: {
         legend: {
-          offsetY: 20,
+          offsetY: 50,
           itemMargin: {
             horizontal: 1,
             vertical: 1

@@ -6,6 +6,8 @@ import { useMediaQuery } from 'react-responsive';
 const LineHelp = () => {
 
   const isSmallScreen = useMediaQuery({ maxWidth: 768 })
+  const isMediumScreen = useMediaQuery({ maxWidth: 992 })
+
 
   const [options, setOptions] = useState({
     title: {
@@ -110,13 +112,22 @@ const LineHelp = () => {
             width="300"
           />
           :
-          <Chart
-            options={options}
-            series={series}
-            type="bar"
-            height="400"
-            width="600"
-          />
+          isMediumScreen ?
+            <Chart
+              options={options}
+              series={series}
+              type="bar"
+              height="400"
+              width="450"
+            />
+            :
+            <Chart
+              options={options}
+              series={series}
+              type="bar"
+              height="400"
+              width="600"
+            />
       }
     </React.Fragment >
   )

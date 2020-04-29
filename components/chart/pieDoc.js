@@ -5,7 +5,6 @@ import { useMediaQuery } from 'react-responsive';
 
 const PieDoc = () => {
 
-  const isBigScreen = useMediaQuery({ minDeviceWidth: 1281 })
   const isMobile = useMediaQuery({ maxWidth: 1280 })
   const isSmallScreen = useMediaQuery({ maxWidth: 576 })
 
@@ -23,6 +22,18 @@ const PieDoc = () => {
     legend: {
       position: 'bottom'
     },
+    responsive: [{
+      breakpoint: 992,
+      options: {
+        legend: {
+          offsetY: 150,
+          itemMargin: {
+            horizontal: 1,
+            vertical: 1
+          },
+        },
+      },
+    }],
     labels: ["ไม่ได้รับสวัสดิการจากรัฐ", "อยู่ระหว่างลงทะเบียนรับเงินสงเคราะห์เบี้ยยังชีพ", "ได้รับเบี้ยยังชีพผู้สูงอายุ", "ได้รับเบี้ยยังชีพความพิการ", "ได้รับเบี้ยยังชีพผูู้ป่วย", "มีบัตรสวัสดิการเเห่งรัฐ", "มีบัตรประกันสังคม", "มากกว่าจาก 1 เเหล่ง", "อื่นๆ"],
 
     colors: ['#2196f3', '#00d084', '#ffc107',
@@ -69,25 +80,25 @@ const PieDoc = () => {
   return (
     <React.Fragment>
       {
-          isMobile ?
+        isMobile ?
+          <Chart
+            options={options}
+            series={series}
+            type="donut"
+            width="400"
+            height="200"
+          />
+          :
+          isSmallScreen ?
             <Chart
               options={options}
               series={series}
               type="donut"
-              width="400"
-              height="200"
+              width="200"
+              height="100"
             />
             :
-            isSmallScreen ?
-              <Chart
-                options={options}
-                series={series}
-                type="donut"
-                width="200"
-                height="100"
-              />
-              :
-              null
+            null
       }
     </React.Fragment>
   )

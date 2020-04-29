@@ -21,11 +21,23 @@ const PieService = () => {
                 }
             }
         },
+        responsive: [{
+            breakpoint: 992,
+            options: {
+                legend: {
+                    offsetY: 20,
+                    itemMargin: {
+                        horizontal: 1,
+                        vertical: 1
+                    },
+                },
+            },
+        }],
         colors: ['#ff8a65', '#ffd54f', '#90a4ae'],
-        labels:  ["เข้าร่วมประจำ", "เข้าร่วมนานๆ ครั้ง", "ไม่เข้าร่วม"]
+        labels: ["เข้าร่วมประจำ", "เข้าร่วมนานๆ ครั้ง", "ไม่เข้าร่วม"]
     })
 
-    const [series, setSeries] = useState([25,25,50])
+    const [series, setSeries] = useState([25, 25, 50])
 
     useEffect(() => {
         fetchData()

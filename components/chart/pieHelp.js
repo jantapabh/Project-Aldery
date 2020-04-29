@@ -22,6 +22,18 @@ const PieHelp = props => {
         }
       }
     },
+    responsive: [{
+      breakpoint: 992,
+      options: {
+        legend: {
+          offsetY: 80,
+          itemMargin: {
+            horizontal: 1,
+            vertical: 1
+          },
+        },
+      },
+    }],
     colors: ['#2196f3', '#00d084', '#ffc107',
       '#eb144c', '#673ab7', '#abb8c3',
       '#f78da7', '#ff6900', '#7bdcb5'],
