@@ -98,7 +98,7 @@ class Map extends Component {
     loadPaths() {
         get("/static/mapjson/phuket.json")
             .then(res => {
-                if (res.status !== 200) return
+                if (res.status != 200) return
                 const world = res.data
                 const geographyPaths = feature(
                     world,
