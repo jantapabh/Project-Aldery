@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import axios from 'axios'
 import {
     ComposableMap,
     ZoomableGroup,
@@ -72,7 +73,7 @@ class Map extends Component {
 
 
         }
-        // this.loadPaths = this.loadPaths.bind(this)
+        this.loadPaths = this.loadPaths.bind(this)
         this.handleZoomIn = this.handleZoomIn.bind(this)
         this.handleZoomOut = this.handleZoomOut.bind(this)
         this.handleReset = this.handleReset.bind(this)
@@ -80,7 +81,7 @@ class Map extends Component {
 
     async componentDidMount() {
         this.loadPaths()
-        let userOauth = JSON.parse(localStorage.getItem("myOauth"))
+        let userOauth = await JSON.parse(localStorage.getItem("myOauth"))
         this.listName(userOauth.data.access_token, 'แผนที่!B5:E21')
 
     }
@@ -92,15 +93,15 @@ class Map extends Component {
                 dataList: this.list,
                 status: true
             })
-
         } catch (err) {
         }
     }
 
-    loadPaths() {
-        get("/static/mapjson/phuket.json")
-            .then(res => {
-                if (res.status !== 200) return
+    async loadPaths() {
+        try {
+            const res = await axios.get("/static/mapjson/phuket.json")
+
+            if (res.status == 200) {
                 const world = res.data
                 const geographyPaths = feature(
                     world,
@@ -109,7 +110,11 @@ class Map extends Component {
                 this.setState({ geographyPaths }, () => {
                     ReactTooltip.rebuild()
                 })
-            })
+            }
+        } catch (err) {
+            console.log(err);
+        }
+
     }
     handleZoomIn() {
         this.setState({
