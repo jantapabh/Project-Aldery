@@ -148,20 +148,17 @@ class Map extends Component {
 
     async componentDidMount() {
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
-        this.access_token = `${userOauth != null ? userOauth.data.access_token : ""}`
-        this.listName('แผนที่!B5:E21')
+        const access_token = `${userOauth != null ? userOauth.data.access_token : ""}`
+        this.listName(access_token,'แผนที่!B5:E21')
         this.loadPaths()
     }
 
-    listName = async (v) => {
+    listName = async (token,v) => {
         try {
-
-            this.list = await Sheetapi.getSheet(this.access_token, v)
+            this.list = await Sheetapi.getSheet(token, v)
             this.setState({ dataList: this.list })
-            this.props.onToken(false)
 
         } catch (err) {
-            this.props.onToken(true)
         }
     }
 
