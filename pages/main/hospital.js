@@ -68,7 +68,6 @@ const Hospital = () => {
                                 {
                                     !tokenError ?
                                         <React.Fragment>
-                                            {/* <Dashboard onStatusMain={statusMain} statusMain={status} /> */}
                                             <div className="page-content-main">
                                                 <div className="container-fluid-main">
                                                     <h1 className="text-center">ข้อมูลด้านสุขภาพ</h1>

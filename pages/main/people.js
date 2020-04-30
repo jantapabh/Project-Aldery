@@ -33,10 +33,6 @@ const People = () => {
     const isTablet = useMediaQuery({ minWidth: 768 })
     const isMobile = useMediaQuery({ maxDeviceWidth: 768 })
 
-        ;
-
-    const [status, setStatus] = useState(false)
-    const [userOauth, setUserOauth] = useState()
     const [tokenError, setTokenError] = useState(false)
 
     const statusToken = (token) => {
