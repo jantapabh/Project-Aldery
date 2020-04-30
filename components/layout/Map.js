@@ -28,6 +28,19 @@ const colorScale = scaleLinear()
         "#79d27d"
     ])
 
+const SpinnerPage = () => {
+    return (
+        <React.Fragment>
+            <div>
+                <Typed
+                    strings={['กรุณรอสักครู่...', 'กำลังดาวน์โหลด...']}
+                    typeSpeed={45}
+                />
+            </div>
+        </React.Fragment>
+    );
+}
+
 class Map extends Component {
     constructor() {
         super()
@@ -116,9 +129,10 @@ class Map extends Component {
     render() {
 
         const { dataList } = this.state
-        // if (dataList.length === 0) {
-        //     return SpinnerPage()
-        // }
+
+        if (dataList.length === 0) {
+            return SpinnerPage()
+        }
 
         return (
             <React.Fragment >

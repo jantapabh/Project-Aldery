@@ -11,11 +11,10 @@
     transition: all 0.5s;
 
     @media (max-width: 768px) {
-     padding-top: 1rem;
+      padding-top: 1rem;
     }
 
     .container-fluid-main {
-      
       @media (max-width: 1224px) {
         margin-left: 0 !important;
         margin-left: 1rem !important;
@@ -33,7 +32,7 @@
 
       .info-main {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         margin-top: 2rem !important;
         margin: 1rem;
 
@@ -48,7 +47,7 @@
             margin-bottom: 2rem;
           }
 
-          .chart-col{
+          .chart-col {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -60,11 +59,11 @@
   }
 }
 
-.ant-progress-outer{
+.ant-progress-outer {
   padding: 0 0.5rem !important;
 }
 
-.ant-progress-text{
+.ant-progress-text {
   display: none !important;
 }
 
