@@ -148,8 +148,7 @@ class Map extends Component {
 
     async componentDidMount() {
         let userOauth = JSON.parse(localStorage.getItem("myOauth"))
-        const access_token = `${userOauth != null ? userOauth.data.access_token : ""}`
-        this.listName(access_token,'แผนที่!B5:E21')
+        this.listName(userOauth.data.access_token,'แผนที่!B5:E21')
         this.loadPaths()
     }
 
