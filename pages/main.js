@@ -23,8 +23,9 @@ const MainPage = () => {
                                             <div className="content-main-left">
                                                 <img src="../static/img-main.png" alt="img-main" />
                                             </div>
-                                            <div className="content-main-left">
-                                            </div>
+                                            {/* <div className="content-main-right">
+
+                                            </div> */}
                                         </div>
 
                                     </div>

@@ -69,20 +69,20 @@
         .content-main-left {
           display: flex;
           justify-content: center;
-          width: 50%;
+          width: 100%;
           img {
             width: 15rem;
             height: 15rem;
             @media (max-width: 575.98px) {
-              width: 12rem;
-              height: 12rem;
+              width: 10rem;
+              height: 10rem;
             }
           }
         }
 
         .content-main-right {
           display: flex;
-          justify-content: center;
+          justify-content: flex-start;
           width: 50%;
         }
       }
