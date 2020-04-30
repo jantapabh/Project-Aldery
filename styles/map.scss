@@ -36,3 +36,15 @@
   width: 400px;
   height: 500px;
 }
+
+
+.__react_component_tooltip.type-dark.place-top:after {
+  border-top-color: white !important;
+  border-top-style: solid !important;
+  border-top-width: 6px !important;
+}
+
+.__react_component_tooltip.type-dark {
+  color: black !important;
+  background-color: white !important;
+}

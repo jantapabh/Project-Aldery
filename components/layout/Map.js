@@ -30,13 +30,83 @@ const colorScale = scaleLinear()
 
 const SpinnerPage = () => {
     return (
-        <React.Fragment>
-            <div>
-                <Typed
-                    strings={['กรุณรอสักครู่...', 'กำลังดาวน์โหลด...']}
-                    typeSpeed={45}
-                />
-            </div>
+        <React.Fragment >
+            <Motion style={wrapperStyles}
+                defaultStyle={{
+                    zoom: 1,
+                    x: 100,
+                    y: 14,
+                }}
+                style={{
+                    zoom: spring(this.state.zoom, { stiffness: 100, damping: 14 }),
+                    x: spring(this.state.center[0], { stiffness: 100, damping: 14 }),
+                    y: spring(this.state.center[1], { stiffness: 100, damping: 14 }),
+                }}
+            >
+                {({ zoom, x, y }) => (
+                    <ComposableMap
+                        projectionConfig={{
+                            scale: 3500,
+                        }}
+                        width={980}
+                        height={1050}
+                    >
+                        <ZoomableGroup center={[x, y]} zoom={zoom}>
+                            <Geographies geography={this.state.geographyPaths} disableOptimization>
+                                {(geographies, projection) =>
+                                    geographies.map((geography, i) => {
+                                        const statePopulation = dataList.find(s =>
+                                            s[0] === geography.properties.NAME_3
+
+                                        ) || {}
+
+                                        return (
+                                            <Geography
+                                                key={`state-${geography.properties.ID_1}`}
+                                                cacheId={`state-${geography.properties.ID_1}`}
+                                                round
+                                                data-html="true"
+                                                data-tip={statePopulation[3]}
+                                                geography={geography}
+                                                projection={projection}
+                                                style={{
+                                                    default: {
+                                                        fill: colorScale(+statePopulation[2]),
+                                                        stroke: "#40bf45",
+                                                        strokeWidth: 0.075,
+                                                        outline: "none",
+                                                    },
+                                                    hover: {
+                                                        fill: "#40bf45",
+                                                        stroke: "#40bf45",
+                                                        strokeWidth: 0.075,
+                                                        outline: "none",
+                                                    },
+                                                    pressed: {
+                                                        fill: "#c4def6",
+                                                        stroke: "#40bf45",
+                                                        strokeWidth: 0.075,
+                                                        outline: "none",
+                                                    },
+                                                }}
+                                            />
+                                        )
+                                    }
+                                    )}
+                            </Geographies>
+                            <Annotation
+                                dx={280}
+                                dy={440}
+                                subject={[98, 7.93]}
+                                strokeWidth={0}
+                            >
+                            </Annotation>
+                        </ZoomableGroup>
+                    </ComposableMap>
+                )}
+            </Motion>
+            <ReactTooltip />
+
         </React.Fragment>
     );
 }
@@ -154,7 +224,7 @@ class Map extends Component {
                                 scale: 3500,
                             }}
                             width={980}
-                            height={1045}
+                            height={1050}
                         >
                             <ZoomableGroup center={[x, y]} zoom={zoom}>
                                 <Geographies geography={this.state.geographyPaths} disableOptimization>
