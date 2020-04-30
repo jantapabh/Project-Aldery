@@ -147,12 +147,13 @@ class Map extends Component {
     }
 
     async componentDidMount() {
-        let userOauth = JSON.parse(localStorage.getItem("myOauth"))
-        this.listName(userOauth.data.access_token,'แผนที่!B5:E21')
         this.loadPaths()
+        let userOauth = JSON.parse(localStorage.getItem("myOauth"))
+        this.listName(userOauth.data.access_token, 'แผนที่!B5:E21')
+
     }
 
-    listName = async (token,v) => {
+    listName = async (token, v) => {
         try {
             this.list = await Sheetapi.getSheet(token, v)
             this.setState({ dataList: this.list })
@@ -173,7 +174,6 @@ class Map extends Component {
                 this.setState({ geographyPaths }, () => {
                     ReactTooltip.rebuild()
                 })
-
             })
     }
     handleZoomIn() {
