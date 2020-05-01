@@ -107,6 +107,9 @@ const Agency = () => {
                                     ))
                                 }
                             </div>
+                            <div className="footer-agency">
+                                <p>ขอบคุณข้อมูลจาก : กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์</p>
+                            </div>
                         </React.Fragment>
 
             }

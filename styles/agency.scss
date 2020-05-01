@@ -121,4 +121,15 @@ $font-color-text-in-border: white !important;
   .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after {
     background-color: $primary-color;
   }
+
+  .footer-agency {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    p {
+      font-size: 0.9rem !important;
+      color: rgb(151, 139, 171) !important;
+    }
+  }
 }
