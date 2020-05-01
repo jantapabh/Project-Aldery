@@ -78,7 +78,7 @@ const Agency = () => {
                                         ))
                                     }
                                 </Steps>
-                                <img src="/static/agency.jpg" alt="img-agency" />
+                                <img src="/static/agency.png" alt="img-agency" />
                             </div>
                         </React.Fragment>
                         :
