@@ -34,7 +34,7 @@ const SpinnerPage = () => {
         <React.Fragment>
             <div>
                 <Typed
-                    strings={['กรุณรอสักครู่...', 'กำลังดาวน์โหลด...']}
+                    strings={['กรุณารอสักครู่...', 'กำลังดาวน์โหลดแผนที่จังหวัดภูเก็ต...']}
                     typeSpeed={45}
                 />
             </div>
