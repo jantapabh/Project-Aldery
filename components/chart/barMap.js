@@ -12,7 +12,7 @@ const BarMap = props => {
 
     const [options, setOptions] = useState({
         title: {
-            text: 'สถานภาพของผู้สูงอายุ',
+            text: 'จำนวนประชากรผู้สูงอายุภายในจังหวัดภูเก็ต',
             align: 'left'
         },
         chart: {
