@@ -6,13 +6,14 @@ import { useMediaQuery } from 'react-responsive';
 
 const BarMap = props => {
 
-    const isMobile = useMediaQuery({ maxWidth: 575.98 })
+    const isSmallMobile = useMediaQuery({ maxWidth: 320 })
+    const isMobile = useMediaQuery({ minWidth: 320 })
     const isSmallScreen = useMediaQuery({ maxWidth: 768 })
     const isMedium = useMediaQuery({ maxWidth: 992 })
 
     const [options, setOptions] = useState({
         title: {
-            text: 'จำนวนประชากรผู้สูงอายุภายในจังหวัดภูเก็ต',
+            text: 'จำนวนประชากรผู้สูงอายุ',
             align: 'left'
         },
         chart: {
@@ -29,15 +30,12 @@ const BarMap = props => {
                 horizontal: false,
             },
         },
-        legend: {
-            position: 'right',
-            offsetY: 40
-        },
         fill: {
             opacity: 1,
             colors: ['#00d084']
         },
         tooltip: {
+            fillSeriesColor: false,
             y: {
                 formatter: function (val) {
                     return val + " คน"
@@ -45,12 +43,27 @@ const BarMap = props => {
             }
         },
         dataLabels: {
-            enabled: false
+            enabled: false,
+        },
+        labels: {
+            trim: true,
+
         },
         xaxis: {
             categories: ["กมลา", "กะทู้", "ป่าตอง", "ฉลอง", "กะรน", "เกาะแก้ว", "รัษฎา", "ราไวย์", "ตลาดเหนือ", "ตลาดใหญ่", "วิชิต", "เชิงทะเล", "ไม้ขาว", "ป่าคลอก", "สาคู", "ศรีสุนทร", "เทพกระษัตรี"],
+            labels: {
+                rotate: -45,
+                hideOverlappingLabels: true,
+                trim: true,
+                minHeight: 100
+            },
+
+
         },
+        colors: ['#00d084']
     })
+
+
     const [series, setSeries] = useState([{ name: "จำนวน", data: [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100] }])
 
     useEffect(() => {
@@ -102,16 +115,16 @@ const BarMap = props => {
     return (
         <React.Fragment>
             {
-                isMobile ?
+                isSmallMobile ?
                     <Chart
                         options={options}
                         series={series}
                         type="bar"
                         height="300"
-                        width="300"
+                        width="310"
                     />
                     :
-                    isSmallScreen ?
+                    isMobile ?
                         <Chart
                             options={options}
                             series={series}
@@ -120,22 +133,31 @@ const BarMap = props => {
                             width="350"
                         />
                         :
-                        isMedium ?
+                        isSmallScreen ?
                             <Chart
                                 options={options}
                                 series={series}
                                 type="bar"
-                                height="400"
+                                height="300"
                                 width="500"
                             />
                             :
-                            <Chart
-                                options={options}
-                                series={series}
-                                type="bar"
-                                height="400"
-                                width="650"
-                            />
+                            isMedium ?
+                                <Chart
+                                    options={options}
+                                    series={series}
+                                    type="bar"
+                                    height="400"
+                                    width="500"
+                                />
+                                :
+                                <Chart
+                                    options={options}
+                                    series={series}
+                                    type="bar"
+                                    height="400"
+                                    width="650"
+                                />
             }
         </React.Fragment>
     )

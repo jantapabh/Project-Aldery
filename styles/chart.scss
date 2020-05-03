@@ -10,9 +10,11 @@
 
 .apexcharts-xaxis-texts-g {
   text {
-    font-size: 1rem;
+    font-size: 0.5rem;
     tspan {
+      margin: 0 1rem !important;
       font-family: "Prompt", sans-serif !important ;
+
     }
   }
 }
@@ -41,3 +43,4 @@ path {
 .apexcharts-xaxistooltip-text {
   font-family: "Prompt", sans-serif !important ;
 }
+

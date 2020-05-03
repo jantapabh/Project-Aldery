@@ -28,7 +28,7 @@ const PieChart = props => {
             breakpoint: 992,
             options: {
                 legend: {
-                    offsetY: 90,
+                    offsetY: 50,
                     itemMargin: {
                         horizontal: 1,
                         vertical: 1
