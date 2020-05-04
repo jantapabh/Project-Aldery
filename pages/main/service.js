@@ -65,8 +65,8 @@ const Service = () => {
                                         <React.Fragment>
                                             <div className="page-content-main">
                                                 <div className="container-fluid-main">
-                                                    <h1 className="text-center">หน่วยงานภาครัฐ</h1>
-                                                    <h2 className="small text-center">สวัสดิการ การเข้าร่วมกิจกรรม และการช่วยเหลือ</h2>
+                                                    <h1 className="text-center">ข้อมูลด้านการช่วยเหลือ</h1>
+                                                    <h2 className="small text-center">สภาพความเดือนร้อน สวัสดิการ การเข้าร่วมกิจกรรม และการช่วยเหลือจากหน่วยงานภาครัฐ</h2>
                                                     {
                                                         isLaptop ?
                                                             <div className="info-main">
