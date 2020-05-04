@@ -8,8 +8,8 @@ const About = () => {
     const [data, setData] = useState([
 
         {
-            title: "แบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ",
-            text: "",
+            title: "ข้อมูลจากแบบสำรวจข้อมูลพื้นฐานผู้สูงอายุ ของทางเทศบาลเมืองกะทู้",
+            text: "ประกอบไปด้วย",
             subtext: ""
         },
         {
@@ -37,6 +37,7 @@ const About = () => {
     const [header, setHeader] = useState("Elderly DB")
     const [subHead, setSubHead] = useState("เว็บฐานข้อมูลผู้สูงอายุ ภายในอำเภอกะทู้ จังหวัดภูเก็ต")
     const [summary, setSummary] = useState("เว็บไซต์ฐานข้อมูลผู้สูงอายุ เป็นการนำข้อมูลทางสถิติเกี่ยวกับผู้สูงอายุมาเเสดงผลในรูปของกราฟรูปแบบต่าง ๆ")
+    const [summary2, setSummary2] = useState("เพื่อให้หน่วยงานของภาครัฐ หรือหน่วยงานที่เกี่ยวข้องสามารถเข้าถึงข้อมูลได้ง่าย และสามารถเตรียมรับมือกับปัญหาสังคมผู้สูงอายุที่อาจเกิดขึ้นในอนาคตได้ ")
 
     const [status, setStatus] = useState(false)
 
@@ -79,6 +80,10 @@ const About = () => {
                                             <div className="head-content">
                                                 <h4>{header}</h4>
                                                 <h5>{subHead}</h5>
+                                                <div className="title-about">
+                                                    <h6 className="">{summary}</h6>
+                                                    <h6 className="">{summary2}</h6>
+                                                </div>
                                             </div>
 
                                             <div className="detail-content">
@@ -103,6 +108,7 @@ const About = () => {
                                                 <h4 className="">{subHead}</h4>
                                                 <div className="title-about">
                                                     <h6 className="">{summary}</h6>
+                                                    <h6 className="">{summary2}</h6>
                                                 </div>
                                             </div>
 
@@ -112,9 +118,22 @@ const About = () => {
                                                     {
                                                         data.map((item, index) => (
                                                             <div className="title-content " key={index}>
-                                                                <h6 className="header-title-content">{item.title}</h6>
-                                                                <h6 className="sub-title-content">{item.text}</h6>
-                                                                <h6 className="sub-title-content">{item.subtext}</h6>
+                                                                {
+                                                                    index == 0 ?
+                                                                        <React.Fragment>
+                                                                            <div className="mix-header">
+                                                                                <h6 className="header-title-content">{item.title}</h6>
+                                                                                <h6 className="header-mg">{item.text}</h6>
+                                                                            </div>
+
+                                                                        </React.Fragment>
+                                                                        :
+                                                                        <React.Fragment>
+                                                                            <h6 className="header-title-content">{item.title}</h6>
+                                                                            <h6 className="sub-title-content">{item.text}</h6>
+                                                                            <h6 className="sub-title-content">{item.subtext}</h6>
+                                                                        </React.Fragment>
+                                                                }
                                                             </div>
                                                         ))
                                                     }

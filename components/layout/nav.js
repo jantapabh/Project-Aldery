@@ -98,14 +98,17 @@ const NavBar = props => {
                                                 return (
                                                     <a key={index} href={item.href}>
                                                         {
-                                                            item.name == "เข้าสู่หน้าหลัก" ?
-                                                                <p className="li-buttom-line-active">{item.name}</p>
+                                                            item.name == "ติดต่อ" ?
+                                                                <p className="li-buttom-line">{item.name}</p>
                                                                 :
-                                                                <React.Fragment>
-                                                                    <button className="btn">
-                                                                        <p>{item.name}</p>
-                                                                    </button>
-                                                                </React.Fragment>
+                                                                item.name == "เข้าสู่หน้าหลัก" ?
+                                                                    <p className="li-buttom-line-active">{item.name}</p>
+                                                                    :
+                                                                    <React.Fragment>
+                                                                        <button className="btn">
+                                                                            <p>{item.name}</p>
+                                                                        </button>
+                                                                    </React.Fragment>
                                                         }
                                                     </a>
                                                 )

@@ -35,14 +35,7 @@ const Society = () => {
         [
             { name: "เกี่ยวกับเรา", href: "/index/about" },
             { name: "เบี้ยยังชีพ", href: "/index/allowance" },
-            { name: "เข้าสู่หน้าหลัก", href: "/main" }
-        ]
-    )
-
-    const [homeMin, setHomeMin] = useState(
-        [
-            { name: "เกี่ยวกับเรา", href: "/index/about" },
-            { name: "เบี้ยยังชีพ", href: "/index/allowance" },
+            { name: "ติดต่อ", href: "/index/contact" },
             { name: "เข้าสู่หน้าหลัก", href: "/main" },
         ]
     )
@@ -61,7 +54,7 @@ const Society = () => {
                             <title>Eldery DB</title>
                             <link rel='icon' href='/static/logomain.svg' />
                         </Head>
-                        <NavBar name="other" tab={isSmallScreen ? homeMin : home} confirm={onConfirm} />
+                        <NavBar name="other" tab={home} confirm={onConfirm} />
                         <div className="warp-society-page">
                             <div className="page-content">
                                 {

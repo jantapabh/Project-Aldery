@@ -4,9 +4,9 @@ $font-text-sub: #978bab !important;
 .warp-about {
   .page-content {
     padding-top: 3rem;
-    
+
     @media (max-width: 575.98px) {
-     padding-top: 1rem;
+      padding-top: 1rem;
     }
 
     .container-fluid {
@@ -128,7 +128,6 @@ $font-text-sub: #978bab !important;
   .page-content {
     padding-top: 3rem;
 
-
     .container-fluid {
       display: flex;
       flex-direction: column;
@@ -145,6 +144,7 @@ $font-text-sub: #978bab !important;
             margin-top: 0.5rem;
             color: $font-text-sub;
             font-style: italic;
+            margin-bottom: 0 !important;
           }
         }
       }
@@ -181,6 +181,13 @@ $font-text-sub: #978bab !important;
 
             @media (max-width: 768px) {
               padding: 0;
+            }
+
+            .mix-header{
+              display: flex;
+              .header-mg{
+                margin-left: 0.5rem;
+              }
             }
 
             .header-title-content {
