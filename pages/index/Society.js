@@ -7,28 +7,31 @@ const Society = () => {
     const isSmallScreen = useMediaQuery({ maxDeviceWidth: 575.98 })
     const [data, setData] = useState([
         {
-            title: "ศูนย์การเรียนรู้สำหรับผู้สูงอายุ",
-            amount: "มีทั้งหมด 14 เเห่ง",
-            text: "การเรียนรู้ เพื่อการพัฒนาศักยภาพผู้สูงอายุ",
-            subtext: "ไม่ว่าจะเป็นตัวผู้สูงอายุเอง หรือผู้ที่อาศัยอยู่กับผู้สูงอายุ"
-        },
-        {
-            title: "สถานพยาบาล",
-            amount: "มีทั้งหมด 7 เเห่ง",
-            text: "โดยเป็นสถานพยาบาลที่มีช่องทางพิเศษบริการผู้สูงอายุ",
-            subtext: "ทำให้สามารถเข้าถึงการบริการสุขภาพได้สะดวก รวดเร็ว"
-        },
-        {
-            title: "กิจกรรมสำหรับผู้สูงอายุในด้านต่างๆ",
+            title: "รายได้ของผู้สูงอายุ",
             amount: "",
-            text: "เช่น ด้านฝึกอาชีพ สุขภาพ นันทนาการ เป็นต้น",
-            subtext: ""
+            text: "ในปี 2560 มีผู้สูงอายุมากถึง 1 ใน 3 ของผู้สูงอายุทั้งหมด ",
+            subtext: "ที่มีรายได้ต่ำกว่าเส้นความยากจน 34.30% ซึ่งเท่ากับ",
+            subtext2: "การมีรายได้ 2,667 บาท/เดือน หรือ 32,004 บาท/ปี"
+        },
+        {
+            title: "การอยู่เพียงลำพังของผู้สูงอายุ",
+            amount: "มีสัดส่วนมากถึง 10%",
+            text: "อาจประสบปัญหาด้านสุขภาพตามอายุ หรืออาจเจ็บป่วยด้วยโรคเรื้อรัง",
+            subtext: "นอกจากนี้ยังมีปัญหาด้านสภาพแวดล้อมที่อยู่อาศัย  ",
+            subtext2: "ที่ผู้สูงอายุอาจประสบอุบัติเหตุจนได้รับบาดเจ็บได้",
+            subtext3: "เช่น การหกล้ม การลื่นทั้งภายในบ้าน และภายนอกบ้านตัวเอง"
+        },
+        {
+            title: "ผู้สูงอายุในยุค Thailand 4.0 และ 5.0",
+            amount: "",
+            text: "รู้ เท่าทัน เข้าถึง เทคโนโลยี",
+            subtext: "สามารถใช้เทคโนโลยีเพื่อสร้างรายได้ และอำนวยความสะดวก",
+            subtext2: "ในการดำรงชีวิตให้กับตนเอง และครอบครัวได้"
         },
     ])
 
-    const [header, setHeader] = useState("การจัดการเกี่ยวกับสังคมผู้สูงอายุ")
-    const [subHead, setSubHead] = useState("ภายในอำเภอกะทู้ จังหวัดภูเก็ต")
-
+    const [header, setHeader] = useState("การรับมือสังคมสูงวัย")
+    const [subHead, setSubHead] = useState("การเตรียมความพร้อมเพื่อเตรียมรับมือเข้าสู๋ยุคสังคมผู้สูงอายุเป็นสิ่งสำคัญ สำหรับคนทุกช่วงวัย")
     const [status, setStatus] = useState(false)
 
     const [home, setHome] = useState(
@@ -62,7 +65,9 @@ const Society = () => {
                                         <div className="container-fluid">
                                             <div className="head-content">
                                                 <h4>{header}</h4>
-                                                <h5>{subHead}</h5>
+                                            </div>
+                                            <div className="title-society">
+                                                <h6 className="">{subHead}</h6>
                                             </div>
 
                                             <div className="detail-content">
@@ -77,6 +82,8 @@ const Society = () => {
                                                                 <h5>{item.amount}</h5>
                                                                 <h6>{item.text}</h6>
                                                                 <h6>{item.subtext}</h6>
+                                                                <h6>{item.subtext2}</h6>
+                                                                <h6>{item.subtext3}</h6>
                                                             </div>
                                                         ))
                                                     }
@@ -87,7 +94,9 @@ const Society = () => {
                                         <div className="container-fluid">
                                             <div className="head-content">
                                                 <h3>{header}</h3>
-                                                <h3>{subHead}</h3>
+                                            </div>
+                                            <div className="title-society">
+                                                <h6 className="">{subHead}</h6>
                                             </div>
 
                                             <div className="detail-content">
@@ -102,6 +111,8 @@ const Society = () => {
                                                                 </div>
                                                                 <h6>{item.text}</h6>
                                                                 <h6>{item.subtext}</h6>
+                                                                <h6>{item.subtext2}</h6>
+                                                                <h6>{item.subtext3}</h6>
                                                             </div>
                                                         ))
                                                     }
