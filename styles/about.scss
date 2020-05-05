@@ -152,7 +152,7 @@ $font-text-sub: #978bab !important;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 4rem 3rem;
+        margin: 4rem 3rem 0 3rem;
 
         @media (max-width: 575.98px) {
           flex-direction: column;
