@@ -18,7 +18,7 @@ const Cover = () => {
                                 <div className="detail">
                                     <div className="text-content">
                                         <h6>ElderlyDB เป็นการนำข้อมูลทางสถิติเกี่ยวกับผู้สูงอายุ</h6>
-                                        <h6>มาเเสดงผลในรูปของกราฟ</h6>
+                                        <h6>มาเเสดงผลในรูปของอินโฟกราฟฟิก</h6>
                                         <h6>รูปแบบต่าง ๆ</h6>
                                     </div>
                                 </div>
@@ -38,8 +38,8 @@ const Cover = () => {
                                     </svg>
                                     <div className="text-content">
                                         <h6 className="animated fadeInDown delay-1s">ElderlyDB เป็นการนำข้อมูลทางสถิติเกี่ยวกับผู้สูงอายุ</h6>
-                                        <h6 className="animated fadeInDown delay-1s">มาเเสดงผลในรูปเเบบของกราฟ</h6>
-                                        <h6 className="animated fadeInDown delay-1s">ในรูปแบบต่าง ๆ  </h6>
+                                        <h6 className="animated fadeInDown delay-1s">มาเเสดงผลในรูปของอินโฟกราฟฟิก</h6>
+                                        <h6 className="animated fadeInDown delay-1s">รูปแบบต่าง ๆ  </h6>
                                     </div>
                                 </div>
 
