@@ -30,7 +30,7 @@ const Cover = () => {
                         :
                         <div className="container-fluid">
                             <div className="title">
-                                <h1 className="animated fadeInDown delay-s">ระบบฐานข้อมูลผู้สูงอายุ</h1>
+                                <h1 className="animated fadeInDown delay-s">เว็บฐานข้อมูลผู้สูงอายุ</h1>
                                 <h1 className="animated fadeInDown delay-s">และอินโฟกราฟิก</h1>
                                 <div className="detail">
                                     <svg className="animated zoomIn delay-1s" >
