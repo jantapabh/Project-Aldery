@@ -6,10 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 
 const BarMap = props => {
 
-    const isSmallMobile = useMediaQuery({ maxWidth: 320 })
-    const isMobile = useMediaQuery({ minWidth: 320 })
     const isSmallScreen = useMediaQuery({ maxWidth: 768 })
-    const isMedium = useMediaQuery({ maxWidth: 992 })
 
     const [options, setOptions] = useState({
         title: {
@@ -35,7 +32,6 @@ const BarMap = props => {
             colors: ['#00d084']
         },
         tooltip: {
-            fillSeriesColor: false,
             y: {
                 formatter: function (val) {
                     return val + " คน"
@@ -45,24 +41,15 @@ const BarMap = props => {
         dataLabels: {
             enabled: false,
         },
-        labels: {
-            trim: true,
-
+        legend: {
+            position: 'bottom',
+            offsetY: 5
         },
         xaxis: {
             categories: ["กมลา", "กะทู้", "ป่าตอง", "ฉลอง", "กะรน", "เกาะแก้ว", "รัษฎา", "ราไวย์", "ตลาดเหนือ", "ตลาดใหญ่", "วิชิต", "เชิงทะเล", "ไม้ขาว", "ป่าคลอก", "สาคู", "ศรีสุนทร", "เทพกระษัตรี"],
-            labels: {
-                rotate: -45,
-                hideOverlappingLabels: true,
-                trim: true,
-                minHeight: 100
-            },
-
-
         },
         colors: ['#00d084']
     })
-
 
     const [series, setSeries] = useState([{ name: "จำนวน", data: [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100] }])
 
@@ -115,49 +102,22 @@ const BarMap = props => {
     return (
         <React.Fragment>
             {
-                isSmallMobile ?
+                isSmallScreen ?
                     <Chart
                         options={options}
                         series={series}
                         type="bar"
                         height="300"
-                        width="310"
+                        width="300"
                     />
                     :
-                    isMobile ?
-                        <Chart
-                            options={options}
-                            series={series}
-                            type="bar"
-                            height="300"
-                            width="350"
-                        />
-                        :
-                        isSmallScreen ?
-                            <Chart
-                                options={options}
-                                series={series}
-                                type="bar"
-                                height="300"
-                                width="500"
-                            />
-                            :
-                            isMedium ?
-                                <Chart
-                                    options={options}
-                                    series={series}
-                                    type="bar"
-                                    height="400"
-                                    width="500"
-                                />
-                                :
-                                <Chart
-                                    options={options}
-                                    series={series}
-                                    type="bar"
-                                    height="400"
-                                    width="650"
-                                />
+                    <Chart
+                        options={options}
+                        series={series}
+                        type="bar"
+                        height="285"
+                        width="600"
+                    />
             }
         </React.Fragment>
     )
