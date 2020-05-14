@@ -66,7 +66,6 @@ const Social = () => {
                                                                     <div className="chart-row">
                                                                         <DonutSocial onToken={statusToken} />
                                                                         <BarSocial />
-
                                                                     </div>
 
                                                                     <div className="chart-row">

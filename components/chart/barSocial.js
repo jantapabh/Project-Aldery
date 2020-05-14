@@ -91,7 +91,7 @@ const BarSocial = props => {
             var woman = await Sheetapi.getSheet(token, value2)
             setSeries([{ name: "เพศชาย", data: _.flatten(man) }, { name: "เพศหญิง", data: _.flatten(woman) }])
         } catch (err) {
-            props.onToken(true)
+            console.log(err);
         }
     }
 
