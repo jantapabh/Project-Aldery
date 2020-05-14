@@ -101,7 +101,7 @@ const BarHospital4 = () => {
                             series={series}
                             type="bar"
                             height="400"
-                            width="500"
+                            width="350"
                         />
                         :
                         <Chart

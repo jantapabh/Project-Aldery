@@ -37,7 +37,6 @@ const BarHospital3 = () => {
         dataLabels: { enabled: false },
         stroke: {
             show: true,
-            width: 2,
             colors: ['#fff']
         },
         fill: {
@@ -120,7 +119,7 @@ const BarHospital3 = () => {
                             series={series}
                             type="bar"
                             height="400"
-                            width="500"
+                            width="450"
                         />
                         :
                         <Chart

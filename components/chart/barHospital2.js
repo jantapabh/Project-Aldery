@@ -8,6 +8,7 @@ const BarHospital2 = () => {
 
     const isTablet = useMediaQuery({ minWidth: 768 })
     const isSmallScreen = useMediaQuery({ maxWidth: 768 })
+    const isMedium = useMediaQuery({ maxWidth: 1024 })
 
     const [options, setOptions] = useState({
         title: {
@@ -104,7 +105,7 @@ const BarHospital2 = () => {
                             series={series}
                             type="bar"
                             height="400"
-                            width="500"
+                            width="400"
                         />
                         :
                         <Chart
@@ -112,7 +113,7 @@ const BarHospital2 = () => {
                             series={series}
                             type="bar"
                             height="400"
-                            width="600"
+                            width="500"
                         />
             }
         </React.Fragment>

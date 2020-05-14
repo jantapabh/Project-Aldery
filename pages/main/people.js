@@ -79,7 +79,7 @@ const People = () => {
                                                                     <div className="warp-chart-main">
                                                                         <BarMap onToken={statusToken} />
                                                                         <div className="chart-row">
-                                                                            <Piechart />
+                                                                            <Piechart onToken={statusToken} />
                                                                             <Piechart2 />
                                                                         </div>
                                                                         <Barchart />
