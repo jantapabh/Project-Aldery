@@ -31,7 +31,7 @@ const Society = () => {
     ])
 
     const [header, setHeader] = useState("การรับมือสังคมสูงวัย")
-    const [subHead, setSubHead] = useState("การเตรียมความพร้อมเพื่อเตรียมรับมือเข้าสู๋ยุคสังคมผู้สูงอายุเป็นสิ่งสำคัญ สำหรับคนทุกช่วงวัย")
+    const [subHead, setSubHead] = useState("การเตรียมความพร้อมเพื่อเตรียมรับมือเข้าสู่ยุคสังคมผู้สูงอายุเป็นสิ่งสำคัญ สำหรับคนทุกช่วงวัย")
     const [status, setStatus] = useState(false)
 
     const [home, setHome] = useState(
