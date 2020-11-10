@@ -29,6 +29,7 @@ const Home = () => {
     ]
   )
 
+  //ส่วนกำหนดไปยังหน้าต่าง ๆ 
   const [homeMin, setHomeMin] = useState(
     [
       { name: "เกี่ยวกับเรา", href: "/index/about" },

@@ -15,7 +15,7 @@ class MyDocument extends Document {
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
                     </head>
 
-                    <meta charset="utf-8" />
+                    <meta charSet="utf-8" />
                     <meta name="theme-color" content="#fff" />
                     <link rel="manifest" href="../static/manifest.json" />
                     <link rel="shortcut icon" href="/static/logo.png" />

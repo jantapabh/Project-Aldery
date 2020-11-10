@@ -46,8 +46,6 @@ async function getSheet(token,col) {
 
     return request.data.values
 
-    
-
 }
 
 export default{
